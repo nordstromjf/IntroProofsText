@@ -1,0 +1,314 @@
+<section xml:id="induction">
+  <title>Mathematical Induction</title><idx>mathematical induction</idx>
+
+  <p>In this section we learn a new proof technique, mathematical induction. This technique is useful for proving statements about the positive (or nonnegative) integers. It is based on the following principle.</p>
+
+
+<assemblage xml:id="B_induction">
+  <title>Principle of Mathematical Induction</title><idx><h>mathematical induction</h><h>Principle of</h></idx>
+  <p>Let <m>P(n)</m> be a property defined for integers <m>n</m>, and let <m>a</m> be a fixed integer. Suppose the following are true:
+<ol marker="1"><li><m>P(a)</m> is true;</li>
+<li>For all <m>k\in\mathbb{Z}</m> with <m>k\geq a</m>, if <m>P(k)</m> is true than <m>P(k+1)</m> is true;</li></ol>
+
+then for all <m>n\geq a</m>, <m>P(n)</m> is true.
+</p>
+</assemblage>
+
+<p>The way to think about the Principle of Mathematical Induction is that if you know the statement is true for some starting value, (<m>P(a)</m> is true), and if you can show that knowing the statement is true for some value allows you to know it is true for the next value (<m>P(k)\rightarrow P(k+1)</m>), then you know it for all values greater than or equal to <m>a</m>.</p>
+
+<p>So why should this work? Suppose you know two things: 
+<ol marker="(1)">
+  <li><m>P(1)</m> is true, and </li>
+  <li> <m>P(k)\rightarrow P(k+1)</m>.</li>
+ </ol>
+
+  Note, you do not know <m>P(k)</m> is true, just that if it is true, then <m>P(k+1)</m> will be true. Now since <m>P(1)</m> is true, by (2), <m>P(2)</m> must be true. Since <m>P(2)</m> is true, <m>P(3)</m> must be true, etc. In this way we can see that <m>P(n)</m> must be true for all <m>n\geq 1</m>.</p>
+
+  <p>The Principle of Mathematical Induction lets us skip all the intermediate steps, <m>P(1)\rightarrow P(2), P(2)\rightarrow P(3),</m> and conclude <m>P(n)</m> once we have (1) and (2).</p>
+
+  
+<assemblage xml:id="B_inductionstructure">
+  <title>Structure of a Mathematical Induction Proof</title><idx>proof by induction</idx><idx><h>mathematical induction</h><h>proof structure</h></idx>
+
+  <p>To prove <m>P(n), \forall n\geq 1</m>,
+  <ul>
+  <li><title>Base Step</title> Show <m>P(1)</m> is true.</li>
+  <li><title>Induction Step</title> Assume <m>P(k)</m> for some <m>k\in\mathbb{Z}</m>, show <m>P(k+1)</m>.</li>
+ </ul>
+ Conclude <m>P(n)</m> is true for all <m>n\geq 1</m></p>
+</assemblage>
+
+ <p>In the above structure we used <m>a=1</m> for simplicitiy, but an induction proof could have a base step starting at a different <m>a</m>. Most commonly, the base step starts with 0 or 1.</p>
+
+ <p>When writing induction proofs, make sure you use the actual statement you are proving rather than the notation <m>P(1), P(k), P(n)</m>.</p>
+
+ <activity xml:id="A_sumktokplus1"><title>Adding the Next Term</title><introduction><p>Since the induction step in mathematical induction connects a statement about <m>k</m> to a statement about <m>k+1</m>, we need to be comfortable with the relationship between sums of <m>k</m> terms and sums of <m>k+1</m> terms.</p></introduction>
+    <task><p>Write out the summation for <m>\sum_{i=1}^{k}i</m>.</p></task>
+    <task><p>Write out the summation for <m>\sum_{i=1}^{k+1}i</m>.</p></task>
+    <task><p>How do (a) and (b) differ?</p></task>
+
+  </activity>
+
+ <example xml:id="E_sumofninduction"><title>Proof by Induction: Summation Formula</title>
+<p>Prove <m>\sum_{i=1}^{n}i=\frac{n(n+1)}{2}</m> for <m>n\geq 1</m>.</p>
+<proof>
+  <p>Base Step: Let <m>n=1</m>. Then 
+<md>
+  <mrow>\sum_{i=1}^{n}i=\sum_{i=1}^{1}i=1</mrow>
+  <mrow>\frac{n(n+1)}{2}=\frac{1(1+1)}{2}=1</mrow>
+</md>
+Since the left hand side of the equation equals the right hand side, <m>\sum_{i=1}^{n}i=\frac{n(n+1)}{2}</m> for <m>n=1</m>.
+</p>
+<p>Induction Step:</p>
+<p>Assume <m>\sum_{i=1}^{k}i=\frac{k(k+1)}{2}</m> for some <m>k\geq 1</m>.</p>
+<p>Show <m>\sum_{i=1}^{k+1}i=\frac{(k+1)(k+2)}{2}</m>.</p>
+<p>Proof of induction step: 
+<md>
+  <mrow>\sum_{i=1}^{k}i&amp;=\frac{k(k+1)}{2}\ \  \textrm{ by the induction assumption}</mrow>
+  <mrow>\sum_{i=1}^{k+1}i&amp;= \sum_{i=1}^{k}i+(k+1)\ \  \textrm{ add the } k+1 \textrm{ term of the sum}</mrow>
+  <mrow>&amp;=\frac{k(k+1)}{2}+(k+1)</mrow>
+  <mrow>&amp;=\frac{k(k+1)}{2}+\frac{2(k+1)}{2}</mrow>
+  <mrow>&amp;=\frac{k(k+1)+2(k+1)}{2}\ \ \textrm{ factor out }(k+1) \textrm{ on the top}</mrow>
+  <mrow>&amp;=\frac{(k+1)(k+2)}{2}.</mrow>
+</md>
+Thus, <m>\sum_{i=1}^{k+1}i=\frac{(k+1)(k+2)}{2}</m>.</p>
+<p>Hence, by induction <m>\sum_{i=1}^{n}i=\frac{n(n+1)}{2}</m> for <m>n\geq 1</m>.</p>
+
+</proof>
+</example>
+
+<p>Note, in the base step we looked at each side of what we wanted to show separately. We can refer to this as a <q>left hand side/ right hand side proof</q>, or in short hand, a LHS/RHS proof. If we just start with the equation we want to show, then we are assuming what we are trying to prove. To avoid this, it is best, when trying to show two things are equal in the base step, to do a LHS/ RHS proof.</p>
+
+<p><xref ref="E_sumofninduction"/> now gives us a useful formula for finding the sum of 1 through <m>n</m>:
+<men xml:id="Q_sumofn">\sum_{i=1}^{n}i=\frac{n(n+1)}{2}.</men></p>
+
+<activity xml:id="A_geomsummation"><title>Adding <m>k+1</m> Terms</title><introduction><p>Before the next example, we practice the relationship between sums of <m>k</m> terms and sums of <m>k+1</m> terms.</p></introduction>
+    <task><p>Write out the summation for <m>\sum_{i=0}^{k}r^i</m>.</p></task>
+    <task><p>Write out the summation for <m>\sum_{i=1}^{k+1}r^i</m>.</p></task>
+    <task><p>How do (a) and (b) differ?</p></task>
+
+  </activity>
+
+  <example xml:id="E_geosum2induction"><title>Proof by Induction: Powers of 2</title>
+<p>Prove <m>\sum_{i=0}^{n}2^i=2^{n+1}-1</m> for <m>n\geq 0</m>.</p>
+<proof>
+  <p>Base Step: Let <m>n=0</m>. Then 
+<md>
+  <mrow>\sum_{i=0}^{0}2^i=2^0=1</mrow>
+  <mrow>2^{0+1}-1=2-1=1</mrow>
+</md>
+Since the left hand side of the equation equals the right hand side, <m>\sum_{i=0}^{n}2^i=2^{n+1}-1</m> for <m>n=0</m>.</p>
+
+<p>Induction Step:</p>
+<p>Assume <m>\sum_{i=0}^{k}2^i=2^{k+1}-1</m> for some <m>k\geq 0</m>.</p>
+<p>Show <m>\sum_{i=0}^{k+1}2^i=2^{k+2}-1</m>.</p>
+<p>Proof of induction step: 
+<md>
+  <mrow>\sum_{i=0}^{k}2^i&amp;=2^{k+1}-1 \textrm{ by the induction assumption}</mrow>
+  <mrow>\sum_{i=0}^{k+1}2^i&amp;= \sum_{i=0}^{k}2^i+(2^{k+1}) \textrm{ add the } k+1 \textrm{ term of the sum}</mrow>
+  <mrow>&amp;=2^{k+1}-1+2^{k+1}</mrow>
+  <mrow>&amp;=2^{k+1}+2^{k+1}-1 </mrow>
+  <mrow>&amp;=2^{k+1}(1+1)-1 </mrow>
+  <mrow>&amp;=2^{k+1}(2)-1 </mrow>
+  <mrow>&amp;=2^{k+2}-1. </mrow>
+</md>
+Thus, <m>\sum_{i=0}^{k+1}2^i=2^{k+2}-1</m>.</p>
+<p>Hence, by induction <m>\sum_{i=0}^{n}2^i=2^{n+1}-1</m> for <m>n\geq 0</m>.</p>
+
+
+</proof>
+</example>
+
+<p><xref ref="E_geosum2induction"/> can be generalized to the sum <m>\sum_{i=0}^{n}r^i</m>. </p>
+
+  <example xml:id="E_geosuminduction"><title>Proof by Induction: Geometric Sum</title>
+<p>Prove <m>\sum_{i=0}^{n}r^i=\frac{r^{n+1}-1}{r-1}</m> for <m>n\geq 0</m>.</p>
+<proof>
+  <p>Base Step: Let <m>n=0</m>. Then 
+<md>
+  <mrow>\sum_{i=0}^{0}r^i=r^0=1</mrow>
+  <mrow>\frac{r^{0+1}-1}{r-1}=\frac{r-1}{r-1}=1</mrow>
+</md>
+Since the left hand side of the equation equals the right hand side, <m>\sum_{i=0}^{n}r^i=\frac{r^{n+1}-1}{r-1}</m> for <m>n=0</m>.</p>
+
+<p>Induction Step:</p>
+<p>Assume <m>\sum_{i=0}^{k}r^i=\frac{r^{k+1}-1}{r-1}</m> for some <m>k\geq 0</m>.</p>
+<p>Show <m>\sum_{i=0}^{k+1}r^i=\frac{r^{k+2}-1}{r-1}</m>.</p>
+<p>Proof of induction step: 
+<md>
+  <mrow>\sum_{i=0}^{k}r^i&amp;=\frac{r^{k+1}-1}{r-1} \textrm{ by the induction assumption}</mrow>
+  <mrow>\sum_{i=0}^{k+1}r^i&amp;= \sum_{i=0}^{k}r^i+(r^{k+1}) \textrm{ add the } k+1 \textrm{ term of the sum}</mrow>
+  <mrow>&amp;=\frac{r^{k+1}-1}{r-1}+(r^{k+1})</mrow>
+  <mrow>&amp;=\frac{r^{k+1}-1}{r-1}+\frac{(r-1)(r^{k+1})}{r-1}</mrow>
+  <mrow>&amp;=\frac{r^{k+1}-1+(r-1)(r^{k+1})}{r-1} \textrm{ factor out } r^{k+1} \textrm{ on the top}</mrow>
+  <mrow>&amp;=\frac{r^{k+1}(1+r-1)-1}{r-1} </mrow>
+  <mrow>&amp;=\frac{r^{k+1}(r)-1}{r-1} </mrow>
+  <mrow>&amp;=\frac{r^{k+2}-1}{r-1}. </mrow>
+</md>
+Thus, <m>\sum_{i=0}^{k+1}r^i=\frac{r^{k+2}-1}{r-1}</m>.</p>
+<p>Hence, by induction <m>\sum_{i=0}^{n}r^i=\frac{r^{n+1}-1}{r-1}</m> for <m>n\geq 0</m>.</p>
+
+
+</proof>
+</example>
+
+<p>The sum in <xref ref="E_geosuminduction"/> is called a <term>geometric sum</term><idx>geometric sum</idx>. Now we have a useful formula for the sum of <m>r^i</m> for various values of <m>r>1</m>:
+<men xml:id="Q_geosum">\sum_{i=0}^{n}r^i=\frac{r^{n+1}-1}{r-1}.</men>
+</p>
+
+<activity xml:id="A_indpractice"><title>Practice with Induction</title><introduction><p>Suppose you want to prove <m>\sum_{i=1}^{n}i^2=\frac{n(n+1)(2n+1)}{6}</m> for all <m>n\geq 1</m> by induction. </p></introduction>
+    <task><p>What would you want to prove in the base step?</p></task>
+    <task><p>What should you assume in the induction step?.</p></task>
+    <task><p>What should you show in the induction step?</p></task>
+    <task><p>Now try to put this all together in the form of an induction proof. If you are unable to prove it, where do you get stuck?</p></task>
+
+  </activity>
+
+
+<!--<example xml:id="E_usingsums"><title>Using Summation Formulas</title>
+<p>Use one of the sum formulas in this section to calculate the following sums.</p>
+<p><m>1+2+3+4+5+6+7=\sum_{i=1}^{7}i=\frac{7(7+1)}{2}=28</m></p>
+<p><m>1+2+3+\cdots +1000=\sum_{i=1}^{1000}i=\frac{1000(1000+1)}{2}=500500</m></p>
+<p><m>1+2+4+8+16=\sum_{i=0}^{4}2^i=\frac{2^{4+1}-1}{2-1}=31</m></p>
+
+<p><m>1+3+9+\cdots +3^8=\sum_{i=0}^{8}3^i=\frac{3^{8+1}-1}{3-1}=9841</m></p>
+</example>-->
+
+  <p>The <term>closed form</term><idx>closed form of a sum</idx> of a sum is the computational formula for the sum. For example, the closed form of <m>\sum_{i=0}^{n}2^i</m> is <m>2^{n+1}-1</m>, as proved in <xref ref="E_geosum2induction"/>.</p>
+
+
+    <!--<reading-questions>
+      <title>Check Your Understanding</title>
+      
+      <exercise><statement><p>Use one of the summation formulas to find <m>3+4+5+6+7+8</m>.</p></statement>
+      <answer><m>\sum_{i=3}^{8}i=\sum_{i=1}^{8}i-(1+2)=\frac{8(8+1)}{2}-(3)=33</m></answer></exercise>
+
+      <exercise><statement><p>Use one of the summation formulas to find <m>2+4+6+8+10+12</m>.</p></statement>
+      <answer><m>\sum_{i=1}^{6}2i=2\sum_{i=1}^{6}i=(2)\frac{6(6+1)}{2}=42</m></answer></exercise>
+
+      <exercise><statement><p>Use one of the summation formulas to find <m>1+5+25+125+625</m>.</p></statement>
+      <answer><m>\sum_{i=0}^{4}5^i=\frac{5^{4+1}-1}{4}=781</m></answer></exercise>
+
+      <exercise><statement><p>Use one of the summation formulas to find <m>1+7+7^2+\cdots+7^{50}</m>.</p></statement>
+      <answer><m>\sum_{i=0}^{50}7^i=\frac{7^{50+1}-1}{6}=\frac{7^{51}-1}{6}</m></answer></exercise>
+
+      <exercise><statement><p>Use one of the summation formulas to find <m>1+7+7^2+\cdots+7^{n}</m>.</p></statement>
+      <answer><m>\sum_{i=0}^{n}7^i=\frac{7^{n+1}-1}{6}</m></answer></exercise>
+
+      <exercise><statement><p>Suppose you want to prove <m>\sum_{i=1}^n i^2=\frac{n(n+1)(2n+1)}{6}</m>. Show the formula holds for <m>n=1</m>.</p></statement>
+      <answer><p>LHS:<m>\sum_{i=1}^1 i^2=1^2=1</m></p><p>RHS:<m>\frac{1(1+1)(2(1)+1)}{6}=1</m></p></answer></exercise>
+
+      <exercise><statement><p>Suppose you want to prove <m>\sum_{i=1}^n i^2=\frac{n(n+1)(2n+1)}{6}</m>. What should you assume in the induction step?</p></statement>
+      <answer><m>\sum_{i=1}^k i^2=\frac{k(k+1)(2k+1)}{6}</m></answer></exercise>
+
+      <exercise><statement><p>Suppose you want to prove <m>\sum_{i=1}^n i^2=\frac{n(n+1)(2n+1)}{6}</m>. What should you show in the induction step?</p></statement>
+      <answer><m>\sum_{i=1}^{k+1} i^2=\frac{(k+1)(k+2)(2(k+1)+1)}{6}=\frac{(k+1)(k+2)(2k+3)}{6}</m></answer></exercise>
+
+      
+
+      <exercise><statement><p>Consider <m>\sum_{i=1}^{k} i^3</m>. What is the <m>k+1</m> term in the sum?</p></statement>
+      <answer><m>(k+1)^3</m></answer></exercise>
+
+      <exercise><statement><p>Consider <m>\sum_{i=1}^{k} \frac{1}{i+1}</m>. What is the <m>k+1</m> term in the sum?</p></statement>
+      <answer><m>\frac{1}{k+2}</m></answer></exercise>
+
+    
+
+    </reading-questions>-->
+    <exercises>
+   <!--   <exercise><statement><p>
+    Use one of the formulas <xref ref="Q_sumofn"/> or <xref ref="Q_geosum" /> to evaluate <me>4+8+12+16+\cdots +200.</me>
+  </p></statement></exercise>
+      <exercise><statement>
+        <p>
+    Use one of the formulas <xref ref="Q_sumofn"/> or <xref ref="Q_geosum" /> to write the closed form of the following sums.</p>
+    <ol marker="a">
+      <li><me>1+2+3+\cdots +(k-1), \text{ where } k\in\mathbb{Z} \text{ and } k\geq 2.</me>
+    </li>
+
+    <li>
+      <me>3+3^2+3^3+\cdots +3^n, \text{ where } n\in\mathbb{Z} \text{ and } n\geq 1.</me>
+    </li>
+
+    <li>
+      <me>1+\frac{1}{2}+\frac{1}{2^2}+\cdots +\frac{1}{2^n}, \text{ where } n\in\mathbb{Z} \text{ and } n\geq 0.</me></li>
+    </ol>
+  
+      </statement></exercise>
+      <exercise><statement><p>
+    For each integer <m>n</m> with <m>n\geq 2</m>, let <m>P(n)</m> be the formula <me>\sum_{i=1}^{n-1}i(i+1)=\frac{n(n-1)(n+1)}{3}.</me>
+  </p>
+      <ol marker="a">
+      <li>  <p>
+    Write out the statement <m>P(2)</m>. Is <m>P(2)</m> true?
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Write out the statement <m>P(k)</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Write out the statement <m>P(k+1)</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    In a proof by mathematical induction that the formula holds for all <m>n\geq 2</m>, what must be shown in the inductive step?
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>-->
+      <exercise><statement>
+        <p>
+    Use mathematical induction to prove for all integers <m>n\geq 1</m>, <me>\sum_{i=1}^n 2i=n^2+n.</me>
+  </p>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Use mathematical induction to prove for all integers <m>n\geq 1</m>, <me>\sum_{i=1}^ni^3=\Bigl[\frac{n(n+1)}{2}\Bigr]^2.</me>
+  </p>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Use mathematical induction to prove for all integers <m>n\geq 1</m>, <me>\sum_{i=1}^{n}i(i!)=(n+1)!-1.</me>
+  </p>
+      </statement></exercise>
+
+      <exercise><statement><p>
+    Use <xref ref="E_geosuminduction"/> to find a formula for <m>\sum_{i=0}^n 3^i</m>. Prove your formula directly using induction.
+  </p></statement></exercise>
+
+  <exercise><statement><p>
+    Find a formula for <m>\sum_{i=0}^n 2i-1</m>. Prove your formula using induction.
+  </p></statement></exercise>
+
+  <exercise><statement>
+        <p>
+    Observe that 
+    <md>
+<mrow>\frac{1}{1\cdot 3}\amp =\frac{1}{3}</mrow>
+<mrow>\frac{1}{1\cdot 3}+\frac{1}{3\cdot 5}\amp =\frac{2}{5}</mrow>
+<mrow>\frac{1}{1\cdot 3}+\frac{1}{3\cdot 5}+\frac{1}{5\cdot 7}\amp =\frac{3}{7}</mrow>
+<mrow>\frac{1}{1\cdot 3}+\frac{1}{3\cdot 5}+\frac{1}{5\cdot 7}+\frac{1}{7\cdot 9}\amp =\frac{4}{9}</mrow>
+</md>
+  </p>
+
+  <p>
+    Conjecture a general formula and prove it by mathematical induction.
+  </p>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Evaluate the sum <m>\sum_{i=1}^{n}\frac{i}{(i+1)!}</m> for all <m>n=1, 2, 3, 4, 5</m>. Make a conjecture for a formula for the sum for a general <m>n</m>, and prove your conjecture by induction.
+  </p>
+      </statement></exercise>
+
+    </exercises>
+
+</section>

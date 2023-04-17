@@ -1,0 +1,232 @@
+<section xml:id="orders">
+  <title>Ordered Sets</title><idx>partially ordered sets</idx><idx>totally ordered sets</idx><idx>parial order</idx><idx>total order</idx>
+
+  <p>In this section we look at an additional property of a relation. In particular, we define the antisymmetric property. We will then look at how a relation can be used to define ways to order elements of a set. </p>
+
+
+  <p>We will still need the properies from <xref ref="relations" />.</p>
+
+  <definition xml:id="D_RSTprop2"><statement><p>Let <m>R</m> be a relation on <m>A</m>. Then 
+  <ol marker="1">
+    <li><p><m>R</m> is <term>reflexive</term><idx>reflexive</idx> if for all <m>x\in A</m>, <m>x R x</m>. In ordered pair notation, <m>(x, x)\in R</m>.</p></li>
+    <li><p><m>R</m> is <term>symmetric</term><idx>symmetric</idx> if for all <m>x, y\in A</m>, if <m>x R y</m> then <m>y R x</m>. In ordered pair notation, if <m>(x, y)\in R</m> then <m>(y, x)\in R</m>.</p></li>
+
+    <li><p><m>R</m> is <term>transitive</term><idx>transitive</idx> if for all <m>x, y, z\in A</m>, if <m>x R y</m> and <m>y R z</m> then <m>x R z</m>. In ordered pair notation, if <m>(x, y)\in R</m> and <m>(y, z)\in R</m> then <m>(x, z)\in R</m>.</p></li>
+  </ol> </p>
+  </statement></definition>
+
+  <p>We add a new property to the list, the <term>antisymmetric</term> property.</p>
+
+  <definition xml:id="D_ASprop"><statement><p>Let <m>R</m> be a relation on <m>A</m>. Then 
+  
+    <m>R</m> is <term>antisymmetric</term><idx>antisymmetric</idx> if for all <m>x, y\in A</m>, if <m>x R y</m> and <m>y R x</m>, then <m>x=y</m>. In ordered pair notation, if <m>(x, y)\in R</m> and <m>(y, x)\in R</m>, then <m>x=y</m>.</p>
+  </statement></definition>
+
+  <p>It is important to note, that <q>antisymmetric</q> is not the negation of <q>symmetric.</q> It is possible for a relation to be both symmetric and antisymmetric (thought this happens only in a special case). It is also possible for a relation to be neither symmetric nor antisymmetric.</p>
+
+
+  <example xml:id="E_symantisym"><title>Symmetric and Antisymmetric</title>
+
+  <p>Let <m>A=\{1, 2, 3\}</m>, define the relation on <m>A</m> by 
+  <me>R=\{(1, 1), (2, 2), (3, 3)\}.</me></p>
+
+  <p><m>R</m> is symmetric since if <m>(x, y)\in R</m> then <m>(y, x)\in R</m>.</p>
+  <p><m>R</m> is antisymmetric since  if <m>(x, y)\in R</m> and <m>(y, x)\in R</m> then <m>x=y</m>. This is straightforward to check since the only ordered pairs in the relation have <m>x=y</m>.</p>
+
+  </example>
+
+  <p>It is often more useful to use the contrapositive form of the definition of antisymmetric:</p>
+  <p> <m>R</m> is <term>antisymmetric</term><idx>antisymmetric</idx> if for all <m>x, y\in A</m>, if <m>x\neq y</m>, then <m>(x, y)\notin R</m> or <m>(y, x)\notin R</m>.</p>
+
+ 
+
+  <example xml:id="E_antisymmtric"><title>Another Look at Antisymmetric</title>
+
+  <p>Let <m>A=\{1, 2, 3\}</m>, define the relation on <m>A</m> by 
+  <me>R=\{(1, 2), (1, 3), (2, 3)\}.</me></p>
+
+  
+  <p><m>R</m> is antisymmetric since for each <m>(x, y)\in R</m>, <m>(y, x)</m> is not in <m>R</m>. Since it is never the case that both <m>(x, y)</m> and <m>(y, x)</m> are in <m>R</m>, the <q>if</q> part of the definition is always false, meaning, the conditional is always true.</p>
+
+  <p>By using the contrapositive form it is easier to check that for each pair <m>(x, y)\in R</m> with <m>x\neq y</m>, <m>(y, x)\notin R</m>.</p>
+  
+
+  </example>
+
+ 
+
+
+    <activity xml:id="A_practiceasymm"><title>Practice with Antisymmetric</title><introduction><p>For each of the following relations, determine if it is antisymmetric.</p></introduction>
+    <task><p>Let <m>A=\{1, 2, 3\}</m> and <m>R=\{(1, 1), (1, 2), (1, 3), (2, 1), (3, 1)\}</m>.</p></task>
+    <task><p>Let <m>A=\{1, 2, 3, 4\}</m> and <m>R=\{(1, 1), (1, 3), (2, 2), (3, 2), (3, 3)\}</m>.</p></task>
+    </activity>
+
+  
+  <p>Checking that a relation is antisymmetric on a small finite set can be done by checking that the property holds for all the elements of <m>R</m>. But if <m>A</m> is infinite we need to prove the properties more generally. We include a reminder of the other properties as well.</p>
+
+  <assemblage xml:id="B_pfprorelations">
+    <title>Proving Properties of Relations</title><idx><h>relations</h><h>properties</h><h>proof</h></idx>
+
+  <p>To prove
+    <ul>
+      <li><title>Reflexive</title><p>Let <m>x\in A</m>. Show <m>(x, x)\in R</m>.</p></li>
+      <li><title>Symmetric</title><p>Assume <m>(x, y)\in R</m>. Show <m>(y, x)\in R</m>.</p></li>
+      <li><title>Antisymmetric</title><p>Assume <m>(x, y)\in R</m> and <m>(y, x)\in R</m>. Show <m>x=y</m>.</p></li>
+      <li><title>Transitive</title><p>Assume <m>(x, y), (y, z)\in R</m>. Show <m>(x, z)\in R</m>.</p></li>
+    </ul></p>
+
+<p>To disprove a property, find a specific counterexample.
+<ul>
+      <li><title>Reflexive</title><p>Find <m>(x, x)\notin R</m> for some <m>x\in A</m>.</p></li>
+      <li><title>Symmetric</title><p>Find <m>(x, y)\in R</m> with <m>(y, x)\notin R</m>.</p></li>
+      <li><title>Antisymmetric</title><p>Find <m>(x, y)\in R</m> and <m>(y, x)\in R</m> with <m>x\neq y</m>.</p></li>
+      <li><title>Transitive</title><p>Find <m>(x, y), (y, z)\in R</m> with <m>(x, z)\notin R</m>.</p></li>
+    </ul></p>
+  </assemblage>
+
+
+<example xml:id="E_provingAS"><title>Proving Antisymmetric</title>
+  <p>Let <m>R</m> be the relation on <m>\mathbb{Z}^+</m> given by <m>(m, n)\in R\Leftrightarrow m\mid n</m>. Prove <m>R</m> is antisymmtric.</p>
+  <p>Assume <m>(x, y)\in R</m> and <m>(y, x)\in R</m>. Then <m>x\mid y</m> and <m>y \mid x</m>. This implies <m>x=yk</m> for some <m>k\in\mathbb{Z}^+</m> and <m>y=xj</m> for some <m>j\in \mathbb{Z}^+</m>. Thus, <m>x=xjk</m>, and then <m>1=jk</m>. But since <m>j, k \in \mathbb{Z}^+</m>, <m>j=k=1</m>. Hence, <m>x=y</m>.</p>
+  <p>We leave it as an exercise to show <m>R</m> is reflexive and transitive, but not symmetric.</p>
+</example>
+
+<!--<activity><introduction><p>Define the relation on <m>\mathbb{R}</m> by <m>xRy \iff x=y</m>.</p></introduction>
+<task><p>Prove or disprove <m>R</m> is reflexive.</p></task>
+<task><p>Prove or disprove <m>R</m> is symmetric.</p></task>
+<task><p>Prove or disprove <m>R</m> is transitive.</p></task>
+</activity>-->
+
+<activity xml:id="A_proveleqAS"><title>The Less Than or Equal Relation</title><statement><p>Define the relation on <m>\mathbb{R}</m> by <m>xRy \iff x \leq y</m>. Prove or disprove <m>R</m> is antisymmetric.</p></statement>
+</activity>
+
+<p>We've seen examples of relations that are functions and that are equivalence relations. We introduce another type of relation, that of an ordered set. Equivalence relations arise in mathematics as a way to equate element in a set, whereas orders give us a way to compare the <q>size</q> of elements in a set.</p>
+
+<definition xml:id="D_poset"><idx>poset</idx><idx>partially ordered set</idx><idx>partial order</idx><statement><p>A relation <m>R</m> on a set <m>A</m> is a <term>partial order</term> if it is reflexive, antisymmetric, and transitive. We will generally use the notation <m>\leq</m> instead of <m>R</m>: <m>(x, y)\in R</m> if and only if <m>x \leq y</m>.</p>
+<p>Furthermore, we call the set <m>A</m> with partial order <m>\leq</m> a <term>partially ordered set</term>, or <term>poset</term>.</p></statement></definition>
+
+<p>The set <m>\mathbb{Z}^+</m> with relation <q>divides</q> given in <xref ref="A_proveleqAS"/> is a partially ordered set.</p>
+  
+<example xml:id="E_subsetorder"><title>Subset Order</title><p>Let <m>S</m> be a set and <m>\mathcal{P}(S)</m> be the set of all subsets of <m>S</m>. Let <m>R</m> be the relation given by <m>(A, B)\in R</m> if and only if <m>A\subseteq B</m>. Then <m>R</m> is a partial order.</p>
+<p>Reflexive: For every subset <m>A\in \mathcal{P}(S)</m>, <m>A\subseteq A</m>.</p>
+<p>Antisymmetric: If <m>A\subseteq B</m> and <m>B\subseteq A</m> then <m>A=B</m>, by defintion of set equality.</p>
+<p>Transitive: If <m>A\subseteq B</m> and <m>B\subseteq C</m> then <m>A\subseteq B</m>, which is an exercise, <xref ref="ER_subsettrans"/>.</p>
+</example>
+
+<activity xml:id="A_realgeq"><title>Greater Than or Equal</title> <statement><p>Show that the relation given by <m>(x, y)\in R</m> if and only if <m>x\geq y</m> is a partial order on <m>\mathbb{R}</m>.</p></statement></activity>
+
+<definition xml:id="D_totalorder"><idx>total order</idx><idx>totally ordered set</idx><statement><p>A partially ordered set, <m>A</m>, with order <m>\leq</m> is a <term>totally ordered set</term> if for all <m>a, b\in A</m>, either <m>a\leq b</m> or <m>b\leq a</m>.</p>
+<p>We say that <m>\leq</m> is a <term>total order</term> on <m>A</m>.</p></statement></definition>
+
+<p>The idea behind a total order is that every element in the set is comparable. So if we take any two elements, one must be less than the other. This, along with the transitive property allows us to order every element in the set, from <q>smallest</q> to <q>largest.</q></p>
+
+<example xml:id="E_totalorder"><title>Total Order on the Reals</title><p>The less than or equal to order from <xref ref="A_realgeq"/> is a total order on <m>\mathbb{R}</m>. Given any two real numbers, <m>x, y</m>, either <m>x\geq y</m> or <m>y\geq x</m>. This property is what allows us to form the real number line.</p></example>
+
+<example xml:id="E_nottotalorder"><title>Subset is Not a Total Order</title><p>The subset order from <xref ref="E_subsetorder"/> is generally not a total order on <m>S</m>. For example, let <m>S=\{1, 2, 3\}</m>. Then for the sets <m>A=\{1\}</m> and <m>B=\{2\}</m>,  <m>A\nsubseteq B</m> and <m>B\nsubseteq A</m>. Thus neither <m>A</m> nor <m>B</m> is <q>smaller</q> than the other and they cannot be ordered relative to each other with the subset order. Similarly, if <m>C=\{2, 3\}</m>,  <m>A\nsubseteq C</m> and <m>C\nsubseteq A</m>. Once again, we cannot order these sets by <m>\subseteq</m>.</p></example>
+
+<p>The following Theorem is useful when working with orders.</p>
+
+<theorem xml:id="T_totalorder"><statement><p>A set <m>A</m> with order <m>\leq</m> is a totally ordered set<idx>totally ordered set</idx> if and only if exactly one of the following is true:
+<ol marker="1">
+  <li><m>a &lt; b</m>,</li>
+  <li><m>b &lt; a</m>,</li>
+  <li><m>a = b</m>.</li>
+  </ol>
+</p>
+</statement></theorem>
+
+<example xml:id="E_againnottotalorder"><title>Again Subset is Not a Total Order</title><p>If we check the conditions of <xref ref="T_totalorder"/>, we can see again that the subset order from <xref ref="E_subsetorder"/> is generally not a total order on <m>S</m>. Let <m>S=\{1, 2, 3\}</m>. Then for the sets <m>A=\{1\}</m> and <m>B=\{2\}</m>,  <m>A\nsubseteq B</m>, <m>B\nsubseteq A</m>, and <m>A\neq B</m>.  Similarly, if <m>C=\{2, 3\}</m>,  <m>A\nsubseteq C</m>, <m>C\nsubseteq A</m> and <m>A\neq C</m>.</p></example>
+
+
+   <exercises>
+    <exercise><statement>
+       <p>Let <m>A=\mathbb{Z}^+</m>
+    Define <m>a\leq b</m> if <m>a \mid b</m>.
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    Prove or disprove <m>\leq</m> is a partial order on <m>\mathbb{Z}^+</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Prove or disprove <m>\leq</m> is a total order on <m>\mathbb{Z}^+</m>.
+  </p>
+    </li>
+
+  </ol>
+     </statement></exercise>
+
+     
+     
+     <exercise><statement>
+       <p>
+    Define <m>(a, b)\leq (c, d)</m> if <m>a\leq c</m> and <m>b\leq d</m>.
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    Prove or disprove <m>\leq</m> is a partial order on <m>\mathbb{Z}\times\mathbb{Z}</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Prove or disprove <m>\leq</m> is a total order on <m>\mathbb{Z}\times\mathbb{Z}</m>.
+  </p>
+    </li>
+
+  </ol>
+     </statement></exercise>
+     <exercise><statement>
+       <p>
+    Define <m>(a, b)\leq (c, d)</m> if <m>a\leq c</m> and if <m>a=c</m> then <m>b\leq d</m>.
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    Prove or disprove <m>\leq</m> is a partial order on <m>\mathbb{Z}\times\mathbb{Z}</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Prove or disprove <m>\leq</m> is a total order on <m>\mathbb{Z}\times\mathbb{Z}</m>.
+  </p>
+    </li>
+
+  </ol>
+  <p>Note, this is often called the <term>lexicographic</term> or <term>dictionary</term> order.</p>
+     </statement></exercise>
+     <exercise><statement>
+       <p>
+    Define <m>(a, b)\leq (c, d)</m> if <m>a+b\leq c+d</m>.
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    Prove or disprove <m>\leq</m> is a partial order on <m>\mathbb{Z}\times\mathbb{Z}</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Prove or disprove <m>\leq</m> is a total order on <m>\mathbb{Z}\times\mathbb{Z}</m>.
+  </p>
+    </li>
+
+  </ol>
+     </statement></exercise>
+     <exercise><statement><p>Let <m>A</m> be a partially ordered set with order <m>\leq</m>. Then <m>x\in A</m> is a <term>greatest</term> element of <m>A</m> if <m>y\leq x</m> for all <m>y\in A</m>.
+    Prove if <m>A</m> has a greatest element, <m>x</m>, then <m>x</m> is unique.
+  </p></statement><hint><p>Since the problem assumes existence, you just need to do a uniqueness proof. Start by assuming <m>A</m> has two greatest elements.</p></hint></exercise>
+    
+   </exercises>
+
+</section>

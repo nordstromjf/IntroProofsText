@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<pretext xml:lang="en-US" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <docinfo>
+    <macros>
+     \newcommand{\MyTikzmark}[2]{
+     \tikz[overlay,remember picture,baseline] \node [anchor=base] (#1) {$#2$};}
+\newcommand{\DrawVLine}[3][]{
+  \begin{tikzpicture}[overlay,remember picture]
+    \draw[shorten \lt =0.3ex, #1] (#2.north) -- (#3.south);
+  \end{tikzpicture}
+}
+\newcommand{\DrawHLine}[3][]{
+  \begin{tikzpicture}[overlay,remember picture]
+    \draw[shorten \lt =0.2em, #1] (#2.west) -- (#3.east);
+  \end{tikzpicture}
+}
+    </macros>
+
+    <latex-image-preamble>
+
+\usepackage{tikz}
+\usepackage{amssymb,amsmath,centernot}
+\usetikzlibrary{positioning,matrix,arrows,decorations.pathmorphing,backgrounds,positioning,fit,petri}
+\usetikzlibrary{shapes,decorations,shadows,fadings}
+\usetikzlibrary{arrows.meta,calc,decorations.markings,math}
+\tikzset{main node/.style={circle,draw,fill=black,minimum size=.1cm,inner sep=0pt},
+            }
+
+\usepackage{pgfplots}
+
+
+</latex-image-preamble>
+  </docinfo>
+
+  <book xml:id="IntroProofs">
+    <title>Introduction to Proofs</title>
+   <!-- <subtitle></subtitle>-->
+
+    <frontmatter xml:id="frontmatter">
+      <titlepage>
+        <author>
+          <personname>Jennifer Firkins Nordstrom</personname>
+          <department>Department of Mathematics and Computer Science</department>
+          <institution>Linfield University</institution>
+        </author>
+        <date>
+          <today />
+        </date>
+      </titlepage>
+
+      <colophon>
+
+        <!--<website>
+          <name>
+            <c>example.org</c>
+          </name>
+          <address>https://example.org</address>
+        </website>-->
+
+        <copyright>
+          <year>2023<ndash />2024</year>
+          <holder>Jennifer Firkins Nordstrom</holder>
+          <shortlicense> 
+            This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit <url href="http://creativecommons.org/licenses/by-sa/4.0/" visual="creativecommons.org/licenses/by-sa/4.0"> CreativeCommons.org</url>
+          </shortlicense>
+        </copyright>
+      </colophon>
+
+    <preface>
+<p>
+This text is used in a 3 credit, intensive, one month course. The course builds fluency with proof techniques through examples from discrete math, numbers theory, and set theory. It emphasizes learning mathematical structure as learning a new language.</p>
+
+
+<!--<paragraphs xml:id="Course_Goals">
+  <title>Course Goals</title>
+
+<ul>
+  <li> <p>To introduce the student to the basic discrete mathematical structures and the theory and techniques associated with these structures.</p></li>
+  <li> <p>To continue the student's growth in the use of mathematical language and the use of logic.</p></li>
+  <li> <p>To improve the student's ability to write precise, valid, mathematical arguments.</p></li>
+  <li> <p>To increase the student's confidence in working through mathematical challenges.</p></li>
+  <li> <p>To continue the growth of the student's abilities in the appreciation and use of abstract reasoning.</p></li>
+  <li> <p>To improve the student's problem-solving abilities.</p></li>
+  <li> <p>To increase the student's mathematical maturity.</p></li>
+</ul>
+</paragraphs>-->
+<!--<paragraphs xml:id="Format">
+  <title>Course Format</title>
+
+<p>The material is presented in a discovery format, requiring students to make conjectures frequently. Each section is structured as a class activity. Any introduction material can be read by the students, and the numbered problems or questions are to be out in class and as homework, depending on how far a particular student progresses through the section. Most sections require students to attempt to solve the problem <em>before</em> they have been provided much framework. The sections then build the necessary tools to solve the problem or understand the key ideas. Being able to compare their original solutions and ideas to the more sophisticated mathematical ones helps build their mathematical intuition and helps them to understand the power of using mathematics in situations where their intuition falls short.</p>
+</paragraphs>
+<paragraphs xml:id="Use">
+  <title>Suggestions for Use</title>
+
+<p>
+This text is primarily for use in a college-level quantitative reasoning course. It can also be used for an introductory course in game theory for the social sciences. It approaches the subject matter through an inquiry-based format.  Most of the topics can be introduced by providing the students with the activity to work through during class, followed by a discussion. Almost all of the activities are intended to work through the concepts without additional lecture or introduction. 
+Students with even a rudimentary background in algebra will find the material accessible. Any necessary mathematical background can be introduced as needed. </p>
+</paragraphs>-->
+</preface>
+    </frontmatter>
+
+    <xi:include href="./chapter1ip.ptx" />
+   <xi:include href="./chapter2ip.ptx" />
+   <xi:include href="./chapter3ip.ptx" />
+    <xi:include href="./chapter4ip.ptx" />
+   <xi:include href="./chapter5ip.ptx" />
+    <xi:include href="./chapter6ip.ptx" />
+
+    
+
+    <backmatter xml:id="backmatter">
+      <title>Backmatter</title>
+
+      <index>
+<title>Index</title>
+<index-list />
+</index>
+<appendix><title>Notation</title>
+<notation-list/>
+</appendix>
+
+      <colophon>
+        <p> This book was authored in <pretext />. </p>
+      </colophon>
+
+    </backmatter>
+
+  </book>
+</pretext>

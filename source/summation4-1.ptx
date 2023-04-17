@@ -1,0 +1,293 @@
+<section xml:id="summation">
+  <title>Summation Notation</title><idx>summation notation</idx>
+
+  <p>In this section we look at summation notation, which is used to represent general sums, even infinite sums. Before we add terms together, we need some notation for the terms themselves.</p>
+
+  <p>A <term>sequence</term><idx>sequence</idx> is an ordered list, <m>a_1, a_2, a_3, \ldots, a_k, \ldots</m>.</p>
+
+  <p>Each <m>a_k</m> is called a <term>term</term><idx><h>sequence</h><h>term</h></idx> in the sequence. The subscript <m>k</m> is called the <term>index</term><idx><h>sequence</h><h>index</h></idx>. The index will be an integer, and almost always a nonnegative integer. The first term <m>a_1</m> (or sometimes <m>a_0</m>) is called the <term>initial term</term><idx><h>sequence</h><h>initial term</h></idx>. The term <m>a_k</m> is called the <m>k^{th}</m> term. It is also often called the <term>general</term><idx><h>sequence</h><h>general term</h></idx> term of the sequence.</p>
+
+  <example xml:id="E_sequences"><title>Sequences</title><p>
+    Consider the sequence <m>2, 4, 6, 8, 10, \ldots</m>. The initial term is <m>a_1=2</m>. The <m>k^{th}</m> term is <m>a_k=2k</m>. </p>
+    <p> We need to be careful with subscripts. For example, <m>a_{4+1}=a_{5}=10</m>, but <m>a_{4}+1=8+1=9</m>. If we add 1 to the index, we get the next term, which is not the same as adding 1 to the term.
+
+  </p></example>
+
+  <example xml:id="E_generalsequences"><title>Explicitly Defined Sequences</title><p>
+    We can define a sequence by giving the general term.</p>
+    <p>Let <m>a_k=2^k, k\geq 0</m>. Give the first five terms of the sequence.</p>
+    <answer>1, 2, 4, 8, 16</answer>
+
+    <p>Let <m>a_k=2^k, k\geq 0</m>. Give the <m>k+1</m> term of the sequence.</p>
+    <answer><p><m>a_{k+1}=2^{k+1}</m></p></answer>
+
+    <p>Let <m>a_k=\frac{1}{k+1}, k\geq 1</m>. Give the first five terms of the sequence.</p>
+    <answer><p>1/2, 1/3, 1/4, 1/5, 1/6</p></answer>
+
+    <p>Let <m>a_k=\frac{1}{k+1}, k\geq 1</m>. Give the <m>k+1</m> term of the sequence.</p>
+    <answer><m>a_{k+1}=\frac{1}{k+2}</m></answer>
+
+  </example>
+
+  <activity xml:id="A_sequence1"><title>An Alternating Sequence</title><introduction><p>Consider the sequence <m>a_k=(-1)^k</m> for <m>k\geq 0</m>.</p></introduction>
+<task><p>Write the first 5 terms of the sequence.</p></task>
+<task><p>What is the initial term? </p></task>
+</activity>
+
+<activity xml:id="A_sequence2"><title>A Fractional Sequence</title><introduction><p>Consider the sequence <m>a_k=\frac{1}{k-1}</m> for <m>k\geq 3</m>.</p></introduction>
+<task><p>Write the first 5 terms of the sequence.</p></task>
+<task><p>What is the initial term? </p></task>
+</activity>
+
+<activity xml:id="A_sequence3"><title>Another Alternating Sequence</title><statement><p>Consider the sequence <m>0, 1, -2, 3, -4, 5,  \ldots</m>. Find a general formula for the <m>k</m>th term, <m>a_k</m>.</p></statement>
+</activity>
+
+  <p>Now that we have general forms for sequences, we look at many examples where we add terms in a sequence.</p>
+
+<assemblage xml:id="B_sumnotation">
+  <title>Summation Notation</title><idx>summation notation</idx><notation><usage><m>\sum_{k=1}^{n}a_k</m></usage><description>the sum <m>a_1+a_2+\cdots +a_n</m></description></notation>
+  <p><me>a_1+a_2+\cdots +a_n=\sum_{k=1}^{n}a_k</me>
+
+  We read <m>\sum_{k=1}^{n}a_k</m> as <q>the sum of <m>a_k</m> from <m>k=1</m> to <m>n</m>.</q></p>
+</assemblage>
+
+
+  <example xml:id="E_sumnotation"><title>Summation Notation</title>
+    
+    <p>Find <m>\sum_{k=1}^4 k</m>.</p>
+    <answer><p><m>1+2+3+4=10</m></p></answer>
+
+    <p>Find <m>\sum_{k=1}^5 k^2</m>.</p>
+    <answer><p><m>1^2+2^2+3^2+4^2+5^2=55</m></p></answer>
+
+    <p>Find <m>\sum_{k=1}^n k^2</m>.</p>
+    <answer><p><m>1^2+2^2+3^2+\cdots+n^2</m></p></answer>
+
+    <p>Find <m>\sum_{k=2}^2 k^2</m>.</p>
+    <answer><p><m>2^2=4</m></p></answer>
+
+  </example>
+
+  <p>Note, as we can see in <xref ref="E_sumnotation"/>, <m>\sum_{k=m}^{m}a_k=a_m</m>.</p>
+
+  <activity xml:id="A_summation"><title>Using Summation Notation</title><statement>Consider the sum <m>\sum_{k=1}^{5}(2k-1)</m>. Write out the summation and find the sum.</statement></activity>
+
+  <activity xml:id="A_shiftedsum"><title>A Shifted Sum</title><introduction><p>Consider the sum <m>\sum_{k=1}^{n}\frac{1}{k}</m>. </p></introduction>
+    <task><p>Write out the summation.</p></task>
+    <task><p>Now write out the summation for <m>\sum_{k=1}^{n+1}\frac{1}{k}</m>. How do (a) and (b) differ?</p></task>
+    <task><p>Now write out the summation for <m>\sum_{k=0}^{n}\frac{1}{k+1}</m>. Is this the same as either of the previous sums?</p></task>
+  </activity>
+
+  <activity xml:id="A_nplus1sum"><title>Adding Another Term</title><introduction><p>Consider the sum <m>\sum_{k=1}^{n}\frac{1}{k(k+1)}</m>. </p></introduction>
+    <task><p>Write out the summation.</p></task>
+    <task><p>Now write out the summation for <m>\sum_{k=1}^{n+1}\frac{1}{k(k+1)}</m>. How do (a) and (b) differ?</p></task>
+
+  </activity>
+
+  <p>Just as we can add several terms of a sequence, <term>product notation</term><idx>product notation</idx> allows us to multiply several terms of a sequence.
+
+  <me>a_1\cdot a_2\cdot a_3\cdots a_n=\prod_{k=1}^{n}a_k</me>.<notation><usage><m>\prod_{k=1}^{n}a_k</m></usage><description>the product <m>a_1\cdot a_2\cdot a_3\cdots a_n</m></description></notation></p>
+
+  <example xml:id="E_prodnotation"><title>Product Notation</title>
+    
+    <p>Find <m>\prod_{k=1}^4 k</m>.</p>
+    <answer><p><m>1\cdot2\cdot3\cdot 4=24</m></p></answer>
+
+    <p>Find <m>\prod_{k=1}^3 k^2</m>.</p>
+    <answer><p><m>1^2\cdot2^2\cdot3^2=36</m></p></answer>
+
+  </example>
+
+  <activity xml:id="A_products"><title>Products</title><introduction><p>Write out the following products.</p></introduction>
+    <task><p><m>\prod_{k=1}^{5}(2k-1)</m></p></task>
+    <task><p><m>\prod_{k=1}^{n+1}(2k)</m></p></task>
+
+  </activity>
+
+  <p>A particularly useful product is <m>n</m> <term>factorial</term><idx>factorial</idx>, <me>n!=(n)(n-1)\cdots(2)(1).</me><notation><usage><m>n!</m></usage><description><m>n</m> factorial; <m>(n)(n-1)\cdots(2)(1)</m></description></notation> We also need to define <m>0!=1</m>.</p>
+
+<assemblage xml:id="B_propsums">
+  <title>Properties of Sums and Products</title>
+  <p>The following are useful properties when working with summation and product notation.
+<ol marker="1">
+  <li><m>\sum_{k=m}^{n}a_k+\sum_{k=m}^{n}b_k=\sum_{k=m}^{n}(a_k+b_k)</m></li>
+  <li><m>c\sum_{k=m}^{n}a_k=\sum_{k=m}^{n}(ca_k)</m></li>
+  <li><m>\biggl(\prod_{k=m}^{n}a_k\biggr)\biggl(\prod_{k=m}^{n}b_k\biggr)=\prod_{k=m}^{n}(a_k\cdot b_k)</m></li>
+</ol>
+
+  </p>
+</assemblage>
+
+  <activity xml:id="A_sumofsums"><title>Summing Two Sums</title><statement><p>Prove <m>\sum_{k=1}^{n}a_k + \sum_{k=1}^{n}b_k=\sum_{1}^{n}(a_k+b_k)</m>.</p></statement><hint><p>Try writing out the sum rather than using summation notation.</p></hint></activity>
+
+
+<!--<definition xml:id="D_choose"><statement><p>The number of subsets of size <m>r</m> that can be chosen from a set of <m>n</m> elements is <m>n</m> <term>choose</term><idx>choose</idx> <m>r</m>. Notation <m>\binom{n}{r}</m>, read <q><m>n</m> choose <m>r</m>.</q></p></statement></definition>
+
+<p>We can calculate the number of sets of <m>r</m> objects chosen from <m>n</m> objects with the following formula:
+<me>\binom{n}{r}=\frac{n!}{r!(n-r)!}.</me></p>
+
+<example xml:id="E_nchooser"><title>Finding <m>n</m> choose <m>r</m></title>
+    
+    <p>Calculate <m>\binom{5}{3}</m>.</p>
+    <answer><p><m>\frac{5!}{3!2!}=10</m></p></answer>
+
+    <p>Calculate <m>\binom{5}{1}</m>.</p>
+    <answer><p><m>\frac{5!}{1!4!}=5</m></p></answer>
+
+    <p>Calculate <m>\binom{5}{4}</m>.</p>
+    <answer><p><m>\frac{5!}{4!1!}=5</m></p></answer>
+
+    <p>Calculate <m>\binom{5}{0}</m>.</p>
+    <answer><p><m>\frac{5!}{0!5!}=1</m></p></answer>
+
+  </example>
+
+  <activity><statement><p>Find <m>{6 \choose 3}</m> and <m>{6 \choose 0}</m>.</p></statement></activity>-->
+
+<p>When we get to mathematical induction in <xref ref="induction"/>, it will be important that we can work with summations where we want to add <q>the <m>n+1</m> term</q> to a summation. In particular, the following observation is useful:
+<me>\biggl(\sum_{k=1}^{n}a_{k}\biggr)+a_{n+1}=\sum_{k=1}^{n+1}a_k.</me>
+
+</p>
+
+<p>We should also note that there are often multiple ways to write the same sum.</p>
+
+  <example xml:id="E_changevariables"><title>Writing a Sum in Two Different Ways</title>
+    
+    <p>Consider the sum <m>1^2+2^2+3^2</m>. Depending on how we index the sum, we can write it in different ways.</p>
+    <p>If we index from <m>k=1</m> to 3, we have <m>\sum_{k=1}^3k^2=1^2+2^2+3^2</m>.</p>
+    <p>If we index from <m>k=2</m> to 4, we have <m>\sum_{k=2}^4(k-1)^2=1^2+2^2+3^2</m>.</p>
+
+  </example>
+
+
+    <!--<reading-questions>
+      <title>Check Your Understanding</title>
+      
+      <exercise><statement><p>Write the terms of <m>\frac{k+1}{k+3}, 0\leq k\leq 4</m>.</p></statement>
+      <answer>1/3, 2/4, 3/5, 4/6, 5/7.</answer></exercise>
+
+      <exercise><statement><p>Write the terms of <m>\frac{(-1)^k}{2k}, 1\leq k\leq 6</m>.</p></statement>
+      <answer><m>-1/2, 1/4, -1/6, 1/8, -1/10, 1/12</m>.</answer></exercise>
+
+      <exercise><statement><p>Write the terms of <m>\frac{(-1)^kk}{2}, 1\leq k\leq 4</m>.</p></statement>
+      <answer><m>-1/2, 2/2, -3/2, 4/2</m>.</answer></exercise>
+
+      <exercise><statement><p>Write out the summation notation as a sum of terms: <m>\sum_{k=1}^4 2k-1</m></p></statement>
+      <answer><m>1+3+5+7</m></answer></exercise>
+
+      <exercise><statement><p>Write out the summation notation as a sum of terms: <m>\sum_{k=1}^n k^3</m></p></statement>
+      <answer><m>1^3+2^3+3^3+\cdots+n^3</m></answer></exercise>
+
+      <exercise><statement><p>Write out the summation notation as a sum of terms: <m>\sum_{k=1}^{n+1} k^3</m></p></statement>
+      <answer><m>1^3+2^3+3^3+\cdots+(n+1)^3</m></answer></exercise>
+
+      <exercise><statement><p>Write out the summation notation as a sum of terms: <m>\sum_{k=1}^4 \frac{(-1)^k}{k}</m></p></statement>
+      <answer><m>(-1/1)+(1/2)+(-1/3)+(1/4)</m></answer></exercise>
+
+      <exercise><statement><p>Write out the summation notation as a sum of terms: <m>\sum_{k=1}^n \frac{(-1)^k}{k}</m></p></statement>
+      <answer><m>(-1/1)+(1/2)+(-1/3)\cdots+((-1)^n/n)</m></answer></exercise>
+
+      <exercise><statement><p>Write out the summation notation as a sum of terms: <m>\sum_{k=1}^{n+1} \frac{(-1)^k}{k}</m></p></statement>
+      <answer><m>(-1/1)+(1/2)+(-1/3)\cdots+((-1)^{n+1}/(n+1))</m></answer></exercise>
+
+    
+
+    </reading-questions>-->
+
+    <exercises>
+      <exercise><statement><p>Find an explicit formula for the following sequences with the given initial terms.</p>
+      <ol marker="a">
+        <li>
+      <p>
+    <m>\frac{1}{3}, \frac{4}{9},\frac{9}{27}, \frac{16}{81},\frac{25}{243}, \frac{36}{729}</m>
+  </p>
+    </li>
+
+    <li>
+      <p>
+     <m>3, 6, 12, 24, 48, 96</m>
+  </p>
+    </li></ol>
+     
+    </statement></exercise>
+     <exercise><statement><p>Compute the given product or sum.</p>
+     <ol marker="a">
+      <li>
+      <p>
+   <m>\prod_{k=2}^{4}{k^2}</m>
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>\prod_{k=2}^{2}{\Bigl(1-\frac{1}{k}\Bigr)}</m>
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>\sum_{k=-1}^{1}{(k^2+3)}</m>
+  </p>
+    </li></ol>
+      </statement></exercise>
+      <exercise><statement><p>Write out the sum in expanded form.</p>
+      <ol marker="a">
+        <li><p><m>\sum_{j=1}^{n}{j(j+1)}</m></p></li>
+      <li><p><m>\sum_{i=1}^{k+1}{i(i!)}</m></p></li>
+    </ol></statement></exercise>
+      <exercise><statement>
+        <p>
+    Rewrite by separating off the final term: <m>\sum_{i=1}^{k+1}{i(i!)}</m>
+  </p>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Write using product notation: <me>(2^2-1)\cdot(3^2-1)\cdot(4^2-1).</me>
+  </p>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Write using summation notation: <me>1^3+2^3+3^3+\cdots+n^3.</me>
+  </p>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Transform the sum by making the change of variable <m>j=i-1</m>: <me>\sum_{i=1}^{n+1}\frac{(i-1)^2}{i\cdot n}.</me>
+  </p>
+      </statement></exercise>
+      <exercise><statement><p>Simplify.</p>
+      <ol marker="a">
+        <li><m>\frac{((n+1)!)^2}{(n!)^2}</m></li>
+      <li><m>\frac{n!}{(n-k+1)!}</m></li>
+    </ol></statement></exercise>
+     <!-- <exercise><statement><p>Compute.</p>
+      <ol marker="a">
+        <li><m>{3 \choose 0}</m></li>
+        <li><m>{n \choose n-1}</m></li>
+        <li><m>{n+1 \choose n-1}</m></li>
+      </ol></statement></exercise>-->
+
+      <exercise><statement>
+        <p>
+    Observe that 
+    <md>
+<mrow>\frac{1}{1\cdot 3}\amp =\frac{1}{3}</mrow>
+<mrow>\frac{1}{1\cdot 3}+\frac{1}{3\cdot 5}\amp =\frac{2}{5}</mrow>
+<mrow>\frac{1}{1\cdot 3}+\frac{1}{3\cdot 5}+\frac{1}{5\cdot 7}\amp =\frac{3}{7}</mrow>
+<mrow>\frac{1}{1\cdot 3}+\frac{1}{3\cdot 5}+\frac{1}{5\cdot 7}+\frac{1}{7\cdot 9}\amp =\frac{4}{9}</mrow>
+</md>
+  </p>
+
+  <p>
+    Find a general formula for <m>\sum_{i=1}^{n}\frac{1}{(2i-1)(2i+1)}</m>.
+  </p>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Evaluate the sum <m>\sum_{i=1}^{n}\frac{i}{(i+1)!}</m> for all <m>n=1, 2, 3, 4, 5</m>. Find a formula for the sum for a general <m>n</m>.
+  </p>
+      </statement></exercise>
+      
+    </exercises>
+
+</section>

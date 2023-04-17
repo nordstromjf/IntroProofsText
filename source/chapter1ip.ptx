@@ -1,0 +1,22 @@
+<chapter xml:id="chapter1" xmlns:xi="http://www.w3.org/2001/XInclude" >
+  <title>Logic</title>
+  <introduction>
+   
+    <p>
+     In this chapter we introduce logic, which gives the formal structure of mathematics. A mathematical proof is really a logical argument. First we will look at logical statements, then we will put those statements into formal arguments.
+    </p>
+
+  
+    
+
+  </introduction>
+  <xi:include  href="whatisaproof1-1.ptx" />
+  <xi:include  href="arguments1-2.ptx" />
+  <xi:include  href="connectives1-3.ptx" />
+  <xi:include  href="argumentswconnectives1-4.ptx" />
+  
+
+  
+  
+  
+</chapter>

@@ -1,0 +1,23 @@
+<chapter xml:id="chapter3" xmlns:xi="http://www.w3.org/2001/XInclude" >
+  <title>Basic Proof Techniques</title>
+  <introduction>
+   
+    <p>
+     In this chapter we begin to look at standard techniques for writing proofs. These techniques are used throughout mathematics, in many different contexts. We will focus most of our examples in the context of integers and rational numbers.
+    </p>
+
+  
+    
+
+  </introduction>
+  
+  <xi:include  href="directproof3-1.ptx" />
+  <xi:include  href="moredirect3-2.ptx" />
+  <xi:include  href="cases3-3.ptx" />
+  <xi:include  href="contradiction3-4.ptx" />
+ 
+
+  
+  
+  
+</chapter>

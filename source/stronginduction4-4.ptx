@@ -1,0 +1,258 @@
+<section xml:id="stronginduction">
+  <title>Strong Induction</title><idx>strong induction</idx>
+
+  <p>In this section we look at a variation on induction called <term>strong induction</term>. This is really just regular induction except we make a stronger assumption in the induction hypothesis. It is possible that we need to show more than one base case as well, but for the moment we will just look at how and why we may need to change the assumption.</p>
+
+<assemblage xml:id="B_strongind">
+  <title>Strong Induction</title><idx>strong induction</idx>
+  <p>Let <m>P(n)</m> be a property defined for integers <m>n</m>. If 
+  <ol marker="1">
+  <li><m>P(1), \ldots P(a)</m> are true for some <m>a</m>, and</li>
+  <li>if <m>P(i)</m> is true for all <m>1\leq i\leq k</m>, then <m>P(k+1)</m> is true;</li>
+ </ol>
+ then we can conclude <m>P(n)</m> is true for all <m>n\geq 1</m>.</p>
+</assemblage>
+
+  <p>As in the previous section, we will assume <m>n\in \mathbb{Z}</m>.</p>
+
+<assemblage xml:id="B_strongindstructure">
+  <title>Structure of a Strong Induction Proof</title><idx>proof by strong induction</idx><idx><h>strong induction</h><h>proof structure</h></idx>
+
+  <p>To prove <m>P(n), \forall n\geq 1</m>,
+
+  <ul>
+  <li><title>Base Step</title> Assume <m>P(1)</m> is true. </li>
+  <li><title>Induction Step</title> Assume <m>P(i)</m> is true for all <m>1\leq i\leq k</m>. Show <m>P(k+1)</m> is true.</li>
+ </ul></p>
+
+</assemblage>
+
+ <p>For now, we can use <m>a=1</m> in the base step and just do one base step as before. But we might need to show, say, <m>P(1)</m> and <m>P(2)</m>.</p>
+
+ <p>The only real difference between strong induction and regular induction is that instead of assuming <m>P(k)</m>, we assume <m>P(1), P(2), \ldots P(k)</m>. In notation, this is <m>P(i)</m> for all <m>1\leq i\leq k</m>.</p>
+
+ <p>Why can we change the assumption? Well, remember how induction works, first we show <m>P(1)</m>, then the induction step gets us to <m>P(2)</m>, which then gets us to <m>P(3)</m>, etc. But once we get to, say, <m>P(4)</m>, we already know <m>P(1), P(2), P(3)</m>. So we may as well assume we have <m>P(i)</m> for everything up to <m>P(k)</m>.</p>
+
+ <p>For the next two examples, we will look at proving every integer <m>n>1</m> is divisible by a prime. Although we proved this using cases in <xref ref="T_divbyprime"/>, we will now prove it using induction. First we will attempt to use regular induction and see why it isn't enough.</p>
+
+ <example xml:id="E_divbyprimeregular"><title>Trying Regular Induction</title>
+<p>Prove for all integers <m>n>1</m>, <m>n</m> is divisible by a prime.</p>
+<p>First we try to do the proof using regular induction.</p>
+<proof>
+  <p>Base Step: Let <m>n=2</m>. Then <m>2\mid 2</m> and 2 is prime.</p>
+
+<p>Thus, <m>n</m> is divisible by a prime.
+</p>
+<p>Induction Step:</p>
+<p>Assume <m>k</m> is divisible by a prime for some <m>k\geq 2</m>.</p>
+<p>Show <m>k+1</m> is divisible by a prime.</p>
+
+<p><q>Proof</q> of induction step:</p>
+<p>Case 1: <m>k+1</m> is prime. Now, <m>k+1\mid k+1</m> and hence <m>k+1</m> is divisible by a prime.</p>
+<p>Case 2: <m>k+1</m> is not prime. This is were we get stuck, since although we know <m>k</m> is divisible by a prime, that doesn't tell us anything about <m>k+1</m>. In fact we showed that any prime dividing <m>k</m> CANNOT divide <m>k+1</m>.</p>
+
+<p>Thus, regular induction is not going to work for this proof.
+</p>
+
+</proof>
+</example>
+
+<p>Now we can show how to do the proof with strong induction.</p>
+
+<example xml:id="E_divbyprimestrong"><title>Strong Induction</title>
+<p>Prove for all integers <m>n>1</m>, <m>n</m> is divisible by a prime.</p>
+<p>The only change in the structure is to the induction assumption.</p>
+<proof>
+  <p>Base Step: Let <m>n=2</m>. Then <m>2\mid 2</m> and 2 is prime.</p>
+
+<p>Thus, <m>n</m> is divisible by a prime.
+</p>
+<p>Induction Step:</p>
+<p>Assume <m>i</m> is divisible by a prime for all <m>2\leq i\leq k</m> and for some <m>k\geq 2</m>.</p>
+<p>Show <m>k+1</m> is divisible by a prime.</p>
+
+<p>Proof of induction step:</p>
+<p>Case 1: <m>k+1</m> is prime. Now, <m>k+1\mid k+1</m> and hence <m>k+1</m> is divisible by a prime.</p>
+<p>Case 2: <m>k+1</m> is not prime. Thus <m>k+1=ab</m> where <m>1&lt; a &lt; k+1</m>. Then <m>2\leq a\leq k</m>. By our induction assumption, <m>a</m> must be divisible by a prime. Since <m>a\mid k+1</m> and <m>a</m> is divisible by a prime, <m>k+1</m> is divisible by a prime.</p>
+<p>Thus, by induction, every <m>n>1</m> is divisible by a prime.
+</p>
+
+</proof>
+</example>
+
+<p>In regular induction, we use that we know the statement holds for <m>k</m> to get that it holds for <m>k+1</m>. Strong induction is useful when we need to use some smaller case (not just <m>k</m>) to get the statement for <m>k+1</m>.</p>
+
+<activity xml:id="A_strongind"><title>Strong Induction on a Sequence</title><introduction><p> Let <m>a_0, a_1, a_2,  \ldots</m> be the sequence defined as
+<me>a_0=1, a_1=2, a_2=3</me>
+<me>a_k=a_{k-1}+a_{k-2}+a_{k-3}, k\geq3.</me></p></introduction>
+<task><p>Write out the first 6 terms of the sequence.</p></task>
+<task><p>Convince yourself that for the first six terms of the sequence, <m>a_n\leq 3^n</m>.</p></task>
+<task><p>Now try to write a standard induction proof to prove <m>a_n\leq 3^n</m> for all <m>n\geq 0</m>. Does anything go wrong?</p></task>
+<task><p>The proof requires strong induction. For the base step, how many previous terms do you need before you can first compute <m>a_k</m> using the formula provided in defining the sequence? You need to show the base step for each of these initial terms since the induction won't apply to them. Check the base step for each of these terms.</p></task>
+
+<task><p>Write the <q>assume</q> and <q>show</q> statements for the inductive step. Make sure your <q>assume</q> statement is in the form for strong induction.</p></task>
+<task><p>Now prove the inductive step.</p></task></activity>
+
+<p>As we see in <xref ref="A_strongind"/>, strong induction is a useful technique for proving statements about sequences. One particularly nice sequence is the <term>Fibonacci Sequence</term><idx>Fibonacci sequence</idx>.</p>
+
+<definition xml:id="D_fibonacci"><p>The <term>Fibonacci sequence</term><idx>Fibonacci sequence</idx> is the sequence, <m>f_n</m>, defined by
+<me>f_1=1, f_2=2, f_n=f_{n-1}+f_{n-2}.</me></p></definition>
+
+<p>The first two terms are called the <term>initial terms</term>. Then we generate terms by adding the previous two terms. For example, <m>f_3=f_2+f_1=1+1=2</m>.</p>
+
+<activity xml:id="A_termsfibonacci"><title>Generating the Fibonacci Sequence</title>
+<statment><p>Find the first 8 terms of the Fibonacci sequence.</p></statment></activity>
+
+<activity xml:id="A_fibproof"><title>A Fibonacci Sum</title><introduction><p>Consider the sum of every other Fibonacci number:
+<me>\sum_{i=1}^{n}f_{2i-1}.</me></p></introduction>
+<task><p>Make a table of <m>n</m> and the corresponding <m>f_n</m> for <m>n=1</m> to <m>n=8</m>.</p></task>
+<task><p>For each <m>n</m> in your table, find the sum <m>\sum_{i=1}^{n}f_{2i-1}</m>.</p></task>
+<task><p>Conjecture a formula for <m>\sum_{i=1}^{n}f_{2i-1}</m>.</p></task>
+<task><p>Use induction to prove your formula.</p></task></activity>
+
+<!--<p>For the remainder of the section, we are going to switch gears a bit, a prove the existence part of the Division Algorithm. Before we do that we need the Well-Ordering Principle, which we will state without a proof.</p>
+
+
+  <theorem xml:id="T_wellordering"><title>Well-Ordering Principle</title><idx>Well-Ordering Principle</idx><p>Let <m>S</m> be a set containing one or more integers, all of which are greater than some fixed integer. Then <m>S</m> has a least element.</p></theorem>
+
+
+<p>To check that the Well-Ordering Principle applies, you need to check three things:
+<ol>
+  <li><m>S\neq \emptyset</m></li>
+  <li><m>S\subseteq \mathbb{Z}</m></li>
+  <li>Every elelment of <m>S</m> is greater than some fixed integer.</li>
+</ol></p>
+
+<example xml:id="E_wop"><title>Well-Ordering Principle</title>
+<p>First note that the Well-Ordering Principle does not apply if the set is not integers. For example,
+<me>\{1/n : n\in \mathbb{Z}, n\geq 1\}.</me>
+This is not a subset of the integers and does not have a least element, even though every element is greater than 0.</p>
+
+<p>Now consider <m>S=\{2k+1 : k\geq 0\}</m>. Check each of the conditions.
+<ol>
+  <li><m>S\neq \emptyset</m> since <m>1\in S</m>.</li>
+  <li><m>S\subseteq \mathbb{Z}</m> since <m>2k+1\in \mathbb{Z}</m>.</li>
+  <li>Every element of <m>S</m> is greater than some fixed integer since <m>2k+1\geq 1</m> when <m>k\geq 0</m>.</li>
+</ol></p>
+
+</example>
+
+<activity><statement><p>Let <m>k\in \mathbb{Z}</m>. Do the conditions of the Well Ordering Principle apply to <m>S=\{2k: k\geq 3\}?</m></p></statement></activity>
+
+<activity><statement><p>Let <m>k, j\in \mathbb{Z}</m>. Do the conditions of the Well Ordering Principle apply to 
+<me>S=\{2k+3j: 2k+3j\geq 0\}?</me></p></statement></activity>
+<activity><statement><p>Do the conditions of the Well Ordering Principle apply to <m>S=\{r\in \mathbb{Q}: r\geq 0\}?</m></p></statement></activity>
+<activity><statement><p>Let <m>n, d\in \mathbb{Z}</m>, and <m>d>0</m>. Do the conditions of the Well Ordering Principle apply to <me>S=\{n-dk: n-dk\geq 0\}?</me></p></statement></activity>
+
+<p>We now prove the existence part of the Quotient-Remainder Theorem.</p>
+<p><xref ref="T_divisionalgorthm"/>: Given any <m>n, d\in \mathbb{Z}</m> with <m>d>0</m>, there exist <m>q, r</m> such that <m>n=dq+r</m> and <m>0\leq r&lt; d</m>.</p>
+
+<proof><p>Let <m>S=\{n-dk : n-dk\geq 0, k\in\mathbb{Z}\}</m>. Show <m>S</m> satisfies the Well-Ordering Principle. Clearly <m>S</m> is a set of integers, and by definition, every element is greater than or equal to 0. So we just need to show that <m>S\neq\emptyset</m>.</p>
+<p>If <m>n\geq 0</m>, we can let <m>k=0</m>. Then <m>n-dk=n\geq 0</m>. Hence <m>n\in S</m>.</p>
+
+<p>If <m>n&lt; 0</m>, let <m>k=n</m>. Then <m>n-dn=n(1-d)</m>. But <m>n&lt; 0</m> and <m>1-d\leq 0</m>. Thus, <m>n-dn\geq 0</m>. Hence <m>n-dn\in S</m>.</p>
+<p>Thus, <m>S</m> is nonempty and satisfies the conditions of the Well-Ordering Principle. Hence, <m>S</m> has a least element. Call it <m>r</m>.</p>
+
+<p>Since <m>r\in S</m>, <m>r=n-dk</m> for some <m>k\in \mathbb{Z}</m>. Let <m>k=q</m>. Then <m>r=n-dq</m>, and so <m>n=dq+r</m>.</p>
+
+<p>We just need to show that <m>0\leq r&lt; d</m>. Well, <m>r\geq 0</m> since <m>r\in S</m>.</p>
+<p>We will use contradiction to show <m>r&lt; d</m>. Assume <m>r\geq d</m>. Then 
+<md>
+  <mrow>n-d(q+1)&amp;=n-dq-d</mrow>
+  <mrow>&amp;=r-d</mrow>
+  <mrow>&amp;\geq 0, \text{ since } r\geq d.</mrow>
+</md>
+But then <m>n-d(q+1)\in S</m> and <m>n-d(q+1)&lt; n-dq=r</m>. This contradicts that <m>r</m> was the smallest element of <m>S</m>. Therefore, <m>r&lt; d</m>.</p></proof>-->
+
+
+
+   <!-- <reading-questions>
+      <title>Check Your Understanding</title>
+
+      <exercise><statement><p>True or false: <m>S=\{\frac{3n+1}{4} : n\in \mathbb{Z}, n\geq 0\}</m> satisfies the conditions of the Well-Ordering Principle.</p></statement>
+      <answer><p>False, the elements aren't all integers.</p></answer></exercise>
+
+      <exercise><statement><p>True or false: <m>S=\{3n : n\in \mathbb{Z}, n\geq 0\}</m> satisfies the conditions of the Well-Ordering Principle.</p></statement>
+      <answer><p>True.</p></answer></exercise>
+
+      <exercise><statement><p>True or false: <m>S=\{-n : n\in \mathbb{Z}, n\geq 0\}</m> satisfies the conditions of the Well-Ordering Principle.</p></statement>
+      <answer><p>False, the elements aren't all greater that some integer.</p></answer></exercise>
+
+      <exercise><statement><p>True or false: <m>S=\{3n-k : n,k\in \mathbb{Z}, 3n-k\geq 0\}</m> satisfies the conditions of the Well-Ordering Principle.</p></statement>
+      <answer><p>True.</p></answer></exercise>
+
+      <exercise><statement><p>True or false: <m>S=\{(-1)^n : n\in \mathbb{Z}\}</m> satisfies the conditions of the Well-Ordering Principle.</p></statement>
+      <answer><p>True.</p></answer></exercise>
+
+
+
+    
+
+    </reading-questions>-->
+
+    <exercises>
+      <exercise><statement><p>
+    Let <m>a_1, a_2, a_3,  \ldots</m> be the sequence defined as <me>a_1=1, a_2=3,</me> <me>a_k=a_{k-2}+2a_{k-1}, k\geq3.</me>
+  </p>
+
+  <p>
+    Prove that <m>a_n</m> is odd for all integers <m>n \geq 1</m>.
+  </p></statement></exercise>
+  <exercise><statement><p>
+    Let <m>b_1, b_2, b_3,  \ldots</m> be the sequence defined as <me>b_1=4, b_2=12,</me> <me>b_k=b_{k-2}+b_{k-1}, k\geq3.</me>
+  </p>
+
+  <p>
+    Prove that <m>b_n</m> is divisible by 4 for all integers <m>n \geq 1</m>.
+  </p></statement></exercise>
+  <exercise><statement>
+    <p>
+    Let <m>c_1, c_2, c_3,  \ldots</m> be the sequence defined as <me>c_1=3, c_2=5,</me> <me>c_k=3c_{k-1}-2c_{k-2}, k\geq3.</me>
+  </p>
+
+  <p>
+    Prove that <m>c_n=2^n+1</m> for all integers <m>n \geq 1</m>.
+  </p>
+  </statement></exercise>
+  <exercise><statement>
+    <p>
+    Let <m>a_1, a_3, a_3,  \ldots</m> be the sequence defined as <me>a_1=1, a_2=3,</me> <me>a_k=a_{k-1}+a_{k-2}, k\geq3.</me>
+  </p>
+
+  <p>
+    Use strong induction to prove that <m>a_n\leq \Bigl(\frac{7}{4}\Bigr)^n</m> or all integers <m>n \geq 1</m>.
+  </p>
+  </statement></exercise>
+
+  <exercise><statement>
+    <p>
+    Let <m>f_1, f_2, f_3,\ldots</m> be the Fibonacci numbers.
+    Find and prove a formula for <m>\sum_{i=1}^{n}f_{2i}</m>.
+  </p>
+  </statement></exercise>
+
+  <exercise><statement>
+    <p>
+    Let <m>f_1, f_2, f_3,\ldots</m> be the Fibonacci numbers.
+    Find and prove a formula for <m>f_n-f_{n-1}+f_{n-2}-\cdots+(-1)^{n+1}f_1</m> when <m>n</m> is a positive integer.
+  </p>
+  </statement></exercise>
+
+  <exercise><statement><p> Let <m>f_1, f_2, f_3,\ldots</m> be the Fibonacci numbers.
+    Prove for all <m>n\geq 2</m> and all <m>m\geq 1</m>, <m>f_{n+m}=f_{n-1}f_m+f_nf_{m+1}</m>.
+  </p></statement></exercise>
+
+  <exercise><statement><p> Let <m>f_1, f_2, f_3,\ldots</m> be the Fibonacci numbers.
+    Prove for all <m>n\geq 2</m>, <m>f_{n+1}f_{n-1}-(f_n)^2=(-1)^n</m>.
+  </p></statement></exercise>
+
+  <exercise><statement><p> Prove if <m>f_n</m> is the <m>n</m>th Fibonacci number, then <me>f_n={({1+\sqrt 5\over 2})^n-({1-\sqrt 5\over 2})^n\over \sqrt 5}.</me>
+  </p></statement></exercise>
+
+  <exercise><statement><p>
+    Prove your response to <xref ref="ER_neednot" /> using mathematical induction. 
+  </p></statement><hint><p>Let <m>n</m> stand for the number of connectives contained in any given statement <m>A</m>.</p></hint></exercise>
+
+    </exercises>
+
+</section>

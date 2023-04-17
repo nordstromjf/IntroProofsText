@@ -1,0 +1,246 @@
+<section xml:id="moreinduction">
+  <title>More Mathematical Induction</title><idx>mathematical induction</idx>
+
+  <p>In the last section we introduced mathematical induction by looking at proofs involving summation formulas. In this section we look at some more examples, including divisibility proofs and inequality proofs.</p>
+
+  <p>As in the previous section, we will assume <m>n\in \mathbb{Z}</m>. We continue to use the <xref ref="B_inductionstructure" text="title"/> from the previous section.</p>
+
+  <!--<p>Structure of a mathematical induction proof<idx>proof by induction</idx>:</p>
+
+  <p>To prove <m>P(n), \forall n\geq 1</m>,
+  <ul>
+  <li><title>Base Step</title> Show <m>P(1)</m> is true.</li>
+  <li><title>Induction Step</title> Assume <m>P(k)</m> for some <m>k\in\mathbb{Z}</m>, show <m>P(k+1)</m>.</li>
+ </ul>
+ Conclude <m>P(n)</m> is true for all <m>n\geq 1</m></p>
+
+ <p>In the above structure we used <m>a=1</m> for simplicitiy, but an induction proof could have a base step starting at a different <m>a</m>. Most commonly, the base step starts with 0 or 1.</p>
+
+ <p>When writing induction proofs, make sure you use the actual statement you are proving rather than the notation <m>P(1), P(k), P(n)</m>.</p>-->
+
+<activity xml:id="A_indsumofsquares"><title>Sum of Squares</title><statement><p>Prove  <m>\sum_{i=1}^{n}i^2=\frac{n(n+1)(2n+1)}{6}</m> for all <m>n\geq 1</m> by induction. Make sure your proof follows the form from <xref ref="induction"/>.</p></statement>
+
+  </activity>
+
+ <example xml:id="E_divisinduction1"><title>Proof by Induction: Divisibility</title>
+<p>Prove <m>3\mid (n^3-n)</m> for <m>n\geq 0</m>.</p>
+<proof>
+  <p>Base Step: Let <m>n=0</m>. Then <m>n^3-n=0^3-0=0</m>. We know <m>3\mid 0</m>.</p>
+
+<p>Thus, <m>3\mid (n^3-n)</m> for <m>n=0</m>.
+</p>
+<p>Induction Step:</p>
+<p>Assume <m>3\mid (k^3-k)</m> for some <m>k\geq 0</m>.</p>
+<p>Show <m>3\mid ((k+1)^3-(k+1))</m>.</p>
+
+<p>Scratchwork: before proving the induction step, we might need to do some scratchwork. This is NOT part of the proof, but will help us structure a clear proof. We can do some algebra on the expression we are trying to prove: <m>(k+1)^3-(k+1)</m>.
+<md>
+  <mrow>(k+1)^3-(k+1)&amp;=k^3+3k^2+3k+1-k-1</mrow>
+  <mrow>&amp;=(k^3-k)+3k^2+3k\ \ \textrm{ rearranged terms and cancelled 1's}</mrow>
+</md>
+But by our assumption, <m>3\mid (k^3-k)</m> and since the remaining terms are multiples of 3, <m>3\mid 3k^2+3k</m>.</p>
+<p>Now we are ready to use our scratch work to write the proof of the induction step.</p>
+
+<p>Proof of induction step: 
+<md>
+  <mrow>3&amp;\mid (k^3-k)\ \  \textrm{ by the induction assumption}</mrow>
+  <mrow>3&amp;\mid (k^3-k)+3k^2+3k\ \  \textrm{ since we just added multiples of 3}</mrow>
+  <mrow>3&amp;\mid (k^3-k)+3k^2+3k+1-1\ \  \textrm{ since 1-1 is 0}</mrow>
+  <mrow>3&amp;\mid k^3+3k^2+3k+1-k-1\ \  \textrm{ rearranged terms}</mrow>
+  <mrow>3&amp;\mid ((k+1)^3-(k+1)).</mrow>
+</md>
+Which is what we wanted to show.
+</p>
+<p>Hence, by induction <m>3\mid (n^3-n)</m> for <m>n\geq 0</m>.</p>
+
+</proof>
+</example>
+
+<p>Some comments about divisibility proofs: 
+<ul>
+  <li>You will likely need to do scratchwork. Do not include the scratchwork in your actual proof.</li>
+  <li>The point of the proof is that the reader can follow all of the steps. You do not need to explain where your choices came from. For example, in the proof in <xref ref="E_divisinduction1"/>, it might not be obvious why you should add <m>3k^2+3k</m>, but the reader just needs to know that 3 divides the expression, which is clear.</li>
+  <li>Divisibility proofs in this form can be challenging to do at first, but with practice, they often end up being some of the easier induction proofs to do, as they all follow a similar format.</li>
+</ul></p>
+
+<p>Let's try another example.</p>
+
+<example xml:id="E_divisinduction2"><title>Proof by Induction: Divisibility, Again</title>
+<p>Prove <m>3\mid (2^{2n}-1)</m> for <m>n\geq 0</m>.</p>
+<proof>
+  <p>Base Step: Let <m>n=0</m>. Then <m>2^{2n}-1=2^{0}-1=0</m>. We know <m>3\mid 0</m>.</p>
+
+<p>Thus, <m>3\mid (2^{2n}-1)</m> for <m>n=0</m>.
+</p>
+<p>Induction Step:</p>
+<p>Assume <m>3\mid (2^{2k}-1)</m> for some <m>k\geq 0</m>.</p>
+<p>Show <m>3\mid (2^{2(k+1)}-1)</m>.</p>
+
+<p>Scratchwork: 
+<md>
+  <mrow>2^{2(k+1)}-1&amp;=2^{2k+2}-1</mrow>
+  <mrow>&amp;=(2^2)(2^{2k})-1\ \ \textrm{ used exponent rules to rewrite}</mrow>
+  <mrow>&amp;=(4)(2^{2k})-1</mrow>
+  <mrow>&amp;=(3+1)(2^{2k})-1\ \ \textrm{ maybe not an obvious step,}</mrow>
+  <mrow> &amp;\ \ \ \ \ \ \ \textrm{ but we are looking for multiples of 3}</mrow>
+  <mrow>&amp;=3\cdot 2^{2k}+2^{2k}-1\ \ \textrm{ distribute}</mrow>
+</md>
+But by our assumption, <m>3\mid 2^{2k}-1</m> and since the remaining term is a multiple of 3, <m>3\mid 3\cdot 2^{2k}+2^{2k}-1</m>.</p>
+<p>Now we are ready to use our scratchwork to write the proof of the induction step.</p>
+
+<p>Proof of induction step: 
+<md>
+  <mrow>3&amp;\mid 2^{2k}-1\ \  \textrm{ by the induction assumption}</mrow>
+  <mrow>3&amp;\mid 2^{2k}-1+3\cdot 2^{2k}\ \  \textrm{ since we just added a multiple of 3}</mrow>
+  <mrow>3&amp;\mid (3+1)(2^{2k})-1\ \  \textrm{ factored out } 2^{2k}</mrow>
+  <mrow>3&amp;\mid (4)(2^{2k})-1</mrow>
+  <mrow>3&amp;\mid (2^2)(2^{2k})-1</mrow>
+  <mrow>3&amp;\mid (2^{2k+2})-1</mrow>
+  <mrow>3&amp;\mid (2^{2(k+1)})-1</mrow>
+</md>
+Which is what we wanted to show.
+</p>
+<p>Hence, by induction <m>3\mid (2^{2n}-1)</m> for <m>n\geq 0</m>.</p>
+
+</proof>
+</example>
+
+<activity xml:id="A_divindproof"><title>A Divisibility Proof</title><statement><p>Prove  <m>8 \mid 3^{2n}-1</m> for all <m>n\geq 0</m> by induction. It may be helpful to do scratchwork first. </p></statement></activity>
+
+<p>Our next example applies induction to a statement involving inequalities. Inequality induction proofs will be more challenging as they often take a bit more trial and error in the scratchwork. When dealing with <em>equalities</em>, you know for example, that you have to add the same thing to both sides. However, with <em>inequalities</em> you can change one side as long as you maintain the inequality. For example, if you know <m>P>Q</m>, then you also know <m>P+2>Q</m>. The fact that we can change one side of the expression makes it less intuitive to see what steps to take.</p>
+
+<example xml:id="E_inequlinduction2"><title>Proof by Induction: Inequality</title>
+<p>Prove <m>2n+1&lt; 2^n</m> for <m>n\geq 3</m>.</p>
+<proof>
+  <p>Base Step: Let <m>n=3</m>. Then <m>2n+1=2(3)+1=7</m>, and <m>2^n=2^3=8</m> We know <m>7&lt;8</m>.</p>
+
+<p>Thus, <m>2n+1&lt; 2^n</m> for <m>n=3</m>.
+</p>
+<p>Induction Step:</p>
+<p>Assume <m>2k+1&lt; 2^k</m> for some <m>k\geq 3</m>.</p>
+<p>Show <m>2(k+1)+1&lt; 2^{k+1}</m>.</p>
+
+<p>Scratchwork: 
+<md>
+  <mrow>\text{LHS: } 2(k+1)+1=2k+2+1=2k+1+2</mrow>
+  <mrow>\text{RHS: } 2^{k+1}=2(2^k)</mrow>
+</md>
+Now we want to make a useful observation: in the LHS expression we are addding. In the RHS expression we are multiplying. We need a way to go between them. One way is to notice that <m>2(A)=A+A</m>. Then
+<md>
+  <mrow>2^{k+1}=2(2^k)=2^k+2^k</mrow>
+</md>
+We know <m>2k+1&lt; 2^k</m> and <m>2&lt;2^k</m>, so we can put all this together into the proof.
+</p>
+<p>Proof of induction step: 
+<md>
+  <mrow>2k+1&lt; 2^k\ \  \textrm{ by the induction assumption}</mrow>
+  <mrow>2(k+1)+1 &amp;= 2k+2+1</mrow>
+  <mrow>&amp;=2k+1+2</mrow>
+  <mrow>&amp;&lt;2^k+2\ \ \textrm{ by the induction assumption}</mrow>
+  <mrow>&amp;&lt;2^k+2^k\ \ \textrm{ since } 2&lt; 2^k</mrow>
+  <mrow>&amp;=2(2^k)</mrow>
+  <mrow>&amp;=2^{k+1}</mrow>
+</md>
+Thus, <m>2(k+1)+1&lt; 2^{k+1}</m>, which is what we wanted to show.
+</p>
+<p>Hence, by induction <m>2n+1&lt; 2^n</m> for <m>n\geq 3</m>.</p>
+
+</proof>
+</example>
+
+
+
+    <!--<reading-questions>
+      <title>Check Your Understanding</title>
+
+      <exercise><statement><p>Suppose you want to prove <m>8\mid 3^{2n}-1</m>. Show the statement holds for <m>n=0</m>.</p></statement>
+      <answer><p><m>3^{0}-1=0</m> and <m>8\mid 0</m>.</p></answer></exercise>
+
+      <exercise><statement><p>Suppose you want to prove <m>8\mid 3^{2n}-1</m>. Show the statement holds for <m>n=1</m>.</p></statement>
+      <answer><p><m>3^{2}-1=8</m> and <m>8\mid 8</m>.</p></answer></exercise>
+
+      <exercise><statement><p>Suppose you want to prove <m>8\mid 3^{2n}-1</m>. What should you assume in the induction step?</p></statement>
+      <answer><m>8\mid 3^{2k}-1</m></answer></exercise>
+
+      <exercise><statement><p>Suppose you want to prove <m>8\mid 3^{2n}-1</m>. What should you show in the induction step?</p></statement>
+      <answer><m>8\mid 3^{2(k+1)}-1</m></answer></exercise>
+
+      
+
+      <exercise><statement><p>If you know <m>8\mid 3^{2k}-1</m>, rewrite <m>3^{2(k+1)}-1</m> so that it is a sum of terms that are multiples of 8.</p></statement>
+      <answer><m>3^{2(k+1)}-1=3^{2k+2}-1=3^23^{2k}-1=(8+1)3^{2k}-1=(3^{2k}-1)+8(3^{2k})</m></answer></exercise>
+
+
+    
+
+    </reading-questions>-->
+
+    <exercises>
+
+      <exercise><statement><p>
+    For all non-negative integers <m>n</m>, <m>3\mid (n^3+2n)</m>.
+  </p></statement></exercise>
+      
+      <exercise><statement>
+        <p>
+    Use mathematical induction to prove <m>5^n-1</m> is divisible by 4, for integers <m>n\geq 0</m>.
+  </p>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Use mathematical induction to prove <m>7^n-1</m> is divisible by 6, for integers <m>n\geq 0</m>.
+  </p>
+      </statement></exercise>
+
+      <exercise xml:id="ER_indpowersof2"><statement>
+        <p>Use mathematical induction to prove the following statements.</p>
+          <ol marker="a">
+    <li>
+      <p>
+    For all non-negative integers <m>n</m>, <m>7\mid 2^{3n}-1</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    For all non-negative integers <m>n</m>, <m>31\mid 2^{5n}-1</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    For all non-negative integers <m>n</m>, <m>9\mid 2^{6n}-1</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    For all non-negative integers <m>n</m>, <m>7\mid 2^{6n}-1</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    For all non-negative integers <m>n</m>, <m>17\mid 2^{8n}-1</m>.
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+
+      <exercise><statement><p>
+    Find a generalization for <xref ref="ER_indpowersof2" />. State your generalization and prove it with induction.
+  </p></statement></exercise>
+      <exercise><statement>
+        <p>
+    Use mathematical induction to prove for all <m>n\geq 4</m>, <m>n!&gt;2^n</m>.
+  </p>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Use mathematical induction to prove <m>1+nx\leq (1+x)^n</m>, for all real numbers <m>x&gt;-1</m> and integers <m>n\geq 2</m>.
+  </p>
+      </statement><hint><p>You can only do induction on integers, and only one integer at a time. So in this problem you want to do induction on <m>n</m>, not <m>x</m>. Let <m>x</m> just be a variable. This problem does require <m>x&gt;-1</m>, so make sure you indicate in your proof where you needed to use that condition.</p></hint></exercise>
+    </exercises>
+
+</section>

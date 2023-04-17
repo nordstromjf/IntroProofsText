@@ -1,0 +1,385 @@
+<section xml:id="contradiction">
+  <title>Proof by Contradiction and Contrapositive</title><idx>proof by contradiction</idx><idx>proof by contrapositive</idx>
+
+  <introduction><p>In this section we will learn two new proof techniques, contradiction and contrapositive. Both proof techniques rely on being able to negate mathematical statements.</p>
+
+<p>As we add more proof techniques, it is important to realize that you are not expected to know which technique to use when you start a proof. Proof-writing often takes some trial and error. First try a direct proof, if you get stuck, you may think about whether breaking your set into cases will  help, or whether negating a statement will make it easier to use. It is also quite possible that different methods can be used to prove the same statement.</p></introduction>
+
+<subsection xml:id="SS_contradiction"><title>Proof by Contradiction</title><idx><h>contradiction</h><h>proof by</h></idx>
+  
+  <p>The basic idea behind proof by contradiction is that if you assume the statement you want to prove is false, and this forces a logical contradiction, then you must have been wrong to start. Thus, you can conclude the original statement was true. By a logical contradiction, we generally mean a statement that must be both true and false at the same time. When writing a proof by contradiction you must be very careful in your logical reasoning. It must be clear that you reach a contradiction though careful logical deduction.</p>
+
+  <assemblage xml:id="B_contradictionpf">
+<title>Method of Proof by Contradiction</title><idx><h>contradiction</h><h>proof by</h></idx>
+<p>
+  <ul>
+  <li><p>Assume the statement to be proved is false. Or, assume the negation of the statement is true.</p></li>
+  <li><p>Show you reach some logical contradiction. This means you have a statement in your proof that must be both true and false.</p></li>
+  <li><p>Conclude the original statement is true.</p></li>
+  
+</ul></p>
+</assemblage>
+
+
+
+<p>Since contradiction relies on negating statements, recall the following negations from <xref ref="connectives"/>:
+<ul>
+  <li><m>p\rightarrow q</m> has negation <m>p\ \wedge \neg q</m></li>
+  <li><m>p\ \wedge q</m> has negation <m>\neg p\ \vee \neg q</m></li>
+  <li><m>p\ \vee q</m> has negation <m>\neg p\ \wedge \neg q</m></li>
+</ul>
+</p>
+
+<example xml:id="E_contradiction"><title>Proof by Contradiction</title>
+<p>Prove if <m>x^2+y=13</m> and <m>y\neq 4</m> then <m>x\neq 3</m>.</p>
+<p>Before proving this statement, we note that it has logical form <m>(p\wedge q)\rightarrow r</m>. Since we are doing a proof by contradiction, we need to negate this statement. The negation has form <m>(p\wedge q) \wedge \neg r</m>. Thus, we will assume <m>p</m> is true, <m>q</m> is true, and <m>r</m> is false.</p>
+<proof><p>By contradiction. We assume <m>x^2+y=13, y\neq 4</m> and <m>x=3</m>. Since <m>x=3</m> and  <m>x_2+y=13</m>, we get <m>9+y=13</m>. Thus, <m>y=4</m>. But this contradicts that <m>y\neq 4</m>.</p></proof>
+</example>
+
+<example xml:id="E_nogreatinteger"><title>There Is No Greatest Integer</title>
+<p>Prove there is no greatest integer.</p>
+<proof><p>By contradiction. Assume there is a greatest integer. Call this greatest integer <m>N</m>. Now consider <m>N+1</m>. Since <m>N</m> is an integer, <m>N+1</m> is an integer. We can see that <m>N+1>N</m>, which contradicts that <m>N</m> was the greatest. Therefore, there is no greatest integer.</p></proof>
+</example>
+
+<activity xml:id="A_ratplusirr"><title>Rational Plus Irrational</title><introduction><p>Consider the statement: the sum of a rational number and an irrational number is irrational.</p></introduction>
+<task><p>Try to determine if the statement is true or false by trying examples and looking for a counterexample.</p></task>
+<task><p>Write the statement using variables and quantifiers.</p></task>
+<task><p>Write the negation of the statement.</p></task>
+<task><p>Now assume the negation is true and find a contradiction.</p></task>
+<task><p>The work in (d) is your scratch work. Write a careful proof by contradiction to show the original statement is true.</p></task></activity>
+
+</subsection>
+
+<subsection xml:id="SS_contrapositive"><title>Proof by Contrapositive</title><idx><h>contrapositive</h><h>proof by</h></idx>
+
+<p>Recall from <xref ref="connectives"/> the contrapositive of <m>p\rightarrow q</m> is <m>\neg q\rightarrow \neg p</m>. Also recall, that <m>p\rightarrow q</m> and <m>\neg q\rightarrow \neg p</m> are logically equivalent. This allows us to use the contrapositive in place of the original statement. Thus, a proof by contrapositive is just a direct proof of the contrapositive statement.</p>
+
+<assemblage xml:id="B_contrapositvepf">
+<title>Method of Proof by Contrapositive</title><idx><h>contrapositive</h><h>proof by</h></idx>
+<p><ul>
+  <li><p>Write the statement to be proved in the form <m>\forall x\in D</m>, if <m>P(x)</m> then <m>Q(x)</m>.</p></li>
+  <li><p>Write the contrapositive of the statement: <m>\forall x\in D</m>, if <m>\neg Q(x)</m> then <m>\neg P(x)</m>.</p></li>
+  <li><p>Prove the contrapositive directly: assume <m>\neg Q(x)</m>, show <m>\neg P(x)</m>.</p></li>
+  
+</ul></p>
+</assemblage>
+
+<example xml:id="E_contrapositiveproof"><title>A Divisibility Proof by Contrapositive</title>
+<p>Prove for all <m>a, b, c\in \mathbb{Z}</m>, if <m>a \nmid bc</m> then <m>a \nmid b</m>.</p>
+<p>This statement has contrapositive: for all <m>a, b, c\in \mathbb{Z}</m>, if <m>a \mid b</m> then <m>a \mid bc</m>.</p>
+<proof><p> By contrapositive. Let <m>a, b, c\in \mathbb{Z}</m>. Assume <m>a \mid b</m>. This means <m>b=ak</m> for some <m>k\in\mathbb{Z}</m>. Then <m>bc=(ak)c=a(kc)</m>, where <m>kc \in \mathbb{Z}</m>. Thus, <m>a \mid bc</m>.
+</p></proof>
+</example>
+
+<activity xml:id="A_n2evenneven"><title>If the Square is Even</title><introduction><p>Consider the statement: for all integers <m>n</m>, if <m>n^2</m> is even then <m>n</m> is even.</p></introduction>
+<task><p>Write the contrapositive of the statement.</p></task>
+<task><p>To prove the statement by contrapositive, what should you assume?</p></task>
+<task><p>To prove the statement by contrapositive, what should you show?</p></task>
+<task><p>Give a direct proof of the contrapositive. You have now proven the original statement by contrapositive. </p></task>
+</activity>
+
+<p>Since we can use either contradiction or contrapositive on statements of the form <m>p\rightarrow q</m>, the following comparison may be helpful.</p>
+
+<assemblage xml:id="B_contvscont">
+
+  <title>Comparison of the Techniques of Contradiction and Contrapositive</title>
+
+<p>Contradiction with <m>p\rightarrow q</m>:
+<ul>
+  <li>Assume <m>p\ \wedge \neg q</m>.</li>
+  <li> Show any contradiction. The contradiction may be <m>\neg p</m> or it may be <m>q</m>, or some other logical contradiction.</li>
+  <li>Since you can reach any contradiction at all, it may be difficult to know what you are looking for. It also may be difficult to know if you've made an error.</li>
+  <li>With contradiction you get to assume more, but it is less clear what you want to show.</li>
+</ul>
+</p>
+
+<p>Contrapositive with <m>p\rightarrow q</m>:
+<ul>
+  <li>Assume <m>\neg q</m>.</li>
+  <li> Show <m>\neg p</m>. </li>
+  <li>With contrapositive you assume less than contradiction, but you know exactly what you are trying to show.</li>
+</ul>
+</p>
+</assemblage>
+</subsection>
+
+<subsection xml:id="SS_twoproofs"><title>Two Classical Proofs</title>
+
+<p>We are now able to use contradiction and contrapositive to prove two classical theorems in mathematics.</p>
+
+  <p>In <xref ref="A_n2evenneven" /> you used contrapositive to prove if <m>n^2</m> is even, then <m>n</m> is even. This statement is an important step in our first big theorem. We state it here formally as a lemma.</p>
+
+<lemma xml:id="L_nsquaredeven"><statement>Let <m>n\in \mathbb{Z}</m>. If <m>n^2</m> is even, then <m>n</m> is even.</statement></lemma>
+<proof><p>We will prove this by contrapositive. Assume <m>n</m> is odd. Show <m>n^2</m> is odd. Since <m>n</m> is odd, <m>n=2k+1</m> for some <m>k\in \mathbb{Z}</m>. Then 
+<me>n^2=(2k+1)^2=4k^2+4k+1=2(2k^2+2k)+1.</me>
+Since <m>2k^2+2k\in \mathbb{Z}</m>, <m>n^2</m> is odd.
+</p>
+</proof>
+
+<theorem xml:id="T_roottwoirrational"><statement><p><m>\sqrt{2}</m> is irrational.</p></statement></theorem>
+
+<proof><p>We will prove this by contradiction. Assume <m>\sqrt{2}</m> is rational. Then <m>\sqrt{2}=\frac{p}{q}</m> with <m>p, q\in\mathbb{Z}, q\neq 0</m>. We will additionally assume <m>p</m> and <m>q</m> have no common factors. [Note, this additional assumption just makes the proof simpler. You should convince yourself that it is reasonable to add this assumption--that given any fraction, we can always reduce so <m>p</m> and <m>q</m> have no common factors.]</p>
+<p>Now, using algebra on the equation, 
+  <md>
+    <mrow>\sqrt{2}&amp;=\frac{p}{q}</mrow>
+    <mrow>2&amp;=\frac{p^2}{q^2}</mrow>
+    <mrow>2q^2&amp;=p^2.</mrow>
+  </md>
+  Since <m>q^2\in\mathbb{Z}</m>, <m>p^2</m> must be even. Then by <xref ref="L_nsquaredeven" />, <m>p</m> must be even.</p>
+<p>Since <m>p</m> is even, <m>p=2k</m> for some <m>k\in \mathbb{Z}</m>. Thus, we can substitute into the above equation.
+<md>
+    <mrow>2q^2&amp;=(2k)^2</mrow>
+    <mrow>2q^2&amp;=4k^2</mrow>
+    <mrow>q^2&amp;=2k^2.</mrow>
+  </md>
+Since <m>k^2\in\mathbb{Z}</m>, <m>q^2</m> must be even. Then by <xref ref="L_nsquaredeven" />, <m>q</m> must be even.</p>
+
+<p>But now we have <m>p</m> and <m>q</m> both even, which means they both have a common factor of 2. This contradicts our assumption that <m>p</m> and <m>q</m> have no common factors. Since we reached a contradiction, we can conclude that <m>\sqrt{2}</m> is irrational.</p>
+</proof>
+
+<p>Make sure you can read through the above proof and follow from one step to the next.</p>
+
+<activity xml:id="A_squarediv3"><title>If the Square is Divisible by 3</title><introduction><p>In <xref ref="L_nsquaredeven" /> and <xref ref="A_n2evenneven" />, we proved if <m>n^2</m> is even then <m>n</m> is even. Now suppose you want to prove if <m>n^2</m> is divisible by 3 then <m>n</m> is divisible by 3.</p></introduction>
+<task><p>To prove the statement by contrapositive, what should you assume?</p></task>
+<task><p>To prove the statement by contrapositive, what should you show?</p></task>
+<task><statement><p>The problem with now giving a direct proof of the contrapositive is that we need to know what we mean by <q><m>n</m> is not divisible by 3.</q> Recall the Division Algorithm, <xref ref="T_divisionalgorthm" />. If <m>n</m> is not divisible by 3, what are the possible forms for <m>n</m>? </p></statement><hint>Think of the forms for <m>n=3q+r</m>.</hint></task>
+<task><p>Now write a proof by cases using the cases for <m>n</m> from (c) to show if <m>n</m> is not divisible by 3, then <m>n^2</m> is not divisible by 3.</p></task>
+</activity>
+
+<p>Our second classical theorem is to prove there are infinitely many prime numbers. IN <xref ref="E_nogreatinteger"/> we proved there are infinitely many integers. In that proof, if we had a biggest integer, <m>N</m>, we were able to construct an integer that was greater than <m>N</m>, namely <m>N+1</m>. However, primes are not that nice. If you were to list out several prime numbers, it would be impossible to find a pattern for the next prime. Sometimes primes are close together, like 17 and 19, and sometimes they are far apart. In fact, it is possible to prove that we can find a list of <m>n</m> consecutive integers where none of the consecutive integers are prime for any positive integer <m>n</m>. This means there are arbitrarily long sequences of consecutive integers with no primes, or there are primes that are arbitrarily far apart.</p>
+
+<p>First we need to understand a bit more about divisibilty with primes.</p>
+
+<activity xml:id="A_divprimes"><title>Prime Divisor of <m>a+1</m></title><introduction><p>Consider the statement: for all <m>a\in \mathbb{Z}</m> and primes <m>p</m>, if <m>p\mid a</m> then <m>p \nmid (a+1)</m>.</p></introduction>
+<task><p>Write the contrapositive of the statement.</p></task>
+<task><p>Write the negation of the statement.</p></task>
+<task><p>Based on the contrapositive and the negation, which seem easier to use in a proof?</p></task>
+<task><p>Assume <m>p\mid a</m> and <m>p \mid (a+1)</m>. Can you find a contradiction?</p></task>
+<task><p>If you were able to find a contradiction, try to write a careful proof by contradiction for the statement.</p></task>
+
+</activity>
+
+<p>The statement in <xref ref="A_divprimes"/> is an important lemma for proving there are infinitely many primes.</p>
+
+<lemma xml:id="L_primedivplus1"><statement><p>For all <m>n\in\mathbb{Z}</m> and all primes <m>p</m>, if <m>p\mid n</m> then <m>p\nmid n+1</m>.</p></statement></lemma>
+<proof><p>We will prove this by contradiction. Let <m>n\in\mathbb{Z}</m>, <m>p</m> prime. Assume <m>p\mid n</m> and <m>p\mid n+1</m>. Since <m>p\mid n</m>, <m>n=pk</m> for some <m>k\in \mathbb{Z}</m>. Since <m>p\mid n+1</m>, <m>n+1=pj</m> for some <m>j\in \mathbb{Z}</m>. Thus, 
+<md>
+    <mrow>n+1&amp;=pj</mrow>
+    <mrow>pk+1&amp;=pj</mrow>
+    <mrow>1&amp;=pj-pk=p(k-j).</mrow>
+  </md>
+Since <m>k-j\in\mathbb{Z}, p\mid 1</m>, and <m>p</m> is a factor of 1. However, the only factors of 1 are 1 and -1, which are not prime. Thus, we have a contradiction.
+</p>
+</proof>
+
+<theorem xml:id="T_infmanyprimes"><statement><p>There are infinitely many primes.</p></statement></theorem>
+  
+<proof><p>Assume there are finitely many primes. Since there are finitely many, we can list them all, say, <m>p_1, p_2, \ldots, p_n</m>. Now let <m>N=p_1\cdot p_2\cdot p_3\cdots p_n</m>, the product of all the primes. Consider <m>N+1</m>. We know <m>p_i\mid N</m> for each prime <m>p_i</m>. By <xref ref="L_primedivplus1"/>, <m>p_i\nmid N+1</m>. This means <m>N+1</m> is an integer greater than 1 with no prime divisor, which contradicts <xref ref="T_divbyprime" />.</p></proof>
+
+
+
+
+
+
+    <!--<reading-questions>
+      <title>Check Your Understanding</title>
+
+      <exercise><statement><p>Give the negation for the statement: there does not exist a greatest odd integer.</p></statement>
+      <answer><p>There exists a great odd integer.</p></answer></exercise>
+      
+      <exercise><statement><p>Give the negation for the statement: for all real numbers <m>r</m>, if <m>r</m> is not rational then <m>3r</m> is not rational.</p></statement>
+      <answer><p>There exists a real number <m>r</m> such that <m>r</m> is rational and <m>3r</m> is not rational.</p></answer></exercise>
+
+      <exercise><statement><p>Suppose you want to prove the following statement by contradiction: for all real numbers <m>r</m>, if <m>r</m> is not rational then <m>3r</m> is not rational. What should you assume? What should you show?</p></statement>
+      <answer><p>Assume: there exists a real number <m>r</m> such that <m>r</m> is rational and <m>3r</m> is not rational. Show: any contradiction.</p></answer></exercise>
+
+      <exercise><statement><p>Give the contrapositive for the statement: for all real numbers <m>r</m>, if <m>r</m> is not rational then <m>3r</m> is not rational.</p></statement>
+      <answer><p>For all real numbers <m>r</m> if <m>3r</m> is rational then <m>r</m> is rational.</p></answer></exercise>
+
+      <exercise><statement><p>Suppose you want to prove the following statement by contrapositive: for all real numbers <m>r</m>, if <m>r</m> is not rational then <m>3r</m> is not rational. What should you assume? What should you show?</p></statement>
+      <answer><p>Assume: <m>r</m> is real, <m>3r</m> is rational. Show: <m>r</m> is rational.</p></answer></exercise>
+
+       <exercise><statement><p>Give the negation for the statement: for all integers <m>n</m> and primes <m>p</m>, if  <m>p\mid n^2</m>  then <m>p \mid n</m>.</p></statement>
+      <answer><p>There exists an integer <m>n</m> and a prime <m>p</m> such that <m>p\mid n^2</m> and <m>p\nmid n</m>.</p></answer></exercise>
+
+      <exercise><statement><p>Suppose you want to prove the following statement by contradiction: for all integers <m>n</m> and primes <m>p</m>, if  <m>p\mid n^2</m>  then <m>p \mid n</m>. What should you assume? What should you show?</p></statement>
+      <answer><p>Assume: there exists an integer <m>n</m> and a prime <m>p</m> such that <m>p\mid n^2</m> and <m>p\nmid n</m>. Show any contradiction. </p></answer></exercise>
+
+      <exercise><statement><p>Give the contrapositive for the statement: for all integers <m>n</m> and primes <m>p</m>, if  <m>p\mid n^2</m>  then <m>p \mid n</m>.</p></statement>
+      <answer><p>For all integers <m>n</m> if <m>p \nmid n</m> then <m>p\nmid n^2</m>.</p></answer></exercise>
+
+       <exercise><statement><p>Suppose you want to prove the following statement by contrapositive: for all integers <m>n</m> and primes <m>p</m>, if  <m>p\mid n^2</m>  then <m>p \mid n</m>. What should you assume? What should you show?</p></statement>
+      <answer><p>Assume: <m>n</m> is an integer, <m>p</m> is prime, and <m>p\nmid n</m>. Show: <m>p \nmid n^2</m>. </p></answer></exercise>
+
+
+    </reading-questions>-->
+
+    <exercises>
+    <!--  <exercise><statement><p>
+    Is <m>\frac{1}{0}</m> an irrational number? Explain.
+  </p></statement></exercise>-->
+      <exercise><statement>
+        <p>
+    Consider the statement: for all integers <m>n</m>, if <m>n^2</m> is odd then <m>n</m> is odd.
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    Write what you would assume and what you would need to show to prove this statement by contradiction.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Write what you would assume and what you would need to show to prove this statement by contrapositive.
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+ <!--     <exercise><statement>
+        <p>
+    <term>A Test to Determine if a Number is Prime:</term> Given any integer <m>n&gt;1</m>, to test whether <m>n</m> is prime check to see if it is divisible by a prime number less than or equal to <m>\sqrt{n}</m>. If it is not divisible by any prime less than or equal to <m>\sqrt{n}</m>, then <m>n</m> is prime.
+  </p>
+  <p>
+    Use this test to determine if the following numbers are prime or not.
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    527
+  </p>
+    </li>
+
+    <li>
+      <p>
+    613
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>-->
+      <exercise><statement>
+        <p>
+    Carefully write the negation of each statement then prove the statement by contradiction.
+  </p>
+  <ol marker="a">
+    <li><p>
+    There is no greatest even integer.
+  </p></li>
+  <li><p>
+    There is no least positive rational number.
+  </p>
+    </li>
+  </ol>
+      </statement></exercise>
+
+       <exercise><statement>
+        <p>
+    Prove the following by contrapositive. Make sure you carefully write what you are assuming and what you need to show.
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    If the product of two positive real numbers is greater than 100, then at least one of the numbers is greater than 10.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    If the sum of two real numbers is less than 50 then at least one of the numbers is less than 25.
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+
+     
+      <exercise><statement>
+        <p>
+    Prove the following statements by either contradiction or contrapositive (be sure to note which method you used).
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    For all integers <m>n</m>, if <m>n^2</m> is odd then <m>n</m> is odd.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    For all integers <m>a</m>, <m>b</m>, and <m>c</m>, if <m>a</m> does not divide <m>(bc)</m>, then <m>a</m> does not divide <m>b</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    For all integers <m>a</m>, <m>b</m>, and <m>c</m>, if <m>a</m> divides <m>b</m> and <m>a</m> does not divide <m>c</m>, then <m>a</m> does not divide <m>(b+c)</m>.
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Determine whether the following statements are true or false. Prove the true statements by contradiction and provide counterexamples for the false ones.
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    The sum of any two irrational numbers is irrational.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    If <m>a</m> and <m>b</m> are rational numbers, <m>b\neq 0</m>, and <m>r</m> is an irrational number, then <m>a+br</m> is irrational.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    If <m>r</m> is any rational number, and <m>s</m> is any irrational number, then <m>{r\over s}</m> is irrational.
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+      <exercise xml:id="ER_neednot"><statement>
+        <p>
+    From <xref ref="ER_onlyandnot" /> we know that, given any statement of truth-functional logic, we can always find a logically equivalent statement that uses only the connectives <m>\neg</m> and <m>\wedge</m>. For example, <m>[(p\leftrightarrow q) \vee r]</m> is logically equivalent to <m>\neg\{\neg r\ \wedge;\ [\neg (\neg p\ \wedge;\ \neg q)\ \wedge;\ \neg (p\ \wedge;\ q)]\}</m>. So we could, if we wanted to, do without the connectives <m>\vee</m>, <m>\veebar</m>, <m>\rightarrow</m>, and <m>\leftrightarrow</m>. Suppose that, instead, we chose to use <em>only</em> the connectives <m>\wedge</m>, <m>\vee</m>, <m>\rightarrow</m>, and <m>\leftrightarrow</m>. Would these connective suffice? Why or why not? Remember that whatever your response, you should be able to offer a <em>proof</em> of it!
+  </p>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Consider the following statement and <q>proof.</q> Is the proof correct? If so, what proof strategies does it use? If not, can it be fixed? Is the theorem correct?
+  </p>
+
+  <p>
+    <theorem><statement>There are irrational numbers <m>a</m> and <m>b</m> such that <m>a^b</m> is rational.</statement></theorem>
+  </p>
+
+  
+    <p>
+    <q>Proof:</q> Either <m>\sqrt{2}^{\sqrt{2}}</m> is rational or it is irrational.
+  </p>
+
+      
+    <p>Case 1: <m>\sqrt{2}^{\sqrt{2}}</m> is rational. Let <m>a=b=\sqrt{2}</m>. Then <m>a</m> and <m>b</m> are irrational, and <m>a^b=\sqrt{2}^{\sqrt{2}}</m>, which we assumed was rational.
+  </p>
+      <p>
+    Case 2: <m>\sqrt{2}^{\sqrt{2}}</m> is irrational. Let <m>a=\sqrt{2}^{\sqrt{2}}</m> and <m>b=\sqrt{2}</m>. Then <m>a</m> is irrational by assumption, and we know that <m>b</m> is also irrational. Furthermore, <m>a^b=\bigl(\sqrt{2}^{\sqrt{2}}\bigr)^{\sqrt{2}}=\sqrt{2}^{(\sqrt{2}\sqrt{2})}=2</m>. Which is rational.
+  </p>
+      </statement></exercise>
+  
+
+    </exercises>
+
+  </subsection>
+
+</section>

@@ -1,0 +1,332 @@
+<section xml:id="conditionals">
+  <title>Conditional Statements</title><idx>conditional statement</idx>
+
+  <p>In <xref ref="quantifiers"/> we focused on existential and universal statements. In this section, we want to focus on statements that involve a conditional.</p>
+  
+ 
+
+  <activity xml:id="A_whichtype"><title>Which Type</title>
+    <introduction><p>For each of the following statements, determine whether it is a conditional, universal, or existential statement.</p></introduction>
+    <task><p>All even numbers have a factor of 2.</p></task>
+    <task><p>If <m>x>4</m>, then <m>x^2>16</m>.</p></task>
+    <task><p>There exists a number greater than 100.</p></task>
+  </activity>
+
+  <activity xml:id="A_univtocond"><title>Relationship between Universal and Conditional</title>
+    <introduction><p>There is a relationship between universal statements and conditional statements.</p></introduction>
+    <task><p>Rewrite the statement <q>All even numbers have a factor of 2.</q> as a conditional statement.</p></task>
+    <task><p>Rewrite the statement <q>If <m>x>4</m>, then <m>x^2>16</m>.</q> as a universal statement.</p></task>
+  </activity>
+  
+  <!--<p>We can also combine statements of the above types. Many mathematical statements are combinations of the common forms.
+    <ul>
+      <li><title>Universal Conditional<idx>universal conditional</idx></title> <p>For all ___, if ___ then ___. </p> <p>Example: For every real number <m>x</m>, if <m>x\geq 2</m>, then <m>x\geq 1</m>.</p></li>
+      <li><title>Universal Existential<idx>universal existential</idx></title> <p>For all ___, there exists ___. </p> <p>Example: For all integers <m>n</m>, there exists an integer <m>m</m> such that <m>n+m=0</m>.</p></li>
+      <li><title>Existential Universal<idx>existential universal</idx></title> <p>There exists ___ for every ___.</p> <p>Example: There exists an integer <m>m</m> such that for all integers <m>n</m>, <m>m+n=n</m>.</p></li>
+    </ul></p>-->
+
+    <!-- <activity xml:id="A_excomb"><title>Example of Each</title><statement><p>Give an additional example of each of the combined forms.</p></statement></activity>
+
+    <activity xml:id="A_informal"><title>Formal and Informal</title><statement><p>One thing that makes understanding mathematical statements tricky is that they can be phrased in different ways. Try writing one of your statements from <xref ref="A_excomb" /> in two different (but equivalent) ways. You might think about how you would express the same idea in a less formal way. If your statement involves variables, can you write it without them? If your statement does not include variables, can you write it with some?</p></statement></activity>
+
+  -->
+
+    <p>A <term>universal conditional statement</term><idx>universal conditional statement</idx> has the form <q>for all <m>x\in D</m>, if <m>P(x)</m> then <m>Q(x)</m>.</q> In symbols, we can write a universal conditional as <m>\forall x\in D, P(x)\rightarrow Q(x).</m> </p>
+
+  <example xml:id="E_univcond"><title>Universal Conditional Statement</title>
+    <p>Translate the statement using quantifiers and variables, <q>If an integer is even then it is divisible by 2.</q></p>
+    <answer><p>Let <m>P(x)</m> be <q><m>x</m> is even</q> and <m>Q(x)</m> be <q><m>x</m> is divisible by 2.</q> <m>\forall x\in \mathbb{Z}, P(x)\rightarrow Q(x)</m>.</p></answer>
+  </example>
+
+  <activity xml:id="A_transtounivcond"><title>Translating to Universal Conditional</title><statement><p>Write the following statement formally as a universal conditional: Every differentiable function is continuous.</p></statement></activity>
+
+   
+
+    
+
+
+  <p>In <xref ref="connectives"/> we introduced the connective for conditional statements. A conditional statement, as we've seen, has the form <q>if <m>p</m> then <m>q</m>,</q> and we use the connective <m>p\rightarrow q</m>.</p>
+
+  <p>As many mathematical statements are in the form of a conditional, it is important to keep in mind how to determine if a conditional statement is true or false.</p>
+
+  <p>A conditional, <m>p\rightarrow q</m>, is <em>TRUE</em> if you can show that whenever <m>p</m> is true, then <m>q</m> must be true. Or, using the contrapositive, <m>p\rightarrow q</m> is <em>TRUE</em> if you can show that whenever <m>q</m> is false, then <m>p</m> must be false.</p>
+
+  <p>A conditional, <m>p\rightarrow q</m>, is <em>FALSE</em> if you can show that there is a possibility for <m>p</m> to be true and <m>q</m> to be false. Note, by recalling the logical equivalence <m>\neg(p\rightarrow q)\equiv p\ \wedge \neg q</m>, we see that the negation of an <q>if...then</q> is an <q>and</q> statement.</p>
+
+  <activity xml:id="A_condPortland"><title>A Geography Conditional</title><introduction><p>Consider the statement <q>If you are in Portland, then you are in Oregon.</q></p></introduction>
+<task><p>Determine if this statement is true or false.</p></task>
+<task><p>Write the negation of the statement. Use this to check your answer to (a). In particular, your negation should have the opposite truth value to what you decided in (a).</p></task></activity>
+
+<activity xml:id="A_condweather"><title>A Weather Conditional</title><introduction><p>Consider the statement <q>If there are no clouds in the sky, then it is not raining.</q></p></introduction>
+<task><p>Determine if this statement is true or false.</p></task>
+<task><p>Write the negation of the statement. Use this to check your answer to (a). In particular, your negation should have the opposite truth value to what you decided in (a).</p></task></activity>
+
+<activity xml:id="A_condvalid"><title>An Argument Conditional</title><introduction><p>Consider the statement <q>If an argument is valid, then it is impossible for the premises to be true and the conclusion false.</q></p></introduction>
+<task><p>Determine if this statement is true or false.</p></task>
+<task><p>Write the negation of the statement. Note, you may need to recall how to negate an <q>and</q> statement. Use this to check your answer to (a).</p></task></activity>
+
+<activity xml:id="A_condeven"><title>A Mathematical Conditional</title><introduction><p>Consider the statement <q>If a number is even, then it is divisible by 2.</q></p></introduction>
+<task><p>Determine if this statement is true or false.</p></task>
+<task><p>Write the negation of the statement. Use this to check your answer to (a). In particular, your negation should have the opposite truth value to what you decided in (a).</p></task></activity>
+
+  
+
+ <p>We restate a few equivalences and definitions from <xref ref="connectives"/> for easy reference.</p>
+
+<assemblage>
+<title>Logical Equivalences for Conditionals</title><idx><h>conditional</h><h>logical equvalences for</h></idx>
+<p>
+<ul>
+  <li><m>p\rightarrow q\equiv \neg p\ \vee q</m></li>
+  <li><m>\neg(p\rightarrow q)\equiv p\ \wedge \neg q</m></li>
+</ul></p>
+
+<p>Negating a universal conditional statement:
+ <md><mrow>\neg(\forall x\in D, P(x)\rightarrow Q(x))&amp;\equiv \exists x\in D, \neg(P(x)\rightarrow Q(x))</mrow>
+  <mrow>  &amp;\equiv \exists x\in D, P(x)\wedge \neg Q(x)</mrow>
+</md></p>
+  </assemblage>
+
+<definition><statement><p>A conditional statement <m>p\rightarrow q</m> has
+  <ul>
+    <li><term>contrapositive</term><idx>contrapositive</idx>: <m>\neg q\rightarrow \neg p</m>;</li>
+    <li><term>converse</term><idx>converse</idx>: <m>q\rightarrow p</m>;</li>
+    <li><term>inverse</term><idx>inverse</idx>: <m>\neg p\rightarrow \neg q</m>.</li>
+  </ul>
+</p></statement>
+</definition>
+
+<p>We can extend the definition of contrapositive and converse to universal conditional statements.</p>
+
+<definition xml:id="D_contrapositiveunivcond"><statement>
+  <p>The universal conditional statement <m>\forall x\in D, P(x)\rightarrow Q(x)</m> has <term>contrapositive</term><idx><h>contrapositive</h><h>universal conditional</h></idx> <m>\forall x\in D, \neg Q(x)\rightarrow \neg P(x)</m>.</p></statement></definition>
+
+<definition xml:id="D_converseunivcond"><statement>
+  <p>The universal conditional statement <m>\forall x\in D, P(x)\rightarrow Q(x)</m> has <term>converse</term><idx><h>converse</h><h>universal conditional</h></idx> <m>\forall x\in D, Q(x)\rightarrow P(x)</m>.</p></statement></definition>
+
+  <activity xml:id="A_contrapos1"><title>Writing Contrapositives</title><introduction><p>Consider the statement <q>For all real numbers  <m>x</m>, if <m>(x+1)(x-2)>0</m> then <m>x &lt; -1</m> or <m>x>2</m>.</q></p></introduction>
+  <task><p>Write the negation of the statement.</p></task>
+  <task><p>Write the contrapositive of the statement.</p></task>
+</activity>
+
+ <activity xml:id="A_contrapos2"><title>More Writing Contrapositives</title><introduction><p>Consider the statement <q>For all integers  <m>n</m>, if <m>n</m> has a factor of 15, then <m>n</m> has a factor of 3 and <m>n</m> has a factor of 5.</q></p></introduction>
+  <task><p>Write the negation of the statement.</p></task>
+  <task><p>Write the contrapositive of the statement.</p></task>
+</activity>
+
+
+
+
+<activity xml:id="A_converses"><title>Converse Statements</title><introduction><p>Now we want to look at the converses for the statements in the previous activities.</p></introduction>
+<task><p>For the statement given in <xref ref="A_condPortland"/>, write the converse and determine if it is true or false.</p></task>
+<task><p>For the statement given in <xref ref="A_condweather"/>, write the converse and determine if it is true or false.</p></task>
+<task><p>For the statement given in <xref ref="A_condeven"/>, write the converse and determine if it is true or false.</p></task></activity>
+
+
+<p>Recall that a logical argument as seen in <xref ref="arguments"/> and <xref ref="argumentswconnectives"/> can be valid or invalid, while a statement can be true or false. It is important to distiguish between these ideas. Arguments are not true or false, and statements are not valid or invalid. However, there is a connection between these ideas. In particular, we can convert arguments into conditional statements, where the premises of the argument form the hypothesis and the conclusion of the argument forms the conclusion.</p>
+
+<assemblage xml:id="B_argtoconditional">
+<title>Converting an Argument to a Conditional Statement</title>
+<p>The argument
+  <tabular>
+      <row><cell>A</cell></row>
+      <row bottom="medium"><cell>B</cell></row>
+      <row><cell><m>\therefore\ </m>C</cell></row>
+    </tabular>
+    can be represented by the conditional
+    <me>(A \wedge B)\rightarrow (C).</me>
+
+</p>
+
+
+<p>The premises of the argument, connected with an <q>and</q> become the <q>if</q> part and the conclusion of the argument becomes the <q>then</q> part.</p>
+</assemblage>
+
+<example xml:id="E_argtocondvalid"><title>Converting and Argument to a Conditional</title><p>
+Consider the argument from <xref ref="E_validarg"/>.
+<tabular>
+      <row bottom="medium"><cell><m>p\wedge q</m></cell></row>
+      <row><cell><m>\therefore\ </m><m>p</m></cell></row>
+    </tabular>
+We determined, using a truth table, that this is a valid argument. We can convert this argument to the conditional
+<me>(p\wedge q)\rightarrow (p).</me>
+  </p>
+  <p>If you check the truth table for <m>(p\wedge q)\rightarrow (p)</m>, you will see that it is always true.</p>
+</example>
+
+<example xml:id="E_argtocondinvalid"><title>Converting and Argument to a Conditional</title><p>
+Consider the argument from <xref ref="E_invalidarg"/>.
+<tabular>
+      <row bottom="medium"><cell><m>p\vee q</m></cell></row>
+      <row><cell><m>\therefore\ </m><m>p</m></cell></row>
+    </tabular>
+We determined, using a truth table, that this is an invalid argument. We can convert this argument to the conditional
+<me>(p\vee q)\rightarrow (p).</me>
+  </p>
+  <p>If you check the truth table for <m>(p\vee q)\rightarrow (p)</m>, you will see that it can be false.</p>
+</example>
+
+<p>The corresponding conditional for a valid argument will be a tautology (always true), while the corresponding conditional for a invalid argument can be false (has at least one case where it is false).</p>
+
+<activity xml:id="A_condvalid1"><title>Checking Validity with Conditional</title><introduction><p>Consider the argument from <xref ref="A_ttvalid1"/>.
+
+  <tabular>
+      <row><cell><m>p\rightarrow q</m></cell></row>
+      <row bottom="medium"><cell><m>\neg q</m></cell></row>
+      <row><cell><m>\therefore\ </m><m>\neg p</m></cell></row>
+    </tabular>
+</p>
+</introduction>
+<task><p>Convert the argument to a conditional statement.</p></task>
+<task><p>Determine if it is possible for the conditional statement to be false. What does this tell you about the validity of the argument?</p></task>
+</activity>
+
+<activity xml:id="A_condvalid2"><title>More Checking Validity with Conditional</title><introduction><p>Consider the argument from <xref ref="A_ttvalid2"/>.
+
+  <tabular>
+      <row><cell><m>p\rightarrow q</m></cell></row>
+      <row bottom="medium"><cell><m>\neg p</m></cell></row>
+      <row><cell><m>\therefore\ </m><m>\neg q</m></cell></row>
+    </tabular>
+</p></introduction>
+<task><p>Convert the argument to a conditional statement.</p></task>
+<task><p>Determine if it is possible for the conditional statement to be false. What does this tell you about the validity of the argument?</p></task>
+</activity>
+
+<exercises>
+  <exercise><statement><p>Often it is necessary to convert an informal mathematical statement into a more formal one. Complete the following statements so they are equivalent to <q>The reciprocal of any positive number is positive.</q></p>
+      <ol marker="a">
+        <li><p>Given any positive real number <m>r</m>, the reciprocal of ___.</p></li>
+        <li><p>For any real number <m>r</m>, if <m>r</m> is ___ then ___.</p></li>
+        <li><p>If a real number <m>r</m> ___, then ___.</p></li>
+      </ol>
+    </statement></exercise>
+      <exercise><statement><p>Complete the following statements so they are equivalent to <q>The cube root of any negative real number is negative.</q></p>
+      <ol marker="a">
+        <li><p>Given any negative real number <m>s</m>, the cube root of ___.</p></li>
+        <li><p>For any real number <m>s</m>, if <m>s</m> is ___, then ___.</p></li>
+        <li><p>If a real number <m>s</m>___, then ___.</p></li>
+      </ol>
+
+    </statement></exercise>
+      <exercise><statement><p>
+        In order to better understand mathematical statements, it can be helpful to write statements less formally. First rewrite each statement without using variables, then determine whether the statements are true or false.
+      </p>
+      <ol marker="a">
+        <li><p>There are real numbers <m>u</m> and <m>v</m> with the property that <m>u+v &lt; v-u</m>.</p></li>
+        <li><p>There is a real number <m>x</m> such that <m>x^2 &lt; x</m>.</p></li>
+        <li><p>For all positive integers <m>n</m>, <m>n^2\geq n</m>.</p></li>
+        <li><p>For all real numbers <m>a</m> and <m>b</m>, <m>| a+b | \leq | a | + | b |</m>.</p></li>
+      </ol></statement></exercise>
+      <exercise><statement><p>
+        Fill in the blanks to rewrite the statement <q>Every nonzero real number has a reciprocal.</q>
+      </p>
+      <ol marker="a">
+        <li><p>All nonzero real numbers ___.</p></li>
+        <li><p>For all nonzero real numbers <m>r</m>, there is ___ for <m>r</m>.</p></li>
+        <li><p>For all nonzero real numbers <m>r</m>, there is a real number <m>s</m> such that ___.</p></li></ol>
+    </statement></exercise>
+
+     <exercise><statement>
+        <p>
+    Write the negation of each of the statements.</p>
+    <ol marker="a">
+    <li><p><m>\forall</m> real numbers <m>x</m>, if <m>x&gt;3</m> then <m>x^2&gt;9</m>.
+  </p></li>
+  <li><p>
+    <m>\forall n\in \mathbb{Z}</m>, if <m>n</m> is prime then <m>n</m> is odd or <m>n=2</m>.
+  </p></li>
+  <li><p>
+    <m>\forall</m> integers <m>n</m>, if <m>n</m> is divisible by 6, then <m>n</m> is divisible by 2 and <m>n</m> is divisible by 3.
+  </p></li></ol>
+
+      </statement></exercise>
+  <exercise><statement>
+        <p>
+    Use a conditional statement to determine if the following argument is valid or invalid. Clearly state your conclusion and explain how your conditional statement supports your conclusion.
+  </p>
+
+    <tabular>
+    <row>
+      <cell halign="left"><m>p</m></cell>
+    </row>
+    <row>
+      <cell halign="left"><m>p\rightarrow q</m></cell>
+    </row>
+    <row bottom="medium">
+      <cell halign="left"><m>\neg q\ \vee r</m></cell>
+    </row>
+    <row>
+      <cell halign="left"><m>\therefore r</m></cell>
+    </row>
+    </tabular>
+
+      </statement></exercise>
+
+      <exercise><statement>
+        
+       <p>
+    Use a conditional statement to determine if the following argument is valid or invalid. Clearly state your conclusion and explain how your conditional statement supports your conclusion.
+  </p>
+
+    
+    <tabular>
+    <row>
+      <cell halign="left"><m>(p\ \wedge q)\rightarrow \neg r</m></cell>
+    </row>
+    <row>
+      <cell halign="left"><m>p\ \vee \neg q</m></cell>
+    </row>
+    <row bottom="medium">
+      <cell halign="left"><m>\neg q\rightarrow p</m></cell>
+    </row>
+    <row>
+      <cell halign="left"><m>\therefore \neg r</m></cell>
+    </row>
+    </tabular>
+
+      </statement></exercise>
+
+      <exercise><statement>
+        <p>
+    Use a conditional statement to show the following argument is valid. Explain how your conditional statement supports your conclusion.
+  </p>
+
+    
+    <tabular>
+    <row >
+      <cell halign="left"><m>p \ \vee q</m></cell>
+    </row>
+    <row bottom="medium">
+      <cell halign="left"><m>\neg p</m></cell>
+    </row>
+    <row >
+      <cell halign="left"><m>\therefore q</m></cell>
+    </row>
+    </tabular>
+
+      </statement></exercise>
+
+      <exercise><statement>
+        <p>
+    Use a conditional statement to show the following argument is invalid. Explain how your conditional statement supports your conclusion.
+  </p>
+
+    
+    <tabular>
+    <row >
+      <cell halign="left"><m>\neg p\rightarrow q</m></cell>
+    </row>
+    <row bottom="medium">
+      <cell halign="left"><m>p</m></cell>
+    </row>
+    <row >
+      <cell halign="left"><m>\therefore \neg q</m></cell>
+    </row>
+    </tabular>
+ 
+      </statement></exercise>
+
+      
+</exercises>
+</section>

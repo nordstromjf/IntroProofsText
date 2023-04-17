@@ -1,0 +1,24 @@
+<chapter xml:id="chapter4" xmlns:xi="http://www.w3.org/2001/XInclude" >
+  <title>Proof by Induction</title>
+  <introduction>
+   
+    <p>
+     In this chapter we introduce a new proof technique called mathematical induction. Induction is a technique that can be used to prove statements about the positive integers. In particular, it is a useful technique when there is a connection between the statement for <m>n</m> and for <m>n+1</m>. 
+    </p>
+
+  
+    
+
+  </introduction>
+  
+  <xi:include  href="summation4-1.ptx" />
+  <xi:include  href="induction4-2.ptx" />
+  <xi:include  href="moreinduction4-3.ptx" />
+  <xi:include  href="stronginduction4-4.ptx" />
+  
+ 
+
+  
+  
+  
+</chapter>

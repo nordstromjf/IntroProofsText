@@ -1,0 +1,102 @@
+<section xml:id="setnotation">
+  <title>Introduction to Sets</title><idx>set</idx><idx>element</idx><idx>subset</idx>
+
+  
+
+  <p>Sets <idx>set</idx> are collections of objects. They may be collections of mathematical objects, such as numbers or functions. They may be collections of any other type of object such as students in a class or times of day. We can even have sets of sets. </p>
+
+  <p>It is useful to understand some general notation when working with sets. We will work with sets more explicitly in later sections. For now, we really just need to be able to understand the notation.</p>
+
+  <p>We will usually use capital letters for sets, such as <m>S</m> or <m>A</m>. If we want to talk about elements in a set <m>S</m>, we use the notation <m>x\in S</m><notation><usage><m>x\in S</m></usage><description><m>x</m> is an element of set <m>S</m></description></notation>. We read this notatation as <q><m>x</m> is in <m>S</m></q> or <q><m>x</m> is an element of <m>S</m>.</q> If <m>x</m> is <em>not</em> in <m>S</m>, then we use the notation <m>x\notin S</m><notation><usage><m>x\notin S</m></usage><description><m>x</m> is not an element of set <m>S</m></description></notation>.</p>
+
+  <p>If we want to list the specific elements of a set, we use curly brackets, <m>\{ \}</m>, around the elements of the set. We can also do this with a description of the elements in the set. </p>
+  <example xml:id="E_roster">
+    <title>Set roster notation<idx>set roster notation</idx></title>
+    <p><m>S=\{1, 2, 3, 4, 5\}</m>. This is the set whose elements are 1, 2, 3, 4, 5.</p>
+    <p><m>A=\{x\in S : x \text{ is odd}\}</m>. This describes the odd numbers in <m>S</m>, so 1, 3, 5.</p>
+    <p><m>A=\{x\in \text{reals} : 1\leq x\leq 5\}</m>. This describes the real numbers between 1 and 5 (which there are too many to list).</p>
+  </example>
+
+  <p>In general, if we use <m>P(x)</m> to describe a property of <m>x</m>, we use the notation
+  <me>\{x\in S : P(x)\}</me>
+  and read the statement as <q><m>x</m> in <m>S</m> such that <m>x</m> has property <m>P</m>.</q></p>
+
+<p>A <term>subset</term><idx>subset</idx>, <m>B</m>, of a set <m>A</m> is a set of elements that are also in <m>A</m>. </p>
+
+<p>We use the notation <m>B\subseteq A</m><notation><usage><m>B\subseteq A</m></usage><description><m>B</m> is a subset of <m>A</m></description></notation> for <q><m>B</m> is a subset of <m>A</m></q>. If <m>B</m> is not a subset of <m>A</m>, then we use the notation <m>B\nsubseteq A</m><notation><usage><m>B\nsubseteq A</m></usage><description><m>B</m> is not a subset of <m>A</m></description></notation>. Note, some books use <m>A\subset B</m> as the notation for subset.</p>
+
+<example xml:id="E_subsetnotsubset"><title>Subsets</title>
+<p><m>\{1, 3\}\subseteq \{1, 2, 3, 4, 5\}</m>, but <m>\{0, 1, 2, 3\}\nsubseteq \{1, 2, 3, 4, 5\}</m>.</p></example>
+
+<p>It is important to understand the difference between subset, <m>\subseteq</m>, and element, <m>\in</m>. For example, if <m>S=\{1, 2, 3, 4, 5\}</m>, then <m>1\in S</m>, but <m>1\nsubseteq S</m>. This is because 1 is an element, not a set. Similarly, <m>\{1\}\subseteq S</m>, but <m>\{1\}\notin S</m>. This is because <m>\{1\}</m> is a set, not an element. In general, when working with sets, you should identify the elements of the set. Then sets of those elements are subsets. The curly brackets are our way of saying <q>set.</q></p>
+
+<p>There are some special subsets that we will use throughout the course (and, in fact, the rest of your mathematical career).</p>
+
+<p><ul>
+  <title>Notation for special sets of numbers</title>
+  <li><m>\mathbb{R}</m><notation><usage><m>\mathbb{R}</m></usage><description>the set of real numbers</description></notation>, the set of real numbers<idx>real numbers</idx>. These are all the numbers your are familiar with from calculus: whole numbers, positives, negatives, fractions, decimals, square roots, <m>e</m>, <m>\pi</m>, etc.</li>
+  <li><m>\mathbb{Z}</m><notation><usage><m>\mathbb{Z}</m></usage><description>the set of integers</description></notation>, the set integers<idx>integers</idx>. These are all the whole numbers: positive, negative, and zero.</li>
+  <li><m>\mathbb{Q}</m><notation><usage><m>\mathbb{Q}</m></usage><description>the set of rational numbers</description></notation>, the set rational numbers<idx>rational numbers</idx>. These are all the whole numbers and fractions: positive, negative, and zero. We will revisit this set in more detail later.</li>
+  <li><m>\mathbb{N}</m><notation><usage><m>\mathbb{N}</m></usage><description>the set of natural numbers</description></notation>, the set of natural numbers<idx>natural numbers</idx>. These are all the positive whole numbers. Some books include zero, some do not. Since this can be confusing, we will avoid this notation in this class (but you might see it in future classes). Instead, we will use one of the next two notations, which more clearly denote inclusion of zero, or not.</li>
+  <li><m>\mathbb{Z}^+</m><notation><usage><m>\mathbb{Z}^+</m></usage><description>the set of positive integers</description></notation>, the set of positive integers. These are all the positive whole numbers. This set does NOT include zero.</li>
+  <li><m>\mathbb{Z}^{nonneg}</m><notation><usage><m>\mathbb{Z}^{nonneg}</m></usage><description>the set of nonnegative integers</description></notation>, the set of nonnegative integers. These are the whole numbers that are not negative. This set DOES include zero.</li>
+  <li><m>\mathbb{R}^+</m><notation><usage><m>\mathbb{R}^{+}</m></usage><description>the set of positive real numbers</description></notation>, the set of positive real numbers. </li>
+  <li><m>\mathbb{R}^{nonneg}</m><notation><usage><m>\mathbb{R}^{nonneg}</m></usage><description>the set of nonnegative real numbers</description></notation>, the set of nonnegative real numbers. These are the real numbers that are not negative.</li>
+
+</ul></p>
+
+<p>It is also useful to have a notation for the set with no elements. The <term>empty set</term><idx>empty set</idx> is denoted <m>\emptyset</m><notation><usage><m>\emptyset</m></usage><description>empty set; set with no elements</description></notation>.</p>
+
+<activity xml:id="A_notelessthan0"><title>New Notation</title><statement><p>Based on the notations above, what would be a good notation for the set of integers less than zero?</p></statement></activity>
+<activity xml:id="A_nozero"><title>No Zero</title><statement><p>Which of the following sets do NOT contain zero: <m>\mathbb{Q}, \mathbb{Z}, \mathbb{R}, \mathbb{R}^+, \mathbb{R}^{nonneg}</m>?</p></statement></activity>
+
+<activity xml:id="A_setpractice"><title>Practice with Sets</title><introduction><p>Let <m>S=\{1, 2, 3, 4, 5\}</m>. List the elements in each of the following sets.</p></introduction>
+  <task><p><m>\{x\in S : 2 &lt;x\leq 5\}</m></p></task>
+  <task><p><m>\{x\in S: x \mbox{ is prime}\}</m></p></task>
+  <task><p><m>\{1/x: x \in S\}</m></p></task>
+</activity>
+
+<activity xml:id="A_elementsubset"><title>Elements or Subsets</title>
+  <introduction><p>It is important to be able to distinguish between <em>elements</em> of a set and <em>subsets</em> of a set. Determine if each of the following is true or false. If it is false, what small change in notation would make it true?</p></introduction>
+  <task><p><m>5\in \mathbb{Q}</m></p></task>
+  <task><p><m>\{2\} \in \mathbb{Z}</m></p></task>
+  <task><p><m>\{-1, -2, -3\}\subseteq \mathbb{Z}</m></p></task>
+  <task><p><m>0\subseteq \{0, 2, 4\}</m></p></task>
+  <task><p><m>\{0\}\subseteq \{0, 2, 4\}</m></p></task>
+</activity>
+
+
+
+
+   <exercises>
+      <title>Exercises</title>
+
+      <exercise><statement><p>Explain in your own words why <m>2</m> does not equal <m>\{2\}</m>.</p></statement></exercise>
+      <exercise><statement><p>How many elements are in the set <m>\{1, 2, 3, 1, 2, 1\}</m>?</p></statement></exercise>
+      <!--<exercise><statement><p>How many elements are in the set <m>\{1, \{1\}, \{1, \{1\}\}\}</m>?</p></statement></exercise>-->
+      <exercise><statement><p>Use set-roster notation to list the elements in each of the following sets.</p>
+        <ol marker="a">
+          <li><p><m>S=\{n\in \mathbb{Z}: n=(-1)^k, \text{ for some integer } k\}</m></p></li>
+          <li><p><m>T=\{m\in \mathbb{Z}: m=1+(-1)^k, \text{ for some integer } k\}</m></p></li>
+          <li><p><m>U=\{r\in \mathbb{Z}: 2\leq r\leq -2\}</m></p></li>
+          <li><p><m>V=\{s\in \mathbb{Z}: s>2 \text{ or } s\leq 3\}</m></p></li>
+        </ol>
+    </statement></exercise>
+    <exercise><statement><p>Determine whether the following statements are true or false.</p>
+      <ol marker="a">
+        <li><p><m>3\in \{1, 2, 3\}</m></p></li>
+        <li><p><m>1\subseteq \{1, 2, 3\}</m></p></li>
+        <li><p><m>\{2\}\in \{1, 2, 3\}</m></p></li>
+        <!--<li><p><m>\{3\}\in \{\{1\}, \{2\}, \{3\}\}</m></p></li>-->
+        <li><p><m>1\in \{1\}</m></p></li>
+        <!--<li><p><m>\{2\}\subseteq \{\{1\}, \{2\}, \{3\}\}</m></p></li>-->
+        <li><p><m>\{1\}\subseteq \{1, 2, 3\}</m></p></li>
+        <!--<li><p><m>1\in  \{\{1\}, \{2\}, \{3\}\}</m></p></li>
+        <li><p><m>\{1\}\subseteq \{1, \{2\}\}</m></p></li>-->
+        <li><p><m>\{1\}\subseteq \{1\}</m></p></li>
+      </ol>
+
+  </statement></exercise>
+</exercises>
+
+</section>

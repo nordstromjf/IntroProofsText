@@ -1,0 +1,61 @@
+<section xml:id="whatisaproof">
+  <title>What is a Proof?</title>
+
+  <p>In this course we want to understand how to read and write mathematics as mathematicians. We would hope to eventually use these skills to generate our own mathematics. Before we can do that, we need to be familiar with how mathematicians convey ideas.</p>
+
+  <p>Generally we start with a <term>definition</term> of a mathematical concept. </p>
+<definition xml:id="D_integer"><statement><p>An <term>integer</term><idx>integer</idx> is a whole number. It can be positive, negative, or zero.</p> </statement></definition>
+
+<p>Before we can prove statements about integers, we need to have a common understanding of them. Note that this definition relies on us understanding other mathematical terms, such as <term>positive</term> and <term>negative</term>.</p>
+
+<p>It is assumed that you bring some mathematical understanding with you to this course. But it is not assumed that that understanding is necessarly precise. One of the goals throughout this course will be to help make your current understanding more precise (or rigorous). </p>
+
+<activity xml:id="A_typesofint"><title>Types of Integers</title><introduction><p>Without being precise, you can probably determine whether an integer is positive, even, or prime.</p></introduction>
+<task><p>List three positive, even integers.</p></task>
+
+<task><p>Is 235823576 even or odd? How do you know? Write down as precise a rule as possible for determining whether an integer is even or odd.</p></task>
+<task><p>List three prime numbers. How do you know they are prime?</p></task>
+<task><p>Is 235823576 prime? How do you know?</p></task>
+<task><p>Is 23582357 prime? How do you know? If you are unsure, what would it take to determine the answer?</p></task></activity>
+
+<activity xml:id="A_genint"><title>More General Integers</title><introduction><p>Assume <m>n</m> is an integer.</p></introduction>
+<task><p>Is <m>8n</m> even or odd? Does you rule from <xref ref="A_typesofint"/> still work? If not, can you refine your rule?</p></task>
+<task><p>Is <m>3n</m> even or odd? Can it sometimes be even and sometimes be odd?</p></task>
+<task><p>Can <m>8n</m> ever be prime? What about <m>3n</m>?</p></task></activity>
+
+<p>For the time being, we will rely on our general understanding of whether an integer is even or odd, prime or not prime. But we will eventually want more formal definitions for these ideas, which we see in <xref ref="directproof"/>.</p>
+
+<p>Now let's look at a more complicated mathematical statement. A <term>conjecture</term><idx>conjecture</idx> is an uproven mathematical statement. Every mathematical theorem started out as a conjecture. You are encouraged to make your own mathematical conjectures throughout this course.</p>
+
+<claim xml:id="C_Goldbach"><title>Goldbach's Conjecture</title><idx>Goldbach's Conjecture</idx><statement><p>Every even positive integer greater than 2 can be written as a sum of two primes.</p></statement></claim>
+<example xml:id="E_GBConj"><title>Exploring Goldbach's Conjecture</title><p>We would like to know if Goldbach's Conjecture is true. We can start by just trying several examples. We want to see if positive even integers greater than 2 (like 4, 6, 8, 10, 12) can be written as the sum of two prime numbers. For example, <m>6=3+3</m> and <m>12=5+7</m>. Now try to write 4, 8, and 10 as the sum of two primes. Note,  1 is NOT prime. We will see this later when we formally define primes. </p></example>
+
+<activity xml:id="A_verifyGBC"><title>Verify Goldbach's Conjecture</title><statement><p>Verify Goldbach's Conjecture for 14, 16, 18, and 20. This means you want to show the conjecture is true for these even integers.</p></statement></activity>
+
+<p>We have now verified Golbach's Conjecture for several examples. Does that mean it is true in general? How many examples would you need so that you were convinced it is true? How many examples do you think mathematicians would need to be convinced? What would it take to know that it is true for every even integer greater than 2?</p>
+
+<p>In fact, althought it has been verified for integers up to at least <m>4 \times 10^{18}</m>, it has not been proven. Goldbach first conjectured the statement in a letter to Euler in 1742, and mathematicians have been unable to give a full proof. </p>
+
+<activity xml:id="A_primegen"><title>Prime Number Generator</title><introduction><p>Let's switch gears a bit and look for a way to find prime numbers.</p></introduction>
+<task><p>Play around with different functions whose inputs are positive integers.  See if you can find one whose outputs are an infinite set of prime numbers. For example, <m>f(n)=n^1+1</m> gives us <m>f(1)=2, f(2)=5, f(3)=10</m>. The first two are prime, but <m>f(3)=10</m> is not prime, so <m>f(n)=n^2+1</m> does not work.</p></task>
+
+<task><p>Now try the function <m>f(n)=n^2+n+41</m>. Find outputs for <m>n</m> from 1 to 10. Are the outputs all prime?</p></task>
+<task><p>Based on (b), have we found a function whose outputs are only prime numbers? What would we have to check to know this is true?</p></task>
+<task><p>In fact, there are values of <m>n</m> for which <m>f(n)</m> is not prime. See if you can find one. Think carefully about what you would need to not be prime.</p></task></activity>
+
+<p>We have seen that in Goldbach's Conjecture, we will know the statement is true if we can find a proof that works for every even integer. On the other hand, we saw in <xref ref="A_primegen" /> that it only takes one example where the statement fails to show it is false. This is an idea we will return to many times in this course.</p>
+
+
+<p>So what is a proof? How do we decide if a statement has been proven? Let's start with a definition and an example of a proof.</p>
+<definition xml:id="D_even"><statement><p>Let <m>n</m> be an integer. Then <m>n</m> is <term>even</term><idx>even integer</idx> if there exists an integer <m>k</m> such that <m>n=2k</m>.</p></statement></definition>
+
+<p>Before moving to the proof, check your rule for determining whether an integer is even from <xref ref="A_genint"/>. Is your rule similar to the formal definition? If it is different, can you see any advantages to using the more formal definition?</p>
+
+
+<example xml:id="E_proof8neven"><title>A First Proof</title><p>Let <m>n</m> be an integer. Prove <m>8n</m> is even.</p>
+<proof><p>We can rewrite <m>8n</m> as <m>8n=2(4n)</m>. Then let <m>k=4n</m>. Since <m>n</m> is an integer, <m>4n</m> is an integer. Thus, <m>8n=2k</m> for some integer <m>k</m>.</p></proof></example>
+
+<p>The proof shows that <m>8n</m> is even for any <m>n</m>, without need to check every possible integer <m>n</m>. </p>
+
+<p>In writing a proof we can see that it helps to have precise definitions of the mathematical terms. Then we need to connect our statements in a logical way so that we are convinced that the statement we are proving follows from the steps. The ability to connect our staements in a logical way is the heart of writing a proof. We will start our proof-writing journey by first understanding logical structure.</p>
+</section>

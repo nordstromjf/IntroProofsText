@@ -1,0 +1,244 @@
+<section xml:id="binomial9">
+  <title>Binomial Theorem</title><idx>Binomial Theorem</idx>
+
+  <p>The Binomial Theorem has applications in many areas of mathematics, from calculus, to number theory, to probability. In this section we look at the connection between Pascal's triangle and binomial coefficients. We ultimately prove the Binomial Theorem using induction.</p>
+
+  <definition xml:id="D_combination"><statement><p>Let <m>n, r</m> be nonnegative integers with <m>r\leq n</m>. An <term><m>r</m>-combination</term><idx>combination</idx> of a set of <m>n</m> elements is the number of subsets of size <m>r</m> that can be chosen from a set of <m>n</m> elements.</p></statement></definition>
+  <p>Notation: <m>\binom{n}{r}</m>, <m>C(n, r)</m>, or <m>nCr</m>. In this section we will use the first notation.</p>
+
+  <p>For reasons we will see later in this section, <m>\binom{n}{r}</m> are also called <term>binomial coefficients</term><idx>binomial coeeficient</idx>. </p>
+
+
+  <p>For example, <m>\binom{5}{4}</m> is the number of subsets of size 4 chosen from a set of 5 elements.</p>
+
+  <p>Note, the order in which we choose elements of a set does not matter. </p>
+
+  <p>We can calculate combinations or binomial coeeficients using the formula:<me>\binom{n}{r}=\frac{n!}{r!(n-r)!}</me>.</p>
+
+  <p>Note: <m>\binom{n}{0}=1</m> and <m>\binom{0}{0}=1</m>.</p>
+
+  <activity xml:id="A_calcbinomial"><title>Calculating Binomial Coefficients</title><introduction><p>Calculate the following binomial coefficients.</p></introduction>
+  <task><p>Calculate <m>{6 \choose 2}</m>.</p></task>
+  <task><p>Calculate <m>{6 \choose 4}</m>.</p></task>
+  <task><p>Calculate <m>{4 \choose 0}</m>.</p></task>
+  <task><p>Calculate <m>{4 \choose 4}</m>.</p></task>
+</activity>
+
+ 
+  
+  <theorem xml:id="T_requalsnminusr"><statement><p>Let <m>n, r</m> be nonnegative integers with <m>r\leq n</m>. Then
+<me>\binom{n}{r}=\binom{n}{n-r}.</me></p></statement></theorem>
+
+<p>The proof of <xref ref="T_requalsnminusr"/> is left as an exercise.</p>
+
+
+<theorem xml:id="T_pascalsformula"><title>Pascal's Formula</title><idx>Pascal's Formula</idx><statement><p>Let <m>n, r</m> be nonnegative integers with <m>r\leq n</m>. Then
+<me>\binom{n+1}{r}=\binom{n}{r-1}+\binom{n}{r}.</me></p></statement></theorem>
+
+<activity xml:id="A_pascalalg"><title>Proof of Pascal's Formula</title><statement><p>Give an algebraic proof for Pascal's Formula:
+<me>{{n+1}\choose {r}}={n\choose {r-1}}+{n \choose r}.</me></p></statement><hint><p>Start with the right-hand side. Use the definition of <q>choose,</q> then find a common denominator. Note, you will save yourself a lot of work if you find the <em>least</em> common denominator.</p></hint></activity>
+
+
+<p>There is a connection between binomial coefficients and Pascal's triangle.</p>
+<p>You may have seen Pascal's triangle before, the start of which is
+<tabular>
+  <row><cell></cell><cell></cell><cell></cell><cell>1</cell><cell></cell><cell></cell><cell></cell></row>
+  <row><cell></cell><cell></cell><cell>1</cell><cell></cell><cell>1</cell><cell></cell><cell></cell></row>
+  <row><cell></cell><cell>1</cell><cell></cell><cell>2</cell><cell></cell><cell>1</cell><cell></cell></row>
+  <row><cell>1</cell><cell></cell><cell>3</cell><cell></cell><cell>3</cell><cell></cell><cell>1</cell></row>
+</tabular>
+
+We get each row by adding the two numbers above. If there is only one number, you just get 1. For example, the fourth row is 1, 3, 3, 1, since <m>1+2=3</m>. The next row would be 1, 4, 6, 4, 1.
+</p>
+
+<p>If we think about the first row as actually being the 0th row, we can make a triangle with the binomial coefficients:
+  <tabular>
+  <row><cell></cell><cell></cell><cell></cell><cell><m>\binom{0}{0}</m></cell><cell></cell><cell></cell><cell></cell></row>
+  <row><cell></cell><cell></cell><cell><m>\binom{1}{0}</m></cell><cell></cell><cell><m>\binom{1}{1}</m></cell><cell></cell><cell></cell></row>
+  <row><cell></cell><cell><m>\binom{2}{0}</m></cell><cell></cell><cell><m>\binom{2}{1}</m></cell><cell></cell><cell><m>\binom{2}{2}</m></cell><cell></cell></row>
+  <row><cell><m>\binom{3}{0}</m></cell><cell></cell><cell><m>\binom{3}{1}</m></cell><cell></cell><cell><m>\binom{3}{2}</m></cell><cell></cell><cell><m>\binom{3}{3}</m></cell></row>
+</tabular>
+
+If you calculate the binomial coefficients, you will see that you get the same values as Pascal's triangle. Furthermore, Pascal's formula is just the rule we use to get the triangle: add the <m>r-1</m> and <m>r</m> terms from the <m>n^{th}</m> row to get the <m>r</m> term in the <m>n+1</m> row.
+</p>
+
+<p>A <term>binomial</term><idx>binomial</idx> is an expression of the form <m>a+b</m>.</p>
+<p>The Binomial Theorem gives a formula for calculating <m>(a+b)^n</m>.</p>
+
+<example xml:id="E_combbinomialthm"><title>A Counting Argument for <m>(a+b)^3</m></title>
+<p>Suppose we want to expand (or multiply) <m>(a+b)^3=(a+b)(a+b)(a+b)</m>. We can think of the multiplication in this way, 
+<ul>
+  <li>there is 1 way to get <m>a^3</m>: choose 0 <m>b</m>'s from the three factors.</li>
+  <li>there are 3 ways to get <m>a^2b</m>: choose 1 <m>b</m> from the three factors.</li>
+  <li>there are 3 ways to get <m>ab^2</m>: choose 2 <m>b</m>'s' from the three factors.</li>
+  <li>there is 1 way to get <m>b^3</m>: choose 3 <m>b</m>'s from the three factors.</li>
+</ul> 
+This give us <me>(a+b)^3=\binom{3}{0}a^3+\binom{3}{1}a^2b+\binom{3}{2}ab^2+\binom{3}{3}b^3.</me>
+</p>
+</example>
+
+<p><xref ref="E_combbinomialthm" /> can be generalized to <m>(a+b)^n</m> in the Binomial Theorem.</p>
+
+<theorem xml:id="T_binomial"><title>Binomial Theorem</title><idx>Binomial Theorem</idx><statement>Let <m>n</m> be a nonnegative integer, then 
+<md>
+  <mrow>(a+b)^n&amp;= \binom{n}{0}a^n+\binom{n}{1}a^{n-1}b+\binom{n}{2}a^{n-2}b^{2}+\cdots +\binom{n}{n-1}ab^{n-1}+\binom{n}{n}b^n</mrow>
+  <mrow>&amp;=\sum_{k=0}^{n}\binom{n}{k}a^{n-k}b^k.</mrow>
+</md></statement></theorem>
+
+<p>We can gernalize the counting argument from <xref ref="E_combbinomialthm"/> to prove the Binomial Theorem. This is the type of proof you would encounter in a course whic emphasizes counting techniques. However, we can also prove the Binomial Theorem using induction, which is more appropriate for this course.</p>
+
+<proof><p>Prove <me>(a+b)^n=\sum_{i=0}^{n}\binom{n}{i}a^{n-i}b^i</me>
+by induction on <m>n</m>.</p>
+
+<p>Base step: Let <m>n=0</m>. Then <me>(a+b)^0=1</me>. Also, <me>\sum_{i=0}^{0}\binom{0}{i}a^{0-i}b^i=a^0b^0=1.</me></p>
+<p>Induction step: Assume <m>(a+b)^k=\sum_{i=0}^{k}\binom{k}{i}a^{k-i}b^i</m>.</p>
+<p>Show <m>(a+b)^{k+1}=\sum_{i=0}^{k+1}\binom{k+1}{i}a^{k+1-i}b^i</m></p>
+<p><md>
+  <mrow>(a+b)^{k+1}&amp;=(a+b)^k(a+b)</mrow>
+  <mrow>&amp;=\biggl(\sum_{i=0}^{k}\binom{k}{i}a^{k-i}b^i\biggr)(a+b)</mrow>
+  <mrow>&amp;=a\sum_{i=0}^{k}\binom{k}{i}a^{k-i}b^i+b\sum_{i=0}^{k}\binom{k}{i}a^{k-i}b^i</mrow>
+  <mrow>&amp;=\sum_{i=0}^{k}\binom{k}{i}a^{k+1-i}b^i+\sum_{i=0}^{k}\binom{k}{i}a^{k-i}b^{i+1}</mrow>
+</md></p>
+
+<p>Now we want to change the index of the second sum. This is just a substitution of variable that allows us to shift how we index the terms. If we were to write out the sum, rather than have it in summation notation, we would not need this step. But it allows us to easily combine like terms in the two summations. So, in the second sum, let <m>j=i+1</m>, so when <m>i=0, j=1</m>; when <m>i=k, j=k+1</m>, and <m>i=j-1</m>. We get
+<md><mrow>(a+b)^{k+1}&amp;=\sum_{i=0}^{k}\binom{k}{i}a^{k+1-i}b^i+\sum_{i=0}^{k}\binom{k}{i}a^{k-i}b^{i+1}</mrow>
+<mrow>&amp;=\sum_{i=0}^{k}\binom{k}{i}a^{k+1-i}b^i+\sum_{j=1}^{k+1}\binom{k}{j-1}a^{k+1-j}b^j</mrow>
+<mrow>&amp;=a^{k+1}+\sum_{i=1}^{k}\binom{k}{i}a^{k+1-i}b^i+\sum_{j=1}^{k}\binom{k}{j-1}a^{k+1-j}b^j+b^{k+1}</mrow>
+<mrow>&amp;\text{where we pulled out the first term of the first sum and the last term of the second sum}</mrow>
+<mrow>&amp;=a^{k+1}+\sum_{i=1}^{k}\binom{k}{i}a^{k+1-i}b^i+\sum_{i=1}^{k}\binom{k}{i-1}a^{k+1-i}b^i+b^{k+1}</mrow>
+<mrow>&amp;\text{where we just relabeled the index in the second sum}</mrow>
+<mrow>&amp;=a^{k+1}+\sum_{i=1}^{k}\biggl[\binom{k}{i}+\binom{k}{i-1}\biggr]a^{k+1-i}b^i+b^{k+1}</mrow>
+<mrow>&amp;\text{where we combined like terms in the two sums}</mrow>
+<mrow>&amp;=a^{k+1}+\sum_{i=1}^{k}\binom{k+1}{i}a^{k+1-i}b^i+b^{k+1}</mrow>
+<mrow>&amp;\text{by Pascal's Formula}</mrow>
+<mrow>&amp;=\sum_{i=0}^{k+1}\binom{k+1}{i}a^{k+1-i}b^i</mrow>
+</md></p>
+</proof>
+
+<activity xml:id="A_binomthmcalc"><title>Understanding the Binomial Theorem</title><statement><p>Show the Binomial Theorem holds for <m>n=2</m> and <m>n=3</m>.</p></statement></activity>
+
+<example xml:id="E_closedform"><title>Expressing a Sum in Closed Form</title>
+<p>Express the sum, <m>\sum_{i=0}^{n}\binom{n}{i}x^i</m>, in closed form.</p>
+<p>We think of writing out the sum as expanding, so the closed form means the power of a binomial.</p>
+
+<p>For problems such as this, we need to identify <m>a</m> and <m>b</m> as in the Binomial Theorem.</p>
+<p>We can see that <m>x=b</m>. Since there does not appear to be any term for <m>a</m>, we can let <m>a=1</m>. Thus, the closed form is <m>(1+x)^n</m>.</p></example>
+
+  
+<activity xml:id="A_closedformbt"><title>A Closed Form</title><statement><p>Use the Binomial Theorem to find <m>(3-2x)^3</m>.</p></statement><hint><p>In this expression, what are <m>a, b, n</m>?</p></hint></activity>
+
+<activity xml:id="A_powers2bt"><title>Powers of 2</title><statement><p>Prove <m>2^n=\sum_{k=0}^n{n \choose k}</m>.</p></statement><hint><p>Use that <m>2=(1+1)</m>.</p></hint></activity>
+  
+
+
+  <!--  <reading-questions>
+      <title>Check Your Understanding</title>
+      
+
+       <exercise><statement><p>Use the Binomial Theorem to find <m>(a+b)^4</m>.</p></statement>
+      <answer><m>a^4+4a^3b+6a^2b^2+4ab^3+b^4</m></answer></exercise>
+
+      <exercise><statement><p>Use the Binomial Theorem to find <m>(a+2)^4</m>.</p></statement>
+      <answer><m>a^4+4a^32+6a^22^2+4a2^3+2^4=a^4+8a^3+24a^2+32a+16</m></answer></exercise>
+
+      <exercise><statement><p>Use the Binomial Theorem to find <m>(a-2)^4</m>.</p></statement>
+      <answer><m>a^4+4a^3(-2)+6a^2(-2)^2+4a(-2)^3+(-2)^4=a^4-8a^3+24a^2-32a+16</m></answer></exercise>
+
+      <exercise><statement><p>Use the Binomial Theorem to find the coefficient of <m>x^2y^2</m> in <m>(3x-2y)^4</m>.</p></statement>
+      <answer><m>\binom{4}{2}3^2(-2)^2=216</m></answer></exercise>
+
+      <exercise><statement><p>Use the Binomial Theorem to find the coefficient of <m>x^5y^2</m> in <m>(3x-2y)^7</m>.</p></statement>
+      <answer><m>\binom{7}{2}3^5(-2)^2=20412</m></answer></exercise>
+      <exercise><statement><p>Use the Binomial Theorem to find the coefficient of <m>x^4y^3</m> in <m>(3x-2y)^7</m>.</p></statement>
+      <answer><m>\binom{7}{3}3^4(-2)^3=-22680</m></answer></exercise>
+
+
+    </reading-questions>-->
+    <exercises>
+      <exercise><statement>
+        <p>
+    Give an algebraic proof for the formula: <me>{{n}\choose {r}}={n\choose {n-r}}</me> for integers <m>n</m> and <m>r</m> with <m>0\leq r\leq n</m>.
+  </p>
+      </statement></exercise>
+      <exercise><statement>
+        <p><ol marker="a">
+    <li>
+      <p>
+    Use Pascal’s triangle to compute the values of <m>{6\choose 2}, {6\choose 3}, {6\choose 4}</m> and <m>{6\choose 5}</m>
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Use the result of part (a) and Pascal’s Formula to compute <m>{7\choose 3}</m>, <m>{7\choose 4}</m>, and <m>{7\choose 5}</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Complete the row of Pascal’s triangle that corresponds to <m>n=7</m>.
+  </p>
+    </li>
+
+  </ol></p>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    The row of Pascal’s triangle that corresponds to <m>n=8</m> is <me>1\ \ \ 8\ \ \ 28\ \ \ 56\ \ \ 70\ \ \ 56\ \ \ 28\ \ \ 8\ \ \ 1.</me>
+  </p>
+
+  <p>
+    What is the row that corresponds to <m>n=9</m>?
+  </p>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Use the Binomial Theorem to expand <m>(u-v)^5</m>.
+  </p>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Use the Binomial Theorem to expand <m>(p-2q)^4</m>.
+  </p>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Find the coefficient of <m>x^6y^3</m> in <m>(x+y)^9</m>.
+  </p>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Find the coefficient of <m>x^7</m> in <m>(2x+3)^{10}</m>.
+  </p>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Express <m>\sum_{k=0}^n{n\choose k}5^k</m> in closed form (without the summation symbol and without ellipses,…).
+  </p>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Express <m>\sum_{k=0}^m{m\choose k}2^{m-k}x^k</m> in closed form (without the summation symbol and without ellipses,…).
+  </p>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Use Pascal’s Formula to prove by mathematical induction that if <m>n</m> is an integer and <m>n\geq 1</m>, then <me>\sum_{i=2}^{n+1}{i\choose 2}={2\choose 2}+{3\choose 2}+\ldots +{{n+1}\choose 2}={{n+2}\choose 3}.</me>
+  </p>
+      </statement></exercise>
+  
+      <exercise><statement><p>
+    Use the Binomial Theorem to prove for all integers <m>n\geq 1</m>,
+    <me>{n\choose 0}-{n\choose 1}+{n\choose 2}-\ldots +(-1)^n{n\choose n}=0.</me>
+  </p></statement><hint><p>Use the fact that <m>1+(-1)=0</m>.</p></hint></exercise>
+      <exercise><statement>
+        <p>
+    Use the Binomial Theorem to prove for all integers <m>n\geq 0</m>,
+
+    <me>3^n={n\choose 0}+2{n\choose 1}+2^2{n\choose 2}+\ldots +2^n{n\choose n}.</me>
+  </p>
+      </statement></exercise>
+
+    </exercises>
+
+</section>

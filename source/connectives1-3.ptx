@@ -1,0 +1,890 @@
+<section xml:id="connectives">
+  <title>Logical Connectives</title><idx>logical connectives</idx><idx><h>connective</h><h>and</h></idx><idx><h>connective</h><h>or</h></idx><idx><h>connective</h><h>if...then</h></idx><idx><h>connective</h><h>not</h></idx><idx><h>connective</h><h>and</h></idx><idx><h>connective</h><h>if and only if</h></idx><idx><h>connective</h><h>nand</h></idx>
+
+  <p>We want to understand what makes a mathematical proof. One of the foundations for proofs is logical structure. If we build a good foundation in logic, then we can better understand mathematical statements and proof structures. We have already seen the general form for an argument. Now we want to focus on types of statements used to make up an argument. In this section we will be looking at logical forms, independent of content.</p>
+
+
+  <p>If <m>p</m> and <m>q</m> are variables representing statements, we can combine these statements into new statements using logical connectives.</p>
+
+  <assemblage xml:id="B_connectives">
+  <title>Logical Connectives: NOT, AND, OR</title>
+    <p><ul>
+      <li><title>Negation</title><idx><h>connective</h><h>negation</h></idx><notation><usage><m>\neg p</m></usage><description>not <m>p</m>; negation</description></notation> NOT. Notation: <m>\neg p</m>, read as <q>not <m>p</m>.</q>
+      </li>
+      <li><title>Conjunction</title><idx><h>connective</h><h>conjunction</h></idx><notation><usage><m>p\wedge q</m></usage><description><m>p</m> and <m>q</m>; conjunction</description></notation> AND. Notation: <m>p\wedge q</m>, read as <q><m>p</m> and <m>q</m>.</q>
+      </li>
+      <li><title>Disjunction</title><idx><h>connective</h><h>disjunction</h></idx><notation><usage><m>p\vee q</m></usage><description><m>p</m> or <m>q</m>; disjunction (inclusive)</description></notation> OR. Notation: <m>p\vee q</m>, read as <q><m>p</m> or <m>q</m>.</q>
+      </li>
+    </ul>
+  </p>
+</assemblage>
+  
+  <p>Our goal is to determine when these new statements are true or false based on whether <m>p</m> and <m>q</m> are true or false. We can create a truth table <idx>truth table</idx> that looks at all the possibilities of true or false for <m>p</m> and <m>q</m>. When writing a truth table, make a column for each variable, list all the possible cases of true and false, then for each case, determine whether the new statement (with the connective) is true or false.</p>
+
+  <p><table xml:id="T_ttnot">
+    <title>Truth table for <m>\neg p</m>.</title>
+    <tabular top="minor" left="minor">
+              <col halign="center" right="medium"/>
+              <col halign="center" right="minor"/>
+              <row bottom="medium">
+              <cell><m>p</m></cell>
+              <cell><m>\neg p</m></cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>F</cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>T</cell>
+            </row>
+    </tabular>
+
+  </table>
+
+It should make sense that if we negate T we get F, and vice versa.</p>
+
+<p><table xml:id="T_ttand">
+    <title>Truth table for <m>p\wedge q</m>.</title>
+    <tabular top="minor" left="minor">
+              <col halign="center" right="minor"/>
+              <col halign="center" right="medium"/>
+              <col halign="center" right="minor"/>
+              <row bottom="medium">
+              <cell><m>p</m></cell>
+              <cell><m>q</m></cell>
+              <cell><m>p\wedge q</m></cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell>F</cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell>F</cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>F</cell>
+            </row>
+    </tabular>
+
+  </table>
+
+Again, the truth values for an <q>and</q> statement should make sense. The only time it should be true is if both parts of the statement are true.</p>
+
+<p><table xml:id="T_ttor">
+    <title>Truth table for <m>p\vee q</m>.</title>
+    <tabular top="minor" left="minor">
+              <col halign="center" right="minor"/>
+              <col halign="center" right="medium"/>
+              <col halign="center" right="minor"/>
+              <row bottom="medium">
+              <cell><m>p</m></cell>
+              <cell><m>q</m></cell>
+              <cell><m>p\vee q</m></cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>F</cell>
+            </row>
+    </tabular>
+
+  </table>
+
+The truth values for an <q>or</q> statement should, mostly, make sense,  as long as one part of the <q>or</q> statement is true, the whole statement is true. You may ask about the case where both parts are true. We think of this as an <q>inclusive or,</q> which means we allow both to be true. For example, <q>A computer science major must take Math 175 or Math 250.</q> You will still get a major if you take both.</p>
+
+<p>There is a connective for an <q>exclusive or</q> (one or the other, not both).</p>
+
+<assemblage xml:id="B_connectivexor">
+<title>Logical Connective: EXCLUSIVE OR</title>
+   <p> <ul>
+      <li><title>Exclusive Or</title><idx><h>connective</h><h>disjunction</h></idx><idx><h>connective</h><h>exclusive or</h></idx><notation><usage><m>p\veebar q</m></usage><description><m>p</m> exclusive or <m>q</m>; disjunction (exclusive)</description></notation> OR, NOT BOTH. Notation: <m>p\veebar q</m>, read as <q><m>p</m> exclusive or <m>q</m>.</q>
+      </li>
+    </ul>
+  </p>
+</assemblage>
+  <!--<p><table xml:id="T_ttxor">
+    <title>Truth table for <m>p\veebar q</m>.</title>
+    <tabular top="minor" left="minor">
+              <col halign="center" right="minor"/>
+              <col halign="center" right="medium"/>
+              <col halign="center" right="minor"/>
+              <row bottom="medium">
+              <cell><m>p</m></cell>
+              <cell><m>q</m></cell>
+              <cell><m>p\veebar q</m></cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>F</cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>F</cell>
+            </row>
+    </tabular>
+
+  </table>-->
+
+  <activity xml:id="A_xor"><title>Exclusive Or</title><statement><p>Give the truth table for <m>p \veebar q</m> based on a small change to the truth table for <m>p \vee q</m>.</p></statement></activity>
+
+
+<p>Now that we can connect two statements, we can connect as many as we'd like using multiple quantifiers. For example, we could form the statement <me>p\vee(q\ \wedge \neg p).</me> Make sure you use parentheses when combining statements. For example, <m>\neg p\vee q</m> is not the same as <m>\neg (p\vee q)</m>.</p>
+
+<p><table xml:id="T_ttparenexample">
+    <title>Truth table for <m>\neg p\vee q</m> and <m>\neg (p\vee q)</m>.</title>
+    <tabular top="minor" left="minor">
+              <col halign="center" right="minor"/>
+              <col halign="center" right="medium"/>
+              <col halign="center" right="minor"/>
+              <col halign="center" right="minor"/>
+              <col halign="center" right="minor"/>
+              <col halign="center" right="minor"/>
+              <row bottom="medium">
+              <cell><m>p</m></cell>
+              <cell><m>q</m></cell>
+              <cell><m>\neg p</m></cell>
+              <cell><m>\neg p \vee q</m></cell>
+              <cell><m>p \vee q</m></cell>
+              <cell><m>\neg (p \vee q)</m></cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>F</cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell>F</cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>F</cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+            </row>
+    </tabular>
+
+  </table></p>
+
+  <activity xml:id="A_ttpractice"><title>Truth Table Practice </title><statement><p>Give the truth table for <m>\neg p\  \vee \neg q</m>.</p></statement></activity>
+
+  <activity xml:id="A_morepractice"><title>More Truth Table Practice</title><statement><p>Give the truth table for <m>(p \vee q) \wedge \neg(p \wedge q)</m>.</p></statement></activity>
+
+  <activity xml:id="A_numrows"><title>Truth Table with Three Variables</title><statement><p>Truth tables can have more than two variables. We just need to make sure we have a row for every possible combination of truth values for the variables. How many rows will you need in a truth table for 3 variables? Give the truth table for <m>(p \wedge q) \vee r</m>. </p></statement></activity>
+
+  <p>One of the things we want to be able to do is to translate English (or mathematical) sentences into logical statements. We have to be careful about how common phrases are really hidden <q>and</q>s. For example, <q><m>p</m> but <m>q</m></q> is really <m>p\wedge q</m>. Similarly, <q>neither <m>p</m> nor <m>q</m></q> is really <m>\neg p\ \wedge \neg q</m>.</p>
+
+   <p>A <term>conditional statement</term><idx>conditional statement</idx> has the form <q>if <m>p</m> then <m>q</m>.</q> We use the connective <m>p\rightarrow q</m> for conditional statements.</p>
+
+
+<assemblage xml:id="B_connconditional">
+  <title>Logical Connective: IF...THEN</title>
+    <p><ul>
+      <li><title>Conditional</title><idx><h>connective</h><h>conditional</h></idx><notation><usage><m>p\rightarrow q</m></usage><description>if <m>p</m> then <m>q</m>; conditional</description></notation> IF THEN. Notation: <m>p\rightarrow q</m>, read as <q>if <m>p</m> then <m>q</m>.</q>
+      </li>
+    </ul>
+  </p>
+</assemblage>
+
+<p>In a conditional statement <m>p\rightarrow q</m>, we call <m>p</m> the <term>hypothesis</term>, and <m>q</m> the <term>conclusion</term>.</p>
+
+  <p>Before looking at the truth table, we need to understand when an if...then... statement is true or false. This is actually trickier than it seems.</p>
+
+  <example xml:id="E_condstatement"><title>Conditional Statement</title>
+  <p>Suppose I say to you <q>If it rains tomorrow, then class is cancelled.</q> When would you accuse me of lying to you? For example, if it doesn't rain and we have class, would you have thought my statement false? No. Now, you might not think my statement is true, either. But remember, statements must be either true or false. So if it is not false, then it is true.</p>
+  <p>Now, what if it doesn't rain, but I cancel class anyway? Would I have lied? No, I didn't tell you I wouldn't cancel class. So, again, this would be a true statement.</p>
+  <p>The only time you could accuse me of having made a false statement is if it rains and we don't cancel class. If we think of <q>it rains tomorrow</q> as <m>p</m> and <q>class is cancelled</q> as <m>q</m>, then the only time the statement is false is when <m>p</m> is true and <m>q</m> is false.</p>
+  </example>
+
+<p><table xml:id="T_ttconditional">
+    <title>Truth table for <m>p\rightarrow q</m>.</title>
+    <tabular top="minor" left="minor">
+              <col halign="center" right="minor"/>
+              <col halign="center" right="medium"/>
+              <col halign="center" right="minor"/>
+              <row bottom="medium">
+              <cell><m>p</m></cell>
+              <cell><m>q</m></cell>
+              <cell><m>p\rightarrow q</m></cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell>F</cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+            </row>
+    </tabular>
+
+  </table></p>
+
+<p>To better understand the truth or falsity of a conditional, let's look at another example.</p>
+<example xml:id="E_mathcond"><title>A Mathematical Conditional Statement</title>
+<p>Consider the mathematical statement <q>If <m>x>2</m> then <m>x^2>4</m></q>. Do you agree this is a true mathematical statement?</p> <p>Let <m>p</m> be <q><m>x>2</m></q> and <m>q</m> be <q><m>x^2>4</m>.</q> Consider all the cases of <m>p</m> and <m>q</m> being true or false.</p> <p>For example, if <m>x=5, x^2=25</m>, then we have the case where <m>p</m> is true and <m>q</m> is true.</p> <p>If <m>x=-5, x^2=25</m>, then we have the case where <m>p</m> is false and <m>q</m> is true. But remember, the original statement is still true!</p> <p>If <m>x=1, x^2=1</m>, then we have the case where <m>p</m> is false and <m>q</m> is false. But again, the original statement is still true.</p> <p>It is impossible to find an <m>x</m> that makes <m>x>2</m> true and <m>x^2>4</m> false. Thus, we never have the case where the conditional, if <m>x>2</m> then <m>x^2>4</m>, is false. </p>
+
+</example>
+
+<activity xml:id="A_exconditional"><title>Understanding Conditionals</title><statement><p>Give an example of a conditional statement, not one of the examples from above. Write in your own words why <m>p\rightarrow q</m> must be true whenever <m>p</m> is false.</p></statement></activity>
+
+
+
+
+
+<activity xml:id="A_condpractice"><title>Practice with Conditionals</title><statement><p>Give the truth table for <m>(p \rightarrow q) \wedge (q\rightarrow p)</m>. </p></statement></activity>
+
+
+<p>The statement <m>(p \rightarrow q) \wedge (q\rightarrow p)</m> is useful in mathematics, but it is not very concise. We can simplify this statement by introducing another logical connective.</p>
+
+<assemblage xml:id="B_connectivebicond">
+<title>Logical Connective: IF AND ONLY IF</title>
+    <p><ul>
+      <li><title>Biconditional</title><idx><h>connective</h><h>biconditional</h></idx><notation><usage><m>p\leftrightarrow q</m></usage><description><m>p</m> if and only if <m>q</m>; biconditional</description></notation> IF AND ONLY IF. Notation: <m>p\leftrightarrow q</m>, read as <q><m>p</m> if and only if <m>q</m>.</q>
+      </li>
+    </ul>
+  </p>
+</assemblage>
+
+  <p>The biconditional is really just the combination of two conditionals: <m>p\rightarrow q</m> and <m>q\rightarrow p</m>. In particular, <m>p\leftrightarrow q</m> and <m>(p\rightarrow q)\wedge (q\rightarrow p)</m> have the same truth tables.</p>
+
+<p><table xml:id="T_ttbicond">
+    <title>Truth table for <m>p\leftrightarrow q</m>.</title>
+    <tabular top="minor" left="minor">
+              <col halign="center" right="minor"/>
+              <col halign="center" right="medium"/>
+              <col halign="center" right="minor"/>
+              <row bottom="medium">
+              <cell><m>p</m></cell>
+              <cell><m>q</m></cell>
+              <cell><m>p\leftrightarrow q</m></cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell>F</cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell>F</cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+            </row>
+    </tabular>
+
+  </table></p>
+
+  <activity xml:id="A_understandingbicond"><title>Understanding Biconditionals</title><statement><p>Explain, in your own words, how to decide when <m>p \leftrightarrow q</m> is true or false.</p></statement></activity>
+
+  <activity xml:id="A_piecebicond"><title>Biconditional as Two Conditionals</title><statement><p>We read the biconditional <m>p \leftrightarrow q</m> as <q><m>p</m> if and only if <m>q</m>.</q> Determine which of the two statements <m>p \rightarrow q</m> and <m>q\rightarrow p</m> is equivalent to <q><m>p</m> if <m>q</m></q> and which is <q><m>p</m> only if <m>q</m>.</q> Think about when each statement should be true (or false).</p></statement></activity>
+
+<p>In mathematics we might see statements such as <q><m>p</m> is necessary for <m>q</m></q> or <q><m>p</m> is sufficient for <m>q</m></q>. These are really conditional statements. In particular, 
+<m>p</m> is sufficient for <m>q</m> means <m>p\rightarrow q</m>; and
+
+<m>p</m> is necessary for <m>q</m> means <m>\neg p\rightarrow \neg q</m>, which is equivalent to <m>q\rightarrow p</m>.
+
+So, a statement such as <m>p</m> is necessary and sufficient for <m>q</m> means <m>p\leftrightarrow q</m>.</p>
+
+<p>We introduce one last connective, which is not as commonly used. It is nice to have an additional connective for practice, but this connective has a particularly nice property which we will explore in the exercises.</p>
+
+<assemblage>
+<title>Logical Connective: NAND</title>
+  <p>  <ul>
+      <li><title>Nand</title><idx><h>connective</h><h>nand</h></idx><notation><usage><m>p // q</m></usage><description><m>p</m> nand <m>q</m>; not both</description></notation> NOT BOTH. Notation: <m>p//q</m>, read as <q><m>p</m> nand <m>q</m>.</q>
+      </li>
+    </ul>
+  </p>
+</assemblage>
+
+  <p>Nand is really just the negation of <q>and</q>: <m>\neg (p\wedge q)</m>. In particular, <m>p // q</m> has the same truth table as <m>\neg(p\wedge q)</m>.</p>
+
+<p><table xml:id="T_nand">
+    <title>Truth table for <m>p // q</m>.</title>
+    <tabular top="minor" left="minor">
+              <col halign="center" right="minor"/>
+              <col halign="center" right="medium"/>
+              <col halign="center" right="minor"/>
+              <row bottom="medium">
+              <cell><m>p</m></cell>
+              <cell><m>q</m></cell>
+              <cell><m>p//q</m></cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>F</cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+            </row>
+    </tabular>
+
+  </table></p>
+
+
+
+  <definition xml:id="D_tautology"><statement><p>A <term>tautology</term><idx>tautology</idx> is a statement that is always true.</p></statement></definition>
+    <p>For example, <m>p\ \vee \neg p</m> is a tautology. If you check the truth table, you will see that the only values in the column for the statement are T.</p>
+
+    <definition xml:id="D_contradiction"><statement><p>A <term>contradiction</term><idx>contradiction</idx> is a statement that is always false.</p></statement></definition>
+    <p>For example, <m>p\ \wedge \neg p</m> is a contradiction. If you check the truth table, you will see that the only values in the column for the statement are F.</p>
+
+    <p>Note that tautologies and contradictions are logical statements that are always true or always false, independent of the content of <m>p</m>.</p>
+
+    <p>If we want to make bigger statements using tautologies or contradictions, we can use <m>\mathbf{t}</m><notation><usage><m>\mathbb{t}</m></usage><description>tautology; always true</description></notation> to represent a tautology and <m>\mathbf{c}</m><notation><usage><m>\mathbb{c}</m></usage><description>contradiction; always false</description></notation> to represent a contradiction. For example, we could find the truth table for <m>p\wedge \mathbf{t}</m>.</p>
+
+    <example><title>Example of <m>p\wedge \mathbf{t}</m></title>
+    
+    <p><table xml:id="T_ttwithtautology">
+    <title>Truth table for <m>p\wedge \mathbf{t}</m>.</title>
+    <tabular top="minor" left="minor">
+              <col halign="center" right="medium"/>
+              <col halign="center" right="medium"/>
+              <col halign="center" right="minor"/>
+              <row bottom="medium">
+              <cell><m>p</m></cell>
+              <cell><m>\mathbf{t}</m></cell>
+              <cell><m>p\wedge \mathbf{t}</m></cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell>F</cell>
+            </row>
+    </tabular>
+
+  </table>
+
+    </p>
+
+    </example>
+
+    <definition xml:id="D_logequiv"><statement>Two statements are <term>logically equivalent</term><idx>logical equivalence</idx><notation><usage><m>P\equiv Q</m></usage><description><m>P</m> is logically equivalent to <m>Q</m></description></notation> if they have identical truth tables. If statements <m>P</m> and <m>Q</m> are logically equivalent, we denote it <m>P\equiv Q</m>.</statement></definition>
+    <p> For example, we can see that <m>p</m> is logically equivalent to <m>p\wedge \mathbf{t}</m> by comparing the first and last columns of <xref ref="T_ttwithtautology"/>.</p>
+
+    <example xml:id="E_loqequivalence"><p>From the definitions and truth tables of <m>p\leftrightarrow q</m> and <m>p // q</m>, we see that
+      <me>p\leftrightarrow q\equiv(p\rightarrow q)\wedge (q\rightarrow p);</me>
+      <me>p // q\equiv\neg(p\wedge q).</me>
+  </p></example>
+
+    <activity xml:id="A_distribneg"><title>Logical Equivalence Practice</title><statement><p>Use a truth table to determine if <m>\neg(p \vee q)</m> and <m>\neg p\  \vee \neg q</m> are logically equivalent. What does this tell you about <q>distributing</q> negation?</p></statement></activity>
+
+    <activity xml:id="A_demorgan1"><title>Negating Or</title><statement><p>Use a truth table to show <m>\neg(p \vee q)</m> and <m>\neg p\ \wedge \neg q</m> are logically equivalent.</p></statement></activity>
+
+    <activity xml:id="A_demorgan2"><title>Negating And</title><statement><p>Use a truth table to show <m>\neg(p \wedge q)</m> and <m>\neg p\ \vee \neg q</m> are logically equivalent.</p></statement></activity>
+
+    <p>The equivalences in <xref ref="A_demorgan1" /> and <xref ref="A_demorgan2" /> are called <term>DeMorgan's Laws</term><idx>DeMorgan's Laws</idx>. These are useful equivalences and are worth committing to memory. As we've seen in the above activities, we cannot simply distribute a negation sign. However, DeMorgan's Laws allow us to distribute the negation as long as we also change from <q>and</q> to <q>or</q> and vice versa. Given the importance of this concept in mathematics, it is useful at this point to convince yourself that the negation of and <q>and</q> statement is an <q>or</q> statement and vice versa using statements in English. For example, if the weather is not cold <em>and</em> rainy, then it is either not cold <em>or</em> not rainy.</p>
+
+    <p>One thing to be careful about with English statements is that they do not naturally contain parentheses. We often really have to think about the meaning of the statement and infer the intended parentheses. Even in the above cold and rainy sentence, we have to understand that we mean <q>not (cold and rainy)</q> rather than <q>(not cold) and rainy.</q></p>
+
+    <activity xml:id="A_negcondit"><title>Negating Conditionals</title><statement><p>Use a truth truth table to show <m>\neg(p \rightarrow q)</m> is logically equivalent to <m>p\ \wedge\neg q</m>. This is the rule for negating an if...then. Like DeMorgan's Law, it is worth committing to memory.</p></statement></activity>
+
+    <p>The following equivalences will be useful when working with conditional statements in mathematics.</p>
+
+<assmemblage xml:id="B_equivforcond">
+<title>Logical Equivalences for Conditionals</title><idx><h>conditional</h><h>logical equvalences for</h></idx>
+
+<p><ul>
+  <li><m>p\rightarrow q\equiv \neg p\ \vee q</m></li>
+  <li><m>\neg(p\rightarrow q)\equiv p\ \wedge \neg q</m><idx><h>conditional</h><h>negation of</h></idx></li>
+</ul></p>
+
+<p>This second equivalence is the <term>negation of the conditional</term>. It is going to be really important that we understand that the negation of a conditional is <em>not</em> a conditional itself.</p>
+</assmemblage>
+
+
+<activity xml:id="A_converse"><title>Converse</title><statement><p>Give the truth table for <m>q\rightarrow p</m>. Is it equivalent to <m>p\rightarrow q</m>? The statement <m>q\rightarrow p</m> is the <term>converse</term> of <m>p\rightarrow q</m>.</p></statement></activity>
+
+<activity xml:id="A_contrapositive"><title>Contrapositive</title><statement><p>Give the truth table for <m>\neg q\rightarrow \neg p</m>. Is it equivalent to <m>p\rightarrow q</m>? The statement <m>\neg q\rightarrow \neg p</m> is the <term>contrapositive</term> of <m>p\rightarrow q</m>.</p></statement></activity>
+
+<activity xml:id="A_inverse"><title>Inverse</title><statement><p>What is the contrapositive of <m>q\rightarrow p</m>? This is also called the <term>inverse</term> of <m>p\rightarrow q</m>.</p></statement></activity>
+
+<p>We summarize the previous activities in the following definition.</p>
+
+<definition xml:id="D_contrapositiveetc"><statement><p>A conditional statement <m>p\rightarrow q</m> has
+  <ul>
+    <li><term>contrapositive</term><idx>contrapositive</idx>: <m>\neg q\rightarrow \neg p</m>;</li>
+    <li><term>converse</term><idx>converse</idx>: <m>q\rightarrow p</m>;</li>
+    <li><term>inverse</term><idx>inverse</idx>: <m>\neg p\rightarrow \neg q</m>.</li>
+  </ul>
+</p></statement>
+</definition>
+
+<example xml:id="E_contrapositive"><title>Contrapositive and Converse</title>
+<p>Consider the statement: If <m>x>2</m> then <m>x^2>4</m>. What is the contrapositive of this statement? What is the converse?</p>
+<p><answer>Contrapositive: If <m>x^2\leq 4</m> then <m>x\leq 2</m>; Converse: If <m>x^2>4</m> then <m>x>2</m>.</answer></p>
+</example>
+
+<p>The following is a list of important logical equivalences. All of them can be checked using truth tables. </p>
+
+<assemblage xml:id="B_logicalequivalences">
+<title>Summary of Logical Equivalences</title><idx>logical equivalence</idx>
+
+<p>Let <m>p, q,</m> and <m>r</m> be variables representing statements. Let <m>\mathbf{t}</m> be a tautology and <m>\mathbf{c}</m> be a contradiction.
+
+<ol marker="1">
+  <li><title>Commutative Laws</title> <m>p \wedge q \equiv q \wedge p; \ \ \ p \vee q \equiv q \vee p</m></li>
+  <li><title>Associative Laws</title> <m>(p \wedge q)\wedge r \equiv p \wedge (q \wedge r);\ \ \ (p \vee q)\vee r \equiv p \vee (q \vee r)</m></li>
+  <li><title>Distributive Laws</title> <m>p \wedge (q \vee r) \equiv (p \wedge q)\vee (p \wedge r);\ \ \ p \vee (q \wedge r) \equiv (p \vee q) \wedge (p \vee r)</m></li>
+  <li><title>Identity Laws</title> <m>p \wedge {\rm\textbf{t}} \equiv p;\ \ \ p \vee {\rm\textbf{c}} \equiv p</m></li>
+  <li><title>Negation Laws</title> <m>p\ \vee \neg p \equiv {\rm\textbf{t}};\ \ \ p\ \wedge \neg p \equiv \rm{\textbf{c}}</m></li>
+  <li><title>Double Negation Law</title> <m>\neg(\neg p)\equiv p</m></li>
+  <li><title>Idempotent Laws</title> <m>p \wedge p \equiv p;\ \ \ p \vee p \equiv p</m></li>
+  <li><title>Universal Bound Laws</title> <m>p \vee {\rm\textbf{t}} \equiv {\rm\textbf{t}};\ \ \ p \wedge \rm{\textbf{c}} \equiv {\rm\textbf{c}}</m></li>
+  <li><title>DeMorgan's Laws</title> <m>\neg(p \wedge q) \equiv \neg p \vee \neg q;\ \ \ \neg(p \vee q) \equiv \neg p\ \wedge \neg q</m></li>
+  <li><title>Absorption Laws</title> <m>p \vee (p \wedge q) \equiv p;\ \ \ p \wedge (p \vee q) \equiv p</m></li>
+</ol>
+
+</p>
+</assemblage>
+
+<exercises>
+  <exercise><statement><p>
+    Below is a list of pairs of statements. Determine, using a truth table, whether the two statements in each pair are logically equivalent.
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    <m>p\vee q</m>; <m>\neg (\neg p \ \wedge\ \neg q)</m>
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>\neg (p\ \wedge\ q)</m>; <m>\neg p\ \wedge\ \neg q</m>
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>q\rightarrow (p\rightarrow \neg q)</m>; <m>\neg(p\ \wedge\ q)</m>
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>\neg(p\vee q)</m>; <m>\neg p \vee \neg q</m>
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>\neg (p\rightarrow q)</m>; <m>\neg q\rightarrow \neg p</m>
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>p\ \wedge\ (p\rightarrow q)</m>; <m>p\ \wedge\ q</m>
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>p\vee (q\ \wedge\ r)</m>; <m>(p\vee q)\ \wedge\ (p\vee r)</m>
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>(p\ \wedge\ q)\rightarrow r</m>; <m>p\rightarrow (q\rightarrow r)</m>
+  </p>
+    </li>
+
+  </ol></statement></exercise>
+  <exercise><statement>
+    <p>
+    Determine, using a truth table, whether each of the following statements is a tautology, a contradiction, or neither.
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    <m>(p\rightarrow p)\rightarrow q</m>
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>q\rightarrow (p\rightarrow q)</m>
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>\neg ( p\vee (p\rightarrow q))</m>
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>q\rightarrow (p \vee \neg p)</m>
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>q\rightarrow (p\ \wedge\ \neg p)</m>
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>\bigl(p\rightarrow (p\rightarrow q)\bigr)\rightarrow (p\rightarrow q)</m>
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>\bigl( (p\ \veebar\  q)\rightarrow (r\ \veebar\  r)\bigr)
+\leftrightarrow (p\ \wedge\ q)</m>
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>(p\vee q)\ \wedge\ (\neg p \vee r)\ \wedge\ (\neg r\vee\neg q)\ \wedge\ (p\leftrightarrow
+q)</m>
+  </p>
+    </li>
+
+  </ol>
+  </statement></exercise>
+  <exercise><statement>
+    <p>
+    Produce truth tables for the following statements. Then abbreviate them by finding the shortest possible logically equivalent statement.
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    <m>\neg (p \ \wedge\ q)\rightarrow (p\ \veebar \ q)</m>
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>\bigl( \bigl( (\neg p\rightarrow q)\ \wedge\ (r\ \veebar \ p)\bigr) \vee 
+\bigl( ( \neg p \rightarrow q)\ \wedge\ (r\ \veebar \ q)\bigr) \bigr) \ \wedge\ 
+\bigl((p\leftrightarrow q)\rightarrow r\bigr)</m>
+  </p>
+    </li>
+
+  </ol>
+  </statement></exercise>
+
+  <exercise xml:id="ER_onlyandnot"><statement><p>
+    Using <em>only</em> the connectives <q><m>\wedge</m></q> and <q><m>\neg</m></q>, write statements logically equivalent to each of the following:
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    <m>p \vee q</m>
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>p\ \veebar\ q</m>
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>p \rightarrow q</m>
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>p \leftrightarrow q</m>
+  </p>
+    </li>
+
+  </ol></statement></exercise>
+
+  <exercise><statement><p>
+    Using <em>only</em> the connective <q>//</q>, write statements logically equivalent to each of the following:
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    <m>\neg p</m>
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>p\ \wedge\ q</m>
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>p \vee q</m>
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>p\ \veebar\ q</m>
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>p \rightarrow q</m>
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>p \leftrightarrow q</m>
+  </p>
+    </li>
+
+  </ol>
+
+  </statement></exercise>
+    
+</exercises>
+
+
+
+
+    <!--<reading-questions>
+      <title>Check Your Understanding</title>
+      <exercise><statement><p>Give the truth table for <m>\neg(\neg p \vee q)</m>. </p></statement>
+      <answer><tabular top="minor" left="minor">
+              <col halign="center" right="minor"/>
+              <col halign="center" right="medium"/>
+              <col halign="center" right="minor"/>
+              <row bottom="medium">
+              <cell><m>p</m></cell>
+              <cell><m>q</m></cell>
+              <cell><m>\neg(\neg p\vee q)</m></cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>F</cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell>F</cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>F</cell>
+            </row>
+    </tabular></answer></exercise>
+
+      <exercise><statement><p>Give the truth table for <m>(p\ \vee \neg q)</m>. </p></statement>
+      <answer><tabular top="minor" left="minor">
+              <col halign="center" right="minor"/>
+              <col halign="center" right="medium"/>
+              <col halign="center" right="minor"/>
+              <row bottom="medium">
+              <cell><m>p</m></cell>
+              <cell><m>q</m></cell>
+              <cell><m>(p\ \vee \neg q)</m></cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>T</cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell>F</cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+            </row>
+    </tabular></answer></exercise>
+
+    <exercise><statement><p>Give the truth table for <m>(p\ \wedge \neg q)</m>. </p></statement>
+      <answer><tabular top="minor" left="minor">
+              <col halign="center" right="minor"/>
+              <col halign="center" right="medium"/>
+              <col halign="center" right="minor"/>
+              <row bottom="medium">
+              <cell><m>p</m></cell>
+              <cell><m>q</m></cell>
+              <cell><m>(p\ \wedge \neg q)</m></cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>T</cell>
+              <cell>F</cell>
+            </row>
+            <row bottom="minor">
+              <cell>T</cell>
+              <cell>F</cell>
+              <cell>T</cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>T</cell>
+              <cell>F</cell>
+            </row>
+            <row bottom="minor">
+              <cell>F</cell>
+              <cell>F</cell>
+              <cell>F</cell>
+            </row>
+    </tabular></answer></exercise>
+
+    <exercise><statement><p>Are any of the three statements in the above exercises logically equivalent?</p></statement>
+      <answer><p>Yes, <m>\neg(\neg p\vee q)</m> is logically equivalent to <m>(p\ \wedge \neg q)</m>.</p></answer>
+    </exercise>
+
+    </reading-questions>
+
+
+    <exercises>
+      <title>Exercises</title>
+      <exercise><statement>
+        <p>Write the following statements in symbolic form using the logical connectives <m>\neg, \vee, \wedge</m> and the indicated letters to represent component statements. Let <m>h=</m> <q>Jane is healthy,</q> <m>w=</m> <q>Jane is wealthy,</q> and <m>s=</m> <q>Jane is wise.</q> </p>
+      <ol marker="a">
+      <li><p>Jane is healthy and wealthy but not wise.</p></li>
+      <li><p>Jane is not wealthy but she is healthy and wise.</p></li>
+      <li><p>Jane is neither healthy, wealthy, nor wise.</p></li>
+      <li><p>Jane is neither wealthy nor wise, but she is healthy.</p></li>
+      <li><p>Jane is wealthy, but she is not both healthy and wise.</p></li></ol>
+      </statement></exercise>
+
+      <exercise><statement><p>Give the truth table for <m>\neg(p\ \wedge q)\vee (p \vee q)</m>.</p></statement></exercise>
+
+      <exercise><statement><p>Use truth tables to determine whether the two statements in each part are logically equivalent. Clearly state your conclusion about whether they are logically equivalent or not, and how your truth table justifies your conclusion.</p>
+    <ol marker="a">
+    <li><p><m>p\ \vee (p\ \wedge q)</m> and <m>p</m> </p></li>
+    <li><p><m>\neg(p\ \wedge q)</m> and <m>\neg p\ \wedge \neg q</m></p></li>
+    <li><p><m>p\ \wedge {\rm\bf{c}}</m> and <m>p\ \vee {\rm\bf{c}}</m></p></li> 
+    <li><p><m>(p\ \wedge q) \vee r</m> and <m>p\ \wedge (q\ \vee r)</m></p></li>
+    </ol></statement></exercise>
+
+      <exercise><statement><p>Use DeMorgan's Laws to write the negation of the statement: Zoro is a math major and Zoro's sister is a computer science major.</p></statement></exercise>
+
+      <exercise><statement><p>Use DeMorgan's Laws to write the negation of the statement: The units digit of <m>4^{185}</m> is 4 or it is 6. </p></statement></exercise>
+
+      <exercise><statement><p>Assume <m>x</m> is a real number. Use DeMorgan's Laws to write the negation of the statement: <m>-8\leq x &lt;3</m>.</p></statement></exercise>
+
+      <exercise><statement><p>Use truth tables to establish whether the following statements are tautologies or contradictions.</p>
+        <ol marker="a">
+        <li><p><m>p\ \wedge \neg q) \wedge (\neg p\ \vee q)</m></p></li>
+
+        <li><p><m>(\neg p\ \vee q) \vee (p \wedge \neg q)</m></p></li></ol></statement></exercise>
+    </exercises>-->
+
+</section>

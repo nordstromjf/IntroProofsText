@@ -1,0 +1,190 @@
+<section xml:id="existunique">
+  <title>Existence and Uniqueness Proofs</title><idx>existence proof</idx><idx>uniqueness proof</idx>
+
+  <p>In this section we will look at existential statements which have the form <q>There exists <m>x</m> such that <m>P(x)</m>,</q> and <q>There exists a unique <m>x</m> such that <m>P(x)</m>.</q> We first studied existence statements in <xref ref="quantifiers"/>.</p>
+
+  <p>Recall how to show an existential statement, <m>\exists x\in D, P(x)</m>, is true/false:</p>
+  
+  <ul>
+  <li><p>To show an existential statement is <alert>true</alert>, you just need to find one value in <m>D</m> which makes <m>P(x)</m> true.</p></li>
+  <li><p>To show an existential statement is <alert>false</alert>, you need to show all values in <m>D</m> make <m>P(x)</m> false, or no values make it true. If your set is small, you can do this just by showing <m>P(x)</m> is false for each <m>x</m>. If <m>D</m> is infinite, however, we will need more general techniques.</p></li>
+</ul>
+
+  <p>In <xref ref="quantifiers"/>, we were generally able to find a specific <m>x</m> in order to show a existential statement was true.</p>
+
+  <example xml:id="E_domainqexist1"><title>Existential Statements</title><idx>existential statement</idx>
+  <p><ol marker="a">
+    <li><p>Let <m>D=\mathbb{Z}</m>. Determine whether the statement <q>there exists <m>x\in D</m> such that <m>x+3/2=4</m></q> is true or false.</p>
+    <answer><p>Since <m>x=5/2</m> is the only value satisfying the equation, but <m>x\notin \mathbb{Z}</m>, the statement is false.</p></answer></li>
+
+    <li><p>Let <m>D=\mathbb{R}</m>. Determine whether the statement <q>there exists <m>x\in D</m> such that <m>x+3/2=4</m></q> is true or false.</p>
+    <answer><p>Since <m>x=5/2</m> is the only value satisfying the equation, and <m>x\in \mathbb{R}</m>, the statement is true.</p></answer></li>
+
+    <li><p>Let <m>D=\{5/2\}</m>. Determine whether the statement <q>there exists <m>x\in D</m> such that <m>x+3/2=4</m></q> is true or false.</p>
+    <answer><p>Since <m>x=5/2</m> is the only value satisfying the equation, and <m>x\in D</m>, the statement is true.</p></answer></li></ol></p>
+  </example>
+
+  <p>However, many existence statements in mathematics require us to find a more general solution.</p>
+
+<assemblage xml:id="B_pfexistential">
+  <title>Proving an Existential Statement</title><idx><h>proof</h><h>existential statement</h></idx>
+  <p>To prove there exists <m>x\in D</m> such that <m>P(x)</m>:
+    <ol marker="1">
+      <li><p>Produce a candidate. This means you state an <m>x\in D</m> which makes <m>P(x)</m> true. You may need to do work to find <m>x</m>, but that work is not part of the actual proof.</p></li>
+      <li><p>Show the candidate works. In other words, show <m>P(x)</m> is true. </p></li>
+    </ol>
+  </p></assemblage>
+
+  <example xml:id="E_generalexistence"><title>A More General Existence Proof</title>
+<p>Let <m>r, s \in \mathbb{Q}</m> with <m>r &lt; s</m>. Prove there exists <m>x\in \mathbb{Q}</m> such that <m> r &lt; x  &lt; s</m>.</p>
+<p>Before proving the statement, we need to find an <m>x</m> that is between <m>r</m> and <m>s</m>. We need to find a general one, one that depends on <m>r</m> and <m>s</m>. There are lots of choices, but to guarantee it is in between <m>r</m> and <m>s</m>, we might want to take the midpoint, which is also the average of the two numbers, <m>\frac{r+s}{2}</m>. </p>
+
+
+<proof><p>Let <m>r, s\in \mathbb{Q}</m> with <m>r &lt; s</m>. Let <m>x=\frac{r+s}{2}</m> (this is stating the candidate). Then <m>x</m> is rational (see <xref ref="ER_averagerat"/> or prove this as an exercise). Furthermore, 
+<me>r=\frac{2r}{2}=\frac{r+r}{2} &lt; \frac{r+s}{2} &lt; \frac{s+s}{2} =\frac{2s}{2}=s.</me>
+Thus, <m>r &lt; x  &lt; s</m>. (We showed that <m>x</m> satisfied all the necessary properties.) </p></proof>
+</example>
+
+
+<activity xml:id="A_biginteger"><title>A Bigger Integer</title>
+<introduction><p>Prove for <m>n\in \mathbb{Z}</m> there exists an integer <m>m</m> with <m>n &lt; m</m>.</p></introduction>
+<task><p>Given a general integer <m>n</m>, find an interger that will always be larger that <m>n</m>. This is your candidate for <m>m</m>.</p></task>
+<task><p>Verify that <m>n &lt; m</m> and <m>m\in \mathbb{Z}</m>.</p></task>
+<task><p>Is your choice for <m>m</m> unique? Could you find a different <m>m</m> that works? If you can find another choice for <m>m</m>, write a second proof of existence with your new <m>m</m>.</p></task>
+</activity>
+
+
+<p>Existence statements are common in mathematics. You probably came across several in calculus, for example, Rolle's Theorem and the Mean Value Theorem. Although their proofs are beyond the scope of this course, you are encouraged to look up a proof and see how the techniques we've been studying are applied. In many contexts, it can be very difficult to find a candidate. If you are stuck, it might be worth trying proof by contradiction. In this case, you assume there does not exist <m>x</m> satisfying <m>P(x)</m>. Symbolically this statement is <m>\neg \exists x, P(x)</m>. The negation is equivalent to <m>\forall x, \neg P(x)</m>. You can then use <m>\forall x, \neg P(x)</m> for your assumption and try to reach a contradiction.</p>
+
+<p>Now we want to look at statements where the <m>x</m> that exists is actually unique. Meaning, there is only one possible <m>x</m> that will work. First we show <m>x</m> exists, then we show it is unique.</p>
+
+<assemblage xml:id="B_pfunique">
+  <title>Proving Uniqueness</title><idx><h>proof</h><h>uniqueness statement</h></idx>
+<p>To prove there exists a unique <m>x\in D</m> such that <m>P(x)</m>:
+<ol marker="1">
+      <li><p>Produce a candidate. This means you state the <m>x</m> that makes <m>P(x)</m> true. You may need to do work to find <m>x</m>, but that work is not part of the actual proof.</p></li>
+      <li><p>Show the candidate works. In other words, show <m>P(x)</m> is true. This shows <em>existence</em>. </p></li>
+      <li><p>Assume <m>P(x)</m> is true and <m>P(y)</m> is true. Show <m>x=y</m>. This shows <em>uniqueness</em>.</p></li>
+    </ol></p></assemblage>
+
+<p>The idea behind a uniqueness proof is that if the necessary property holds for <m>x</m> and <m>y</m>, then they must have been the same thing, so there can only be one solution. It is important to note that you just need to show <m>x=y</m> in general. If there was a specific solution for <m>x</m> in the existence part, you do not need to show that <m>y</m> equals that specific <m>x</m>.</p>
+
+
+<example xml:id="E_generaluniqueness"><title>A Uniqueness Proof</title>
+<p>In <xref ref="E_domainqexist1"/> we said that the solution to <m>x+3/2=4</m> was unique. This may seem obvious since if we solve for <m>x</m>, there is only one possible solution. But just to practice with the form of a uniqueness proof, we show how to prove uniqueness without showing <m>x=5/2</m>. </p>
+
+<proof><p>Let <m>x</m> and <m>y</m> be solutions to <m>x+3/2=4</m>. Then <m>x+3/2=4</m> and <m>y+3/2=4</m>. Thus, 
+<me>x+3/2=y+3/2</me>
+<me>x=y</me>
+Hence, the solution is unique.</p></proof>
+</example>
+
+<activity xml:id="A_practiceunique"><title>A Unique Root</title><statement><p>Assume <m>x^3+37=0</m> has a solution. Show the solution is unique.</p></statement><hint><p>You do not need to find the actual solution to do this proof.</p></hint></activity>
+
+<p>In <xref ref="cases"/> we stated the Division Algorithm, <xref ref="T_divisionalgorthm"/>. We restate it for convenience.</p>
+
+<theorem><title>The Division Algorithm</title><idx><h>Division Algorithm</h></idx><statement><p>Given any integer <m>n</m> and any positive integer <m>d</m>, there exist unique integers <m>q, r</m> such that <m>n=dq+r</m> and <m>0\leq r &lt; d</m>.</p></statement></theorem>
+
+<p>This is a classic example of an exstence and uniqueness statement in mathematics. We need to prove <m>q, r</m> exist and are unique. Before we do that we need the Well-Ordering Principle, which we will state without a proof.</p>
+
+
+  <theorem xml:id="T_wellordering"><title>Well-Ordering Principle</title><idx>Well-Ordering Principle</idx><p>Let <m>S</m> be a set containing one or more integers, all of which are greater than some fixed integer. Then <m>S</m> has a least element.</p></theorem>
+
+
+<p>To check that the Well-Ordering Principle applies, you need to check three things:
+<ol marker="1">
+  <li><m>S\neq \emptyset.</m></li>
+  <li><m>S\subseteq \mathbb{Z}.</m></li>
+  <li><p>Every element of <m>S</m> is greater than some fixed integer.</p></li>
+</ol></p>
+
+<example xml:id="E_wop"><title>Well-Ordering Principle</title>
+<p>First note that the Well-Ordering Principle does not apply if the set is not integers. For example,
+<me>\{1/n : n\in \mathbb{Z}, n\geq 1\}.</me>
+This is not a subset of the integers and does not have a least element, even though every element is greater than 0.</p>
+
+<p>Now consider <m>S=\{2k+1 : k\geq 0\}</m>. Check each of the conditions.
+<ol marker="1">
+  <li><p><m>S\neq \emptyset</m> since <m>1\in S</m>.</p></li>
+  <li><p><m>S\subseteq \mathbb{Z}</m> since <m>2k+1\in \mathbb{Z}</m>.</p></li>
+  <li><p>Every element of <m>S</m> is greater than some fixed integer since <m>2k+1\geq 1</m> when <m>k\geq 0</m>.</p></li>
+</ol></p>
+
+</example>
+
+<!--<activity><statement><p>Let <m>k\in \mathbb{Z}</m>. Do the conditions of the Well Ordering Principle apply to <m>S=\{2k: k\geq 3\}?</m></p></statement></activity>
+
+<activity><statement><p>Let <m>k, j\in \mathbb{Z}</m>. Do the conditions of the Well Ordering Principle apply to 
+<me>S=\{2k+3j: 2k+3j\geq 0\}?</me></p></statement></activity>
+<activity><statement><p>Do the conditions of the Well Ordering Principle apply to <m>S=\{r\in \mathbb{Q}: r\geq 0\}?</m></p></statement></activity>
+<activity><statement><p>Let <m>n, d\in \mathbb{Z}</m>, and <m>d>0</m>. Do the conditions of the Well Ordering Principle apply to <me>S=\{n-dk: n-dk\geq 0\}?</me></p></statement></activity>-->
+
+<p>We now prove the <em>existence</em> part of the Division Algorithm.</p>
+
+
+<proof><idx><h>Division Algorthm</h><h>proof of existence</h></idx><p>Let <m>S=\{n-dk : n-dk\geq 0, k\in\mathbb{Z}\}</m>. Show <m>S</m> satisfies the Well-Ordering Principle. Clearly <m>S</m> is a set of integers, and by definition, every element is greater than or equal to 0. So we just need to show that <m>S\neq\emptyset</m>.</p>
+<p>If <m>n\geq 0</m>, we can let <m>k=0</m>. Then <m>n-dk=n\geq 0</m>. Hence <m>n\in S</m>.</p>
+
+<p>If <m>n&lt; 0</m>, let <m>k=n</m>. Then <m>n-dn=n(1-d)</m>. But <m>n&lt; 0</m> and <m>1-d\leq 0</m>. Thus, <m>n-dn\geq 0</m>. Hence <m>n-dn\in S</m>.</p>
+<p>Thus, <m>S</m> is nonempty and satisfies the conditions of the Well-Ordering Principle. Hence, <m>S</m> has a least element. Call it <m>r</m>.</p>
+
+<p>Since <m>r\in S</m>, <m>r=n-dk</m> for some <m>k\in \mathbb{Z}</m>. Let <m>k=q</m>. Then <m>r=n-dq</m>, and so <m>n=dq+r</m>.</p>
+
+<p>We just need to show that <m>0\leq r&lt; d</m>. Well, <m>r\geq 0</m> since <m>r\in S</m>.</p>
+<p>We will use contradiction to show <m>r&lt; d</m>. Assume <m>r\geq d</m>. Then 
+<md>
+  <mrow>n-d(q+1)&amp;=n-dq-d</mrow>
+  <mrow>&amp;=r-d</mrow>
+  <mrow>&amp;\geq 0, \text{ since } r\geq d.</mrow>
+</md>
+But then <m>n-d(q+1)\in S</m> and <m>n-d(q+1)&lt; n-dq=r</m>. This contradicts that <m>r</m> was the smallest element of <m>S</m>. Therefore, <m>r&lt; d</m>.</p></proof>
+
+<p>Although this is a fairly complex proof, it is a good example of how many different techniques can be used in one proof. We do not have a specific value for <m>r</m>, rather its existence (and hence existence of <m>q</m>) depends on existence in the Well-Ordering Principle. Now we prove <m>q</m> and <m>r</m> are unique.</p>
+
+<proof><idx><h>Division Algorithm</h><h>proof of uniqueness</h></idx>
+<p>Assume <m>q_1, r_1, q_2, r_2</m> exist and satisfy the conditions of the theorem. Then, <m>n=dq_1+r_1</m> and <m>0\leq r_1 &lt; d</m> and <m>n=dq_2+r_2</m> and <m>0\leq r_2 &lt; d</m>. This gives us 
+<me>dq_1+r_1=dq_2+r_2.</me>
+</p>
+<p>Rewriting, 
+<me>r_1-r_2=dq_2-dq_1=d(q_2-q_1)</me>
+We can assume <m>r_1 \geq r_2</m> (if they weren't, we could just rename them).</p>
+<p>Thus, <m>d</m> divides <m>r_1-r_2</m>. But since <m>0\leq r_1 &lt; d</m> and <m>0\leq r_2 &lt; d</m>, <m>0\leq r_1-r_2 &lt; d</m>. The only nonnegative integer <m>d</m> divides that is smaller than itself is 0. Thus <m>r_1-r_2=0</m>. Therefore, <m>r_1=r_2</m>. </p>
+<p>Now 
+  <md>
+  <mrow>dq_1+r_1&amp;=dq_2+r_2</mrow>
+  <mrow>dq_1&amp;=dq_2</mrow>
+  <mrow>q_1&amp;=q_2</mrow>
+</md>
+Hence, <m>r, q</m> are unique.
+</p>
+
+
+</proof>
+ 
+<exercises>
+   
+<exercise><statement><p>
+    Prove if <m>a</m> is a positive real number, then there exists a positive real number less than <m>a</m>.
+  </p></statement></exercise>
+<exercise><statement><p>
+    Prove for all real numbers <m>x</m>, if <m>x\neq 2</m> then there exists a unique <m>y</m> in <m>\mathbb{R}</m> such that <m>{2y\over y+1}=x</m>.
+  </p></statement></exercise>
+<exercise><statement><p>
+    Prove there exists a unique integer <m>a</m> such that <m>a+b=b</m> for all integers <m>b</m>.
+  </p></statement></exercise>
+<exercise><statement><p>
+    Prove there exists a unique integer <m>a</m> such that <m>ab=b</m> for all integers <m>b</m>.
+  </p></statement></exercise>
+
+  <exercise><statement><p>
+    Let <m>(1,4)</m> and <m>(3,2)</m> be points in the plane. Prove there is a unique line through <m>(1,4)</m> and <m>(3,2)</m>.
+  </p></statement><hint><p>First show the line exists. You can use scratchwork to find the equation of the line. Then you need to show your line passes through the two points in your proof. For uniqueness assume you have two general lines, <m>y=mx+b</m>, passing through <m>(1,4)</m> and <m>(3,2)</m>. Show the two lines are the same. Each point on each line gives one equation.</p></hint></exercise>
+
+<exercise><statement><p>
+    Let <m>(a,b)</m> and <m>(c,d)</m> be points in the plane with <m>a\neq c</m>. Prove there is a unique line through <m>(a,b)</m> and <m>(c,d)</m>.
+  </p></statement><hint><p>First show the line exists. You can use scratchwork to find the equation of the line. Then you need to show your line passes through the two points in your proof. For uniqueness assume you have two general lines passing through <m>(a,b)</m> and <m>(c,d)</m>. Show the two lines are the same. Each point on each line gives one equation.</p></hint></exercise>
+
+</exercises>
+
+
+</section>

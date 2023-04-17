@@ -1,0 +1,321 @@
+<section xml:id="arguments">
+  <title>Validity and Soundness</title>
+
+  <p>We want to be able to put mathematical statements together to form logical arguments. The structure of an argument is more important, at the moment, than the specific content. </p>
+
+  <p>A <term>logical argument</term><idx>logical argument</idx> consists of <term>premises</term><idx>premise</idx> and a <term>conclusion</term><idx>conclusion</idx>. The premises and conclusion are statements. A <term>statement</term><idx>logical statement</idx> is a sentence that is either true of false (not both!). An argument must have at least one premise, but can have as many as you like. It has exactly one conclusion.</p>
+
+  <example xml:id="E_statement"><title>Statements</title>
+      <ul>
+        <li><p><q><m>2+3=5</m></q> is a statement. It is a true statement.</p></li>
+        <li><p><q><m>2+1=5</m></q> is a statement. It is a false statement.</p></li>
+        <li><p><q><m>x+y=5</m></q> is <em>not</em> a statement. It is neither true nor false. If we had additional information, such as specific information about the variables, then this might be a statement.</p></li>
+        <li><p><q>I ate breakfast today.</q> is a statement. Although you might not be able to determine whether I ate breakfast, the statement is either true or false.</p></li>
+      </ul>
+  </example>
+
+<assemblage xml:id="B_argform">
+  <title>General Form of an Argument</title><idx><h>argument</h><h>general form</h></idx><notation><usage><m>\therefore</m></usage><description>therefore</description></notation>
+    <tabular>
+      <row><cell>A</cell></row>
+      <row bottom="medium"><cell>B</cell></row>
+      <row><cell><m>\therefore\ </m>C</cell></row>
+    </tabular>
+ 
+
+    <p>Here A and B are the premises, and C is the conclusion. The symbol <m>\ \therefore\ </m> is read <q>therefore.</q>
+  </p>
+</assemblage>
+
+  <p>Since an argument is just a list of statements, we need some structure for what makes a <q>good</q> argument.</p>
+
+  <definition xml:id="D_valid"><statement><p>An argument is <term>valid</term><idx>valid argument</idx><idx><h>argument</h><h>valid</h></idx> if whenever the premises are true, the conclusion must be true.</p></statement></definition>
+
+  <definition xml:id="D_invalid"><statement><p>An argument is <term>invalid</term><idx>invalid argument</idx><idx><h>argument</h><h>invalid</h></idx> if it is possible for the premises to be true and the conclusion false.</p></statement></definition>
+
+  <example xml:id="E_univtransitivity"><title>A Valid Argument</title><p>The following general form is  a valid argument. This means if the two premises are true, then the conclusion must be true.
+  </p>
+
+<p><tabular>
+      <row><cell>All A are B.</cell></row>
+      <row bottom="medium"><cell>All B are C.</cell></row>
+      <row><cell><m>\therefore\ </m>All A are C.</cell></row>
+    </tabular></p>
+<p>For example, a specific argument of this form is
+  <tabular>
+      <row><cell>All parabolas are functions of degree 2.</cell></row>
+      <row bottom="medium"><cell>All functions of degree 2 are quadratic.</cell></row>
+      <row><cell><m>\therefore\ </m>All parabolas are quadratic.</cell></row>
+    </tabular>
+    Note that we don't even need to undertand the statements themselves to know that this is a valid argument. If the premises are true, then the conclusion must be true.</p>
+
+  </example>
+
+    <activity xml:id="A_explorevalid"><title>Exploring a Valid Argument</title><introduction><p>Consider the general form from <xref ref="E_univtransitivity"/>.</p></introduction>
+    <task><p>Write a specific argument that has this form, but where at least one of your premises is false. Note, your statements need not be mathematical.</p></task>
+    <task><p>Is your conclusion true or false?</p></task>
+    <task><p>Is it possible to have a valid argument with at least one false premise and a true conclusion?</p></task></activity>
+
+
+  <example xml:id="E_anothergenform"><title>Another Valid Argument</title><p>One of the simplest forms for a valid argument is when your conclusion repeates a premise.
+<tabular>
+      <row><cell>A</cell></row>
+      <row bottom="medium"><cell>B</cell></row>
+      <row><cell><m>\therefore\ </m>A</cell></row>
+    </tabular></p>
+
+    <p>Although this form is probably too simple to use in actual proof writing, it is useful for understanding validity. It is straightforward to see that it would be impossible to have true premises and a false conclusion, as A can't be both true and false.</p></example>
+
+   
+
+<example xml:id="E_argsentences"><title>An Argument with False Premises and False Conclusion</title>
+  <p>Let's look at a more specific example:</p>
+    <p><tabular>
+ <row ><cell>The sun is purple.</cell></row>
+ <row bottom="medium"><cell>The sun is a planet.</cell></row>
+  <row><cell>Therefore, the sun is purple.</cell></row>
+    </tabular></p>
+  <p>Although the two statements are false, the argument is still valid.</p>
+</example>
+
+<example xml:id="E_invalidform"><title>An Inalid Argument</title><p>An example of an invalid form of an argument is 
+<tabular>
+      <row><cell>All A are B.</cell></row>
+      <row bottom="medium"><cell>All A are C.</cell></row>
+      <row><cell><m>\therefore\ </m>All B are C.</cell></row>
+    </tabular></p>
+
+    <p>For example, a specific argument of this form is
+  <tabular>
+      <row><cell>All cows are animals that eat grass.</cell></row>
+      <row bottom="medium"><cell>All cows are animals that moo.</cell></row>
+      <row><cell><m>\therefore\ </m>All animals that eat grass are animals that moo.</cell></row>
+    </tabular></p>
+
+    <p>In this case it is possible for the two premises to be true while the conclusion is false. It doesn't actually matter that the premises are true, just that even if they are, it is still possible to have a false conclusion.</p></example>
+    <activity xml:id="A_invalidtrueconcl"><title>Exploring Invalid Arguments</title>
+    <statement>Use the general form in <xref ref="E_invalidform"/> to write an invalid argument with true premises and a true conclusion.</statement></activity>
+
+
+<activity xml:id="A_possibleforms"><title>Possible Argument Forms</title><introduction><p>If possible, give an example of an argument (in sentences, not variables) that meets the given criteria. If it is not possible, just state that it is not possible.</p></introduction>
+<task><p>A valid argument that has false premises and a true conclusion.</p></task>
+<task><p>An invalid argument that has false premises and a true conclusion.</p></task>
+<task><p>A valid argument that has true premises and a true conclusion.</p></task>
+<task><p>An invalid argument that has true premises and a true conclusion.</p></task>
+<task><p>A valid argument that has true premises and a false conclusion.</p></task>
+<task><p>An invalid argument that has true premises and a false conclusion.</p></task>
+</activity>
+
+
+  <p>We've seen that it is possible to have a valid argument with a false conclusion. But, certainly, the point of a proof is for our arguments to have true conclusions, Thus, we need something more to have a <q>good</q> argument.</p>
+
+  <definition xml:id="D_sound">
+    <statement><p>An argument is <term>sound</term> if it is valid and all the premises are true.</p></statement>
+  </definition>
+<p>Since a valid argument cannot have true premises and a false conclusion, if the premises are actually true, then the argument must have a true conclusion. Note, soundness of an argument does depend on the actual content of the statements.</p>
+
+<activity><title>Sound Arguments</title><statement><p>Which or your arguments in <xref ref="A_possibleforms"/> are sound?</p></statement></activity>
+
+   <exercises>
+     <exercise><statement><p>
+    Assume that the truth-value assignments for each statement are correct.
+  </p>
+
+  <ul>
+    <li>
+      <p>
+    All math students are sleep-deprived. (True)
+  </p>
+    </li>
+
+    <li>
+      <p>
+    All sleep-deprived people are goofy. (True)
+  </p>
+    </li>
+
+    <li>
+      <p>
+    All sleep-deprived people are math students. (False)
+  </p>
+    </li>
+
+    <li>
+      <p>
+    All math students are goofy. (True)
+  </p>
+    </li>
+
+  </ul>
+
+  <p>
+    Now given these assigned truth-values, determine the validity and soundness of each of the following arguments:
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p><tabular>
+    <row><cell>All math students are sleep-deprived.</cell></row>
+    <row bottom="medium"><cell>All sleep-deprived people are goofy.</cell></row>
+    <row><cell><m>\therefore</m> All math students are goofy.</cell></row>
+  </tabular>
+  </p>
+    </li>
+
+    <li>
+    <p><tabular>
+    <row><cell>All math students are goofy.</cell></row>
+    <row bottom="medium"><cell>All sleep-deprived people are goofy.</cell></row>
+    <row><cell><m>\therefore</m> All math students are sleep-deprived.</cell></row>
+  </tabular>
+  </p>
+    </li>
+
+    <li>
+      <p><tabular>
+    <row><cell>All sleep-deprived people are math students.</cell></row>
+    <row bottom="medium"><cell>All math students are goofy.</cell></row>
+     <row><cell> <m>\therefore</m> All sleep-deprived people are goofy.</cell></row>
+   </tabular>
+  </p>
+    </li>
+
+    <li>
+      <p><tabular>
+    <row><cell>All sleep-deprived people are goofy.</cell></row>
+    <row bottom="medium"><cell>All math students are goofy.</cell></row>
+    <row><cell><m>\therefore</m> All math students are goofy.</cell></row>
+  </tabular>
+  </p>
+    </li>
+</ol></statement></exercise>
+     <exercise><statement>
+       <p>
+    Use the following set of statements and assigned truth-values to construct arguments with two premises satifying the indicated description.
+  </p>
+
+  <ul>
+    <li>
+      <p>
+    All talented people are insightful. (True)
+  </p>
+    </li>
+
+    <li>
+      <p>
+    All talented people are rich. (False)
+  </p>
+    </li>
+
+    <li>
+      <p>
+    All college students are rich. (False)
+  </p>
+    </li>
+
+    <li>
+      <p>
+    All college students are talented. (False)
+  </p>
+    </li>
+
+    <li>
+      <p>
+    All rich people are insightful. (False)
+  </p>
+    </li>
+
+    <li>
+      <p>
+    All college students are insightful. (False)
+  </p>
+    </li>
+
+    <li>
+      <p>
+    All rich people are college students. (False)
+  </p>
+    </li>
+
+  </ul>
+
+ <ol marker="a">
+    <li>
+      <p>
+    The argument is valid, but both premises and the conclusion are false.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    The argument is valid, but both premises are false, and the conclusion is true.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    The argument is valid, one premise is true and one false, and the conclusion is true.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    The argument is valid, one premise is true and one false, and the conclusion is false.
+  </p>
+    </li>
+
+  </ol>
+     </statement></exercise>
+     <exercise><statement>
+       <p>
+    Indicate whether the following statements are true or false. For those that are false, show why they are false by giving an example of an argument which make the statement false. 
+  </p>
+
+  <ol>
+    <li>
+      <p>
+    Every argument with a false conclusion is invalid.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Every argument with a false premise is invalid.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Every argument with a false premise and a false conclusion is invalid.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Every argument with a false premise and a true conclusion is invalid.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Every argument with true premises and a false conclusion is invalid.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Every argument with a true conclusion is sound.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Every argument with a false conclusion is unsound.
+  </p>
+    </li>
+
+  </ol>
+     </statement></exercise>
+   </exercises>
+
+</section>

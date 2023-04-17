@@ -1,0 +1,23 @@
+<chapter xml:id="chapter6" xmlns:xi="http://www.w3.org/2001/XInclude" >
+  <title>Additional Topics</title>
+  <introduction>
+   
+    <p>
+     This chapter contains additional topics that utilize proof techniques. 
+    </p>
+
+  
+    
+
+  </introduction>
+  
+  <xi:include  href="binomial6-1.ptx" />
+  <xi:include  href="cardinality6-2.ptx" />
+  
+  
+ 
+
+  
+  
+  
+</chapter>

@@ -1,0 +1,21 @@
+<chapter xml:id="chapter2" xmlns:xi="http://www.w3.org/2001/XInclude" >
+  <title>Mathematical Statements</title>
+  <introduction>
+   
+    <p>
+     In this chapter we look more formally at mathematical statements. We introduce common language and notation for understanding how to read and write mathematics. 
+    </p>
+
+  
+    
+
+  </introduction>
+  <xi:include  href="setnotation2-1.ptx" />
+  <xi:include  href="quantifiers2-2.ptx" />
+  <xi:include  href="conditionals2-3.ptx" />
+  
+
+  
+  
+  
+</chapter>

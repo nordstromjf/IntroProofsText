@@ -1,0 +1,824 @@
+<section xml:id="relations">
+  <title>Equivalence Relations</title><idx>relations</idx><idx>equivalence relations</idx><idx>equivalence classes</idx><idx>partitions</idx>
+
+  <introduction><p>In many area of mathematics we care about how mathematical objects relate to each other. In <xref ref="functions"/> we used function to relate elements of two sets. In this section we define the more general concept of a relation between sets. We also look as several properties. </p></introduction>
+
+  <subsection xml:id="SS_introrelation"><title>Introduction to Relations</title>
+
+  <definition xml:id="D_relation"><statement><p>A <term>relation</term><idx>relation</idx>, <m>R</m>, on <m>A\times B</m>, is a set of ordered pairs in <m>A\times B</m>.</p>
+  </statement></definition>
+
+  <p>Simply put, a relation, <m>R</m> is just a subset of <m>A\times B</m>.</p>
+
+  <p>We say <m>(x, y)\in R</m> if and only if <m>x R y</m><notation><usage><m>x R y</m></usage><description><m>x</m> is related to <m>y</m></description></notation>. Notationally, we can either use the set <m>R</m> or the symbol <m>R</m> to describe the relation. When using <m>x R y</m>, we read this as <q><m>x</m> is related to <m>y</m>.</q></p>
+
+  <example xml:id="E_relationsasset"><title>Relation Defined by a Set</title>
+
+  <p>Let <m>A=\{1, 2, 3, 4\}</m>, <m>B=\{1, 3, 5\}</m> define the relation on <m>A\times B</m> by 
+  <me>R=\{(1, 1), (1, 5), (3, 5), (2, 1), (4, 3)\}.</me>
+
+  Then <m>1 R 1, 3 R 5, 4 R 3</m>, for example. But 3 is not related to 1, for example. </p>
+
+  </example>
+
+  <example xml:id="E_lessthan"><title>Relation Defined by Less Than</title>
+  <p>We can also define relations with familiar mathematical relationships.</p>
+  <p>Let <m>A=\{1, 2, 3, 4\}</m>, <m>B=\{1, 3, 5\}</m> define the relation on <m>A\times B</m> by 
+  <me>x R y \Leftrightarrow x&lt; y.</me></p>
+  <p>Find the set of ordered pairs for <m>R</m>.</p>
+  <answer><m>R=\{(1, 3), (1, 5), (2, 3), (2, 5), (3, 5), (4, 5)\}</m></answer>
+
+  
+
+  </example>
+
+ <!-- <p>As with functions, we can draw an arrow diagram from <m>A</m> to <m>B</m> representing the relationship. We have an arrow from <m>a</m> to <m>b</m> if <m>aRb</m>, or <m>(a, b)\in R</m>.</p>
+
+  <p>The arrow diagram for the relation <q>a&lt; b</q>, given in <xref ref="E_relationsasset"/> is given in the following figure.</p>
+
+  <figure xml:id="F_arrowdiaglessthan">
+  <caption>Arrow diagram for less than.</caption>
+ 
+  <image width="20%" xml:id="ltgraph">
+    <latex-image>
+  \begin{tikzpicture}[node distance = 1cm, thick]
+%arrowrelationlessthan
+        \node (1) {$1$};
+        \node (2) [below=of 1] {$2$};
+        \node (3) [below=of 2] {$3$};
+         \node(4)[below=of 3]{$4$};
+        \node (5) [right=of 1] {$1$};
+         \node (6) [right=of 2] {$3$};
+          \node (7) [right=of 3] {$5$};
+          \node (8) [above=of 1]{$A$};
+          \node(9)[above=of 5]{$B$};
+         
+          
+          \draw[->] (1) to (6);
+        \draw[->] (1) to (7);
+        \draw[->] (2) to (6);
+        \draw[->] (2) to (7);
+        \draw[->] (3) to (7);
+         \draw[->] (4) to (7);
+
+    \end{tikzpicture}
+
+
+
+
+</latex-image></image>
+</figure>-->
+
+  <p>A function is a relation. Let <m>f:A\rightarrow B, f(a)=b</m>. Then define <m>R</m> by
+<me>(a, b)\in R \Leftrightarrow f(a)=b.</me>
+</p>
+
+<p>We can see that <xref ref="E_lessthan"/> is not a function since an element of <m>A</m> can map to two different elements of <m>B</m>: <m>(1, 3), (1, 5)</m>.</p>
+
+<example xml:id="E_fnasrelation"><title>A Function as a Relation</title>
+<p>Let <m>f:\mathbb{Z}\rightarrow\mathbb{Z}</m> be given by <m>f(n)=n^2</m>. Let <m>F</m> be the relation given by <m>f</m>:
+<me>(a, b)\in F \Leftrightarrow f(a)=b.</me></p>
+<p>True or false: <m>(1, 1)\in F</m>.
+</p>
+<answer><p>True</p></answer>
+
+<p>True or false: <m>(3, 9)\in F</m>.
+</p>
+<answer><p>True</p></answer>
+
+<p>True or false: <m>(9, 3)\in F</m>.
+</p>
+<answer><p>False</p></answer>
+
+<p>True or false: <m>(-2, 4)\in F</m>.
+</p>
+<answer><p>True</p></answer>
+
+<p>True or false: <m>(2, -4)\in F</m>.
+</p>
+<answer><p>False</p></answer>
+
+<p>True or false: <m>(1, 3)\in F</m>.
+</p>
+<answer><p>False</p></answer>
+</example>
+
+<p>To determine if a relation is a function, we check the properties from the definition of a function, <xref ref="D_function"/>:
+<ul>
+  <li><p>For every <m>a\in A</m> there must be a <m>b\in B</m> related to <m>a</m>.</p></li>
+  <li><p>Each <m>a\in A</m> can only be related in one <m>b\in B</m>.</p></li>
+</ul></p>
+
+<p>We can translate this idea into the ordered pair notation:
+<ul>
+  <li><p>For every <m>a\in A</m> there must be a <m>b\in B</m> such that  <m>(a, b)\in F</m>.</p></li>
+  <li><p>If <m>(a, b)\in F</m> and <m>(a, c)\in F</m> then <m>b=c</m>.</p></li>
+</ul></p>
+  
+
+<!--  <definition xml:id="D_inverserelation"><statement><p>Let <m>R</m> be a relation on <m>A\times B</m>. The  <term>inverse relation</term><idx>inverse relation</idx>, <m>R^{-1}</m>, on <m>B\times A</m> is 
+    <me>
+     R^{-1}=\{(b, a)\in B\times A : (a, b)\in R\}.
+    </me></p></statement></definition>
+
+    <p>In other words, <m>(a, b)\in R \Leftrightarrow (b, a)\in R^{-1}</m>.</p>
+
+    
+
+  <example xml:id="E_invereserel"><title>Inverse Relation</title><p>
+    Let  <m>R=\{(1, 3), (1, 5), (2, 3), (2, 5), (3, 5), (4, 5)\}</m>. This is the relation in <xref ref="E_lessthan"/>.</p>
+
+    <p>Find <m>R^{-1}</m>.</p>
+    <answer><m>\{(3, 1), (5, 1), (3, 2), (5, 2), (5, 3), (5, 4)\}</m></answer>
+ </example>-->
+
+ <activity xml:id="A_reldiff"><title>A Difference Relation</title><introduction><p> Let <m>A=\{1, 2, 3, 4\}</m> and <m>B=\{0, 1\}</m>. Define the relation from <m>A</m> to <m>B</m> by 
+<me>(x, y)\in R \iff x-y\ \text{is even}.</me></p></introduction>
+<task><p>Find the set of ordered pairs given by this relation.</p></task>
+
+<!--<task><p>Draw the arrow diagram for this relation.</p></task>
+<task><p>Give the inverse relation for <m>R</m>. Remember, it is a set of ordered pairs.</p></task>-->
+<task><p>Is the relation <m>R</m> a function?</p></task></activity>
+
+ <definition xml:id="D_relonA"><statement><p>A <term>relation on <m>A</m></term><idx><h>relation</h><h>on a set</h></idx> is a relation on <m>A\times A</m>. We also call it a relation from <m>A</m> to <m>A</m>.</p></statement></definition>
+
+ <!--<p>We can use a directed graph to represent a relation an <m>A</m>. We label the vertices with the elements from <m>A</m> and draw and arrow from <m>a</m> to <m>b</m> if <m>aRb</m>. Note, if <m>aRa</m>, then we get a <q>loop</q> at <m>a</m>.</p>
+
+<example xml:id="E_dirgraphrelation"><title>Directed Graph of a Relation</title>
+<p>Let <m>A=\{1, 2, 3\}</m>. Let <m>R=\{(x, y) : x&lt; y\}</m>. Then we get the following directed graph for <m>R</m>.
+</p>
+<figure xml:id="F_digraphlessthan">
+  <caption>Directed graph for less than</caption>
+  <image width="20%" xml:id="gdlessthan">
+    <latex-image>
+  \begin{tikzpicture}
+%directed graph less than
+
+\tikzset{every loop/.style={min distance=10mm,in=-60,out=60,looseness=50}}
+
+\node[main node](1)[label=left:$1$]{};
+\node[main node](2)[label=right:$2$][right=1.0cm of 1]{};
+\node[main node](3)[label=right:$3$][below=1.0cm of 2]{};
+%\node[main node](4)[label=below:$d$][below=1.0cm of 1]{};
+
+\path[-{Latex}, thick](1) edge node {} (2);
+\path[-{Latex}, thick](2) edge node {} (3);
+\path[-{Latex}, thick](1) edge node {} (3);
+%\path[->, thick](4) edge [loop above] node {} (4);
+
+\end{tikzpicture}
+
+</latex-image></image>
+</figure>
+
+<p>If we now want the relations for less than or equal to, <m>R=\{(x, y) : x\leq y\}</m>, we have the following directed graph.</p>
+
+<figure xml:id="F_digraphlessthaneq">
+  <caption>Directed graph for less than or equal</caption>
+  <image width="20%" xml:id="gdlessthaneq">
+    <latex-image>
+  \begin{tikzpicture}
+%directed graph less than equal
+
+\tikzset{every loop/.style={min distance=15mm,looseness=30}}
+
+\node[main node](1)[label=left:$1$]{};
+\node[main node](2)[label=right:$2$][right=1.0cm of 1]{};
+\node[main node](3)[label=right:$3$][below=1.0cm of 2]{};
+%\node[main node](4)[label=below:$d$][below=1.0cm of 1]{};
+
+\path[-{Latex}, thick](1) edge node {} (2);
+\path[-{Latex}, thick](2) edge node {} (3);
+\path[-{Latex}, thick](1) edge node {} (3);
+%\path[->, thick](4) edge [loop above] node {} (4);
+
+\path[-{Latex}, thick](1) edge [loop above] node {} (1);
+\path[-{Latex}, thick](2) edge [loop above] node {} (2);
+\path[-{Latex}, thick](3) edge [loop below] node {} (3);
+
+\end{tikzpicture}
+
+</latex-image></image>
+</figure>
+
+</example>-->
+
+
+
+<activity xml:id="A_div3rel"><title>Divisibility by 3</title><introduction><p> Let <m>A=\{0, 1, 2, 3, 4, 5\}</m>.  Define the relation on <m>A</m> by  
+<me>(x, y)\in R \iff 3 \mid (x-y).</me></p></introduction>
+<task><p>Find the set of ordered pairs given by this relation.</p></task>
+<!--<task><p>Draw the directed graph for this relation.</p></task>
+<task><p>Give the inverse relation for <m>R</m>. Remember, it is a set of ordered pairs.</p></task>-->
+<task><p>Is the relation <m>R</m> a function?</p></task></activity>
+
+<activity xml:id="A_dividesrel"><title>The Divides Relation</title><introduction><p> Let <m>A=\{0, 1, 2, 3, 4, 5\}</m>.  Define the relation on <m>A</m> by  
+<me>(x, y)\in R \iff x\ \text{divides}\ y.</me></p></introduction>
+<task><p>Find the set of ordered pairs given by this relation.</p></task>
+<!--<task><p>Draw the directed graph for this relation.</p></task>
+<task><p>Give the inverse relation for <m>R</m>. Remember, it is a set of ordered pairs.</p></task>-->
+<task><p>Is the relation <m>R</m> a function?</p></task></activity>
+
+</subsection>
+
+<subsection xml:id="SS_equivrelations"><title>Equivalence Relations</title>
+
+<p>We look at some properties of relations. In particular, we define the reflexive, symmetric, and transitive properties. We will  look at how to prove whether a relation is reflexive, symmetric, and/or transitive. We then use these properties to define equivalence relations.</p>
+
+  <definition xml:id="D_RSTprop"><statement><p>Let <m>R</m> be a relation on <m>A</m>. Then 
+  <ul>
+    <li><m>R</m> is <term>reflexive</term><idx>reflexive</idx> if for all <m>x\in A</m>, <m>x R x</m>. In ordered pair notation, <m>(x, x)\in R</m>.</li>
+    <li><m>R</m> is <term>symmetric</term><idx>symmetric</idx> if for all <m>x, y\in A</m>, if <m>x R y</m> then <m>y R x</m>. In ordered pair notation, if <m>(x, y)\in R</m> then <m>(y, x)\in R</m>.</li>
+
+    <li><m>R</m> is <term>transitive</term><idx>transitive</idx> if for all <m>x, y, z\in A</m>, if <m>x R y</m> and <m>y R z</m> then <m>x R z</m>. In ordered pair notation, if <m>(x, y)\in R</m> and <m>(y, z)\in R</m> then <m>(x, z)\in R</m>.</li>
+  </ul> </p>
+  </statement></definition>
+
+
+  <example xml:id="E_propofsets"><title>Reflexive, Symmetric, Transitive</title>
+
+  <p>Let <m>A=\{1, 2, 3\}</m>, define the relation on <m>A</m> by 
+  <me>R=\{(1, 1), (2, 2), (3, 3)\}.</me></p>
+
+  <p><m>R</m> is reflexive since <m>(x, x)\in R</m> for each <m>x\in A</m>. </p>
+  <p><m>R</m> is symmetric since if <m>(x, y)\in R</m> then <m>(y, x)\in R</m>.  Note, this property does not mean <m>(x, y)\in R</m>, just that if a pair is in <m>R</m>, then the reverse is as well.</p>
+  <p><m>R</m> is transitive since  if <m>(x, y)\in R</m> and <m>(y, z)\in R</m> then <m>(x, z)\in R</m>. Note, this property can be tedious to check by hand. In this example, though, the only pairs that fit the hypothesis are pairs like <m>(x, y)=(1, 1), (y, z)=(1, 1)</m>, so <m>(x, z)=(1, 1)</m>, which is in <m>R</m>.</p>
+
+  </example>
+
+  <example xml:id="E_propofsets2"><title>Another Look at the Properties</title>
+
+  <p>Let <m>A=\{1, 2, 3\}</m>, define the relation on <m>A</m> by 
+  <me>R=\{(1, 2), (1, 3), (2, 3)\}.</me></p>
+
+  <p><m>R</m> is not reflexive since <m>(1, 1)\notin R</m>. </p>
+  <p><m>R</m> is not symmetric since <m>(1, 2)\in R</m>, but not <m>(2, 1)</m>.</p>
+  <p><m>R</m> is transitive since  if <m>(x, y)\in R</m> and <m>(y, z)\in R</m> then <m>(x, z)\in R</m>.</p>
+  <p>Check: <m>(x, y)=(1, 2), (y, z)=(2, 3)</m>, so <m>(x, z)=(1, 3)</m>, which is in <m>R</m>. This is the only set of ordered pairs where the second coordinate matches the first.</p>
+
+  </example>
+
+  <activity xml:id="A_proponaset"><title>Pratice with the Properties on a Finite Relation</title><introduction><p>Let <m>A=\{1, 2, 3\}</m>. Let <m>R=\{(1, 1), (1, 2), (1, 3), (2, 1), (3, 1)\}</m>.</p></introduction>
+    <task><p>Determine if <m>R</m> is reflexive.</p></task>
+    <task><p>Determine if <m>R</m> is symmetric.</p></task>
+    <task><p>Determine if <m>R</m> is transitive.</p></task>
+    <!--<task><p>Draw the directed graph for <m>R</m>.</p></task>
+    <task><p>If <m>R</m> is not transitive, what ordered pairs should you add to the relation to make <m>R</m> transitive?</p></task>-->
+    </activity>
+
+    <activity xml:id="A_proponaset2"><title>More Practice with a Finite Relation</title><introduction><p>Let <m>A=\{1, 2, 3, 4\}</m>. Let <m>R=\{(1, 1), (1, 3), (2, 2), (3, 2), (3, 3)\}</m>.</p></introduction>
+    <task><p>Determine if <m>R</m> is reflexive.</p></task>
+    <task><p>Determine if <m>R</m> is symmetric.</p></task>
+    <task><p>Determine if <m>R</m> is transitive.</p></task>
+  <!--  <task><p>Draw the directed graph for <m>R</m>.</p></task>
+    <task><p>If <m>R</m> is not transitive, what ordered pairs should you add to the relation to make <m>R</m> transitive?</p></task>-->
+    </activity>
+
+  <p>Checking that a relation is reflexive, symmetric, or transitive on a small finite set can be done by checking that the property holds for all the elements of <m>R</m>. But if <m>A</m> is infinite we need to prove the properties more generally.</p>
+
+<assemblage xml:id="B_pfpropequiv">
+  <title>Proving Reflexive, Symmetric, and Transitive Properties</title>
+  <p>To prove
+    <ul>
+      <li><title>Reflexive</title><p>Let <m>x\in A</m>. Show <m>(x, x)\in R</m>.</p></li>
+      <li><title>Symmetric</title><p>Assume <m>(x, y)\in R</m>. Show <m>(y, x)\in R</m>.</p></li>
+      <li><title>Transitive</title><p>Assume <m>(x, y), (y, z)\in R</m>. Show <m>(x, z)\in R</m>.</p></li>
+    </ul></p>
+
+
+<p>To disprove a property, find a specific counterexample.
+<ul>
+      <li><title>Reflexive</title><p>Find <m>(x, x)\notin R</m> for some <m>x\in A</m>.</p></li>
+      <li><title>Symmetric</title><p>Find <m>(x, y)\in R</m> with <m>(y, x)\notin R</m>.</p></li>
+      <li><title>Transitive</title><p>Find <m>(x, y), (y, z)\in R</m> with <m>(x, z)\notin R</m>.</p></li>
+    </ul></p>
+
+  </assemblage>
+
+
+<example xml:id="E_provingRST"><title>Proving Refexive, Symmetric, Transitive</title>
+  <p>Let <m>R</m> be the relation on <m>\mathbb{Z}</m> given by <m>(m, n)\in R\Leftrightarrow 3\mid(m-n)</m>.</p>
+  <p>Reflexive: Show <m>(m, m)\in R</m>. Now <m>m-m=0</m>, and <m>3\mid 0</m>. So we get that <m>3\mid m-m</m>. Thus <m>(m, m)\in R</m> for all <m>m\in \mathbb{Z}</m>.</p>
+  <p>Symmetric: Assume <m>(x, y)\in R</m>. Then <m>3\mid (x-y)</m>. This implies <m>x-y=3k</m> for some <m>k\in\mathbb{Z}</m>. But then <m>y-x=-3k=3(-k)</m>, where <m>-k\in \mathbb{Z}</m>. Thus, <m>3\mid (y-x)</m>. Hence, <m>(y, x)\in R</m>.</p>
+  <p>Transitive: Assume <m>(x, y), (y, z)\in R</m>. Then <m>3\mid (x-y)</m> and <m>3\mid (y-z)</m>. This implies <m>x-y=3k</m> for some <m>k\in\mathbb{Z}</m> and <m>y-z=3j</m> for some <m>j\in\mathbb{Z}</m>. But then <m>x-z=x-y+y-z=3k+3j=3(j+k)</m>, where <m>k+j\in \mathbb{Z}</m>. Thus, <m>3\mid (x-z)</m>. Hence, <m>(x, z)\in R</m>.</p>
+</example>
+
+<activity xml:id="A_equalsrel"><title>The Equals Relation</title><introduction><p>Define the relation on <m>\mathbb{R}</m> by <m>xRy \iff x=y</m>.</p></introduction>
+<task><p>Prove or disprove <m>R</m> is reflexive.</p></task>
+<task><p>Prove or disprove <m>R</m> is symmetric.</p></task>
+<task><p>Prove or disprove <m>R</m> is transitive.</p></task>
+</activity>
+
+<activity xml:id="A_lessthanrel"><title>The Less Than Relation</title><introduction><p>Define the relation on <m>\mathbb{R}</m> by <m>xRy \iff x &lt; y</m>.</p></introduction>
+<task><p>Prove or disprove <m>R</m> is reflexive.</p></task>
+<task><p>Prove or disprove <m>R</m> is symmetric.</p></task>
+<task><p>Prove or disprove <m>R</m> is transitive.</p></task>
+</activity>
+
+<definition xml:id="D_equivrel"><statement><p>A relation that is reflexive, symmetric and transitive is an <term>equivalence relation</term><idx>equivalence relation</idx>. </p>
+  </statement></definition>
+
+  <p>In <xref ref="E_provingRST" /> we proved that the relation given by <m>(m, n)\in R \Leftrightarrow 3\mid (m-n)</m> is an equivalence relation since we proved it is reflexive, symmetric, and transitive.</p>
+
+  <p>In fact, the proof can easily be adapted to show <m>(m, n)\in R \Leftrightarrow d\mid (m-n)</m>
+ is an equivalence relation for <m>d\neq 0, d\in \mathbb{Z}</m>.</p>
+
+ <p>This is an important enough relation that it has its own notation.
+<me>m\equiv n \mod d.</me>
+ </p>
+
+ <definition xml:id="D_mod"><statement><p>Let <m>m, n, d\in \mathbb{Z}, d>0</m>. Then <m>m</m> and <m>n</m> are <term>congruent modulo <m>d</m></term><idx>congruent mod <m>d</m></idx> if <m>d\mid (m-n)</m>. We denote congruence mod <m>d</m> by <m>m\equiv n \mod d</m><notation><usage><m>m\equiv n \mod d</m></usage><description><m>m</m> is congruent to <m>n</m> mod <m>d</m></description></notation>.</p></statement></definition>
+
+ <p>We often just say <m>m</m> is congruent to <m>n</m> mod <m>d</m>.</p>
+
+  <example xml:id="E_mod"><title>Congruence mod <m>d</m></title>
+
+  <p>True or false: <m>7\equiv 1 \mod 3</m>.</p>
+  <answer><p>Since <m>3\mid (7-1)</m>, true.</p></answer>
+
+  <p>True or false: <m>7\equiv -2 \mod 3</m>.</p>
+  <answer><p>Since <m>3\mid (7+2)</m>, true.</p></answer>
+
+  <p>True or false: <m>7\equiv -7 \mod 3</m>.</p>
+  <answer><p>Since <m>3\nmid (7+7)</m>, false.</p></answer>
+
+  <p>True or false: <m>7\equiv 2 \mod 3</m>.</p>
+  <answer><p>Since <m>3\nmid (7-2)</m>, false.</p></answer>
+
+  </example>
+
+  <p>Let <m>R</m> be an equivalence relation on <m>A</m>. Let <m>a\in A</m>. The set 
+<me>[a]=\{b\in A : b R a\}</me>
+is the <term>equivalence class</term><idx>equivalence class</idx> of <m>a</m>.<notation><usage><m>[a]</m></usage><description>the equivalence class of <m>a</m></description></notation></p>
+
+<p>Given a specific <m>a\in A</m>, we find the equivalence class of <m>a</m> by finding all the elements that are related to <m>a</m>. Keep in mind the equivalence class is a set, denoted <m>[a]</m>.</p>
+
+  <example xml:id="E_equivclasses"><title>Equivalence Classes</title>
+
+  <p>Consider the equivalence relation <m>m\equiv n \mod d</m>, on <m>\mathbb{Z}</m>.
+
+  <ol marker="a">
+
+  <li><p>Find <m>[0]</m>, the set of elements in <m>\mathbb{Z}</m> equivalent to 0.</p>
+  <answer><m>[0]=\{0, 3, -3, 6, -6, \ldots\}=\{3k : k\in \mathbb{Z}\}</m></answer></li>
+  <li><p>Find <m>[1]</m>, the set of elements in <m>\mathbb{Z}</m> equivalent to 1.</p>
+  <answer><m>[1]=\{1, 4, -2, -5, 7, 10, \ldots\}=\{3k+1: k\in \mathbb{Z}\}</m></answer></li>
+
+  <li><p>Find <m>[2]</m>, the set of elements in <m>\mathbb{Z}</m> equivalent to 2.</p>
+  <answer><m>[2]=\{2, 5, -1, -4, -7, \ldots\}=\{3k+2: k\in \mathbb{Z}\}</m></answer></li>
+  <li><p>Find <m>[3]</m>, the set of elements in <m>\mathbb{Z}</m> equivalent to 3.</p>
+  <answer><m>[3]=\{0, 3, -3, 6, -6, \ldots\}=\{3k : k\in \mathbb{Z}\}</m></answer></li>
+  <li><p>Find <m>[-1]</m>, the set of elements in <m>\mathbb{Z}</m> equivalent to -1.</p>
+  <answer><m>[-1]=\{2, 5, -1, -4, -7, \ldots\}=\{3k+2: k\in \mathbb{Z}\}</m></answer></li>
+
+</ol></p>
+
+  </example>
+
+  
+
+  <p>We can notice a few things from this last example. We can see that some of our equivalence classes are the same. In particular, <m>[0]=[3]</m> and <m>[2]=[-1]</m>. In fact, there are only three distinct equivalence classes, <m>[0], [1], [2]</m>, any other equivalence class will equal one of these. 
+  </p>
+
+  <p>A few other things to notice, distinct equivalence classes are disjoint--they have no elements in common. Also, <m>[a]</m> contains <m>a</m>. Furthermore, the equivalence classes <m>[0], [1], [2]</m> <term>partition</term> the integers.</p>
+
+  <definition xml:id="D_partition"><statement><p>A set of subsets of a set <m>B</m>, <m>\{A_1, A_2, \ldots, A_n\}</m>, is a <term>partition</term><idx>partition</idx> of <m>B</m> if 
+  <ol marker="1">
+    <li><p><m>\bigcup_{i=1}^nA_i=B</m>,</p></li>
+    <li><p><m>A_i\cap A_j=\emptyset</m> whenever <m>i\neq j</m>.</p></li>
+  </ol>
+</p></statement></definition>
+
+<p>What this really says is that a set of subsets will be a partition of <m>B</m> if the union of the subsets is all of <m>B</m>, and the subsets are pairwise disjoint.</p>
+
+<example xml:id="E_partition"><title>Partition</title>
+<p>Let <m>B=\{1, 2, 3, 4, 5, 6\}</m>. Then let <m>A_1=\{1\}, A_2=\{2, 4, 6\}, A_3=\{3, 5\}</m>. We can see that <m>\{A_1, A_2, A_3\}</m> is a partition of <m>B</m> since <m>A_1\cup A_2\cup A_3=B</m> and the subsets have no elements in common, hence they are disjoint.</p>
+
+<p>Now if we let <m>A_1=\{1, 2, 3, 4\}, A_2=\{2, 3, 4, 5, 6\}</m>. We can see that <m>\{A_1, A_2\}</m> is not a partition of <m>B</m> since <m>A_1\cap A_2=\{2, 3, 4\}\neq\emptyset</m>.</p>
+</example>
+
+  <example xml:id="E_equivclasses2"><title>More Equivalence Classes</title>
+
+  <p>Let <m>N(A)</m> be the number of elements in <m>A</m>.</p>
+
+  <p>Consider the equivalence relation <m>A R B \Leftrightarrow N(a)=N(B)</m>, on <m>\mathcal{P}(\{1, 2, 3\})</m>.</p>
+  <p>This is the relation where two subsets of <m>\{1, 2, 3\}</m> are related if they have the same number of elements. You can check that this is an equivalence relation.
+
+  <ol marker="a">
+  <li><p>Find <m>[\emptyset]</m>, the set of elements in <m>\mathcal{P}(\{1, 2, 3\})</m> equivalent to <m>\emptyset</m>.</p>
+  <answer><m>[\emptyset]=\{\emptyset\}</m>, since this is the only subset with 0 elements.</answer></li>
+  <li><p>Find <m>[\{1\}]</m>.</p>
+  <answer><m>[\{1\}]=\{\{1\}, \{2\}, \{3\}\}</m>, since these all have 1 element.</answer></li>
+
+  <li><p>Find <m>[\{1, 2\}]</m>.</p>
+  <answer><m>[\{1, 2\}]=\{\{1, 2\}, \{2, 3\}, \{1, 3\}\}</m></answer></li>
+
+  <li><p>Find <m>[\{1, 2, 3\}]</m>.</p>
+  <answer><m>[\{1, 2, 3\}]=\{\{1, 2, 3\}\}</m></answer></li>
+</ol>
+</p>
+
+  </example>
+
+  <p>Once again, the distinct equivalence classes are disjoint--they have no elements in common. Furthermore, the equivalence classes <m>[\emptyset], [\{1\}], [\{1, 2\}], [\{1, 2, 3\}]</m> partition the power set by size of the subset.</p>
+
+  <activity xml:id="A_absvaluerel"><title>An Absolute Value Relation</title><introduction><p>Define the relation on <m>\mathbb{R}</m> by <m>xRy \iff |x|=|y|</m>.</p></introduction>
+<task><p>Prove <m>R</m> is an equivalence relation.</p></task>
+<task><p>Find <m>[0]</m> and <m>[-5]</m>.</p></task></activity>
+
+<activity xml:id="A_mod5rel"><title>Equivalence Mod 5</title><introduction><p>Recall that <m>n \equiv m\ \text{mod}\ 5\iff 5\mid (m-n)</m>.</p></introduction>
+<task><p>Prove the relation <m>nRm \iff n \equiv m\ \text{mod}\ 5</m> is an equivalence relation on <m>\mathbb{Z}</m>. </p></task>
+<task><p>Find <m>[0]</m> and <m>[2]</m>.</p></task></activity>
+
+  <activity xml:id="A_partasequivrel"><title>A Partition Relation</title><introduction><p>Let <m>S=\{1, 2, 3, 4, 5, 6\}</m>. Let <m>A_1=\{1, 2, 3\}, A_2=\{4\}, A_3=\{5, 6\}</m>.</p></introduction>
+<task><p>Check the conditions in <xref ref="D_partition"/> to show <m>\{A_i\}</m> is a partition of <m>S</m>.</p></task>
+<task><p>Define the relation on <m>S</m>, <m>xRy \iff</m> <m>x</m> and <m>y</m> are in the same subset of the partition. Is <m>1 R 3</m>? Is <m>2 R 4?</m> Is <m>5 R 5?</m></p></task>
+<task><p>Show <m>R</m> is reflexive, symmetric and transitive.</p></task>
+<task><p>Find <m>[1]</m>, the equivalence class of 1. </p></task>
+<task><p>Do you think this particular partition matters? Could we define this relation on any partition of any set and still have it be reflexive, symmetric and transitive?</p></task></activity>
+
+  <p>There is an important connection between equivalence classes and partitions, as we see in the next two theorems.</p>
+
+  <theorem xml:id="T_equivclassespartition"><statement><p>Let <m>A</m> be a set and <m>R</m> an equivalence relation. The equivalence classes of <m>R</m> form a partition of <m>A</m></p>.</statement></theorem>
+
+
+  <p>Conversely, as we saw in <xref ref="A_partasequivrel"/>, if we have a partition <m>\{A_1, A_2, \ldots, A_n, \ldots\}</m> of <m>A</m> and define the relation <m>(a, b)\in R \Leftrightarrow a</m> and <m>b</m> are in the same subset <m>A_i</m>, then <m>R</m> is an equivalence relation. We call this the equivalence relation <term>induced</term> by the partition.</p>
+
+  <theorem xml:id="T_partitionequivrelation"><statement><p>Let <m>A</m> be a set and <m>\{A_1, A_2, \ldots, A_n, \ldots\}</m> be a partition of <m>A</m>. Let <m>R</m> be the relation induced by the partition. Then <m>R</m> is an equivalence relation.</p></statement></theorem>
+
+  <p>We leave the details of the proof of <xref ref="T_partitionequivrelation"/> as an exercise.</p>
+
+  <p>The proof of <xref ref="T_equivclassespartition"/> follows directly from the next two Lemmas.</p>
+
+  <lemma xml:id="L_aRbsameclass"><statement><p>Let <m>R</m> be an equivalence relation on <m>A</m> and <m>a, b\in A</m>. If <m>a R b</m> then <m>[a]=[b]</m>.</p></statement></lemma>
+
+  <proof> <p>Since we want to show the sets are equal, we will show <m>[a], [b]</m> are subsets of each other.</p>
+
+  <p>Show <m>[a]\subseteq [b]</m>. Let <m>x\in [a]</m>. Then by defintion of equivalence class, <m>x R a</m>. We assumed <m>a R b</m>. By the transitive property, <m>x R b</m>. Thus, <m>x\in [b]</m>.</p>
+
+  <p>Show <m>[b]\subseteq [a]</m>. Let <m>x\in [b]</m>. Then by defintion of equivalence class, <m>x R b</m>. We assumed <m>a R b</m>. By the symmetric property, <m>b R a</m>. By the transitive property, <m>x R a</m>. Thus, <m>x\in [a]</m>.</p>
+  </proof>
+
+  <p><xref ref="L_aRbsameclass"/> really says that if two elements are related in an equivalence relation, they the must have the same equivalence class. You can check this with the above examples. Note, we needed the symmetric and transitive properties to prove this lemma.</p>
+
+  <lemma xml:id="L_classdisjoint"><statement><p>Let <m>R</m> be an equivalence relation on <m>A</m> and <m>a, b\in A</m>. Either <m>[a]\cap[b]=\emptyset</m> or <m>[a]=[b]</m>.</p></statement></lemma>
+
+  <p>Before proving the lemma, note that we are trying to prove an <q>or</q> statement. A common technique is to assume one part is false and show the other part is true. This technique comes from the logical equivalence <m>p\vee q\equiv \neg p\rightarrow q</m>.</p>
+
+  <proof><p>Assume <m>[a]\cap[b]\neq \emptyset</m>. We want to show <m>[a]=[b]</m>. Since <m>[a]\cap[b]\neq \emptyset</m>, there exists <m>x\in [a]\cap[b]</m>. This means <m>x R a</m> and <m>x R b</m>. By the symmetric property, <m>a R x</m>. By the transitive property, since <m>a R x</m> and  <m>x R b</m>, we have <m>a R b</m>. By <xref ref="L_aRbsameclass" />, <m>[a]=[b]</m>.</p>
+</proof>
+
+<p><xref ref="L_classdisjoint"/> really say that two equivalence classes are either disjoint or exactly the same.</p>
+
+<p><xref ref="T_equivclassespartition"/> follows since, by the reflexive property, <m>x R x, \forall x\in A</m> means every element is in an equivalence class. Thus, the union of the equivalence classes is all of <m>A</m>. By <xref ref="L_classdisjoint"/> distinct equivalence classes are disjoint. Thus, we have a partition of <m>A</m>.</p>
+
+
+
+
+
+
+   <!-- <reading-questions>
+      <title>Check Your Understanding</title>
+
+      <p>Let <m>A=\{1, 2, 3\}, B=\{2, 4, 6, 8\}, C=\{0, 1\}</m>.</p>
+      
+
+      <exercise><statement><p>Give the ordered pairs for the relation on <m>A\times B</m> given by 
+      <me>a R b \Leftrightarrow a\geq b</me></p></statement>
+      <answer><m>\{(2, 2), (3, 2)\}</m></answer></exercise>
+
+      <exercise><statement><p>Give the ordered pairs for the relation on <m>C</m> given by 
+      <me>a R b \Leftrightarrow a+b \text{ is even}</me></p></statement>
+      <answer><m>\{(0, 0), (1, 1)\}</m></answer></exercise>
+
+      <exercise><statement><p>True or false: the relation on <m>A\times B</m> given by 
+      <me>a R b \Leftrightarrow a\geq b</me>
+      is a function from <m>A</m> to <m>B</m>.</p></statement>
+      <answer>False</answer></exercise>
+
+      <exercise><statement><p>True or false: the relation on <m>C</m> given by 
+      <me>a R b \Leftrightarrow a+b \text{ is even}</me>
+      is a function on <m>C</m>.</p></statement>
+      <answer>True</answer></exercise>
+
+      <exercise><statement><p>Give the ordered pairs for the relation on <m>B</m> given by 
+      <me>a R b \Leftrightarrow a\mid b</me></p></statement>
+      <answer><m>\{(2, 2), (2, 4), (2, 6), (2, 8), (4, 4), (4, 8), (6, 6), (8, 8)\}</m></answer></exercise>
+
+      <exercise><statement><p>Give the ordered pairs for the inverse relation, <m>R^{-1}</m> on <m>B</m> when <m>R</m> is given by 
+      <me>a R b \Leftrightarrow a\mid b</me></p></statement>
+      <answer><m>\{(2, 2), (4, 2), (6, 2), (8, 2), (4, 4), (8, 4), (6, 6), (8, 8)\}</m></answer></exercise>
+      
+    
+
+    </reading-questions>-->
+
+        <exercises>
+      
+      <exercise><statement>
+        <p>
+    Define the <term>congruence modulo 3</term> relation, <m>T</m>, on <m>\mathbb{Z}</m> by
+  </p>
+
+  <p>
+    <me>m\ T\ n \iff 3\mid (m-n).</me>
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    Is <m>10\ T\ 1</m>? Is <m>1\ T\ 10</m>? Is <m>(2, 2)\in T</m>? Is <m>(8, 1)\in T</m>?
+  </p>
+    </li>
+
+    <li>
+      <p>
+    List five integers <m>n</m> such that <m>n\ T\ 0</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    List five integers <m>n</m> such that <m>n\ T\ 1</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    List five integers <m>n</m> such that <m>n\ T\ 2</m>.
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+ <!--     <exercise><statement>
+        <p>
+    Let <m>X=\{a, b, c\}</m> and <m>{\cal P}(X)</m> be the power set of <m>X</m>. Define the relation <m>R</m> on <m>{\cal P}(X)</m> by <me>A \ R\ B \iff A \text{ has the same number of elements as } B.</me>
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    Is <m>\{a, b\}\ R\ \{b, c\}</m>?
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Is <m>\{a\}\ R\ \{a, b\}</m>?
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Is <m>\{c\}\ R\ \{b\}</m>?
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>-->
+      <exercise><statement>
+        <p>
+    Define the relation, <m>S</m>, on <m>\mathbb{Z}</m> by
+  </p>
+
+  <p>
+    <me>m\ S\ n \iff 5\mid (m^2-n^2).</me>
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    Is <m>1\ S\ (-9)</m>?
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Is <m>2\ S\ 13</m>?
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Is <m>2\ S\ (-8)</m>?
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Is <m>(-8)\ S\ 2</m>?
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+  <!--    <exercise><statement>
+        <p>
+    Let <m>A=\{3, 4, 5\}</m> and <m>B=\{4, 5, 6\}</m> and let <m>R</m> be the <q>less than</q> relation. That is, for all <m>(x, y)\in A\times B</m>, <me>x\ R\ y \iff x&lt;y.</me>
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    Find the set of ordered pairs in <m>R</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Find the set of ordered pairs in <m>R^{-1}</m>.
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>-->
+      <exercise><statement>
+        <p>
+    Let <m>A=\{3, 4, 5\}</m> and <m>B=\{4, 5, 6\}</m> and let <m>S</m> be the <q>divides</q> relation. That is, for all <m>(x, y)\in A\times B</m>, <me>x\ S\ y \iff x\mid y.</me>
+  
+    Find the set of ordered pairs in <m>S</m>.
+  </p>
+      </statement></exercise>
+   <!--   <exercise><statement>
+        <p>
+    Let <m>A=\{a, b, c, d\}</m>. Define the relation <m>R</m> on <m>A</m> by <me>R=\{(a, b), (a, c), (b, c), (d, d)\}</me>. Draw the directed graph for <m>R</m>.
+  </p>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Let <m>A=\{2, 3, 4, 5, 6, 7, 8\}</m>. Define the relation <m>S</m> on <m>A</m> by <me>x\ S\ y \iff x\mid y.</me>
+
+    Draw the directed graph for <m>R</m>.
+  </p>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Let <m>A=\{2, 3, 4, 5, 6, 7, 8\}</m>. Define the relation <m>T</m> on <m>A</m> by <me>x\ T\ y \iff 3\mid (x-y).</me>
+ 
+    Draw the directed graph for <m>T</m>.
+  </p>
+      </statement></exercise>-->
+
+         <exercise><statement>
+        <p>
+    Let <m>G</m> be the relation on <m>\mathbb{R}</m> defined by <me>x\ G\ y\iff xy\geq 0.</me>
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    Determine if <m>G</m> is reflexive. Justify your answer.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Determine if <m>G</m> is symmetric. Justify your answer.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Determine if <m>G</m> is transitive. Justify your answer.
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Let <m>D</m> be the relation on <m>\mathbb{Z}^+</m> defined by <me>m\ D\ n\iff m\mid n.</me>
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    Determine if <m>D</m> is reflexive. Justify your answer.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Determine if <m>D</m> is symmetric. Justify your answer.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Determine if <m>D</m> is transitive. Justify your answer.
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Let <m>F</m> be the relation on <m>\mathbb{R}\times \mathbb{R}</m> defined by <me>(x_1, y_1)\ F\ (x_2, y_2)\iff x_1=x_2.</me>
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    Determine if <m>F</m> is reflexive. Justify your answer.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Determine if <m>F</m> is symmetric. Justify your answer.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Determine if <m>F</m> is transitive. Justify your answer.
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Define the relation <m>R</m> on <m>\mathbb{Z}</m> by <me>m\ R\ n \iff 5\mid(m-n).</me>
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    Prove or disprove <m>R</m> is reflexive.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Prove or disprove <m>R</m> is symmetric.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Prove or disprove <m>R</m> is transitive.
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Let <m>X=\{a, b, c\}</m> and <m>{\cal P}(X)</m> be the power set of <m>X</m>. Define the relation <m>L</m> on <m>{\cal P}(X)</m> by <me>A\ L\ B \iff \text{ the number of elements in $A$ is less than the number of elements in $B$.}</me>
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    Prove or disprove <m>L</m> is reflexive.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Prove or disprove <m>L</m> is symmetric.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Prove or disprove <m>L</m> is transitive.
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Let <m>X</m> be a nonempty set and <m>{\cal P}(X)</m> be the power set of <m>X</m>. Define the <q>subset</q> relation <m>S</m> on <m>{\cal P}(X)</m> by <me>A\ S\ B \iff A\subseteq B.</me>
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    Prove or disprove <m>S</m> is reflexive.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Prove or disprove <m>S</m> is symmetric.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Prove or disprove <m>S</m> is transitive.
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+      
+   
+    </exercises>
+  </subsection>
+
+</section>

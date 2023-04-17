@@ -1,0 +1,733 @@
+<section xml:id="quantifiers">
+  <title>Quantifiers</title>
+
+  <introduction>
+  <p>As we move into proving mathematical statements, we need to better understand the statements themselves. In your previous work with mathematics, you've often used variables and equations.</p>
+
+  <p>Think of some examples of variables <idx>variable</idx> you've seen in other math classes. What do these variables represent? Probably, the first example that comes to mind is something from an algebra class, such as <m>y=x^2</m> or <m>f(x)=3x+2</m>. You may also think of examples such as solving for <m>x</m> in an expression such as <m>x^2=4</m>. We use variables in mathematical statements to represent quantities that can vary. But we also use them to be more precise. Think of how much more confusing the first statement would be if we had to write it as "a number squared equals another number;" or the second statement, "the function which multiplies a number by 3 and adds 2." When you first learned varables, you probably WERE introduced to them in terms of sentences, but eventually, you got used to what the symbols mean. </p>
+
+  <p>In this class, we will rarely be interested in mathematical equations. We want to move to the common format of mathematical statements often found when describing mathematical defintions or theorems.</p>
+
+  <p> Common forms of mathematical statements:
+    <ul>
+      <li><title>Universal Statements<idx>universal statement</idx></title> <p>We use these statements when a property is true for all things in a set.</p> <p>Example: Every math student takes Calculus.</p>
+      </li>
+      <li><title>Conditional Statements<idx>conditional statement</idx></title>  <p>These statements usually have the form <q>if...then...</q>. </p> <p>Example: If a student majors in Computer Science, then she takes Discrete Math.</p></li>
+      <li><title>Existential Statements<idx>existential statement</idx></title> <p>We use these statements when somthing exists with a particular property.</p> <p>Example: There exists a Linfield class that meets at 9am on Mondays.</p></li>
+    </ul>
+    <p>Many mathematical statements use variables. For example, <m>x+3/2=4</m> is not a statement since it has no truth value. However, if we say, <q>there exists <m>x</m> such that <m>x+3/2=4</m></q> or <q>for all <m>x</m>, <m>x+3/2=4</m></q>, and we know what set <m>x</m> belongs to, then we can decide whether these statements are true or false. </p>
+  </p>
+
+ <activity xml:id="A_statetypes"><title>Each Type</title>
+    <statement>
+      <p>Give an additional example of each type of statement.</p>
+    </statement>
+  </activity>
+
+  </introduction>
+
+<subsection xml:id="SS_quantifiers"><title>Quantified Statements</title>
+
+
+<!--<p>In order to determine whether a statement is true of false, we first need to know the domain.</p>
+
+<definition><statement> <p>The <term>domain</term><idx>domain for a quantified statement</idx> for a quantified statement is the set of possible values for a variable in a quantified statement.</p></statement></definition>
+
+  <example xml:id="E_domainqexist1"><title>Domain and Existential Statements</title>
+    <p>Let <m>D=\mathbb{Z}</m>. Determine whether the statement <q>there exists <m>x\in D</m> such that <m>x+3/2=4</m></q> is true or false.</p>
+    <answer><p>Since <m>x=5/2</m> is the only value satisfying the equation, but <m>x\notin \mathbb{Z}</m>, the statement is false.</p></answer>
+
+    <p>Let <m>D=\mathbb{R}</m>. Determine whether the statement <q>there exists <m>x\in D</m> such that <m>x+3/2=4</m></q> is true or false.</p>
+    <answer><p>Since <m>x=5/2</m> is the only value satisfying the equation, and <m>x\in \mathbb{R}</m>, the statement is true.</p></answer>
+
+    <p>Let <m>D=\{5/2\}</m>. Determine whether the statement <q>there exists <m>x\in D</m> such that <m>x+3/2=4</m></q> is true or false.</p>
+    <answer><p>Since <m>x=5/2</m> is the only value satisfying the equation, and <m>x\in D</m>, the statement is true.</p></answer>
+  </example>
+
+  <example xml:id="E_domainquniversal1"><title>Domain and Universal Statements</title>
+    <p>Let <m>D=\mathbb{Z}</m>. Determine whether the statement <q>for all <m>x\in D</m>, <m>x+3/2=4</m></q> is true or false.</p>
+    <answer><p>Since <m>x=5/2</m> is the only value satisfying the equation, certainly every integer does not satisfy the equation. The statement is false.</p></answer>
+
+    <p>Let <m>D=\mathbb{R}</m>. Determine whether the statement <q>for all <m>x\in D</m>, <m>x+3/2=4</m></q> is true or false.</p>
+    <answer><p>Since <m>x=5/2</m> is the only value satisfying the equation, certainly every real number does not satisfy the equation. The statement is false.</p></answer>
+
+    <p>Let <m>D=\{5/2\}</m>. Determine whether the statement <q>for all <m>x\in D</m>, <m>x+3/2=4</m></q> is true or false.</p>
+    <answer><p>Since <m>x=5/2</m> satisfies the equation, and is the only value in <m>D</m>, the statement is true.</p></answer>
+  </example>-->
+
+  
+
+  <p>We want to be able to work with generic statements, like <m>p</m> and <m>q</m>, but also with variables. So instead of <m>p</m>, we will use <m>P(x)</m>. An expression, <m>P(x)</m>, represents some property or expression about <m>x</m>. We call <m>P(x)</m> the <term>predicate</term><idx>predicate</idx>.</p>
+
+  <example xml:id="E_predicates"><title>Statements with Variables</title>
+    <p>Let <m>D=\mathbb{Z}</m>. Determine whether the statement <q>for all <m>x\in D</m>, <m>x+3/2=4</m></q> is true or false.</p>
+    <answer><p>Since <m>x=5/2</m> is the only value satisfying the equation, certainly every integer does not satisfy the equation. The statement is false.</p></answer>
+
+    <p>Let <m>D=\mathbb{R}</m>. Determine whether the statement <q>for all <m>x\in D</m>, <m>x+3/2=4</m></q> is true or false.</p>
+    <answer><p>Since <m>x=5/2</m> is the only value satisfying the equation, certainly every real number does not satisfy the equation. The statement is false.</p></answer>
+
+    <p>Let <m>D=\{5/2\}</m>. Determine whether the statement <q>for all <m>x\in D</m>, <m>x+3/2=4</m></q> is true or false.</p>
+    <answer><p>Since <m>x=5/2</m> satisfies the equation, and is the only value in <m>D</m>, the statement is true.</p></answer>
+
+  <p>In these examples, <m>P(x)</m> is <m>x+3/2=4</m>.</p>    
+  </example>
+
+  
+
+  <p>Our properties don't just need to be mathematical, though. For example we could have a predicate such as <m>P(x)</m> is <q><m>x</m> is a math major.</q> In this case the set of possible values for <m>x</m> could be the set of students at Linfield, or the set of students in Introduction to Proofs. As we saw in <xref ref="E_predicates" />, it is important that we define our set of interest, as changing the set can change whether the statement is true or false.</p>
+
+  <!--<p>One goal with quantified statements is to be able to decide when they are true.</p>
+
+  <definition><statement> <p>The <term>truth set</term><idx>truth set for a predicate</idx> for a predicate, <m>P(x)</m>, is the set of values for <m>x</m> that make <m>P(x)</m> true.</p></statement></definition>
+
+  <example xml:id="E_truthsets"><title>Finding Truth Sets</title>
+    <p>Find the  truth set for <m>P(x)</m> given by <m>x+3/2=4</m>.</p>
+    <answer><p>Since <m>x=5/2</m> is the only value satisfying the equation, the tuth set is <m>\{5/2\}</m>.</p></answer>
+    <p>Find the  truth set for <m>P(x)</m> given by <m>x</m> is even.</p>
+    <answer><p>The truth set is the set of all even numbers.</p></answer>
+  </example>-->
+
+<assemblage xml:id="B_quantnotation">
+  <title>Notation for Quantifiers</title>
+  <p><ul>
+    <li><title>Universal Quantifier</title><idx>universal quantifier</idx> <m>\forall</m><notation><usage><m>\forall</m></usage><description>for all; universal quantifier</description></notation>, read as <q>for all</q> or  <q>for every.</q> </li>
+    <li><title>Existential Quantifier</title><idx>existential quantifier</idx> <m>\exists</m><notation><usage><m>\exists</m></usage><description>there exists; existential quantifier</description></notation>, read as <q>there exists</q> or  <q>for some.</q> </li>
+  </ul>
+  </p>
+</assemblage>
+  
+
+ 
+  <p>A <term>universal statement</term><idx>universal statement</idx> has the form <m>\forall x\in D, P(x)</m>.</p>
+  <p>To show a universal statement is <alert>true</alert>, you need to show all values in <m>D</m> make <m>P(x)</m> true. If your set is small, you can do this just by showing <m>P(x)</m> is true for each <m>x</m>. If <m>D</m> is infinite, however, we will need more general techniques.</p>
+  <p>To show a universal statement is <alert>false</alert>, you just need to find one value in <m>D</m> which makes <m>P(x)</m> false.</p>
+
+ 
+  <p>An <term>existential statement</term><idx>existential statement</idx> has the form <m>\exists x\in D, P(x)</m>.</p>
+  <p>To show an existential statement is <alert>true</alert>, you just need to find one value in <m>D</m> which makes <m>P(x)</m> true.</p>
+  <p>To show an existential statement is <alert>false</alert>, you need to show all values in <m>D</m> make <m>P(x)</m> false, or no values make it true. If your set is small, you can do this just by showing <m>P(x)</m> is false for each <m>x</m>. If <m>D</m> is infinite, however, we will need more general techniques.</p>
+
+  <activity xml:id="A_existT"><title>True Existential</title><statement><p>Show the following statement is true: <m>\exists x\in \mathbb{R}, 2x^2+1=5</m>.</p></statement></activity>
+  <activity xml:id="A_existF"><title>False Existential</title><statement><p>Show the following statement is false: <m>\exists x\in \mathbb{Z}, 3x+5=6</m>.</p></statement></activity>
+  <activity xml:id="A_universalT"><title>True Universal</title><statement><p>Let <m>D=\{2, 3, 4, 5\}</m>. Show the following statement is true: <m>\forall x\in {D}, x^2>2</m>.</p></statement></activity>
+  <activity xml:id="A_universalF"><title>False Existential</title><statement><p>Let <m>D=\{2, 3, 4, 5\}</m>. Show the following statement is false: <m>\forall x\in D, x^2 &lt; 20</m>.</p></statement></activity>
+  
+  <example xml:id="E_translating"><title>Translating Statements</title>
+    <p>Translate the statement using quantifiers and variables, <q>All positive real numbers have square roots greater than zero.</q></p>
+    <answer><m>\forall x\in \mathbb{R}^+, \sqrt{x}>0.</m></answer>
+
+    <p>Translate the statement using quantifiers and variables, <q>Nobody's perfect.</q></p>
+    <answer><p><m>\forall x\in \{\textrm{people}\}, x</m> is not perfect.</p></answer>
+  </example>
+
+  <activity xml:id="A_formaltrans"><title>Translating a Statement</title><statement><p>Write the following statement formally using quantifiers and variables: Every differentiable function is continuous.</p></statement></activity>
+
+  
+
+  <!--<p>A <term>universal conditional statement</term><idx>universal conditional statement</idx> has the form <q>for all <m>x\in D</m>, if <m>P(x)</m> then <m>Q(x)</m>.</q> In symbols, we can write a universal conditional as <m>\forall x\in D, P(x)\rightarrow Q(x).</m> </p>
+
+  <example xml:id="E_univcond"><title>Universal Conditional Statement</title>
+    <p>Translate the statement using quantifiers and variables, <q>If an integer is even then it is divisible by 2.</q></p>
+    <answer><p>Let <m>P(x)</m> be <q><m>x</m> is even</q> and <m>Q(x)</m> be <q><m>x</m> is divisible by 2.</q> <m>\forall x\in \mathbb{Z}, P(x)\rightarrow Q(x)</m>.</p></answer>
+  </example>
+
+  <activity xml:id="A_transtounivcond"><title>Translating to Universal Conditional</title><statement><p>Write the following statement formally as a universal conditional: Every differentiable function is continuous.</p></statement></activity>-->
+
+  <activity xml:id="A_moretrans"><title>More Translation</title><introduction><p>Write the following statements formally using quantifiers and variables.</p></introduction>
+<task><p>Some even integers are negative.</p></task>
+<task><p>Everyone makes mistakes.</p></task>
+<task><p>Someone will get an A.</p></task>
+</activity>
+
+</subsection>
+
+<subsection xml:id="SS_negquant">
+  <title>Negating Quantified Statements</title>
+
+  <p>In this section we will look at how to negate statements involving quantifiers.</p>
+
+  <!--<p>If you look back at the Check your Understanding questions in the previous section, <xref ref="quantifiersI3-1"/>, you should notice that both <m>\forall x\in D, P(x)</m> and <m>\forall x\in D, \neg P(x)</m> were false, which means they are not negations of each other. Similarly, both <m>\exists x\in D, P(x)</m> and <m>\exists x \in D, \neg P(x)</m> were true. In general, the two statements won't necessarily have the same truth values, but the examples were chosen to make sure we can see that they are not negations of each other.</p>-->
+<assemblage xml:id="B_negquantstatements">
+  <title>Negations of Quantified Statements</title><idx><h>quantifiers</h><h>negation</h></idx>
+<p><ul>
+  <li><p>The negation of <m>\forall x\in D, P(x)</m> is <m>\exists x\in D, \neg P(x)</m>; or
+   <me>\neg(\forall x\in D, P(x))\equiv \exists x\in D, \neg P(x).</me></p></li>
+  <li><p>The negation of <m>\exists x\in D, P(x)</m> is <m>\forall x\in D, \neg P(x)</m>; or
+  <me>\neg(\exists x\in D, P(x))\equiv \forall x\in D, \neg P(x).</me></p></li>
+</ul></p>
+</assemblage>
+
+  <p>We can think of negation as switching the quantifier and negating <m>P(x)</m>, but it will be really helpful if we can understand WHY this is the negation. Thinking about negating a <q>for all</q> statement, we need the statement to not be true for all things, which means it must be false for something, Thus, there exists something making <m>\neg P(x)</m> true. Thinking about negating a <q>there exists</q> statement, we need there not to exist anything making <m>P(x)</m> true, which means <m>P(x)</m> must be false for everything. Thus, everything makes <m>\neg P(x)</m> true.</p>
+
+  <example xml:id="E_negquant1"><title>Negating a Quantified Statement</title>
+    <p>Negate the statement: For all primes <m>p</m>, <m>p</m> is odd. Is this statement true or false?</p>
+    <answer><p>There exist a prime <m>p</m> such that <m>p</m> is not odd. The original statement is false, since we can find an even prime (<m>p=2</m>).</p></answer>
+
+    <p>Negate the statement: There exists a real number <m>x</m>, such that <m>x^2&lt; 0</m>. Is this statement true or false?</p>
+    <answer><p>For all real numbers <m>x</m>, <m>x^2\geq 0</m>. The original statement is false, since the negation is true.</p></answer>
+  </example>
+
+  <activity xml:id="A_simpleneg"><title>Writing Negations</title><introduction><p>Write the negation of the following statements (in English).</p></introduction>
+<task><p>For all integers <m>n</m>, <m>\sqrt{n}</m> is an integer.</p></task>
+<task><p>There exists an integer <m>n</m>, such that <m>n^2=5</m>.</p></task>
+</activity>
+  <p>Many of our quantified statements may have predicates involving other logical connectives. So it is going to be important to remember how to negate "and"s, "or"s, and "if...then"s.</p>
+
+  <p>Reminder, keep in mind the rules we saw in <xref ref="connectives"/> for negating logical statements.</p>
+
+  <assemblage xml:id="B_usefulnegations"><title>Useful Negation Rules</title>
+  <p><ul>
+    <li><title>AND statements</title> <m>\neg(p\wedge q)\equiv \neg p\ \vee \neg q</m>. This is DeMorgan's Law.</li>
+    <li><title>OR statements</title> <m>\neg(p\vee q)\equiv \neg p\ \wedge \neg q</m>. This is DeMorgan's Law.</li>
+    <li><title>IF...THEN statements</title> <m>\neg(p\rightarrow q)\equiv p\ \wedge \neg q</m>. The negation of a conditional is NOT a conditional.</li>
+    <!--<li><title>UNIVERSAL CONDITIONAL statements</title>
+    <md><mrow>\neg(\forall x\in D, P(x)\rightarrow Q(x))&amp;\equiv \exists x\in D \neg(P(x)\rightarrow Q(x))</mrow>
+    <mrow> &amp;\equiv \exists x\in D, P(x)\wedge \neg Q(x)</mrow>
+  </md></li>-->
+  </ul>
+  </p>
+</assemblage>
+
+  <!--<p>Negating a universal conditional statement:</p>
+  <p><me>\neg(\forall x\in D, P(x)\rightarrow Q(x))\equiv \exists x\in D, \neg(P(x)\rightarrow Q(x))\\
+    \equiv \exists x\in D, P(x)\wedge \neg Q(x)</me></p>-->
+
+    <activity xml:id="A_complexneg"><title>More Writing Negations</title><introduction><p>Write the negation of the following statements (in English).</p></introduction>
+<task><p>There exists an integer <m>n</m>, such that <m>1 &lt; n &lt; 2</m>.</p></task>
+<task><p>For all real numbers  <m>x</m>, if <m>x>2</m> then <m>x+5>7</m>.</p></task>
+<task><p>For all functions <m>f</m>, if <m>f</m> is continuous, then <m>f</m> is differentiable.</p></task>
+
+</activity>
+
+  <!--<definition xml:id="D_contrapositiveunivcond"><statement>
+  <p>The universal conditional statement <m>\forall x\in D, P(x)\rightarrow Q(x)</m> has <term>contrapositive</term><idx><h>contrapositive</h><h>universal conditional</h></idx> <m>\forall x\in D, \neg Q(x)\rightarrow \neg P(x)</m>.</p></statement></definition>
+
+<definition xml:id="D_converseunivcond"><statement>
+  <p>The universal conditional statement <m>\forall x\in D, P(x)\rightarrow Q(x)</m> has <term>converse</term><idx><h>converse</h><h>universal conditional</h></idx> <m>\forall x\in D, Q(x)\rightarrow P(x)</m>.</p></statement></definition>
+
+  <activity xml:id="A_contrapos1"><title>Writing Contrapositives</title><introduction><p>Consider the statement <q>For all real numbers  <m>x</m>, if <m>(x+1)(x-2)>0</m> then <m>x &lt; -1</m> or <m>x>2</m>.</q></p></introduction>
+  <task><p>Write the negation of the statement.</p></task>
+  <task><p>Write the contrapositive of the statement.</p></task>
+</activity>
+
+ <activity xml:id="A_contrapos2"><title>More Writing Contrapositives</title><introduction><p>Consider the statement <q>For all integers  <m>n</m>, if <m>n</m> has a factor of 15, then <m>n</m> has a factor of 3 and <m>n</m> has a factor of 5.</q></p></introduction>
+  <task><p>Write the negation of the statement.</p></task>
+  <task><p>Write the contrapositive of the statement.</p></task>
+</activity>-->
+  
+  <p>The relationship between <q>for all</q> and <q>there exists</q> can be used to show some surprising things. In particular, what happens if our domain, <m>D</m>, has nothing in it? Let <m>D=\emptyset</m>, the empty set. Is <m>\forall x\in D, P(x)</m> true or false? Well, let's look at the negation: <m>\exists x\in D, \neg P(x)</m>. Now the negation MUST be false since <m>D</m> has nothing in it, so there can't exist something in <m>D</m> making <m>\neg P(x)</m> true. Since the negation is false, the original statement is true! We say <m>\forall x\in D, P(x)</m> is <term>vacuously</term><idx>vacuously true statement</idx> true. </p>
+
+
+  <example xml:id="E_vacuouslytrue"><title>Vacuously True Statement</title>
+    <p>Consider the statement <q>For all turtles, <m>T</m>, in Intro to Proofs, <m>T</m> is getting an A.</q> The negation is <q>There exists a turtle, <m>T</m>, in Intro to Proofs, such that  <m>T</m> is not getting an A.</q> Since no such turtle exists, the negation is false. Making the original true. So every turtle in Intro to Proofs is getting an A.</p>
+  </example>
+
+  <p>As one additional note, it can be helpful in deciding if your negation is correct to find the truth value of both the original and the negation. They should have opposite values. Similarly, if you need to determine the truth value of a complex statement, it might be easier to find the truth value of the negation.</p>
+
+  <activity xml:id="A_TFquant"><title>True or False</title><introduction><p>Determine if each of the following statements are true or false. It may be helpful to look at the negations you founds in the above activities, <xref ref="A_simpleneg" />, <xref ref="A_complexneg" />, <xref ref="A_contrapos1" />, and <xref ref="A_contrapos2" />.</p></introduction>
+  <task><p>For all integers <m>n</m>, <m>\sqrt{n}</m> is an integer.</p></task>
+  <task><p>There exists an integer <m>n</m>, such that <m>n^2=5</m>.</p></task>
+  <task><p>There exists an integer <m>n</m>, such that <m>1 &lt; n &lt; 2</m>.</p></task>
+  <task><p>For all real numbers  <m>x</m>, if <m>x>2</m> then <m>x+5>7</m>.</p></task>
+  <task><p>For all functions <m>f</m>, if <m>f</m> is continuous, then <m>f</m> is differentiable.</p></task>
+  <task><p>For all real numbers  <m>x</m>, if <m>(x+1)(x-2)>0</m> then <m>x &lt; -1</m> or <m>x>2</m>.</p></task>
+  <task><p>For all integers  <m>n</m>, if <m>n</m> has a factor of 15, then <m>n</m> has a factor of 3 and <m>n</m> has a factor of 5.</p></task>
+
+
+</activity>
+
+</subsection>
+
+<subsection xml:is="SS_multiquant"><title>Multiple Quantifiers</title>
+
+  <p>Many statements in mathematics involve multple quantifiers. For example, <q>For all real numbers <m>x</m>, there exists a real number <m>y</m> with <m>x+y=0</m>.</q> These statements, though frequent in math courses, represent some of the most complicated types of statements to understand. In this section we will try to understand the general structure of such statements.</p>
+
+<p>Let's look at the various ways we could have statements with two quantifiers. Since we have two quantifiers, we will have two variables. Thus, our predicate will now involve both variables. We can use the notation <m>P(x, y)</m> to mean a statement about <m>x</m> and <m>y</m>.</p>
+
+<ul>
+  <li><p><m>\forall x\in D, \exists y\in E, P(x, y)</m>.</p>
+  <p>This means we can find a <m>y</m> in <m>E</m> that makes <m>P(x, y)</m> true for each <m>x</m> in <m>D</m>. In such statements <m>y</m> will often depend on <m>x</m>.</p>
+  </li>
+  <li><p><m>\exists x\in D, \forall y\in E, P(x, y)</m>.</p>
+  <p>The order of the quantifiers matters. This means we can find a SINGLE <m>x</m> in <m>D</m> that makes <m>P(x, y)</m> true for every <m>y</m> in <m>E</m>. In such statements <m>x</m> does not depend on <m>y</m>. The same <m>x</m> must work for all the <m>y</m>'s.</p>
+  </li>
+  <li><p><m>\forall x\in D, \forall y\in E, P(x, y)</m>.</p>
+  <p>This means <m>P(x, y)</m> is true for all <m>x\in D</m> and for all <m>y\in E</m>.</p>
+  </li>
+  <li><p><m>\exists x\in D, \exists y\in E, P(x, y)</m>.</p>
+  <p>This means <m>P(x, y)</m> is true for for at least one <m>x\in D</m> and at least one <m>y\in E</m>.</p>
+  </li>
+</ul>
+
+  <example xml:id="E_multquant1"><title>Statements with Multiple Quantifiers</title>
+    <p>Let <m>x, y\in\mathbb{R}</m>. Determine whether the following statements are true or false.
+    <ol marker="a">
+    <li><me>\forall x, \exists y, x+y=5.</me>
+    <p>For any <m>x</m> can you always find a corresponding <m>y</m> with <m>x+y=5</m>? </p>
+    <answer><p>Yes, for each <m>x</m> let <m>y=5-x</m>. So the statement is true.</p></answer></li>
+    <li><me>\exists x, \forall y, x+y=5.</me>
+    <p>Is there a single <m>x</m> that works for all <m>y</m>? </p>
+    <answer><p>No, no single <m>x</m> will always have <m>x+y=5</m>. So the statement is false.</p></answer></li>
+    </ol>
+    </p>  
+  </example>
+
+
+
+  <activity><introduction><p>Let <m>x, y\in \mathbb{Z}^{nonneg}</m>. Determine if each statement is true or false. Give a reason for your answer.</p></introduction>
+
+    <task><p><m>\forall x\ \exists y, x &lt; y</m>.</p></task>
+    <task><p><m>\exists y\ \forall x, x &lt; y</m>.</p></task>
+    <task><p><m>\exists x\ \forall y, x &lt; y</m>.</p></task>
+    <task><p><m>\forall y\ \exists x, x &lt; y</m>.</p></task>
+    <task><p><m>\exists x\ \exists y, x &lt; y</m>.</p></task>
+    <task><p><m>\forall x\ \forall y, x &lt; y</m>.</p></task>
+  </activity>
+
+  <p>Although we won't study the mathematical context of the following example in this class, it is a classic example in mathematics of a statement with multiple quantifiers and a conditional. It is so important that it is the subject of one set of math bike racks in front of Taylor Hall!</p>
+
+  <example xml:id="E_deflimit"><title>Definition of a Limit</title>
+    <p>The definition of the limit of a function: For every <m>\epsilon>0</m>, there exists a <m>\delta>0</m> such that if <m>|x-a|&lt;\delta</m> then <m>|f(x)-L|&lt;\epsilon</m>. Or in symbols, <me>\forall\epsilon>0, \exists\delta>0, |x-a|&lt;\delta\rightarrow |f(x)-L|&lt;\epsilon</me>.</p>
+  </example>
+
+  <p>Now, we want to be able to negate statements with multiple quantifiers. There is nothing really new here, we just negate our quantified statements as we did for single quantifiers.</p>
+
+<assemblage xml:id="B_negmultquant">
+ <title>Negating Statements with Multiple Quantifiers:</title><idx><h>quantifiers</h><h>negation</h></idx>
+
+  <p>
+    <ul>
+      <li><p>The negation of <m>\forall x\in D, \exists y\in E, P(x, y)</m> is <m>\exists x\in D, \forall y\in E, \neg P(x, y)</m>;or <me>\neg(\forall x\in D, \exists y\in E, P(x, y))\equiv \exists x\in D, \forall y\in E, \neg P(x, y).</me></p></li>
+
+      <li><p>The negation of <m>\exists x\in D, \forall y\in E, P(x, y)</m> is <m>\forall x\in D, \exists y\in E, \neg P(x, y)</m>; or <me>\neg(\exists x\in D, \forall y\in E, P(x, y))\equiv \forall x\in D, \exists y\in E, \neg P(x, y).</me></p></li>
+
+      <li><p>The negation of <m>\forall x\in D, \forall y\in E, P(x, y)</m> is <m>\exists x\in D, \exists y\in E, \neg P(x, y)</m>; or <me>\neg(\forall x\in D, \forall y\in E, P(x, y))\equiv \exists x\in D, \exists y\in E, \neg P(x, y).</me></p></li>
+
+      <li><p>The negation of <m>\exists x\in D, \exists y\in E, P(x, y)</m> is <m>\forall x\in D, \forall y\in E, \neg P(x, y)</m>; or <me>\neg(\exists x\in D, \exists y\in E, P(x, y))\equiv \forall x\in D, \forall y\in E, \neg P(x, y).</me></p></li>
+    </ul>
+  </p>
+</assemblage>
+
+  <example xml:id="E_negdeflimit"><title>Negating the Definition of a Limit</title>
+    <p>If you take Elementary Analysis, you will need to be able to negate the definition of the limit from <xref ref="E_deflimit"/>. Negate <q>For every <m>\epsilon>0</m>, there exists a <m>\delta>0</m> such that if <m>|x-a|&lt;\delta</m> then <m>|f(x)-L|&lt;\epsilon</m></q>. Our statement has the form <m>\forall \epsilon, \exists \delta, P(\delta)\rightarrow Q(\epsilon)</m>, so the negation has the form <m>\exists \epsilon, \forall \delta, P(\delta)\wedge \neg Q(\epsilon).</m></p>
+    <answer><m>\exists\epsilon>0, \forall\delta>0, |x-a|&lt;\delta\wedge |f(x)-L|\geq\epsilon</m>.</answer>
+  </example>
+
+  <activity xml:id="A_negmultquant"><title>Negating Statements with Multiple Quantifiers</title><introduction><p>Write the negation of the following statements. Then determine whether the original statment is true or false.</p></introduction>
+    <task><p>There exists an integer <m>n</m> such that for all integers <m>m,\ nm=0</m>.</p></task>
+    <task><p>For every integer <m>n</m> there exists an integer <m>m</m> such that <m>nm=0</m>.</p></task>
+    <task><p>There exists an integer <m>n</m> such that for all integers <m>m,\ n+m=0</m>.</p></task>
+    <task><p>For every integer <m>n</m> there exists an integer <m>m</m> such that <m>n+m=0</m>.</p></task>
+</activity>
+
+
+  <example xml:id="E_translatingmult"><title>Translating Statements with Multiple Quantifiers</title>
+    <p>Let <m>L(x, y)</m> be <q><m>x</m> loves <m>y</m></q>. Translate each of the following statements using quantifiers and variables.</p>
+    <p>Someone loves everyone.</p>
+    <answer><m>\exists x, \forall y, L(x, y).</m></answer>
+    <p>Someone is loved by everyone.</p>
+    <answer><m>\exists x, \forall y, L(y, x).</m></answer>
+    <p>Everyone loves someone.</p>
+    <answer><m>\forall x, \exists y, L(x, y).</m></answer>
+    <p>Everyone is loved by someone.</p>
+    <answer><m>\forall x, \exists y, L(y, x).</m></answer>
+    
+  </example>
+
+   <!-- <reading-questions>
+      <title>Check Your Understanding</title>
+      <p>Let <m>D=\mathbb{Z}</m>. Let <m>P(x)</m> be <q><m>x^2</m> is even.</q> Determine whether each of the following statements are true or false.</p>
+      <exercise><statement><p><m>\forall x\in D, P(x).</m></p></statement>
+      <answer>False. It is not true that every square is even. For example, <m>3^2=9</m> is odd.</answer></exercise>
+
+      <exercise><statement><p><m>\exists x\in D, P(x).</m></p></statement>
+      <answer>True. For example, <m>2^2=4</m> is even.</answer></exercise>
+
+      <exercise><statement><p><m>\forall x\in D, \neg P(x).</m></p></statement>
+      <answer>False. It is not true that every square is not even.</answer></exercise>
+
+      <exercise><statement><p><m>\exists x\in D, \neg P(x).</m></p></statement>
+      <answer>True. There exists a square which is not even.</answer></exercise>
+
+      <exercise><statement><p><m>\neg(\forall x\in D, P(x)).</m></p></statement>
+      <answer>True. This is the negation of (1), so must be true.</answer></exercise>
+
+      
+
+    </reading-questions>-->
+
+    <exercises>
+     <!-- <exercise><statement><p>Let <m>P(x)</m> be the predicate <q><m>x&gt;1/x</m>.</q></p>
+      <ol marker="a">
+        <li><p>Write <m>P(2), P(1/2), P(-1), P(-1/2)</m>, and <m>P(-8)</m>. Indicate which of these is true and which is false.</p></li>
+        <li>
+      <p>
+    Let the domain be the set <m>\mathbb{R}</m>. Find the truth set of <m>P(x)</m>.</p>
+    </li>
+
+    <li>
+      <p>
+    Let the domain be the set <m>\mathbb{R}^+</m> of all positive real numbers. Find the truth set of <m>P(x)</m>.
+  </p>
+    </li>
+      </ol>
+
+    </statement></exercise>
+
+    <exercise><statement><p>
+    Let <m>Q(x, y)</m> be the predicate <q>If <m>x&lt;y</m> then <m>x^2&lt;y^2</m></q> with domain for both <m>x</m> and <m>y</m> being <m>\mathbb{R}</m>.
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    Explain why <m>Q(x, y)</m> is false if <m>x=-4</m> and <m>y=2</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Give values different from those in part (a) for which <m>Q(x, y)</m> is false.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Explain why <m>Q(x, y)</m> is true if <m>x=2</m> and <m>y=4</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Give values different from those in part (c) for which <m>Q(x, y)</m> is true.
+  </p>
+    </li>
+
+  </ol></statement></exercise>-->
+
+  <exercise><statement><p>
+    Give an example to show the following statement is false.
+  </p>
+
+  <p>
+    <me>\forall a \in \mathbb{Z}, (a-1)/a \text{ is not an integer.}</me>
+  </p></statement></exercise>
+  <exercise><statement><p>
+    Give an example to show the following statement is false.
+  </p>
+
+  <p>
+    <me>\forall a \text{ real numbers } x \text{ and } y, \sqrt{x+y}=\sqrt{x}+\sqrt{y}</me>
+  </p></statement></exercise>
+  <exercise><statement>
+    <p>
+    Consider the statement <me>\exists x\in \mathbb{R} \text{ such that } x^2=2.</me> Which of the following are equivalent ways of expressing this statement?
+  </p>
+
+  <ol marker="a">
+     <li>
+      <p>
+    There is at least one real number whose square is 2.
+  </p>
+    </li>
+    <li>
+      <p>
+    The square of each real number is 2.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Some real numbers have square 2.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    The number <m>x</m> has square 2, for some real number <m>x</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    If <m>x</m> is a real number, then <m>x^2=2</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Some real number has square 2.
+  </p>
+    </li>
+</ol>
+  </statement></exercise>
+  <exercise><statement>
+    <p>
+    Consider the statement <me>\forall n\in \mathbb{Z} \text{ if } n^2 \text{ is even then } n \text{ is even}.</me> Which of the following are equivalent ways of expressing this statement?
+  </p>
+
+  <ol marker="a">
+     <li>
+      <p>
+    If the square of an integer is even, then that integer is even
+  </p>
+    </li>
+    <li>
+      <p>
+    All integers have even squares and are even.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Given any integer whose square is even, that integer is itself even.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    For all integers, there are some whose square is even.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Any integer with an even square is even.
+  </p>
+    </li>
+
+   
+
+    <li>
+      <p>
+    All even integers have even squares.
+  </p>
+    </li>
+
+  </ol>
+  </statement></exercise>
+  <exercise><statement>
+    <p>
+    Rewrite the following statements using the form <q><m>\forall</m>____<m>x</m>,____.</q>
+  </p>
+  <ol marker="a">
+    <li>
+      <p>
+    Every real number is positive, negative, or zero.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    No irrational numbers are integers.
+  </p>
+    </li>
+
+  </ol>
+  </statement></exercise>
+ <!-- <exercise><statement><p>
+    Let <m>D</m> be the set of all students at Linfield University, and let <m>M(s)</m> be <q><m>s</m> is a math major,</q> let <m>C(s)</m> be <q><m>s</m> is a computer science major,</q> and let <m>P(s)</m> be <q><m>s</m> is a physics major.</q> Express each of the following statements using quantifiers, variables, and the predicates <m>M(s), C(s), P(s)</m>.
+  </p>
+  <ol>
+    <li>
+      <p>
+    There is a physics major who is a math major.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Every computer science major is a math major.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    No computer science majors are physics majors.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Some computer science majors are also math majors.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Some computer science majors are physics majors and some are not.
+  </p>
+    </li>
+
+  </ol></statement></exercise>-->
+  <!--<exercise><statement><p>
+    Let <m>\mathbb{R}</m> be the set of possible values for the variable <m>x</m>. Which of the following are true and which are false? Give counter examples for the statements that are false.
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    If <m>x&gt;2</m> then <m>x&gt;1</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    If <m>x&gt;2</m> then <m>x^2&gt;4</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    If <m>x^2&gt;4</m> then <m>x&gt;2</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    If <m>x^2&gt;4</m> then <m>|x|&gt;2</m>.
+  </p>
+    </li>
+
+  </ol></statement></exercise>
+  <exercise><statement><p>
+    Let the domain of <m>x</m> be the set <m>D</m> of objects discussed in mathematics courses, and let Real(<m>x</m>) be <q><m>x</m> is a real number,</q> Pos(<m>x</m>) be <q><m>x</m> is a positive real number,</q> Neg(<m>x</m>) be <q><m>x</m> is a negative real number,</q> and Int(<m>x</m>) be <q><m>x</m> is an integer.</q> Rewrite each statement without using quantifiers or variables. Indicate which statements are true and which are false. 
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    Pos(0)
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>\forall x</m>, Real(<m>x</m>) <m>\wedge</m> Neg(<m>x</m>) <m>\rightarrow</m> Pos(<m>-x</m>).
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>\forall x</m>, Int(<m>x</m>) <m>\rightarrow</m> Real(<m>x</m>).
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>\exists x</m> such that Real(<m>x</m>) <m>\wedge</m> <m>\neg</m>Int(<m>x</m>).
+  </p>
+    </li>
+
+  </ol></statement></exercise>-->
+ 
+
+      <exercise><statement>
+        <p>
+    Rewrite the statement in English without using the symbols <m>\forall</m> or <m>\exists</m>. Express your answer as simply as possible. Then write a negation for the statement. Determine which statement is true, the original or the negation.
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    <m>\exists</m> a book <m>b</m>, <m>\forall</m> people <m>p</m>, <m>p</m> has read <m>b</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>\forall</m> odd integers <m>n</m>, <m>\exists</m> an integer <m>k</m> such that <m>n=2k+1</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>\forall r \in \mathbb{Q}</m>, <m>\exists</m> integers <m>a</m> and <m>b</m> such that <m>r=a/b</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>\forall x \in \mathbb{R}</m>, <m>\exists y\in \mathbb{R}</m> such that <m>x+y=0</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>\exists x \in \mathbb{R}</m>, <m>\forall y\in \mathbb{R}</m>, <m>x+y=0</m>.
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Rewrite the statement formally using quantifiers and variables. Write the negation of the statement.
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    Everybody trusts somebody.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Somebody trusts everybody.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Any even integer equals twice some other integer.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    The number of rows in any truth-table is <m>2^n</m> for some integer <m>n</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    There is a prime number between every integer and its double.
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    For each statement write a new statement by interchanging the symbols <m>\forall</m> and <m>\exists</m>. Which is true– the given statement, the interchanged version, neither, or both?
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    <m>\forall x\in \mathbb{R}</m>, <m>\exists y\in \mathbb{R}</m> such that <m>x&lt;y</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>\exists x\in \mathbb{R}</m>, <m>\forall y \in \mathbb{R}^-</m> (the set of negative real numbers), <m>x&lt;y</m>.
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+
+      <exercise><statement>
+        <p>
+    Consider the following sequence of digits: 2300204. A person claims that all of the 1’s in the sequence are to the left of all of the 0’s in the sequence. Is this true? Justify your answer.
+  </p>
+      </statement><hint><p>Write the claim formally and write a formal negation for it. Is the negation true or false?</p></hint></exercise>
+    
+  </exercises>
+
+
+</subsection>
+
+</section>

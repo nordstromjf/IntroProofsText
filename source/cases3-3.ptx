@@ -1,0 +1,241 @@
+<section xml:id="cases">
+  <title>Proof by Cases</title><idx><h>proof</h><h>by cases</h></idx>
+
+  <p>In this section we will learn another proof technique, proof by cases. We will also see an important theorem that can be useful for proof by cases, the Division Algorithm.</p>
+
+  <p><term>Proof by cases</term><idx>proof by cases</idx> is used for statements of the form for all <m>x\in D, P(x)</m>, where the set <m>D</m> can be broken into smaller sets. For example, a statement might be easier to prove for even numbers and odd numbers separately, rather than more general integers.</p>
+
+  <p>Every truth table represents all possible cases of true and false for a logical statement. For example, when you use a truth table to determine if an argument is valid, you are really using proof by cases.</p>
+
+<assemblage xml:id="B_cases">
+  <title>Proof by Cases</title><idx><h>proof</h><h>by cases</h></idx>
+
+  <p>To prove for all <m>x\in D, P(x)</m> by cases, break <m>D</m> into smaller subsets. Each subset represents a case. Then each case is proven separately. Make sure you state each case, each subset, clearly.</p>
+
+  <p>If <m>D=D_1\cup D_2</m>,
+    <ul><li><title>Case 1</title> Let <m>x\in D_1</m>, Prove <m>P(x)</m>.</li>
+    <li><title>Case 2</title> Let <m>x\in D_2</m>, Prove <m>P(x)</m>.</li>
+    </ul>
+  </p>
+
+
+  <p>Important: in choosing your subsets, make sure you cover all the elements of <m>D</m>. You can have as many cases as necessary.</p>
+  </assemblage>
+
+  <example xml:id="E_casesconsec"><title> Proof by Cases</title>
+<p>Prove given any two consecutive integers, one is even and one is odd.</p>
+
+<proof><p>Let <m>n</m> and <m>n+1</m> be consecutive integers. </p>
+
+<p>Case 1: Let <m>n</m> be even. Then <m>n=2k</m> for some <m>k\in\mathbb{Z}</m>. Then 
+<m>n+1=2k+1</m>  for <m>k\in\mathbb{Z}</m>. Hence <m>n+1</m> is odd.</p>
+ 
+
+<p>Case 2: Let <m>n</m> be odd. Then <m>n=2k+1</m> for some <m>k\in\mathbb{Z}</m>. Then 
+<m>n+1=2k+2=2(k+1)</m>  for <m>k+1\in\mathbb{Z}</m>. Hence <m>n+1</m> is even.</p>
+
+<p>Thus, for any two consecutive integers, one is even and one is odd. </p></proof>
+
+</example>
+
+
+
+
+
+<activity xml:id="A_twocases"><title>Practice with Proof by Cases</title><statement><p>Prove for every integer <m>n</m>, <m>n^2+n</m> is even.</p></statement></activity>
+
+<activity xml:id="A_absvalue"><statement><title>Absolute Value</title><p>Recall the absolute value function is defined as
+<me>|x|=
+\begin{cases}
+x, \amp\text{if $x\geq 0$;}\\
+-x \amp\text{if $x&lt;0$.}
+\end{cases}</me>
+Prove for all <m>x\in \mathbb{R}</m>, <m>|x|=|-x|</m>.
+What would appropriate cases be?</p></statement></activity>
+
+<activity xml:id="A_fourcases"><statement><title>More than Two Cases</title><p>Prove for all integers <m>m</m> and  <m>n</m>, <m>m+n</m> and <m>m-n</m> are either both even or both odd. </p></statement><hint><p>There are four cases, depending on whether <m>m</m> and <m>n</m> are even or odd.</p></hint></activity>
+
+<p>The next theorem gives us an example of proof by cases, where the cases involve prime and compsite numbers. Although the theorem may seem like a well-known fact, the proof is not entirely simple.</p>
+
+<theorem xml:id="T_divbyprime"><statement>Any integer <m>n>1</m> is divisible by a prime.</statement></theorem>
+<proof><p>We will divide this proof into two cases, where <m>n</m> is prime and where <m>n</m> is composite.</p>
+<p>
+  Case 1: <m>n</m> is prime. We can see that <m>n\mid n</m>. Since <n>n</n> is prime, <m>n</m> is divisible by a prime.
+</p>
+
+<p>Case 2: <m>n</m> is composite. Then <m>n=r_0s_0</m> where <m>1&lt; r_0 &lt; n</m>, and <m>r_0, s_0\in \mathbb{Z}</m>. If <m>r_0</m> is prime, then <m>n</m> is divisible by a prime.</p>
+<p>If <m>r_0</m> is not prime, then <m>r_0=r_1s_1</m> where <m>1&lt; r_1 &lt; r_0</m>, and <m>r_1, s_1\in \mathbb{Z}</m>. If <m>r_1</m> is prime, then <m>n=r_1s_1s_0</m> and <m>n</m> is divisible by a prime.</p>
+<p>Similarly, if <m>r_1</m> is not prime, then <m>r_1=r_2s_2</m> where <m>1&lt; r_2 &lt; r_1 &lt; r_0</m>, and <m>r_2, s_2\in \mathbb{Z}</m>, etc.</p>
+
+<p>We can keep applying this process to get <m>n=r_ks_k\cdots s_0</m> with <m>1&lt; r_k &lt;\cdots&lt; r_1 &lt; r_0</m>, and <m>r_k, s_k\in \mathbb{Z}</m>.</p>
+
+<p>If at any point <m>r_k</m> is prime, then we are done, as we have found a prime divisor of <m>n</m>. We know that there cannot be infinitely many non-prime <m>r_k</m> since there are only finitely many integers between 1 and <m>n</m>. Thus, the process must terminate with a prime divisor of <m>n</m>. Hence, every integer is divisible by a prime.</p>
+
+</proof>
+
+  <p>In <xref ref="moredirect"/>, we looked at the idea of divisibility. Remember, this is a relationship between two integers, not actual division. We will continue to focus on integers. One of the issues with division of integers is that if you divide two integers, you no longer necessarily have an integer. So what if the only numbers we are allowed to use are integers? Can we still somehow think of division? Well, yes. This is, in fact, how you were probably introduced to division long ago. When you were first learning arithmetic you only knew about integers (probably only positive integers).</p>
+
+  <p>Suppose you want to divide 15 by 5. This is easy, <m>15\div 5=3</m>. But what if you want to divide 15 by 6? Now 6 does not "go evenly" into 10 (in other words, 6 does not divide 10). In this case, we get a remainder. In particular, 6 <q>goes into</q> 15 two times with a remainder of 3. Or, <m>15\div 6</m> has quotient 2 and remainder 3. </p>
+
+  <p>OK, we want to formalize this idea of division, making sure we are only using integers. We know 5 divides 15, since <m>15=5(3)</m>. Can we do the same sort of thing for 15 and 6? Almost. In this case, <m>15=6(2)+3</m>. </p>
+
+  <p>In general, given any integers <m>n, d</m> with <m>d\neq 0</m>, we can find integers <m>q, r</m> with <m>n=dq+r</m>. In general, <m>q, r</m> are not unique: <m>15=6(1)+9</m>, or <m>15=6(-2)+27</m> or <m>15=6(3)-3</m>, for example. But as we noted, we want to think of <m>r</m> as the remainder. If we are more specific about conditions on the remainder, then <m>q</m> and <m>r</m> are unique.</p>
+
+  <theorem xml:id="T_divisionalgorthm"><title>The Division Algorithm</title><idx><h>Division Algorithm</h></idx><statement><p>Given any integer <m>n</m> and any positive integer <m>d</m>, there exist unique integers <m>q, r</m> such that <m>n=dq+r</m> and <m>0\leq r &lt; d</m>.</p></statement></theorem>
+
+  <p>We say <m>q</m> is the <term>quotient</term><idx>quotient</idx> and <m>r</m> is the <term>remainder</term><idx>remainder</idx> when <m>n</m> is divided by <m>d</m>.</p>
+
+  <p>We will see the proof later, in <xref ref="existunique"/></p>
+
+  <p>Although this theorem is usually called the Division Algorithm, <idx><h>Division Algorithm</h></idx> the name can be confusing. In particular, the Division Algorithm is not really an algorithm.</p>
+
+  <p>Some important observations: the remainder MUST be nonnegative. It can be 0. This is what happens when <m>d\mid n</m>. Although <m>n</m> can be ANY integer, we will limit <m>d</m> to being positive. The Division Algorithm can be extended to any <m>d\neq 0</m>, but we will just need <m>d>0</m> in this class.</p>
+
+  <example xml:id="E_divalgform"><title>Finding Quotients and Remainders</title>
+  <p>
+    Let <m>n=15, d=7</m>, Find the quotient and remainder <m>q, r</m>.</p>
+    <answer><m>15=7(2)+1; q=2, r=1</m></answer>
+
+    <p>
+    Let <m>n=28, d=7</m>, Find the quotient and remainder <m>q, r</m>.</p>
+    <answer><m>28=7(4)+0; q=4, r=0</m></answer>
+
+    <p>
+    Let <m>n=9, d=12</m>, Find the quotient and remainder <m>q, r</m>.</p>
+    <answer><m>9=12(0)+9; q=0, r=9</m></answer>
+
+    <p>
+    Let <m>n=-17, d=5</m>, Find the quotient and remainder <m>q, r</m>.</p>
+    <answer><m>-17=5(-4)+3; q=-4, r=3</m></answer>
+
+    <p>
+    Let <m>n=0, d=7</m>, Find the quotient and remainder <m>q, r</m>.</p>
+    <answer><m>0=7(0)+0; q=0, r=0</m></answer>
+
+  </example>
+
+  <activity xml:id="A_qrpractice"><title>Quotients and Remainders</title><introduction><p>For the given <m>n</m> and <m>d</m>, find <m>q</m> and <m>r</m> as in the Division Algorithm.</p></introduction>
+<task><p><m>n=20</m> and <m>d=8</m></p></task>
+<task><p><m>n=45</m> and <m>d=9</m></p></task>
+<task><p><m>n=8</m> and <m>d=12</m></p></task>
+<task><p><m>n=-15</m> and <m>d=7</m></p></task>
+</activity>
+
+  <p>We can use the Division Algorithm to find <term>representations of the integers</term>.</p>
+
+  <p>For example, if we let <m>d=2</m>, what are the possible remainders? In this case, <m>r=0</m> or <m>r=1</m>. Thus, there are two possible forms for <m>n</m>: <m>n=2q+0</m> or <m>n=2q+1</m>. We see that these are the two forms corresponding to <m>n</m> being even or odd. Now, as a corollary of the Division Algorithm, we have that every integer must be even or odd.</p>
+
+  <p>We can use the Division Algorithm to get other forms, as well. For example, if <m>d=4</m>, the possible forms are <m>n=4q+0, n=4q+1, n=4q+2</m> or <m>n=4q+3</m>. We can use these forms to get different <term>cases</term> for the integers.</p>
+
+  
+
+  <example xml:id="E_morecases"><title>More Cases</title>
+<p>Prove that the square of any odd integer has the form <m>8m+1</m> for some <m>m\in \mathbb{Z}</m>.</p>
+<p>First let's try to just prove this directly.</p>
+<p>Let <m>n</m> be odd. Then <m>n=2k+1, k\in\mathbb{Z}</m>. Thus, <m>n^2=(2k+1)^2=4k^2+4k+1</m>. It is not clear this has the form <m>8m+1</m>. If we try using some cases, we may get a bit more to work with. We know any integer has the form <m>4k, 4k+1, 4k+2,</m> or <m>4k+3</m>. But only <m>4k+1</m> and <m>4k+3</m> are odd.</p>
+<proof><p>Let <m>n</m> be odd. </p>
+
+<p>Case 1: Let <m>n=4k+1</m> for some <m>k\in\mathbb{Z}</m>. Then 
+<md><mrow>n^2&amp;=(4k+1)^2</mrow>
+<mrow>&amp;=16k^2+8k+1</mrow>
+<mrow>&amp;=8(2k^2+k)+1</mrow></md> 
+for some <m>2k^2+k\in\mathbb{Z}</m>. Let <m>m=2k^2+k</m>. Then <m>n</m> has the form <m>8m+1, m\in \mathbb{Z}</m>.</p> 
+
+<p>Case 2: Let <m>n=4k+3</m> for some <m>k\in\mathbb{Z}</m>. Then 
+<md><mrow>n^2&amp;=(4k+3)^2</mrow>
+<mrow>&amp;=16k^2+24k+9</mrow>
+<mrow>&amp;=8(2k^2+3k)+9</mrow>
+<mrow>&amp;=8(2k^2+3k)+8+1</mrow>
+<mrow>&amp;=8(2k^2+3k+1)+1</mrow></md> 
+for some <m>2k^2+3k+1\in\mathbb{Z}</m>. Let <m>m=2k^2+3k+1</m>. Then <m>n</m> has the form <m>8m+1, m\in \mathbb{Z}</m>.</p> 
+
+<p>Thus, any odd integer has the form <m>8m+1</m>. </p></proof>
+
+<p>Note, what this theorem really says is that the square of an odd integer must have remainder 1 when divided by 8. That might be a little surprising.</p>
+</example>
+
+
+<activity xml:id="A_casesfor3"><title>Dividing by 3</title><statement><p>Use the Division Algorithm to find the possible forms of an integer when <m>d=3</m>. </p></statement><hint>What are the possible values for <m>r</m>?</hint></activity>
+
+<activity xml:id="A_consec3"><title>Consecutive Integers</title><statement><p>Prove the product of any two consecutive integers has the form <m>3k</m> or <m>3k+2</m> for some integer <m>k</m>.</p></statement><hint>Use the cases in <xref ref="A_casesfor3" />.</hint></activity>
+
+
+    <!--<reading-questions>
+      <title>Check Your Understanding</title>
+      
+      <exercise><statement><p>Find the quotient and remainder if <m>n=34, d=6</m>.</p></statement>
+      <answer><m>34=6(5)+4</m>; quotient: 5; remainder: 4</answer></exercise>
+
+      <exercise><statement><p>Find the quotient and remainder if <m>n=34, d=2</m>.</p></statement>
+      <answer><m>34=2(17)+0</m>; quotient: 17; remainder: 0</answer></exercise>
+
+      <exercise><statement><p>Find the quotient and remainder if <m>n=-34, d=6</m>.</p></statement>
+      <answer><m>-34=6(-6)+2</m>; quotient: -6; remainder: 2</answer></exercise>
+
+      <exercise><statement><p>Find the quotient and remainder if <m>n=4, d=10</m>.</p></statement>
+      <answer><m>4=10(0)+4</m>; quotient: 0; remainder: 4</answer></exercise>
+
+      <exercise><statement><p>Find the quotient and remainder if <m>n=-40, d=12</m>.</p></statement>
+      <answer><m>-40=12(-4)+8</m>; quotient: -4; remainder: 8</answer></exercise>
+
+      <exercise><statement><p>Review: Give the negation of <m>\forall x\in D, P(x)\rightarrow Q(x)</m>.</p></statement>
+      <answer><m>\exists x\in D, P(x)\wedge \sim Q(x)</m></answer></exercise>
+
+      <exercise><statement><p>Review: Give the contrapositive of <m>\forall x\in D, P(x)\rightarrow Q(x)</m>.</p></statement>
+      <answer><m>\forall x\in D, \sim Q(x)\rightarrow \sim P(x)</m></answer></exercise>
+
+    </reading-questions>-->
+    <exercises>
+    <exercise><statement>
+      <p> For the given <m>n</m> and <m>d</m>, find <m>q</m> and <m>r</m> such that <m>n=dq+r</m> with <m>0\leq r&lt;d</m> (as in the Division Algorithm).</p>
+      <ol marker="a">
+        <li><p><m>n=36</m> and <m>d=40</m></p></li>
+        <li><p><m>n=-45</m> and <m>d=11</m></p></li>
+      </ol>
+    </statement></exercise>
+    
+
+<exercise><statement>
+  <p>
+    Prove for all integers <m>n</m>, <m>n^2-n+3</m> is odd.
+  </p>
+</statement></exercise>
+
+
+
+<!--<exercise><statement>
+  <p>
+    Let <m>n\in \mathbb{Z}</m>. Prove if <m>n</m> has remainder 3 when divided by 5, then <m>n^2</m> has remainder 4 when divided by 5. 
+  </p>
+</statement><hint><p>Think Quotient-Remainder Theorem.</p></hint></exercise>
+
+<exercise><statement>
+  <p>
+    Let <m>a, b\in \mathbb{Z}</m>. Prove if <m>a</m> has remainder 5 when divided by 7 and <m>b</m> has remainder 6 when divided by 7, then <m>ab</m> has remainder 2 when divided by 7.
+  </p>
+</statement><hint><p>Think Quotient-Remainder Theorem.</p></hint></exercise>-->
+
+<exercise><statement>
+  <p>
+    Prove the square of of any integer has the form <m>4k</m> or <m>4k+1</m> for some integer <m>k</m>.
+  </p>
+</statement></exercise>
+
+<exercise><statement>
+  <p>
+    Prove that the product of any two consecutive integers is even.
+  </p>
+</statement></exercise>
+
+<exercise><statement><p>
+    Prove that the square of any integer has the form <m>3k</m> or <m>3k+1</m> for some integer <m>k</m>.
+  </p></statement></exercise>
+
+  <exercise><statement><p>
+    Prove that for any integer <m>n</m>, <m>n(n^2-1)(n+2)</m> is divisible by 4.
+  </p></statement></exercise>
+
+</exercises>
+
+
+</section>

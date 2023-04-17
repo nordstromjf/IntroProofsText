@@ -1,0 +1,415 @@
+<section xml:id="moredirect">
+  <title>More Direct Proof: Rational Numbers and Divisibility</title><idx>rational number</idx><idx>divisibility</idx>
+
+  <introduction><p>In this section we introduce some new defintions and use them to practice with the technique of direct proof.</p></introduction>
+
+  <subsection xml:id="SS_rational"><title>Rational Numbers</title>
+
+ <p>The set of real numbers is the set you are likely familiar with from your previous math courses, particularly algebra and calculus. These are all the numbers found on the number line, such as <m>0, 1, -3, 1/2, \pi, \sqrt{2}</m>, etc. Recall, we use the notation <m>\mathbb{R}</m> for the set of real numbers.</p>
+
+<definition xml:id="D_rational"><statement><p>A real number, <m>r</m>, is <term>rational</term><idx>rational number</idx> if there exist <m>a, b\in \mathbb{Z}</m> such that <m>r=\frac{a}{b}</m> and <m>b\neq 0</m>.  The set of rational numbers is represented by <m>\mathbb{Q}</m></p></statement></definition>
+
+<definition xml:id="D_irrational"><statement><p>A real number, <m>r</m>, that is not rational is <term>irrational</term><idx>irrational number</idx>. There is not a nice notation for the irrational numbers. We will use <m>\mathbb{R}\setminus\mathbb{Q}</m><notation><usage><m>\mathbb{R}\setminus\mathbb{Q}</m></usage><description>the set of irrational numbers</description></notation>, which is the set of real numbers minus the set of rationals.</p></statement></definition>
+
+<p>To determine if a given number is rational, we need to be able to find a way to write it as a fraction of integers. To prove a number is rational is really a type of existence proof--we need to show <m>a, b\in \mathbb{Z}</m> exist. To prove a number is not rational, we need to show there is no possible way to write it as a fraction of integers. Also, keep in mind that rational and irrational numbers first need to be real numbers. It is possible that a number that is not rational is not a real number, and thus, not irrational either.</p>
+
+<example xml:id="E_rationals"><title>Rational Numbers</title>
+<p>Is <m>O</m> is rational?</p>
+<answer>Yes: <m>0=0/1</m>.</answer>
+
+<p>Is <m>2</m> rational?</p>
+<answer>Yes: <m>2=2/1</m>.</answer>
+
+<p>Is <m>9/5</m> rational?</p>
+<answer>Yes: it already has the form of an integer over an integer.</answer>
+
+<p>Is <m>2/0</m> rational?</p>
+<answer>No: the demoninator cannot be 0. In fact, <m>2/0</m> is not a number.</answer>
+
+</example>
+
+<p>You have seen some common examples of irrational numbers in previous courses: <m>\sqrt{2}, \pi, e</m>. It is, in fact, challenging to prove these are irrational. We will see the proof that <m>\sqrt{2}</m> is irrational later in <xref ref="contradiction"/>.</p>
+
+<p>In your earlier dealings with rational and irrational numbers, you may have seen the property that rational numbers are ones with terminating or repeating decimal expansions, while irrational numbers have non-terminating and non-repeating decimal expansions. The next couple of examples explore this property.</p>
+
+<example xml:id="E_termdecimal"><title><m>0.2345</m> is Rational</title>
+<p>Show <m>0.2345</m> is a rational number.</p>
+<p>We need to find <m>a, b\in \mathbb{Z}</m> such that <m>0.2345=\frac{a}{b}</m> and <m>b\neq 0</m>. We can use what we know about decimals: for example, <m>0.1=1/10; 0.01=1/100</m>. Thus, <m>0.2345=2345/10000</m>. Letting <m>a=2345, b=10000</m>, we can see that <m>a, b\in \mathbb{Z}, b\neq 0</m>.</p>
+</example>
+
+<example xml:id="E_repeatdecimal"><title><m>0.\overline{123}</m> is Rational</title>
+<p>Show the repeating decimal <m>0.\overline{123}</m> is a rational number.</p>
+<p>We need to find <m>a, b\in \mathbb{Z}</m> such that <m>0.\overline{123}=\frac{a}{b}</m> and <m>b\neq 0</m>. This one is trickier than the last example and requires a new technique. First, let <m>x=0.\overline{123}=0.123123\ldots</m>. Then multiply both sides of <m>x=0.123123\ldots</m> by 1000, so that <m>1000x=123.123123\ldots</m>. We chose 1000 in order to get one set of the repeated digits in front of the decimal point. Now we subtract the two equations from each other:
+<md>
+  <mrow>123.123123\ldots &amp;=1000x</mrow>
+  <mrow>-(0.123123\ldots&amp;=x)</mrow>
+</md>
+Resulting in <m>123=999x</m>. Now we just solve for <m>x=123/999</m>.</p>
+<p>Letting <m>a=123, b=999</m>, we can see that <m>a, b\in \mathbb{Z}, b\neq 0</m>.</p>
+</example>
+
+<activity xml:id="A_rationalpractice"><title>Practice with Rational Numbers</title><introduction><p>Prove the following numbers, <m>x</m>, are rational by finding integers, <m>a</m> and <m>b</m> so that <m>x=\frac{a}{b}</m>.</p></introduction>
+<task><m>x=12.345</m></task>
+<task><m>x=12.\overline{3}</m></task>
+<task><m>x=1.2\overline{34}</m></task>
+</activity>
+
+
+<p>The next theorem gives us an example of how to prove more general statements with rational numbers.</p>
+
+<theorem xml:id="T_sumofrationals"><statement><p>The sum of two rational numbers is rational.</p></statement></theorem>
+<proof>
+  <p>Let <m>r, s</m> be rational. Show <m>r+s</m> is rational.</p>
+  <p>Since <m>r</m> is rational, it can be written as <m>\frac{a}{b}</m> for some <m>a, b\in \mathbb{Z}, b\neq 0</m>. Similarly, since <m>s</m> is rational, it can be written as <m>\frac{p}{q}</m> for some <m>p, q\in \mathbb{Z}, q\neq 0</m>. (Note, we need to use different letters since <m>r</m> and <m>s</m> are not necessarily the same.) Now, 
+  <me>r+s=\frac{a}{b}+\frac{p}{q}.</me>
+  Finding a common denominator,
+  <me>r+s=\frac{aq+bp}{pq}.</me>
+</p>
+<p>Then <m>aq+pb, pq \in \mathbb{Z}</m> and, since <m>p, q\neq 0, pq\neq 0</m>. Therefore, <m>r+s</m> is rational.</p>
+</proof>
+
+<p>Once we have proven a theorem, we can use it to prove additional statements. Note, a <term>corollary</term><idx>corollary</idx> is just a theorem that follows almost directly from a previous theorem.</p>
+
+<corollary><statement><p>The double of a rational number is rational.</p></statement></corollary>
+<proof><p>Let <m>r</m> be a rational number. We want to show <m>2r</m> is rational. But <m>2r=r+r</m>. By <xref ref="T_sumofrationals"/>, <m>r+r</m> is rational.</p></proof>
+
+<activity xml:id="A_rationalproofs"><title>Proofs with Rationals</title><introduction><p>Let <m>r, s</m> be rational numbers.</p></introduction>
+<task><p>Prove <m>r/2</m> is rational.</p></task>
+<task><p>Prove <m>5r-2s</m> is rational.</p></task>
+<task><p>Prove or disprove <m>\frac{1}{r}</m> is rational.</p></task>
+
+</activity>
+
+</subsection>
+
+<subsection xml:id="SS_divisibility"><title>Divisibility</title><idx>divisible</idx><idx>divides</idx>
+
+<p>We introduce the idea of divisibility for integers. It is important to understand that this concept involves only integers and is not the same thing as division. Divisibility is a property while division is an operation.</p>
+
+<definition xml:id="D_divisible"><statement><p>Let <m>n, d\in \mathbb{Z}</m>. Then <m>n</m> is <term>divisible</term><idx>divisible</idx> by <m>d</m> if <m>n=dk</m> for some <m>k\in \mathbb{Z}</m>.</p></statement></definition>
+
+<p>If <m>n=dk</m> for some <m>k\in \mathbb{Z}</m> we can also say
+<ul>
+  <li><m>n</m> is a <term>multiple</term><idx>multiple</idx> of <m>d</m>;</li>
+  <li><m>d</m> is a <term>factor</term><idx>factor</idx> of <m>n</m>;</li>
+  <li><m>d</m> is a <term>divisor</term><idx>divisor</idx> of <m>n</m>;</li>
+  <li><m>d</m> <term>divides</term><idx>divides</idx> <m>n</m>.</li>
+</ul></p>
+
+<p>We use the notation <m>d\mid n</m><notation><usage><m>d\mid n</m></usage><description><m>d</m> divides <m>n</m></description></notation>, read <q><m>d</m> divides <m>n</m>.</q></p>
+
+<p>Important note: <m>d\mid n</m> is a relationship between two integers. It is a statement that is either true or false. It does NOT equal a number. It is NOT the same thing as a fraction. It is not an equation, but it can be translated to the equation <m>n=dk</m> for some integer <m>k</m>.</p>
+
+<p>It is useful to look at the special case when <m>n</m> or <m>d</m> is 0.
+<ul>
+  <li><m>0\mid n</m> is always false.</li>
+  <li><m>d\mid 0</m> is true if <m>d\neq 0</m>.</li>
+  <li>Thus, <m>0\mid 0</m> is false, even though, technically, one could write <m>0=0\cdot k</m>.</li>
+</ul>
+</p>
+
+<example xml:id="E_divides"><title>Finding Divisors</title>
+  <p>
+  Find the divisors of 6.</p>
+  <answer>1, 2, 3, 6, -1, -2, -3, -6</answer>
+  <p>
+  Find the divisors of 5.</p>
+  <answer>1, 5, -1, -5</answer>
+  <p>
+  Find the divisors of 1.</p>
+  <answer>1, -1</answer>
+</example>
+
+<p>If <m>d</m> does not divide <m>n</m>, then for every <m>k\in \mathbb{Z}, n\neq dk</m>. This can be difficult to show in general, but if <m>n</m> and <m>d</m> are specific integers, you could show <m>\frac{n}{d}</m> is not an integer. This is the ONLY time a fraction can show up in proofs about divisibility.</p>
+<p>Notation: <m>d\nmid n</m> means <m>d</m> does not divide <m>n</m>.</p>
+
+<example xml:id="E_TFdivides"><title>Determining Divisibility</title>
+  <p>
+  True or false: <m>8\mid 24</m>.</p>
+  <answer>True, <m>24=8(3)</m>.</answer>
+  <p>
+  True or false: <m>8\mid 4</m>.</p>
+  <answer>False, <m>4=8(k)</m> has no integer solutions since <m>k=1/2</m>.</answer>
+
+  <p>
+  True or false: <m>8\mid 10</m>.</p>
+  <answer>False, <m>10=8(k)</m> has no integer solutions since <m>k=5/4</m>.</answer>
+
+   <p>
+  True or false: <m>8\mid -8</m>.</p>
+  <answer>True, <m>-8=8(-1)</m>.</answer>
+
+   <p>
+  True or false: <m>-2\mid 8</m>.</p>
+  <answer>True, <m>8=-2(-4)</m>.</answer>
+
+   <p>
+  True or false: <m>1\mid 4</m>.</p>
+  <answer>True, <m>4=1(4)</m>.</answer>
+
+   <p>
+  True or false: <m>8\mid 0</m>.</p>
+  <answer>True, <m>0=8(0)</m>.</answer>
+
+  <p>
+  True or false: <m>4\mid 1</m>.</p>
+  <answer>False, <m>1=4(k)</m> has no integer solutions since <m>k=1/4</m>.</answer>
+
+  <p>
+  True or false: <m>0\mid 8</m>.</p>
+  <answer>False, <m>8=0(k)</m> has no integer solutions.</answer>
+</example>
+
+<activity xml:id="A_practicedivisible"><title>Divisibility Practice</title><introduction><p>Determine if the following divisibility statements are true or false, and justify your answer.</p></introduction>
+<task><m>3\mid 10</m></task>
+<task><m>3\mid 0</m></task>
+<task><m>3\mid 36</m></task>
+<task><m>12\mid 4</m></task>
+<task><m>0\mid 4</m></task>
+</activity>
+
+
+
+<p>Now, we use the definition of divisibility to prove a more general theorem.</p>
+
+<theorem xml:id="T_transdivides"><statement><p>For all integers, <m>a, b, c</m>, if  <m>a\mid b</m> and <m>b\mid c</m>, then <m>a\mid c</m>.</p></statement></theorem>
+
+<proof><p>Let <m>a, b, c\in \mathbb{Z}</m>. Assume <m>a\mid b</m> and <m>b\mid c</m>. Then by definition, <m>b=ak</m> for some <m>k\in \mathbb{Z}</m> and <m>c=bj</m> for some <m>j\in \mathbb{Z}</m>. Substituting the first equation into the second, <m>c=(ak)j=a(kj)</m>. Since <m>kj\in\mathbb{Z}</m>, <m>a\mid c</m>.</p></proof>
+
+<activity xml:id="A_15divides"><title>Divisibility Proof</title><statement><p>Prove if 15 divides <m>n</m>, then 5 divides <m>n</m>.</p></statement></activity>
+
+<activity xml:id="A_6divides"><title>Prove or Disprove</title><statement><p>Prove or disprove if 6 divides <m>n</m>, then 12 divides <m>n</m>.</p></statement></activity>
+
+<activity xml:id="A_divsum"><title>Divisibility and Addition</title><statement><p>Prove if <m>d\mid n</m> and <m>d\mid m</m>, then <m>d\mid (n+m)</m>.</p></statement></activity>
+</subsection>
+
+    <!--<reading-questions>
+      <title>Check Your Understanding</title>
+      
+      <exercise><statement><p>True or false: <m>-9</m> is rational.</p></statement>
+      <answer>True.</answer></exercise>
+
+      <exercise><statement><p>True or false: <m>-\frac{6}{13}</m> is rational.</p></statement>
+      <answer>True.</answer></exercise>
+
+      <exercise><statement><p>True or false: <m>0.\overline{3}</m> is rational.</p></statement>
+      <answer>True.</answer></exercise>
+
+      <exercise><statement><p>True or false: <m>\frac{6}{0}</m> is rational.</p></statement>
+      <answer>False.</answer></exercise>
+
+      <exercise><statement><p>True or false: <m>\frac{6}{0}</m> is irrational.</p></statement>
+      <answer>False. Not a real number.</answer></exercise>
+
+      <exercise><statement><p>True or false: <m>14.5467</m> is rational.</p></statement>
+      <answer>True.</answer></exercise>
+
+      <exercise><statement><p>True or false: <m>49.1122\overline{45}</m> is rational.</p></statement>
+      <answer>True.</answer></exercise>
+
+      <exercise><statement><p>True or false: <m>0.\overline{9}</m> is rational.</p></statement>
+      <answer>True.</answer></exercise>
+
+      <exercise><statement><p>True or false: <m>\sqrt{3}</m> is rational.</p></statement>
+      <answer>False. But hard to prove right now.</answer></exercise>
+
+      <exercise><statement><p>True or false: <m>\sqrt{4}</m> is rational.</p></statement>
+      <answer>True. <m>\sqrt{4}=2.</m></answer></exercise>
+
+      
+
+    </reading-questions>-->
+
+    <exercises>
+      <exercise><statement>
+        <p>
+    Prove the following numbers are rational by writing them as a ratio of two integers.
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    <m>\frac{3}{7}+\frac{5}{9}</m>
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>351.549249249\ldots</m>
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+    <!--  <exercise><statement>
+        <p>
+    The <term>zero product property</term> says that if a product of two real numbers is 0 then one of the numbers must be zero.
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    Write this property formally using quantifiers and variables.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Write the contrapositive of your answer in (a).
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Write an informal version (without symbols and variables) of your answer to part (b).
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>-->
+      <exercise><statement>
+        <p>
+    Prove every integer is a rational number.
+  </p>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Find the mistakes in the following <q>proof.</q>
+  </p>
+
+  <p>
+    <term>Theorem:</term> The sum of any two rational numbers is rational.
+  </p>
+
+  <p>
+    <term><q>Proof</q>:</term> Suppose <m>r</m> and <m>s</m> are rational numbers. If <m>r+s</m> is rational, then by definition of rational <m>r+s=a/b</m> for integers <m>a</m> and <m>b</m> with <m>b\neq0</m>. Since <m>r</m> and <m>s</m> are rational, <m>r=i/j</m> and <m>s=m/n</m> for integers <m>i, j, m</m> and <m>n</m> with <m>j\neq 0</m> and <m>n\neq 0</m>. Thus <me>r+s=\frac{i}{j}+\frac{m}{n}=\frac{a}{b},</me> which is the quotient of two integers with nonzero denominator. Thus, it is rational.
+  </p>
+      </statement></exercise>
+      <exercise><statement><p>
+    Consider the statement: The square of any rational number is a rational number.
+  </p>
+
+  <ol amrker="a">
+    <li>
+      <p>
+    Write the statement formally as a conditional statement using variables.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Determine whether the statement is true or false and justify your answer.
+  </p>
+    </li>
+
+  </ol></statement></exercise>
+      <exercise xml:id="ER_averagerat"><statement>
+        <p>
+    Determine if the following statements are true or false. For <em>true</em> statements provide a proof. For <em>false</em> statements provide a counter example AND determine if a small change would make the statement true. If so, correct the statement and provide a proof of the new statement.
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    The quotient of any two rational numbers is a rational number.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    If <m>r</m> and <m>s</m> are rational numbers then <m>\frac{r+s}{2}</m> is a rational number.
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Suppose <m>a</m>, <m>b</m>, <m>c</m>, and <m>d</m> are integers and <m>a\neq c</m>. Suppose also that <m>x</m> is a real number that satisfies the equation <me>\frac{ax+b}{cx+d}=1.</me> Must <m>x</m> be rational? If so, express <m>x</m> as a ratio of two integers. Is the condition <m>a\neq c</m> important? 
+  </p>
+      </statement><hint><p>Solve for <m>x</m>.</p></hint></exercise>
+
+      <exercise><statement>
+        <p>Let <m>n\in \mathbb{Z}</m>. Determine if the following statements are true or false. Justify your answer.</p>
+        <ol marker="a">
+        <li>
+        <p>3 divides <m>(3n+1)(3n+2)(3n+3)</m>.</p>
+        </li>
+
+        <li>
+        <p><m>6n(2n+10)</m> is divisible by 4.</p>
+        </li>
+
+        <li>
+        <p>100 divides <m>(5n)^2(8n+24).</m></p>
+        </li></ol>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Show that the following statement is false.</p>
+    <p> For all integers <m>a</m> and <m>b</m>, if <m>3\mid (a+b)</m> then <m>3\mid (a-b)</m>.
+  </p>
+      </statement></exercise>
+      <exercise><statement><p>
+    Prove or disprove the following statements using the method of direct proof or counterexample.
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    For all integers <m>a</m>, <m>b</m>, and <m>c</m>, if <m>a\bigm|b</m> and <m>a\bigm|c</m>, then <m>a\bigm|(b+c)</m>.
+  </p>
+    </li>
+
+    <!--<li>
+      <p>
+    The sum of any three consecutive integers is divisible by 3.
+  </p>
+    </li>-->
+
+    <li>
+      <p>
+    For all integers <m>a</m>, <m>b</m>, and <m>c</m>, if <m>a\bigm|b</m> then <m>a\bigm|(bc)</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    For all integers <m>a</m>, <m>b</m>, and <m>c</m>, if <m>a</m> is a factor of <m>c</m>, then <m>ab</m> is a factor of <m>c</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    For all integers <m>a</m>, <m>b</m>, and <m>c</m>, if <m>a\bigm|(b+c)</m>, then <m>a\bigm|b</m> and <m>a\bigm|c</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    For all integers <m>a</m>, <m>b</m>, and <m>c</m>, if <m>a\bigm|(bc)</m> then <m>a\bigm|b</m> or <m>a\bigm|c</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    For all integers <m>a</m> and <m>b</m>, if <m>a\bigm|b</m> then <m>a^2\bigm|(b^2)</m>.
+  </p>
+    </li>
+
+  </ol></statement></exercise>
+
+  <exercise><statement><p>
+    A fast food chain has a contest in which a card with numbers on it is given to each customer who makes a purchase. If some of the numbers on the card add up to 100, then the customer wins $100. A certain customer receives a card with the numbers
+  </p>
+
+  <p>
+    <me>72, 21, 15, 36, 69, 81, 9, 27, 42,\ {\rm and}\ 63</me>.
+  </p>
+
+  <p>
+    Will the customer win $100? Prove or disprove your claim.
+  </p></statement></exercise>
+    </exercises>
+
+</section>

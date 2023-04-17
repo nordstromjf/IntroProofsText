@@ -1,0 +1,931 @@
+<section xml:id="settheory">
+  <title>Set Theory</title><idx>set theory</idx>
+
+  <introduction><p>In this section we review the set theory definitions of element and subset from <xref ref="setnotation" />. Then we introduce several definitions for operations on sets. Once we have the definitions, we will use those to prove statements about general sets.</p></introduction>
+
+  <subsection xml:id="SS_STnotation"><title>Set Notation</title>
+
+  <p>Recall, we usually use capital letters for sets, such as <m>S</m> or <m>A</m>. If we want to talk about elements in a set <m>S</m>, we use the notation <m>x\in S</m>. We read this notation as <q><m>x</m> is in <m>S</m></q> or <q><m>x</m> is an element of <m>S</m>.</q> If <m>x</m> is not in <m>S</m>, then we use the notation <m>x\notin S</m>.</p>
+
+
+
+  <p>In general, if we use <m>P(x)</m> to describe a property of <m>x</m>, we use the notation
+  <me>\{x\in S : P(x)\}</me>
+  and read the statement as <q><m>x</m> in <m>S</m> such that <m>x</m> has property <m>P</m>.</q></p>
+
+  <example xml:id="E_setnotevarious"><title>Examples of Sets</title>
+
+  <ol marker="a">
+    <li><p><m>\{n\in \mathbb{Z} : n=2k, k\in \mathbb{Z}\}</m> is the set of even integers.</p></li>
+    <li><p><m>\{(x, y): x+y=0, x\in \mathbb{R}, y\in \mathbb{R}\}</m> is the set of points in the plane whose coordinates sum to 0. </p></li>
+    <li><p><m>\{x\in \mathbb{R} : 3\leq x\leq 7\}</m> is the closed interval <m>[3, 7]</m>.</p></li>
+</ol></example>
+
+<p>A set <m>A</m> is a subset of a set <m>B</m> if all the elements of <m>A</m> are also in <m>B</m>. </p>
+
+<p>Notation: <m>A\subseteq B</m>. If <m>A</m> is not a subset of <m>B</m>, then we use the notation <m>A\nsubseteq B</m>.</p>
+
+<definition xml:id="D_subset"><statement><p><m>A</m> is a <term>subset</term><idx>subset</idx> of <m>B</m>, <m>A\subseteq B</m>, if for all <m>x</m>, if <m>x\in A</m> then <m>x\in B</m>. </p>
+<p><m>A</m> is a not a subset of <m>B</m>, <m>A\nsubseteq B</m>, if there exists <m>x</m>, such that <m>x\in A</m> and <m>x\notin B</m>. </p></statement>
+</definition>
+
+<definition xml:id="D_propersubset"><statement><p><m>A</m> is a <term>proper subset</term><idx>proper subset</idx> of <m>B</m> if <m>A\subseteq B</m> and <m>A\neq B</m>. </p></statement>
+</definition>
+
+<p>Note that the definition of subset is an if...then statement. If we want to prove <m>A\subseteq B</m>, we prove if <m>x\in A</m> then <m>x\in B</m>. Thus, we assume <m>x\in A</m> and show <m>x\in B</m>.</p>
+
+<activity xml:id="A_mult6subset"><title>Multiples of 6 Are Multiples of 3</title><statement><p> Prove <m>\{6k:  k\in \mathbb{Z}\}\subseteq\{3k: k\in \mathbb{Z}\}</m>. Make sure in your proof you identify what you need to assume and what you need to show.</p></statement></activity>
+
+<activity xml:id="A_mult3nsubset"><title>Multiples of 3 Are Not Multiples of 6</title><statement><p>Find a counterexample to prove <m>\{3k:  k\in \mathbb{Z}\}\nsubseteq\{6k: k\in \mathbb{Z}\}</m>. </p></statement></activity>
+
+<p>We say two sets are equal, <m>A=B</m>, if <m>A\subseteq B</m> and <m>B\subseteq A</m>.</p>
+
+<p>We will let <m>U</m> be the <term>universal set</term><idx>universal set</idx>, which is the set of all possible elements. The universal set depend on the context. For example, in calculus, the universal set is often the set of all real numbers, while in discrete math, many times it is the integers. In set theory examples, it may be convenient to define a small universal set, such as 
+<m>U=\{1, 2, 3, 4\}</m>. It is useful to note that every set is a subset of the universal set.</p>
+
+<p>We also have the <term>empty set</term><idx>empty set</idx>, <m>\emptyset</m>, which is the set that contains no elements. It is useful to note that the empty set is a subset of every set. We will prove the formally in <xref ref="E_provesetisempty"/>.</p>
+
+</subsection>
+
+<subsection xml:id="SS_setoperations"><title>Operations on Sets</title>
+  
+
+
+<p>We now give the element definitions for common set operations, along with the Venn diagrams for each of the sets. A Venn diagram is a picture that represents sets.</p>
+
+<p><term>Union</term><idx>union of sets</idx>: <m>x\in A\cup B</m><notation><usage><m>A\cup B</m></usage><description>the union of <m>A</m> and <m>B</m></description></notation> if and only if <m>x\in A</m> or <m>x\in B</m>.</p>
+<p>In set notation, <m>A\cup B=\{x\in U : x\in A \text{ or } x\in B\}</m>.</p>
+<figure xml:id="F_unionvenn">
+  <caption> Venn diagram for <m>A\cup B</m></caption>
+  <image width="30%" xml:id="vennunion">
+    <latex-image>
+  \begin{tikzpicture}
+  % Definition of circles
+    \def\firstcircle{(0,0) circle (1.5cm)}
+    \def\secondcircle{(0:2cm) circle (1.5cm)}
+
+    \colorlet{circle edge}{black}
+    \colorlet{circle area}{blue!20}
+
+    \tikzset{filled/.style={fill=circle area, draw=circle edge},
+    outline/.style={draw=circle edge}}
+
+    \draw[filled] \firstcircle node {$A$}
+                  \secondcircle node {$B$};
+\end{tikzpicture}
+
+</latex-image></image>
+</figure>
+
+<p><term>Intersection</term><idx>intersection of sets</idx>: <m>x\in A\cap B</m><notation><usage><m>A\cap B</m></usage><description>the intersection of <m>A</m> and <m>B</m></description></notation> if and only if <m>x\in A</m> and <m>x\in B</m>.</p>
+<p>In set notation, <m>A\cap B=\{x\in U : x\in A \text{ and } x\in B\}</m>.</p>
+
+<figure xml:id="F_intersetvenn">
+  <caption> Venn diagram for <m>A\cap B</m></caption>
+  <image width="30%" xml:id="vennintersect">
+    <latex-image>
+  \begin{tikzpicture}
+  % Definition of circles
+    \def\firstcircle{(0,0) circle (1.5cm)}
+    \def\secondcircle{(0:2cm) circle (1.5cm)}
+
+    \colorlet{circle edge}{black}
+    \colorlet{circle area}{blue!20}
+
+    \tikzset{filled/.style={fill=circle area, draw=circle edge},
+    outline/.style={draw=circle edge}}
+
+    \begin{scope}
+        \clip \firstcircle;
+        \fill[filled] \secondcircle;
+    \end{scope}
+    \draw[outline] \firstcircle node {$A$};
+    \draw[outline] \secondcircle node {$B$};
+
+\end{tikzpicture}
+
+</latex-image></image>
+</figure>
+
+<p><term>Set difference</term><idx>set difference</idx>: <m>x\in A-B</m><notation><usage><m>A-B</m></usage><description>the set difference <m>A</m> minus <m>B</m></description></notation> (or <m>x\in A\setminus B</m><notation><usage><m>A\setminus B</m></usage><description>the set difference <m>A</m> minus <m>B</m></description></notation>) if and only if <m>x\in A</m> and <m>x\notin B</m>.</p>
+<p>In set notation, <m>A-B=\{x\in U : x\in A \text{ and } x\notin B\}</m>.</p>
+
+<figure xml:id="F_setminusvenn">
+  <caption> Venn diagram for <m>A-B</m></caption>
+  <image width="30%" xml:id="vennminus">
+    <latex-image>
+  \begin{tikzpicture}
+  % Definition of circles
+    \def\firstcircle{(0,0) circle (1.5cm)}
+    \def\secondcircle{(0:2cm) circle (1.5cm)}
+
+    \colorlet{circle edge}{black}
+    \colorlet{circle area}{blue!20}
+
+    \tikzset{filled/.style={fill=circle area, draw=circle edge},
+    outline/.style={draw=circle edge}}
+
+     \begin{scope}
+        \clip \firstcircle;
+        \draw[filled, even odd rule] \firstcircle node {$A$}
+                                     \secondcircle;
+    \end{scope}
+    \draw[outline] \firstcircle
+                   \secondcircle node {$B$};
+
+\end{tikzpicture}
+
+</latex-image></image>
+</figure>
+
+
+<p><term>Complement</term><idx>complement of a set</idx>: <m>x\in A^C</m><notation><usage><m>A^C</m></usage><description>the complement of <m>A</m></description></notation> if and only if <m>x\notin A</m>.</p>
+<p>In set notation, <m>A^C=\{x\in U : x\notin A\}</m>.</p>
+
+  <figure xml:id="F_complementvenn">
+  <caption> Venn diagram for <m>A^C</m></caption>
+  <image width="30%" xml:id="venncomplement">
+    <latex-image>
+  \begin{tikzpicture}
+  \def\bigrectangle{(-2,-2) rectangle (2,2)}
+\def\firstcircle{(0,0) circle (1.5)}
+%\def\secondcircle{(1,0) circle (1)}
+
+% fill rectangle and conjunction
+\scope
+    \clip \firstcircle  \bigrectangle;
+    \fill[blue!20] \bigrectangle;
+\endscope
+
+% fill conjunction white
+\scope
+   % \clip \secondcircle;
+    \fill[white] \firstcircle;
+\endscope
+
+% outline
+\draw \firstcircle (0,1) node {$A$}
+      %\secondcircle (1,1) node [text=black,above] {$q$}
+      \bigrectangle node [text=black,above] {$U$};
+
+\end{tikzpicture}
+
+</latex-image></image>
+</figure>
+
+
+
+  <example xml:id="E_setops"><title>Operations on Sets</title><p>
+    Let <m>A=\{x\in \mathbb{R} : 0\leq x\leq 4\}</m>  and <m>B=\{x\in \mathbb{R} : -1&lt; x &lt; 1\}</m>.</p>
+    <p>Note, these sets can also be defined with interval notation, <m>A=[0, 4], B=(-1, 1)</m>.
+    <ol marker="a">
+      <li><p>Find <m>A\cup B</m>.</p>
+    <answer><m>(-1, 4]</m></answer></li>
+    <li><p>Find <m>A\cap B</m>.</p>
+    <answer><m>[0, 1)</m></answer></li>
+    <li><p>Find <m>A-B</m>.</p>
+    <answer><m>[1, 4]</m></answer></li>
+    <li><p>Find <m>B-A</m>.</p>
+    <answer><m>(-1, 0)</m></answer></li>
+    <li><p>Find <m>A^C</m>.</p>
+    <answer><m>(-\infty, 0)\cup(4, \infty)</m></answer></li></ol></p>
+  </example>
+
+  <activity xml:id="A_setoppractice"><title>Practice with Set Operations</title><introduction><p>Let <m>A=\{1, 2, 3, 4, 5, 6\}</m> and <m>B=\{2, 4, 6, 8, 10, 12\}</m> and the Universal set
+<m>U=\{n\in\mathbb{Z}: 1\leq n\leq 12\}</m>.</p></introduction>
+<task><p>Find <m>A\cup B</m>.</p></task>
+<task><p>Find <m>A\cap B</m>.</p></task>
+<task><p>Find <m>A- B</m>.</p></task>
+<task><p>Find <m>B- A</m>.</p></task>
+<task><p>Find <m>B^{C}</m>.</p></task>
+</activity>
+
+  <p>We can take the union or intersection of many sets using notation similar to summation notation:
+  <me>\bigcup_{i=1}^{n}A_i=A_1\cup A_2\cup\cdots \cup A_n</me>
+  <me>\bigcap_{i=1}^{n}A_i=A_1\cap A_2\cap\cdots \cap A_n.</me>
+  </p>
+
+  <p>We can also take the intersection or union of infinitely many sets:
+    <me>\bigcup_{i=1}^{\infty}A_i=A_1\cup A_2\cup\cdots \cup A_n\cdots</me>
+  <me>\bigcap_{i=1}^{\infty}A_i=A_1\cap A_2\cap\cdots \cap A_n\cdots</me></p>
+
+  <activity xml:id="A_infunion"><title>Infinite Union and Intersection</title><introduction><p>Let <m>A_i=\{1, 2, 3, \ldots i\}</m>. </p></introduction>
+<task><p>Find <m>A_1, A_2, A_5,</m> and <m>A_n</m>.</p></task>
+<task><p>Find <m>\bigcup_{i=1}^{5}A_i</m>.</p></task>
+<task><p>Find <m>\bigcap_{i=1}^{5}A_i</m>.</p></task>
+<task><p>Find <m>\bigcup_{i=1}^{\infty}A_i</m>.</p></task>
+<task><p>Find <m>\bigcap_{i=1}^{\infty}A_i</m>.</p></task>
+</activity>
+
+  <definition xml:id="D_powerset"><p>The <term>power set</term> of a set <m>A</m> is the set of all subsets of <m>A</m>. We denote it <m>\mathcal{P}(A)</m><notation><usage><m>\mathcal{P}(A)</m></usage><description>The power set of <m>A</m></description></notation>.</p></definition>
+
+  <example xml:id="E_powerset"><title>Power Set</title><p>
+    Let <m>A=\{1, 2\}</m>. Find <m>\mathcal{P}(A)</m>.</p>
+    <p>We need to find all the subsets of <m>\{1, 2\}</m>. The subsets are the elements of <m>\mathcal{P}(A)</m>.</p>
+    <p>The subsets are <m>\emptyset, \{1\}, \{2\}, \{1, 2\}</m>. Thus, <m>\mathcal{P}(A)=\{\emptyset, \{1\}, \{2\}, \{1, 2\}\}</m>.</p></example>
+
+    <activity xml:id="A_powerset"><statement><title>Finding a Power Set</title><p>Let <m>A=\{2, 4, 6\}</m>. Find <m>{\cal{P}}(A)</m>.</p></statement></activity>
+
+
+ <p>Another important set in mathematics is the <term>Cartesian product</term><idx>product of sets</idx><idx>Cartesian product</idx> of two sets <m>A</m> and <m>B</m>. We define it as
+
+<me>A\times B=\{(a, b) : a\in A, b\in B\}.</me><notation><usage><m>A\times B</m></usage><description>the Cartesian product of <m>A</m> and <m>B</m></description></notation>
+This is a set of <term>ordered pairs</term>, where the first coordinate comes from set <m>A</m> and the second coordinate comes from set <m>B</m>.</p>
+
+<example xml:id="E_cartprod2"><title>Cartesian Product of Sets</title><p>
+    Let <m>A=\{1, 2, 3\}</m>  and <m>B=\{2, 4\}</m>.</p>
+    <p>Find <m>A\times B</m>.</p>
+    <answer><m>\{(1, 2), (1, 4), (2, 2), (2, 4), (3, 2), (3, 4)\}</m></answer>
+  </example>
+
+  <example xml:id="E_rtwo"><title>Cartesian Product of Real Numbers</title><p>
+    Let <m>A=\mathbb{R}</m>  and <m>B=\mathbb{R}</m>.</p>
+    <p>Then <m>\mathbb{R}\times \mathbb{R}</m> is the set of all points in the plane. This set is often written as <m>\mathbb{R}^2</m>.</p>
+    
+  </example>
+
+</subsection>
+
+<subsection xml:id="SS_setproofs"><title>Proofs of Set Properties</title>
+
+ <p>Now that we have defined operations on sets such as union and intersection, we can look at various properties of these operations. We saw that intersection involves an <q>and</q> statement, while union involves an <q>or</q>. As we work with these properties we will be able to see connections between properties of sets and the logical connectives we saw in <xref ref="chapter1"/>.</p>
+
+  <p>We will refer to the following properties of sets as the <term>subset relations</term><idx>subset relations</idx>.
+    <ol marker="1">
+      <li><m>A\cap B\subseteq A</m>; <m>A\cap B\subseteq B</m>.</li>
+      <li><m>A\subseteq A\cup B</m>; <m>B\subseteq A\cup B</m>.</li>
+      <li><title>Transitivity</title><p>If <m>A\subseteq B</m> and  <m>B\subseteq C</m> then <m>A\subseteq C</m>.</p></li>
+    </ol></p>
+
+  <p>One of our goals in this section is to learn how to prove properties such as these.</p>
+
+  <p>We can think of the statement <m>X\subseteq Y</m> as the conditional statement, if <m>x\in X</m> then <m>x\in Y</m>.</p>
+
+<assemblage xml:id="B_pfsubset">
+  <title>To Prove <m>X\subseteq Y</m></title><idx><h>subset</h><h>proof</h></idx>
+<p><ul>
+  <li>Assume <m>x\in X</m>.</li>
+  <li>Show <m>x\in Y</m>.</li>
+</ul>
+</p></assemblage>
+
+<p>We can translate set operations into logical statements, as well. These translations are how we will prove properites of sets using elements.</p>
+
+<assemblage xml:id="B_settologic">
+  <title>Translating Sets into Logical Form</title>
+<p><ul>
+  <li><title>Union</title><p><m>x \in X\cup Y</m> if and only if <m>x\in X</m> or <m>x\in Y</m></p></li>
+  <li><title>Intersection</title><p><m>x \in X\cap Y</m> if and only if <m>x\in X</m> and <m>x\in Y</m></p></li>
+  <li><title>Set Difference</title><p><m>x \in X-Y</m> if and only if <m>x\in X</m> and <m>x\notin Y</m></p></li>
+  <li><title>Complement</title><p><m>x \in X^C</m> if and only if <m>x\notin X</m></p></li>
+  <li><title>Cartesian Product</title><p><m>(x, y) \in X\times Y</m> if and only if <m>x\in X</m> and <m>y\in Y</m></p></li>
+</ul></p>
+
+</assemblage>
+
+<example xml:id="E_subsetprop"><title>Proving a Subset Property</title>
+<p>
+  Prove <m>A\cap B\subseteq A</m>.
+</p>
+<proof>
+  <p>
+    Let <m>x\in A\cap B</m>. Then <m>x\in A</m> and <m>x\in B</m>. Thus, <m>x\in A</m>.
+  </p>
+  <p>Therefore, <m>A\cap B\subseteq A</m>.</p>
+</proof>
+</example>
+
+<activity xml:id="A_ssprop1"><title>Intersection Subset Property</title><statement><p>Prove <m>A\cap B\subseteq B</m>. Be sure to write what you want to assume and what you want to  show.</p></statement></activity>
+
+<activity xml:id="Assprop2"><title>Subset Union Property</title><statement><p>Prove <m>B\subseteq A\cup B</m>. Be sure to write what you want to assume and what you want to  show.</p></statement></activity>
+
+<!--<activity><statement><p>Prove if <m>A\subseteq B</m> and <m>B\subseteq C</m> then <m>A\subseteq C</m>. Be sure to write what you want to assume and what you want to  show.</p></statement></activity>-->
+
+
+<p>To prove two sets are equal, we prove they are subsets of each other.</p>
+
+<assemblage xml:id="B_pfsetequal">
+  <title>Proving Set Equality</title><idx><h>set equality</h><h>proof</h></idx>
+<p>To prove <m>X=Y</m> show 
+<ul>
+  <li><p><m>X\subseteq Y</m>, ie, show if <m>x \in X</m> then <m>x \in Y</m>, and </p></li>
+  <li><p><m>Y\subseteq X</m>, ie, show if <m>x \in Y</m> then <m>x \in X</m>.</p></li>
+</ul></p>
+</assemblage>
+
+<example xml:id="E_DeMorgans"><title>Proving Two Sets are Equal</title>
+<p>
+  Prove <m>A\cup(B\cap C)=(A\cup B)\cap (A\cup C)</m>.
+</p>
+<proof>
+  <p>
+    <m>(\subseteq)</m>: Let <m>x\in A\cup(B\cap C)</m>. Then <m>x\in A</m> or <m>x\in B\cap C</m>.
+  </p>
+  <p>Case 1: <m>x\in A</m>. Then <m>x\in A\cup B</m> by the second subset relation. Similarly, <m>x\in A\cup C</m>. Thus, <m>x\in A\cup B</m> and <m>x\in A\cup C</m>.</p>
+  <p>Therefore, <m>x\in (A\cup B) \cap (A\cup C)</m>.</p>
+  <p>Case 2: <m>x\in B\cap C</m>. Then <m>x\in B</m>  and <m>x\in C</m>. Then <m>x\in A\cup B</m> and <m>x\in A\cup C</m> by the second subset relation. Thus, <m>x\in A\cup B</m> and <m>x\in A\cup C</m>.</p>
+  <p>Therefore, <m>x\in (A\cup B) \cap (A\cup C)</m>.</p>
+
+  <p>
+    <m>(\supseteq)</m>: Let <m>x\in (A\cup B)\cap (A\cup C)</m>. Then <m>x\in A\cup B</m> and <m>x\in A\cup C</m>.
+  </p>
+  <p>Case 1: <m>x\in A</m>. Then <m>x\in A\cup (B\cap C)</m> by the second subset relation (since we can form the union with ANY set). </p>
+  <p>Case 2: <m>x\notin A</m>. Since <m>x\in A\cup B</m>  by assumption, <m>x\in A</m> or <m>x\in B</m>. Since <m>x\notin A</m>, <m>x\in B</m>.</p>
+  <p> Similarly,  since <m>x\in A\cup C</m>, and <m>x\notin A</m>, <m>x\in C</m>. Thus, <m>x\in B\cap C</m>.</p>
+  <p>Therefore, <m>x\in A\cup (B\cap C)</m> (again by the second subset relation).</p>
+</proof>
+</example>
+<p>The next theorem shows that the empty set is a subset of every set.</p>
+  <theorem xml:id="T_emptyset"><statement><p>For all sets <m>A</m>, <m>\emptyset\subseteq A</m>.</p></statement></theorem>
+  <proof><p>By contradiction, assume there exists a set <m>A</m> such that <m>\emptyset\nsubseteq A</m>.</p>
+<p>This means there exists <m>x\in \emptyset</m> such that <m>x\notin A</m>. But we cannot have <m>x\in \emptyset</m>. Hence we have a contradiction. Therefore, <m>\emptyset\subseteq A</m>.</p>
+</proof>
+
+<p>There are many times in mathematics that we need to prove that a set is empty. We might need do do this if we need sets to be disjoint or if we need to prove that there are no elements with a particular property. The common method for proving a set is empty is to use contradiction. Note, usually if we want to prove <m>A=B</m>, we show both subsets, <m>A\subseteq B</m> and <m>B\subseteq A</m>, but we just showed <m>\emptyset\subseteq A</m>, always. Thus, we just need to show <m>A\subseteq \emptyset</m>. We do this by contradiction. </p>
+
+<assemblage xml:id="B_pfequalemptyset">
+  <title>Proving a Set is Empty</title>
+<p>To prove <m>A=\emptyset</m> 
+<ul>
+  <li><p>Assume <m>x\in A</m>.</p></li>
+  <li><p>Reach a contradiction.</p></li>
+</ul></p>
+</assemblage>
+
+<example xml:id="E_provesetisempty"><title>Proving a Set is Empty</title>
+<p>
+  Prove <m>U^{C}=\emptyset</m>, where <m>U</m> is the universal set.
+  <proof>
+    <p>Let <m>x\in U^{C}</m>. Then <m>x\notin U</m>. But since <m>U</m> contains everything, <m>x\in U</m>, which is a contradiction. Therefore, <m>U^{C}=\emptyset</m>.</p>
+  </proof>
+</p></example>
+
+<activity xml:id="A_provesetempty"><title>Practice Proving a Set is Empty</title><statement><p>Prove <m>A\cap A^C=\emptyset</m>. Be sure to write what you want to assume and what you want to show.</p></statement></activity>
+
+<definition xml:id="D_disjoint"><statement><p>Two sets <m>A</m> and <m>B</m> are <term>disjoint</term><idx>disjoint sets</idx> if <m>A\cap B=\emptyset</m>.</p></statement></definition>
+
+<activity xml:id="A_moresubset"><title>A More Complicated Subset Proof</title><statement><p>Prove if <m>A\subseteq B</m> then <m>A\cup C\subseteq B\cup C</m>. Note, you need to show <m>A\cup C\subseteq B\cup C</m>. So how do you show a subset? What set should you assume  <m>x</m> is in?</p></statement></activity>
+
+<assemblage xml:id="L_SetIdent">
+<title>Summary of Set Identities</title><idx>set identities</idx><idx><h>set</h><h>properties</h></idx>
+<p>Let <m>U</m> be the universal set, and <m>A, B</m>, and <m>C</m> be subsets of the universal set.
+<ol marker="1">
+<li> <title>Commutative Laws</title> <m>A\cup B=B\cup A; \ \ A\cap B=B\cap A</m></li>
+<li> <title>Associative Laws</title> <m>(A\cup B)\cup C=A\cup(B\cup C);\ \ (A\cap B)\cap C=A\cap(B\cap C)</m></li>
+<li> <title>Distributive Laws</title> <m>A\cup(B\cap C)=(A\cup B)\cap (A\cup C);</m> <m>A\cap(B\cup C)=(A\cap B)\cup (A\cap C)</m></li>
+<li> <title>Identity Laws</title> <m>A\cup \emptyset=A;\ \ A\cap U=A</m></li>
+<li> <title>Complement Laws</title> <m>A\cup A^C=U;\ \ A\cap A^C=\emptyset</m></li>
+<li> <title>Double Complement Law</title> <m>(A^C)^C=A</m></li>
+<li> <title>Idempotent Laws</title> <m>A\cup A=A;\ \ A\cap A=A</m></li>
+<li> <title>Universal Bound Laws</title> <m>A\cup U=U;\ \ A\cap \emptyset=\emptyset</m></li>
+<li> <title>DeMorgan's Laws</title> <m>(A\cup B)^C=A^C\cap B^C;\ \ (A\cap B)^C=A^C\cup B^C</m></li>
+<li> <title>Absorption Laws</title> <m>A\cup(A\cap B)=A;\ \ A\cap(A\cup B)=A</m></li>
+<li> <title>Complements</title> <m>U^C=\emptyset;\ \ \emptyset^C=U</m></li>
+<li> <title>Set Difference Law</title> <m>A-B=A\cap B^C</m></li>
+
+</ol></p>
+</assemblage>
+
+
+
+
+    <!--<reading-questions>
+      <title>Check Your Understanding</title>
+
+      <p>Let <m>A=\{2, 4, 6, 8\}, B=\{3, 4\}, C=\{1, 2, 4\}, D=\{0, 1\}</m></p>
+      
+      <exercise><statement><p>Find  <m>A\cap C</m>.</p></statement>
+      <answer><m>\{2, 4\}</m></answer></exercise>
+
+      <exercise><statement><p>Find  <m>B\cap D</m>.</p></statement>
+      <answer><m>\emptyset</m></answer></exercise>
+
+      <exercise><statement><p>Find  <m>A\cup C</m>.</p></statement>
+      <answer><m>\{1, 2, 4, 6, 8\}</m></answer></exercise>
+
+      <exercise><statement><p>Find  <m>B\cup D</m>.</p></statement>
+      <answer><m>\{0, 1, 3, 4\}</m></answer></exercise>
+
+      <exercise><statement><p>Find  <m>A-C</m>.</p></statement>
+      <answer><m>\{6, 8\}</m></answer></exercise>
+
+      <exercise><statement><p>Find  <m>B-D</m>.</p></statement>
+      <answer><m>\{3, 4\}</m></answer></exercise>
+
+      <exercise><statement><p>Find  <m>B\times D</m>.</p></statement>
+      <answer><m>\{(3, 0), (3, 1), (4, 0), (4, 1)\}</m></answer></exercise>
+
+      <exercise><statement><p>Find  <m>B\times C</m>.</p></statement>
+      <answer><m>\{(3, 1), (3, 2), (3, 4), (4, 1), (4, 2), (4, 4)\}</m></answer></exercise>
+
+      <exercise><statement><p>True or false: <m>B\times D=D\times B</m>.</p></statement>
+      <answer><p>False.</p></answer></exercise>
+      
+      <exercise><statement><p>True or false:  <m>B-D=D-B</m>.</p></statement>
+      <answer><p>False.</p></answer></exercise>
+
+      <exercise><statement><p>True or false:  <m>A\cup C= C\cup A</m>.</p></statement>
+      <answer><p>True.</p></answer></exercise>
+
+      <exercise><statement><p>Find  <m>\mathcal{P}(B)</m>.</p></statement>
+      <answer><m>\{\emptyset, \{3\}, \{4\}, \{3, 4\}\}</m></answer></exercise>
+
+      <exercise><statement><p>Give a partition of <m>A</m>.</p></statement>
+      <answer><p>Lots of subsets work, they just need to be disjoint and the union is all of <m>A</m>. For example, <m>A_1=\{2, 6\}, A_2=\{4, 8\}.</m></p></answer></exercise>
+    
+
+    </reading-questions>-->
+
+    <exercises>
+  <!--<exercise><statement><p>
+    For each of the following determine if <m>A\subseteq B</m>. Then determine if <m>B\subseteq A</m>.
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    <m>A=\{2, \{2\}, (\sqrt{2})^2\}, B=\{2, \{2\}, \{\{2\}\}\}</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>A=\{\{1, 2\}, \{2, 3\}\}, B=\{1, 2, 3\}</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>A=\{a, b, c\}, B=\{\{a\}, \{b\}, \{c\}\}</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>A=\{\sqrt{16}, \{4\}\}, B=\{4\}</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>A=\{x\in \mathbb{R}: \cos x \in \mathbb{Z}\}, B=\{x\in \mathbb{R}: \sin x \in \mathbb{Z}\}</m>.
+  </p>
+    </li>
+
+  </ol></statement></exercise>
+      <exercise><statement>
+        <p>
+    Complete the following sentences without using the symbols <m>\cup, \cap</m>, or <m>-</m>.
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    <m>x\notin A\cup B</m> if and only if ___.
+  </p>
+
+    </li>
+
+    <li>
+      <p>
+    <m>x\notin A\cap B</m> if and only if ___.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>x\notin A- B</m> if and only if ___.
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>-->
+      <exercise><statement>
+        <p>
+    Let <m>A=\{1, 3, 5, 7, 9\}</m>, <m>B=\{3, 6, 9\}</m>, and <m>C=\{2, 4, 6, 8\}</m>. Find each of the following:
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    <m>A\cup B</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>A\cap B</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>A\cup C</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>A\cap C</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>A-B</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>B-A</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>B\cup C</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>B\cap C</m>.
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+
+      <exercise><statement>
+        <p>
+    Let the universal set be <m>\mathbb{R}</m>, and let <m>A=\{x\in \mathbb{R}:0&lt; x\leq 2\}</m>, <m>B=\{x\in \mathbb{R}:1\leq x&lt; 4\}</m>, and <m>C=\{x\in \mathbb{R}:3\leq x&lt; 9\}</m>. Find each of the following:
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    <m>A\cup B</m>
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>A\cap B</m>
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>A^{C}</m>
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>A\cup C</m>
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>A\cap C</m>
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>B^{C}</m>
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>A^{C}\cap B^{C}</m>
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>A^{C}\cup B^{C}</m>
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>(A\cap B)^{C}</m>
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>(A\cup B)^{C}</m>
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Determine whether each of the following are true or false.
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    <m>\mathbb{Z}^+\subseteq \mathbb{Q}</m>
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>\mathbb{R}^-\subseteq \mathbb{Q}</m>
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>\mathbb{Q}\subseteq \mathbb{Z}</m>
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>\mathbb{Z}^-\cup\mathbb{Z}^+= \mathbb{Z}</m>
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>\mathbb{Z}^-\cap\mathbb{Z}^+= \emptyset</m>
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>\mathbb{Q}\cap\mathbb{R}= \mathbb{Q}</m>
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>\mathbb{Q}\cup\mathbb{Z}= \mathbb{Q}</m>
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>\mathbb{Z}^+\cap\mathbb{R}= \mathbb{Z}^+</m>
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>\mathbb{Z}\cup\mathbb{Q}= \mathbb{Z}</m>
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Let <m>A=\{a, b, c\}</m>, <m>B=\{b, c, d\}</m>, and <m>C=\{b, c, e\}</m>.
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    Find <m>A\cup(B\cap C)</m>, <m>(A\cup B)\cap C</m>, and <m>(A\cup B)\cap (A\cup C)</m>. Which of these sets are equal?
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Find <m>A\cap(B\cup C)</m>, <m>(A\cap B)\cup C</m>, and <m>(A\cap B)\cup (A\cap C)</m>. Which of these sets are equal?
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Find <m>(A-B)-C</m> and <m>A-(B-C)</m>. Are these sets equal?
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+      <exercise><statement><p>Determine if the following statements are true or false. Give a justification for you answer.</p>
+        <ol marker="a">
+    <li>
+      <p>
+    The number 0 is in <m>\emptyset</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>\emptyset= \{\emptyset\}</m> 
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>\emptyset\in \{\emptyset\}</m>
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>\emptyset\in \emptyset</m>
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Let <m>A_i=\{x\in \mathbb{R}: -i\leq x\leq i\}</m> (the interval <m>[-i, i]</m>) for all nonnegative integers <m>i</m>.
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    Find <m>\bigcup_{i=0}^{4}A_i</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Find <m>\bigcap_{i=0}^{4}A_i</m>.
+  </p>
+    </li>
+
+    <!--<li>
+      <p>
+    Are <m>A_0, A_1, A_2\ldots</m> mutually disjoint? Explain.
+  </p>
+    </li>-->
+
+    <li>
+      <p>
+    Find <m>\bigcup_{i=0}^{n}A_i</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Find <m>\bigcap_{i=0}^{n}A_i</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Find <m>\bigcup_{i=1}^{\infty}A_i</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Find <m>\bigcap_{i=1}^{\infty}A_i</m>.
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+    <!--  <exercise><statement><p>Determine if the set of sets is a partition of the given set.</p>
+        <ol marker="a">
+    <li>
+      <p>
+    Is <m>\{\{a, d, e\}, \{b, c\}, \{d, f\}\}</m> a partition of <m>\{a, b, c, d, e, f\}</m>?
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Is <m>\{\{w, x, v\}, \{u, y, q\}, \{p, z\}\}</m> a partition of <m>\{p, q, u, v, w, x, y, z \}</m>?
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Is <m>\{\{5, 4\}, \{7, 2\}, \{1, 3, 4\}, \{6, 8\}\}</m> a partition of <m>\{1, 2, 3, 4, 5, 6, 7, 8\}</m>?
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Is <m>\{\{3, 7, 8\}, \{2, 9\}, \{1, 4, 5\}\}</m> a partition of <m>\{1, 2, 3, 4, 5, 6, 7, 8, 9\}</m>?
+  </p>
+    </li>
+
+    <li>
+      <p>
+    Is <m>\{\{1, 5\}, \{4, 7\}, \{2, 8, 6, 3\}\}</m> a partition of <m>\{1, 2, 3, 4, 5, 6, 7, 8\}</m>?
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+      <exercise><statement>
+        <p>
+    Let <me>\begin{aligned}
+A_0&amp;=\{n\in\mathbb{Z}: n=4k \text{ for some } k\in \mathbb{Z}\}\\
+A_1&amp;=\{n\in\mathbb{Z}: n=4k+1 \text{ for some } k\in \mathbb{Z}\}\\
+A_2&amp;=\{n\in\mathbb{Z}: n=4k+2 \text{ for some } k\in \mathbb{Z}\}\\
+A_3&amp;=\{n\in\mathbb{Z}: n=4k+3 \text{ for some } k\in \mathbb{Z}\}
+\end{aligned}</me>
+  </p>
+
+  <p>
+    Is <m>\{A_0, A_1, A_2, A_3\}</m> a partition of <m>\mathbb{Z}</m>? Explain your answer.
+  </p>
+      </statement></exercise>-->
+    <exercise><statement>
+        <p>
+    Let <m>A=\{1, 2\}</m> and <m>B=\{2, 3\}</m>. Find
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    <m>{\cal{P}}(A\cap B)</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>{\cal{P}}(A)</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>{\cal{P}}(A\cup B)</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>{\cal{P}}(A\times B)</m>.
+  </p>
+    </li>
+
+  </ol>
+  
+      </statement></exercise>
+
+      <exercise xml:id="ER_subsettrans"><statement><p>
+    Prove if <m>A\subseteq B</m> and <m>B \subseteq C</m> then <m>A\subseteq C</m>.
+  </p></statement></exercise>
+
+      <exercise><statement><p>
+    Prove if <m>A\subseteq C</m> and <m>B \subseteq C</m> then <m>(A\cup B)\subseteq C</m>.
+  </p></statement></exercise>
+      <exercise><statement><p>
+    Prove if <m>A\subseteq B</m> and <m>A \subseteq C</m> then <m>A\subseteq (B\cap C)</m>.
+  </p></statement></exercise>
+      <exercise><statement><p>
+    Prove <m>((A\cup B)- B)\subseteq A</m>. Give an example of two sets <m>A</m> and <m>B</m> such that <m>((A\cup B)- B)\neq A</m>.
+  </p></statement></exercise>
+      <exercise><statement>
+        <p>
+    Let <m>A</m> and <m>B</m> be subsets of the universal set <m>U</m>. Prove <m>A\cap B^c=\emptyset</m> if and only if <m>A\subseteq B</m>.
+  </p>
+      </statement></exercise>
+      <exercise><statement><p>
+    Prove if <m>A\cap B=A</m> then <m>A\subseteq B</m>. Is the converse true? If so prove it; if not give a counterexample.
+  </p></statement></exercise>
+      <exercise><statement><p>
+    Prove if <m>A\subseteq B</m> then, for all sets <m>C</m>, <m>C- B\subseteq C- A</m>. Explain why in the case that  <m>C</m> is the universal set <m>U</m>, this property can be stated more concisely as <m>B^C\subseteq A^C</m>.  
+  </p></statement></exercise>
+      <exercise><statement>
+        <p>
+    True or False? If the statement is true give a proof. If the statement is false give a counterexample.
+  </p>
+
+  <ol marker="a">
+    <li>
+      <p>
+    <m>A\cup(B- C)=(A\cup B)- (A\cup C)</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>A\cap(B- C)=(A\cap B)- (A\cap C)</m>.
+  </p>
+    </li>
+
+    <li>
+      <p>
+    <m>(A- B)^c=A^c- B^c</m>.
+  </p>
+    </li>
+
+  </ol>
+      </statement></exercise>
+
+
+    </exercises>
+  </subsection>
+
+</section>

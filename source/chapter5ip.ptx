@@ -1,0 +1,26 @@
+<chapter xml:id="chapter5" xmlns:xi="http://www.w3.org/2001/XInclude" >
+  <title>Proofs in Specific Contexts</title>
+  <introduction>
+   
+    <p>
+     In this chapter we look at specific types of mathematical statements. These types of statments come up in many different courses, but the techniques for proving them are fairly standard. These proofs still employ the previous techniques from <xref ref="chapter3" />, such as direct proof, contradiction, and contrapositive. However, it is helpful to see exactly how to use the basic techniques in these specific contexts.
+    </p>
+
+  
+    
+
+  </introduction>
+  
+ <xi:include  href="existunique5-1.ptx" />
+  
+  <xi:include  href="sets5-2.ptx" />
+  <xi:include  href="functions5-3.ptx" />
+  <xi:include  href="relations5-4.ptx" />
+
+  <xi:include  href="orders5-5.ptx" />
+ 
+
+  
+  
+  
+</chapter>

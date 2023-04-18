@@ -1,5 +1,5 @@
 <section xml:id="orders">
-  <title>Ordered Sets</title><idx>partially ordered sets</idx><idx>totally ordered sets</idx><idx>parial order</idx><idx>total order</idx>
+  <title>Ordered Sets</title><idx>partially ordered set</idx><idx>totally ordered set</idx><idx>partial order</idx><idx>total order</idx>
 
   <p>In this section we look at an additional property of a relation. In particular, we define the antisymmetric property. We will then look at how a relation can be used to define ways to order elements of a set. </p>
 

@@ -272,7 +272,7 @@
     </tabular>
 </p>
 
-<p>Inverse error:<idx>inverse error</idx>
+<p>Inverse error:<idx><h>inverse</h><h>error</h></idx>
 
     <tabular>
       <row><cell><m>\neg p\rightarrow q</m></cell></row>

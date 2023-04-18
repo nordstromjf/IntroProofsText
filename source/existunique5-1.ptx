@@ -122,7 +122,7 @@ This is not a subset of the integers and does not have a least element, even tho
 <p>We now prove the <em>existence</em> part of the Division Algorithm.</p>
 
 
-<proof><idx><h>Division Algorthm</h><h>proof of existence</h></idx><p>Let <m>S=\{n-dk : n-dk\geq 0, k\in\mathbb{Z}\}</m>. Show <m>S</m> satisfies the Well-Ordering Principle. Clearly <m>S</m> is a set of integers, and by definition, every element is greater than or equal to 0. So we just need to show that <m>S\neq\emptyset</m>.</p>
+<proof><idx><h>Division Algorithm</h><h>proof of existence</h></idx><p>Let <m>S=\{n-dk : n-dk\geq 0, k\in\mathbb{Z}\}</m>. Show <m>S</m> satisfies the Well-Ordering Principle. Clearly <m>S</m> is a set of integers, and by definition, every element is greater than or equal to 0. So we just need to show that <m>S\neq\emptyset</m>.</p>
 <p>If <m>n\geq 0</m>, we can let <m>k=0</m>. Then <m>n-dk=n\geq 0</m>. Hence <m>n\in S</m>.</p>
 
 <p>If <m>n&lt; 0</m>, let <m>k=n</m>. Then <m>n-dn=n(1-d)</m>. But <m>n&lt; 0</m> and <m>1-d\leq 0</m>. Thus, <m>n-dn\geq 0</m>. Hence <m>n-dn\in S</m>.</p>

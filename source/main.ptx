@@ -30,13 +30,15 @@
 
 \usepackage{pgfplots}
 
+\pgfplotsset{compat=1.17}
+
 
 </latex-image-preamble>
   </docinfo>
 
   <book xml:id="IntroProofs">
     <title>Introduction to Proofs</title>
-   <!-- <subtitle></subtitle>-->
+   <subtitle>An Active Exploration of Mathematical Language</subtitle>
 
     <frontmatter xml:id="frontmatter">
       <titlepage>
@@ -70,22 +72,27 @@
 
     <preface>
 <p>
-This text is used in a 3 credit, intensive, one month course. The course builds fluency with proof techniques through examples from discrete math, numbers theory, and set theory. It emphasizes learning mathematical structure as learning a new language.</p>
+This text is intended for a first course in proof-writing. The course builds fluency with proof techniques through examples from discrete math, number theory, and set theory. It emphasizes learning mathematical structure from logic and applying the strucure in a variety of contexts.</p>
+
+<p>The material was developed for an Introduction to Proofs course at Linfield University. The course is currently taught as an intensive one month <q>January Term</q> course. The course is generally taken by math majors in their first year or two or by math minors who wish to improve their proof-writing ability.</p>
+
+<p>There are no specific prerequisites besides some familariy with mathematical statements. The text assumes a familiarity with calculus, but only in that it references examples of statements from calculus. A background in calculus is not required for the content of the course.</p>
 
 
-<!--<paragraphs xml:id="Course_Goals">
+<paragraphs xml:id="Course_Goals">
   <title>Course Goals</title>
 
 <ul>
-  <li> <p>To introduce the student to the basic discrete mathematical structures and the theory and techniques associated with these structures.</p></li>
-  <li> <p>To continue the student's growth in the use of mathematical language and the use of logic.</p></li>
-  <li> <p>To improve the student's ability to write precise, valid, mathematical arguments.</p></li>
-  <li> <p>To increase the student's confidence in working through mathematical challenges.</p></li>
-  <li> <p>To continue the growth of the student's abilities in the appreciation and use of abstract reasoning.</p></li>
-  <li> <p>To improve the student's problem-solving abilities.</p></li>
-  <li> <p>To increase the student's mathematical maturity.</p></li>
+  <li> <p>To introduce basic mathematical terminology such as sets, functions, relations, and cardinality.</p></li>
+  <li> <p>To introduce proof techniques such as direct proof, proof by contrapositive, proof by contradiction, and mathematical induction.</p></li>
+  <li> <p>To develop proficiency in both reading and writing mathematical proofs.</p></li>
+  <li> <p>To develop an understanding of logical structure.</p></li>
+  <li> <p>To increase confidence in working through mathematical challenges.</p></li>
+  <li> <p>To foster an appreciation and use of abstract reasoning.</p></li>
+  <li> <p>To improve problem-solving abilities.</p></li>
+  
 </ul>
-</paragraphs>-->
+</paragraphs>
 <!--<paragraphs xml:id="Format">
   <title>Course Format</title>
 

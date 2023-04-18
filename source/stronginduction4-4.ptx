@@ -4,7 +4,7 @@
   <p>In this section we look at a variation on induction called <term>strong induction</term>. This is really just regular induction except we make a stronger assumption in the induction hypothesis. It is possible that we need to show more than one base case as well, but for the moment we will just look at how and why we may need to change the assumption.</p>
 
 <assemblage xml:id="B_strongind">
-  <title>Strong Induction</title><idx>strong induction</idx>
+  <title>Strong Induction</title><idx>strong induction</idx><idx><h>mathematical induction</h><h>strong</h></idx>
   <p>Let <m>P(n)</m> be a property defined for integers <m>n</m>. If 
   <ol marker="1">
   <li><m>P(1), \ldots P(a)</m> are true for some <m>a</m>, and</li>
@@ -16,7 +16,7 @@
   <p>As in the previous section, we will assume <m>n\in \mathbb{Z}</m>.</p>
 
 <assemblage xml:id="B_strongindstructure">
-  <title>Structure of a Strong Induction Proof</title><idx>proof by strong induction</idx><idx><h>strong induction</h><h>proof structure</h></idx>
+  <title>Structure of a Strong Induction Proof</title><idx><h>proof</h><h>by strong induction</h></idx><idx><h>strong induction</h><h>proof by</h></idx>
 
   <p>To prove <m>P(n), \forall n\geq 1</m>,
 

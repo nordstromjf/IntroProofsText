@@ -497,7 +497,7 @@ So, a statement such as <m>p</m> is necessary and sufficient for <m>q</m> means 
   <ul>
     <li><term>contrapositive</term><idx>contrapositive</idx>: <m>\neg q\rightarrow \neg p</m>;</li>
     <li><term>converse</term><idx>converse</idx>: <m>q\rightarrow p</m>;</li>
-    <li><term>inverse</term><idx>inverse</idx>: <m>\neg p\rightarrow \neg q</m>.</li>
+    <li><term>inverse</term><idx><h>inverse</h><h>of a conditional</h></idx>: <m>\neg p\rightarrow \neg q</m>.</li>
   </ul>
 </p></statement>
 </definition>

@@ -1,5 +1,5 @@
 <section xml:id="relations">
-  <title>Equivalence Relations</title><idx>relations</idx><idx>equivalence relations</idx><idx>equivalence classes</idx><idx>partitions</idx>
+  <title>Equivalence Relations</title><idx>relation</idx><idx>equivalence relation</idx><idx>equivalence class</idx>
 
   <introduction><p>In many area of mathematics we care about how mathematical objects relate to each other. In <xref ref="functions"/> we used function to relate elements of two sets. In this section we define the more general concept of a relation between sets. We also look as several properties. </p></introduction>
 
@@ -231,7 +231,7 @@
     <li><m>R</m> is <term>symmetric</term><idx>symmetric</idx> if for all <m>x, y\in A</m>, if <m>x R y</m> then <m>y R x</m>. In ordered pair notation, if <m>(x, y)\in R</m> then <m>(y, x)\in R</m>.</li>
 
     <li><m>R</m> is <term>transitive</term><idx>transitive</idx> if for all <m>x, y, z\in A</m>, if <m>x R y</m> and <m>y R z</m> then <m>x R z</m>. In ordered pair notation, if <m>(x, y)\in R</m> and <m>(y, z)\in R</m> then <m>(x, z)\in R</m>.</li>
-  </ul> </p>
+  </ul> </p><idx><h>relation</h><h>properties</h></idx>
   </statement></definition>
 
 

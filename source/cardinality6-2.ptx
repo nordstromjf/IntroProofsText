@@ -3,11 +3,11 @@
 
   <p>In this section we will explore what it means for a set to be infinite and whether infinite sets such as the integers, the rational numbers, and the real numbers have the same <q>size</q>.</p>
 
-  <p>First, start with finite sets. The size of a finite set is the number of elements in the set. It may seem simple to determine the size of a set by just counting the elements. But suppose I have a bag of candy and a class of students. I could decide if I have enough candy by just counting the pieces and the students and seeing if I have more candy or students. But suppose I have a lot of candy and a lot of students. It might be faster just to start passing out the candy to the students. If I run out of candy, I have more students, if I run out of students, I have more candy. We will use this idea of matching up objects in two sets to define the size of a set and to decide which set is bigger.</p>
+  <p>First, start with finite sets. The size of a finite set is the number of elements in the set. It may seem simple to determine the size of a set by just counting the elements. But suppose I have a bag of candy and a class of students. I could decide if I have enough candy by just counting the pieces and the students and seeing if I have more candy or students. But suppose I have a lot of candy and a lot of students. It might be faster just to start passing out the candy to the students. If I run out of candy, I have more students; if I run out of students, I have more candy. We will use this idea of matching up objects in two sets to define the size of a set and to decide which set is bigger.</p>
 
-  <definition xml:id="D_cardinality"><p>Two sets <m>A</m> and <m>B</m> have the same <term>cardinality</term><idx>cardinality of a set</idx> if there is a a one to one, onto map from <m>A</m> to <m>B</m>. We call a one to one, onto map a <term>one to one correspondence</term><idx>one to one correspondence</idx> from <m>A</m> to <m>B</m>.</p></definition>
+  <definition xml:id="D_cardinality"><p>Two sets <m>A</m> and <m>B</m> have the same <term>cardinality</term><idx>cardinality of a set</idx> if there is a one-to-one, onto map from <m>A</m> to <m>B</m>. We call a one-to-one, onto map a <term>one-to-one correspondence</term><idx><h>one-to-one</h><h>correspondence</h></idx> from <m>A</m> to <m>B</m>.</p></definition>
 
-  <p>Notation: we will use <m>|A|</m> to denote the cardinality if a set <m>A</m>.</p>
+  <p>We will use <m>|A|</m><notation><usage><m>|A|</m></usage><description>cardinality of set <m>A</m></description></notation> to denote the cardinality if a set <m>A</m>.</p>
 
   <example xml:id="E_finitecard"><title>Finite Cardinality</title><p>Let <m>A=\{1, 2, 3, 4\}</m>. Then <m>|A|=4</m>. Let <m>B=\{2k : 1\leq k\leq 4, k\in \mathbb{Z}\}</m>. Then <m>|B|=4</m>. </p></example>
 
@@ -15,11 +15,11 @@
 
 <p>Two finite sets have the same cardinality if they have the same number of elements. But what about infinite sets?</p>
 
-<example xml:id="E_intandevencard"><title>Cardinality of the Even Integers</title><p>Let <m>E</m> be the set of even integers, <m>E=\{2k : k\in \mathbb{Z}\}</m>. Consider the map <m>f:\mathbb{Z}\rightarrow E</m> given by <m>f(n)=2n</m>. You can check that <m>f</m> is one to one and onto <m>E</m>. Thus, <m>f</m> gives us a one to one correspondence between the integers and the even integers. Hence, they have the same cardinailty.</p></example>
+<example xml:id="E_intandevencard"><title>Cardinality of the Even Integers</title><p>Let <m>E</m> be the set of even integers, <m>E=\{2k : k\in \mathbb{Z}\}</m>. Consider the map <m>f:\mathbb{Z}\rightarrow E</m> given by <m>f(n)=2n</m>. You can check that <m>f</m> is one-to-one and onto <m>E</m>. Thus, <m>f</m> gives us a one-to-one correspondence between the integers and the even integers. Hence, they have the same cardinailty.</p></example>
 
-<p>Is <xref ref="E_intandevencard"/> surprising? On one hand, it may seem surprising since the even integers is a proper subset of the integers, so it may seem like there are <q>more</q> integers then even integers (maybe even twice as many!). On the other hand, both sets have infinitely many elements, so since they both have infinite <q>size</q>, it may seem reasonable that the two sets have the same size. The idea behind the definition of cardinality is that the map gives us a way to match up elements in the two sets. Since they can be matched up exactly, the two sets must have the same size, or cardinality.</p>
+<p>Is <xref ref="E_intandevencard"/> surprising? On one hand, it may seem surprising since the even integers is a proper subset of the integers, so it may seem like there are <q>more</q> integers then even integers (maybe even twice as many!). On the other hand, both sets have infinitely many elements, so since they both have infinite <q>size,</q> it may seem reasonable that the two sets have the same size. The idea behind the definition of cardinality is that the map gives us a way to match up elements in the two sets. Since they can be matched up exactly, the two sets must have the same size, or cardinality.</p>
 
-<definition xml:id="D_countable"><statement><p>A set is <term>countably infinite</term><idx>countable infinite set</idx> if it has the same cardinailty as <m>\mathbb{Z}^+</m>. A set is <term>countable</term><idx>countable set</idx> if it is finite or countably infinite. Otherwise a set is <term>uncountable</term><idx>uncountable set</idx></p></statement></definition>
+<definition xml:id="D_countable"><statement><p>A set is <term>countably infinite</term><idx>countable infinite set</idx> if it has the same cardinailty as <m>\mathbb{Z}^+</m>. A set is <term>countable</term><idx>countable set</idx> if it is finite or countably infinite. Otherwise, a set is <term>uncountable</term><idx>uncountable set</idx>.</p></statement></definition>
 
 <p>For the sake of notational simplicity in this section, we will use <m>\mathbb{N}</m> for the set of natural numbers, <m>\{1, 2, 3, \ldots\}</m>, rather than <m>\mathbb{Z}^+</m>. Thus, an infinite set is countable if it has the same cardinality as <m>\mathbb{N}</m>.</p>
 
@@ -30,49 +30,72 @@
   <row><cell><m>\mathbb{N}</m>: 1</cell><cell>2</cell><cell>3</cell><cell>4</cell><cell>5</cell><cell>6</cell><cell>7</cell><cell>...</cell></row>
   <row><cell><m>\mathbb{Z}</m>: 0</cell><cell>1</cell><cell>-1</cell><cell>2</cell><cell>-2</cell><cell>3</cell><cell>-3</cell><cell>...</cell></row>
 </tabular>
-<p>Since there is a one to one correspondence between the natural numbers and the integers, <m>|\mathbb{N}|=|\mathbb{Z}|</m>, and <m>\mathbb{Z}</m> is countable.</p>
+<p>Since there is a one-to-one correspondence between the natural numbers and the integers, <m>|\mathbb{N}|=|\mathbb{Z}|</m>, and <m>\mathbb{Z}</m> is countable.</p>
 </example>
 
-<theorem xml:id="T_cardequivrel"><statement>Consider sets <m>A, B</m>, and the relation given by, <m>(A, B)\in R</m> if an only if <m>|A|=|B|</m>. In other words, we say two sets are related if they have the same cardinality. Then <m>R</m> is an equivalence relation.</statement></theorem>
+<theorem xml:id="T_cardequivrel"><statement>Consider sets <m>A, B</m>, and the relation given by <m>(A, B)\in R</m> if an only if <m>|A|=|B|</m>. In other words, we say two sets are related if they have the same cardinality. Then <m>R</m> is an equivalence relation.</statement></theorem>
 
 <p>We leave it as an exercise to prove the cardinality relation is reflexive, symmetric, and transitive, and hence, and equivalence relation.</p>
 
 <p><xref ref="T_cardequivrel"/> is important, as we can now use it directly to show the set of even integers, <m>E</m>, is countable. Since <m>|E|=|\mathbb{Z}|=|\mathbb{N}|</m>, we have <m>|E|=|\mathbb{N}|</m>. Thus we can say <m>E</m> is countable without needing to find a specific correspondence between <m>E</m> and <m>\mathbb{N}</m>.</p>
 
-<p>So what about the set of rational numbers, <m>\mathbb{Q}</m>? To show it is countable, we need to find a one to one correspondence to <m>\mathbb{N}</m>. As we saw in <xref ref="E_Zcountable"/> is that is in enough to find a way to list the rational numbers. However, one of the properties of the rational numbers that makes this challenging is that between any two rational numbers, <m>a, b</m>, there is another rational number. We proved this in <xref ref="E_generalexistence"/> by showing the average, <m>\frac{a+b}{2}</m> is between <m>a</m> and <m>b</m>. But since the average is also rational, there is another rational number between <m>a</m> and <m>\frac{a+b}{2}</m>, and so on. Thus, in fact, between any two rational numbers there are infinitely many rational numbers. So it would seem the rationals might be <q>larger</q> than <m>\mathbb{N}</m>.</p>
+<p>So what about the set of rational numbers, <m>\mathbb{Q}</m>? To show it is countable, we need to find a one-to-one correspondence with <m>\mathbb{N}</m>. As we saw in <xref ref="E_Zcountable"/> is that it is enough to find a way to list the rational numbers. However, one of the properties of the rational numbers that makes this challenging is that between any two rational numbers, <m>a, b</m>, there is another rational number. We proved this in <xref ref="E_generalexistence"/> by showing the average, <m>\frac{a+b}{2}</m> is between <m>a</m> and <m>b</m>. But since the average is also rational, there is another rational number between <m>a</m> and <m>\frac{a+b}{2}</m>, and so on. Thus, in fact, between any two rational numbers there are infinitely many rational numbers. So it would seem the rationals might be <q>larger</q> than <m>\mathbb{N}</m>.</p>
 
-<example xml:id="E_Qcountable"><title>The Positive Rational Numbers are Countable</title><p>To show the rational numbers are countable, we need to rely on a clever way to list them. To simplify our proof, we first just show the positive rational numbers are countable. Recall a number is rational if it can be written as <m>\frac{a}{b}</m> with <m>a, b\in \mathbb{Z}, b\neq 0</m>. Since we just want positive rational numbers, we can assume <m>a, b\in \mathbb{Z}^+</m>. Now we make a table with columns for <m>b=1, 2, 3, \ldots</m> and rows for <m>a=1, 2, 3\ldots</m>, and the corresponding fraction <m>a/b</m> as entries.</p>
+<example xml:id="E_Qcountable"><title>The Positive Rational Numbers are Countable</title><p>To show the rational numbers are countable, we need to rely on a clever way to list them. To simplify our proof, we first just show the positive rational numbers are countable. Recall a number is rational if it can be written as <m>\frac{a}{b}</m> with <m>a, b\in \mathbb{Z}, b\neq 0</m>. Since we just want positive rational numbers, we can assume <m>a, b\in \mathbb{Z}^+</m>. Now we make a table with columns for <m>b=1, 2, 3, \ldots</m> and rows for <m>a=1, 2, 3\ldots</m>, and the corresponding fraction <m>\frac{a}{b}</m> as entries.</p>
 
 <tabular>
-  <row><cell>1/1</cell><cell>1/2</cell><cell>1/3</cell><cell>1/4</cell><cell>1/5</cell><cell>1/6</cell><cell>1/7</cell><cell>1/8</cell><cell>...</cell></row>
-  <row><cell>2/1</cell><cell>2/2</cell><cell>2/3</cell><cell>2/4</cell><cell>2/5</cell><cell>2/6</cell><cell>2/7</cell><cell>2/8</cell><cell>...</cell></row>
-  <row><cell>3/1</cell><cell>3/2</cell><cell>3/3</cell><cell>3/4</cell><cell>3/5</cell><cell>3/6</cell><cell>3/7</cell><cell>3/8</cell><cell>...</cell></row>
-  <row><cell>4/1</cell><cell>4/2</cell><cell>4/3</cell><cell>4/4</cell><cell>4/5</cell><cell>4/6</cell><cell>4/7</cell><cell>4/8</cell><cell>...</cell></row>
-  <row><cell>5/1</cell><cell>5/2</cell><cell>5/3</cell><cell>5/4</cell><cell>5/5</cell><cell>5/6</cell><cell>5/7</cell><cell>5/8</cell><cell>...</cell></row>
-  <row><cell>6/1</cell><cell>6/2</cell><cell>6/3</cell><cell>6/4</cell><cell>6/5</cell><cell>6/6</cell><cell>6/7</cell><cell>6/8</cell><cell>...</cell></row>
-  <row><cell>7/1</cell><cell>7/2</cell><cell>7/3</cell><cell>7/4</cell><cell>7/5</cell><cell>7/6</cell><cell>7/7</cell><cell>7/8</cell><cell>...</cell></row>
-  <row><cell>8/1</cell><cell>8/2</cell><cell>8/3</cell><cell>8/4</cell><cell>8/5</cell><cell>8/6</cell><cell>8/7</cell><cell>8/8</cell><cell>...</cell></row>
-  <row><cell>...</cell><cell>...</cell><cell>...</cell><cell>...</cell><cell>...</cell><cell>...</cell><cell>...</cell><cell>...</cell><cell>...</cell></row>
+  <row><cell><m>\frac{1}{1}</m></cell><cell><m>\frac{1}{2}</m></cell><cell><m>\frac{1}{3}</m></cell><cell><m>\frac{1}{4}</m></cell><cell><m>\frac{1}{5}</m></cell><cell>...</cell></row>
+  <row><cell><m>\frac{2}{1}</m></cell><cell><m>\frac{2}{2}</m></cell><cell><m>\frac{2}{3}</m></cell><cell><m>\frac{2}{4}</m></cell><cell><m>\frac{2}{5}</m></cell><cell>...</cell></row>
+  <row><cell><m>\frac{3}{1}</m></cell><cell><m>\frac{3}{2}</m></cell><cell><m>\frac{3}{3}</m></cell><cell><m>\frac{3}{4}</m></cell><cell><m>\frac{3}{5}</m></cell><cell>...</cell></row>
+  <row><cell><m>\frac{4}{1}</m></cell><cell><m>\frac{4}{2}</m></cell><cell><m>\frac{4}{3}</m></cell><cell><m>\frac{4}{4}</m></cell><cell><m>\frac{4}{5}</m></cell><cell>...</cell></row>
+  <row><cell><m>\frac{5}{1}</m></cell><cell><m>\frac{5}{2}</m></cell><cell><m>\frac{5}{3}</m></cell><cell><m>\frac{5}{4}</m></cell><cell><m>\frac{5}{5}</m></cell><cell>...</cell></row>
+  <row><cell>...</cell><cell>...</cell><cell>...</cell><cell>...</cell><cell>...</cell><cell>...</cell></row>
 </tabular>
 
-<p>We can see that the table contains every positive rational number, though many are repeated. For example, <m>1=1/1=2/2=3/3</m>, etc. If we start trying to make our list od rational numbers by starting at <m>1/1</m> and just moving along the row, we we never make it to row 2, since there are infinitely many elements in row 1. Similarly, if we start at <m>1/1</m> and move down the column, we will never make it to column 2. So instead we are going to make a serpentine pattern through the table, as follows: 
+<p>We can see that the table contains every positive rational number, though many are repeated. For example, <m>1=1/1=2/2=3/3</m>, etc. If we start trying to make our list of rational numbers by starting at <m>1/1</m> and just moving along the row, we we never make it to row 2, since there are infinitely many elements in row 1. Similarly, if we start at <m>1/1</m> and move down the column, we will never make it to column 2. So instead we are going to make a serpentine pattern through the table, as follows: 
 <ul>
-  <li>start in the upper left corner with <m>1/1</m>, </li>
-  <li>move down to <m>2/1</m>, </li>
-  <li>move diagonally up to <m>1/2</m>,</li>
-  <li>move right to <m>1/3</m>,</li>
-  <li>move diagonally down to <m>2/2</m>, and then <m>3/1</m>,</li>
-  <li>repeat the process, moving down one, then diagonally up to the top row,</li>
-  <li>then move right one and then diagonally down to the first column.</li>
+  <li>start in the upper left corner with <m>\frac{1}{1}</m>, </li>
+  <li>move right to <m>\frac{1}{2}</m>, </li>
+  <li>move diagonally down to <m>\frac{2}{1}</m>,</li>
+  <li>move down to <m>\frac{3}{1}</m>,</li>
+  <li>move diagonally up to <m>\frac{2}{2}</m>, and then <m>\frac{1}{3}</m>,</li>
+  <li>repeat the process, moving right one, then diagonally down to the first column,</li>
+  <li>then move down one and then diagonally up to the first row.</li>
 </ul>
 </p>
 
-<!--<p>The pattern can be seen in the following figure.</p>-->
+<!--<p>The pattern can be seen in the following figure.</p>
+<figure xml:id="F_countablerational">
+  <caption> A listing for the positive rational numbers</caption>
+  <image width="30%" xml:id="countableQ">
+    <latex-image>
+  \begin{tikzpicture}
+\matrix(m)[matrix of math nodes,column sep=1cm,row sep=1cm]{
+    \frac{1}{1} &amp; \frac{1}{2} &amp; \frac{1}{3} &amp; \frac{1}{4} &amp; \cdots \\
+    \frac{2}{1} &amp; \frac{2}{2}&amp; \frac{2}{3} &amp; \frac{2}{4} &amp; \cdots \\
+    \frac{3}{1} &amp; \frac{3}{2} &amp; \frac{3}{3} &amp;\frac{3}{4}&amp; \cdots \\
+    \frac{4}{1} &amp; \frac{4}{2}&amp; \frac{4}{3} &amp; \cdots \\
+};
+
+\draw[->]
+         (m-1-1)edge(m-1-2)
+         (m-1-2)edge(m-2-1)
+         (m-2-1)edge(m-3-1)
+         (m-3-1)edge(m-2-2)
+         (m-2-2)edge(m-1-3)
+         (m-1-3)edge(m-1-4)
+         (m-1-4)edge(m-2-3)
+         (m-2-3)edge(m-3-2)
+         (m-3-2)edge(m-4-1);
+\end{tikzpicture}
+
+</latex-image></image>
+</figure>-->
 
 <p>As you trace through the diagonal pattern, you will see that you will be able to include every element of the table, eventually. Since we don't actually want to count repeated rational numbers, we could just skip any numbers that we have already included.
 </p>
 
-<p>Since it is possible to list the elements in one to one correspondence with <m>\mathbb{N}</m>, the positive rational numbers are countable and <m>|\mathbb{Q}^+|=|\mathbb{N}|</m>.</p>
+<p>Since it is possible to list the elements in one-to-one correspondence with <m>\mathbb{N}</m>, the positive rational numbers are countable and <m>|\mathbb{Q}^+|=|\mathbb{N}|</m>.</p>
 
 </example>
 
@@ -92,10 +115,10 @@
 <me>0.12000000</me>
 
 </p>
-<p>Now, construct a new number, <m>d=0.d_1d_2d_3\ldots</m>, where we change the <m>i</m>th digit after the decimal in the <m>i</m>th number in the list and use the new number in the <m>i</m>th position of <m>d</m>. For example, the first digit in <m>0.1112345</m> is a 1, so make that a new number, like 2. The second digit in <m>0.00083576</m> is 0, make that a 2. Now <m>d=0.22\ldots</m></p>
-<p>Give an example of <m>d</m> by changing the <m>i</m>th digit of each number in the list</p></task>
+<p>Now, construct a new number, <m>d=0.d_1d_2d_3\ldots</m>, where we change the <m>i</m>th digit after the decimal in the <m>i</m>th number in the list and use the new number in the <m>i</m>th position of <m>d</m>. For example, the first digit in <m>0.1112345</m> is a 1, so make that a new number, like 2. The second digit in <m>0.00083576</m> is 0, make that a 2. Now <m>d=0.22\ldots</m>.</p>
+<p>Give an example of <m>d</m> by changing the <m>i</m>th digit of each number in the list.</p></task>
 
-<task><p>We need some better notation for our list and our new number <m>d</m>. We will use a double subscript,<m>a_{ij}</m> where <m>i</m> represents which number in the list and <m>j</m> represents the decimal position. For example, from our above list
+<task><p>We need some better notation for our list and our new number <m>d</m>. We will use a double subscript, <m>a_{ij}</m> where <m>i</m> represents which number in the list and <m>j</m> represents the decimal position. For example, from our above list
 <me>0.1112345=0.a_{11}a_{12}a_{13}\ldots</me>
 <me>0.00083576=0.a_{21}a_{22}a_{23}\ldots</me>
 <me>0.99999999=0.a_{31}a_{32}a_{33}\ldots</me>
@@ -107,15 +130,15 @@
 <task><p>Explain why your <m>d</m> must be different from every decimal on your list.</p></task>
 </activity>
 
-<p>The key idea explored in <xref ref="A_unlistable"/> is that if we create a list of decimals, <m>0.a_{i1}a_{i2}a_{i3}\ldots</m> then by changing the digit in the <m>a_{ii}</m> position, we will always get a decimal that is not on our list, as it will differ from each number on the list by at least one digit</p>
+<p>The key idea explored in <xref ref="A_unlistable"/> is that if we create a list of decimals, <m>0.a_{i1}a_{i2}a_{i3}\ldots</m> then by changing the digit in the <m>a_{ii}</m> position, we will always get a decimal that is not on our list, as it will differ from each number on the list by at least one digit.</p>
 
 <example xml:id="E_creatingd"><title>Finding <m>d</m></title>
 <p>To clarify the process further, here is an example of finding <m>d</m> for a specific list. Given a list of <m>0.a_{i1}a_{i2}a_{i3}\ldots</m>, find <m>d=d_1d_2d_3\ldots</m>, using the rule 
 <me>d_1=\begin{cases}
-  1  &amp;  \text{ if } a_{ii}\neq 1\\
-  2 &amp;  \text{ if } a_{ii}=1
+  1  &amp;  \text{ if } a_{ii}\neq 1;\\
+  2 &amp;  \text{ if } a_{ii}=1.
 \end{cases}</me></p>
-<p>Find <m>d</m> for the list
+<p>Find <m>d</m> for the following list.
 <me>0.{\color{blue}{1}}38756645</me>
 <me>0.1{\color{blue}{1}}1111111</me>
 <me>0.99{\color{blue}{9}}999999</me>
@@ -125,14 +148,14 @@
 <me>0.223355{\color{blue}{7}}70</me>
 <me>0.1230000{\color{blue}{0}}0</me>
 </p> 
-<p>Note, the blue digits are the ones we are consdering for <m>d</m>. Since <m>a_{11}=1, d_1=2</m>. Since <m>a_{22}=1, d_2=2</m>. Since <m>a_{33}=9, d_3=1</m>. Continuing in this way, we get <m>d=0.22121111</m>. Clearly, <m>d</m> differs from each decimal on the list.</p></example>
+<p>Note, the blue digits are the ones we are considering for <m>d</m>. Since <m>a_{11}=1, d_1=2</m>. Since <m>a_{22}=1, d_2=2</m>. Since <m>a_{33}=9, d_3=1</m>. Continuing in this way, we get <m>d=0.22121111</m>. Clearly, <m>d</m> differs from each decimal on the list.</p></example>
 
 <p>One last idea before beginning the proof, make sure you understand that every real number in <m>[0, 1]</m> can be represented by a decimal of the form <m>0.a_{i1}a_{i2}a_{i3}\ldots</m> with infinitely many decimal places. This should be clear if the decimal is repeating or nonterminating, nonrepeating. If the decimal is terminating, we can just add infinitely many 0's. We also note that <m>0=0.000000000\ldots</m> and <m>1=0.99999999\ldots</m> (see <xref ref="moredirect"/> for how to prove this).</p>
 
 <p>Now that we have a way to write a list of numbers in <m>[0, 1]</m> as decimals, and we have a understanding of a way to construct a new number not on our list, we are ready to prove <xref ref="T_realintervaluncount"/>.</p>
 
 <proof>
-  <p>We will prove this by contradiction. Assume <m>[0, 1]</m> is countable. That means there is a one to one correspondence between <m>\mathbb{N}</m> and <m>[0, 1]</m>. We don't need to know what it is, just that it exists. Since there is a one to one correspondence, there is a way to list the elements of <m>[0, 1]</m>. First, note that every real number has a decimal representation, and since our elements are less than or equal to one, each real number can be represented by <m>0.a_{i1}a_{i2}a_{i3}\ldots</m>. Thus we can write our list as 
+  <p>We will prove this by contradiction. Assume <m>[0, 1]</m> is countable. That means there is a one-to-one correspondence between <m>\mathbb{N}</m> and <m>[0, 1]</m>. We don't need to know what it is, just that it exists. Since there is a one-to-one correspondence, there is a way to list the elements of <m>[0, 1]</m>. First, note that every real number has a decimal representation, and since our elements are less than or equal to one, each real number can be represented by <m>0.a_{i1}a_{i2}a_{i3}\ldots</m>. Thus, we can write our list as 
   <me>b_1=0.a_{11}a_{12}a_{13}\ldots</me>
   <me>b_2=0.a_{21}a_{22}a_{23}\ldots</me>
   <me>b_3=0.a_{31}a_{32}a_{33}\ldots</me>
@@ -140,24 +163,24 @@
 Since we assumed we had a listing of every real number in <m>[0, 1]</m>, every such decimal must be on our list.</p>
 <p>Now define 
   <me>d_1=\begin{cases}
-  1  &amp;  \text{ if } a_{ii}\neq 1\\
-  2 &amp;  \text{ if } a_{ii}=1
+  1  &amp;  \text{ if } a_{ii}\neq 1;\\
+  2 &amp;  \text{ if } a_{ii}=1.
 \end{cases}</me>
 
-We can see that for every <m>n</m>, <m>d\neq b_n</m> since it differs in the <m>n</m>th decimal place. Thus <m>d</m> is not on our list. This is a contradiction since we assumed we were able to include every real number in <m>[0, 1]</m> on our list. Hence <m>[0, 1]</m> is not countable.</p>
+We can see that for every <m>n</m>, <m>d\neq b_n</m> since it differs in the <m>n</m>th decimal place. Thus <m>d</m> is not on our list. This is a contradiction since we assumed we were able to include every real number in <m>[0, 1]</m> on our list. Hence, <m>[0, 1]</m> is not countable.</p>
 </proof>
 
-<p>Now we finally have an infinite set that has a different cardinality from <m>\mathbb{N}</m>. Since <m>[0, 1]</m> is a subset of <m>\mathbb{R}</m>, that means <m>\mathbb{R}</m> is uncountable, too.</p>
+<p>We finally have an infinite set that has a different cardinality from <m>\mathbb{N}</m>. Since <m>[0, 1]</m> is a subset of <m>\mathbb{R}</m>, that means <m>\mathbb{R}</m> is uncountable, too.</p>
 
 
   <exercises>
-    <exercise><statement><p>Prove the set of perfect squares, <m>S=\{n^2 : n\in \mathbb{Z}\}</m>, has the same cardinaility as <m>\mathbb{N}</m> by finding a one to one correspondence from <m>\mathbb{N}</m> to <m>S</m>.</p></statement></exercise>
+    <exercise><statement><p>Prove the set of perfect squares, <m>S=\{n^2 : n\in \mathbb{Z}\}</m>, has the same cardinaility as <m>\mathbb{N}</m> by finding a one-to-one correspondence from <m>\mathbb{N}</m> to <m>S</m>.</p></statement></exercise>
       
 <exercise><statement><p>Prove <xref ref="T_cardequivrel"/>, that the cardinality relation is an equivalence relation.</p></statement></exercise>
 
-<exercise><statement><p>Show that the intervals <m>[0, 1]</m> and <m>[3, 6]</m> have the same cardinality by finding a one to one correspondence between the sets.</p></statement><hint><p>Can you find a line segment whose inputs are <m>[0, 1]</m> and outputs are <m>[3, 6]</m>? Then show your line is one to one and onto.</p></hint></exercise>
+<exercise><statement><p>Show that the intervals <m>[0, 1]</m> and <m>[3, 6]</m> have the same cardinality by finding a one-to-one correspondence between the sets.</p></statement><hint><p>Can you find a line segment whose inputs are <m>[0, 1]</m> and outputs are <m>[3, 6]</m>? Then show your line is one-to-one and onto.</p></hint></exercise>
  
-  <exercise><statement><p>Assume <m>a, b, c, d\in \mathbb{R}</m> with <m>a &lt; b</m> and <m>c &lt; d</m>. Show that the intervals <m>[a, b]</m> and <m>[c, d]</m> have the same cardinality by finding a one to one correspondence between the sets.</p></statement><hint><p>Can you find a line segment whose inputs are <m>[a, b]</m> and outputs are <m>[c, d]</m>? Then show your line is one to one and onto.</p></hint></exercise>
+  <exercise><statement><p>Assume <m>a, b, c, d\in \mathbb{R}</m> with <m>a &lt; b</m> and <m>c &lt; d</m>. Show that the intervals <m>[a, b]</m> and <m>[c, d]</m> have the same cardinality by finding a one-to-one correspondence between the sets.</p></statement><hint><p>Can you find a line segment whose inputs are <m>[a, b]</m> and outputs are <m>[c, d]</m>? Then show your line is one-to-one and onto.</p></hint></exercise>
 
   <exercise><statement><p>Let <m>A</m> and <m>B</m> be countable sets. Prove <m>A\cup B</m> is countable.</p></statement></exercise>
 

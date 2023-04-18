@@ -1,5 +1,5 @@
 <section xml:id="contradiction">
-  <title>Proof by Contradiction and Contrapositive</title><idx>proof by contradiction</idx><idx>proof by contrapositive</idx>
+  <title>Proof by Contradiction and Contrapositive</title><idx><h>contradiction</h><h>proof by</h></idx><idx><h>contrapositive</h><h>proof by</h></idx>
 
   <introduction><p>In this section we will learn two new proof techniques, contradiction and contrapositive. Both proof techniques rely on being able to negate mathematical statements.</p>
 
@@ -10,7 +10,7 @@
   <p>The basic idea behind proof by contradiction is that if you assume the statement you want to prove is false, and this forces a logical contradiction, then you must have been wrong to start. Thus, you can conclude the original statement was true. By a logical contradiction, we generally mean a statement that must be both true and false at the same time. When writing a proof by contradiction you must be very careful in your logical reasoning. It must be clear that you reach a contradiction though careful logical deduction.</p>
 
   <assemblage xml:id="B_contradictionpf">
-<title>Method of Proof by Contradiction</title><idx><h>contradiction</h><h>proof by</h></idx>
+<title>Method of Proof by Contradiction</title><idx><h>contradiction</h><h>proof by</h></idx><idx><h>proof</h><h>by contradiction</h></idx>
 <p>
   <ul>
   <li><p>Assume the statement to be proved is false. Or, assume the negation of the statement is true.</p></li>
@@ -55,7 +55,7 @@
 <p>Recall from <xref ref="connectives"/> the contrapositive of <m>p\rightarrow q</m> is <m>\neg q\rightarrow \neg p</m>. Also recall, that <m>p\rightarrow q</m> and <m>\neg q\rightarrow \neg p</m> are logically equivalent. This allows us to use the contrapositive in place of the original statement. Thus, a proof by contrapositive is just a direct proof of the contrapositive statement.</p>
 
 <assemblage xml:id="B_contrapositvepf">
-<title>Method of Proof by Contrapositive</title><idx><h>contrapositive</h><h>proof by</h></idx>
+<title>Method of Proof by Contrapositive</title><idx><h>contrapositive</h><h>proof by</h></idx><idx><h>proof</h><h>by contrapositive</h></idx>
 <p><ul>
   <li><p>Write the statement to be proved in the form <m>\forall x\in D</m>, if <m>P(x)</m> then <m>Q(x)</m>.</p></li>
   <li><p>Write the contrapositive of the statement: <m>\forall x\in D</m>, if <m>\neg Q(x)</m> then <m>\neg P(x)</m>.</p></li>

@@ -28,7 +28,7 @@ then for all <m>n\geq a</m>, <m>P(n)</m> is true.
 
   
 <assemblage xml:id="B_inductionstructure">
-  <title>Structure of a Mathematical Induction Proof</title><idx>proof by induction</idx><idx><h>mathematical induction</h><h>proof structure</h></idx>
+  <title>Structure of a Mathematical Induction Proof</title><idx><h>proof</h><h>by induction</h></idx><idx><h>mathematical induction</h><h>proof by</h></idx>
 
   <p>To prove <m>P(n), \forall n\geq 1</m>,
   <ul>

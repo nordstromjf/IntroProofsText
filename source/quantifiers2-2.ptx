@@ -1,5 +1,5 @@
 <section xml:id="quantifiers">
-  <title>Quantifiers</title>
+  <title>Quantifiers</title><idx>quantifier</idx>
 
   <introduction>
   <p>As we move into proving mathematical statements, we need to better understand the statements themselves. In your previous work with mathematics, you've often used variables and equations.</p>
@@ -88,7 +88,7 @@
   </example>-->
 
 <assemblage xml:id="B_quantnotation">
-  <title>Notation for Quantifiers</title>
+  <title>Notation for Quantifiers</title><idx>quantifier</idx>
   <p><ul>
     <li><title>Universal Quantifier</title><idx>universal quantifier</idx> <m>\forall</m><notation><usage><m>\forall</m></usage><description>for all; universal quantifier</description></notation>, read as <q>for all</q> or  <q>for every.</q> </li>
     <li><title>Existential Quantifier</title><idx>existential quantifier</idx> <m>\exists</m><notation><usage><m>\exists</m></usage><description>there exists; existential quantifier</description></notation>, read as <q>there exists</q> or  <q>for some.</q> </li>
@@ -148,7 +148,7 @@
 
   <!--<p>If you look back at the Check your Understanding questions in the previous section, <xref ref="quantifiersI3-1"/>, you should notice that both <m>\forall x\in D, P(x)</m> and <m>\forall x\in D, \neg P(x)</m> were false, which means they are not negations of each other. Similarly, both <m>\exists x\in D, P(x)</m> and <m>\exists x \in D, \neg P(x)</m> were true. In general, the two statements won't necessarily have the same truth values, but the examples were chosen to make sure we can see that they are not negations of each other.</p>-->
 <assemblage xml:id="B_negquantstatements">
-  <title>Negations of Quantified Statements</title><idx><h>quantifiers</h><h>negation</h></idx>
+  <title>Negations of Quantified Statements</title><idx><h>quantifier</h><h>negation</h></idx>
 <p><ul>
   <li><p>The negation of <m>\forall x\in D, P(x)</m> is <m>\exists x\in D, \neg P(x)</m>; or
    <me>\neg(\forall x\in D, P(x))\equiv \exists x\in D, \neg P(x).</me></p></li>

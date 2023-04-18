@@ -1,5 +1,5 @@
 <section xml:id="functions">
-  <title>Functions</title><idx>one-to-one function</idx><idx>onto function</idx><idx>function</idx>
+  <title>Functions</title><idx><h>one-to-one</h><h>function</h></idx><idx><h>onto</h><h>function</h></idx><idx>function</idx>
 
   <p>Functions are familar mathematical objects from algebra and calculus.</p>
 
@@ -148,7 +148,7 @@
 
   <p>Now we will look at specific properties of functions. We will learn how to prove a function is one-to-one and/or onto its codomain. These properies are important as they are the exact properties we need in order for a function to have an inverse function.</p>
 
-  <definition xml:id="D_onetoone"><statement><p>A function, <m>f:X\rightarrow Y</m>, is <term>one-to-one</term><idx>one-to-one function</idx> or <term>injective</term> if for all <m>x_1, x_2\in X</m>, if <m>f(x_1)=f(x_2)</m> then <m>x_1=x_2</m>.</p>
+  <definition xml:id="D_onetoone"><statement><p>A function, <m>f:X\rightarrow Y</m>, is <term>one-to-one</term><idx><h>one-to-one</h><h>function</h></idx><idx><h>function</h><h>one-to-one</h></idx> or <term>injective</term> if for all <m>x_1, x_2\in X</m>, if <m>f(x_1)=f(x_2)</m> then <m>x_1=x_2</m>.</p>
   </statement></definition>
 
   <p>Equivalently, <m>f</m> is one-to-one if <m>x_1\neq x_2</m> implies <m>f(x_1)\neq f(x_2)</m>. We note, this is just the contrapositive of the definition.</p>
@@ -227,7 +227,7 @@
 
  
 
- <definition xml:id="D_onto"><statement><p>A function, <m>f:X\rightarrow Y</m>, is <term>onto</term> <m>Y</m><idx>onto function</idx> or <term>surjective</term> if for all <m>y\in Y</m> there exists <m>x\in X</m> such that <m>f(x)=y</m>.</p>
+ <definition xml:id="D_onto"><statement><p>A function, <m>f:X\rightarrow Y</m>, is <term>onto</term> <m>Y</m><idx><h>onto</h><h>function</h></idx><idx><h>function</h><h>onto</h></idx> or <term>surjective</term> if for all <m>y\in Y</m> there exists <m>x\in X</m> such that <m>f(x)=y</m>.</p>
   </statement></definition>
 
   <p>Although we need the definition for onto to be able to write a proof, the concept of onto is easier to understand without the definition. Basically, we need every <m>y\in Y</m> to get mapped to by some <m>x\in X</m>. We can also think about onto in terms of sets. A function is onto <m>Y</m> if <m>Y</m> is the range or image of <m>f</m>.</p>
@@ -331,14 +331,14 @@
 <task><p>Prove or disprove <m>d</m> is one-to-one.</p></task>
 <task><p>Prove or disprove <m>d</m> is onto <m>\mathbb{Z}\times\mathbb{Z}</m>.</p></task></activity>-->
 
- <definition xml:id="D_ontotoonecorrespondence"><statement><p>A function <m>f:X\rightarrow Y</m> is a <term>one-to-one correspondence</term><idx><h>one-to-one correspondence</h></idx> or <term>bijection</term><idx>bijection</idx><idx><h>bijection</h><seealso><h>one-to-one correspondence</h></seealso></idx> if <m>f</m> is one-to-one and onto <m>Y</m>.</p></statement></definition>
+ <definition xml:id="D_ontotoonecorrespondence"><statement><p>A function <m>f:X\rightarrow Y</m> is a <term>one-to-one correspondence</term><idx><h>one-to-one</h><h>correspondence</h></idx> or <term>bijection</term><idx>bijection</idx><idx><h>bijection</h><seealso><h>one-to-one correspondence</h></seealso></idx> if <m>f</m> is one-to-one and onto <m>Y</m>.</p></statement></definition>
 
  <p>We showed in the above examples that <m>f:\mathbb{R}\rightarrow\mathbb{R}</m> given by <m>f(x)=3x+2</m> is one-to-one and onto <m>\mathbb{R}</m>. Thus, it is an example of a bijection.</p>
 
  <theorem xml:id="T_inverse"><statement><p>If <m>f:X\rightarrow Y</m> is a bijection, then there exists a function <m>f^{-1}:Y\rightarrow X</m> such that <me>f^{-1}(y)=x\Leftrightarrow f(x)=y.</me></p>
 </statement></theorem>
 
-<p>If it exists, we say <m>f^{-1}</m> is the <term>inverse</term><idx>inverse function</idx> of <m>f</m>.</p>
+<p>If it exists, we say <m>f^{-1}</m> is the <term>inverse</term><idx><h>inverse</h><h>function</h></idx> of <m>f</m>.</p>
 
 <example xml:id="E_inverse"><title>Inverse Function</title>
   <p>Since <m>f:\mathbb{R}\rightarrow\mathbb{R}</m> given by <m>f(x)=3x+2</m> is one-to-one and onto, it has an inverse. We can find the inverse as we did in calculus.</p>

@@ -3,19 +3,26 @@
 
   <p>The Binomial Theorem has applications in many areas of mathematics, from calculus, to number theory, to probability. In this section we look at the connection between Pascal's triangle and binomial coefficients. We ultimately prove the Binomial Theorem using induction.</p>
 
-  <definition xml:id="D_combination"><statement><p>Let <m>n, r</m> be nonnegative integers with <m>r\leq n</m>. An <term><m>r</m>-combination</term><idx>combination</idx> of a set of <m>n</m> elements is the number of subsets of size <m>r</m> that can be chosen from a set of <m>n</m> elements.</p></statement></definition>
-  <p>Notation: <m>\binom{n}{r}</m>, <m>C(n, r)</m>, or <m>nCr</m>. In this section we will use the first notation.</p>
+  <definition xml:id="D_combination"><statement><p>Let <m>n, r</m> be nonnegative integers with <m>r\leq n</m>. An <term><m>r</m>-combination</term><idx>combination</idx> of a set of <m>n</m> elements is the number of subsets of size <m>r</m> that can be chosen from a set of <m>n</m> elements. We will use the notation <m>\binom{n}{r}</m>.<notation><usage><m>\binom{n}{r}</m></usage><description><m>n</m> choose <m>r</m>; binomial coefficient</description></notation></p></statement></definition>
+  <p>Other common notations are <m>C(n, r)</m> or <m>nCr</m>.</p>
 
-  <p>For reasons we will see later in this section, <m>\binom{n}{r}</m> are also called <term>binomial coefficients</term><idx>binomial coeeficient</idx>. </p>
+  <p>For reasons we will see later in this section, <m>\binom{n}{r}</m> are also called <term>binomial coefficients</term><idx>binomial coefficient</idx>. </p>
 
 
-  <p>For example, <m>\binom{5}{4}</m> is the number of subsets of size 4 chosen from a set of 5 elements.</p>
+  
 
-  <p>Note, the order in which we choose elements of a set does not matter. </p>
+  <p>We can calculate combinations or binomial coefficients using the formula <me>\binom{n}{r}=\frac{n!}{r!(n-r)!}</me>.</p>
 
-  <p>We can calculate combinations or binomial coeeficients using the formula:<me>\binom{n}{r}=\frac{n!}{r!(n-r)!}</me>.</p>
+  <p>Using the definition that <m>0!=1</m>, we can see that <m>\binom{n}{0}=1</m> and <m>\binom{0}{0}=1</m>.</p>
 
-  <p>Note: <m>\binom{n}{0}=1</m> and <m>\binom{0}{0}=1</m>.</p>
+  <example xml:id="E_calcbinom"><title>Calculating a Combination</title>
+  <p>Calculate <m>\binom{5}{4}</m>, the number of subsets of size 4 chosen from a set of 5 elements.</p>
+  <p>Using the formula, 
+    <me>\binom{5}{4}=\frac{5!}{4!(5-4)!}=\frac{5!}{4!1!}</me>
+    <me>=\frac{(5)(4)(3)(2)(1)}{(4)(3)(2)(1)(1)}=5</me></p>
+
+    <p>This means there are 5 different subsets with 4 elements of any set with 5 elements.</p>
+  </example>
 
   <activity xml:id="A_calcbinomial"><title>Calculating Binomial Coefficients</title><introduction><p>Calculate the following binomial coefficients.</p></introduction>
   <task><p>Calculate <m>{6 \choose 2}</m>.</p></task>
@@ -46,9 +53,8 @@
   <row><cell></cell><cell></cell><cell>1</cell><cell></cell><cell>1</cell><cell></cell><cell></cell></row>
   <row><cell></cell><cell>1</cell><cell></cell><cell>2</cell><cell></cell><cell>1</cell><cell></cell></row>
   <row><cell>1</cell><cell></cell><cell>3</cell><cell></cell><cell>3</cell><cell></cell><cell>1</cell></row>
-</tabular>
-
-We get each row by adding the two numbers above. If there is only one number, you just get 1. For example, the fourth row is 1, 3, 3, 1, since <m>1+2=3</m>. The next row would be 1, 4, 6, 4, 1.
+</tabular></p>
+<p>We get the numbers in each row by adding the two numbers above. If there is only one number, you just get 1. For example, the fourth row is 1, 3, 3, 1, since <m>1+2=3</m>. The next row would be 1, 4, 6, 4, 1.
 </p>
 
 <p>If we think about the first row as actually being the 0th row, we can make a triangle with the binomial coefficients:
@@ -57,16 +63,16 @@ We get each row by adding the two numbers above. If there is only one number, yo
   <row><cell></cell><cell></cell><cell><m>\binom{1}{0}</m></cell><cell></cell><cell><m>\binom{1}{1}</m></cell><cell></cell><cell></cell></row>
   <row><cell></cell><cell><m>\binom{2}{0}</m></cell><cell></cell><cell><m>\binom{2}{1}</m></cell><cell></cell><cell><m>\binom{2}{2}</m></cell><cell></cell></row>
   <row><cell><m>\binom{3}{0}</m></cell><cell></cell><cell><m>\binom{3}{1}</m></cell><cell></cell><cell><m>\binom{3}{2}</m></cell><cell></cell><cell><m>\binom{3}{3}</m></cell></row>
-</tabular>
+</tabular></p>
 
-If you calculate the binomial coefficients, you will see that you get the same values as Pascal's triangle. Furthermore, Pascal's formula is just the rule we use to get the triangle: add the <m>r-1</m> and <m>r</m> terms from the <m>n^{th}</m> row to get the <m>r</m> term in the <m>n+1</m> row.
+<p>If you calculate the binomial coefficients, you will see that you get the same values as Pascal's triangle. Furthermore, Pascal's formula, <xref ref="T_pascalsformula"/>, is just the rule we use to get the triangle: add the <m>r-1</m> and <m>r</m> terms from the <m>n^{th}</m> row to get the <m>r</m> term in the <m>n+1</m> row.
 </p>
 
-<p>A <term>binomial</term><idx>binomial</idx> is an expression of the form <m>a+b</m>.</p>
-<p>The Binomial Theorem gives a formula for calculating <m>(a+b)^n</m>.</p>
+<p>Why do we call <m>\binom{n}{r}</m> a binomial coefficient? 
+First, a <term>binomial</term><idx>binomial</idx> is an expression of the form <m>a+b</m>. We will see that the Binomial Theorem gives a formula for calculating <m>(a+b)^n</m>. The coefficients in this formula are the binomial coefficients.</p>
 
 <example xml:id="E_combbinomialthm"><title>A Counting Argument for <m>(a+b)^3</m></title>
-<p>Suppose we want to expand (or multiply) <m>(a+b)^3=(a+b)(a+b)(a+b)</m>. We can think of the multiplication in this way, 
+<p>Suppose we want to expand (or multiply) <m>(a+b)^3=(a+b)(a+b)(a+b)</m>. We can think of the multiplication in this way: 
 <ul>
   <li>there is 1 way to get <m>a^3</m>: choose 0 <m>b</m>'s from the three factors.</li>
   <li>there are 3 ways to get <m>a^2b</m>: choose 1 <m>b</m> from the three factors.</li>
@@ -85,7 +91,7 @@ This give us <me>(a+b)^3=\binom{3}{0}a^3+\binom{3}{1}a^2b+\binom{3}{2}ab^2+\bino
   <mrow>&amp;=\sum_{k=0}^{n}\binom{n}{k}a^{n-k}b^k.</mrow>
 </md></statement></theorem>
 
-<p>We can gernalize the counting argument from <xref ref="E_combbinomialthm"/> to prove the Binomial Theorem. This is the type of proof you would encounter in a course whic emphasizes counting techniques. However, we can also prove the Binomial Theorem using induction, which is more appropriate for this course.</p>
+<p>We can generalize the counting argument from <xref ref="E_combbinomialthm"/> to prove the Binomial Theorem. This is the type of proof you would encounter in a course which emphasizes counting techniques. However, we can also prove the Binomial Theorem using induction, which is more appropriate for this course.</p>
 
 <proof><p>Prove <me>(a+b)^n=\sum_{i=0}^{n}\binom{n}{i}a^{n-i}b^i</me>
 by induction on <m>n</m>.</p>
@@ -104,7 +110,8 @@ by induction on <m>n</m>.</p>
 <md><mrow>(a+b)^{k+1}&amp;=\sum_{i=0}^{k}\binom{k}{i}a^{k+1-i}b^i+\sum_{i=0}^{k}\binom{k}{i}a^{k-i}b^{i+1}</mrow>
 <mrow>&amp;=\sum_{i=0}^{k}\binom{k}{i}a^{k+1-i}b^i+\sum_{j=1}^{k+1}\binom{k}{j-1}a^{k+1-j}b^j</mrow>
 <mrow>&amp;=a^{k+1}+\sum_{i=1}^{k}\binom{k}{i}a^{k+1-i}b^i+\sum_{j=1}^{k}\binom{k}{j-1}a^{k+1-j}b^j+b^{k+1}</mrow>
-<mrow>&amp;\text{where we pulled out the first term of the first sum and the last term of the second sum}</mrow>
+<mrow>&amp;\text{where we pulled out the first term of the first sum}</mrow>
+ <mrow>&amp;\text{and the last term of the second sum}</mrow>
 <mrow>&amp;=a^{k+1}+\sum_{i=1}^{k}\binom{k}{i}a^{k+1-i}b^i+\sum_{i=1}^{k}\binom{k}{i-1}a^{k+1-i}b^i+b^{k+1}</mrow>
 <mrow>&amp;\text{where we just relabeled the index in the second sum}</mrow>
 <mrow>&amp;=a^{k+1}+\sum_{i=1}^{k}\biggl[\binom{k}{i}+\binom{k}{i-1}\biggr]a^{k+1-i}b^i+b^{k+1}</mrow>
@@ -125,7 +132,7 @@ by induction on <m>n</m>.</p>
 <p>We can see that <m>x=b</m>. Since there does not appear to be any term for <m>a</m>, we can let <m>a=1</m>. Thus, the closed form is <m>(1+x)^n</m>.</p></example>
 
   
-<activity xml:id="A_closedformbt"><title>A Closed Form</title><statement><p>Use the Binomial Theorem to find <m>(3-2x)^3</m>.</p></statement><hint><p>In this expression, what are <m>a, b, n</m>?</p></hint></activity>
+<activity xml:id="A_closedformbt"><title>An Expanded Form</title><statement><p>Use the Binomial Theorem to find <m>(3-2x)^3</m>.</p></statement><hint><p>In this expression, what are <m>a, b, n</m>?</p></hint></activity>
 
 <activity xml:id="A_powers2bt"><title>Powers of 2</title><statement><p>Prove <m>2^n=\sum_{k=0}^n{n \choose k}</m>.</p></statement><hint><p>Use that <m>2=(1+1)</m>.</p></hint></activity>
   

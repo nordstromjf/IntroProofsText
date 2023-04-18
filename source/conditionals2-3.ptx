@@ -31,7 +31,7 @@
 
   -->
 
-    <p>A <term>universal conditional statement</term><idx>universal conditional statement</idx> has the form <q>for all <m>x\in D</m>, if <m>P(x)</m> then <m>Q(x)</m>.</q> In symbols, we can write a universal conditional as <m>\forall x\in D, P(x)\rightarrow Q(x).</m> </p>
+    <p>A <term>universal conditional statement</term><idx><h>universal conditional</h><h>statement</h></idx> has the form <q>for all <m>x\in D</m>, if <m>P(x)</m> then <m>Q(x)</m>.</q> In symbols, we can write a universal conditional as <m>\forall x\in D, P(x)\rightarrow Q(x).</m> </p>
 
   <example xml:id="E_univcond"><title>Universal Conditional Statement</title>
     <p>Translate the statement using quantifiers and variables, <q>If an integer is even then it is divisible by 2.</q></p>
@@ -91,7 +91,7 @@
   <ul>
     <li><term>contrapositive</term><idx>contrapositive</idx>: <m>\neg q\rightarrow \neg p</m>;</li>
     <li><term>converse</term><idx>converse</idx>: <m>q\rightarrow p</m>;</li>
-    <li><term>inverse</term><idx>inverse</idx>: <m>\neg p\rightarrow \neg q</m>.</li>
+    <li><term>inverse</term><idx><h>inverse</h><h>of a conditional</h></idx>: <m>\neg p\rightarrow \neg q</m>.</li>
   </ul>
 </p></statement>
 </definition>

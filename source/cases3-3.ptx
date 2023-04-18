@@ -3,12 +3,12 @@
 
   <p>In this section we will learn another proof technique, proof by cases. We will also see an important theorem that can be useful for proof by cases, the Division Algorithm.</p>
 
-  <p><term>Proof by cases</term><idx>proof by cases</idx> is used for statements of the form for all <m>x\in D, P(x)</m>, where the set <m>D</m> can be broken into smaller sets. For example, a statement might be easier to prove for even numbers and odd numbers separately, rather than more general integers.</p>
+  <p><term>Proof by cases</term><idx><h>proof</h><h>by cases</h></idx> is used for statements of the form for all <m>x\in D, P(x)</m>, where the set <m>D</m> can be broken into smaller sets. For example, a statement might be easier to prove for even numbers and odd numbers separately, rather than more general integers.</p>
 
   <p>Every truth table represents all possible cases of true and false for a logical statement. For example, when you use a truth table to determine if an argument is valid, you are really using proof by cases.</p>
 
 <assemblage xml:id="B_cases">
-  <title>Proof by Cases</title><idx><h>proof</h><h>by cases</h></idx>
+  <title>Proof by Cases</title><idx><h>proof</h><h>by cases</h></idx><idx><h>cases</h><h>proof by</h></idx>
 
   <p>To prove for all <m>x\in D, P(x)</m> by cases, break <m>D</m> into smaller subsets. Each subset represents a case. Then each case is proven separately. Make sure you state each case, each subset, clearly.</p>
 

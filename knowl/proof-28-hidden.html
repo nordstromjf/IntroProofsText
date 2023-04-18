@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><article class="hiddenproof"><div class="para">Let <span class="process-math">\(S=\{n-dk : n-dk\geq 0, k\in\mathbb{Z}\}\text{.}\)</span> Show <span class="process-math">\(S\)</span> satisfies the Well-Ordering Principle. Clearly <span class="process-math">\(S\)</span> is a set of integers, and by definition, every element is greater than or equal to 0. So we just need to show that <span class="process-math">\(S\neq\emptyset\text{.}\)</span>
+</div> <div class="para">If <span class="process-math">\(n\geq 0\text{,}\)</span> we can let <span class="process-math">\(k=0\text{.}\)</span> Then <span class="process-math">\(n-dk=n\geq 0\text{.}\)</span> Hence <span class="process-math">\(n\in S\text{.}\)</span>
+</div> <div class="para">If <span class="process-math">\(n&lt; 0\text{,}\)</span> let <span class="process-math">\(k=n\text{.}\)</span> Then <span class="process-math">\(n-dn=n(1-d)\text{.}\)</span> But <span class="process-math">\(n&lt; 0\)</span> and <span class="process-math">\(1-d\leq 0\text{.}\)</span> Thus, <span class="process-math">\(n-dn\geq 0\text{.}\)</span> Hence <span class="process-math">\(n-dn\in S\text{.}\)</span>
+</div> <div class="para">Thus, <span class="process-math">\(S\)</span> is nonempty and satisfies the conditions of the Well-Ordering Principle. Hence, <span class="process-math">\(S\)</span> has a least element. Call it <span class="process-math">\(r\text{.}\)</span>
+</div> <div class="para">Since <span class="process-math">\(r\in S\text{,}\)</span> <span class="process-math">\(r=n-dk\)</span> for some <span class="process-math">\(k\in \mathbb{Z}\text{.}\)</span> Let <span class="process-math">\(k=q\text{.}\)</span> Then <span class="process-math">\(r=n-dq\text{,}\)</span> and so <span class="process-math">\(n=dq+r\text{.}\)</span>
+</div> <div class="para">We just need to show that <span class="process-math">\(0\leq r&lt; d\text{.}\)</span> Well, <span class="process-math">\(r\geq 0\)</span> since <span class="process-math">\(r\in S\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">We will use contradiction to show <span class="process-math">\(r&lt; d\text{.}\)</span> Assume <span class="process-math">\(r\geq d\text{.}\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{align*}
+n-d(q+1)&amp;=n-dq-d\\
+&amp;=r-d\\
+&amp;\geq 0, \text{ since } r\geq d.
+\end{align*}
+</div>
+<div class="para">But then <span class="process-math">\(n-d(q+1)\in S\)</span> and <span class="process-math">\(n-d(q+1)&lt; n-dq=r\text{.}\)</span> This contradicts that <span class="process-math">\(r\)</span> was the smallest element of <span class="process-math">\(S\text{.}\)</span> Therefore, <span class="process-math">\(r&lt; d\text{.}\)</span>
+</div>
+</div></article></body>
+</html>

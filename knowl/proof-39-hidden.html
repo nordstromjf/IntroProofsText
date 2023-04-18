@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><article class="hiddenproof"><div class="para logical">
+<div class="para">Prove</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(a+b)^n=\sum_{i=0}^{n}\binom{n}{i}a^{n-i}b^i
+\end{equation*}
+</div>
+<div class="para">by induction on <span class="process-math">\(n\text{.}\)</span>
+</div>
+</div> <div class="para logical">
+<div class="para">Base step: Let <span class="process-math">\(n=0\text{.}\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(a+b)^0=1\text{.}
+\end{equation*}
+</div>
+<div class="para">Also,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sum_{i=0}^{0}\binom{0}{i}a^{0-i}b^i=a^0b^0=1.
+\end{equation*}
+</div>
+</div> <div class="para">Induction step: Assume <span class="process-math">\((a+b)^k=\sum_{i=0}^{k}\binom{k}{i}a^{k-i}b^i\text{.}\)</span>
+</div> <div class="para">Show <span class="process-math">\((a+b)^{k+1}=\sum_{i=0}^{k+1}\binom{k+1}{i}a^{k+1-i}b^i\)</span>
+</div> <div class="para logical"><div class="displaymath process-math">
+\begin{align*}
+(a+b)^{k+1}&amp;=(a+b)^k(a+b)\\
+&amp;=\biggl(\sum_{i=0}^{k}\binom{k}{i}a^{k-i}b^i\biggr)(a+b)\\
+&amp;=a\sum_{i=0}^{k}\binom{k}{i}a^{k-i}b^i+b\sum_{i=0}^{k}\binom{k}{i}a^{k-i}b^i\\
+&amp;=\sum_{i=0}^{k}\binom{k}{i}a^{k+1-i}b^i+\sum_{i=0}^{k}\binom{k}{i}a^{k-i}b^{i+1}
+\end{align*}
+</div></div> <div class="para logical">
+<div class="para">Now we want to change the index of the second sum. This is just a substitution of variable that allows us to shift how we index the terms. If we were to write out the sum, rather than have it in summation notation, we would not need this step. But it allows us to easily combine like terms in the two summations. So, in the second sum, let <span class="process-math">\(j=i+1\text{,}\)</span> so when <span class="process-math">\(i=0, j=1\text{;}\)</span> when <span class="process-math">\(i=k, j=k+1\text{,}\)</span> and <span class="process-math">\(i=j-1\text{.}\)</span> We get</div>
+<div class="displaymath process-math">
+\begin{align*}
+(a+b)^{k+1}&amp;=\sum_{i=0}^{k}\binom{k}{i}a^{k+1-i}b^i+\sum_{i=0}^{k}\binom{k}{i}a^{k-i}b^{i+1}\\
+&amp;=\sum_{i=0}^{k}\binom{k}{i}a^{k+1-i}b^i+\sum_{j=1}^{k+1}\binom{k}{j-1}a^{k+1-j}b^j\\
+&amp;=a^{k+1}+\sum_{i=1}^{k}\binom{k}{i}a^{k+1-i}b^i+\sum_{j=1}^{k}\binom{k}{j-1}a^{k+1-j}b^j+b^{k+1}\\
+&amp;\text{where we pulled out the first term of the first sum}\\
+&amp;\text{and the last term of the second sum}\\
+&amp;=a^{k+1}+\sum_{i=1}^{k}\binom{k}{i}a^{k+1-i}b^i+\sum_{i=1}^{k}\binom{k}{i-1}a^{k+1-i}b^i+b^{k+1}\\
+&amp;\text{where we just relabeled the index in the second sum}\\
+&amp;=a^{k+1}+\sum_{i=1}^{k}\biggl[\binom{k}{i}+\binom{k}{i-1}\biggr]a^{k+1-i}b^i+b^{k+1}\\
+&amp;\text{where we combined like terms in the two sums}\\
+&amp;=a^{k+1}+\sum_{i=1}^{k}\binom{k+1}{i}a^{k+1-i}b^i+b^{k+1}\\
+&amp;\text{by Pascal's Formula}\\
+&amp;=\sum_{i=0}^{k+1}\binom{k+1}{i}a^{k+1-i}b^i
+\end{align*}
+</div>
+</div></article></body>
+</html>

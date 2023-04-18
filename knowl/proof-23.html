@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="hiddenproof"><h4 class="heading"><span class="type">Proof</span></h4>
+<div class="para">Base Step: Let <span class="process-math">\(n=3\text{.}\)</span> Then <span class="process-math">\(2n+1=2(3)+1=7\text{,}\)</span> and <span class="process-math">\(2^n=2^3=8\)</span> We know <span class="process-math">\(7&lt;8\text{.}\)</span>
+</div> <div class="para">Thus, <span class="process-math">\(2n+1&lt; 2^n\)</span> for <span class="process-math">\(n=3\text{.}\)</span>
+</div> <div class="para">Induction Step:</div> <div class="para">Assume <span class="process-math">\(2k+1&lt; 2^k\)</span> for some <span class="process-math">\(k\geq 3\text{.}\)</span>
+</div> <div class="para">Show <span class="process-math">\(2(k+1)+1&lt; 2^{k+1}\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">Scratchwork:</div>
+<div class="displaymath process-math">
+\begin{gather*}
+\text{LHS: } 2(k+1)+1=2k+2+1=2k+1+2\\
+\text{RHS: } 2^{k+1}=2(2^k)
+\end{gather*}
+</div>
+<div class="para">Now we want to make a useful observation: in the LHS expression we are addding. In the RHS expression we are multiplying. We need a way to go between them. One way is to notice that <span class="process-math">\(2(A)=A+A\text{.}\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{gather*}
+2^{k+1}=2(2^k)=2^k+2^k
+\end{gather*}
+</div>
+<div class="para">We know <span class="process-math">\(2k+1&lt; 2^k\)</span> and <span class="process-math">\(2&lt;2^k\text{,}\)</span> so we can put all this together into the proof.</div>
+</div> <div class="para logical">
+<div class="para">Proof of induction step:</div>
+<div class="displaymath process-math">
+\begin{align*}
+2k+1&lt; 2^k\ \  \textrm{ by the induction assumption}\\
+2(k+1)+1 &amp;= 2k+2+1\\
+&amp;=2k+1+2\\
+&amp;&lt;2^k+2\ \ \textrm{ by the induction assumption}\\
+&amp;&lt;2^k+2^k\ \ \textrm{ since } 2&lt; 2^k\\
+&amp;=2(2^k)\\
+&amp;=2^{k+1}
+\end{align*}
+</div>
+<div class="para">Thus, <span class="process-math">\(2(k+1)+1&lt; 2^{k+1}\text{,}\)</span> which is what we wanted to show.</div>
+</div> <div class="para">Hence, by induction <span class="process-math">\(2n+1&lt; 2^n\)</span> for <span class="process-math">\(n\geq 3\text{.}\)</span>
+</div></article><span class="incontext"><a href="moreinduction.html#proof-23" class="internal">in-context</a></span>
+</body>
+</html>

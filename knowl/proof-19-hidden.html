@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><article class="hiddenproof"><div class="para logical">
+<div class="para">Base Step: Let <span class="process-math">\(n=0\text{.}\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{gather*}
+\sum_{i=0}^{0}2^i=2^0=1\\
+2^{0+1}-1=2-1=1
+\end{gather*}
+</div>
+<div class="para">Since the left hand side of the equation equals the right hand side, <span class="process-math">\(\sum_{i=0}^{n}2^i=2^{n+1}-1\)</span> for <span class="process-math">\(n=0\text{.}\)</span>
+</div>
+</div> <div class="para">Induction Step:</div> <div class="para">Assume <span class="process-math">\(\sum_{i=0}^{k}2^i=2^{k+1}-1\)</span> for some <span class="process-math">\(k\geq 0\text{.}\)</span>
+</div> <div class="para">Show <span class="process-math">\(\sum_{i=0}^{k+1}2^i=2^{k+2}-1\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">Proof of induction step:</div>
+<div class="displaymath process-math">
+\begin{align*}
+\sum_{i=0}^{k}2^i&amp;=2^{k+1}-1 \textrm{ by the induction assumption}\\
+\sum_{i=0}^{k+1}2^i&amp;= \sum_{i=0}^{k}2^i+(2^{k+1}) \textrm{ add the } k+1 \textrm{ term of the sum}\\
+&amp;=2^{k+1}-1+2^{k+1}\\
+&amp;=2^{k+1}+2^{k+1}-1 \\
+&amp;=2^{k+1}(1+1)-1 \\
+&amp;=2^{k+1}(2)-1 \\
+&amp;=2^{k+2}-1. 
+\end{align*}
+</div>
+<div class="para">Thus, <span class="process-math">\(\sum_{i=0}^{k+1}2^i=2^{k+2}-1\text{.}\)</span>
+</div>
+</div> <div class="para">Hence, by induction <span class="process-math">\(\sum_{i=0}^{n}2^i=2^{n+1}-1\)</span> for <span class="process-math">\(n\geq 0\text{.}\)</span>
+</div></article></body>
+</html>

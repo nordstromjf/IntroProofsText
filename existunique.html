@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Existence and Uniqueness Proofs</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Introduction to Proofs">
+<meta property="book:author" content="Jennifer Firkins Nordstrom">
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.98,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.2/pretext_search.js"></script><link href="https://pretextbook.org/css/0.6/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.2</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.2/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.2/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.2/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://pretextbook.org/css/0.6/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="IntroProofs.html"><span class="title">Introduction to Proofs:</span> <span class="subtitle">An Active Exploration of Mathematical Language</span></a></h1>
+<p class="byline">Jennifer Firkins Nordstrom</p>
+</div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
+</h2>
+<div id="searchempty"><span>No results.</span></div>
+<ol id="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><a class="index-button button" href="index-1.html" title="Index"><span class="name">Index</span></a><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="theavatarbutton" class="name">You!</span><div id="preferences_menu_holder" class="hidden"><ol id="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Size</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
+<li>Width</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
+<li>Weight</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
+<li>Letter spacing</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
+<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
+<li>Word spacing</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
+<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
+<li>Line Spacing</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>dark</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>none</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>underline</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>L-underline</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>grey bar</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>light box</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>sunrise</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
+<li class="moveQ">Motion by:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="chapter5.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter5.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="settheory.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(     \newcommand{\MyTikzmark}[2]{
+     \tikz[overlay,remember picture,baseline] \node [anchor=base] (#1) {$#2$};}
+\newcommand{\DrawVLine}[3][]{
+  \begin{tikzpicture}[overlay,remember picture]
+    \draw[shorten \lt =0.3ex, #1] (#2.north) -- (#3.south);
+  \end{tikzpicture}
+}
+\newcommand{\DrawHLine}[3][]{
+  \begin{tikzpicture}[overlay,remember picture]
+    \draw[shorten \lt =0.2em, #1] (#2.west) -- (#3.east);
+  \end{tikzpicture}
+}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar"><nav id="ptx-toc" class="depth2"><ul class="structural">
+<li>
+<div class="toc-item"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="colophon-1.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li><div class="toc-item"><a href="preface-1.html" class="internal"><span class="title">Preface</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter1.html" class="internal"><span class="codenumber">1</span> <span class="title">Logic</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="whatisaproof.html" class="internal"><span class="codenumber">1.1</span> <span class="title">What is a Proof?</span></a></div></li>
+<li>
+<div class="toc-item"><a href="arguments.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Validity and Soundness</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="arguments.html#exercises-1" class="internal"><span class="codenumber">1.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="connectives.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Logical Connectives</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="connectives.html#exercises-2" class="internal"><span class="codenumber">1.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="argumentswconnectives.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Logical Arguments with Connectives</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="argumentswconnectives.html#exercises-3" class="internal"><span class="codenumber">1.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter2.html" class="internal"><span class="codenumber">2</span> <span class="title">Mathematical Statements</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="setnotation.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Introduction to Sets</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="setnotation.html#exercises-4" class="internal"><span class="codenumber">2.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="quantifiers.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Quantifiers</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="quantifiers.html#SS_quantifiers" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Quantified Statements</span></a></div></li>
+<li><div class="toc-item"><a href="quantifiers.html#SS_negquant" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Negating Quantified Statements</span></a></div></li>
+<li>
+<div class="toc-item"><a href="quantifiers.html#subsection-3" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Multiple Quantifiers</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="quantifiers.html#exercises-5" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="conditionals.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Conditional Statements</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="conditionals.html#exercises-6" class="internal"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter3.html" class="internal"><span class="codenumber">3</span> <span class="title">Basic Proof Techniques</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="directproof.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Direct Proof and Counterexample</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="directproof.html#exercises-7" class="internal"><span class="codenumber">3.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="moredirect.html" class="internal"><span class="codenumber">3.2</span> <span class="title">More Direct Proof: Rational Numbers and Divisibility</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="moredirect.html#SS_rational" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Rational Numbers</span></a></div></li>
+<li><div class="toc-item"><a href="moredirect.html#SS_divisibility" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Divisibility</span></a></div></li>
+<li><div class="toc-item"><a href="moredirect.html#exercises-8" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="cases.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Proof by Cases</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="cases.html#exercises-9" class="internal"><span class="codenumber">3.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="contradiction.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Proof by Contradiction and Contrapositive</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="contradiction.html#SS_contradiction" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Proof by Contradiction</span></a></div></li>
+<li><div class="toc-item"><a href="contradiction.html#SS_contrapositive" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Proof by Contrapositive</span></a></div></li>
+<li>
+<div class="toc-item"><a href="contradiction.html#SS_twoproofs" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Two Classical Proofs</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="contradiction.html#exercises-10" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter4.html" class="internal"><span class="codenumber">4</span> <span class="title">Proof by Induction</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="summation.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Summation Notation</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="summation.html#exercises-11" class="internal"><span class="codenumber">4.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="induction.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Mathematical Induction</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="induction.html#exercises-12" class="internal"><span class="codenumber">4.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="moreinduction.html" class="internal"><span class="codenumber">4.3</span> <span class="title">More Mathematical Induction</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="moreinduction.html#exercises-13" class="internal"><span class="codenumber">4.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="stronginduction.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Strong Induction</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="stronginduction.html#exercises-14" class="internal"><span class="codenumber">4.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter5.html" class="internal"><span class="codenumber">5</span> <span class="title">Proofs in Specific Contexts</span></a></div>
+<ul class="structural">
+<li class="active">
+<div class="toc-item"><a href="existunique.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Existence and Uniqueness Proofs</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="existunique.html#exercises-15" class="internal"><span class="codenumber">5.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="settheory.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Set Theory</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="settheory.html#SS_STnotation" class="internal"><span class="codenumber">5.2.1</span> <span class="title">Set Notation</span></a></div></li>
+<li><div class="toc-item"><a href="settheory.html#SS_setoperations" class="internal"><span class="codenumber">5.2.2</span> <span class="title">Operations on Sets</span></a></div></li>
+<li>
+<div class="toc-item"><a href="settheory.html#SS_setproofs" class="internal"><span class="codenumber">5.2.3</span> <span class="title">Proofs of Set Properties</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="settheory.html#exercises-16" class="internal"><span class="codenumber">5.2.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="functions.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Functions</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="functions.html#exercises-17" class="internal"><span class="codenumber">5.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="relations.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Equivalence Relations</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="relations.html#SS_introrelation" class="internal"><span class="codenumber">5.4.1</span> <span class="title">Introduction to Relations</span></a></div></li>
+<li>
+<div class="toc-item"><a href="relations.html#SS_equivrelations" class="internal"><span class="codenumber">5.4.2</span> <span class="title">Equivalence Relations</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="relations.html#exercises-18" class="internal"><span class="codenumber">5.4.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="orders.html" class="internal"><span class="codenumber">5.5</span> <span class="title">Ordered Sets</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="orders.html#exercises-19" class="internal"><span class="codenumber">5.5</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter6.html" class="internal"><span class="codenumber">6</span> <span class="title">Additional Topics</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="binomial9.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Binomial Theorem</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="binomial9.html#exercises-20" class="internal"><span class="codenumber">6.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="cardinality.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Cardinality</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="cardinality.html#exercises-21" class="internal"><span class="codenumber">6.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Index</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-1.html" class="internal"><span class="codenumber">A</span> <span class="title">Notation</span></a></div></li>
+<li><div class="toc-item"><a href="colophon-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="existunique"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">5.1</span> <span class="title">Existence and Uniqueness Proofs</span>
+</h2>
+<div class="para" id="p-1083">In this section we will look at existential statements which have the form “There exists <span class="process-math">\(x\)</span> such that <span class="process-math">\(P(x)\text{,}\)</span>” and “There exists a unique <span class="process-math">\(x\)</span> such that <span class="process-math">\(P(x)\text{.}\)</span>” We first studied existence statements in <a href="quantifiers.html" class="internal" title="Section 2.2: Quantifiers">Section 2.2</a>.</div>
+<div class="para" id="p-1084">Recall how to show an existential statement, <span class="process-math">\(\exists x\in D, P(x)\text{,}\)</span> is true/false:</div>
+<ul class="disc">
+<li id="li-284"><div class="para" id="p-1085">To show an existential statement is <em class="alert">true</em>, you just need to find one value in <span class="process-math">\(D\)</span> which makes <span class="process-math">\(P(x)\)</span> true.</div></li>
+<li id="li-285"><div class="para" id="p-1086">To show an existential statement is <em class="alert">false</em>, you need to show all values in <span class="process-math">\(D\)</span> make <span class="process-math">\(P(x)\)</span> false, or no values make it true. If your set is small, you can do this just by showing <span class="process-math">\(P(x)\)</span> is false for each <span class="process-math">\(x\text{.}\)</span> If <span class="process-math">\(D\)</span> is infinite, however, we will need more general techniques.</div></li>
+</ul>
+<div class="para" id="p-1087">In <a href="quantifiers.html" class="internal" title="Section 2.2: Quantifiers">Section 2.2</a>, we were generally able to find a specific <span class="process-math">\(x\)</span> in order to show a existential statement was true.</div>
+<article class="example example-like" id="E_domainqexist1"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_domainqexist1"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Existential Statements.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_domainqexist1"><article class="example example-like"> <div class="para logical" id="p-1088"><ol class="lower-alpha">
+<li id="li-286">
+<div class="para" id="p-1089">Let <span class="process-math">\(D=\mathbb{Z}\text{.}\)</span> Determine whether the statement “there exists <span class="process-math">\(x\in D\)</span> such that <span class="process-math">\(x+3/2=4\)</span>” is true or false.</div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-58" id="answer-58"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-58"><div class="answer solution-like"><div class="para" id="p-1090">Since <span class="process-math">\(x=5/2\)</span> is the only value satisfying the equation, but <span class="process-math">\(x\notin \mathbb{Z}\text{,}\)</span> the statement is false.</div></div></div>
+</li>
+<li id="li-287">
+<div class="para" id="p-1091">Let <span class="process-math">\(D=\mathbb{R}\text{.}\)</span> Determine whether the statement “there exists <span class="process-math">\(x\in D\)</span> such that <span class="process-math">\(x+3/2=4\)</span>” is true or false.</div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-59" id="answer-59"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-59"><div class="answer solution-like"><div class="para" id="p-1092">Since <span class="process-math">\(x=5/2\)</span> is the only value satisfying the equation, and <span class="process-math">\(x\in \mathbb{R}\text{,}\)</span> the statement is true.</div></div></div>
+</li>
+<li id="li-288">
+<div class="para" id="p-1093">Let <span class="process-math">\(D=\{5/2\}\text{.}\)</span> Determine whether the statement “there exists <span class="process-math">\(x\in D\)</span> such that <span class="process-math">\(x+3/2=4\)</span>” is true or false.</div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-60" id="answer-60"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-60"><div class="answer solution-like"><div class="para" id="p-1094">Since <span class="process-math">\(x=5/2\)</span> is the only value satisfying the equation, and <span class="process-math">\(x\in D\text{,}\)</span> the statement is true.</div></div></div>
+</li>
+</ol></div></article></div>
+<div class="para" id="p-1095">However, many existence statements in mathematics require us to find a more general solution.</div>
+<article class="assemblage assemblage-like" id="B_pfexistential"><h3 class="heading"><span class="title">Proving an Existential Statement.</span></h3>
+<div class="para logical" id="p-1096">
+<div class="para">To prove there exists <span class="process-math">\(x\in D\)</span> such that <span class="process-math">\(P(x)\text{:}\)</span>
+</div>
+<ol class="decimal">
+<li id="li-289"><div class="para" id="p-1097">Produce a candidate. This means you state an <span class="process-math">\(x\in D\)</span> which makes <span class="process-math">\(P(x)\)</span> true. You may need to do work to find <span class="process-math">\(x\text{,}\)</span> but that work is not part of the actual proof.</div></li>
+<li id="li-290"><div class="para" id="p-1098">Show the candidate works. In other words, show <span class="process-math">\(P(x)\)</span> is true.</div></li>
+</ol>
+</div></article><article class="example example-like" id="E_generalexistence"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_generalexistence"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">A More General Existence Proof.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_generalexistence"><article class="example example-like"> <div class="para" id="p-1099">Let <span class="process-math">\(r, s \in \mathbb{Q}\)</span> with <span class="process-math">\(r &lt; s\text{.}\)</span> Prove there exists <span class="process-math">\(x\in \mathbb{Q}\)</span> such that <span class="process-math">\(r &lt; x  &lt; s\text{.}\)</span>
+</div> <div class="para" id="p-1100">Before proving the statement, we need to find an <span class="process-math">\(x\)</span> that is between <span class="process-math">\(r\)</span> and <span class="process-math">\(s\text{.}\)</span> We need to find a general one, one that depends on <span class="process-math">\(r\)</span> and <span class="process-math">\(s\text{.}\)</span> There are lots of choices, but to guarantee it is in between <span class="process-math">\(r\)</span> and <span class="process-math">\(s\text{,}\)</span> we might want to take the midpoint, which is also the average of the two numbers, <span class="process-math">\(\frac{r+s}{2}\text{.}\)</span>
+</div> <article class="hiddenproof" id="proof-26"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-26"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-26"><article class="hiddenproof"><div class="para logical" id="p-1101">
+<div class="para">Let <span class="process-math">\(r, s\in \mathbb{Q}\)</span> with <span class="process-math">\(r &lt; s\text{.}\)</span> Let <span class="process-math">\(x=\frac{r+s}{2}\)</span> (this is stating the candidate). Then <span class="process-math">\(x\)</span> is rational (see <a href="" class="xref" data-knowl="./knowl/ER_averagerat.html" title="Exercise 3.2.3.5">Exercise 3.2.3.5</a> or prove this as an exercise). Furthermore,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/ER_averagerat.html">
+\begin{equation*}
+r=\frac{2r}{2}=\frac{r+r}{2} &lt; \frac{r+s}{2} &lt; \frac{s+s}{2} =\frac{2s}{2}=s.
+\end{equation*}
+</div>
+<div class="para">Thus, <span class="process-math">\(r &lt; x  &lt; s\text{.}\)</span> (We showed that <span class="process-math">\(x\)</span> satisfied all the necessary properties.)</div>
+</div></article></div></article></div>
+<article class="activity project-like" id="A_biginteger"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">5.1.1</span><span class="period">.</span><span class="space"> </span><span class="title">A Bigger Integer.</span>
+</h3>
+<div class="introduction" id="introduction-53"><div class="para" id="p-1102">Prove for <span class="process-math">\(n\in \mathbb{Z}\)</span> there exists an integer <span class="process-math">\(m\)</span> with <span class="process-math">\(n &lt; m\text{.}\)</span>
+</div></div>
+<article class="task exercise-like" id="task-151"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="p-1103">Given a general integer <span class="process-math">\(n\text{,}\)</span> find an interger that will always be larger that <span class="process-math">\(n\text{.}\)</span> This is your candidate for <span class="process-math">\(m\text{.}\)</span>
+</div></article><article class="task exercise-like" id="task-152"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="p-1104">Verify that <span class="process-math">\(n &lt; m\)</span> and <span class="process-math">\(m\in \mathbb{Z}\text{.}\)</span>
+</div></article><article class="task exercise-like" id="task-153"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="p-1105">Is your choice for <span class="process-math">\(m\)</span> unique? Could you find a different <span class="process-math">\(m\)</span> that works? If you can find another choice for <span class="process-math">\(m\text{,}\)</span> write a second proof of existence with your new <span class="process-math">\(m\text{.}\)</span>
+</div></article></article><div class="para" id="p-1106">Existence statements are common in mathematics. You probably came across several in calculus, for example, Rolle's Theorem and the Mean Value Theorem. Although their proofs are beyond the scope of this course, you are encouraged to look up a proof and see how the techniques we've been studying are applied. In many contexts, it can be very difficult to find a candidate. If you are stuck, it might be worth trying proof by contradiction. In this case, you assume there does not exist <span class="process-math">\(x\)</span> satisfying <span class="process-math">\(P(x)\text{.}\)</span> Symbolically this statement is <span class="process-math">\(\neg \exists x, P(x)\text{.}\)</span> The negation is equivalent to <span class="process-math">\(\forall x, \neg P(x)\text{.}\)</span> You can then use <span class="process-math">\(\forall x, \neg P(x)\)</span> for your assumption and try to reach a contradiction.</div>
+<div class="para" id="p-1107">Now we want to look at statements where the <span class="process-math">\(x\)</span> that exists is actually unique. Meaning, there is only one possible <span class="process-math">\(x\)</span> that will work. First we show <span class="process-math">\(x\)</span> exists, then we show it is unique.</div>
+<article class="assemblage assemblage-like" id="B_pfunique"><h3 class="heading"><span class="title">Proving Uniqueness.</span></h3>
+<div class="para logical" id="p-1108">
+<div class="para">To prove there exists a unique <span class="process-math">\(x\in D\)</span> such that <span class="process-math">\(P(x)\text{:}\)</span>
+</div>
+<ol class="decimal">
+<li id="li-291"><div class="para" id="p-1109">Produce a candidate. This means you state the <span class="process-math">\(x\)</span> that makes <span class="process-math">\(P(x)\)</span> true. You may need to do work to find <span class="process-math">\(x\text{,}\)</span> but that work is not part of the actual proof.</div></li>
+<li id="li-292"><div class="para" id="p-1110">Show the candidate works. In other words, show <span class="process-math">\(P(x)\)</span> is true. This shows <em class="emphasis">existence</em>.</div></li>
+<li id="li-293"><div class="para" id="p-1111">Assume <span class="process-math">\(P(x)\)</span> is true and <span class="process-math">\(P(y)\)</span> is true. Show <span class="process-math">\(x=y\text{.}\)</span> This shows <em class="emphasis">uniqueness</em>.</div></li>
+</ol>
+</div></article><div class="para" id="p-1112">The idea behind a uniqueness proof is that if the necessary property holds for <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{,}\)</span> then they must have been the same thing, so there can only be one solution. It is important to note that you just need to show <span class="process-math">\(x=y\)</span> in general. If there was a specific solution for <span class="process-math">\(x\)</span> in the existence part, you do not need to show that <span class="process-math">\(y\)</span> equals that specific <span class="process-math">\(x\text{.}\)</span>
+</div>
+<article class="example example-like" id="E_generaluniqueness"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_generaluniqueness"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.1.3</span><span class="period">.</span><span class="space"> </span><span class="title">A Uniqueness Proof.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_generaluniqueness"><article class="example example-like"> <div class="para" id="p-1113">In <a href="" class="xref" data-knowl="./knowl/E_domainqexist1.html" title="Example 5.1.1: Existential Statements">Example 5.1.1</a> we said that the solution to <span class="process-math">\(x+3/2=4\)</span> was unique. This may seem obvious since if we solve for <span class="process-math">\(x\text{,}\)</span> there is only one possible solution. But just to practice with the form of a uniqueness proof, we show how to prove uniqueness without showing <span class="process-math">\(x=5/2\text{.}\)</span>
+</div> <article class="hiddenproof" id="proof-27"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-27"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-27"><article class="hiddenproof"><div class="para logical" id="p-1114">
+<div class="para">Let <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> be solutions to <span class="process-math">\(x+3/2=4\text{.}\)</span> Then <span class="process-math">\(x+3/2=4\)</span> and <span class="process-math">\(y+3/2=4\text{.}\)</span> Thus,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x+3/2=y+3/2
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x=y
+\end{equation*}
+</div>
+<div class="para">Hence, the solution is unique.</div>
+</div></article></div></article></div>
+<article class="activity project-like" id="A_practiceunique"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">5.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">A Unique Root.</span>
+</h3>
+<div class="para" id="p-1115">Assume <span class="process-math">\(x^3+37=0\)</span> has a solution. Show the solution is unique.</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-10" id="hint-10"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-10"><div class="hint solution-like"><div class="para" id="p-1116">You do not need to find the actual solution to do this proof.</div></div></div>
+</div></article><div class="para" id="p-1117">In <a href="cases.html" class="internal" title="Section 3.3: Proof by Cases">Section 3.3</a> we stated the Division Algorithm, <a href="" class="xref" data-knowl="./knowl/T_divisionalgorthm.html" title="Theorem 3.3.3: The Division Algorithm">Theorem 3.3.3</a>. We restate it for convenience.</div>
+<article class="theorem theorem-like" id="theorem-8"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">5.1.4</span><span class="period">.</span><span class="space"> </span><span class="title">The Division Algorithm.</span>
+</h3>
+<div class="para" id="p-1118">Given any integer <span class="process-math">\(n\)</span> and any positive integer <span class="process-math">\(d\text{,}\)</span> there exist unique integers <span class="process-math">\(q, r\)</span> such that <span class="process-math">\(n=dq+r\)</span> and <span class="process-math">\(0\leq r &lt; d\text{.}\)</span>
+</div></article><div class="para" id="p-1119">This is a classic example of an exstence and uniqueness statement in mathematics. We need to prove <span class="process-math">\(q, r\)</span> exist and are unique. Before we do that we need the Well-Ordering Principle, which we will state without a proof.</div>
+<article class="theorem theorem-like" id="T_wellordering"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">5.1.5</span><span class="period">.</span><span class="space"> </span><span class="title">Well-Ordering Principle.</span>
+</h3>
+<div class="para" id="p-1120">Let <span class="process-math">\(S\)</span> be a set containing one or more integers, all of which are greater than some fixed integer. Then <span class="process-math">\(S\)</span> has a least element.</div></article><div class="para logical" id="p-1121">
+<div class="para">To check that the Well-Ordering Principle applies, you need to check three things:</div>
+<ol class="decimal">
+<li id="li-294"><div class="para" id="p-derived-li-294"><span class="process-math">\(\displaystyle S\neq \emptyset.\)</span></div></li>
+<li id="li-295"><div class="para" id="p-derived-li-295"><span class="process-math">\(\displaystyle S\subseteq \mathbb{Z}.\)</span></div></li>
+<li id="li-296"><div class="para" id="p-1122">Every element of <span class="process-math">\(S\)</span> is greater than some fixed integer.</div></li>
+</ol>
+</div>
+<article class="example example-like" id="E_wop"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_wop"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.1.6</span><span class="period">.</span><span class="space"> </span><span class="title">Well-Ordering Principle.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_wop"><article class="example example-like"> <div class="para logical" id="p-1123">
+<div class="para">First note that the Well-Ordering Principle does not apply if the set is not integers. For example,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\{1/n : n\in \mathbb{Z}, n\geq 1\}.
+\end{equation*}
+</div>
+<div class="para">This is not a subset of the integers and does not have a least element, even though every element is greater than 0.</div>
+</div> <div class="para logical" id="p-1124">
+<div class="para">Now consider <span class="process-math">\(S=\{2k+1 : k\geq 0\}\text{.}\)</span> Check each of the conditions.</div>
+<ol class="decimal">
+<li id="li-297"><div class="para" id="p-1125">
+<span class="process-math">\(S\neq \emptyset\)</span> since <span class="process-math">\(1\in S\text{.}\)</span>
+</div></li>
+<li id="li-298"><div class="para" id="p-1126">
+<span class="process-math">\(S\subseteq \mathbb{Z}\)</span> since <span class="process-math">\(2k+1\in \mathbb{Z}\text{.}\)</span>
+</div></li>
+<li id="li-299"><div class="para" id="p-1127">Every element of <span class="process-math">\(S\)</span> is greater than some fixed integer since <span class="process-math">\(2k+1\geq 1\)</span> when <span class="process-math">\(k\geq 0\text{.}\)</span>
+</div></li>
+</ol>
+</div></article></div>
+<div class="para" id="p-1128">We now prove the <em class="emphasis">existence</em> part of the Division Algorithm.</div>
+<article class="hiddenproof" id="proof-28"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-28"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-28"><article class="hiddenproof"><div class="para" id="p-1129">Let <span class="process-math">\(S=\{n-dk : n-dk\geq 0, k\in\mathbb{Z}\}\text{.}\)</span> Show <span class="process-math">\(S\)</span> satisfies the Well-Ordering Principle. Clearly <span class="process-math">\(S\)</span> is a set of integers, and by definition, every element is greater than or equal to 0. So we just need to show that <span class="process-math">\(S\neq\emptyset\text{.}\)</span>
+</div> <div class="para" id="p-1130">If <span class="process-math">\(n\geq 0\text{,}\)</span> we can let <span class="process-math">\(k=0\text{.}\)</span> Then <span class="process-math">\(n-dk=n\geq 0\text{.}\)</span> Hence <span class="process-math">\(n\in S\text{.}\)</span>
+</div> <div class="para" id="p-1131">If <span class="process-math">\(n&lt; 0\text{,}\)</span> let <span class="process-math">\(k=n\text{.}\)</span> Then <span class="process-math">\(n-dn=n(1-d)\text{.}\)</span> But <span class="process-math">\(n&lt; 0\)</span> and <span class="process-math">\(1-d\leq 0\text{.}\)</span> Thus, <span class="process-math">\(n-dn\geq 0\text{.}\)</span> Hence <span class="process-math">\(n-dn\in S\text{.}\)</span>
+</div> <div class="para" id="p-1132">Thus, <span class="process-math">\(S\)</span> is nonempty and satisfies the conditions of the Well-Ordering Principle. Hence, <span class="process-math">\(S\)</span> has a least element. Call it <span class="process-math">\(r\text{.}\)</span>
+</div> <div class="para" id="p-1133">Since <span class="process-math">\(r\in S\text{,}\)</span> <span class="process-math">\(r=n-dk\)</span> for some <span class="process-math">\(k\in \mathbb{Z}\text{.}\)</span> Let <span class="process-math">\(k=q\text{.}\)</span> Then <span class="process-math">\(r=n-dq\text{,}\)</span> and so <span class="process-math">\(n=dq+r\text{.}\)</span>
+</div> <div class="para" id="p-1134">We just need to show that <span class="process-math">\(0\leq r&lt; d\text{.}\)</span> Well, <span class="process-math">\(r\geq 0\)</span> since <span class="process-math">\(r\in S\text{.}\)</span>
+</div> <div class="para logical" id="p-1135">
+<div class="para">We will use contradiction to show <span class="process-math">\(r&lt; d\text{.}\)</span> Assume <span class="process-math">\(r\geq d\text{.}\)</span> Then</div>
+<div class="displaymath process-math" id="md-23">
+\begin{align*}
+n-d(q+1)&amp;=n-dq-d\\
+&amp;=r-d\\
+&amp;\geq 0, \text{ since } r\geq d.
+\end{align*}
+</div>
+<div class="para">But then <span class="process-math">\(n-d(q+1)\in S\)</span> and <span class="process-math">\(n-d(q+1)&lt; n-dq=r\text{.}\)</span> This contradicts that <span class="process-math">\(r\)</span> was the smallest element of <span class="process-math">\(S\text{.}\)</span> Therefore, <span class="process-math">\(r&lt; d\text{.}\)</span>
+</div>
+</div></article></div>
+<div class="para" id="p-1136">Although this is a fairly complex proof, it is a good example of how many different techniques can be used in one proof. We do not have a specific value for <span class="process-math">\(r\text{,}\)</span> rather its existence (and hence existence of <span class="process-math">\(q\)</span>) depends on existence in the Well-Ordering Principle. Now we prove <span class="process-math">\(q\)</span> and <span class="process-math">\(r\)</span> are unique.</div>
+<article class="hiddenproof" id="proof-29"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-29"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-29"><article class="hiddenproof"> <div class="para logical" id="p-1137">
+<div class="para">Assume <span class="process-math">\(q_1, r_1, q_2, r_2\)</span> exist and satisfy the conditions of the theorem. Then, <span class="process-math">\(n=dq_1+r_1\)</span> and <span class="process-math">\(0\leq r_1 &lt; d\)</span> and <span class="process-math">\(n=dq_2+r_2\)</span> and <span class="process-math">\(0\leq r_2 &lt; d\text{.}\)</span> This gives us</div>
+<div class="displaymath process-math">
+\begin{equation*}
+dq_1+r_1=dq_2+r_2.
+\end{equation*}
+</div>
+</div> <div class="para logical" id="p-1138">
+<div class="para">Rewriting,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+r_1-r_2=dq_2-dq_1=d(q_2-q_1)
+\end{equation*}
+</div>
+<div class="para">We can assume <span class="process-math">\(r_1 \geq r_2\)</span> (if they weren't, we could just rename them).</div>
+</div> <div class="para" id="p-1139">Thus, <span class="process-math">\(d\)</span> divides <span class="process-math">\(r_1-r_2\text{.}\)</span> But since <span class="process-math">\(0\leq r_1 &lt; d\)</span> and <span class="process-math">\(0\leq r_2 &lt; d\text{,}\)</span> <span class="process-math">\(0\leq r_1-r_2 &lt; d\text{.}\)</span> The only nonnegative integer <span class="process-math">\(d\)</span> divides that is smaller than itself is 0. Thus <span class="process-math">\(r_1-r_2=0\text{.}\)</span> Therefore, <span class="process-math">\(r_1=r_2\text{.}\)</span>
+</div> <div class="para logical" id="p-1140">
+<div class="para">Now</div>
+<div class="displaymath process-math" id="md-24">
+\begin{align*}
+dq_1+r_1&amp;=dq_2+r_2\\
+dq_1&amp;=dq_2\\
+q_1&amp;=q_2
+\end{align*}
+</div>
+<div class="para">Hence, <span class="process-math">\(r, q\)</span> are unique.</div>
+</div></article></div>
+<section class="exercises" id="exercises-15"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="exercise-104"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="para" id="p-1141">Prove if <span class="process-math">\(a\)</span> is a positive real number, then there exists a positive real number less than <span class="process-math">\(a\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exercise-105"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="para" id="p-1142">Prove for all real numbers <span class="process-math">\(x\text{,}\)</span> if <span class="process-math">\(x\neq 2\)</span> then there exists a unique <span class="process-math">\(y\)</span> in <span class="process-math">\(\mathbb{R}\)</span> such that <span class="process-math">\({2y\over y+1}=x\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exercise-106"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="para" id="p-1143">Prove there exists a unique integer <span class="process-math">\(a\)</span> such that <span class="process-math">\(a+b=b\)</span> for all integers <span class="process-math">\(b\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exercise-107"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="para" id="p-1144">Prove there exists a unique integer <span class="process-math">\(a\)</span> such that <span class="process-math">\(ab=b\)</span> for all integers <span class="process-math">\(b\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exercise-108"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="para" id="p-1145">Let <span class="process-math">\((1,4)\)</span> and <span class="process-math">\((3,2)\)</span> be points in the plane. Prove there is a unique line through <span class="process-math">\((1,4)\)</span> and <span class="process-math">\((3,2)\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-11" id="hint-11"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-11"><div class="hint solution-like"><div class="para" id="p-1146">First show the line exists. You can use scratchwork to find the equation of the line. Then you need to show your line passes through the two points in your proof. For uniqueness assume you have two general lines, <span class="process-math">\(y=mx+b\text{,}\)</span> passing through <span class="process-math">\((1,4)\)</span> and <span class="process-math">\((3,2)\text{.}\)</span> Show the two lines are the same. Each point on each line gives one equation.</div></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-109"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="para" id="p-1147">Let <span class="process-math">\((a,b)\)</span> and <span class="process-math">\((c,d)\)</span> be points in the plane with <span class="process-math">\(a\neq c\text{.}\)</span> Prove there is a unique line through <span class="process-math">\((a,b)\)</span> and <span class="process-math">\((c,d)\text{.}\)</span>
+</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-12" id="hint-12"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-12"><div class="hint solution-like"><div class="para" id="p-1148">First show the line exists. You can use scratchwork to find the equation of the line. Then you need to show your line passes through the two points in your proof. For uniqueness assume you have two general lines passing through <span class="process-math">\((a,b)\)</span> and <span class="process-math">\((c,d)\text{.}\)</span> Show the two lines are the same. Each point on each line gives one equation.</div></div></div>
+</div></article></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="chapter5.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="settheory.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+</div></main>
+</div>
+<div class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org"><div class="name">Authored in PreTeXt</div>
+<div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259 "></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0  472  9732 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496 A 4241 4241  0  0  1  4724  3590 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259 A 4507 4507  0  0  1  4724  9448 "></path><polyline points="5385,4299 4062,8125 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="8598,3496 8598,9259 " style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="850,3496 850,9259 " style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="4960,9685 4488,9685 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="3070,4582 1889,6141 3070,7700 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="6418,4582 7600,6141 6418,7700 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="8976,3590 8976,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732 "></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy"><div class="name">Powered by Runestone</div>
+<img class="logo" title="Powered by Runestone" src="https://runestone.academy/runestone/static/rectangle_badge.png" alt="Powered by Runestone"></a><a class="mathjax-logo" href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a>
+</div>
+</body>
+</html>

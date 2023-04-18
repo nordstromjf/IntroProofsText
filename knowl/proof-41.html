@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
+<div class="para logical">
+<div class="para">We will prove this by contradiction. Assume <span class="process-math">\([0, 1]\)</span> is countable. That means there is a one to one correspondence between <span class="process-math">\(\mathbb{N}\)</span> and <span class="process-math">\([0, 1]\text{.}\)</span> We don't need to know what it is, just that it exists. Since there is a one to one correspondence, there is a way to list the elements of <span class="process-math">\([0, 1]\text{.}\)</span> First, note that every real number has a decimal representation, and since our elements are less than or equal to one, each real number can be represented by <span class="process-math">\(0.a_{i1}a_{i2}a_{i3}\ldots\text{.}\)</span> Thus we can write our list as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+b_1=0.a_{11}a_{12}a_{13}\ldots
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+b_2=0.a_{21}a_{22}a_{23}\ldots
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+b_3=0.a_{31}a_{32}a_{33}\ldots
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\vdots
+\end{equation*}
+</div>
+<div class="para">Since we assumed we had a listing of every real number in <span class="process-math">\([0, 1]\text{,}\)</span> every such decimal must be on our list.</div>
+</div> <div class="para logical">
+<div class="para">Now define</div>
+<div class="displaymath process-math">
+\begin{equation*}
+d_1=\begin{cases}
+1  &amp;  \text{ if } a_{ii}\neq 1\\
+2 &amp;  \text{ if } a_{ii}=1
+\end{cases}
+\end{equation*}
+</div>
+<div class="para">We can see that for every <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(d\neq b_n\)</span> since it differs in the <span class="process-math">\(n\)</span>th decimal place. Thus <span class="process-math">\(d\)</span> is not on our list. This is a contradiction since we assumed we were able to include every real number in <span class="process-math">\([0, 1]\)</span> on our list. Hence <span class="process-math">\([0, 1]\)</span> is not countable.</div>
+</div></article><span class="incontext"><a href="cardinality.html#proof-41" class="internal">in-context</a></span>
+</body>
+</html>

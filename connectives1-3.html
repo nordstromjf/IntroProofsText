@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Logical Connectives</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Introduction to Proofs">
+<meta property="book:author" content="Jennifer Firkins Nordstrom">
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.98,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.2/pretext_search.js"></script><link href="https://pretextbook.org/css/0.6/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.2</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.2/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.2/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.2/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://pretextbook.org/css/0.6/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="IntroProofs.html"><span class="title">Introduction to Proofs</span></a></h1>
+<p class="byline">Jennifer Firkins Nordstrom</p>
+</div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
+</h2>
+<div id="searchempty"><span>No results.</span></div>
+<ol id="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><a class="index-button button" href="index-1.html" title="Index"><span class="name">Index</span></a><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="theavatarbutton" class="name">You!</span><div id="preferences_menu_holder" class="hidden"><ol id="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Size</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
+<li>Width</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
+<li>Weight</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
+<li>Letter spacing</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
+<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
+<li>Word spacing</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
+<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
+<li>Line Spacing</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>dark</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>none</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>underline</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>L-underline</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>grey bar</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>light box</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>sunrise</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
+<li class="moveQ">Motion by:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="arguments1-2.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter1.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="argumentswconnectives1-4.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(     \newcommand{\MyTikzmark}[2]{
+     \tikz[overlay,remember picture,baseline] \node [anchor=base] (#1) {$#2$};}
+\newcommand{\DrawVLine}[3][]{
+  \begin{tikzpicture}[overlay,remember picture]
+    \draw[shorten \lt =0.3ex, #1] (#2.north) -- (#3.south);
+  \end{tikzpicture}
+}
+\newcommand{\DrawHLine}[3][]{
+  \begin{tikzpicture}[overlay,remember picture]
+    \draw[shorten \lt =0.2em, #1] (#2.west) -- (#3.east);
+  \end{tikzpicture}
+}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar"><nav id="ptx-toc" class="depth2"><ul class="structural">
+<li>
+<div class="toc-item"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="colophon-1.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li><div class="toc-item"><a href="preface-1.html" class="internal"><span class="title">Preface</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter1.html" class="internal"><span class="codenumber">1</span> <span class="title">Logic</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="whatisaproof.html" class="internal"><span class="codenumber">1.1</span> <span class="title">What is a Proof?</span></a></div></li>
+<li>
+<div class="toc-item"><a href="arguments1-2.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Validity and Soundness</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="arguments1-2.html#exercises-1" class="internal"><span class="codenumber">1.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="active">
+<div class="toc-item"><a href="connectives1-3.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Logical Connectives</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="connectives1-3.html#exercises-2" class="internal"><span class="codenumber">1.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="argumentswconnectives1-4.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Logical Arguments with Connectives</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="argumentswconnectives1-4.html#exercises-3" class="internal"><span class="codenumber">1.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter2.html" class="internal"><span class="codenumber">2</span> <span class="title">Mathematical Statements</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="setnotation.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Introduction to Sets</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="setnotation.html#exercises-4" class="internal"><span class="codenumber">2.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="quantifiers.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Quantifiers</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="quantifiers.html#SS_quantifiers" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Quantified Statements</span></a></div></li>
+<li>
+<div class="toc-item"><a href="quantifiers.html#SS_negquant" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Negating Quantified Statements</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="quantifiers.html#exercises-5" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="conditionals2-1.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Conditional Statements</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="conditionals2-1.html#exercises-6" class="internal"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter3.html" class="internal"><span class="codenumber">3</span> <span class="title">Basic Proof Techniques</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="directproof.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Direct Proof and Counterexample</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="directproof.html#exercises-7" class="internal"><span class="codenumber">3.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="moredirect.html" class="internal"><span class="codenumber">3.2</span> <span class="title">More Direct Proofs: Rational Numbers and Divisibility</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="moredirect.html#SS_rational" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Rational Numbers</span></a></div></li>
+<li><div class="toc-item"><a href="moredirect.html#SS_divisibility" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Divisibility</span></a></div></li>
+<li><div class="toc-item"><a href="moredirect.html#exercises-8" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="cases.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Proof by Cases</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="cases.html#exercises-9" class="internal"><span class="codenumber">3.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="contradiction3-4.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Proof by Contradiction and Contrapositive</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="contradiction3-4.html#SS_contradiction" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Proof by Contradiction</span></a></div></li>
+<li><div class="toc-item"><a href="contradiction3-4.html#SS_contrapositive" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Proof by Contrapositive</span></a></div></li>
+<li>
+<div class="toc-item"><a href="contradiction3-4.html#SS_twoproofs" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Two Classical Proofs</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="contradiction3-4.html#exercises-10" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter4.html" class="internal"><span class="codenumber">4</span> <span class="title">Proof by Induction</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="summation4-1.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Summation Notation</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="summation4-1.html#exercises-11" class="internal"><span class="codenumber">4.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="induction5-2.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Mathematical Induction</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="induction5-2.html#exercises-12" class="internal"><span class="codenumber">4.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="moreinduction4-3.html" class="internal"><span class="codenumber">4.3</span> <span class="title">More Mathematical Induction</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="moreinduction4-3.html#exercises-13" class="internal"><span class="codenumber">4.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="stronginduction5-4.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Strong Induction</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="stronginduction5-4.html#exercises-14" class="internal"><span class="codenumber">4.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter5.html" class="internal"><span class="codenumber">5</span> <span class="title">Proofs in Specific Contexts</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="existunique.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Existence and Uniqueness Proofs</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="existunique.html#exercises-15" class="internal"><span class="codenumber">5.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="settheory.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Set Theory</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="settheory.html#SS_STnotation" class="internal"><span class="codenumber">5.2.1</span> <span class="title">Set Notation</span></a></div></li>
+<li><div class="toc-item"><a href="settheory.html#SS_setoperations" class="internal"><span class="codenumber">5.2.2</span> <span class="title">Operations on Sets</span></a></div></li>
+<li>
+<div class="toc-item"><a href="settheory.html#SS_setproofs" class="internal"><span class="codenumber">5.2.3</span> <span class="title">Proofs of Set Properties</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="settheory.html#exercises-16" class="internal"><span class="codenumber">5.2.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="functions.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Functions</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="functions.html#exercises-17" class="internal"><span class="codenumber">5.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="relations.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Equivalence Relations</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="relations.html#SS_introrelation" class="internal"><span class="codenumber">5.4.1</span> <span class="title">Introduction to Relations</span></a></div></li>
+<li>
+<div class="toc-item"><a href="relations.html#SS_equivrelations" class="internal"><span class="codenumber">5.4.2</span> <span class="title">Equivalence Relations</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="relations.html#exercises-18" class="internal"><span class="codenumber">5.4.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="orders.html" class="internal"><span class="codenumber">5.5</span> <span class="title">Ordered Sets</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="orders.html#exercises-19" class="internal"><span class="codenumber">5.5</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter6.html" class="internal"><span class="codenumber">6</span> <span class="title">Additional Topics</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="binomial9.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Binomial Theorem</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="binomial9.html#exercises-20" class="internal"><span class="codenumber">6.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="cardinality.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Cardinality</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="cardinality.html#exercises-21" class="internal"><span class="codenumber">6.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Index</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-1.html" class="internal"><span class="codenumber">A</span> <span class="title">Notation</span></a></div></li>
+<li><div class="toc-item"><a href="colophon-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="connectives1-3"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.3</span> <span class="title">Logical Connectives</span>
+</h2>
+<div class="para" id="p-104">We want to understand what makes a mathematical proof. One of the foundations for proofs is logical structure. If we build a good foundation in logic, then we can better understand mathematical statements and proof structures. We have already seen the general form for an argument. Now we want to focus on types of statements used to make up an argument. In this section we will be looking at logical forms, independent of content.</div>
+<div class="para" id="p-105">If <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> are variables representing statements, we can combine these statements into new statements using logical connectives.</div>
+<div class="para logical" id="p-106">
+<div class="para">Logical Connectives:</div>
+<ul class="disc">
+<li id="li-31">
+<span class="heading"><span class="title">Negation.</span></span><div class="para" id="p-derived-li-31"> NOT. Notation: <span class="process-math">\(\neg p\text{,}\)</span> read as “not <span class="process-math">\(p\text{.}\)</span>”</div>
+</li>
+<li id="li-32">
+<span class="heading"><span class="title">Conjunction.</span></span><div class="para" id="p-derived-li-32"> AND. Notation: <span class="process-math">\(p\wedge q\text{,}\)</span> read as “<span class="process-math">\(p\)</span> and <span class="process-math">\(q\text{.}\)</span>”</div>
+</li>
+<li id="li-33">
+<span class="heading"><span class="title">Disjunction.</span></span><div class="para" id="p-derived-li-33"> OR. Notation: <span class="process-math">\(p\vee q\text{,}\)</span> read as “<span class="process-math">\(p\)</span> or <span class="process-math">\(q\text{.}\)</span>”</div>
+</li>
+</ul>
+</div>
+<div class="para" id="p-107">Our goal is to determine when these new statements are true or false based on whether <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> are true or false. We can create a truth-table  that looks at all the possibilities of true of false for <span class="process-math">\(p\)</span> and <span class="process-math">\(q\text{.}\)</span> When writing a truth-table, make a column for each variable, list all the possible cases of true and false, then for each case, determine whether the new statement (with the connective) is true or false</div>
+<div class="para" id="p-108">
+<figure class="table table-like" id="T_ttnot"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">1.3.1<span class="period">.</span></span><span class="space"> </span>Truth-table for <span class="process-math">\(\neg p\text{.}\)</span></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b2 r2 l1 t1 lines"><span class="process-math">\(p\)</span></td>
+<td class="c m b2 r1 l0 t1 lines"><span class="process-math">\(\neg p\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r2 l1 t0 lines">T</td>
+<td class="c m b1 r1 l0 t0 lines">F</td>
+</tr>
+<tr>
+<td class="c m b1 r2 l1 t0 lines">F</td>
+<td class="c m b1 r1 l0 t0 lines">T</td>
+</tr>
+</table></div></figure> It should make sense that if we negate T we get F, and vice versa.</div>
+<div class="para" id="p-109">
+<figure class="table table-like" id="T_ttand"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">1.3.2<span class="period">.</span></span><span class="space"> </span>Truth-table for <span class="process-math">\(p\wedge q\text{.}\)</span></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b2 r1 l1 t1 lines"><span class="process-math">\(p\)</span></td>
+<td class="c m b2 r2 l0 t1 lines"><span class="process-math">\(q\)</span></td>
+<td class="c m b2 r1 l0 t1 lines"><span class="process-math">\(p\wedge q\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">T</td>
+<td class="c m b1 r2 l0 t0 lines">T</td>
+<td class="c m b1 r1 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">T</td>
+<td class="c m b1 r2 l0 t0 lines">F</td>
+<td class="c m b1 r1 l0 t0 lines">F</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">F</td>
+<td class="c m b1 r2 l0 t0 lines">T</td>
+<td class="c m b1 r1 l0 t0 lines">F</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">F</td>
+<td class="c m b1 r2 l0 t0 lines">F</td>
+<td class="c m b1 r1 l0 t0 lines">F</td>
+</tr>
+</table></div></figure> Again, the truth values for an “and” statement should make sense. The only time it should be true is if both parts of the statement are true.</div>
+<div class="para" id="p-110">
+<figure class="table table-like" id="T_ttor"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">1.3.3<span class="period">.</span></span><span class="space"> </span>Truth-table for <span class="process-math">\(p\vee q\text{.}\)</span></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b2 r1 l1 t1 lines"><span class="process-math">\(p\)</span></td>
+<td class="c m b2 r2 l0 t1 lines"><span class="process-math">\(q\)</span></td>
+<td class="c m b2 r1 l0 t1 lines"><span class="process-math">\(p\vee q\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">T</td>
+<td class="c m b1 r2 l0 t0 lines">T</td>
+<td class="c m b1 r1 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">T</td>
+<td class="c m b1 r2 l0 t0 lines">F</td>
+<td class="c m b1 r1 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">F</td>
+<td class="c m b1 r2 l0 t0 lines">T</td>
+<td class="c m b1 r1 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">F</td>
+<td class="c m b1 r2 l0 t0 lines">F</td>
+<td class="c m b1 r1 l0 t0 lines">F</td>
+</tr>
+</table></div></figure> The truth values for an “or” statement should, mostly, make sense,  as long as one part of the “or” statement is true, the whole statement is true. You may ask about the case where both parts are true. We think of this as an “inclusive or,” which means we allow both to be true. For example, “A computer science major must take Math 175 or Math 250.” You will still get a major if you take both.</div>
+<div class="para" id="p-111">There is a connective for an “exclusive or” (one or the other, not both).</div>
+<div class="para logical" id="p-112">
+<div class="para">Logical Connective:</div>
+<ul class="disc"><li id="li-34">
+<span class="heading"><span class="title">Exclusive Or.</span></span><div class="para" id="p-derived-li-34"> OR, NOT BOTH. Notation: <span class="process-math">\(p\veebar q\text{,}\)</span> read as “<span class="process-math">\(p\)</span> exclusive or <span class="process-math">\(q\text{.}\)</span>”</div>
+</li></ul>
+</div>
+<article class="activity project-like" id="A_xor"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.3.1</span><span class="period">.</span><span class="space"> </span><span class="title">Exclusive Or.</span>
+</h3>
+<div class="para" id="p-113">Give the truth table for <span class="process-math">\(p \veebar q\)</span> based on a small change to the truth table for <span class="process-math">\(p \vee q\text{.}\)</span>
+</div></article><div class="para" id="p-114">Now that we can connect two statements, we can connect as many as we'd like using multiple quantifiers. For example, we could form the statement <span class="process-math">\(p\vee(q\ \wedge \neg p)\text{.}\)</span> Make sure you use parentheses when combining statements. For example, <span class="process-math">\(\neg p\vee q\)</span> is not the same as <span class="process-math">\(\neg (p\vee q)\text{.}\)</span>
+</div>
+<div class="para" id="p-115"><figure class="table table-like" id="T_ttparenexample"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">1.3.4<span class="period">.</span></span><span class="space"> </span>Truth-table for <span class="process-math">\(\neg p\vee q\)</span> and <span class="process-math">\(\neg (p\vee q)\text{.}\)</span></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b2 r1 l1 t1 lines"><span class="process-math">\(p\)</span></td>
+<td class="c m b2 r2 l0 t1 lines"><span class="process-math">\(q\)</span></td>
+<td class="c m b2 r1 l0 t1 lines"><span class="process-math">\(\neg p\)</span></td>
+<td class="c m b2 r1 l0 t1 lines"><span class="process-math">\(\neg p \vee q\)</span></td>
+<td class="c m b2 r1 l0 t1 lines"><span class="process-math">\(p \vee q\)</span></td>
+<td class="c m b2 r1 l0 t1 lines"><span class="process-math">\(\neg (p \vee q)\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">T</td>
+<td class="c m b1 r2 l0 t0 lines">T</td>
+<td class="c m b1 r1 l0 t0 lines">F</td>
+<td class="c m b1 r1 l0 t0 lines">T</td>
+<td class="c m b1 r1 l0 t0 lines">T</td>
+<td class="c m b1 r1 l0 t0 lines">F</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">T</td>
+<td class="c m b1 r2 l0 t0 lines">F</td>
+<td class="c m b1 r1 l0 t0 lines">F</td>
+<td class="c m b1 r1 l0 t0 lines">F</td>
+<td class="c m b1 r1 l0 t0 lines">T</td>
+<td class="c m b1 r1 l0 t0 lines">F</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">F</td>
+<td class="c m b1 r2 l0 t0 lines">T</td>
+<td class="c m b1 r1 l0 t0 lines">T</td>
+<td class="c m b1 r1 l0 t0 lines">T</td>
+<td class="c m b1 r1 l0 t0 lines">T</td>
+<td class="c m b1 r1 l0 t0 lines">F</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">F</td>
+<td class="c m b1 r2 l0 t0 lines">F</td>
+<td class="c m b1 r1 l0 t0 lines">T</td>
+<td class="c m b1 r1 l0 t0 lines">T</td>
+<td class="c m b1 r1 l0 t0 lines">F</td>
+<td class="c m b1 r1 l0 t0 lines">T</td>
+</tr>
+</table></div></figure></div>
+<article class="activity project-like" id="A_ttpractice"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.3.2</span><span class="period">.</span><span class="space"> </span><span class="title">Truth Table Practice.</span>
+</h3>
+<div class="para" id="p-116">Give the truth table for <span class="process-math">\(\neg p\  \vee \neg q\text{.}\)</span>
+</div></article><article class="activity project-like" id="A_morepractice"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.3.3</span><span class="period">.</span><span class="space"> </span><span class="title">More Truth Table Practice.</span>
+</h3>
+<div class="para" id="p-117">Give the truth table for <span class="process-math">\((p \vee q) \wedge \neg(p \wedge q)\text{.}\)</span>
+</div></article><article class="activity project-like" id="A_numrows"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.3.4</span><span class="period">.</span><span class="space"> </span><span class="title">Truth Table with Three Variables.</span>
+</h3>
+<div class="para" id="p-118">Truth tables can have more than two variables. We just need to make sure we have a row for every possible combination of truth values for the variables. How many rows will you need in a truth table for 3 variables? Give the truth table for <span class="process-math">\((p \wedge q) \vee r\text{.}\)</span>
+</div></article><div class="para" id="p-119">One of the things we want to be able to do is to translate English (or mathematical) sentences into logical statements. We have to be careful about how common phrases are really hidden “and”s. For example, “<span class="process-math">\(p\)</span> but <span class="process-math">\(q\)</span>” is really <span class="process-math">\(p\wedge q\text{.}\)</span> Similarly, “neither <span class="process-math">\(p\)</span> nor <span class="process-math">\(q\)</span>” is really <span class="process-math">\(\neg p\ \wedge \neg q\text{.}\)</span>
+</div>
+<div class="para" id="p-120">A <dfn class="terminology">conditional statement</dfn> has the form “if <span class="process-math">\(p\)</span> then <span class="process-math">\(q\text{.}\)</span>” We use the connective <span class="process-math">\(p\rightarrow q\)</span> for conditional statements.</div>
+<div class="para logical" id="p-121">
+<div class="para">Logical Connective:</div>
+<ul class="disc"><li id="li-35">
+<span class="heading"><span class="title">Conditional.</span></span><div class="para" id="p-derived-li-35"> IF THEN. Notation: <span class="process-math">\(p\rightarrow q\text{,}\)</span> read as “if <span class="process-math">\(p\)</span> then <span class="process-math">\(q\text{.}\)</span>”</div>
+</li></ul>
+</div>
+<div class="para" id="p-122">Before looking at the truth-table, we need to understand when an if...then... statement is true or false. This is actually trickier than it seems.</div>
+<article class="example example-like" id="E_condstatement"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_condstatement"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.3.5</span><span class="period">.</span><span class="space"> </span><span class="title">Conditional Statement.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_condstatement"><article class="example example-like"> <div class="para" id="p-123">Suppose I say to you “If it rains tomorrow, then class is cancelled.” When would you accuse me of lying to you? For example, if it doesn't rain and we have class, would you have thought my statement false? No. Now, you might not think my statement is true, either. But remember, statements must be either true or false. So if it is not false, then it is true.</div> <div class="para" id="p-124">Now, what if it doesn't rain, but I cancel class anyway? Would I have lied? No, I didn't tell you I wouldn't cancel class. So, again, this would be a true statement.</div> <div class="para" id="p-125">The only time you could accuse me of having made a false statement is if it rains and we don't cancel class. If we think of “it rains tomorrow” as <span class="process-math">\(p\)</span> and “class is cancelled” as <span class="process-math">\(q\text{,}\)</span> then the only time the statement is false is when <span class="process-math">\(p\)</span> is true and <span class="process-math">\(q\)</span> is false.</div></article></div>
+<div class="para" id="p-126"><figure class="table table-like" id="T_ttconditional"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">1.3.6<span class="period">.</span></span><span class="space"> </span>Truth-table for <span class="process-math">\(p\rightarrow q\text{.}\)</span></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b2 r1 l1 t1 lines"><span class="process-math">\(p\)</span></td>
+<td class="c m b2 r2 l0 t1 lines"><span class="process-math">\(q\)</span></td>
+<td class="c m b2 r1 l0 t1 lines"><span class="process-math">\(p\rightarrow q\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">T</td>
+<td class="c m b1 r2 l0 t0 lines">T</td>
+<td class="c m b1 r1 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">T</td>
+<td class="c m b1 r2 l0 t0 lines">F</td>
+<td class="c m b1 r1 l0 t0 lines">F</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">F</td>
+<td class="c m b1 r2 l0 t0 lines">T</td>
+<td class="c m b1 r1 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">F</td>
+<td class="c m b1 r2 l0 t0 lines">F</td>
+<td class="c m b1 r1 l0 t0 lines">T</td>
+</tr>
+</table></div></figure></div>
+<div class="para" id="p-127">To better understand the truth or falsity of a conditional, let's look at another example.</div>
+<article class="example example-like" id="E_mathcond"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_mathcond"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.3.7</span><span class="period">.</span><span class="space"> </span><span class="title">A Mathematical Conditional Statement.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_mathcond"><article class="example example-like"> <div class="para" id="p-128">Consider the mathematical statement “If <span class="process-math">\(x&gt;2\)</span> then <span class="process-math">\(x^2&gt;4\)</span>”. Do you agree this is a true mathematical statement?</div> <div class="para" id="p-129">Let <span class="process-math">\(p\)</span> be <span class="process-math">\(x&gt;2\)</span> and <span class="process-math">\(q\)</span> be <span class="process-math">\(x^2&gt;4\text{.}\)</span> Consider all the cases of <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> being true or false.</div> <div class="para" id="p-130">For example, if <span class="process-math">\(x=5, x^2=25\text{,}\)</span> then we have the case where <span class="process-math">\(p\)</span> is true and <span class="process-math">\(q\)</span> is true.</div> <div class="para" id="p-131">If <span class="process-math">\(x=-5, x^2=25\text{,}\)</span> then we have the case where <span class="process-math">\(p\)</span> is false and <span class="process-math">\(q\)</span> is true. But remember, the original statement is still true!</div> <div class="para" id="p-132">If <span class="process-math">\(x=1, x^2=1\text{,}\)</span> then we have the case where <span class="process-math">\(p\)</span> is false and <span class="process-math">\(q\)</span> is false. But again, the original statement is still true.</div> <div class="para" id="p-133">It will be impossible to find an <span class="process-math">\(x\)</span> that makes <span class="process-math">\(x&gt;2\)</span> true and <span class="process-math">\(x^2&gt;4\)</span> false. Thus, we never have the case where the conditional is false.</div></article></div>
+<article class="activity project-like" id="A_exconditional"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.3.5</span><span class="period">.</span><span class="space"> </span><span class="title">Understanding Conditionals.</span>
+</h3>
+<div class="para" id="p-134">Give an example of a conditional statement, not one of the examples from above. Write in your own words why <span class="process-math">\(p\rightarrow q\)</span> must be true whenever <span class="process-math">\(p\)</span> is false.</div></article><div class="para" id="p-135">In a conditional statement <span class="process-math">\(p\rightarrow q\text{,}\)</span> we call <span class="process-math">\(p\)</span> the <dfn class="terminology">hypothesis</dfn>, and <span class="process-math">\(q\)</span> the <dfn class="terminology">conclusion</dfn>.</div>
+<article class="activity project-like" id="A_condpractice"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.3.6</span><span class="period">.</span><span class="space"> </span><span class="title">Practice with Conditionals.</span>
+</h3>
+<div class="para" id="p-136">Give the truth table for <span class="process-math">\((p \rightarrow q) \wedge (q\rightarrow p)\text{.}\)</span>
+</div></article><div class="para" id="p-137">The statement <span class="process-math">\((p \rightarrow q) \wedge (q\rightarrow p)\)</span> is useful in mathematics, but it is not very concise. We can simplify this statement by introducing an additional logical connective.</div>
+<div class="para logical" id="p-138">
+<div class="para">Logical Connective:</div>
+<ul class="disc"><li id="li-36">
+<span class="heading"><span class="title">Biconditional.</span></span><div class="para" id="p-derived-li-36"> IF AND ONLY IF. Notation: <span class="process-math">\(p\leftrightarrow q\text{,}\)</span> read as "<span class="process-math">\(p\)</span> if and only if <span class="process-math">\(q\text{.}\)</span>"</div>
+</li></ul>
+</div>
+<div class="para" id="p-139">The biconditional is really just the combination of two conditionals: <span class="process-math">\(p\rightarrow q\)</span> and <span class="process-math">\(q\rightarrow p\text{.}\)</span> In particular, <span class="process-math">\(p\leftrightarrow q\equiv (p\rightarrow q)\wedge (q\rightarrow p)\text{.}\)</span>
+</div>
+<div class="para" id="p-140"><figure class="table table-like" id="T_ttbicond"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">1.3.8<span class="period">.</span></span><span class="space"> </span>Truth-table for <span class="process-math">\(p\leftrightarrow q\text{.}\)</span></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b2 r1 l1 t1 lines"><span class="process-math">\(p\)</span></td>
+<td class="c m b2 r2 l0 t1 lines"><span class="process-math">\(q\)</span></td>
+<td class="c m b2 r1 l0 t1 lines"><span class="process-math">\(p\leftrightarrow q\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">T</td>
+<td class="c m b1 r2 l0 t0 lines">T</td>
+<td class="c m b1 r1 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">T</td>
+<td class="c m b1 r2 l0 t0 lines">F</td>
+<td class="c m b1 r1 l0 t0 lines">F</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">F</td>
+<td class="c m b1 r2 l0 t0 lines">T</td>
+<td class="c m b1 r1 l0 t0 lines">F</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">F</td>
+<td class="c m b1 r2 l0 t0 lines">F</td>
+<td class="c m b1 r1 l0 t0 lines">T</td>
+</tr>
+</table></div></figure></div>
+<article class="activity project-like" id="A_understandingbicond"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.3.7</span><span class="period">.</span><span class="space"> </span><span class="title">Understanding Biconditionals.</span>
+</h3>
+<div class="para" id="p-141">Explain, in your own words, how to decide when <span class="process-math">\(p \leftrightarrow q\)</span> is true or false.</div></article><article class="activity project-like" id="A_piecebicond"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.3.8</span><span class="period">.</span><span class="space"> </span><span class="title">Biconditional as Two Conditionals.</span>
+</h3>
+<div class="para" id="p-142">We read the biconditional <span class="process-math">\(p \leftrightarrow q\)</span> as “<span class="process-math">\(p\)</span> if and only if <span class="process-math">\(q\text{.}\)</span>” Determine which of the two statements <span class="process-math">\(p \rightarrow q\)</span> and <span class="process-math">\(q\rightarrow p\)</span> is equivalent to “<span class="process-math">\(p\)</span> if <span class="process-math">\(q\)</span>” and which is “<span class="process-math">\(p\)</span> only if <span class="process-math">\(q\text{.}\)</span>” Think about when each statement should be true (or false).</div></article><div class="para" id="p-143">In mathematics we might see statements such as “<span class="process-math">\(p\)</span> is necessary for <span class="process-math">\(q\)</span>” or “<span class="process-math">\(p\)</span> is sufficient for <span class="process-math">\(q\)</span>”. These are really conditional statements.</div>
+<div class="para" id="p-144">
+<span class="process-math">\(p\)</span> is sufficient for <span class="process-math">\(q\)</span> means <span class="process-math">\(p\rightarrow q\text{.}\)</span>
+</div>
+<div class="para" id="p-145">
+<span class="process-math">\(p\)</span> is necessary for <span class="process-math">\(q\)</span> means <span class="process-math">\(\neg p\rightarrow \neg q\text{,}\)</span> which is equivalent to <span class="process-math">\(q\rightarrow p\text{.}\)</span>
+</div>
+<div class="para" id="p-146">So a statement such as <span class="process-math">\(p\)</span> is necessary and sufficient for <span class="process-math">\(q\)</span> means <span class="process-math">\(p\leftrightarrow q\text{.}\)</span>
+</div>
+<div class="para" id="p-147">We introduce one last connective, which is not as commonly used. It is nice to have an additional connective for practice, but this connective has a particularly nice property which we will explore later.</div>
+<div class="para logical" id="p-148">
+<div class="para">Logical Connective:</div>
+<ul class="disc"><li id="li-37">
+<span class="heading"><span class="title">Nand.</span></span><div class="para" id="p-derived-li-37"> NOT BOTH. Notation: <span class="process-math">\(p//q\text{,}\)</span> read as “<span class="process-math">\(p\)</span> nand <span class="process-math">\(q\text{.}\)</span>”</div>
+</li></ul>
+</div>
+<div class="para" id="p-149">Nand is really just the negation of “and”: <span class="process-math">\(\neg (p\wedge q)\text{.}\)</span> In particular, <span class="process-math">\(p // q\equiv \neg(p\wedge q)\text{.}\)</span>
+</div>
+<div class="para" id="p-150"><figure class="table table-like" id="T_nand"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">1.3.9<span class="period">.</span></span><span class="space"> </span>Truth-table for <span class="process-math">\(p // q\text{.}\)</span></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b2 r1 l1 t1 lines"><span class="process-math">\(p\)</span></td>
+<td class="c m b2 r2 l0 t1 lines"><span class="process-math">\(q\)</span></td>
+<td class="c m b2 r1 l0 t1 lines"><span class="process-math">\(p//q\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">T</td>
+<td class="c m b1 r2 l0 t0 lines">T</td>
+<td class="c m b1 r1 l0 t0 lines">F</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">T</td>
+<td class="c m b1 r2 l0 t0 lines">F</td>
+<td class="c m b1 r1 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">F</td>
+<td class="c m b1 r2 l0 t0 lines">T</td>
+<td class="c m b1 r1 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l1 t0 lines">F</td>
+<td class="c m b1 r2 l0 t0 lines">F</td>
+<td class="c m b1 r1 l0 t0 lines">T</td>
+</tr>
+</table></div></figure></div>
+<article class="definition definition-like" id="definition-6"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.3.10</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-151">A <dfn class="terminology">tautology</dfn> is a statement that is always true.</div> <div class="para" id="p-152">For example, <span class="process-math">\(p\ \vee \neg p\)</span> is a tautology. If you check the truth table, you will see that the only values in the column for the statement are T.</div></article><article class="definition definition-like" id="definition-7"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.3.11</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-153">A <dfn class="terminology">contradiction</dfn> is a statement that is always false.</div> <div class="para" id="p-154">For example, <span class="process-math">\(p\ \wedge \neg p\)</span> is a contradiction. If you check the truth table, you will see that the only values in the column for the statement are F.</div></article><div class="para" id="p-155">Note that tautologies and contradictions are logical statements that are always true or always false, independent of the content of <span class="process-math">\(p\text{.}\)</span>
+</div>
+<div class="para" id="p-156">If we want to make bigger statements using tautologies or contradictions, we can use <span class="process-math">\(\mathbf{t}\)</span> to represent a tautology and <span class="process-math">\(\mathbf{c}\)</span> to represent a contradiction. For example, we could find the truth-table for <span class="process-math">\(p\wedge \mathbf{t}\text{.}\)</span>
+</div>
+<article class="example example-like" id="example-10"><a href="" data-knowl="" class="id-ref example-knowl original has-tabular" data-refid="hk-example-10"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.3.12</span><span class="period">.</span><span class="space"> </span><span class="title">Example of <span class="process-math">\(p\wedge \mathbf{t}\)</span>.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-example-10"><article class="example example-like"> <div class="para" id="p-157"><figure class="table table-like" id="T_ttwithtautology"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">1.3.13<span class="period">.</span></span><span class="space"> </span>Truth-table for <span class="process-math">\(p\wedge \mathbf{t}\text{.}\)</span></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="c m b2 r2 l1 t1 lines"><span class="process-math">\(p\)</span></td>
+<td class="c m b2 r2 l0 t1 lines"><span class="process-math">\(\mathbf{t}\)</span></td>
+<td class="c m b2 r1 l0 t1 lines"><span class="process-math">\(p\wedge \mathbf{t}\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r2 l1 t0 lines">T</td>
+<td class="c m b1 r2 l0 t0 lines">T</td>
+<td class="c m b1 r1 l0 t0 lines">T</td>
+</tr>
+<tr>
+<td class="c m b1 r2 l1 t0 lines">F</td>
+<td class="c m b1 r2 l0 t0 lines">T</td>
+<td class="c m b1 r1 l0 t0 lines">F</td>
+</tr>
+</table></div></figure></div></article></div>
+<article class="definition definition-like" id="definition-8"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.3.14</span><span class="period">.</span>
+</h3>Two statements are <dfn class="terminology">logically equivalent</dfn> if they have identical truth-tables. If statements <span class="process-math">\(P\)</span> and <span class="process-math">\(Q\)</span> are logically equivalent, we denote it <span class="process-math">\(P\equiv Q\text{.}\)</span> For example, we can see that <span class="process-math">\(p\)</span> is logically equivalent to <span class="process-math">\(p\wedge \mathbf{t}\)</span> by comparing the first and last columns of <a href="" class="xref" data-knowl="./knowl/T_ttwithtautology.html" title="Table 1.3.13: Truth-table for p\wedge \mathbf{t}">Table 1.3.13</a></article><article class="activity project-like" id="A_distribneg"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.3.9</span><span class="period">.</span><span class="space"> </span><span class="title">Logical Equivalence Practice.</span>
+</h3>
+<div class="para" id="p-158">Use a truth table to determine if <span class="process-math">\(\neg(p \vee q)\)</span> and <span class="process-math">\(\neg p\  \vee \neg q\)</span> are logically equivalent. What does this tell you about “distributing” negation?</div></article><article class="activity project-like" id="A_demorgan1"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.3.10</span><span class="period">.</span><span class="space"> </span><span class="title">Negating Or.</span>
+</h3>
+<div class="para" id="p-159">Use a truth table to show <span class="process-math">\(\neg(p \vee q)\)</span> and <span class="process-math">\(\neg p\ \wedge \neg q\)</span> are logically equivalent.</div></article><article class="activity project-like" id="A_demorgan2"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.3.11</span><span class="period">.</span><span class="space"> </span><span class="title">Negating And.</span>
+</h3>
+<div class="para" id="p-160">Use a truth table to show <span class="process-math">\(\neg(p \wedge q)\)</span> and <span class="process-math">\(\neg p\ \vee \neg q\)</span> are logically equivalent.</div></article><div class="para" id="p-161">The equivalences in <a href="" class="xref" data-knowl="./knowl/A_demorgan1.html" title="Activity 1.3.10: Negating Or">Activity 1.3.10</a> and <a href="" class="xref" data-knowl="./knowl/A_demorgan2.html" title="Activity 1.3.11: Negating And">Activity 1.3.11</a> are called <dfn class="terminology">DeMorgan's Laws</dfn>. These are useful equivalences and are worth committing to memory. As we've seen in the above activities, we cannot simply distribute a negation sign. However, DeMorgan's Laws allow us to distribute the negation as long as we also change from “and” to “or” and vice versa. Given the importace of this concept in mathematics. It is useful at this point to convince yourself that the negation of and “and” statement is an “or” statement and vice versa using statements in English. For example, if the weather is not cold <em class="emphasis">and</em> rainy, then it is either not cold <em class="emphasis">or</em> not rainy.</div>
+<div class="para" id="p-162">One thing to be careful about with English statements is that they do not naturally contain parentheses, we often really have to think about the meaning of the statement and infer the intended parentheses. Even in the above cold and rainy sentence, we have to understand that we mean “not (cold and rainy)” rather than “(not cold) and rainy.”</div>
+<article class="activity project-like" id="A_negcondit"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.3.12</span><span class="period">.</span><span class="space"> </span><span class="title">Negating Conditionals.</span>
+</h3>
+<div class="para" id="p-163">Use a truth truth table to show <span class="process-math">\(\neg(p \rightarrow q)\)</span> is logically equivalent to <span class="process-math">\(p\ \wedge\neg q\text{.}\)</span> This is the rule for negating an if...then. Like DeMorgan's Law, it is worth committing to memory.</div></article><div class="para logical" id="p-164">
+<div class="para">Logical Equivalences for Conditionals</div>
+<ol class="decimal">
+<li id="li-38"><div class="para" id="p-derived-li-38"><span class="process-math">\(\displaystyle p\rightarrow q\equiv \neg p\ \vee q\)</span></div></li>
+<li id="li-39"><div class="para" id="p-derived-li-39"><span class="process-math">\(\displaystyle \neg(p\rightarrow q)\equiv p\ \wedge \neg q\)</span></div></li>
+</ol>
+</div>
+<div class="para" id="p-165">This second equivalence is the <dfn class="terminology">negation of the conditional</dfn>. It is going to be really important that we understand that the negation of a conditional is <em class="alert">not</em> a conditional itself.</div>
+<article class="activity project-like" id="A_converse"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.3.13</span><span class="period">.</span><span class="space"> </span><span class="title">Converse.</span>
+</h3>
+<div class="para" id="p-166">Give the truth table for <span class="process-math">\(q\rightarrow p\text{.}\)</span> Is it equivalent to <span class="process-math">\(p\rightarrow q\text{?}\)</span> The statement <span class="process-math">\(q\rightarrow p\)</span> is the <dfn class="terminology">converse</dfn> of <span class="process-math">\(p\rightarrow q\text{.}\)</span>
+</div></article><article class="activity project-like" id="A_contrapositive"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.3.14</span><span class="period">.</span><span class="space"> </span><span class="title">Contrapositive.</span>
+</h3>
+<div class="para" id="p-167">Give the truth table for <span class="process-math">\(\neg q\rightarrow \neg p\text{.}\)</span> Is it equivalent to <span class="process-math">\(p\rightarrow q\text{?}\)</span> The statement <span class="process-math">\(\neg q\rightarrow \neg p\)</span> is the <dfn class="terminology">contrapositive</dfn> of <span class="process-math">\(p\rightarrow q\text{.}\)</span>
+</div></article><article class="activity project-like" id="A_inverse"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.3.15</span><span class="period">.</span><span class="space"> </span><span class="title">Inverse.</span>
+</h3>
+<div class="para" id="p-168">What is the contrapositive of <span class="process-math">\(q\rightarrow p\text{?}\)</span> This is also called the <dfn class="terminology">inverse</dfn> of <span class="process-math">\(p\rightarrow q\text{.}\)</span>
+</div></article><div class="para" id="p-169">We summarize the previous activities in the following definition.</div>
+<article class="definition definition-like" id="definition-9"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.3.15</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="p-170">
+<div class="para">A conditional statement <span class="process-math">\(p\rightarrow q\)</span> has</div>
+<ul class="disc">
+<li id="li-40"><div class="para" id="p-derived-li-40">
+<dfn class="terminology">contrapositive</dfn>: <span class="process-math">\(\neg q\rightarrow \neg p\text{;}\)</span>
+</div></li>
+<li id="li-41"><div class="para" id="p-derived-li-41">
+<dfn class="terminology">converse</dfn>: <span class="process-math">\(q\rightarrow p\text{;}\)</span>
+</div></li>
+<li id="li-42"><div class="para" id="p-derived-li-42">
+<dfn class="terminology">inverse</dfn>: <span class="process-math">\(\neg p\rightarrow \neg q\text{.}\)</span>
+</div></li>
+</ul>
+</div></article><article class="example example-like" id="E_contrapositive"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_contrapositive"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.3.16</span><span class="period">.</span><span class="space"> </span><span class="title">Contrapositive and Converse.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_contrapositive"><article class="example example-like"> <div class="para" id="p-171">Consider the statement: If <span class="process-math">\(x&gt;2\)</span> then <span class="process-math">\(x^2&gt;4\text{.}\)</span> What is the contrapositive of this statement? What is the converse?</div> <div class="para" id="p-172">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-1" id="answer-1"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-1"><div class="answer solution-like">Contrapositive: If <span class="process-math">\(x^2\leq 4\)</span> then <span class="process-math">\(x\leq 2\text{;}\)</span> Converse: If <span class="process-math">\(x^2&gt;4\)</span> then <span class="process-math">\(x&gt;2\text{.}\)</span>
+</div></div>
+</div></article></div>
+<div class="para logical" id="p-173">
+<div class="para">The following is a list of important logical equivalences. All of them can be checked using truth-tables. Let <span class="process-math">\(p, q,\)</span> and <span class="process-math">\(r\)</span> be variables representing statements. Let <span class="process-math">\(\mathbf{t}\)</span> be a tautology and <span class="process-math">\(\mathbf{c}\)</span> be a contradiction. <div class="para" id="p-174">Summary of Logical Equivalences</div>
+</div>
+<ol class="decimal">
+<li id="li-43"><div class="para" id="p-derived-li-43">Commutative Laws: <span class="process-math">\(p \wedge q \equiv q \wedge p; \ \ \ p \vee q \equiv q \vee p\)</span>
+</div></li>
+<li id="li-44"><div class="para" id="p-derived-li-44">Associative Laws: <span class="process-math">\((p \wedge q)\wedge r \equiv p \wedge (q \wedge r);\ \ \ (p \vee q)\vee r \equiv p \vee (q \vee r)\)</span>
+</div></li>
+<li id="li-45"><div class="para" id="p-derived-li-45">Distributive Laws: <span class="process-math">\(p \wedge (q \vee r) \equiv (p \wedge q)\vee (p \wedge r);\ \ \ p \vee (q \wedge r) \equiv (p \vee q) \wedge (p \vee r)\)</span>
+</div></li>
+<li id="li-46"><div class="para" id="p-derived-li-46">Identity Laws: <span class="process-math">\(p \wedge {\rm\textbf{t}} \equiv p;\ \ \ p \vee {\rm\textbf{c}} \equiv p\)</span>
+</div></li>
+<li id="li-47"><div class="para" id="p-derived-li-47">Negation Laws: <span class="process-math">\(p\ \vee \neg p \equiv {\rm\textbf{t}};\ \ \ p\ \wedge \neg p \equiv \rm{\textbf{c}}\)</span>
+</div></li>
+<li id="li-48"><div class="para" id="p-derived-li-48">Double Negation Law: <span class="process-math">\(\neg(\neg p)\equiv p\)</span>
+</div></li>
+<li id="li-49"><div class="para" id="p-derived-li-49">Idempotent Laws: <span class="process-math">\(p \wedge p \equiv p;\ \ \ p \vee p \equiv p\)</span>
+</div></li>
+<li id="li-50"><div class="para" id="p-derived-li-50">Universal Bound Laws: <span class="process-math">\(p \vee {\rm\textbf{t}} \equiv {\rm\textbf{t}};\ \ \ p \wedge \rm{\textbf{c}} \equiv {\rm\textbf{c}}\)</span>
+</div></li>
+<li id="li-51"><div class="para" id="p-derived-li-51">DeMorgan's Laws: <span class="process-math">\(\neg(p \wedge q) \equiv \neg p \vee \neg q;\ \ \ \neg(p \vee q) \equiv \neg p\ \wedge \neg q\)</span>
+</div></li>
+<li id="li-52"><div class="para" id="p-derived-li-52">Absorption Laws: <span class="process-math">\(p \vee (p \wedge q) \equiv p;\ \ \ p \wedge (p \vee q) \equiv p\)</span>
+</div></li>
+</ol>
+</div>
+<section class="exercises" id="exercises-2"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="exercise-4"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="para" id="p-175">Below is a list of pairs of statements. Determine, using a truth-table, whether the two statements in each pair are logically equivalent.</div> <ol class="lower-alpha">
+<li id="li-53"><div class="para" id="p-176">
+<span class="process-math">\(p\vee q\text{;}\)</span> <span class="process-math">\(\neg (\neg p \ \wedge\ \neg q)\)</span>
+</div></li>
+<li id="li-54"><div class="para" id="p-177">
+<span class="process-math">\(\neg (p\ \wedge\ q)\text{;}\)</span> <span class="process-math">\(\neg p\ \wedge\ \neg q\)</span>
+</div></li>
+<li id="li-55"><div class="para" id="p-178">
+<span class="process-math">\(q\rightarrow (p\rightarrow \neg q)\text{;}\)</span> <span class="process-math">\(\neg(p\ \wedge\ q)\)</span>
+</div></li>
+<li id="li-56"><div class="para" id="p-179">
+<span class="process-math">\(\neg(p\vee q)\text{;}\)</span> <span class="process-math">\(\neg p \vee \neg q\)</span>
+</div></li>
+<li id="li-57"><div class="para" id="p-180">
+<span class="process-math">\(\neg (p\rightarrow q)\text{;}\)</span> <span class="process-math">\(\neg q\rightarrow \neg p\)</span>
+</div></li>
+<li id="li-58"><div class="para" id="p-181">
+<span class="process-math">\(p\ \wedge\ (p\rightarrow q)\text{;}\)</span> <span class="process-math">\(p\ \wedge\ q\)</span>
+</div></li>
+<li id="li-59"><div class="para" id="p-182">
+<span class="process-math">\(p\vee (q\ \wedge\ r)\text{;}\)</span> <span class="process-math">\((p\vee q)\ \wedge\ (p\vee r)\)</span>
+</div></li>
+<li id="li-60"><div class="para" id="p-183">
+<span class="process-math">\((p\ \wedge\ q)\rightarrow r\text{;}\)</span> <span class="process-math">\(p\rightarrow (q\rightarrow r)\)</span>
+</div></li>
+</ol></article><article class="exercise exercise-like" id="exercise-5"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="para" id="p-184">Determine, using a truth-table, whether each of the following statements is a tautology, a contradiction, or neither.</div> <ol class="lower-alpha">
+<li id="li-61"><div class="para" id="p-185"><span class="process-math">\(\displaystyle (p\rightarrow p)\rightarrow q\)</span></div></li>
+<li id="li-62"><div class="para" id="p-186"><span class="process-math">\(\displaystyle q\rightarrow (p\rightarrow q)\)</span></div></li>
+<li id="li-63"><div class="para" id="p-187"><span class="process-math">\(\displaystyle \neg ( p\vee (p\rightarrow q))\)</span></div></li>
+<li id="li-64"><div class="para" id="p-188"><span class="process-math">\(\displaystyle q\rightarrow (p \vee \neg p)\)</span></div></li>
+<li id="li-65"><div class="para" id="p-189"><span class="process-math">\(\displaystyle q\rightarrow (p\ \wedge\ \neg p)\)</span></div></li>
+<li id="li-66"><div class="para" id="p-190"><span class="process-math">\(\displaystyle \bigl(p\rightarrow (p\rightarrow q)\bigr)\rightarrow (p\rightarrow q)\)</span></div></li>
+<li id="li-67"><div class="para" id="p-191"><span class="process-math">\(\displaystyle \bigl( (p\ \veebar\  q)\rightarrow (r\ \veebar\  r)\bigr)
+\leftrightarrow (p\ \wedge\ q)\)</span></div></li>
+<li id="li-68"><div class="para" id="p-192"><span class="process-math">\(\displaystyle (p\vee q)\ \wedge\ (\neg p \vee r)\ \wedge\ (\neg r\vee\neg q)\ \wedge\ (p\leftrightarrow
+q)\)</span></div></li>
+</ol></article><article class="exercise exercise-like" id="exercise-6"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="para" id="p-193">Produce truth-tables for the following statements. Then abbreviate them by finding the shortest possible logically equivalent statement.</div> <ol class="lower-alpha">
+<li id="li-69"><div class="para" id="p-194"><span class="process-math">\(\displaystyle \neg (p \ \wedge\ q)\rightarrow (p\ \veebar \ q)\)</span></div></li>
+<li id="li-70"><div class="para" id="p-195"><span class="process-math">\(\displaystyle \bigl( \bigl( (\neg p\rightarrow q)\ \wedge\ (r\ \veebar \ p)\bigr) \vee 
+\bigl( ( \neg p \rightarrow q)\ \wedge\ (r\ \veebar \ q)\bigr) \bigr) \ \wedge\ 
+\bigl((p\leftrightarrow q)\rightarrow r\bigr)\)</span></div></li>
+</ol></article><article class="exercise exercise-like" id="ER_onlyandnot"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="para" id="p-196">Using <em class="emphasis">only</em> the connectives “<span class="process-math">\(\wedge\)</span>” and “<span class="process-math">\(\neg\)</span>”, write statements logically equivalent to each of the following:</div> <ol class="lower-alpha">
+<li id="li-71"><div class="para" id="p-197"><span class="process-math">\(\displaystyle p \vee q\)</span></div></li>
+<li id="li-72"><div class="para" id="p-198"><span class="process-math">\(\displaystyle p\ \veebar\ q\)</span></div></li>
+<li id="li-73"><div class="para" id="p-199"><span class="process-math">\(\displaystyle p \rightarrow q\)</span></div></li>
+<li id="li-74"><div class="para" id="p-200"><span class="process-math">\(\displaystyle p \leftrightarrow q\)</span></div></li>
+</ol></article><article class="exercise exercise-like" id="exercise-8"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="para" id="p-201">Using <em class="emphasis">only</em> the connective “//”, write statements logically equivalent to each of the following:</div> <ol class="lower-alpha">
+<li id="li-75"><div class="para" id="p-202"><span class="process-math">\(\displaystyle \neg p\)</span></div></li>
+<li id="li-76"><div class="para" id="p-203"><span class="process-math">\(\displaystyle p\ \wedge\ q\)</span></div></li>
+<li id="li-77"><div class="para" id="p-204"><span class="process-math">\(\displaystyle p \vee q\)</span></div></li>
+<li id="li-78"><div class="para" id="p-205"><span class="process-math">\(\displaystyle p\ \veebar\ q\)</span></div></li>
+<li id="li-79"><div class="para" id="p-206"><span class="process-math">\(\displaystyle p \rightarrow q\)</span></div></li>
+<li id="li-80"><div class="para" id="p-207"><span class="process-math">\(\displaystyle p \leftrightarrow q\)</span></div></li>
+</ol></article></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="arguments1-2.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="argumentswconnectives1-4.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+</div></main>
+</div>
+<div class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org"><div class="name">Authored in PreTeXt</div>
+<div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259 "></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0  472  9732 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496 A 4241 4241  0  0  1  4724  3590 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259 A 4507 4507  0  0  1  4724  9448 "></path><polyline points="5385,4299 4062,8125 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="8598,3496 8598,9259 " style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="850,3496 850,9259 " style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="4960,9685 4488,9685 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="3070,4582 1889,6141 3070,7700 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="6418,4582 7600,6141 6418,7700 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="8976,3590 8976,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732 "></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy"><div class="name">Powered by Runestone</div>
+<img class="logo" title="Powered by Runestone" src="https://runestone.academy/runestone/static/rectangle_badge.png" alt="Powered by Runestone"></a><a class="mathjax-logo" href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a>
+</div>
+</body>
+</html>

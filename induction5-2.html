@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Mathematical Induction</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Introduction to Proofs">
+<meta property="book:author" content="Jennifer Firkins Nordstrom">
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.98,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.2/pretext_search.js"></script><link href="https://pretextbook.org/css/0.6/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.2</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.2/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.2/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.2/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://pretextbook.org/css/0.6/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="IntroProofs.html"><span class="title">Introduction to Proofs</span></a></h1>
+<p class="byline">Jennifer Firkins Nordstrom</p>
+</div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
+</h2>
+<div id="searchempty"><span>No results.</span></div>
+<ol id="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><a class="index-button button" href="index-1.html" title="Index"><span class="name">Index</span></a><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="theavatarbutton" class="name">You!</span><div id="preferences_menu_holder" class="hidden"><ol id="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Size</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
+<li>Width</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
+<li>Weight</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
+<li>Letter spacing</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
+<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
+<li>Word spacing</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
+<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
+<li>Line Spacing</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>dark</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>none</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>underline</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>L-underline</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>grey bar</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>light box</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>sunrise</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
+<li class="moveQ">Motion by:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="summation4-1.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter4.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="moreinduction4-3.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(     \newcommand{\MyTikzmark}[2]{
+     \tikz[overlay,remember picture,baseline] \node [anchor=base] (#1) {$#2$};}
+\newcommand{\DrawVLine}[3][]{
+  \begin{tikzpicture}[overlay,remember picture]
+    \draw[shorten \lt =0.3ex, #1] (#2.north) -- (#3.south);
+  \end{tikzpicture}
+}
+\newcommand{\DrawHLine}[3][]{
+  \begin{tikzpicture}[overlay,remember picture]
+    \draw[shorten \lt =0.2em, #1] (#2.west) -- (#3.east);
+  \end{tikzpicture}
+}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar"><nav id="ptx-toc" class="depth2"><ul class="structural">
+<li>
+<div class="toc-item"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="colophon-1.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li><div class="toc-item"><a href="preface-1.html" class="internal"><span class="title">Preface</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter1.html" class="internal"><span class="codenumber">1</span> <span class="title">Logic</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="whatisaproof.html" class="internal"><span class="codenumber">1.1</span> <span class="title">What is a Proof?</span></a></div></li>
+<li>
+<div class="toc-item"><a href="arguments.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Validity and Soundness</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="arguments.html#exercises-1" class="internal"><span class="codenumber">1.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="connectives.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Logical Connectives</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="connectives.html#exercises-2" class="internal"><span class="codenumber">1.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="argumentswconnectives.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Logical Arguments with Connectives</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="argumentswconnectives.html#exercises-3" class="internal"><span class="codenumber">1.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter2.html" class="internal"><span class="codenumber">2</span> <span class="title">Mathematical Statements</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="setnotation.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Introduction to Sets</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="setnotation.html#exercises-4" class="internal"><span class="codenumber">2.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="quantifiers.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Quantifiers</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="quantifiers.html#SS_quantifiers" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Quantified Statements</span></a></div></li>
+<li><div class="toc-item"><a href="quantifiers.html#SS_negquant" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Negating Quantified Statements</span></a></div></li>
+<li>
+<div class="toc-item"><a href="quantifiers.html#subsection-3" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Multiple Quantifiers</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="quantifiers.html#exercises-5" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="conditionals.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Conditional Statements</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="conditionals.html#exercises-6" class="internal"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter3.html" class="internal"><span class="codenumber">3</span> <span class="title">Basic Proof Techniques</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="directproof.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Direct Proof and Counterexample</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="directproof.html#exercises-7" class="internal"><span class="codenumber">3.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="moredirect.html" class="internal"><span class="codenumber">3.2</span> <span class="title">More Direct Proof: Rational Numbers and Divisibility</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="moredirect.html#SS_rational" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Rational Numbers</span></a></div></li>
+<li><div class="toc-item"><a href="moredirect.html#SS_divisibility" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Divisibility</span></a></div></li>
+<li><div class="toc-item"><a href="moredirect.html#exercises-8" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="cases.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Proof by Cases</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="cases.html#exercises-9" class="internal"><span class="codenumber">3.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="contradiction.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Proof by Contradiction and Contrapositive</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="contradiction.html#SS_contradiction" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Proof by Contradiction</span></a></div></li>
+<li><div class="toc-item"><a href="contradiction.html#SS_contrapositive" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Proof by Contrapositive</span></a></div></li>
+<li>
+<div class="toc-item"><a href="contradiction.html#SS_twoproofs" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Two Classical Proofs</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="contradiction.html#exercises-10" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter4.html" class="internal"><span class="codenumber">4</span> <span class="title">Proof by Induction</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="summation4-1.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Summation Notation</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="summation4-1.html#exercises-11" class="internal"><span class="codenumber">4.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="active">
+<div class="toc-item"><a href="induction5-2.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Mathematical Induction</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="induction5-2.html#exercises-12" class="internal"><span class="codenumber">4.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="moreinduction4-3.html" class="internal"><span class="codenumber">4.3</span> <span class="title">More Mathematical Induction</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="moreinduction4-3.html#exercises-13" class="internal"><span class="codenumber">4.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="stronginduction5-4.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Strong Induction</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="stronginduction5-4.html#exercises-14" class="internal"><span class="codenumber">4.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter5.html" class="internal"><span class="codenumber">5</span> <span class="title">Proofs in Specific Contexts</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="existunique.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Existence and Uniqueness Proofs</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="existunique.html#exercises-15" class="internal"><span class="codenumber">5.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="settheory.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Set Theory</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="settheory.html#SS_STnotation" class="internal"><span class="codenumber">5.2.1</span> <span class="title">Set Notation</span></a></div></li>
+<li><div class="toc-item"><a href="settheory.html#SS_setoperations" class="internal"><span class="codenumber">5.2.2</span> <span class="title">Operations on Sets</span></a></div></li>
+<li>
+<div class="toc-item"><a href="settheory.html#SS_setproofs" class="internal"><span class="codenumber">5.2.3</span> <span class="title">Proofs of Set Properties</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="settheory.html#exercises-16" class="internal"><span class="codenumber">5.2.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="functions.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Functions</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="functions.html#exercises-17" class="internal"><span class="codenumber">5.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="relations.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Equivalence Relations</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="relations.html#SS_introrelation" class="internal"><span class="codenumber">5.4.1</span> <span class="title">Introduction to Relations</span></a></div></li>
+<li>
+<div class="toc-item"><a href="relations.html#SS_equivrelations" class="internal"><span class="codenumber">5.4.2</span> <span class="title">Equivalence Relations</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="relations.html#exercises-18" class="internal"><span class="codenumber">5.4.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="orders.html" class="internal"><span class="codenumber">5.5</span> <span class="title">Ordered Sets</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="orders.html#exercises-19" class="internal"><span class="codenumber">5.5</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Index</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-1.html" class="internal"><span class="codenumber">A</span> <span class="title">Notation</span></a></div></li>
+<li><div class="toc-item"><a href="colophon-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="induction5-2"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">4.2</span> <span class="title">Mathematical Induction</span>
+</h2>
+<div class="para" id="p-910">In this section we learn a new proof technique, mathematical induction. This technique is useful for proving statements about the positive (or nonnegative) integers. It is based on the following principle.</div>
+<div class="para" id="p-911">Principle of Mathematical Induction:</div>
+<div class="para logical" id="p-912">
+<div class="para">Let <span class="process-math">\(P(n)\)</span> be a property defined for integers <span class="process-math">\(n\text{,}\)</span> and let <span class="process-math">\(a\)</span> be a fixed integer. Suppose the following are true:</div>
+<ol class="decimal">
+<li id="li-259"><div class="para" id="p-derived-li-259">
+<span class="process-math">\(P(a)\)</span> is true;</div></li>
+<li id="li-260"><div class="para" id="p-derived-li-260">For all <span class="process-math">\(k\in\mathbb{Z}\)</span> with <span class="process-math">\(k\geq a\text{,}\)</span> if <span class="process-math">\(P(k)\)</span> is true than <span class="process-math">\(P(k+1)\)</span> is true;</div></li>
+</ol>
+<div class="para">then for all <span class="process-math">\(n\geq a\text{,}\)</span> <span class="process-math">\(P(n)\)</span> is true.</div>
+</div>
+<div class="para" id="p-913">The way to think about the Principle of Mathematical Induction is that if you know the statement is true for some starting value, (<span class="process-math">\(P(a)\)</span> is true), and if you can show that knowing the statement is true for some value allows you to know it is true for the next value (<span class="process-math">\(P(k)\rightarrow P(k+1)\)</span>), then you know it for all values greater than or equal to <span class="process-math">\(a\text{.}\)</span>
+</div>
+<div class="para logical" id="p-914">
+<div class="para">So why should this work? Suppose you know two things:</div>
+<ol class="decimal">
+<li id="li-261"><div class="para" id="p-derived-li-261">
+<span class="process-math">\(P(1)\)</span> is true, and</div></li>
+<li id="li-262"><div class="para" id="p-derived-li-262"><span class="process-math">\(P(k)\rightarrow P(k+1)\text{.}\)</span></div></li>
+</ol>
+<div class="para">Note, you do not know <span class="process-math">\(P(k)\)</span> is true, just that if it is true, then <span class="process-math">\(P(k+1)\)</span> will be true. Now since <span class="process-math">\(P(1)\)</span> is true, by (2.), <span class="process-math">\(P(2)\)</span> must be true. Since <span class="process-math">\(P(2)\)</span> is true, <span class="process-math">\(P(3)\)</span> must be true, etc. In this way we can see that <span class="process-math">\(P(n)\)</span> must be true for all <span class="process-math">\(n\geq 1\text{.}\)</span>
+</div>
+</div>
+<div class="para" id="p-915">The Principle of Mathematical Induction lets us skip all the intermediate steps, <span class="process-math">\(P(1)\rightarrow P(2), P(2)\rightarrow P(3),\)</span> and conclude <span class="process-math">\(P(n)\)</span> once we have (1.) and (2.).</div>
+<div class="para" id="p-916">Structure of a mathematical induction proof:</div>
+<div class="para logical" id="p-917">
+<div class="para">To prove <span class="process-math">\(P(n), \forall n\geq 1\text{,}\)</span>
+</div>
+<ul class="disc">
+<li id="li-263">
+<span class="heading"><span class="title">Base Step.</span></span><div class="para" id="p-derived-li-263"> Show <span class="process-math">\(P(1)\)</span> is true.</div>
+</li>
+<li id="li-264">
+<span class="heading"><span class="title">Induction Step.</span></span><div class="para" id="p-derived-li-264"> Assume <span class="process-math">\(P(k)\)</span> for some <span class="process-math">\(k\in\mathbb{Z}\text{,}\)</span> show <span class="process-math">\(P(k+1)\text{.}\)</span>
+</div>
+</li>
+</ul>
+<div class="para">Conclude <span class="process-math">\(P(n)\)</span> is true for all <span class="process-math">\(n\geq 1\)</span>
+</div>
+</div>
+<div class="para" id="p-918">In the above structure we used <span class="process-math">\(a=1\)</span> for simplicitiy, but an induction proof could have a base step starting at a different <span class="process-math">\(a\text{.}\)</span> Most commonly, the base step starts with 0 or 1.</div>
+<div class="para" id="p-919">When writing induction proofs, make sure you use the actual statement you are proving rather than the notation <span class="process-math">\(P(1), P(k), P(n)\text{.}\)</span>
+</div>
+<article class="activity project-like" id="A_sumktokplus1"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Adding the Next Term.</span>
+</h3>
+<div class="introduction" id="introduction-47"><div class="para" id="p-920">Since the induction step in mathematical induction connects a statement about <span class="process-math">\(k\)</span> to a statement about <span class="process-math">\(k+1\text{,}\)</span> we need to be comfortable with the relationship between sums of <span class="process-math">\(k\)</span> terms and sums of <span class="process-math">\(k+1\)</span> terms.</div></div>
+<article class="task exercise-like" id="task-131"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="p-921">Write out the summation for <span class="process-math">\(\sum_{i=1}^{k}i\text{.}\)</span>
+</div></article><article class="task exercise-like" id="task-132"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="p-922">Write out the summation for <span class="process-math">\(\sum_{i=1}^{k+1}i\text{.}\)</span>
+</div></article><article class="task exercise-like" id="task-133"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="p-923">How do (a) and (b) differ?</div></article></article><article class="example example-like" id="E_sumofninduction"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_sumofninduction"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Proof by Induction: Summation Formula.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_sumofninduction"><article class="example example-like"> <div class="para" id="p-924">Prove <span class="process-math">\(\sum_{i=1}^{n}i=\frac{n(n+1)}{2}\)</span> for <span class="process-math">\(n\geq 1\text{.}\)</span>
+</div> <article class="hiddenproof" id="proof-18"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-18"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-18"><article class="hiddenproof"><div class="para logical" id="p-925">
+<div class="para">Base Step: Let <span class="process-math">\(n=1\text{.}\)</span> Then</div>
+<div class="displaymath process-math" id="md-9">
+\begin{gather*}
+\sum_{i=1}^{n}i=\sum_{i=1}^{1}i=1\\
+\frac{n(n+1)}{2}=\frac{1(1+1)}{2}=1
+\end{gather*}
+</div>
+<div class="para">Since the left hand side of the equation equals the right hand side, <span class="process-math">\(\sum_{i=1}^{n}i=\frac{n(n+1)}{2}\)</span> for <span class="process-math">\(n=1\text{.}\)</span>
+</div>
+</div> <div class="para" id="p-926">Induction Step:</div> <div class="para" id="p-927">Assume <span class="process-math">\(\sum_{i=1}^{k}i=\frac{k(k+1)}{2}\)</span> for some <span class="process-math">\(k\geq 1\text{.}\)</span>
+</div> <div class="para" id="p-928">Show <span class="process-math">\(\sum_{i=1}^{k+1}i=\frac{(k+1)(k+2)}{2}\text{.}\)</span>
+</div> <div class="para logical" id="p-929">
+<div class="para">Proof of induction step:</div>
+<div class="displaymath process-math" id="md-10">
+\begin{align*}
+\sum_{i=1}^{k}i&amp;=\frac{k(k+1)}{2}\ \  \textrm{ by the induction assumption}\\
+\sum_{i=1}^{k+1}i&amp;= \sum_{i=1}^{k}i+(k+1)\ \  \textrm{ add the } k+1 \textrm{ term of the sum}\\
+&amp;=\frac{k(k+1)}{2}+(k+1)\\
+&amp;=\frac{k(k+1)}{2}+\frac{2(k+1)}{2}\\
+&amp;=\frac{k(k+1)+2(k+1)}{2}\ \ \textrm{ factor out }(k+1) \textrm{ on the top}\\
+&amp;=\frac{(k+1)(k+2)}{2}.
+\end{align*}
+</div>
+<div class="para">Thus, <span class="process-math">\(\sum_{i=1}^{k+1}i=\frac{(k+1)(k+2)}{2}\text{.}\)</span>
+</div>
+</div> <div class="para" id="p-930">Hence, by induction <span class="process-math">\(\sum_{i=1}^{n}i=\frac{n(n+1)}{2}\)</span> for <span class="process-math">\(n\geq 1\text{.}\)</span>
+</div></article></div></article></div>
+<div class="para" id="p-931">Note, in the base step we looked at each side of what we wanted to show separately. We can refer to this as a “left hand side/ right hand side proof”, or in short hand, a LHS/RHS proof. If we just start with the equation we want to show, then we are assuming what we are trying to prove. To avoid this, it is best, when trying to show two things are equal in the base step, to do a LHS/ RHS proof.</div>
+<div class="para logical" id="p-932">
+<div class="para">
+<a href="" class="xref" data-knowl="./knowl/E_sumofninduction.html" title="Example 4.2.1: Proof by Induction: Summation Formula">Example 4.2.1</a> now gives us a useful formula for finding the sum of 1 through <span class="process-math">\(n\text{:}\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/E_sumofninduction.html" id="Q_sumofn">
+\begin{equation}
+\sum_{i=1}^{n}i=\frac{n(n+1)}{2}.\tag{4.2.1}
+\end{equation}
+</div>
+</div>
+<article class="activity project-like" id="A_geomsummation"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.2.2</span><span class="period">.</span><span class="space"> </span><span class="title">Adding <span class="process-math">\(k+1\)</span> Terms.</span>
+</h3>
+<div class="introduction" id="introduction-48"><div class="para" id="p-933">Before the next example, we practice the relationship between sums of <span class="process-math">\(k\)</span> terms and sums of <span class="process-math">\(k+1\)</span> terms.</div></div>
+<article class="task exercise-like" id="task-134"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="p-934">Write out the summation for <span class="process-math">\(\sum_{i=0}^{k}r^i\text{.}\)</span>
+</div></article><article class="task exercise-like" id="task-135"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="p-935">Write out the summation for <span class="process-math">\(\sum_{i=1}^{k+1}r^i\text{.}\)</span>
+</div></article><article class="task exercise-like" id="task-136"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="p-936">How do (a) and (b) differ?</div></article></article><article class="example example-like" id="E_geosum2induction"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_geosum2induction"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.2.2</span><span class="period">.</span><span class="space"> </span><span class="title">Proof by Induction: Powers of 2.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_geosum2induction"><article class="example example-like"> <div class="para" id="p-937">Prove <span class="process-math">\(\sum_{i=0}^{n}2^i=2^{n+1}-1\)</span> for <span class="process-math">\(n\geq 0\text{.}\)</span>
+</div> <article class="hiddenproof" id="proof-19"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-19"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-19"><article class="hiddenproof"><div class="para logical" id="p-938">
+<div class="para">Base Step: Let <span class="process-math">\(n=0\text{.}\)</span> Then</div>
+<div class="displaymath process-math" id="md-11">
+\begin{gather*}
+\sum_{i=0}^{0}2^i=2^0=1\\
+2^{0+1}-1=2-1=1
+\end{gather*}
+</div>
+<div class="para">Since the left hand side of the equation equals the right hand side, <span class="process-math">\(\sum_{i=0}^{n}2^i=2^{n+1}-1\)</span> for <span class="process-math">\(n=0\text{.}\)</span>
+</div>
+</div> <div class="para" id="p-939">Induction Step:</div> <div class="para" id="p-940">Assume <span class="process-math">\(\sum_{i=0}^{k}2^i=2^{k+1}-1\)</span> for some <span class="process-math">\(k\geq 0\text{.}\)</span>
+</div> <div class="para" id="p-941">Show <span class="process-math">\(\sum_{i=0}^{k+1}2^i=2^{k+2}-1\text{.}\)</span>
+</div> <div class="para logical" id="p-942">
+<div class="para">Proof of induction step:</div>
+<div class="displaymath process-math" id="md-12">
+\begin{align*}
+\sum_{i=0}^{k}2^i&amp;=2^{k+1}-1 \textrm{ by the induction assumption}\\
+\sum_{i=0}^{k+1}2^i&amp;= \sum_{i=0}^{k}2^i+(2^{k+1}) \textrm{ add the } k+1 \textrm{ term of the sum}\\
+&amp;=2^{k+1}-1+2^{k+1}\\
+&amp;=2^{k+1}+2^{k+1}-1 \\
+&amp;=2^{k+1}(1+1)-1 \\
+&amp;=2^{k+1}(2)-1 \\
+&amp;=2^{k+2}-1. 
+\end{align*}
+</div>
+<div class="para">Thus, <span class="process-math">\(\sum_{i=0}^{k+1}2^i=2^{k+2}-1\text{.}\)</span>
+</div>
+</div> <div class="para" id="p-943">Hence, by induction <span class="process-math">\(\sum_{i=0}^{n}2^i=2^{n+1}-1\)</span> for <span class="process-math">\(n\geq 0\text{.}\)</span>
+</div></article></div></article></div>
+<div class="para" id="p-944">
+<a href="" class="xref" data-knowl="./knowl/E_geosum2induction.html" title="Example 4.2.2: Proof by Induction: Powers of 2">Example 4.2.2</a> can be generalized to the sum <span class="process-math">\(\sum_{i=0}^{n}r^i\text{.}\)</span>
+</div>
+<article class="example example-like" id="E_geosuminduction"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_geosuminduction"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">Proof by Induction: Geometric Sum.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_geosuminduction"><article class="example example-like"> <div class="para" id="p-945">Prove <span class="process-math">\(\sum_{i=0}^{n}r^i=\frac{r^{n+1}-1}{r-1}\)</span> for <span class="process-math">\(n\geq 0\text{.}\)</span>
+</div> <article class="hiddenproof" id="proof-20"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-20"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-20"><article class="hiddenproof"><div class="para logical" id="p-946">
+<div class="para">Base Step: Let <span class="process-math">\(n=0\text{.}\)</span> Then</div>
+<div class="displaymath process-math" id="md-13">
+\begin{gather*}
+\sum_{i=0}^{0}r^i=r^0=1\\
+\frac{r^{0+1}-1}{r-1}=\frac{r-1}{r-1}=1
+\end{gather*}
+</div>
+<div class="para">Since the left hand side of the equation equals the right hand side, <span class="process-math">\(\sum_{i=0}^{n}r^i=\frac{r^{n+1}-1}{r-1}\)</span> for <span class="process-math">\(n=0\text{.}\)</span>
+</div>
+</div> <div class="para" id="p-947">Induction Step:</div> <div class="para" id="p-948">Assume <span class="process-math">\(\sum_{i=0}^{k}r^i=\frac{r^{k+1}-1}{r-1}\)</span> for some <span class="process-math">\(k\geq 0\text{.}\)</span>
+</div> <div class="para" id="p-949">Show <span class="process-math">\(\sum_{i=0}^{k+1}r^i=\frac{r^{k+2}-1}{r-1}\text{.}\)</span>
+</div> <div class="para logical" id="p-950">
+<div class="para">Proof of induction step:</div>
+<div class="displaymath process-math" id="md-14">
+\begin{align*}
+\sum_{i=0}^{k}r^i&amp;=\frac{r^{k+1}-1}{r-1} \textrm{ by the induction assumption}\\
+\sum_{i=0}^{k+1}r^i&amp;= \sum_{i=0}^{k}r^i+(r^{k+1}) \textrm{ add the } k+1 \textrm{ term of the sum}\\
+&amp;=\frac{r^{k+1}-1}{r-1}+(r^{k+1})\\
+&amp;=\frac{r^{k+1}-1}{r-1}+\frac{(r-1)(r^{k+1})}{r-1}\\
+&amp;=\frac{r^{k+1}-1+(r-1)(r^{k+1})}{r-1} \textrm{ factor out } r^{k+1} \textrm{ on the top}\\
+&amp;=\frac{r^{k+1}(1+r-1)-1}{r-1} \\
+&amp;=\frac{r^{k+1}(r)-1}{r-1} \\
+&amp;=\frac{r^{k+2}-1}{r-1}. 
+\end{align*}
+</div>
+<div class="para">Thus, <span class="process-math">\(\sum_{i=0}^{k+1}r^i=\frac{r^{k+2}-1}{r-1}\text{.}\)</span>
+</div>
+</div> <div class="para" id="p-951">Hence, by induction <span class="process-math">\(\sum_{i=0}^{n}r^i=\frac{r^{n+1}-1}{r-1}\)</span> for <span class="process-math">\(n\geq 0\text{.}\)</span>
+</div></article></div></article></div>
+<div class="para logical" id="p-952">
+<div class="para">The sum in <a href="" class="xref" data-knowl="./knowl/E_geosuminduction.html" title="Example 4.2.3: Proof by Induction: Geometric Sum">Example 4.2.3</a> is called a <dfn class="terminology">geometric sum</dfn>. Now we have a useful formula for the sum of <span class="process-math">\(r^i\)</span> for various values of <span class="process-math">\(r&gt;1\text{:}\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/E_geosuminduction.html" id="Q_geosum">
+\begin{equation}
+\sum_{i=0}^{n}r^i=\frac{r^{n+1}-1}{r-1}.\tag{4.2.2}
+\end{equation}
+</div>
+</div>
+<article class="activity project-like" id="A_indpractice"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">Practice with Induction.</span>
+</h3>
+<div class="introduction" id="introduction-49"><div class="para" id="p-953">Suppose you want to prove <span class="process-math">\(\sum_{i=1}^{n}i^2=\frac{n(n+1)(2n+1)}{6}\)</span> for all <span class="process-math">\(n\geq 1\)</span> by induction.</div></div>
+<article class="task exercise-like" id="task-137"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="p-954">What would you want to prove in the base step?</div></article><article class="task exercise-like" id="task-138"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="p-955">What should you assume in the induction step?.</div></article><article class="task exercise-like" id="task-139"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="p-956">What should you show in the induction step?</div></article><article class="task exercise-like" id="task-140"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="p-957">Now try to put this all together in the form of an induction proof. If you are unable to prove it, where do you get stuck?</div></article></article><div class="para" id="p-958">The <dfn class="terminology">closed form</dfn> of a sum is the computational formula for the sum. For example, the closed form of <span class="process-math">\(\sum_{i=0}^{n}2^i\)</span> is <span class="process-math">\(2^{n+1}-1\text{.}\)</span>
+</div>
+<section class="exercises" id="exercises-12"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="exercise-80"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="para logical" id="p-959">
+<div class="para">Use mathematical induction to prove for all integers <span class="process-math">\(n\geq 1\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sum_{i=1}^n 2i=n^2+n.
+\end{equation*}
+</div>
+</div></article><article class="exercise exercise-like" id="exercise-81"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="para logical" id="p-960">
+<div class="para">Use mathematical induction to prove for all integers <span class="process-math">\(n\geq 1\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sum_{i=1}^ni^3=\Bigl[\frac{n(n+1)}{2}\Bigr]^2.
+\end{equation*}
+</div>
+</div></article><article class="exercise exercise-like" id="exercise-82"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="para logical" id="p-961">
+<div class="para">Use mathematical induction to prove for all integers <span class="process-math">\(n\geq 1\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sum_{i=1}^{n}i(i!)=(n+1)!-1.
+\end{equation*}
+</div>
+</div></article><article class="exercise exercise-like" id="exercise-83"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="para" id="p-962">Use <a href="" class="xref" data-knowl="./knowl/E_geosuminduction.html" title="Example 4.2.3: Proof by Induction: Geometric Sum">Example 4.2.3</a> to find a formula for <span class="process-math">\(\sum_{i=0}^n 3^i\text{.}\)</span> Prove your formula directly using induction.</div></article><article class="exercise exercise-like" id="exercise-84"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="para" id="p-963">Find a formula for <span class="process-math">\(\sum_{i=0}^n 2i-1\text{.}\)</span> Prove your formula using induction.</div></article></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="summation4-1.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="moreinduction4-3.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+</div></main>
+</div>
+<div class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org"><div class="name">Authored in PreTeXt</div>
+<div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259 "></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0  472  9732 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496 A 4241 4241  0  0  1  4724  3590 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259 A 4507 4507  0  0  1  4724  9448 "></path><polyline points="5385,4299 4062,8125 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="8598,3496 8598,9259 " style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="850,3496 850,9259 " style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="4960,9685 4488,9685 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="3070,4582 1889,6141 3070,7700 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="6418,4582 7600,6141 6418,7700 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="8976,3590 8976,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732 "></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy"><div class="name">Powered by Runestone</div>
+<img class="logo" title="Powered by Runestone" src="https://runestone.academy/runestone/static/rectangle_badge.png" alt="Powered by Runestone"></a><a class="mathjax-logo" href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a>
+</div>
+</body>
+</html>

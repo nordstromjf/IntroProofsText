@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><article class="hiddenproof"><div class="para">Base Step: Let <span class="process-math">\(n=0\text{.}\)</span> Then <span class="process-math">\(2^{2n}-1=2^{0}-1=0\text{.}\)</span> We know <span class="process-math">\(3\mid 0\text{.}\)</span>
+</div> <div class="para">Thus, <span class="process-math">\(3\mid (2^{2n}-1)\)</span> for <span class="process-math">\(n=0\text{.}\)</span>
+</div> <div class="para">Induction Step:</div> <div class="para">Assume <span class="process-math">\(3\mid (2^{2k}-1)\)</span> for some <span class="process-math">\(k\geq 0\text{.}\)</span>
+</div> <div class="para">Show <span class="process-math">\(3\mid (2^{2(k+1)}-1)\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">Scratchwork:</div>
+<div class="displaymath process-math">
+\begin{align*}
+2^{2(k+1)}-1&amp;=2^{2k+2}-1\\
+&amp;=(2^2)(2^{2k})-1\ \ \textrm{ used exponent rules to rewrite}\\
+&amp;=(4)(2^{2k})-1\\
+&amp;=(3+1)(2^{2k})-1\ \ \textrm{ maybe not an obvious step,}\\
+&amp;\ \ \ \ \ \ \ \textrm{ but we are looking for multiples of 3}\\
+&amp;=3\cdot 2^{2k}+2^{2k}-1\ \ \textrm{ distribute}
+\end{align*}
+</div>
+<div class="para">But by our assumption, <span class="process-math">\(3\mid 2^{2k}-1\)</span> and since the remaining term is a multiple of 3, <span class="process-math">\(3\mid 3\cdot 2^{2k}+2^{2k}-1\text{.}\)</span>
+</div>
+</div> <div class="para">Now we are ready to use our scratchwork to write the proof of the induction step.</div> <div class="para logical">
+<div class="para">Proof of induction step:</div>
+<div class="displaymath process-math">
+\begin{align*}
+3&amp;\mid 2^{2k}-1\ \  \textrm{ by the induction assumption}\\
+3&amp;\mid 2^{2k}-1+3\cdot 2^{2k}\ \  \textrm{ since we just added a multiple of 3}\\
+3&amp;\mid (3+1)(2^{2k})-1\ \  \textrm{ factored out } 2^{2k}\\
+3&amp;\mid (4)(2^{2k})-1\\
+3&amp;\mid (2^2)(2^{2k})-1\\
+3&amp;\mid (2^{2k+2})-1\\
+3&amp;\mid (2^{2(k+1)})-1
+\end{align*}
+</div>
+<div class="para">Which is what we wanted to show.</div>
+</div> <div class="para">Hence, by induction <span class="process-math">\(3\mid (2^{2n}-1)\)</span> for <span class="process-math">\(n\geq 0\text{.}\)</span>
+</div></article></body>
+</html>

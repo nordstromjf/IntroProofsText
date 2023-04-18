@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Ordered Sets</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Introduction to Proofs">
+<meta property="book:author" content="Jennifer Firkins Nordstrom">
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.98,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.2/pretext_search.js"></script><link href="https://pretextbook.org/css/0.6/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.2</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.2/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.2/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.2/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://pretextbook.org/css/0.6/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="IntroProofs.html"><span class="title">Introduction to Proofs:</span> <span class="subtitle">An Active Exploration of Mathematical Language</span></a></h1>
+<p class="byline">Jennifer Firkins Nordstrom</p>
+</div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
+</h2>
+<div id="searchempty"><span>No results.</span></div>
+<ol id="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><a class="index-button button" href="index-1.html" title="Index"><span class="name">Index</span></a><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="theavatarbutton" class="name">You!</span><div id="preferences_menu_holder" class="hidden"><ol id="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Size</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
+<li>Width</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
+<li>Weight</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
+<li>Letter spacing</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
+<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
+<li>Word spacing</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
+<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
+<li>Line Spacing</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>dark</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>none</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>underline</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>L-underline</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>grey bar</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>light box</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>sunrise</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
+<li class="moveQ">Motion by:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="relations.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter5.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="chapter6.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(     \newcommand{\MyTikzmark}[2]{
+     \tikz[overlay,remember picture,baseline] \node [anchor=base] (#1) {$#2$};}
+\newcommand{\DrawVLine}[3][]{
+  \begin{tikzpicture}[overlay,remember picture]
+    \draw[shorten \lt =0.3ex, #1] (#2.north) -- (#3.south);
+  \end{tikzpicture}
+}
+\newcommand{\DrawHLine}[3][]{
+  \begin{tikzpicture}[overlay,remember picture]
+    \draw[shorten \lt =0.2em, #1] (#2.west) -- (#3.east);
+  \end{tikzpicture}
+}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar"><nav id="ptx-toc" class="depth2"><ul class="structural">
+<li>
+<div class="toc-item"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="colophon-1.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li><div class="toc-item"><a href="preface-1.html" class="internal"><span class="title">Preface</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter1.html" class="internal"><span class="codenumber">1</span> <span class="title">Logic</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="whatisaproof.html" class="internal"><span class="codenumber">1.1</span> <span class="title">What is a Proof?</span></a></div></li>
+<li>
+<div class="toc-item"><a href="arguments.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Validity and Soundness</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="arguments.html#exercises-1" class="internal"><span class="codenumber">1.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="connectives.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Logical Connectives</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="connectives.html#exercises-2" class="internal"><span class="codenumber">1.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="argumentswconnectives.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Logical Arguments with Connectives</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="argumentswconnectives.html#exercises-3" class="internal"><span class="codenumber">1.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter2.html" class="internal"><span class="codenumber">2</span> <span class="title">Mathematical Statements</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="setnotation.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Introduction to Sets</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="setnotation.html#exercises-4" class="internal"><span class="codenumber">2.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="quantifiers.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Quantifiers</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="quantifiers.html#SS_quantifiers" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Quantified Statements</span></a></div></li>
+<li><div class="toc-item"><a href="quantifiers.html#SS_negquant" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Negating Quantified Statements</span></a></div></li>
+<li>
+<div class="toc-item"><a href="quantifiers.html#subsection-3" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Multiple Quantifiers</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="quantifiers.html#exercises-5" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="conditionals.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Conditional Statements</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="conditionals.html#exercises-6" class="internal"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter3.html" class="internal"><span class="codenumber">3</span> <span class="title">Basic Proof Techniques</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="directproof.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Direct Proof and Counterexample</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="directproof.html#exercises-7" class="internal"><span class="codenumber">3.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="moredirect.html" class="internal"><span class="codenumber">3.2</span> <span class="title">More Direct Proof: Rational Numbers and Divisibility</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="moredirect.html#SS_rational" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Rational Numbers</span></a></div></li>
+<li><div class="toc-item"><a href="moredirect.html#SS_divisibility" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Divisibility</span></a></div></li>
+<li><div class="toc-item"><a href="moredirect.html#exercises-8" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="cases.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Proof by Cases</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="cases.html#exercises-9" class="internal"><span class="codenumber">3.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="contradiction.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Proof by Contradiction and Contrapositive</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="contradiction.html#SS_contradiction" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Proof by Contradiction</span></a></div></li>
+<li><div class="toc-item"><a href="contradiction.html#SS_contrapositive" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Proof by Contrapositive</span></a></div></li>
+<li>
+<div class="toc-item"><a href="contradiction.html#SS_twoproofs" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Two Classical Proofs</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="contradiction.html#exercises-10" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter4.html" class="internal"><span class="codenumber">4</span> <span class="title">Proof by Induction</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="summation.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Summation Notation</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="summation.html#exercises-11" class="internal"><span class="codenumber">4.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="induction.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Mathematical Induction</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="induction.html#exercises-12" class="internal"><span class="codenumber">4.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="moreinduction.html" class="internal"><span class="codenumber">4.3</span> <span class="title">More Mathematical Induction</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="moreinduction.html#exercises-13" class="internal"><span class="codenumber">4.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="stronginduction.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Strong Induction</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="stronginduction.html#exercises-14" class="internal"><span class="codenumber">4.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter5.html" class="internal"><span class="codenumber">5</span> <span class="title">Proofs in Specific Contexts</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="existunique.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Existence and Uniqueness Proofs</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="existunique.html#exercises-15" class="internal"><span class="codenumber">5.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="settheory.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Set Theory</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="settheory.html#SS_STnotation" class="internal"><span class="codenumber">5.2.1</span> <span class="title">Set Notation</span></a></div></li>
+<li><div class="toc-item"><a href="settheory.html#SS_setoperations" class="internal"><span class="codenumber">5.2.2</span> <span class="title">Operations on Sets</span></a></div></li>
+<li>
+<div class="toc-item"><a href="settheory.html#SS_setproofs" class="internal"><span class="codenumber">5.2.3</span> <span class="title">Proofs of Set Properties</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="settheory.html#exercises-16" class="internal"><span class="codenumber">5.2.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="functions.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Functions</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="functions.html#exercises-17" class="internal"><span class="codenumber">5.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="relations.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Equivalence Relations</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="relations.html#SS_introrelation" class="internal"><span class="codenumber">5.4.1</span> <span class="title">Introduction to Relations</span></a></div></li>
+<li>
+<div class="toc-item"><a href="relations.html#SS_equivrelations" class="internal"><span class="codenumber">5.4.2</span> <span class="title">Equivalence Relations</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="relations.html#exercises-18" class="internal"><span class="codenumber">5.4.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="active">
+<div class="toc-item"><a href="orders.html" class="internal"><span class="codenumber">5.5</span> <span class="title">Ordered Sets</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="orders.html#exercises-19" class="internal"><span class="codenumber">5.5</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter6.html" class="internal"><span class="codenumber">6</span> <span class="title">Additional Topics</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="binomial9.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Binomial Theorem</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="binomial9.html#exercises-20" class="internal"><span class="codenumber">6.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="cardinality.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Cardinality</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="cardinality.html#exercises-21" class="internal"><span class="codenumber">6.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Index</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-1.html" class="internal"><span class="codenumber">A</span> <span class="title">Notation</span></a></div></li>
+<li><div class="toc-item"><a href="colophon-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="orders"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">5.5</span> <span class="title">Ordered Sets</span>
+</h2>
+<div class="para" id="p-1616">In this section we look at an additional property of a relation. In particular, we define the antisymmetric property. We will then look at how a relation can be used to define ways to order elements of a set.</div>
+<div class="para" id="p-1617">We will still need the properies from <a href="relations.html" class="internal" title="Section 5.4: Equivalence Relations">Section 5.4</a>.</div>
+<article class="definition definition-like" id="D_RSTprop2"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.5.1</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="p-1618">
+<div class="para">Let <span class="process-math">\(R\)</span> be a relation on <span class="process-math">\(A\text{.}\)</span> Then</div>
+<ol class="decimal">
+<li id="li-473"><div class="para" id="p-1619">
+<span class="process-math">\(R\)</span> is <dfn class="terminology">reflexive</dfn> if for all <span class="process-math">\(x\in A\text{,}\)</span> <span class="process-math">\(x R x\text{.}\)</span> In ordered pair notation, <span class="process-math">\((x, x)\in R\text{.}\)</span>
+</div></li>
+<li id="li-474"><div class="para" id="p-1620">
+<span class="process-math">\(R\)</span> is <dfn class="terminology">symmetric</dfn> if for all <span class="process-math">\(x, y\in A\text{,}\)</span> if <span class="process-math">\(x R y\)</span> then <span class="process-math">\(y R x\text{.}\)</span> In ordered pair notation, if <span class="process-math">\((x, y)\in R\)</span> then <span class="process-math">\((y, x)\in R\text{.}\)</span>
+</div></li>
+<li id="li-475"><div class="para" id="p-1621">
+<span class="process-math">\(R\)</span> is <dfn class="terminology">transitive</dfn> if for all <span class="process-math">\(x, y, z\in A\text{,}\)</span> if <span class="process-math">\(x R y\)</span> and <span class="process-math">\(y R z\)</span> then <span class="process-math">\(x R z\text{.}\)</span> In ordered pair notation, if <span class="process-math">\((x, y)\in R\)</span> and <span class="process-math">\((y, z)\in R\)</span> then <span class="process-math">\((x, z)\in R\text{.}\)</span>
+</div></li>
+</ol>
+</div></article><div class="para" id="p-1622">We add a new property to the list, the <dfn class="terminology">antisymmetric</dfn> property.</div>
+<article class="definition definition-like" id="D_ASprop"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.5.2</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-1623">Let <span class="process-math">\(R\)</span> be a relation on <span class="process-math">\(A\text{.}\)</span> Then <span class="process-math">\(R\)</span> is <dfn class="terminology">antisymmetric</dfn> if for all <span class="process-math">\(x, y\in A\text{,}\)</span> if <span class="process-math">\(x R y\)</span> and <span class="process-math">\(y R x\text{,}\)</span> then <span class="process-math">\(x=y\text{.}\)</span> In ordered pair notation, if <span class="process-math">\((x, y)\in R\)</span> and <span class="process-math">\((y, x)\in R\text{,}\)</span> then <span class="process-math">\(x=y\text{.}\)</span>
+</div></article><div class="para" id="p-1624">It is important to note, that “antisymmetric” is not the negation of “symmetric.” It is possible for a relation to be both symmetric and antisymmetric (thought this happens only in a special case). It is also possible for a relation to be neither symmetric nor antisymmetric.</div>
+<article class="example example-like" id="E_symantisym"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_symantisym"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.5.3</span><span class="period">.</span><span class="space"> </span><span class="title">Symmetric and Antisymmetric.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_symantisym"><article class="example example-like"> <div class="para logical" id="p-1625">
+<div class="para">Let <span class="process-math">\(A=\{1, 2, 3\}\text{,}\)</span> define the relation on <span class="process-math">\(A\)</span> by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+R=\{(1, 1), (2, 2), (3, 3)\}.
+\end{equation*}
+</div>
+</div> <div class="para" id="p-1626">
+<span class="process-math">\(R\)</span> is symmetric since if <span class="process-math">\((x, y)\in R\)</span> then <span class="process-math">\((y, x)\in R\text{.}\)</span>
+</div> <div class="para" id="p-1627">
+<span class="process-math">\(R\)</span> is antisymmetric since  if <span class="process-math">\((x, y)\in R\)</span> and <span class="process-math">\((y, x)\in R\)</span> then <span class="process-math">\(x=y\text{.}\)</span> This is straightforward to check since the only ordered pairs in the relation have <span class="process-math">\(x=y\text{.}\)</span>
+</div></article></div>
+<div class="para" id="p-1628">It is often more useful to use the contrapositive form of the definition of antisymmetric:</div>
+<div class="para" id="p-1629">
+<span class="process-math">\(R\)</span> is <dfn class="terminology">antisymmetric</dfn> if for all <span class="process-math">\(x, y\in A\text{,}\)</span> if <span class="process-math">\(x\neq y\text{,}\)</span> then <span class="process-math">\((x, y)\notin R\)</span> or <span class="process-math">\((y, x)\notin R\text{.}\)</span>
+</div>
+<article class="example example-like" id="E_antisymmtric"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_antisymmtric"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.5.4</span><span class="period">.</span><span class="space"> </span><span class="title">Another Look at Antisymmetric.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_antisymmtric"><article class="example example-like"> <div class="para logical" id="p-1630">
+<div class="para">Let <span class="process-math">\(A=\{1, 2, 3\}\text{,}\)</span> define the relation on <span class="process-math">\(A\)</span> by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+R=\{(1, 2), (1, 3), (2, 3)\}.
+\end{equation*}
+</div>
+</div> <div class="para" id="p-1631">
+<span class="process-math">\(R\)</span> is antisymmetric since for each <span class="process-math">\((x, y)\in R\text{,}\)</span> <span class="process-math">\((y, x)\)</span> is not in <span class="process-math">\(R\text{.}\)</span> Since it is never the case that both <span class="process-math">\((x, y)\)</span> and <span class="process-math">\((y, x)\)</span> are in <span class="process-math">\(R\text{,}\)</span> the “if” part of the definition is always false, meaning, the conditional is always true.</div> <div class="para" id="p-1632">By using the contrapositive form it is easier to check that for each pair <span class="process-math">\((x, y)\in R\)</span> with <span class="process-math">\(x\neq y\text{,}\)</span> <span class="process-math">\((y, x)\notin R\text{.}\)</span>
+</div></article></div>
+<article class="activity project-like" id="A_practiceasymm"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">5.5.1</span><span class="period">.</span><span class="space"> </span><span class="title">Practice with Antisymmetric.</span>
+</h3>
+<div class="introduction" id="introduction-73"><div class="para" id="p-1633">For each of the following relations, determine if it is antisymmetric.</div></div>
+<article class="task exercise-like" id="task-202"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="p-1634">Let <span class="process-math">\(A=\{1, 2, 3\}\)</span> and <span class="process-math">\(R=\{(1, 1), (1, 2), (1, 3), (2, 1), (3, 1)\}\text{.}\)</span>
+</div></article><article class="task exercise-like" id="task-203"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="p-1635">Let <span class="process-math">\(A=\{1, 2, 3, 4\}\)</span> and <span class="process-math">\(R=\{(1, 1), (1, 3), (2, 2), (3, 2), (3, 3)\}\text{.}\)</span>
+</div></article></article><div class="para" id="p-1636">Checking that a relation is antisymmetric on a small finite set can be done by checking that the property holds for all the elements of <span class="process-math">\(R\text{.}\)</span> But if <span class="process-math">\(A\)</span> is infinite we need to prove the properties more generally. We include a reminder of the other properties as well.</div>
+<article class="assemblage assemblage-like" id="B_pfprorelations"><h3 class="heading"><span class="title">Proving Properties of Relations.</span></h3>
+<div class="para logical" id="p-1637">
+<div class="para">To prove</div>
+<ul class="disc">
+<li id="li-476">
+<span class="heading"><span class="title">Reflexive.</span></span><div class="para" id="p-1638">Let <span class="process-math">\(x\in A\text{.}\)</span> Show <span class="process-math">\((x, x)\in R\text{.}\)</span>
+</div>
+</li>
+<li id="li-477">
+<span class="heading"><span class="title">Symmetric.</span></span><div class="para" id="p-1639">Assume <span class="process-math">\((x, y)\in R\text{.}\)</span> Show <span class="process-math">\((y, x)\in R\text{.}\)</span>
+</div>
+</li>
+<li id="li-478">
+<span class="heading"><span class="title">Antisymmetric.</span></span><div class="para" id="p-1640">Assume <span class="process-math">\((x, y)\in R\)</span> and <span class="process-math">\((y, x)\in R\text{.}\)</span> Show <span class="process-math">\(x=y\text{.}\)</span>
+</div>
+</li>
+<li id="li-479">
+<span class="heading"><span class="title">Transitive.</span></span><div class="para" id="p-1641">Assume <span class="process-math">\((x, y), (y, z)\in R\text{.}\)</span> Show <span class="process-math">\((x, z)\in R\text{.}\)</span>
+</div>
+</li>
+</ul>
+</div>
+<div class="para logical" id="p-1642">
+<div class="para">To disprove a property, find a specific counterexample.</div>
+<ul class="disc">
+<li id="li-480">
+<span class="heading"><span class="title">Reflexive.</span></span><div class="para" id="p-1643">Find <span class="process-math">\((x, x)\notin R\)</span> for some <span class="process-math">\(x\in A\text{.}\)</span>
+</div>
+</li>
+<li id="li-481">
+<span class="heading"><span class="title">Symmetric.</span></span><div class="para" id="p-1644">Find <span class="process-math">\((x, y)\in R\)</span> with <span class="process-math">\((y, x)\notin R\text{.}\)</span>
+</div>
+</li>
+<li id="li-482">
+<span class="heading"><span class="title">Antisymmetric.</span></span><div class="para" id="p-1645">Find <span class="process-math">\((x, y)\in R\)</span> and <span class="process-math">\((y, x)\in R\)</span> with <span class="process-math">\(x\neq y\text{.}\)</span>
+</div>
+</li>
+<li id="li-483">
+<span class="heading"><span class="title">Transitive.</span></span><div class="para" id="p-1646">Find <span class="process-math">\((x, y), (y, z)\in R\)</span> with <span class="process-math">\((x, z)\notin R\text{.}\)</span>
+</div>
+</li>
+</ul>
+</div></article><article class="example example-like" id="E_provingAS"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_provingAS"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.5.5</span><span class="period">.</span><span class="space"> </span><span class="title">Proving Antisymmetric.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_provingAS"><article class="example example-like"> <div class="para" id="p-1647">Let <span class="process-math">\(R\)</span> be the relation on <span class="process-math">\(\mathbb{Z}^+\)</span> given by <span class="process-math">\((m, n)\in R\Leftrightarrow m\mid n\text{.}\)</span> Prove <span class="process-math">\(R\)</span> is antisymmtric.</div> <div class="para" id="p-1648">Assume <span class="process-math">\((x, y)\in R\)</span> and <span class="process-math">\((y, x)\in R\text{.}\)</span> Then <span class="process-math">\(x\mid y\)</span> and <span class="process-math">\(y \mid x\text{.}\)</span> This implies <span class="process-math">\(x=yk\)</span> for some <span class="process-math">\(k\in\mathbb{Z}^+\)</span> and <span class="process-math">\(y=xj\)</span> for some <span class="process-math">\(j\in \mathbb{Z}^+\text{.}\)</span> Thus, <span class="process-math">\(x=xjk\text{,}\)</span> and then <span class="process-math">\(1=jk\text{.}\)</span> But since <span class="process-math">\(j, k \in \mathbb{Z}^+\text{,}\)</span> <span class="process-math">\(j=k=1\text{.}\)</span> Hence, <span class="process-math">\(x=y\text{.}\)</span>
+</div> <div class="para" id="p-1649">We leave it as an exercise to show <span class="process-math">\(R\)</span> is reflexive and transitive, but not symmetric.</div></article></div>
+<article class="activity project-like" id="A_proveleqAS"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">5.5.2</span><span class="period">.</span><span class="space"> </span><span class="title">The Less Than or Equal Relation.</span>
+</h3>
+<div class="para" id="p-1650">Define the relation on <span class="process-math">\(\mathbb{R}\)</span> by <span class="process-math">\(xRy \iff x \leq y\text{.}\)</span> Prove or disprove <span class="process-math">\(R\)</span> is antisymmetric.</div></article><div class="para" id="p-1651">We've seen examples of relations that are functions and that are equivalence relations. We introduce another type of relation, that of an ordered set. Equivalence relations arise in mathematics as a way to equate element in a set, whereas orders give us a way to compare the “size” of elements in a set.</div>
+<article class="definition definition-like" id="D_poset"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.5.6</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-1652">A relation <span class="process-math">\(R\)</span> on a set <span class="process-math">\(A\)</span> is a <dfn class="terminology">partial order</dfn> if it is reflexive, antisymmetric, and transitive. We will generally use the notation <span class="process-math">\(\leq\)</span> instead of <span class="process-math">\(R\text{:}\)</span> <span class="process-math">\((x, y)\in R\)</span> if and only if <span class="process-math">\(x \leq y\text{.}\)</span>
+</div> <div class="para" id="p-1653">Furthermore, we call the set <span class="process-math">\(A\)</span> with partial order <span class="process-math">\(\leq\)</span> a <dfn class="terminology">partially ordered set</dfn>, or <dfn class="terminology">poset</dfn>.</div></article><div class="para" id="p-1654">The set <span class="process-math">\(\mathbb{Z}^+\)</span> with relation “divides” given in <a href="" class="xref" data-knowl="./knowl/A_proveleqAS.html" title="Activity 5.5.2: The Less Than or Equal Relation">Activity 5.5.2</a> is a partially ordered set.</div>
+<article class="example example-like" id="E_subsetorder"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_subsetorder"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.5.7</span><span class="period">.</span><span class="space"> </span><span class="title">Subset Order.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_subsetorder"><article class="example example-like"><div class="para" id="p-1655">Let <span class="process-math">\(S\)</span> be a set and <span class="process-math">\(\mathcal{P}(S)\)</span> be the set of all subsets of <span class="process-math">\(S\text{.}\)</span> Let <span class="process-math">\(R\)</span> be the relation given by <span class="process-math">\((A, B)\in R\)</span> if and only if <span class="process-math">\(A\subseteq B\text{.}\)</span> Then <span class="process-math">\(R\)</span> is a partial order.</div> <div class="para" id="p-1656">Reflexive: For every subset <span class="process-math">\(A\in \mathcal{P}(S)\text{,}\)</span> <span class="process-math">\(A\subseteq A\text{.}\)</span>
+</div> <div class="para" id="p-1657">Antisymmetric: If <span class="process-math">\(A\subseteq B\)</span> and <span class="process-math">\(B\subseteq A\)</span> then <span class="process-math">\(A=B\text{,}\)</span> by defintion of set equality.</div> <div class="para" id="p-1658">Transitive: If <span class="process-math">\(A\subseteq B\)</span> and <span class="process-math">\(B\subseteq C\)</span> then <span class="process-math">\(A\subseteq B\text{,}\)</span> which is an exercise, <a href="" class="xref" data-knowl="./knowl/ER_subsettrans.html" title="Exercise 5.2.3.8">Exercise 5.2.3.8</a>.</div></article></div>
+<article class="activity project-like" id="A_realgeq"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">5.5.3</span><span class="period">.</span><span class="space"> </span><span class="title">Greater Than or Equal.</span>
+</h3>
+<div class="para" id="p-1659">Show that the relation given by <span class="process-math">\((x, y)\in R\)</span> if and only if <span class="process-math">\(x\geq y\)</span> is a partial order on <span class="process-math">\(\mathbb{R}\text{.}\)</span>
+</div></article><article class="definition definition-like" id="D_totalorder"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.5.8</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-1660">A partially ordered set, <span class="process-math">\(A\text{,}\)</span> with order <span class="process-math">\(\leq\)</span> is a <dfn class="terminology">totally ordered set</dfn> if for all <span class="process-math">\(a, b\in A\text{,}\)</span> either <span class="process-math">\(a\leq b\)</span> or <span class="process-math">\(b\leq a\text{.}\)</span>
+</div> <div class="para" id="p-1661">We say that <span class="process-math">\(\leq\)</span> is a <dfn class="terminology">total order</dfn> on <span class="process-math">\(A\text{.}\)</span>
+</div></article><div class="para" id="p-1662">The idea behind a total order is that every element in the set is comparable. So if we take any two elements, one must be less than the other. This, along with the transitive property allows us to order every element in the set, from “smallest” to “largest.”</div>
+<article class="example example-like" id="E_totalorder"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_totalorder"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.5.9</span><span class="period">.</span><span class="space"> </span><span class="title">Total Order on the Reals.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_totalorder"><article class="example example-like"><div class="para" id="p-1663">The less than or equal to order from <a href="" class="xref" data-knowl="./knowl/A_realgeq.html" title="Activity 5.5.3: Greater Than or Equal">Activity 5.5.3</a> is a total order on <span class="process-math">\(\mathbb{R}\text{.}\)</span> Given any two real numbers, <span class="process-math">\(x, y\text{,}\)</span> either <span class="process-math">\(x\geq y\)</span> or <span class="process-math">\(y\geq x\text{.}\)</span> This property is what allows us to form the real number line.</div></article></div>
+<article class="example example-like" id="E_nottotalorder"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_nottotalorder"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.5.10</span><span class="period">.</span><span class="space"> </span><span class="title">Subset is Not a Total Order.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_nottotalorder"><article class="example example-like"><div class="para" id="p-1664">The subset order from <a href="" class="xref" data-knowl="./knowl/E_subsetorder.html" title="Example 5.5.7: Subset Order">Example 5.5.7</a> is generally not a total order on <span class="process-math">\(S\text{.}\)</span> For example, let <span class="process-math">\(S=\{1, 2, 3\}\text{.}\)</span> Then for the sets <span class="process-math">\(A=\{1\}\)</span> and <span class="process-math">\(B=\{2\}\text{,}\)</span>  <span class="process-math">\(A\nsubseteq B\)</span> and <span class="process-math">\(B\nsubseteq A\text{.}\)</span> Thus neither <span class="process-math">\(A\)</span> nor <span class="process-math">\(B\)</span> is “smaller” than the other and they cannot be ordered relative to each other with the subset order. Similarly, if <span class="process-math">\(C=\{2, 3\}\text{,}\)</span>  <span class="process-math">\(A\nsubseteq C\)</span> and <span class="process-math">\(C\nsubseteq A\text{.}\)</span> Once again, we cannot order these sets by <span class="process-math">\(\subseteq\text{.}\)</span>
+</div></article></div>
+<div class="para" id="p-1665">The following Theorem is useful when working with orders.</div>
+<article class="theorem theorem-like" id="T_totalorder"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">5.5.11</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="p-1666">
+<div class="para">A set <span class="process-math">\(A\)</span> with order <span class="process-math">\(\leq\)</span> is a totally ordered set if and only if exactly one of the following is true:</div>
+<ol class="decimal">
+<li id="li-484"><div class="para" id="p-derived-li-484"><span class="process-math">\(a &lt; b\text{,}\)</span></div></li>
+<li id="li-485"><div class="para" id="p-derived-li-485"><span class="process-math">\(b &lt; a\text{,}\)</span></div></li>
+<li id="li-486"><div class="para" id="p-derived-li-486"><span class="process-math">\(a = b\text{.}\)</span></div></li>
+</ol>
+</div></article><article class="example example-like" id="E_againnottotalorder"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_againnottotalorder"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.5.12</span><span class="period">.</span><span class="space"> </span><span class="title">Again Subset is Not a Total Order.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_againnottotalorder"><article class="example example-like"><div class="para" id="p-1667">If we check the conditions of <a href="" class="xref" data-knowl="./knowl/T_totalorder.html" title="Theorem 5.5.11">Theorem 5.5.11</a>, we can see again that the subset order from <a href="" class="xref" data-knowl="./knowl/E_subsetorder.html" title="Example 5.5.7: Subset Order">Example 5.5.7</a> is generally not a total order on <span class="process-math">\(S\text{.}\)</span> Let <span class="process-math">\(S=\{1, 2, 3\}\text{.}\)</span> Then for the sets <span class="process-math">\(A=\{1\}\)</span> and <span class="process-math">\(B=\{2\}\text{,}\)</span>  <span class="process-math">\(A\nsubseteq B\text{,}\)</span> <span class="process-math">\(B\nsubseteq A\text{,}\)</span> and <span class="process-math">\(A\neq B\text{.}\)</span>  Similarly, if <span class="process-math">\(C=\{2, 3\}\text{,}\)</span>  <span class="process-math">\(A\nsubseteq C\text{,}\)</span> <span class="process-math">\(C\nsubseteq A\)</span> and <span class="process-math">\(A\neq C\text{.}\)</span>
+</div></article></div>
+<section class="exercises" id="exercises-19"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="exercise-146"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="para" id="p-1668">Let <span class="process-math">\(A=\mathbb{Z}^+\)</span> Define <span class="process-math">\(a\leq b\)</span> if <span class="process-math">\(a \mid b\text{.}\)</span>
+</div> <ol class="lower-alpha">
+<li id="li-487"><div class="para" id="p-1669">Prove or disprove <span class="process-math">\(\leq\)</span> is a partial order on <span class="process-math">\(\mathbb{Z}^+\text{.}\)</span>
+</div></li>
+<li id="li-488"><div class="para" id="p-1670">Prove or disprove <span class="process-math">\(\leq\)</span> is a total order on <span class="process-math">\(\mathbb{Z}^+\text{.}\)</span>
+</div></li>
+</ol></article><article class="exercise exercise-like" id="exercise-147"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="para" id="p-1671">Define <span class="process-math">\((a, b)\leq (c, d)\)</span> if <span class="process-math">\(a\leq c\)</span> and <span class="process-math">\(b\leq d\text{.}\)</span>
+</div> <ol class="lower-alpha">
+<li id="li-489"><div class="para" id="p-1672">Prove or disprove <span class="process-math">\(\leq\)</span> is a partial order on <span class="process-math">\(\mathbb{Z}\times\mathbb{Z}\text{.}\)</span>
+</div></li>
+<li id="li-490"><div class="para" id="p-1673">Prove or disprove <span class="process-math">\(\leq\)</span> is a total order on <span class="process-math">\(\mathbb{Z}\times\mathbb{Z}\text{.}\)</span>
+</div></li>
+</ol></article><article class="exercise exercise-like" id="exercise-148"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="para" id="p-1674">Define <span class="process-math">\((a, b)\leq (c, d)\)</span> if <span class="process-math">\(a\leq c\)</span> and if <span class="process-math">\(a=c\)</span> then <span class="process-math">\(b\leq d\text{.}\)</span>
+</div> <ol class="lower-alpha">
+<li id="li-491"><div class="para" id="p-1675">Prove or disprove <span class="process-math">\(\leq\)</span> is a partial order on <span class="process-math">\(\mathbb{Z}\times\mathbb{Z}\text{.}\)</span>
+</div></li>
+<li id="li-492"><div class="para" id="p-1676">Prove or disprove <span class="process-math">\(\leq\)</span> is a total order on <span class="process-math">\(\mathbb{Z}\times\mathbb{Z}\text{.}\)</span>
+</div></li>
+</ol> <div class="para" id="p-1677">Note, this is often called the <dfn class="terminology">lexicographic</dfn> or <dfn class="terminology">dictionary</dfn> order.</div></article><article class="exercise exercise-like" id="exercise-149"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="para" id="p-1678">Define <span class="process-math">\((a, b)\leq (c, d)\)</span> if <span class="process-math">\(a+b\leq c+d\text{.}\)</span>
+</div> <ol class="lower-alpha">
+<li id="li-493"><div class="para" id="p-1679">Prove or disprove <span class="process-math">\(\leq\)</span> is a partial order on <span class="process-math">\(\mathbb{Z}\times\mathbb{Z}\text{.}\)</span>
+</div></li>
+<li id="li-494"><div class="para" id="p-1680">Prove or disprove <span class="process-math">\(\leq\)</span> is a total order on <span class="process-math">\(\mathbb{Z}\times\mathbb{Z}\text{.}\)</span>
+</div></li>
+</ol></article><article class="exercise exercise-like" id="exercise-150"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="para" id="p-1681">Let <span class="process-math">\(A\)</span> be a partially ordered set with order <span class="process-math">\(\leq\text{.}\)</span> Then <span class="process-math">\(x\in A\)</span> is a <dfn class="terminology">greatest</dfn> element of <span class="process-math">\(A\)</span> if <span class="process-math">\(y\leq x\)</span> for all <span class="process-math">\(y\in A\text{.}\)</span> Prove if <span class="process-math">\(A\)</span> has a greatest element, <span class="process-math">\(x\text{,}\)</span> then <span class="process-math">\(x\)</span> is unique.</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-13" id="hint-13"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-13"><div class="hint solution-like"><div class="para" id="p-1682">Since the problem assumes existence, you just need to do a uniqueness proof. Start by assuming <span class="process-math">\(A\)</span> has two greatest elements.</div></div></div>
+</div></article></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="relations.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="chapter6.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+</div></main>
+</div>
+<div class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org"><div class="name">Authored in PreTeXt</div>
+<div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259 "></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0  472  9732 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496 A 4241 4241  0  0  1  4724  3590 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259 A 4507 4507  0  0  1  4724  9448 "></path><polyline points="5385,4299 4062,8125 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="8598,3496 8598,9259 " style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="850,3496 850,9259 " style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="4960,9685 4488,9685 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="3070,4582 1889,6141 3070,7700 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="6418,4582 7600,6141 6418,7700 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="8976,3590 8976,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732 "></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy"><div class="name">Powered by Runestone</div>
+<img class="logo" title="Powered by Runestone" src="https://runestone.academy/runestone/static/rectangle_badge.png" alt="Powered by Runestone"></a><a class="mathjax-logo" href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a>
+</div>
+</body>
+</html>

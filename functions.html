@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Functions</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Introduction to Proofs">
+<meta property="book:author" content="Jennifer Firkins Nordstrom">
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.98,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.2/pretext_search.js"></script><link href="https://pretextbook.org/css/0.6/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.2</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.2/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.2/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.2/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://pretextbook.org/css/0.6/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="IntroProofs.html"><span class="title">Introduction to Proofs:</span> <span class="subtitle">An Active Exploration of Mathematical Language</span></a></h1>
+<p class="byline">Jennifer Firkins Nordstrom</p>
+</div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
+</h2>
+<div id="searchempty"><span>No results.</span></div>
+<ol id="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><a class="index-button button" href="index-1.html" title="Index"><span class="name">Index</span></a><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="theavatarbutton" class="name">You!</span><div id="preferences_menu_holder" class="hidden"><ol id="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Size</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
+<li>Width</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
+<li>Weight</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
+<li>Letter spacing</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
+<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
+<li>Word spacing</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
+<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
+<li>Line Spacing</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>dark</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>none</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>underline</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>L-underline</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>grey bar</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>light box</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>sunrise</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
+<li class="moveQ">Motion by:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="settheory.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter5.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="relations.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(     \newcommand{\MyTikzmark}[2]{
+     \tikz[overlay,remember picture,baseline] \node [anchor=base] (#1) {$#2$};}
+\newcommand{\DrawVLine}[3][]{
+  \begin{tikzpicture}[overlay,remember picture]
+    \draw[shorten \lt =0.3ex, #1] (#2.north) -- (#3.south);
+  \end{tikzpicture}
+}
+\newcommand{\DrawHLine}[3][]{
+  \begin{tikzpicture}[overlay,remember picture]
+    \draw[shorten \lt =0.2em, #1] (#2.west) -- (#3.east);
+  \end{tikzpicture}
+}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar"><nav id="ptx-toc" class="depth2"><ul class="structural">
+<li>
+<div class="toc-item"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="colophon-1.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li><div class="toc-item"><a href="preface-1.html" class="internal"><span class="title">Preface</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter1.html" class="internal"><span class="codenumber">1</span> <span class="title">Logic</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="whatisaproof.html" class="internal"><span class="codenumber">1.1</span> <span class="title">What is a Proof?</span></a></div></li>
+<li>
+<div class="toc-item"><a href="arguments.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Validity and Soundness</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="arguments.html#exercises-1" class="internal"><span class="codenumber">1.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="connectives.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Logical Connectives</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="connectives.html#exercises-2" class="internal"><span class="codenumber">1.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="argumentswconnectives.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Logical Arguments with Connectives</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="argumentswconnectives.html#exercises-3" class="internal"><span class="codenumber">1.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter2.html" class="internal"><span class="codenumber">2</span> <span class="title">Mathematical Statements</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="setnotation.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Introduction to Sets</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="setnotation.html#exercises-4" class="internal"><span class="codenumber">2.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="quantifiers.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Quantifiers</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="quantifiers.html#SS_quantifiers" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Quantified Statements</span></a></div></li>
+<li><div class="toc-item"><a href="quantifiers.html#SS_negquant" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Negating Quantified Statements</span></a></div></li>
+<li>
+<div class="toc-item"><a href="quantifiers.html#subsection-3" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Multiple Quantifiers</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="quantifiers.html#exercises-5" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="conditionals.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Conditional Statements</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="conditionals.html#exercises-6" class="internal"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter3.html" class="internal"><span class="codenumber">3</span> <span class="title">Basic Proof Techniques</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="directproof.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Direct Proof and Counterexample</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="directproof.html#exercises-7" class="internal"><span class="codenumber">3.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="moredirect.html" class="internal"><span class="codenumber">3.2</span> <span class="title">More Direct Proof: Rational Numbers and Divisibility</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="moredirect.html#SS_rational" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Rational Numbers</span></a></div></li>
+<li><div class="toc-item"><a href="moredirect.html#SS_divisibility" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Divisibility</span></a></div></li>
+<li><div class="toc-item"><a href="moredirect.html#exercises-8" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="cases.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Proof by Cases</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="cases.html#exercises-9" class="internal"><span class="codenumber">3.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="contradiction.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Proof by Contradiction and Contrapositive</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="contradiction.html#SS_contradiction" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Proof by Contradiction</span></a></div></li>
+<li><div class="toc-item"><a href="contradiction.html#SS_contrapositive" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Proof by Contrapositive</span></a></div></li>
+<li>
+<div class="toc-item"><a href="contradiction.html#SS_twoproofs" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Two Classical Proofs</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="contradiction.html#exercises-10" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter4.html" class="internal"><span class="codenumber">4</span> <span class="title">Proof by Induction</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="summation.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Summation Notation</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="summation.html#exercises-11" class="internal"><span class="codenumber">4.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="induction.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Mathematical Induction</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="induction.html#exercises-12" class="internal"><span class="codenumber">4.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="moreinduction.html" class="internal"><span class="codenumber">4.3</span> <span class="title">More Mathematical Induction</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="moreinduction.html#exercises-13" class="internal"><span class="codenumber">4.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="stronginduction.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Strong Induction</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="stronginduction.html#exercises-14" class="internal"><span class="codenumber">4.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter5.html" class="internal"><span class="codenumber">5</span> <span class="title">Proofs in Specific Contexts</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="existunique.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Existence and Uniqueness Proofs</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="existunique.html#exercises-15" class="internal"><span class="codenumber">5.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="settheory.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Set Theory</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="settheory.html#SS_STnotation" class="internal"><span class="codenumber">5.2.1</span> <span class="title">Set Notation</span></a></div></li>
+<li><div class="toc-item"><a href="settheory.html#SS_setoperations" class="internal"><span class="codenumber">5.2.2</span> <span class="title">Operations on Sets</span></a></div></li>
+<li>
+<div class="toc-item"><a href="settheory.html#SS_setproofs" class="internal"><span class="codenumber">5.2.3</span> <span class="title">Proofs of Set Properties</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="settheory.html#exercises-16" class="internal"><span class="codenumber">5.2.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="active">
+<div class="toc-item"><a href="functions.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Functions</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="functions.html#exercises-17" class="internal"><span class="codenumber">5.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="relations.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Equivalence Relations</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="relations.html#SS_introrelation" class="internal"><span class="codenumber">5.4.1</span> <span class="title">Introduction to Relations</span></a></div></li>
+<li>
+<div class="toc-item"><a href="relations.html#SS_equivrelations" class="internal"><span class="codenumber">5.4.2</span> <span class="title">Equivalence Relations</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="relations.html#exercises-18" class="internal"><span class="codenumber">5.4.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="orders.html" class="internal"><span class="codenumber">5.5</span> <span class="title">Ordered Sets</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="orders.html#exercises-19" class="internal"><span class="codenumber">5.5</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter6.html" class="internal"><span class="codenumber">6</span> <span class="title">Additional Topics</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="binomial9.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Binomial Theorem</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="binomial9.html#exercises-20" class="internal"><span class="codenumber">6.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="cardinality.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Cardinality</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="cardinality.html#exercises-21" class="internal"><span class="codenumber">6.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Index</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-1.html" class="internal"><span class="codenumber">A</span> <span class="title">Notation</span></a></div></li>
+<li><div class="toc-item"><a href="colophon-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="functions"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">5.3</span> <span class="title">Functions</span>
+</h2>
+<div class="para" id="p-1315">Functions are familar mathematical objects from algebra and calculus.</div>
+<article class="definition definition-like" id="D_function"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.3.1</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-1316">A <dfn class="terminology">function</dfn>, <span class="process-math">\(f:X\rightarrow Y\text{,}\)</span> is a map in which each input is related to one and only one output.</div> <div class="para" id="p-1317">We say <span class="process-math">\(X\)</span> is the <dfn class="terminology">domain</dfn> and <span class="process-math">\(Y\)</span> is the <dfn class="terminology">codomain</dfn> of <span class="process-math">\(f\text{.}\)</span>
+</div></article><article class="example example-like" id="E_notfunctionimages"><a href="" data-knowl="" class="id-ref example-knowl original has-image" data-refid="hk-E_notfunctionimages"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.3.2</span><span class="period">.</span><span class="space"> </span><span class="title">Exploring the Definition of a Function.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_notfunctionimages"><article class="example example-like"> <div class="para logical" id="p-1318"><ol class="lower-alpha">
+<li id="li-381">
+<div class="para" id="p-1319">Let <span class="process-math">\(f: X\rightarrow Y\)</span> be a map as shown in the figure.</div>
+<figure class="figure figure-like" id="F_notfnonetotwo"><div class="image-box" style="width: 10%; margin-left: 45%; margin-right: 45%;"><img src="generated/latex-image/notfn1to2.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.3.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure><div class="para" id="p-1320">
+<a href="" class="xref" data-knowl="./knowl/F_notfnonetotwo.html" title="Figure 5.3.3">Figure 5.3.3</a> shows a map that is not a function since <span class="process-math">\(x_2\)</span> maps to two different outputs.</div>
+</li>
+<li id="li-382">
+<div class="para" id="p-1321">Let <span class="process-math">\(g: X\rightarrow Y\)</span> be a map as shown in the figure.</div>
+<figure class="figure figure-like" id="F_notfnonetozero"><div class="image-box" style="width: 10%; margin-left: 45%; margin-right: 45%;"><img src="generated/latex-image/notfn1to0.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.3.4<span class="period">.</span></span><span class="space"> </span></figcaption></figure><div class="para" id="p-1322">
+<a href="" class="xref" data-knowl="./knowl/F_notfnonetozero.html" title="Figure 5.3.4">Figure 5.3.4</a> shows a map that is not a function since <span class="process-math">\(x_1\)</span> does not map to any output.</div>
+</li>
+<li id="li-383">
+<div class="para" id="p-1323">Let <span class="process-math">\(h: X\rightarrow Y\)</span> be a map as shown in the figure.</div>
+<figure class="figure figure-like" id="F_functionh"><div class="image-box" style="width: 10%; margin-left: 45%; margin-right: 45%;"><img src="generated/latex-image/functionh.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.3.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure><div class="para" id="p-1324">
+<a href="" class="xref" data-knowl="./knowl/F_functionh.html" title="Figure 5.3.5">Figure 5.3.5</a> shows a map that is a function since each <span class="process-math">\(x_i\)</span> maps to exactly one <span class="process-math">\(y_i\text{.}\)</span>
+</div>
+</li>
+</ol></div></article></div>
+<div class="para logical" id="p-1325">
+<div class="para">For a given <span class="process-math">\(x\in X\text{,}\)</span> <span class="process-math">\(f(x)\)</span> is</div>
+<ul class="disc">
+<li id="li-384"><div class="para" id="p-derived-li-384">the <dfn class="terminology">output</dfn> of <span class="process-math">\(f\text{,}\)</span>
+</div></li>
+<li id="li-385"><div class="para" id="p-derived-li-385">the <dfn class="terminology">value</dfn> of <span class="process-math">\(f\)</span> at <span class="process-math">\(x\text{,}\)</span>
+</div></li>
+<li id="li-386"><div class="para" id="p-derived-li-386">the <dfn class="terminology">image</dfn> of <span class="process-math">\(x\)</span> under <span class="process-math">\(f\text{.}\)</span>
+</div></li>
+</ul>
+</div>
+<article class="definition definition-like" id="D_image"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.3.6</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="p-1326">
+<div class="para">The <dfn class="terminology">image</dfn> or <dfn class="terminology">range</dfn> of a set <span class="process-math">\(X\)</span> under <span class="process-math">\(f\)</span> is the set of outputs of <span class="process-math">\(f\)</span> corresponding to inputs from <span class="process-math">\(X\text{:}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\text{Im}(f)=\{y\in Y : y=f(x) \text{ for some } x\in X\}.
+\end{equation*}
+</div>
+</div></article><div class="para" id="p-1327">In <a href="summation.html" class="internal" title="Section 4.1: Summation Notation">Section 4.1</a> we defined sequences as lists. Now we can define them as functions. A <dfn class="terminology">sequence</dfn> is a function from <span class="process-math">\(\mathbb{Z}^+\)</span> to <span class="process-math">\(\mathbb{R}\text{.}\)</span> For example, <span class="process-math">\(f(n)=\frac{1}{n}\text{.}\)</span>
+</div>
+<article class="example example-like" id="E_addasfn"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_addasfn"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.3.7</span><span class="period">.</span><span class="space"> </span><span class="title">Addition as a Function.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_addasfn"><article class="example example-like"> <div class="para" id="p-1328">We may have functions involving Cartesian products of sets. This is common when we want to define algebraic operations. For example, we can define addition on the integers as the function <span class="process-math">\(f:\mathbb{Z}\times\mathbb{Z}\rightarrow\mathbb{Z}\)</span> given by <span class="process-math">\(f(a, b)=a+b\text{.}\)</span>
+</div> <div class="para logical" id="p-1329"><ol class="lower-alpha">
+<li id="li-387">
+<div class="para" id="p-1330">Find <span class="process-math">\(f(3, 2), f(5, 5), f(2, -4)\text{.}\)</span>
+</div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-67" id="answer-67"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-67"><div class="answer solution-like"><span class="process-math">\(5, 10, -2\)</span></div></div>
+</li>
+<li id="li-388">
+<div class="para" id="p-1331">What is the image of <span class="process-math">\(\mathbb{Z}\times\mathbb{Z}\)</span> under <span class="process-math">\(f\text{?}\)</span>
+</div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-68" id="answer-68"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-68"><div class="answer solution-like"><span class="process-math">\(\mathbb{Z}\)</span></div></div>
+</li>
+<li id="li-389">
+<div class="para" id="p-1332">Find all ordered pairs that map to 0.</div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-69" id="answer-69"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-69"><div class="answer solution-like"><span class="process-math">\(\{(n, -n) : n\in \mathbb{Z}\}\)</span></div></div>
+</li>
+</ol></div></article></div>
+<article class="activity project-like" id="A_fnsubtraction"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">5.3.1</span><span class="period">.</span><span class="space"> </span><span class="title">Multiplication as a Function.</span>
+</h3>
+<div class="introduction" id="introduction-57"><div class="para" id="p-1333">Define <span class="process-math">\(f:\mathbb{Z}\times\mathbb{Z}\rightarrow\mathbb{Z}\)</span> by <span class="process-math">\(f(a, b)=ab\text{.}\)</span>
+</div></div>
+<article class="task exercise-like" id="task-164"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="p-1334">Find <span class="process-math">\(f(0, 2), f(1, 1), f(2, 0), f(3, 2), f(n, 0)\text{.}\)</span>
+</div></article><article class="task exercise-like" id="task-165"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="p-1335">What is the image of <span class="process-math">\(\mathbb{Z}\times\mathbb{Z}\)</span> under <span class="process-math">\(f\text{?}\)</span>
+</div></article><article class="task exercise-like" id="task-166"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="p-1336">Find all ordered pairs that map to 0.</div></article></article><div class="para" id="p-1337">Since a function needs to satisfy the property that each <span class="process-math">\(x\in X\)</span> can only map to one <span class="process-math">\(y \in Y\text{,}\)</span> we say a function is <dfn class="terminology">well-defined</dfn> if whenever <span class="process-math">\(a=b\text{,}\)</span> we have <span class="process-math">\(f(a)=f(b)\text{.}\)</span> Most of the functions you've seen in calculus are clearly well-defined since when <span class="process-math">\(a=b\text{,}\)</span> <span class="process-math">\(f(a)=f(b)\text{.}\)</span> This property is really only interesting when elements of <span class="process-math">\(X\)</span> have multiple representations. In other words, when two equal elements in <span class="process-math">\(X\)</span> have different forms. The most familiar set where this happens is <span class="process-math">\(\mathbb{Q}\text{.}\)</span> For example, <span class="process-math">\(\frac{1}{2}=\frac{2}{4}\text{.}\)</span>
+</div>
+<article class="example example-like" id="E_welldefined"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_welldefined"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.3.8</span><span class="period">.</span><span class="space"> </span><span class="title">A Map That is Not Well-Defined.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_welldefined"><article class="example example-like"> <div class="para" id="p-1338">Let <span class="process-math">\(f:\mathbb{Q}\rightarrow \mathbb{Z}\)</span> be given by <span class="process-math">\(f(p/q)=p+q\text{.}\)</span>
+</div> <div class="para" id="p-1339">Then <span class="process-math">\(1/2=2/4\)</span> in <span class="process-math">\(\mathbb{Q}\text{,}\)</span> but <span class="process-math">\(f(1/2)=1+2=3\)</span> and <span class="process-math">\(f(2/4)=2+4=6\text{.}\)</span> Thus, <span class="process-math">\(1/2=2/4\)</span> but <span class="process-math">\(f(1/2)\neq f(2/4)\text{.}\)</span>
+</div> <div class="para" id="p-1340">Therefore <span class="process-math">\(f\)</span> is not well-defined, and hence, <span class="process-math">\(f\)</span> is not a function.</div></article></div>
+<article class="activity project-like" id="A_notwelldefined"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">5.3.2</span><span class="period">.</span><span class="space"> </span><span class="title">Showing a Map is Not Well-Defined.</span>
+</h3>
+<div class="para" id="p-1341">Let <span class="process-math">\(f:\mathbb{Q}\rightarrow\mathbb{Z}\)</span> be given by <span class="process-math">\(f(m/n)=m\text{.}\)</span> Show <span class="process-math">\(f\)</span> is NOT well-defined by finding two equivalent fractions in <span class="process-math">\(\mathbb{Q}\)</span> that map to two different integers.</div></article><div class="para" id="p-1342">Now we will look at specific properties of functions. We will learn how to prove a function is one-to-one and/or onto its codomain. These properies are important as they are the exact properties we need in order for a function to have an inverse function.</div>
+<article class="definition definition-like" id="D_onetoone"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.3.9</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-1343">A function, <span class="process-math">\(f:X\rightarrow Y\text{,}\)</span> is <dfn class="terminology">one-to-one</dfn> or <dfn class="terminology">injective</dfn> if for all <span class="process-math">\(x_1, x_2\in X\text{,}\)</span> if <span class="process-math">\(f(x_1)=f(x_2)\)</span> then <span class="process-math">\(x_1=x_2\text{.}\)</span>
+</div></article><div class="para" id="p-1344">Equivalently, <span class="process-math">\(f\)</span> is one-to-one if <span class="process-math">\(x_1\neq x_2\)</span> implies <span class="process-math">\(f(x_1)\neq f(x_2)\text{.}\)</span> We note, this is just the contrapositive of the definition.</div>
+<div class="para" id="p-1345">Although it is easier to prove a function is one-to-one using the definition, the contrapositive can be helpful for deciding if a function is one-to-one.</div>
+<article class="assemblage assemblage-like" id="B_pfonetoone"><h3 class="heading"><span class="title">Proving and Disproving One-to-One.</span></h3>
+<div class="para logical" id="p-1346">
+<div class="para">To prove <span class="process-math">\(f:X\rightarrow Y\)</span> is one-to-one:</div>
+<ul class="disc">
+<li id="li-390"><div class="para" id="p-derived-li-390">Assume <span class="process-math">\(f(x_1)=f(x_2).\)</span>
+</div></li>
+<li id="li-391"><div class="para" id="p-derived-li-391">Show <span class="process-math">\(x_1=x_2.\)</span>
+</div></li>
+</ul>
+</div>
+<div class="para logical" id="p-1347">
+<div class="para">To prove <span class="process-math">\(f:X\rightarrow Y\)</span> is NOT one-to-one:</div>
+<ul class="disc">
+<li id="li-392"><div class="para" id="p-derived-li-392">Find a counterexample.</div></li>
+<li id="li-393"><div class="para" id="p-derived-li-393">In particular, find <span class="process-math">\(x_1, x_2\in X\)</span> with <span class="process-math">\(x_1\neq x_2\)</span> and <span class="process-math">\(f(x_1)=f(x_2)\text{.}\)</span>
+</div></li>
+</ul>
+</div></article><div class="para" id="p-1348">Note that a one-to-one proof is really a proof of uniqueness. We are proving there is a unique input <span class="process-math">\(x\)</span> for each output.</div>
+<article class="example example-like" id="E_arrownotonetoone"><a href="" data-knowl="" class="id-ref example-knowl original has-image" data-refid="hk-E_arrownotonetoone"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.3.10</span><span class="period">.</span><span class="space"> </span><span class="title">Not One-to-One.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_arrownotonetoone"><article class="example example-like"> <figure class="figure figure-like" id="F_arrowdiagnotonetoone"><div class="image-box" style="width: 10%; margin-left: 45%; margin-right: 45%;"><img src="generated/latex-image/adnotonetoone.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.3.11<span class="period">.</span></span><span class="space"> </span>A function which is not one-to-one.</figcaption></figure> <div class="para" id="p-1349">The function given in <a href="" class="xref" data-knowl="./knowl/F_arrowdiagnotonetoone.html" title="Figure 5.3.11">Figure 5.3.11</a> in not one-to-one since <span class="process-math">\(c\)</span> and <span class="process-math">\(d\)</span> both map to the same value in <span class="process-math">\(Y\text{.}\)</span>
+</div></article></div>
+<article class="example example-like" id="E_pfonetoone"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_pfonetoone"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.3.12</span><span class="period">.</span><span class="space"> </span><span class="title">Proving One-to-One.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_pfonetoone"><article class="example example-like"><div class="para" id="p-1350">Let  <span class="process-math">\(f:\mathbb{R}\rightarrow \mathbb{R}\)</span> be given by <span class="process-math">\(f(x)=3x+2\text{.}\)</span> Prove <span class="process-math">\(f\)</span> is one-to-one.</div> <article class="hiddenproof" id="proof-34"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-34"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-34"><article class="hiddenproof"><div class="para logical" id="p-1351">
+<div class="para">Assume <span class="process-math">\(f(x_1)=f(x_2)\text{.}\)</span> Then</div>
+<div class="displaymath process-math" id="md-25">
+\begin{align*}
+3x_1+2&amp;=3x_2+2\\
+3x_1&amp;=3x_2\\
+x_1&amp;=x_2
+\end{align*}
+</div>
+<div class="para">which is what we wanted to show.</div>
+</div></article></div></article></div>
+<article class="example example-like" id="E_ceonetoone"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_ceonetoone"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.3.13</span><span class="period">.</span><span class="space"> </span><span class="title">Disproving One-to-One.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_ceonetoone"><article class="example example-like"><div class="para" id="p-1352">Let  <span class="process-math">\(f:\mathbb{Z}\rightarrow \mathbb{Z}\)</span> be given by <span class="process-math">\(f(x)=x^2-1\text{.}\)</span> Disprove <span class="process-math">\(f\)</span> is one-to-one.</div> <div class="para" id="p-1353">We need a counterexample with <span class="process-math">\(x_1\neq x_2\)</span> and <span class="process-math">\(f(x_1)=f(x_2)\text{.}\)</span> Let <span class="process-math">\(x_1=2, x_2=-2\text{.}\)</span>
+</div> <div class="para" id="p-1354">Then <span class="process-math">\(f(2)=4-1=3\)</span> and <span class="process-math">\(f(-2)=4-1=3\text{.}\)</span> So <span class="process-math">\(f(x_1)=f(x_2)\text{,}\)</span> but <span class="process-math">\(2\neq-2\text{.}\)</span>
+</div></article></div>
+<article class="definition definition-like" id="D_onto"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.3.14</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-1355">A function, <span class="process-math">\(f:X\rightarrow Y\text{,}\)</span> is <dfn class="terminology">onto</dfn> <span class="process-math">\(Y\)</span> or <dfn class="terminology">surjective</dfn> if for all <span class="process-math">\(y\in Y\)</span> there exists <span class="process-math">\(x\in X\)</span> such that <span class="process-math">\(f(x)=y\text{.}\)</span>
+</div></article><div class="para" id="p-1356">Although we need the definition for onto to be able to write a proof, the concept of onto is easier to understand without the definition. Basically, we need every <span class="process-math">\(y\in Y\)</span> to get mapped to by some <span class="process-math">\(x\in X\text{.}\)</span> We can also think about onto in terms of sets. A function is onto <span class="process-math">\(Y\)</span> if <span class="process-math">\(Y\)</span> is the range or image of <span class="process-math">\(f\text{.}\)</span>
+</div>
+<article class="assemblage assemblage-like" id="B_pfonto"><h3 class="heading"><span class="title">Proving and Disproving Onto.</span></h3>
+<div class="para logical" id="p-1357">
+<div class="para">To prove <span class="process-math">\(f:X\rightarrow Y\)</span> is onto <span class="process-math">\(Y\text{:}\)</span>
+</div>
+<ul class="disc">
+<li id="li-394"><div class="para" id="p-derived-li-394">Let <span class="process-math">\(y\)</span> be a general element of <span class="process-math">\(Y\text{.}\)</span> You should not be using any information about the function at this point.</div></li>
+<li id="li-395"><div class="para" id="p-derived-li-395">Find <span class="process-math">\(x\in X\)</span> such that <span class="process-math">\(f(x)=y\text{.}\)</span> Finding <span class="process-math">\(x\)</span> may involve scratchwork.</div></li>
+<li id="li-396"><div class="para" id="p-derived-li-396">In your proof, state <span class="process-math">\(x\text{,}\)</span> show <span class="process-math">\(x\in X\text{,}\)</span> and show <span class="process-math">\(f(x)=y\text{.}\)</span>
+</div></li>
+</ul>
+</div>
+<div class="para logical" id="p-1358">
+<div class="para">To prove <span class="process-math">\(f:X\rightarrow Y\)</span> is NOT onto <span class="process-math">\(Y\text{:}\)</span>
+</div>
+<ul class="disc">
+<li id="li-397"><div class="para" id="p-derived-li-397">Find a counterexample.</div></li>
+<li id="li-398"><div class="para" id="p-derived-li-398">In particular, find <span class="process-math">\(y\in Y\)</span> such that no <span class="process-math">\(x\in X\)</span> will map to <span class="process-math">\(y\text{.}\)</span>
+</div></li>
+</ul>
+</div></article><div class="para" id="p-1359">An onto proof is really an existence proof: state your candidate <span class="process-math">\(x\text{,}\)</span> show <span class="process-math">\(x\)</span> satifies the required properties. In particular we show <span class="process-math">\(x\in X\)</span> and <span class="process-math">\(f(x)=y\text{.}\)</span>
+</div>
+<article class="example example-like" id="E_arrownotonto"><a href="" data-knowl="" class="id-ref example-knowl original has-image" data-refid="hk-E_arrownotonto"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.3.15</span><span class="period">.</span><span class="space"> </span><span class="title">Not Onto.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_arrownotonto"><article class="example example-like"> <figure class="figure figure-like" id="F_arrowdiagnotonto"><div class="image-box" style="width: 10%; margin-left: 45%; margin-right: 45%;"><img src="generated/latex-image/adnotonto.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.3.16<span class="period">.</span></span><span class="space"> </span>A function which is not onto <span class="process-math">\(Y\)</span></figcaption></figure> <div class="para" id="p-1360">The function given in <a href="" class="xref" data-knowl="./knowl/F_arrowdiagnotonto.html" title="Figure 5.3.16">Figure 5.3.16</a> in not onto <span class="process-math">\(Y\)</span> since 2 is not mapped to by any value in <span class="process-math">\(X\text{.}\)</span>
+</div></article></div>
+<article class="example example-like" id="E_pfonto"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_pfonto"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.3.17</span><span class="period">.</span><span class="space"> </span><span class="title">Proving Onto.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_pfonto"><article class="example example-like"><div class="para" id="p-1361">Let  <span class="process-math">\(f:\mathbb{R}\rightarrow \mathbb{R}\)</span> be given by <span class="process-math">\(f(x)=3x+2\text{.}\)</span> Prove <span class="process-math">\(f\)</span> is onto <span class="process-math">\(\mathbb{R}\text{.}\)</span>
+</div> <article class="hiddenproof" id="proof-35"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-35"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-35"><article class="hiddenproof"><div class="para" id="p-1362">Let <span class="process-math">\(y\in\mathbb{R}\text{.}\)</span>
+</div> <div class="para" id="p-1363">[Scratchwork: we want to find <span class="process-math">\(x\)</span> so that <span class="process-math">\(f(x)=y\text{.}\)</span> So we want <span class="process-math">\(3x+2=y\text{,}\)</span> or <span class="process-math">\(x=\frac{y-2}{3}\text{.}\)</span>]</div> <div class="para logical" id="p-1364">
+<div class="para">Let <span class="process-math">\(x=\frac{y-2}{3}\text{.}\)</span> Then since <span class="process-math">\(y\in \mathbb{R}, x\in\mathbb{R}\text{.}\)</span> Furthermore,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(x)=f(\frac{y-2}{3})=3(\frac{y-2}{3})+2=y-2+2=y, 
+\end{equation*}
+</div>
+<div class="para">which is what we wanted to show.</div>
+</div></article></div></article></div>
+<article class="example example-like" id="E_dispfonto"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_dispfonto"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.3.18</span><span class="period">.</span><span class="space"> </span><span class="title">Disproving Onto.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_dispfonto"><article class="example example-like"><div class="para" id="p-1365">Let  <span class="process-math">\(f:\mathbb{Z}\rightarrow \mathbb{Z}\)</span> be given by <span class="process-math">\(f(x)=3x+2\text{.}\)</span> Prove <span class="process-math">\(f\)</span> is NOT onto <span class="process-math">\(\mathbb{Z}\text{.}\)</span>
+</div> <div class="para" id="p-1366">Let <span class="process-math">\(y\in\mathbb{Z}\text{.}\)</span>
+</div> <div class="para" id="p-1367">We saw in the previous example <span class="process-math">\(x=\frac{y-2}{3}\text{.}\)</span> But <span class="process-math">\(x\)</span> is not necessarily in <span class="process-math">\(\mathbb{Z}\text{.}\)</span> So for our counterexample, let <span class="process-math">\(y=1\text{.}\)</span> Then we would need <span class="process-math">\(x=\frac{-1}{3}\notin \mathbb{Z}\text{.}\)</span>
+</div> <div class="para" id="p-1368">Hence, no element in <span class="process-math">\(\mathbb{Z}\)</span> will map to <span class="process-math">\(y=1\text{.}\)</span> Therefore, <span class="process-math">\(f\)</span> is not onto <span class="process-math">\(\mathbb{Z}\text{.}\)</span>
+</div></article></div>
+<article class="example example-like" id="E_pfprdispfonto"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_pfprdispfonto"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.3.19</span><span class="period">.</span><span class="space"> </span><span class="title">Prove or Disprove Onto.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_pfprdispfonto"><article class="example example-like"><div class="para" id="p-1369">Let  <span class="process-math">\(f:\mathbb{R}\rightarrow \mathbb{R}\)</span> be given by <span class="process-math">\(f(x)=x^2-1\text{.}\)</span> Prove or disprove <span class="process-math">\(f\)</span> is onto <span class="process-math">\(\mathbb{R}\text{.}\)</span>
+</div> <div class="para" id="p-1370">Let <span class="process-math">\(y=-2\text{.}\)</span> Then if <span class="process-math">\(f\)</span> is onto <span class="process-math">\(\mathbb{R}\text{,}\)</span> we could find <span class="process-math">\(x\)</span> with <span class="process-math">\(f(x)=-2\text{.}\)</span>
+</div> <div class="para" id="p-1371">But if  <span class="process-math">\(f(x)=-2\text{,}\)</span> then <span class="process-math">\(x^2-1=-2\text{,}\)</span> or <span class="process-math">\(x^2=-1\text{.}\)</span> We know there are no real solutions to this equation. Hence no element in <span class="process-math">\(\mathbb{R}\)</span> will map to <span class="process-math">\(y=-2\text{.}\)</span> Therefore, <span class="process-math">\(f\)</span> is not onto <span class="process-math">\(\mathbb{R}\text{.}\)</span>
+</div></article></div>
+<article class="activity project-like" id="A_real5x"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">5.3.3</span><span class="period">.</span><span class="space"> </span><span class="title">Multiplication in the Reals.</span>
+</h3>
+<div class="introduction" id="introduction-58">Define <span class="process-math">\(f:\mathbb{R}\rightarrow\mathbb{R}\)</span> by <span class="process-math">\(f(x)=5x\text{.}\)</span>
+</div>
+<article class="task exercise-like" id="task-167"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="p-1372">Prove or disprove <span class="process-math">\(f\)</span> is one-to-one.</div></article><article class="task exercise-like" id="task-168"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="p-1373">Prove or disprove <span class="process-math">\(f\)</span> is onto <span class="process-math">\(\mathbb{R}\text{.}\)</span>
+</div></article></article><article class="activity project-like" id="A_int5n"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">5.3.4</span><span class="period">.</span><span class="space"> </span><span class="title">Multiplication in the Integers.</span>
+</h3>
+<div class="introduction" id="introduction-59">Define <span class="process-math">\(f:\mathbb{Z}\rightarrow\mathbb{Z}\)</span> by <span class="process-math">\(f(n)=5n\text{.}\)</span>
+</div>
+<article class="task exercise-like" id="task-169"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="p-1374">Prove or disprove <span class="process-math">\(f\)</span> is one-to-one.</div></article><article class="task exercise-like" id="task-170"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="p-1375">Prove or disprove <span class="process-math">\(f\)</span> is onto <span class="process-math">\(\mathbb{Z}\text{.}\)</span>
+</div></article></article><article class="activity project-like" id="A_rmod3"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">5.3.5</span><span class="period">.</span><span class="space"> </span><span class="title">Remainders.</span>
+</h3>
+<div class="introduction" id="introduction-60">Define <span class="process-math">\(g:\mathbb{Z}\rightarrow\{0, 1, 2\}\)</span>  by <span class="process-math">\(g(n)=r\)</span> where <span class="process-math">\(r\)</span> is the remainder when <span class="process-math">\(n\)</span> is divided by 3.</div>
+<article class="task exercise-like" id="task-171"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="p-1376">Prove or disprove <span class="process-math">\(g\)</span> is one-to-one.</div></article><article class="task exercise-like" id="task-172"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="p-1377">Prove or disprove <span class="process-math">\(g\)</span> is onto <span class="process-math">\(\{0, 1, 2\}\text{.}\)</span>
+</div></article></article><article class="activity project-like" id="A_aminusb"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">5.3.6</span><span class="period">.</span><span class="space"> </span><span class="title">Subtraction.</span>
+</h3>
+<div class="introduction" id="introduction-61">Define <span class="process-math">\(h:\mathbb{Z}\times\mathbb{Z}\rightarrow\mathbb{Z}\)</span> by <span class="process-math">\(h(a, b)=a-b\text{.}\)</span>
+</div>
+<article class="task exercise-like" id="task-173"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="p-1378">Prove or disprove <span class="process-math">\(h\)</span> is one-to-one.</div></article><article class="task exercise-like" id="task-174"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="p-1379">Prove or disprove <span class="process-math">\(h\)</span> is onto <span class="process-math">\(\mathbb{Z}\text{.}\)</span>
+</div></article></article><article class="definition definition-like" id="D_ontotoonecorrespondence"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.3.20</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-1380">A function <span class="process-math">\(f:X\rightarrow Y\)</span> is a <dfn class="terminology">one-to-one correspondence</dfn> or <dfn class="terminology">bijection</dfn> if <span class="process-math">\(f\)</span> is one-to-one and onto <span class="process-math">\(Y\text{.}\)</span>
+</div></article><div class="para" id="p-1381">We showed in the above examples that <span class="process-math">\(f:\mathbb{R}\rightarrow\mathbb{R}\)</span> given by <span class="process-math">\(f(x)=3x+2\)</span> is one-to-one and onto <span class="process-math">\(\mathbb{R}\text{.}\)</span> Thus, it is an example of a bijection.</div>
+<article class="theorem theorem-like" id="T_inverse"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">5.3.21</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="p-1382">
+<div class="para">If <span class="process-math">\(f:X\rightarrow Y\)</span> is a bijection, then there exists a function <span class="process-math">\(f^{-1}:Y\rightarrow X\)</span> such that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f^{-1}(y)=x\Leftrightarrow f(x)=y.
+\end{equation*}
+</div>
+</div></article><div class="para" id="p-1383">If it exists, we say <span class="process-math">\(f^{-1}\)</span> is the <dfn class="terminology">inverse</dfn> of <span class="process-math">\(f\text{.}\)</span>
+</div>
+<article class="example example-like" id="E_inverse"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_inverse"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.3.22</span><span class="period">.</span><span class="space"> </span><span class="title">Inverse Function.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_inverse"><article class="example example-like"> <div class="para" id="p-1384">Since <span class="process-math">\(f:\mathbb{R}\rightarrow\mathbb{R}\)</span> given by <span class="process-math">\(f(x)=3x+2\)</span> is one-to-one and onto, it has an inverse. We can find the inverse as we did in calculus.</div> <div class="para" id="p-1385">Let <span class="process-math">\(y=3x+2\text{,}\)</span> solve for <span class="process-math">\(x\text{.}\)</span>
+</div> <div class="para" id="p-1386">We get <span class="process-math">\(x=\frac{y-2}{3}\text{.}\)</span> Thus <span class="process-math">\(f^{-1}(x)=\frac{x-2}{3}\text{.}\)</span>
+</div></article></div>
+<article class="theorem theorem-like" id="T_inverseonetooneonto"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">5.3.23</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-1387">If <span class="process-math">\(f:X\rightarrow Y\)</span> is one-to-one and onto <span class="process-math">\(Y\text{,}\)</span> then <span class="process-math">\(f^{-1}:Y\rightarrow X\)</span> is one-to-one and onto <span class="process-math">\(X\text{.}\)</span>
+</div></article><article class="hiddenproof" id="proof-36"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-36"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-36"><article class="hiddenproof"><div class="para" id="p-1388">Show <span class="process-math">\(f^{-1}\)</span> is one-to-one: assume <span class="process-math">\(f^{-1}(y_1)=f^{-1}(y_2)\text{.}\)</span> Then <span class="process-math">\(f^{-1}(y_1)=f^{-1}(y_2)=x\)</span> for some <span class="process-math">\(x\in X\text{.}\)</span> Thus,  <span class="process-math">\(f(x)=y_1\)</span> and <span class="process-math">\(f(x)=y_2\text{.}\)</span> Since <span class="process-math">\(f\)</span> is a function, <span class="process-math">\(y_1=y_2\text{.}\)</span>
+</div> <div class="para" id="p-1389">Show <span class="process-math">\(f^{-1}\)</span> is onto <span class="process-math">\(X\text{.}\)</span> Let <span class="process-math">\(x\in X\text{.}\)</span> Then there exists <span class="process-math">\(y\in Y\)</span> such that <span class="process-math">\(f(x)=y\)</span> since <span class="process-math">\(f\)</span> is a function from <span class="process-math">\(X\text{.}\)</span> Now, <span class="process-math">\(f^{-1}(y)=x\text{.}\)</span> Therefore, there exists <span class="process-math">\(y\in Y\)</span> such that <span class="process-math">\(f^{-1}(y)=x\text{.}\)</span>
+</div></article></div>
+<article class="activity project-like" id="A_whichbijection"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">5.3.7</span><span class="period">.</span><span class="space"> </span><span class="title">Bijections.</span>
+</h3>
+<div class="para" id="p-1390">Which of the functions from the activities, <a href="" class="xref" data-knowl="./knowl/A_real5x.html" title="Activity 5.3.3: Multiplication in the Reals">Activity 5.3.3</a>,  <a href="" class="xref" data-knowl="./knowl/A_int5n.html" title="Activity 5.3.4: Multiplication in the Integers">Activity 5.3.4</a>, <a href="" class="xref" data-knowl="./knowl/A_rmod3.html" title="Activity 5.3.5: Remainders">Activity 5.3.5</a> and <a href="" class="xref" data-knowl="./knowl/A_aminusb.html" title="Activity 5.3.6: Subtraction">Activity 5.3.6</a> are bijections? If a function is a bijection, find its inverse function. Is the inverse one-to-one and onto?</div></article><section class="exercises" id="exercises-17"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="exercise-125"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="para" id="p-1391">Let <span class="process-math">\(X=\{1, 5, 9\}\)</span> and <span class="process-math">\(Y=\{3, 4, 7\}\text{.}\)</span>
+</div> <ol class="lower-alpha">
+<li id="li-399">
+<div class="para" id="p-1392">Define <span class="process-math">\(f:X\rightarrow Y\)</span> by specifying that <span class="process-math">\(f(1)=4, f(5)=7, f(9)=4\text{.}\)</span>
+</div>
+<div class="para" id="p-1393">Is <span class="process-math">\(f\)</span> one-to-one? Is <span class="process-math">\(f\)</span> onto? Explain your answers.</div>
+</li>
+<li id="li-400">
+<div class="para" id="p-1394">Define <span class="process-math">\(g:X\rightarrow Y\)</span> by specifying that <span class="process-math">\(g(1)=7, g(5)=3, g(9)=4\text{.}\)</span>
+</div>
+<div class="para" id="p-1395">Is <span class="process-math">\(g\)</span> one-to-one? Is <span class="process-math">\(g\)</span> onto? Explain your answers.</div>
+</li>
+</ol></article><article class="exercise exercise-like" id="exercise-126"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="para" id="p-1396">Let <span class="process-math">\(X=\{1, 2, 3\}\text{,}\)</span> <span class="process-math">\(Y=\{1, 2, 3, 4\}\)</span> and <span class="process-math">\(Z=\{1, 2\}\text{.}\)</span>
+</div> <ol class="lower-alpha">
+<li id="li-401"><div class="para" id="p-1397">Define a function <span class="process-math">\(f:X\rightarrow Y\)</span> that is one-to-one but not onto.</div></li>
+<li id="li-402"><div class="para" id="p-1398">Define a function <span class="process-math">\(g:X\rightarrow Z\)</span> that is onto but not one-to-one.</div></li>
+<li id="li-403"><div class="para" id="p-1399">Define a function <span class="process-math">\(h:X\rightarrow X\)</span> that is neither one-to-one nor onto.</div></li>
+<li id="li-404"><div class="para" id="p-1400">Define a function <span class="process-math">\(k:X\rightarrow X\)</span> that is one-to-one and onto, but is not the identity function (does not send every element to itself).</div></li>
+</ol></article><article class="exercise exercise-like" id="exercise-127"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="para" id="p-1401">Let <span class="process-math">\(f\)</span> be a function from the integers to the even integers given by <span class="process-math">\(f(a)=2a\text{.}\)</span>
+</div> <ol class="lower-alpha">
+<li id="li-405"><div class="para" id="p-1402">Prove <span class="process-math">\(f\)</span> is one-to-one.</div></li>
+<li id="li-406"><div class="para" id="p-1403">Prove <span class="process-math">\(f\)</span> is onto.</div></li>
+</ol></article><article class="exercise exercise-like" id="exercise-128"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="para" id="p-1404">Define <span class="process-math">\(f:\mathbb{Z}\rightarrow\mathbb{Z}\)</span> by <span class="process-math">\(f(n)=4n-5\text{.}\)</span>
+</div> <ol class="lower-alpha">
+<li id="li-407"><div class="para" id="p-1405">Prove or disprove <span class="process-math">\(f\)</span> is one-to-one.</div></li>
+<li id="li-408"><div class="para" id="p-1406">Prove or disprove <span class="process-math">\(f\)</span> is onto <span class="process-math">\(\mathbb{Z}\text{.}\)</span>
+</div></li>
+</ol></article><article class="exercise exercise-like" id="exercise-129"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="para" id="p-1407">Define <span class="process-math">\(g:\mathbb{R}\rightarrow\mathbb{R}\)</span> by <span class="process-math">\(f(x)=4x-5\text{.}\)</span>
+</div> <ol class="lower-alpha">
+<li id="li-409"><div class="para" id="p-1408">Prove or disprove <span class="process-math">\(g\)</span> is one-to-one.</div></li>
+<li id="li-410"><div class="para" id="p-1409">Prove or disprove <span class="process-math">\(g\)</span> is onto <span class="process-math">\(\mathbb{R}\text{.}\)</span>
+</div></li>
+</ol></article><article class="exercise exercise-like" id="exercise-130"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="para logical" id="p-1410">
+<div class="para">Let <span class="process-math">\(A={\mathbb R}-\{-1\}\text{.}\)</span> Define <span class="process-math">\(f:A\rightarrow {\mathbb R}\)</span> by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(a)={2a\over a+1}.
+\end{equation*}
+</div>
+<div class="para">Prove <span class="process-math">\(f\)</span> is one-to-one but not onto.</div>
+</div></article><article class="exercise exercise-like" id="exercise-131"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<div class="para" id="p-1411">Define <span class="process-math">\(F:{\cal P}(\{a, b, c\})\rightarrow\mathbb{Z}\)</span> by</div> <div class="para" id="p-1412">
+<span class="process-math">\(F(A)=\)</span> the number of elements in <span class="process-math">\(A\text{.}\)</span>
+</div> <ol class="lower-alpha">
+<li id="li-411"><div class="para" id="p-1413">Prove or disprove <span class="process-math">\(F\)</span> is one-to-one.</div></li>
+<li id="li-412"><div class="para" id="p-1414">Prove or disprove <span class="process-math">\(F\)</span> is onto <span class="process-math">\(\mathbb{Z}\text{.}\)</span>
+</div></li>
+</ol></article><article class="exercise exercise-like" id="exercise-132"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<div class="para" id="p-1415">Let <span class="process-math">\(f:{\mathbb Z}\times{\mathbb Z}\rightarrow{\mathbb Z}\)</span> be given by <span class="process-math">\(f(a, b)=a\text{.}\)</span>
+</div> <ol class="lower-alpha">
+<li id="li-413"><div class="para" id="p-1416">Prove or disprove <span class="process-math">\(f\)</span> is one-to-one.</div></li>
+<li id="li-414"><div class="para" id="p-1417">Prove or disprove <span class="process-math">\(f\)</span> is onto.</div></li>
+</ol> <div class="para" id="p-1418">Note: this map is called a <em class="emphasis">projection</em>.</div></article><article class="exercise exercise-like" id="exercise-133"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
+<div class="para" id="p-1419">Let <span class="process-math">\(f:{\mathbb Z}\rightarrow{\mathbb Z}\times{\mathbb Z}\)</span> be given by <span class="process-math">\(f(a) =(a, a)\text{.}\)</span>
+</div> <ol class="lower-alpha">
+<li id="li-415"><div class="para" id="p-1420">Prove or disprove <span class="process-math">\(f\)</span> is one-to-one.</div></li>
+<li id="li-416"><div class="para" id="p-1421">Prove or disprove <span class="process-math">\(f\)</span> is onto.</div></li>
+</ol> <div class="para" id="p-1422">Note: this map is called an <em class="emphasis">embedding</em>.</div></article><article class="exercise exercise-like" id="exercise-134"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
+<div class="para" id="p-1423">Define <span class="process-math">\(G:\mathbb{R}\times\mathbb{R}\rightarrow\mathbb{R}\times\mathbb{R}\)</span> by</div> <div class="para" id="p-1424"><span class="process-math">\(G(x, y)=(2y, -x)\text{.}\)</span></div> <ol class="lower-alpha">
+<li id="li-417"><div class="para" id="p-1425">Prove or disprove <span class="process-math">\(G\)</span> is one-to-one.</div></li>
+<li id="li-418"><div class="para" id="p-1426">Prove or disprove <span class="process-math">\(G\)</span> is onto <span class="process-math">\(\mathbb{R}\times\mathbb{R}\text{.}\)</span>
+</div></li>
+</ol></article><article class="exercise exercise-like" id="exercise-135"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
+<div class="para" id="p-1427">Define <span class="process-math">\(H:\mathbb{R}\times\mathbb{R}\rightarrow\mathbb{R}\times\mathbb{R}\)</span> by</div> <div class="para" id="p-1428"><span class="process-math">\(H(x, y)=(x+1, 2-y)\text{.}\)</span></div> <ol class="lower-alpha">
+<li id="li-419"><div class="para" id="p-1429">Prove or disprove <span class="process-math">\(H\)</span> is one-to-one.</div></li>
+<li id="li-420"><div class="para" id="p-1430">Prove or disprove <span class="process-math">\(H\)</span> is onto <span class="process-math">\(\mathbb{R}\times\mathbb{R}\text{.}\)</span>
+</div></li>
+</ol></article><article class="exercise exercise-like" id="exercise-136"><h4 class="heading"><span class="codenumber">12<span class="period">.</span></span></h4>
+<div class="para" id="p-1431">Let <span class="process-math">\(f:{\mathbb Q}\times{\mathbb Q}\rightarrow{\mathbb Q}\times{\mathbb Q}\)</span> be given by <span class="process-math">\(f(a, b) =(2a, a+b)\text{.}\)</span>
+</div> <ol class="lower-alpha">
+<li id="li-421"><div class="para" id="p-1432">Prove or disprove <span class="process-math">\(f\)</span> is one-to-one.</div></li>
+<li id="li-422"><div class="para" id="p-1433">Prove or disprove <span class="process-math">\(f\)</span> is onto.</div></li>
+</ol></article></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="settheory.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="relations.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+</div></main>
+</div>
+<div class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org"><div class="name">Authored in PreTeXt</div>
+<div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259 "></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0  472  9732 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496 A 4241 4241  0  0  1  4724  3590 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259 A 4507 4507  0  0  1  4724  9448 "></path><polyline points="5385,4299 4062,8125 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="8598,3496 8598,9259 " style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="850,3496 850,9259 " style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="4960,9685 4488,9685 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="3070,4582 1889,6141 3070,7700 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="6418,4582 7600,6141 6418,7700 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="8976,3590 8976,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732 "></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy"><div class="name">Powered by Runestone</div>
+<img class="logo" title="Powered by Runestone" src="https://runestone.academy/runestone/static/rectangle_badge.png" alt="Powered by Runestone"></a><a class="mathjax-logo" href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a>
+</div>
+</body>
+</html>

@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Cardinality</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Introduction to Proofs">
+<meta property="book:author" content="Jennifer Firkins Nordstrom">
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.98,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.2/pretext_search.js"></script><link href="https://pretextbook.org/css/0.6/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.2</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.2/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.2/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.2/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://pretextbook.org/css/0.6/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="IntroProofs.html"><span class="title">Introduction to Proofs:</span> <span class="subtitle">An Active Exploration of Mathematical Language</span></a></h1>
+<p class="byline">Jennifer Firkins Nordstrom</p>
+</div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
+</h2>
+<div id="searchempty"><span>No results.</span></div>
+<ol id="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><a class="index-button button" href="index-1.html" title="Index"><span class="name">Index</span></a><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="theavatarbutton" class="name">You!</span><div id="preferences_menu_holder" class="hidden"><ol id="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Size</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
+<li>Width</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
+<li>Weight</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
+<li>Letter spacing</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
+<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
+<li>Word spacing</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
+<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
+<li>Line Spacing</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>dark</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>none</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>underline</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>L-underline</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>grey bar</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>light box</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>sunrise</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
+<li class="moveQ">Motion by:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="binomial9.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter6.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(     \newcommand{\MyTikzmark}[2]{
+     \tikz[overlay,remember picture,baseline] \node [anchor=base] (#1) {$#2$};}
+\newcommand{\DrawVLine}[3][]{
+  \begin{tikzpicture}[overlay,remember picture]
+    \draw[shorten \lt =0.3ex, #1] (#2.north) -- (#3.south);
+  \end{tikzpicture}
+}
+\newcommand{\DrawHLine}[3][]{
+  \begin{tikzpicture}[overlay,remember picture]
+    \draw[shorten \lt =0.2em, #1] (#2.west) -- (#3.east);
+  \end{tikzpicture}
+}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar"><nav id="ptx-toc" class="depth2"><ul class="structural">
+<li>
+<div class="toc-item"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="colophon-1.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li><div class="toc-item"><a href="preface-1.html" class="internal"><span class="title">Preface</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter1.html" class="internal"><span class="codenumber">1</span> <span class="title">Logic</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="whatisaproof.html" class="internal"><span class="codenumber">1.1</span> <span class="title">What is a Proof?</span></a></div></li>
+<li>
+<div class="toc-item"><a href="arguments.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Validity and Soundness</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="arguments.html#exercises-1" class="internal"><span class="codenumber">1.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="connectives.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Logical Connectives</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="connectives.html#exercises-2" class="internal"><span class="codenumber">1.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="argumentswconnectives.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Logical Arguments with Connectives</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="argumentswconnectives.html#exercises-3" class="internal"><span class="codenumber">1.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter2.html" class="internal"><span class="codenumber">2</span> <span class="title">Mathematical Statements</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="setnotation.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Introduction to Sets</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="setnotation.html#exercises-4" class="internal"><span class="codenumber">2.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="quantifiers.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Quantifiers</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="quantifiers.html#SS_quantifiers" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Quantified Statements</span></a></div></li>
+<li><div class="toc-item"><a href="quantifiers.html#SS_negquant" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Negating Quantified Statements</span></a></div></li>
+<li>
+<div class="toc-item"><a href="quantifiers.html#subsection-3" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Multiple Quantifiers</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="quantifiers.html#exercises-5" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="conditionals.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Conditional Statements</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="conditionals.html#exercises-6" class="internal"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter3.html" class="internal"><span class="codenumber">3</span> <span class="title">Basic Proof Techniques</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="directproof.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Direct Proof and Counterexample</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="directproof.html#exercises-7" class="internal"><span class="codenumber">3.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="moredirect.html" class="internal"><span class="codenumber">3.2</span> <span class="title">More Direct Proof: Rational Numbers and Divisibility</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="moredirect.html#SS_rational" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Rational Numbers</span></a></div></li>
+<li><div class="toc-item"><a href="moredirect.html#SS_divisibility" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Divisibility</span></a></div></li>
+<li><div class="toc-item"><a href="moredirect.html#exercises-8" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="cases.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Proof by Cases</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="cases.html#exercises-9" class="internal"><span class="codenumber">3.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="contradiction.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Proof by Contradiction and Contrapositive</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="contradiction.html#SS_contradiction" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Proof by Contradiction</span></a></div></li>
+<li><div class="toc-item"><a href="contradiction.html#SS_contrapositive" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Proof by Contrapositive</span></a></div></li>
+<li>
+<div class="toc-item"><a href="contradiction.html#SS_twoproofs" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Two Classical Proofs</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="contradiction.html#exercises-10" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter4.html" class="internal"><span class="codenumber">4</span> <span class="title">Proof by Induction</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="summation.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Summation Notation</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="summation.html#exercises-11" class="internal"><span class="codenumber">4.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="induction.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Mathematical Induction</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="induction.html#exercises-12" class="internal"><span class="codenumber">4.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="moreinduction.html" class="internal"><span class="codenumber">4.3</span> <span class="title">More Mathematical Induction</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="moreinduction.html#exercises-13" class="internal"><span class="codenumber">4.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="stronginduction.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Strong Induction</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="stronginduction.html#exercises-14" class="internal"><span class="codenumber">4.4</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter5.html" class="internal"><span class="codenumber">5</span> <span class="title">Proofs in Specific Contexts</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="existunique.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Existence and Uniqueness Proofs</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="existunique.html#exercises-15" class="internal"><span class="codenumber">5.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="settheory.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Set Theory</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="settheory.html#SS_STnotation" class="internal"><span class="codenumber">5.2.1</span> <span class="title">Set Notation</span></a></div></li>
+<li><div class="toc-item"><a href="settheory.html#SS_setoperations" class="internal"><span class="codenumber">5.2.2</span> <span class="title">Operations on Sets</span></a></div></li>
+<li>
+<div class="toc-item"><a href="settheory.html#SS_setproofs" class="internal"><span class="codenumber">5.2.3</span> <span class="title">Proofs of Set Properties</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="settheory.html#exercises-16" class="internal"><span class="codenumber">5.2.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="functions.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Functions</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="functions.html#exercises-17" class="internal"><span class="codenumber">5.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li>
+<div class="toc-item"><a href="relations.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Equivalence Relations</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="relations.html#SS_introrelation" class="internal"><span class="codenumber">5.4.1</span> <span class="title">Introduction to Relations</span></a></div></li>
+<li>
+<div class="toc-item"><a href="relations.html#SS_equivrelations" class="internal"><span class="codenumber">5.4.2</span> <span class="title">Equivalence Relations</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="relations.html#exercises-18" class="internal"><span class="codenumber">5.4.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="orders.html" class="internal"><span class="codenumber">5.5</span> <span class="title">Ordered Sets</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="orders.html#exercises-19" class="internal"><span class="codenumber">5.5</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="chapter6.html" class="internal"><span class="codenumber">6</span> <span class="title">Additional Topics</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="binomial9.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Binomial Theorem</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="binomial9.html#exercises-20" class="internal"><span class="codenumber">6.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="active">
+<div class="toc-item"><a href="cardinality.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Cardinality</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="cardinality.html#exercises-21" class="internal"><span class="codenumber">6.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Index</span></a></div></li>
+<li><div class="toc-item"><a href="appendix-1.html" class="internal"><span class="codenumber">A</span> <span class="title">Notation</span></a></div></li>
+<li><div class="toc-item"><a href="colophon-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="cardinality"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">6.2</span> <span class="title">Cardinality</span>
+</h2>
+<div class="para" id="p-1744">In this section we will explore what it means for a set to be infinite and whether infinite sets such as the integers, the rational numbers, and the real numbers have the same “size”.</div>
+<div class="para" id="p-1745">First, start with finite sets. The size of a finite set is the number of elements in the set. It may seem simple to determine the size of a set by just counting the elements. But suppose I have a bag of candy and a class of students. I could decide if I have enough candy by just counting the pieces and the students and seeing if I have more candy or students. But suppose I have a lot of candy and a lot of students. It might be faster just to start passing out the candy to the students. If I run out of candy, I have more students; if I run out of students, I have more candy. We will use this idea of matching up objects in two sets to define the size of a set and to decide which set is bigger.</div>
+<article class="definition definition-like" id="D_cardinality"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.2.1</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-1746">Two sets <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> have the same <dfn class="terminology">cardinality</dfn> if there is a one-to-one, onto map from <span class="process-math">\(A\)</span> to <span class="process-math">\(B\text{.}\)</span> We call a one-to-one, onto map a <dfn class="terminology">one-to-one correspondence</dfn> from <span class="process-math">\(A\)</span> to <span class="process-math">\(B\text{.}\)</span>
+</div></article><div class="para" id="p-1747">We will use <span class="process-math">\(|A|\)</span> to denote the cardinality if a set <span class="process-math">\(A\text{.}\)</span>
+</div>
+<article class="example example-like" id="E_finitecard"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_finitecard"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.2.2</span><span class="period">.</span><span class="space"> </span><span class="title">Finite Cardinality.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_finitecard"><article class="example example-like"><div class="para" id="p-1748">Let <span class="process-math">\(A=\{1, 2, 3, 4\}\text{.}\)</span> Then <span class="process-math">\(|A|=4\text{.}\)</span> Let <span class="process-math">\(B=\{2k : 1\leq k\leq 4, k\in \mathbb{Z}\}\text{.}\)</span> Then <span class="process-math">\(|B|=4\text{.}\)</span>
+</div></article></div>
+<article class="activity project-like" id="A_setforcard"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">6.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Sets of a Given Cardinality.</span>
+</h3>Give a set for each of the following cardinalities: 5, 1, 0.</article><div class="para" id="p-1749">Two finite sets have the same cardinality if they have the same number of elements. But what about infinite sets?</div>
+<article class="example example-like" id="E_intandevencard"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_intandevencard"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">Cardinality of the Even Integers.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_intandevencard"><article class="example example-like"><div class="para" id="p-1750">Let <span class="process-math">\(E\)</span> be the set of even integers, <span class="process-math">\(E=\{2k : k\in \mathbb{Z}\}\text{.}\)</span> Consider the map <span class="process-math">\(f:\mathbb{Z}\rightarrow E\)</span> given by <span class="process-math">\(f(n)=2n\text{.}\)</span> You can check that <span class="process-math">\(f\)</span> is one-to-one and onto <span class="process-math">\(E\text{.}\)</span> Thus, <span class="process-math">\(f\)</span> gives us a one-to-one correspondence between the integers and the even integers. Hence, they have the same cardinailty.</div></article></div>
+<div class="para" id="p-1751">Is <a href="" class="xref" data-knowl="./knowl/E_intandevencard.html" title="Example 6.2.3: Cardinality of the Even Integers">Example 6.2.3</a> surprising? On one hand, it may seem surprising since the even integers is a proper subset of the integers, so it may seem like there are “more” integers then even integers (maybe even twice as many!). On the other hand, both sets have infinitely many elements, so since they both have infinite “size,” it may seem reasonable that the two sets have the same size. The idea behind the definition of cardinality is that the map gives us a way to match up elements in the two sets. Since they can be matched up exactly, the two sets must have the same size, or cardinality.</div>
+<article class="definition definition-like" id="D_countable"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.2.4</span><span class="period">.</span>
+</h3>
+<div class="para" id="p-1752">A set is <dfn class="terminology">countably infinite</dfn> if it has the same cardinailty as <span class="process-math">\(\mathbb{Z}^+\text{.}\)</span> A set is <dfn class="terminology">countable</dfn> if it is finite or countably infinite. Otherwise, a set is <dfn class="terminology">uncountable</dfn>.</div></article><div class="para" id="p-1753">For the sake of notational simplicity in this section, we will use <span class="process-math">\(\mathbb{N}\)</span> for the set of natural numbers, <span class="process-math">\(\{1, 2, 3, \ldots\}\text{,}\)</span> rather than <span class="process-math">\(\mathbb{Z}^+\text{.}\)</span> Thus, an infinite set is countable if it has the same cardinality as <span class="process-math">\(\mathbb{N}\text{.}\)</span>
+</div>
+<article class="example example-like" id="E_Zcountable"><a href="" data-knowl="" class="id-ref example-knowl original has-tabular" data-refid="hk-E_Zcountable"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.2.5</span><span class="period">.</span><span class="space"> </span><span class="title">The Integers are Countable.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_Zcountable"><article class="example example-like"><div class="para logical" id="p-1754">
+<div class="para">To show <span class="process-math">\(|\mathbb{N}|=|\mathbb{Z}|\text{,}\)</span> we need to find a way to match each integer with a natural number. Although we may be able to find an explicit formula, we do not need to. We just need a clear process for demonstrating a way to pair integers with natural numbers so that every integer gets assigned to a natural number, and no integers are assigned to the same natural number. We can see that we can't just assign <span class="process-math">\(n\in \mathbb{N}\)</span> to <span class="process-math">\(n\in \mathbb{Z}\text{,}\)</span> as we would never be able to assign the negative integers to a natural number. So we need to pick our correspondence more carefully. Consider the following “listing” of integers:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0, 1, -1, 2, -2, 3, -3, \ldots
+\end{equation*}
+</div>
+</div> <div class="para" id="p-1755">We can now assign each integer to its place in the list:</div> <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines">
+<span class="process-math">\(\mathbb{N}\text{:}\)</span> 1</td>
+<td class="l m b0 r0 l0 t0 lines">2</td>
+<td class="l m b0 r0 l0 t0 lines">3</td>
+<td class="l m b0 r0 l0 t0 lines">4</td>
+<td class="l m b0 r0 l0 t0 lines">5</td>
+<td class="l m b0 r0 l0 t0 lines">6</td>
+<td class="l m b0 r0 l0 t0 lines">7</td>
+<td class="l m b0 r0 l0 t0 lines">...</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">
+<span class="process-math">\(\mathbb{Z}\text{:}\)</span> 0</td>
+<td class="l m b0 r0 l0 t0 lines">1</td>
+<td class="l m b0 r0 l0 t0 lines">-1</td>
+<td class="l m b0 r0 l0 t0 lines">2</td>
+<td class="l m b0 r0 l0 t0 lines">-2</td>
+<td class="l m b0 r0 l0 t0 lines">3</td>
+<td class="l m b0 r0 l0 t0 lines">-3</td>
+<td class="l m b0 r0 l0 t0 lines">...</td>
+</tr>
+</table></div> <div class="para" id="p-1756">Since there is a one-to-one correspondence between the natural numbers and the integers, <span class="process-math">\(|\mathbb{N}|=|\mathbb{Z}|\text{,}\)</span> and <span class="process-math">\(\mathbb{Z}\)</span> is countable.</div></article></div>
+<article class="theorem theorem-like" id="T_cardequivrel"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.2.6</span><span class="period">.</span>
+</h3>Consider sets <span class="process-math">\(A, B\text{,}\)</span> and the relation given by <span class="process-math">\((A, B)\in R\)</span> if an only if <span class="process-math">\(|A|=|B|\text{.}\)</span> In other words, we say two sets are related if they have the same cardinality. Then <span class="process-math">\(R\)</span> is an equivalence relation.</article><div class="para" id="p-1757">We leave it as an exercise to prove the cardinality relation is reflexive, symmetric, and transitive, and hence, and equivalence relation.</div>
+<div class="para" id="p-1758">
+<a href="" class="xref" data-knowl="./knowl/T_cardequivrel.html" title="Theorem 6.2.6">Theorem 6.2.6</a> is important, as we can now use it directly to show the set of even integers, <span class="process-math">\(E\text{,}\)</span> is countable. Since <span class="process-math">\(|E|=|\mathbb{Z}|=|\mathbb{N}|\text{,}\)</span> we have <span class="process-math">\(|E|=|\mathbb{N}|\text{.}\)</span> Thus we can say <span class="process-math">\(E\)</span> is countable without needing to find a specific correspondence between <span class="process-math">\(E\)</span> and <span class="process-math">\(\mathbb{N}\text{.}\)</span>
+</div>
+<div class="para" id="p-1759">So what about the set of rational numbers, <span class="process-math">\(\mathbb{Q}\text{?}\)</span> To show it is countable, we need to find a one-to-one correspondence with <span class="process-math">\(\mathbb{N}\text{.}\)</span> As we saw in <a href="" class="xref" data-knowl="./knowl/E_Zcountable.html" title="Example 6.2.5: The Integers are Countable">Example 6.2.5</a> is that it is enough to find a way to list the rational numbers. However, one of the properties of the rational numbers that makes this challenging is that between any two rational numbers, <span class="process-math">\(a, b\text{,}\)</span> there is another rational number. We proved this in <a href="" class="xref" data-knowl="./knowl/E_generalexistence.html" title="Example 5.1.2: A More General Existence Proof">Example 5.1.2</a> by showing the average, <span class="process-math">\(\frac{a+b}{2}\)</span> is between <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{.}\)</span> But since the average is also rational, there is another rational number between <span class="process-math">\(a\)</span> and <span class="process-math">\(\frac{a+b}{2}\text{,}\)</span> and so on. Thus, in fact, between any two rational numbers there are infinitely many rational numbers. So it would seem the rationals might be “larger” than <span class="process-math">\(\mathbb{N}\text{.}\)</span>
+</div>
+<article class="example example-like" id="E_Qcountable"><a href="" data-knowl="" class="id-ref example-knowl original has-tabular" data-refid="hk-E_Qcountable"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.2.7</span><span class="period">.</span><span class="space"> </span><span class="title">The Positive Rational Numbers are Countable.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_Qcountable"><article class="example example-like"><div class="para" id="p-1760">To show the rational numbers are countable, we need to rely on a clever way to list them. To simplify our proof, we first just show the positive rational numbers are countable. Recall a number is rational if it can be written as <span class="process-math">\(\frac{a}{b}\)</span> with <span class="process-math">\(a, b\in \mathbb{Z}, b\neq 0\text{.}\)</span> Since we just want positive rational numbers, we can assume <span class="process-math">\(a, b\in \mathbb{Z}^+\text{.}\)</span> Now we make a table with columns for <span class="process-math">\(b=1, 2, 3, \ldots\)</span> and rows for <span class="process-math">\(a=1, 2, 3\ldots\text{,}\)</span> and the corresponding fraction <span class="process-math">\(\frac{a}{b}\)</span> as entries.</div> <div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\frac{1}{1}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\frac{1}{2}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\frac{1}{3}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\frac{1}{4}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\frac{1}{5}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines">...</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\frac{2}{1}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\frac{2}{2}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\frac{2}{3}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\frac{2}{4}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\frac{2}{5}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines">...</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\frac{3}{1}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\frac{3}{2}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\frac{3}{3}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\frac{3}{4}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\frac{3}{5}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines">...</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\frac{4}{1}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\frac{4}{2}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\frac{4}{3}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\frac{4}{4}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\frac{4}{5}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines">...</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\frac{5}{1}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\frac{5}{2}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\frac{5}{3}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\frac{5}{4}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\frac{5}{5}\)</span></td>
+<td class="l m b0 r0 l0 t0 lines">...</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">...</td>
+<td class="l m b0 r0 l0 t0 lines">...</td>
+<td class="l m b0 r0 l0 t0 lines">...</td>
+<td class="l m b0 r0 l0 t0 lines">...</td>
+<td class="l m b0 r0 l0 t0 lines">...</td>
+<td class="l m b0 r0 l0 t0 lines">...</td>
+</tr>
+</table></div> <div class="para logical" id="p-1761">
+<div class="para">We can see that the table contains every positive rational number, though many are repeated. For example, <span class="process-math">\(1=1/1=2/2=3/3\text{,}\)</span> etc. If we start trying to make our list of rational numbers by starting at <span class="process-math">\(1/1\)</span> and just moving along the row, we we never make it to row 2, since there are infinitely many elements in row 1. Similarly, if we start at <span class="process-math">\(1/1\)</span> and move down the column, we will never make it to column 2. So instead we are going to make a serpentine pattern through the table, as follows:</div>
+<ul class="disc">
+<li id="li-502"><div class="para" id="p-derived-li-502">start in the upper left corner with <span class="process-math">\(\frac{1}{1}\text{,}\)</span>
+</div></li>
+<li id="li-503"><div class="para" id="p-derived-li-503">move right to <span class="process-math">\(\frac{1}{2}\text{,}\)</span>
+</div></li>
+<li id="li-504"><div class="para" id="p-derived-li-504">move diagonally down to <span class="process-math">\(\frac{2}{1}\text{,}\)</span>
+</div></li>
+<li id="li-505"><div class="para" id="p-derived-li-505">move down to <span class="process-math">\(\frac{3}{1}\text{,}\)</span>
+</div></li>
+<li id="li-506"><div class="para" id="p-derived-li-506">move diagonally up to <span class="process-math">\(\frac{2}{2}\text{,}\)</span> and then <span class="process-math">\(\frac{1}{3}\text{,}\)</span>
+</div></li>
+<li id="li-507"><div class="para" id="p-derived-li-507">repeat the process, moving right one, then diagonally down to the first column,</div></li>
+<li id="li-508"><div class="para" id="p-derived-li-508">then move down one and then diagonally up to the first row.</div></li>
+</ul>
+</div>  <div class="para" id="p-1762">As you trace through the diagonal pattern, you will see that you will be able to include every element of the table, eventually. Since we don't actually want to count repeated rational numbers, we could just skip any numbers that we have already included.</div> <div class="para" id="p-1763">Since it is possible to list the elements in one-to-one correspondence with <span class="process-math">\(\mathbb{N}\text{,}\)</span> the positive rational numbers are countable and <span class="process-math">\(|\mathbb{Q}^+|=|\mathbb{N}|\text{.}\)</span>
+</div></article></div>
+<article class="activity project-like" id="A_allQcountable"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">6.2.2</span><span class="period">.</span><span class="space"> </span><span class="title">Extending to All Rational Numbers.</span>
+</h3>
+<div class="para" id="p-1764">Extend the argument used in <a href="" class="xref" data-knowl="./knowl/E_Qcountable.html" title="Example 6.2.7: The Positive Rational Numbers are Countable">Example 6.2.7</a> to include all of the rational numbers. Can you adjust the table to include 0? Can you adjust it to include the negative rational numbers?</div></article><div class="para" id="p-1765">We have seen that <span class="process-math">\(|\mathbb{Q}|=|\mathbb{Z}|=|\mathbb{N}|\text{,}\)</span> so maybe every infinite set really does have the same size. Are there any sets that are uncountable?</div>
+<article class="theorem theorem-like" id="T_realintervaluncount"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.2.8</span><span class="period">.</span>
+</h3>The interval <span class="process-math">\([0, 1]\)</span> of real numbers is uncountable.</article><div class="para" id="p-1766">Before proving the theorem, we will explore the main idea of the proof in the following activity.</div>
+<article class="activity project-like" id="A_unlistable"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">6.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">Unlistable Elements.</span>
+</h3>
+<div class="introduction" id="introduction-76"><div class="para" id="p-1767">To get an understanding of the construction used in the proof of <a href="" class="xref" data-knowl="./knowl/T_realintervaluncount.html" title="Theorem 6.2.8">Theorem 6.2.8</a>, we will look at a very specific example.</div></div>
+<article class="task exercise-like" id="task-208"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para logical" id="p-1768">
+<div class="para">Consider the following list of numbers:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0.1112345
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0.00083576
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0.99999999
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0.12000000
+\end{equation*}
+</div>
+</div>
+<div class="para" id="p-1769">Now, construct a new number, <span class="process-math">\(d=0.d_1d_2d_3\ldots\text{,}\)</span> where we change the <span class="process-math">\(i\)</span>th digit after the decimal in the <span class="process-math">\(i\)</span>th number in the list and use the new number in the <span class="process-math">\(i\)</span>th position of <span class="process-math">\(d\text{.}\)</span> For example, the first digit in <span class="process-math">\(0.1112345\)</span> is a 1, so make that a new number, like 2. The second digit in <span class="process-math">\(0.00083576\)</span> is 0, make that a 2. Now <span class="process-math">\(d=0.22\ldots\text{.}\)</span>
+</div>
+<div class="para" id="p-1770">Give an example of <span class="process-math">\(d\)</span> by changing the <span class="process-math">\(i\)</span>th digit of each number in the list.</div></article><article class="task exercise-like" id="task-209"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para logical" id="p-1771">
+<div class="para">We need some better notation for our list and our new number <span class="process-math">\(d\text{.}\)</span> We will use a double subscript, <span class="process-math">\(a_{ij}\)</span> where <span class="process-math">\(i\)</span> represents which number in the list and <span class="process-math">\(j\)</span> represents the decimal position. For example, from our above list</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0.1112345=0.a_{11}a_{12}a_{13}\ldots
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0.00083576=0.a_{21}a_{22}a_{23}\ldots
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0.99999999=0.a_{31}a_{32}a_{33}\ldots
+\end{equation*}
+</div>
+</div>
+<div class="para" id="p-1772">What digit is <span class="process-math">\(a_{24}\text{?}\)</span> How about <span class="process-math">\(a_{42}?\)</span>
+</div></article><article class="task exercise-like" id="task-210"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="p-1773">Now define our new number <span class="process-math">\(d=0.d_1d_2d_3\ldots\)</span> by <span class="process-math">\(d_i=1\)</span> if <span class="process-math">\(a_{ii}\neq 1\text{;}\)</span> otherwise, <span class="process-math">\(d_i=2\text{.}\)</span> Find <span class="process-math">\(d\)</span> for the list in (a).</div></article><article class="task exercise-like" id="task-211"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="p-1774">Make your own list of at least 6 decimals between 0 and 1, each with at least 6 decimal places and find the corresponding <span class="process-math">\(d\text{,}\)</span> using the rule in (c).</div></article><article class="task exercise-like" id="task-212"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para" id="p-1775">Explain why your <span class="process-math">\(d\)</span> must be different from every decimal on your list.</div></article></article><div class="para" id="p-1776">The key idea explored in <a href="" class="xref" data-knowl="./knowl/A_unlistable.html" title="Activity 6.2.3: Unlistable Elements">Activity 6.2.3</a> is that if we create a list of decimals, <span class="process-math">\(0.a_{i1}a_{i2}a_{i3}\ldots\)</span> then by changing the digit in the <span class="process-math">\(a_{ii}\)</span> position, we will always get a decimal that is not on our list, as it will differ from each number on the list by at least one digit.</div>
+<article class="example example-like" id="E_creatingd"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_creatingd"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.2.9</span><span class="period">.</span><span class="space"> </span><span class="title">Finding <span class="process-math">\(d\)</span>.</span>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_creatingd"><article class="example example-like"> <div class="para logical" id="p-1777">
+<div class="para">To clarify the process further, here is an example of finding <span class="process-math">\(d\)</span> for a specific list. Given a list of <span class="process-math">\(0.a_{i1}a_{i2}a_{i3}\ldots\text{,}\)</span> find <span class="process-math">\(d=d_1d_2d_3\ldots\text{,}\)</span> using the rule</div>
+<div class="displaymath process-math">
+\begin{equation*}
+d_1=\begin{cases}
+1  &amp;  \text{ if } a_{ii}\neq 1;\\
+2 &amp;  \text{ if } a_{ii}=1.
+\end{cases}
+\end{equation*}
+</div>
+</div> <div class="para logical" id="p-1778">
+<div class="para">Find <span class="process-math">\(d\)</span> for the following list.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0.{\color{blue}{1}}38756645
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0.1{\color{blue}{1}}1111111
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0.99{\color{blue}{9}}999999
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0.010{\color{blue}{1}}01010
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0.1231{\color{blue}{2}}3123
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0.98765{\color{blue}{4}}321
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0.223355{\color{blue}{7}}70
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+0.1230000{\color{blue}{0}}0
+\end{equation*}
+</div>
+</div> <div class="para" id="p-1779">Note, the blue digits are the ones we are considering for <span class="process-math">\(d\text{.}\)</span> Since <span class="process-math">\(a_{11}=1, d_1=2\text{.}\)</span> Since <span class="process-math">\(a_{22}=1, d_2=2\text{.}\)</span> Since <span class="process-math">\(a_{33}=9, d_3=1\text{.}\)</span> Continuing in this way, we get <span class="process-math">\(d=0.22121111\text{.}\)</span> Clearly, <span class="process-math">\(d\)</span> differs from each decimal on the list.</div></article></div>
+<div class="para" id="p-1780">One last idea before beginning the proof, make sure you understand that every real number in <span class="process-math">\([0, 1]\)</span> can be represented by a decimal of the form <span class="process-math">\(0.a_{i1}a_{i2}a_{i3}\ldots\)</span> with infinitely many decimal places. This should be clear if the decimal is repeating or nonterminating, nonrepeating. If the decimal is terminating, we can just add infinitely many 0's. We also note that <span class="process-math">\(0=0.000000000\ldots\)</span> and <span class="process-math">\(1=0.99999999\ldots\)</span> (see <a href="moredirect.html" class="internal" title="Section 3.2: More Direct Proof: Rational Numbers and Divisibility">Section 3.2</a> for how to prove this).</div>
+<div class="para" id="p-1781">Now that we have a way to write a list of numbers in <span class="process-math">\([0, 1]\)</span> as decimals, and we have a understanding of a way to construct a new number not on our list, we are ready to prove <a href="" class="xref" data-knowl="./knowl/T_realintervaluncount.html" title="Theorem 6.2.8">Theorem 6.2.8</a>.</div>
+<article class="hiddenproof" id="proof-40"><a href="" data-knowl="" class="id-ref proof-knowl original" data-refid="hk-proof-40"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-proof-40"><article class="hiddenproof"><div class="para logical" id="p-1782">
+<div class="para">We will prove this by contradiction. Assume <span class="process-math">\([0, 1]\)</span> is countable. That means there is a one-to-one correspondence between <span class="process-math">\(\mathbb{N}\)</span> and <span class="process-math">\([0, 1]\text{.}\)</span> We don't need to know what it is, just that it exists. Since there is a one-to-one correspondence, there is a way to list the elements of <span class="process-math">\([0, 1]\text{.}\)</span> First, note that every real number has a decimal representation, and since our elements are less than or equal to one, each real number can be represented by <span class="process-math">\(0.a_{i1}a_{i2}a_{i3}\ldots\text{.}\)</span> Thus, we can write our list as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+b_1=0.a_{11}a_{12}a_{13}\ldots
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+b_2=0.a_{21}a_{22}a_{23}\ldots
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+b_3=0.a_{31}a_{32}a_{33}\ldots
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\vdots
+\end{equation*}
+</div>
+<div class="para">Since we assumed we had a listing of every real number in <span class="process-math">\([0, 1]\text{,}\)</span> every such decimal must be on our list.</div>
+</div> <div class="para logical" id="p-1783">
+<div class="para">Now define</div>
+<div class="displaymath process-math">
+\begin{equation*}
+d_1=\begin{cases}
+1  &amp;  \text{ if } a_{ii}\neq 1;\\
+2 &amp;  \text{ if } a_{ii}=1.
+\end{cases}
+\end{equation*}
+</div>
+<div class="para">We can see that for every <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(d\neq b_n\)</span> since it differs in the <span class="process-math">\(n\)</span>th decimal place. Thus <span class="process-math">\(d\)</span> is not on our list. This is a contradiction since we assumed we were able to include every real number in <span class="process-math">\([0, 1]\)</span> on our list. Hence, <span class="process-math">\([0, 1]\)</span> is not countable.</div>
+</div></article></div>
+<div class="para" id="p-1784">We finally have an infinite set that has a different cardinality from <span class="process-math">\(\mathbb{N}\text{.}\)</span> Since <span class="process-math">\([0, 1]\)</span> is a subset of <span class="process-math">\(\mathbb{R}\text{,}\)</span> that means <span class="process-math">\(\mathbb{R}\)</span> is uncountable, too.</div>
+<section class="exercises" id="exercises-21"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h3>
+<article class="exercise exercise-like" id="exercise-163"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="para" id="p-1785">Prove the set of perfect squares, <span class="process-math">\(S=\{n^2 : n\in \mathbb{Z}\}\text{,}\)</span> has the same cardinaility as <span class="process-math">\(\mathbb{N}\)</span> by finding a one-to-one correspondence from <span class="process-math">\(\mathbb{N}\)</span> to <span class="process-math">\(S\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exercise-164"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="para" id="p-1786">Prove <a href="" class="xref" data-knowl="./knowl/T_cardequivrel.html" title="Theorem 6.2.6">Theorem 6.2.6</a>, that the cardinality relation is an equivalence relation.</div></article><article class="exercise exercise-like" id="exercise-165"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="para" id="p-1787">Show that the intervals <span class="process-math">\([0, 1]\)</span> and <span class="process-math">\([3, 6]\)</span> have the same cardinality by finding a one-to-one correspondence between the sets.</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-18" id="hint-18"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-18"><div class="hint solution-like"><div class="para" id="p-1788">Can you find a line segment whose inputs are <span class="process-math">\([0, 1]\)</span> and outputs are <span class="process-math">\([3, 6]\text{?}\)</span> Then show your line is one-to-one and onto.</div></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-166"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="para" id="p-1789">Assume <span class="process-math">\(a, b, c, d\in \mathbb{R}\)</span> with <span class="process-math">\(a &lt; b\)</span> and <span class="process-math">\(c &lt; d\text{.}\)</span> Show that the intervals <span class="process-math">\([a, b]\)</span> and <span class="process-math">\([c, d]\)</span> have the same cardinality by finding a one-to-one correspondence between the sets.</div>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-19" id="hint-19"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-19"><div class="hint solution-like"><div class="para" id="p-1790">Can you find a line segment whose inputs are <span class="process-math">\([a, b]\)</span> and outputs are <span class="process-math">\([c, d]\text{?}\)</span> Then show your line is one-to-one and onto.</div></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-167"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="para" id="p-1791">Let <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> be countable sets. Prove <span class="process-math">\(A\cup B\)</span> is countable.</div></article><article class="exercise exercise-like" id="exercise-168"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="para" id="p-1792">Determine if the following are true or false. Justify your answer.</div> <ol class="lower-alpha">
+<li id="li-509"><div class="para" id="p-1793">A finite union of countable sets, <span class="process-math">\(\bigcup_{i=1}^{n}A_i\text{,}\)</span> is countable.</div></li>
+<li id="li-510"><div class="para" id="p-1794">A countable union of countable sets, <span class="process-math">\(\bigcup_{i=1}^{\infty}A_i\text{,}\)</span> is countable.</div></li>
+<li id="li-511"><div class="para" id="p-1795">The union of a countable set and an uncountable set in uncountable.</div></li>
+<li id="li-512"><div class="para" id="p-1796">The set of irrational numbers is countable.</div></li>
+<li id="li-513"><div class="para" id="p-1797">The set of prime numbers is countable.</div></li>
+</ol></article></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="binomial9.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+</div></main>
+</div>
+<div class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org"><div class="name">Authored in PreTeXt</div>
+<div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259 "></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0  472  9732 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496 A 4241 4241  0  0  1  4724  3590 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259 A 4507 4507  0  0  1  4724  9448 "></path><polyline points="5385,4299 4062,8125 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="8598,3496 8598,9259 " style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="850,3496 850,9259 " style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="4960,9685 4488,9685 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="3070,4582 1889,6141 3070,7700 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="6418,4582 7600,6141 6418,7700 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="8976,3590 8976,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732 "></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy"><div class="name">Powered by Runestone</div>
+<img class="logo" title="Powered by Runestone" src="https://runestone.academy/runestone/static/rectangle_badge.png" alt="Powered by Runestone"></a><a class="mathjax-logo" href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a>
+</div>
+</body>
+</html>

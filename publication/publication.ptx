@@ -124,8 +124,8 @@
     <!-- Magic IDs identify HTML pages to analytics services   -->
     <!-- Presence implies relevant Javascript will be added    -->
     <!-- StatCounter requires both values to be set            -->
-    <!-- <analytics google-gst="UA-0123456-1" statcounter-project="0123456"
-    statcounter-security="0123456"/> -->
+    <analytics statcounter-project="12871717"
+    statcounter-security="6b302c73"/>
   </html>
 
   <!-- To use WeBWorK, you need a server.  -->

@@ -37,7 +37,7 @@
 <p>In fact, althought it has been verified for integers up to at least <m>4 \times 10^{18}</m>, it has not been proven. Goldbach first conjectured the statement in a letter to Euler in 1742, and mathematicians have been unable to give a full proof. </p>
 
 <activity xml:id="A_primegen"><title>Prime Number Generator</title><introduction><p>Let's switch gears a bit and look for a way to find prime numbers.</p></introduction>
-<task><p>Play around with different functions whose inputs are positive integers.  See if you can find one whose outputs are an infinite set of prime numbers. For example, <m>f(n)=n^1+1</m> gives us <m>f(1)=2, f(2)=5, f(3)=10</m>. The first two are prime, but <m>f(3)=10</m> is not prime, so <m>f(n)=n^2+1</m> does not work.</p></task>
+<task><p>Play around with different functions whose inputs are positive integers.  See if you can find one whose outputs are an infinite set of prime numbers. For example, <m>f(n)=n^2+1</m> gives us <m>f(1)=2, f(2)=5, f(3)=10</m>. The first two are prime, but <m>f(3)=10</m> is not prime, so <m>f(n)=n^2+1</m> does not work.</p></task>
 
 <task><p>Now try the function <m>f(n)=n^2+n+41</m>. Find outputs for <m>n</m> from 1 to 10. Are the outputs all prime?</p></task>
 <task><p>Based on (b), have we found a function whose outputs are only prime numbers? What would we have to check to know this is true?</p></task>

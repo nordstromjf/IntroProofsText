@@ -357,7 +357,7 @@ Resulting in <m>123=999x</m>. Now we just solve for <m>x=123/999</m>.</p>
   <ol marker="a">
     <li>
       <p>
-    For all integers <m>a</m>, <m>b</m>, and <m>c</m>, if <m>a\bigm|b</m> and <m>a\bigm|c</m>, then <m>a\bigm|(b+c)</m>.
+    For all integers <m>a</m>, <m>b</m>, and <m>c</m>, if <m>a\mid b</m> and <m>a\mid c</m>, then <m>a\mid (b+c)</m>.
   </p>
     </li>
 
@@ -369,7 +369,7 @@ Resulting in <m>123=999x</m>. Now we just solve for <m>x=123/999</m>.</p>
 
     <li>
       <p>
-    For all integers <m>a</m>, <m>b</m>, and <m>c</m>, if <m>a\bigm|b</m> then <m>a\bigm|(bc)</m>.
+    For all integers <m>a</m>, <m>b</m>, and <m>c</m>, if <m>a\mid b</m> then <m>a\mid (bc)</m>.
   </p>
     </li>
 
@@ -381,19 +381,19 @@ Resulting in <m>123=999x</m>. Now we just solve for <m>x=123/999</m>.</p>
 
     <li>
       <p>
-    For all integers <m>a</m>, <m>b</m>, and <m>c</m>, if <m>a\bigm|(b+c)</m>, then <m>a\bigm|b</m> and <m>a\bigm|c</m>.
+    For all integers <m>a</m>, <m>b</m>, and <m>c</m>, if <m>a\mid (b+c)</m>, then <m>a\mid b</m> and <m>a\mid c</m>.
   </p>
     </li>
 
     <li>
       <p>
-    For all integers <m>a</m>, <m>b</m>, and <m>c</m>, if <m>a\bigm|(bc)</m> then <m>a\bigm|b</m> or <m>a\bigm|c</m>.
+    For all integers <m>a</m>, <m>b</m>, and <m>c</m>, if <m>a\mid (bc)</m> then <m>a\mid b</m> or <m>a\mid c</m>.
   </p>
     </li>
 
     <li>
       <p>
-    For all integers <m>a</m> and <m>b</m>, if <m>a\bigm|b</m> then <m>a^2\bigm|(b^2)</m>.
+    For all integers <m>a</m> and <m>b</m>, if <m>a\mid b</m> then <m>a^2\mid (b^2)</m>.
   </p>
     </li>
 

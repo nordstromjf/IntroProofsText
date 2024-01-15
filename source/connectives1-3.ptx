@@ -351,12 +351,12 @@ The truth values for an <q>or</q> statement should, mostly, make sense,  as long
 
   <activity xml:id="A_understandingbicond"><title>Understanding Biconditionals</title><statement><p>Explain, in your own words, how to decide when <m>p \leftrightarrow q</m> is true or false.</p></statement></activity>
 
-  <activity xml:id="A_piecebicond"><title>Biconditional as Two Conditionals</title><statement><p>We read the biconditional <m>p \leftrightarrow q</m> as <q><m>p</m> if and only if <m>q</m>.</q> Determine which of the two statements <m>p \rightarrow q</m> and <m>q\rightarrow p</m> is equivalent to <q><m>p</m> if <m>q</m></q> and which is <q><m>p</m> only if <m>q</m>.</q> Think about when each statement should be true (or false).</p></statement></activity>
+  <activity xml:id="A_piecebicond"><title>Biconditional as Two Conditionals</title><statement><p>We read the biconditional <m>p \leftrightarrow q</m> as <q><m>p</m> if and only if <m>q</m>.</q> Determine which of the two statements <m>p \rightarrow q</m> and <m>q\rightarrow p</m> means the same as <q><m>p</m> if <m>q</m></q> and which means the same as <q><m>p</m> only if <m>q</m>.</q> Think about when each statement should be true (or false).</p></statement></activity>
 
 <p>In mathematics we might see statements such as <q><m>p</m> is necessary for <m>q</m></q> or <q><m>p</m> is sufficient for <m>q</m></q>. These are really conditional statements. In particular, 
 <m>p</m> is sufficient for <m>q</m> means <m>p\rightarrow q</m>; and
 
-<m>p</m> is necessary for <m>q</m> means <m>\neg p\rightarrow \neg q</m>, which is equivalent to <m>q\rightarrow p</m>.
+<m>p</m> is necessary for <m>q</m> means <m>\neg p\rightarrow \neg q</m>, which, we will see shortly, is equivalent to <m>q\rightarrow p</m>.
 
 So, a statement such as <m>p</m> is necessary and sufficient for <m>q</m> means <m>p\leftrightarrow q</m>.</p>
 

@@ -35,7 +35,7 @@
 
 <p>We've now seen several examples of even/ odd integers. Are there integers which are both even and odd? Can an integer be neither even nor odd? The answer to both questions is no. However, proving that every integer is even or odd (and not both), is pretty challenging, and we won't try to do it, yet. But for the moment we will assume if we know an integer is NOT even, then it must be odd, and vice versa.</p>
 
-<p>We start our proof techniques by looking at how to prove universal conditional statements, which we studied in <xref ref="conditionals"/>. Recall, a universal conditional statement has the form <q>For all <m>x\in D</m>, if <m>x</m> has property <m>P</m> then <m>x</m> has property <m>Q</m>.</q> We can restate this using symbolic notation: For all <m>x\in D, P(x)\rightarrow Q(x)</m>. Although we saw how to write <q>for all</q> using the symbol <m>\forall</m>, in this book we will generally avoid the quantifier symbols in our proofs. This just helps with clarity for the reader and is fairly standard in mathematical writing. However, the techniques for understanding and negating quantified statemants from <xref ref="quantifiers"/> still apply.</p>
+<p>We start our proof techniques by looking at how to prove universal conditional statements, which we studied in <xref ref="conditionals"/>. Recall, a universal conditional statement has the form <q>For all <m>x\in D</m>, if <m>x</m> has property <m>P</m> then <m>x</m> has property <m>Q</m>.</q> We can restate this using symbolic notation: For all <m>x\in D, P(x)\rightarrow Q(x)</m>. Although we saw how to write <q>for all</q> using the symbol <m>\forall</m>, in this book we will generally avoid the quantifier symbols in our proofs. This just helps with clarity for the reader and is fairly standard in mathematical writing. However, the techniques for understanding and negating quantified statements from <xref ref="quantifiers"/> still apply.</p>
 
 <p>One very limited method for proving universal conditional statements is the <term>method of exhaustion</term><idx><h>proof</h><h>method of exaustion</h></idx>: for each specific <m>a\in D</m> where <m>P(a)</m> is true, show <m>Q(a)</m> is true. In other words, we check if <m>P(a)</m> then <m>Q(a)</m> for each <m>a\in D</m>.</p> 
    
@@ -189,7 +189,7 @@
     <p>Let <m>r=n+2, s=n+1</m>. We need to show that <m>r, s\neq 1</m>. Since <m>n>0, n+2>2</m> and <m>n+1>1</m>. Thus <m>r, s\neq 1</m>. Therefore, <m>n^2+3n+2</m> is not prime.</p>
   </example>
 
-  <activity xml:id="A_provedisprove"><title>Prove or Disprove</title><introduction><p>Prove or disprove the following statements.</p></introduction>
+  <activity xml:id="A_provedisprove"><title>Prove or Disprove</title><introduction><p>Let <m>m</m> and <m>n</m> be integers. Prove or disprove the following statements.</p></introduction>
 <task><p>If <m>n</m> is even, then <m>5n</m> is even.</p></task>
 <task><p>If <m>n</m> is odd, then <m>5n+1</m> is odd.</p></task>
 <task><p>If <m>n, m</m> are odd, then their product, <m>nm</m>,  is odd.</p></task>

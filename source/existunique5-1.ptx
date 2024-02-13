@@ -103,7 +103,7 @@ Hence, the solution is unique.</p></proof>
 <me>\{1/n : n\in \mathbb{Z}, n\geq 1\}.</me>
 This is not a subset of the integers and does not have a least element, even though every element is greater than 0.</p>
 
-<p>Now consider <m>S=\{2k+1 : k\geq 0\}</m>. Check each of the conditions.
+<p>Now consider <m>S=\{2k+1 : k\in \mathbb{Z}, k\geq 0\}</m>. Check each of the conditions.
 <ol marker="1">
   <li><p><m>S\neq \emptyset</m> since <m>1\in S</m>.</p></li>
   <li><p><m>S\subseteq \mathbb{Z}</m> since <m>2k+1\in \mathbb{Z}</m>.</p></li>

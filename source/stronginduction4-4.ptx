@@ -96,7 +96,7 @@
 <p>As we see in <xref ref="A_strongind"/>, strong induction is a useful technique for proving statements about sequences. One particularly nice sequence is the <term>Fibonacci Sequence</term><idx>Fibonacci sequence</idx>.</p>
 
 <definition xml:id="D_fibonacci"><p>The <term>Fibonacci sequence</term><idx>Fibonacci sequence</idx> is the sequence, <m>f_n</m>, defined by
-<me>f_1=1, f_2=2, f_n=f_{n-1}+f_{n-2}.</me></p></definition>
+<me>f_1=1, f_2=1, f_n=f_{n-1}+f_{n-2}.</me></p></definition>
 
 <p>The first two terms are called the <term>initial terms</term>. Then we generate terms by adding the previous two terms. For example, <m>f_3=f_2+f_1=1+1=2</m>.</p>
 
@@ -220,7 +220,7 @@ But then <m>n-d(q+1)\in S</m> and <m>n-d(q+1)&lt; n-dq=r</m>. This contradicts t
   </p>
 
   <p>
-    Use strong induction to prove that <m>a_n\leq \Bigl(\frac{7}{4}\Bigr)^n</m> or all integers <m>n \geq 1</m>.
+    Prove that <m>a_n\leq \Bigl(\frac{7}{4}\Bigr)^n</m> for all integers <m>n \geq 1</m>.
   </p>
   </statement></exercise>
 

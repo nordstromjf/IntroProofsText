@@ -355,7 +355,7 @@ is the <term>equivalence class</term><idx>equivalence class</idx> of <m>a</m>.<n
 
   <example xml:id="E_equivclasses"><title>Equivalence Classes</title>
 
-  <p>Consider the equivalence relation <m>m\equiv n \mod d</m>, on <m>\mathbb{Z}</m>.
+  <p>Consider the equivalence relation <m>m\equiv n \mod 3</m>, on <m>\mathbb{Z}</m>.
 
   <ol marker="a">
 

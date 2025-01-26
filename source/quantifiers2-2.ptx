@@ -284,7 +284,9 @@
     <task><p><m>\forall x\ \forall y, x &lt; y</m>.</p></task>
   </activity>
 
-  <p>Although we won't study the mathematical context of the following example in this class, it is a classic example in mathematics of a statement with multiple quantifiers and a conditional. It is so important that it is the subject of one set of math bike racks in front of Taylor Hall!</p>
+  <p>Although we won't study the mathematical context of the following example in this class, it is a classic example in mathematics of a statement with multiple quantifiers and a conditional. It is so important that it is the subject of one set of math bike racks in front of Taylor Hall!
+<image source="bikerack.png"/>
+  </p>
 
   <example xml:id="E_deflimit"><title>Definition of a Limit</title>
     <p>The definition of the limit of a function: For every <m>\epsilon>0</m>, there exists a <m>\delta>0</m> such that if <m>|x-a|&lt;\delta</m> then <m>|f(x)-L|&lt;\epsilon</m>. Or in symbols, <me>\forall\epsilon>0, \exists\delta>0, |x-a|&lt;\delta\rightarrow |f(x)-L|&lt;\epsilon</me>.</p>

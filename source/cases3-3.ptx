@@ -12,7 +12,7 @@
 
   <p>To prove for all <m>x\in D, P(x)</m> by cases, break <m>D</m> into smaller subsets. Each subset represents a case. Then each case is proven separately. Make sure you state each case, each subset, clearly.</p>
 
-  <p>If <m>D=D_1\cup D_2</m>,
+  <p>If <m>D</m> can be broken into smaller subsets, say, <m>D_1</m> and <m>D_2</m>,
     <ul><li><title>Case 1</title> Let <m>x\in D_1</m>, Prove <m>P(x)</m>.</li>
     <li><title>Case 2</title> Let <m>x\in D_2</m>, Prove <m>P(x)</m>.</li>
     </ul>

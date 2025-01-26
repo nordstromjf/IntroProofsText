@@ -103,9 +103,12 @@
     <!-- @colors now implemented                               -->
     <!-- also @knowls, @toc, and @banner, although no          -->
     <!-- alternative styles exist yet for those.               -->
-    <css style="default" colors="blue_red" />
+    <css theme="default-modern" colors="blue_red" />
     <!-- Search can be default or none, or you can use a Google-cx number to use google's search
     feature (but then variant should be set to none to avoid conflict) -->
+    <tableofcontents preexpanded-levels="2"/>
+      
+
     <search variant="default" />
     <!-- Embedded calculators.  For math, this could be geogebra-classic, geogebra-graphing,
     geogebra-geometry, and geogebra-3d.  For ActiveCode, you can specify a language (python,

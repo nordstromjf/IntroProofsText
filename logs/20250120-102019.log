@@ -1,0 +1,45 @@
+INFO    : Using PreTeXt-CLI version 2.11.1.  The latest stable version available is 2.12.0. Run `pretext upgrade` to update.
+
+INFO    : PreTeXt project found in `/Users/jennifernordstrom/pretextbooks/introproofs`.
+WARNING : Using CLI version 2.11.1 but project's `requirements.txt`
+WARNING : is configured to use 1.5.2. Consider either installing
+WARNING : CLI version 1.5.2 or running `pretext init --refresh`
+WARNING : to update `requirements.txt` to match 2.11.1.
+INFO    : Building target web
+INFO    : Preparing to build into /Users/jennifernordstrom/pretextbooks/introproofs/output/web.
+INFO    : XSL conversion of /Users/jennifernordstrom/pretextbooks/introproofs/source/main.ptx by /Users/jennifernordstrom/.ptx/2.11.1/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : successful application of /Users/jennifernordstrom/.ptx/2.11.1/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : discovering source file's directory name: /Users/jennifernordstrom/pretextbooks/introproofs/source
+INFO    : verifying and expanding input directory: /Users/jennifernordstrom/pretextbooks/introproofs/source/../generated-assets
+INFO    : input directory expanded to absolute path: /Users/jennifernordstrom/pretextbooks/introproofs/generated-assets
+INFO    : verifying and expanding input directory: /Users/jennifernordstrom/pretextbooks/introproofs/source/../assets
+INFO    : input directory expanded to absolute path: /Users/jennifernordstrom/pretextbooks/introproofs/assets
+INFO    : Runestone Services via online CDN query: version 7.5.2
+INFO    : Downloading Runestone Services, version 7.5.2
+INFO    : Extracting Runestone Services from archive file
+INFO    : XSL conversion of /Users/jennifernordstrom/pretextbooks/introproofs/source/main.ptx by /Users/jennifernordstrom/.ptx/2.11.1/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : successful application of /Users/jennifernordstrom/.ptx/2.11.1/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : XSL conversion of /Users/jennifernordstrom/pretextbooks/introproofs/source/main.ptx by /Users/jennifernordstrom/.ptx/2.11.1/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : successful application of /Users/jennifernordstrom/.ptx/2.11.1/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : converting /Users/jennifernordstrom/pretextbooks/introproofs/source/main.ptx to HTML in /var/folders/jx/_tr9kz5j537301qt36nttyh00000gn/T/ptx-rfmy05sx
+INFO    : XSL conversion of /Users/jennifernordstrom/pretextbooks/introproofs/source/main.ptx by /Users/jennifernordstrom/.ptx/2.11.1/core/xsl/pretext-html.xsl
+INFO    : messages from the log for XSL processing:
+INFO    : * PTX:INFO:   checking ONLY the last TWO YEARS of element deprecations.
+Rerun with the string parameter "author.deprecations.all" set to "yes" to check your source against all deprecations.
+WARNING : * PTX:DEPRECATE: (2024-10-08) elements previously included in a "titlepage" element inside the "frontmatter" (author, editor, credit, date, and event) should now be placed in "frontmatter/bibinfo".  To ensure a title page is created, put only the empty element "titlepage-items" inside "titlepage".  Until you move these elements, we will try to honor your intent. (1 time)
+INFO    : *              located within: "frontmatter" (xml:id)
+INFO    : * --------------
+WARNING : * PTX:DEPRECATE: (2024-10-08) elements previously included in a "colophon" element inside the "frontmatter" (credit, copyright, edition, and website) should now be placed in "frontmatter/bibinfo". To produce a "colophon", include only the empty element "colophon-items" inside "colophon" Until you move these elements, we will try to honor your intent. (1 time)
+INFO    : *              located within: "frontmatter" (xml:id)
+INFO    : * --------------
+WARNING : * PTX:DEPRECATE: (2024-07-12) the html/css/@style publication file entry has been deprecated for replacement by @theme. See the Guide for theme options.
+INFO    : * --------------
+INFO    : successful application of /Users/jennifernordstrom/.ptx/2.11.1/core/xsl/pretext-html.xsl
+INFO    : Removing temporary directory /var/folders/jx/_tr9kz5j537301qt36nttyh00000gn/T/ptx-0r95g6ms
+INFO    : Removing temporary directory /var/folders/jx/_tr9kz5j537301qt36nttyh00000gn/T/ptx-rfmy05sx
+INFO    : Removing temporary directory /var/folders/jx/_tr9kz5j537301qt36nttyh00000gn/T/ptx-cxn11wn6
+INFO    : Removing temporary directory /var/folders/jx/_tr9kz5j537301qt36nttyh00000gn/T/ptx-dz20p5_j
+INFO    : 
+Success! Run `pretext view` to see the results.
+
+INFO    : 

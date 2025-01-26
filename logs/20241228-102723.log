@@ -1,0 +1,99 @@
+INFO    : Using PreTeXt-CLI version: 2.11.1.  This is the latest available version.
+
+INFO    : PreTeXt project found in `/Users/jennifernordstrom/pretextbooks/introproofs`.
+WARNING : Using CLI version 2.11.1 but project's `requirements.txt`
+WARNING : is configured to use 1.5.2. Consider either installing
+WARNING : CLI version 1.5.2 or running `pretext init --refresh`
+WARNING : to update `requirements.txt` to match 2.11.1.
+INFO    : Building target web
+INFO    : converting latex-image pictures from /Users/jennifernordstrom/pretextbooks/introproofs/source/main.ptx to svg graphics for placement in /Users/jennifernordstrom/pretextbooks/introproofs/generated-assets/latex-image
+INFO    : extracting latex-image pictures from /Users/jennifernordstrom/pretextbooks/introproofs/source/main.ptx
+INFO    : string parameters passed to extraction stylesheet: {'publisher': '/Users/jennifernordstrom/pretextbooks/introproofs/publication/publication.ptx'}
+INFO    : discovering source file's directory name: /Users/jennifernordstrom/pretextbooks/introproofs/source
+INFO    : verifying and expanding input directory: /Users/jennifernordstrom/pretextbooks/introproofs/source/../generated-assets
+INFO    : input directory expanded to absolute path: /Users/jennifernordstrom/pretextbooks/introproofs/generated-assets
+INFO    : verifying and expanding input directory: /Users/jennifernordstrom/pretextbooks/introproofs/source/../assets
+INFO    : input directory expanded to absolute path: /Users/jennifernordstrom/pretextbooks/introproofs/assets
+INFO    : XSL conversion of /Users/jennifernordstrom/pretextbooks/introproofs/source/main.ptx by /Users/jennifernordstrom/.ptx/2.11.1/core/xsl/extract-latex-image.xsl
+INFO    : messages from the log for XSL processing:
+INFO    : * PTX:INFO:   checking ONLY the last TWO YEARS of element deprecations.
+Rerun with the string parameter "author.deprecations.all" set to "yes" to check your source against all deprecations.
+INFO    : successful application of /Users/jennifernordstrom/.ptx/2.11.1/core/xsl/extract-latex-image.xsl
+INFO    : converting countableQ.tex to countableQ.pdf
+INFO    : cropping countableQ.pdf to cropped-countableQ.pdf
+INFO    : renaming cropped-countableQ.pdf to countableQ.pdf
+INFO    : converting countableQ.pdf to countableQ.svg
+INFO    : converting venncomplement.tex to venncomplement.pdf
+INFO    : cropping venncomplement.pdf to cropped-venncomplement.pdf
+INFO    : renaming cropped-venncomplement.pdf to venncomplement.pdf
+INFO    : converting venncomplement.pdf to venncomplement.svg
+INFO    : converting adnotonto.tex to adnotonto.pdf
+INFO    : cropping adnotonto.pdf to cropped-adnotonto.pdf
+INFO    : renaming cropped-adnotonto.pdf to adnotonto.pdf
+INFO    : converting adnotonto.pdf to adnotonto.svg
+INFO    : converting vennunion.tex to vennunion.pdf
+INFO    : cropping vennunion.pdf to cropped-vennunion.pdf
+INFO    : renaming cropped-vennunion.pdf to vennunion.pdf
+INFO    : converting vennunion.pdf to vennunion.svg
+INFO    : converting functionh.tex to functionh.pdf
+INFO    : cropping functionh.pdf to cropped-functionh.pdf
+INFO    : renaming cropped-functionh.pdf to functionh.pdf
+INFO    : converting functionh.pdf to functionh.svg
+INFO    : converting notfn1to0.tex to notfn1to0.pdf
+INFO    : cropping notfn1to0.pdf to cropped-notfn1to0.pdf
+INFO    : renaming cropped-notfn1to0.pdf to notfn1to0.pdf
+INFO    : converting notfn1to0.pdf to notfn1to0.svg
+INFO    : converting notfn1to2.tex to notfn1to2.pdf
+INFO    : cropping notfn1to2.pdf to cropped-notfn1to2.pdf
+INFO    : renaming cropped-notfn1to2.pdf to notfn1to2.pdf
+INFO    : converting notfn1to2.pdf to notfn1to2.svg
+INFO    : converting vennminus.tex to vennminus.pdf
+INFO    : cropping vennminus.pdf to cropped-vennminus.pdf
+INFO    : renaming cropped-vennminus.pdf to vennminus.pdf
+INFO    : converting vennminus.pdf to vennminus.svg
+INFO    : converting vennintersect.tex to vennintersect.pdf
+INFO    : cropping vennintersect.pdf to cropped-vennintersect.pdf
+INFO    : renaming cropped-vennintersect.pdf to vennintersect.pdf
+INFO    : converting vennintersect.pdf to vennintersect.svg
+INFO    : converting adnotonetoone.tex to adnotonetoone.pdf
+INFO    : cropping adnotonetoone.pdf to cropped-adnotonetoone.pdf
+INFO    : renaming cropped-adnotonetoone.pdf to adnotonetoone.pdf
+INFO    : converting adnotonetoone.pdf to adnotonetoone.svg
+INFO    : Removing temporary directory /var/folders/jx/_tr9kz5j537301qt36nttyh00000gn/T/ptx-s745w7_5
+INFO    : Preparing to build into /Users/jennifernordstrom/pretextbooks/introproofs/output/web.
+INFO    : XSL conversion of /Users/jennifernordstrom/pretextbooks/introproofs/source/main.ptx by /Users/jennifernordstrom/.ptx/2.11.1/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : successful application of /Users/jennifernordstrom/.ptx/2.11.1/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : discovering source file's directory name: /Users/jennifernordstrom/pretextbooks/introproofs/source
+INFO    : verifying and expanding input directory: /Users/jennifernordstrom/pretextbooks/introproofs/source/../generated-assets
+INFO    : input directory expanded to absolute path: /Users/jennifernordstrom/pretextbooks/introproofs/generated-assets
+INFO    : verifying and expanding input directory: /Users/jennifernordstrom/pretextbooks/introproofs/source/../assets
+INFO    : input directory expanded to absolute path: /Users/jennifernordstrom/pretextbooks/introproofs/assets
+INFO    : Runestone Services via online CDN query: version 7.5.0
+INFO    : Downloading Runestone Services, version 7.5.0
+INFO    : Extracting Runestone Services from archive file
+INFO    : XSL conversion of /Users/jennifernordstrom/pretextbooks/introproofs/source/main.ptx by /Users/jennifernordstrom/.ptx/2.11.1/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : successful application of /Users/jennifernordstrom/.ptx/2.11.1/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : XSL conversion of /Users/jennifernordstrom/pretextbooks/introproofs/source/main.ptx by /Users/jennifernordstrom/.ptx/2.11.1/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : successful application of /Users/jennifernordstrom/.ptx/2.11.1/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : converting /Users/jennifernordstrom/pretextbooks/introproofs/source/main.ptx to HTML in /var/folders/jx/_tr9kz5j537301qt36nttyh00000gn/T/ptx-a1wmspjz
+INFO    : XSL conversion of /Users/jennifernordstrom/pretextbooks/introproofs/source/main.ptx by /Users/jennifernordstrom/.ptx/2.11.1/core/xsl/pretext-html.xsl
+INFO    : messages from the log for XSL processing:
+INFO    : * PTX:INFO:   checking ONLY the last TWO YEARS of element deprecations.
+Rerun with the string parameter "author.deprecations.all" set to "yes" to check your source against all deprecations.
+WARNING : * PTX:DEPRECATE: (2024-10-08) elements previously included in a "titlepage" element inside the "frontmatter" (author, editor, credit, date, and event) should now be placed in "frontmatter/bibinfo".  To ensure a title page is created, put only the empty element "titlepage-items" inside "titlepage".  Until you move these elements, we will try to honor your intent. (1 time)
+INFO    : *              located within: "frontmatter" (xml:id)
+INFO    : * --------------
+WARNING : * PTX:DEPRECATE: (2024-10-08) elements previously included in a "colophon" element inside the "frontmatter" (credit, copyright, edition, and website) should now be placed in "frontmatter/bibinfo". To produce a "colophon", include only the empty element "colophon-items" inside "colophon" Until you move these elements, we will try to honor your intent. (1 time)
+INFO    : *              located within: "frontmatter" (xml:id)
+INFO    : * --------------
+WARNING : * PTX:DEPRECATE: (2024-07-12) the html/css/@style publication file entry has been deprecated for replacement by @theme. See the Guide for theme options.
+INFO    : * --------------
+INFO    : successful application of /Users/jennifernordstrom/.ptx/2.11.1/core/xsl/pretext-html.xsl
+INFO    : Removing temporary directory /var/folders/jx/_tr9kz5j537301qt36nttyh00000gn/T/ptx-bwxnm7dy
+INFO    : Removing temporary directory /var/folders/jx/_tr9kz5j537301qt36nttyh00000gn/T/ptx-a1wmspjz
+INFO    : Removing temporary directory /var/folders/jx/_tr9kz5j537301qt36nttyh00000gn/T/ptx-3lof9wcs
+INFO    : Removing temporary directory /var/folders/jx/_tr9kz5j537301qt36nttyh00000gn/T/ptx-i709_g5m
+INFO    : 
+Success! Run `pretext view` to see the results.
+
+INFO    : 

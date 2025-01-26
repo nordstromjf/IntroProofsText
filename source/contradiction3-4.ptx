@@ -33,7 +33,7 @@
 <example xml:id="E_contradiction"><title>Proof by Contradiction</title>
 <p>Prove if <m>x^2+y=13</m> and <m>y\neq 4</m> then <m>x\neq 3</m>.</p>
 <p>Before proving this statement, we note that it has logical form <m>(p\wedge q)\rightarrow r</m>. Since we are doing a proof by contradiction, we need to negate this statement. The negation has form <m>(p\wedge q) \wedge \neg r</m>. Thus, we will assume <m>p</m> is true, <m>q</m> is true, and <m>r</m> is false.</p>
-<proof><p>By contradiction. We assume <m>x^2+y=13, y\neq 4</m> and <m>x=3</m>. Since <m>x=3</m> and  <m>x_2+y=13</m>, we get <m>9+y=13</m>. Thus, <m>y=4</m>. But this contradicts that <m>y\neq 4</m>.</p></proof>
+<proof><p>By contradiction. We assume <m>x^2+y=13, y\neq 4</m> and <m>x=3</m>. Since <m>x=3</m> and  <m>x^2+y=13</m>, we get <m>9+y=13</m>. Thus, <m>y=4</m>. But this contradicts that <m>y\neq 4</m>.</p></proof>
 </example>
 
 <example xml:id="E_nogreatinteger"><title>There Is No Greatest Integer</title>

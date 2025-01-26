@@ -40,7 +40,7 @@
 <p>One very limited method for proving universal conditional statements is the <term>method of exhaustion</term><idx><h>proof</h><h>method of exaustion</h></idx>: for each specific <m>a\in D</m> where <m>P(a)</m> is true, show <m>Q(a)</m> is true. In other words, we check if <m>P(a)</m> then <m>Q(a)</m> for each <m>a\in D</m>.</p> 
    
 
-<example xml:id="E_pfbyexhaustion"><title>Method of Exaustion</title>
+<example xml:id="E_pfbyexhaustion"><title>Method of Exhaustion</title>
     <p>Prove for all <m>n\in \mathbb{Z}</m>, if <m>n</m> is even and <m>4\leq n\leq 16</m>, then <m>n</m> can be written as the sum of prime numbers.</p> 
     <proof><p> We can find all the integers that are even and <m>4\leq n\leq 16</m>. This is the set <m>\{4, 6, 8, 10, 12, 14, 16\}</m>. For each of these numbers we can demonstrate a way to write them as the sum of primes: <m>4=2+2, 6=3+3, 8=3+5, 10=3+7, 12=5+7, 14=7+7, 16=11+5</m>.</p></proof>
   </example>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">4.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">Proof by Induction: Geometric Sum.</span>
+</h3>
+<div class="para">Prove <span class="process-math">\(\sum_{i=0}^{n}r^i=\frac{r^{n+1}-1}{r-1}\)</span> for <span class="process-math">\(n\geq 0\text{.}\)</span>
+</div>
+<details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical">
+<div class="para">Base Step: Let <span class="process-math">\(n=0\text{.}\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{gather*}
+\sum_{i=0}^{0}r^i=r^0=1\\
+\frac{r^{0+1}-1}{r-1}=\frac{r-1}{r-1}=1
+\end{gather*}
+</div>
+<div class="para">Since the left hand side of the equation equals the right hand side, <span class="process-math">\(\sum_{i=0}^{n}r^i=\frac{r^{n+1}-1}{r-1}\)</span> for <span class="process-math">\(n=0\text{.}\)</span>
+</div>
+</div>
+<div class="para">Induction Step:</div>
+<div class="para">Assume <span class="process-math">\(\sum_{i=0}^{k}r^i=\frac{r^{k+1}-1}{r-1}\)</span> for some <span class="process-math">\(k\geq 0\text{.}\)</span>
+</div>
+<div class="para">Show <span class="process-math">\(\sum_{i=0}^{k+1}r^i=\frac{r^{k+2}-1}{r-1}\text{.}\)</span>
+</div>
+<div class="para logical">
+<div class="para">Proof of induction step:</div>
+<div class="displaymath process-math">
+\begin{align*}
+\sum_{i=0}^{k}r^i&amp;=\frac{r^{k+1}-1}{r-1} \textrm{ by the induction assumption}\\
+\sum_{i=0}^{k+1}r^i&amp;= \sum_{i=0}^{k}r^i+(r^{k+1}) \textrm{ add the } k+1 \textrm{ term of the sum}\\
+&amp;=\frac{r^{k+1}-1}{r-1}+(r^{k+1})\\
+&amp;=\frac{r^{k+1}-1}{r-1}+\frac{(r-1)(r^{k+1})}{r-1}\\
+&amp;=\frac{r^{k+1}-1+(r-1)(r^{k+1})}{r-1} \textrm{ factor out } r^{k+1} \textrm{ on the top}\\
+&amp;=\frac{r^{k+1}(1+r-1)-1}{r-1} \\
+&amp;=\frac{r^{k+1}(r)-1}{r-1} \\
+&amp;=\frac{r^{k+2}-1}{r-1}. 
+\end{align*}
+</div>
+<div class="para">Thus, <span class="process-math">\(\sum_{i=0}^{k+1}r^i=\frac{r^{k+2}-1}{r-1}\text{.}\)</span>
+</div>
+</div>
+<div class="para">Hence, by induction <span class="process-math">\(\sum_{i=0}^{n}r^i=\frac{r^{n+1}-1}{r-1}\)</span> for <span class="process-math">\(n\geq 0\text{.}\)</span>
+</div></article></details></article><span class="incontext"><a class="internal" href="induction.html#E_geosuminduction">in-context</a></span>
+</body>
+</html>

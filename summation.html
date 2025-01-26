@@ -5,7 +5,7 @@
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Summation Notation</title>
@@ -14,172 +14,403 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="Introduction to Proofs">
 <meta property="book:author" content="Jennifer Firkins Nordstrom">
-<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
-  tex: {
-    inlineMath: [['\\(','\\)']],
-    tags: "none",
-    tagSide: "right",
-    tagIndent: ".8em",
-    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
   },
-  options: {
-    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
-    processHtmlClass: "process-math",
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
   },
-  chtml: {
-    scale: 0.98,
-    mtextInheritFont: true
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
   },
-  loader: {
-    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
-    paths: {pretext: "https://pretextbook.org/js/lib"},
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
   },
-  startup: {
+  "startup": {
     pageReady() {
       return MathJax.startup.defaultPageReady().then(function () {
       console.log("in ready function");
       rsMathReady();
       }
     )}
-  },
+  }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.2/pretext_search.js"></script><link href="https://pretextbook.org/css/0.6/pretext_search.css" rel="stylesheet" type="text/css">
-<script>js_version = 0.2</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.2/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.2/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.2/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
-<link href="https://pretextbook.org/css/0.6/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.6/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.6/shell_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.6/banner_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.6/navbar_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.6/toc_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.6/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.6/style_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.6/colors_blue_red.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.6/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.5.2';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.8b270ccf5298bad1.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.630d5c4fb4b681eb.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.d966d31a41778c59.css">
+<style>
+#arguments-20-1-1-4 { counter-set: arguments-20-1-1-4 0; }
+#arguments-20-1-1-4 > li::marker { content: ""counter(arguments-20-1-1-4,lower-alpha)""; }
+#arguments-20-1-1-4 > li { counter-increment: arguments-20-1-1-4; }
+#arguments-20-2-1-3 { counter-set: arguments-20-2-1-3 0; }
+#arguments-20-2-1-3 > li::marker { content: ""counter(arguments-20-2-1-3,lower-alpha)""; }
+#arguments-20-2-1-3 > li { counter-increment: arguments-20-2-1-3; }
+#arguments-20-3-1-2 { counter-set: arguments-20-3-1-2 0; }
+#arguments-20-3-1-2 > li::marker { content: "("counter(arguments-20-3-1-2,lower-alpha)")"; }
+#arguments-20-3-1-2 > li { counter-increment: arguments-20-3-1-2; }
+#B_logicalequivalences-3-5 { counter-set: B_logicalequivalences-3-5 0; }
+#B_logicalequivalences-3-5 > li::marker { content: ""counter(B_logicalequivalences-3-5,decimal)""; }
+#B_logicalequivalences-3-5 > li { counter-increment: B_logicalequivalences-3-5; }
+#connectives-73-1-1-2 { counter-set: connectives-73-1-1-2 0; }
+#connectives-73-1-1-2 > li::marker { content: ""counter(connectives-73-1-1-2,lower-alpha)""; }
+#connectives-73-1-1-2 > li { counter-increment: connectives-73-1-1-2; }
+#connectives-73-2-1-2 { counter-set: connectives-73-2-1-2 0; }
+#connectives-73-2-1-2 > li::marker { content: ""counter(connectives-73-2-1-2,lower-alpha)""; }
+#connectives-73-2-1-2 > li { counter-increment: connectives-73-2-1-2; }
+#connectives-73-3-1-2 { counter-set: connectives-73-3-1-2 0; }
+#connectives-73-3-1-2 > li::marker { content: ""counter(connectives-73-3-1-2,lower-alpha)""; }
+#connectives-73-3-1-2 > li { counter-increment: connectives-73-3-1-2; }
+#ER_onlyandnot-1-2 { counter-set: ER_onlyandnot-1-2 0; }
+#ER_onlyandnot-1-2 > li::marker { content: ""counter(ER_onlyandnot-1-2,lower-alpha)""; }
+#ER_onlyandnot-1-2 > li { counter-increment: ER_onlyandnot-1-2; }
+#connectives-73-5-1-2 { counter-set: connectives-73-5-1-2 0; }
+#connectives-73-5-1-2 > li::marker { content: ""counter(connectives-73-5-1-2,lower-alpha)""; }
+#connectives-73-5-1-2 > li { counter-increment: connectives-73-5-1-2; }
+#setnotation-22-4-1-2 { counter-set: setnotation-22-4-1-2 0; }
+#setnotation-22-4-1-2 > li::marker { content: ""counter(setnotation-22-4-1-2,lower-alpha)""; }
+#setnotation-22-4-1-2 > li { counter-increment: setnotation-22-4-1-2; }
+#setnotation-22-5-1-2 { counter-set: setnotation-22-5-1-2 0; }
+#setnotation-22-5-1-2 > li::marker { content: ""counter(setnotation-22-5-1-2,lower-alpha)""; }
+#setnotation-22-5-1-2 > li { counter-increment: setnotation-22-5-1-2; }
+#E_multquant1-2-2 { counter-set: E_multquant1-2-2 0; }
+#E_multquant1-2-2 > li::marker { content: ""counter(E_multquant1-2-2,lower-alpha)""; }
+#E_multquant1-2-2 > li { counter-increment: E_multquant1-2-2; }
+#quantifiers-6-14-3-1-2 { counter-set: quantifiers-6-14-3-1-2 0; }
+#quantifiers-6-14-3-1-2 > li::marker { content: ""counter(quantifiers-6-14-3-1-2,lower-alpha)""; }
+#quantifiers-6-14-3-1-2 > li { counter-increment: quantifiers-6-14-3-1-2; }
+#quantifiers-6-14-4-1-2 { counter-set: quantifiers-6-14-4-1-2 0; }
+#quantifiers-6-14-4-1-2 > li::marker { content: ""counter(quantifiers-6-14-4-1-2,lower-alpha)""; }
+#quantifiers-6-14-4-1-2 > li { counter-increment: quantifiers-6-14-4-1-2; }
+#quantifiers-6-14-5-1-2 { counter-set: quantifiers-6-14-5-1-2 0; }
+#quantifiers-6-14-5-1-2 > li::marker { content: ""counter(quantifiers-6-14-5-1-2,lower-alpha)""; }
+#quantifiers-6-14-5-1-2 > li { counter-increment: quantifiers-6-14-5-1-2; }
+#quantifiers-6-14-6-1-2 { counter-set: quantifiers-6-14-6-1-2 0; }
+#quantifiers-6-14-6-1-2 > li::marker { content: ""counter(quantifiers-6-14-6-1-2,lower-alpha)""; }
+#quantifiers-6-14-6-1-2 > li { counter-increment: quantifiers-6-14-6-1-2; }
+#quantifiers-6-14-7-1-2 { counter-set: quantifiers-6-14-7-1-2 0; }
+#quantifiers-6-14-7-1-2 > li::marker { content: ""counter(quantifiers-6-14-7-1-2,lower-alpha)""; }
+#quantifiers-6-14-7-1-2 > li { counter-increment: quantifiers-6-14-7-1-2; }
+#quantifiers-6-14-8-1-2 { counter-set: quantifiers-6-14-8-1-2 0; }
+#quantifiers-6-14-8-1-2 > li::marker { content: ""counter(quantifiers-6-14-8-1-2,lower-alpha)""; }
+#quantifiers-6-14-8-1-2 > li { counter-increment: quantifiers-6-14-8-1-2; }
+#conditionals-33-1-1-2 { counter-set: conditionals-33-1-1-2 0; }
+#conditionals-33-1-1-2 > li::marker { content: ""counter(conditionals-33-1-1-2,lower-alpha)""; }
+#conditionals-33-1-1-2 > li { counter-increment: conditionals-33-1-1-2; }
+#conditionals-33-2-1-2 { counter-set: conditionals-33-2-1-2 0; }
+#conditionals-33-2-1-2 > li::marker { content: ""counter(conditionals-33-2-1-2,lower-alpha)""; }
+#conditionals-33-2-1-2 > li { counter-increment: conditionals-33-2-1-2; }
+#conditionals-33-3-1-2 { counter-set: conditionals-33-3-1-2 0; }
+#conditionals-33-3-1-2 > li::marker { content: ""counter(conditionals-33-3-1-2,lower-alpha)""; }
+#conditionals-33-3-1-2 > li { counter-increment: conditionals-33-3-1-2; }
+#conditionals-33-4-1-2 { counter-set: conditionals-33-4-1-2 0; }
+#conditionals-33-4-1-2 > li::marker { content: ""counter(conditionals-33-4-1-2,lower-alpha)""; }
+#conditionals-33-4-1-2 > li { counter-increment: conditionals-33-4-1-2; }
+#conditionals-33-5-1-2 { counter-set: conditionals-33-5-1-2 0; }
+#conditionals-33-5-1-2 > li::marker { content: ""counter(conditionals-33-5-1-2,lower-alpha)""; }
+#conditionals-33-5-1-2 > li { counter-increment: conditionals-33-5-1-2; }
+#directproof-29-1-1-2 { counter-set: directproof-29-1-1-2 0; }
+#directproof-29-1-1-2 > li::marker { content: ""counter(directproof-29-1-1-2,lower-alpha)""; }
+#directproof-29-1-1-2 > li { counter-increment: directproof-29-1-1-2; }
+#directproof-29-11-1-2 { counter-set: directproof-29-11-1-2 0; }
+#directproof-29-11-1-2 > li::marker { content: ""counter(directproof-29-11-1-2,lower-alpha)""; }
+#directproof-29-11-1-2 > li { counter-increment: directproof-29-11-1-2; }
+#moredirect-7-1-1-2 { counter-set: moredirect-7-1-1-2 0; }
+#moredirect-7-1-1-2 > li::marker { content: ""counter(moredirect-7-1-1-2,lower-alpha)""; }
+#moredirect-7-1-1-2 > li { counter-increment: moredirect-7-1-1-2; }
+#moredirect-7-4-1-2 { counter-set: moredirect-7-4-1-2 0; }
+#moredirect-7-4-1-2 > li::marker { content: "("counter(moredirect-7-4-1-2,lower-alpha)")"; }
+#moredirect-7-4-1-2 > li { counter-increment: moredirect-7-4-1-2; }
+#ER_averagerat-1-2 { counter-set: ER_averagerat-1-2 0; }
+#ER_averagerat-1-2 > li::marker { content: ""counter(ER_averagerat-1-2,lower-alpha)""; }
+#ER_averagerat-1-2 > li { counter-increment: ER_averagerat-1-2; }
+#moredirect-7-7-1-2 { counter-set: moredirect-7-7-1-2 0; }
+#moredirect-7-7-1-2 > li::marker { content: ""counter(moredirect-7-7-1-2,lower-alpha)""; }
+#moredirect-7-7-1-2 > li { counter-increment: moredirect-7-7-1-2; }
+#moredirect-7-9-1-2 { counter-set: moredirect-7-9-1-2 0; }
+#moredirect-7-9-1-2 > li::marker { content: ""counter(moredirect-7-9-1-2,lower-alpha)""; }
+#moredirect-7-9-1-2 > li { counter-increment: moredirect-7-9-1-2; }
+#cases-31-1-1-2 { counter-set: cases-31-1-1-2 0; }
+#cases-31-1-1-2 > li::marker { content: ""counter(cases-31-1-1-2,lower-alpha)""; }
+#cases-31-1-1-2 > li { counter-increment: cases-31-1-1-2; }
+#SS_twoproofs-18-1-1-2 { counter-set: SS_twoproofs-18-1-1-2 0; }
+#SS_twoproofs-18-1-1-2 > li::marker { content: ""counter(SS_twoproofs-18-1-1-2,lower-alpha)""; }
+#SS_twoproofs-18-1-1-2 > li { counter-increment: SS_twoproofs-18-1-1-2; }
+#SS_twoproofs-18-2-1-2 { counter-set: SS_twoproofs-18-2-1-2 0; }
+#SS_twoproofs-18-2-1-2 > li::marker { content: ""counter(SS_twoproofs-18-2-1-2,lower-alpha)""; }
+#SS_twoproofs-18-2-1-2 > li { counter-increment: SS_twoproofs-18-2-1-2; }
+#SS_twoproofs-18-3-1-2 { counter-set: SS_twoproofs-18-3-1-2 0; }
+#SS_twoproofs-18-3-1-2 > li::marker { content: ""counter(SS_twoproofs-18-3-1-2,lower-alpha)""; }
+#SS_twoproofs-18-3-1-2 > li { counter-increment: SS_twoproofs-18-3-1-2; }
+#SS_twoproofs-18-4-1-2 { counter-set: SS_twoproofs-18-4-1-2 0; }
+#SS_twoproofs-18-4-1-2 > li::marker { content: ""counter(SS_twoproofs-18-4-1-2,lower-alpha)""; }
+#SS_twoproofs-18-4-1-2 > li { counter-increment: SS_twoproofs-18-4-1-2; }
+#SS_twoproofs-18-5-1-2 { counter-set: SS_twoproofs-18-5-1-2 0; }
+#SS_twoproofs-18-5-1-2 > li::marker { content: ""counter(SS_twoproofs-18-5-1-2,lower-alpha)""; }
+#SS_twoproofs-18-5-1-2 > li { counter-increment: SS_twoproofs-18-5-1-2; }
+#B_propsums-2-1 { counter-set: B_propsums-2-1 0; }
+#B_propsums-2-1 > li::marker { content: ""counter(B_propsums-2-1,decimal)""; }
+#B_propsums-2-1 > li { counter-increment: B_propsums-2-1; }
+#summation-27-1-1-2 { counter-set: summation-27-1-1-2 0; }
+#summation-27-1-1-2 > li::marker { content: ""counter(summation-27-1-1-2,lower-alpha)""; }
+#summation-27-1-1-2 > li { counter-increment: summation-27-1-1-2; }
+#summation-27-2-1-2 { counter-set: summation-27-2-1-2 0; }
+#summation-27-2-1-2 > li::marker { content: ""counter(summation-27-2-1-2,lower-alpha)""; }
+#summation-27-2-1-2 > li { counter-increment: summation-27-2-1-2; }
+#summation-27-3-1-2 { counter-set: summation-27-3-1-2 0; }
+#summation-27-3-1-2 > li::marker { content: ""counter(summation-27-3-1-2,lower-alpha)""; }
+#summation-27-3-1-2 > li { counter-increment: summation-27-3-1-2; }
+#summation-27-8-1-2 { counter-set: summation-27-8-1-2 0; }
+#summation-27-8-1-2 > li::marker { content: ""counter(summation-27-8-1-2,lower-alpha)""; }
+#summation-27-8-1-2 > li { counter-increment: summation-27-8-1-2; }
+#B_induction-3-4 { counter-set: B_induction-3-4 0; }
+#B_induction-3-4 > li::marker { content: ""counter(B_induction-3-4,decimal)""; }
+#B_induction-3-4 > li { counter-increment: B_induction-3-4; }
+#induction-6-1 { counter-set: induction-6-1 0; }
+#induction-6-1 > li::marker { content: "("counter(induction-6-1,decimal)")"; }
+#induction-6-1 > li { counter-increment: induction-6-1; }
+#ER_indpowersof2-1-2 { counter-set: ER_indpowersof2-1-2 0; }
+#ER_indpowersof2-1-2 > li::marker { content: ""counter(ER_indpowersof2-1-2,lower-alpha)""; }
+#ER_indpowersof2-1-2 > li { counter-increment: ER_indpowersof2-1-2; }
+#B_strongind-4-3 { counter-set: B_strongind-4-3 0; }
+#B_strongind-4-3 > li::marker { content: ""counter(B_strongind-4-3,decimal)""; }
+#B_strongind-4-3 > li { counter-increment: B_strongind-4-3; }
+#E_domainqexist1-3-1 { counter-set: E_domainqexist1-3-1 0; }
+#E_domainqexist1-3-1 > li::marker { content: ""counter(E_domainqexist1-3-1,lower-alpha)""; }
+#E_domainqexist1-3-1 > li { counter-increment: E_domainqexist1-3-1; }
+#B_pfexistential-3-3 { counter-set: B_pfexistential-3-3 0; }
+#B_pfexistential-3-3 > li::marker { content: ""counter(B_pfexistential-3-3,decimal)""; }
+#B_pfexistential-3-3 > li { counter-increment: B_pfexistential-3-3; }
+#B_pfunique-3-3 { counter-set: B_pfunique-3-3 0; }
+#B_pfunique-3-3 > li::marker { content: ""counter(B_pfunique-3-3,decimal)""; }
+#B_pfunique-3-3 > li { counter-increment: B_pfunique-3-3; }
+#existunique-23-1 { counter-set: existunique-23-1 0; }
+#existunique-23-1 > li::marker { content: ""counter(existunique-23-1,decimal)""; }
+#existunique-23-1 > li { counter-increment: existunique-23-1; }
+#E_wop-3-2 { counter-set: E_wop-3-2 0; }
+#E_wop-3-2 > li::marker { content: ""counter(E_wop-3-2,decimal)""; }
+#E_wop-3-2 > li { counter-increment: E_wop-3-2; }
+#E_setnotevarious-2 { counter-set: E_setnotevarious-2 0; }
+#E_setnotevarious-2 > li::marker { content: ""counter(E_setnotevarious-2,lower-alpha)""; }
+#E_setnotevarious-2 > li { counter-increment: E_setnotevarious-2; }
+#E_setops-3-2 { counter-set: E_setops-3-2 0; }
+#E_setops-3-2 > li::marker { content: ""counter(E_setops-3-2,lower-alpha)""; }
+#E_setops-3-2 > li { counter-increment: E_setops-3-2; }
+#SS_setproofs-3-3 { counter-set: SS_setproofs-3-3 0; }
+#SS_setproofs-3-3 > li::marker { content: ""counter(SS_setproofs-3-3,decimal)""; }
+#SS_setproofs-3-3 > li { counter-increment: SS_setproofs-3-3; }
+#L_SetIdent-4-4 { counter-set: L_SetIdent-4-4 0; }
+#L_SetIdent-4-4 > li::marker { content: ""counter(L_SetIdent-4-4,decimal)""; }
+#L_SetIdent-4-4 > li { counter-increment: L_SetIdent-4-4; }
+#SS_setproofs-25-1-1-2 { counter-set: SS_setproofs-25-1-1-2 0; }
+#SS_setproofs-25-1-1-2 > li::marker { content: ""counter(SS_setproofs-25-1-1-2,lower-alpha)""; }
+#SS_setproofs-25-1-1-2 > li { counter-increment: SS_setproofs-25-1-1-2; }
+#SS_setproofs-25-2-1-2 { counter-set: SS_setproofs-25-2-1-2 0; }
+#SS_setproofs-25-2-1-2 > li::marker { content: ""counter(SS_setproofs-25-2-1-2,lower-alpha)""; }
+#SS_setproofs-25-2-1-2 > li { counter-increment: SS_setproofs-25-2-1-2; }
+#SS_setproofs-25-3-1-2 { counter-set: SS_setproofs-25-3-1-2 0; }
+#SS_setproofs-25-3-1-2 > li::marker { content: ""counter(SS_setproofs-25-3-1-2,lower-alpha)""; }
+#SS_setproofs-25-3-1-2 > li { counter-increment: SS_setproofs-25-3-1-2; }
+#SS_setproofs-25-4-1-2 { counter-set: SS_setproofs-25-4-1-2 0; }
+#SS_setproofs-25-4-1-2 > li::marker { content: ""counter(SS_setproofs-25-4-1-2,lower-alpha)""; }
+#SS_setproofs-25-4-1-2 > li { counter-increment: SS_setproofs-25-4-1-2; }
+#SS_setproofs-25-5-1-2 { counter-set: SS_setproofs-25-5-1-2 0; }
+#SS_setproofs-25-5-1-2 > li::marker { content: ""counter(SS_setproofs-25-5-1-2,lower-alpha)""; }
+#SS_setproofs-25-5-1-2 > li { counter-increment: SS_setproofs-25-5-1-2; }
+#SS_setproofs-25-6-1-2 { counter-set: SS_setproofs-25-6-1-2 0; }
+#SS_setproofs-25-6-1-2 > li::marker { content: ""counter(SS_setproofs-25-6-1-2,lower-alpha)""; }
+#SS_setproofs-25-6-1-2 > li { counter-increment: SS_setproofs-25-6-1-2; }
+#SS_setproofs-25-7-1-2 { counter-set: SS_setproofs-25-7-1-2 0; }
+#SS_setproofs-25-7-1-2 > li::marker { content: ""counter(SS_setproofs-25-7-1-2,lower-alpha)""; }
+#SS_setproofs-25-7-1-2 > li { counter-increment: SS_setproofs-25-7-1-2; }
+#SS_setproofs-25-15-1-2 { counter-set: SS_setproofs-25-15-1-2 0; }
+#SS_setproofs-25-15-1-2 > li::marker { content: ""counter(SS_setproofs-25-15-1-2,lower-alpha)""; }
+#SS_setproofs-25-15-1-2 > li { counter-increment: SS_setproofs-25-15-1-2; }
+#E_notfunctionimages-2-1 { counter-set: E_notfunctionimages-2-1 0; }
+#E_notfunctionimages-2-1 > li::marker { content: ""counter(E_notfunctionimages-2-1,lower-alpha)""; }
+#E_notfunctionimages-2-1 > li { counter-increment: E_notfunctionimages-2-1; }
+#E_addasfn-3-1 { counter-set: E_addasfn-3-1 0; }
+#E_addasfn-3-1 > li::marker { content: ""counter(E_addasfn-3-1,lower-alpha)""; }
+#E_addasfn-3-1 > li { counter-increment: E_addasfn-3-1; }
+#functions-45-1-1-2 { counter-set: functions-45-1-1-2 0; }
+#functions-45-1-1-2 > li::marker { content: ""counter(functions-45-1-1-2,lower-alpha)""; }
+#functions-45-1-1-2 > li { counter-increment: functions-45-1-1-2; }
+#functions-45-2-1-2 { counter-set: functions-45-2-1-2 0; }
+#functions-45-2-1-2 > li::marker { content: ""counter(functions-45-2-1-2,lower-alpha)""; }
+#functions-45-2-1-2 > li { counter-increment: functions-45-2-1-2; }
+#functions-45-3-1-2 { counter-set: functions-45-3-1-2 0; }
+#functions-45-3-1-2 > li::marker { content: ""counter(functions-45-3-1-2,lower-alpha)""; }
+#functions-45-3-1-2 > li { counter-increment: functions-45-3-1-2; }
+#functions-45-4-1-2 { counter-set: functions-45-4-1-2 0; }
+#functions-45-4-1-2 > li::marker { content: ""counter(functions-45-4-1-2,lower-alpha)""; }
+#functions-45-4-1-2 > li { counter-increment: functions-45-4-1-2; }
+#functions-45-5-1-2 { counter-set: functions-45-5-1-2 0; }
+#functions-45-5-1-2 > li::marker { content: ""counter(functions-45-5-1-2,lower-alpha)""; }
+#functions-45-5-1-2 > li { counter-increment: functions-45-5-1-2; }
+#functions-45-7-1-3 { counter-set: functions-45-7-1-3 0; }
+#functions-45-7-1-3 > li::marker { content: ""counter(functions-45-7-1-3,lower-alpha)""; }
+#functions-45-7-1-3 > li { counter-increment: functions-45-7-1-3; }
+#functions-45-8-1-2 { counter-set: functions-45-8-1-2 0; }
+#functions-45-8-1-2 > li::marker { content: ""counter(functions-45-8-1-2,lower-alpha)""; }
+#functions-45-8-1-2 > li { counter-increment: functions-45-8-1-2; }
+#functions-45-9-1-2 { counter-set: functions-45-9-1-2 0; }
+#functions-45-9-1-2 > li::marker { content: ""counter(functions-45-9-1-2,lower-alpha)""; }
+#functions-45-9-1-2 > li { counter-increment: functions-45-9-1-2; }
+#functions-45-10-1-3 { counter-set: functions-45-10-1-3 0; }
+#functions-45-10-1-3 > li::marker { content: ""counter(functions-45-10-1-3,lower-alpha)""; }
+#functions-45-10-1-3 > li { counter-increment: functions-45-10-1-3; }
+#functions-45-11-1-3 { counter-set: functions-45-11-1-3 0; }
+#functions-45-11-1-3 > li::marker { content: ""counter(functions-45-11-1-3,lower-alpha)""; }
+#functions-45-11-1-3 > li { counter-increment: functions-45-11-1-3; }
+#functions-45-12-1-2 { counter-set: functions-45-12-1-2 0; }
+#functions-45-12-1-2 > li::marker { content: ""counter(functions-45-12-1-2,lower-alpha)""; }
+#functions-45-12-1-2 > li { counter-increment: functions-45-12-1-2; }
+#E_equivclasses-2-3 { counter-set: E_equivclasses-2-3 0; }
+#E_equivclasses-2-3 > li::marker { content: ""counter(E_equivclasses-2-3,lower-alpha)""; }
+#E_equivclasses-2-3 > li { counter-increment: E_equivclasses-2-3; }
+#D_partition-1-1-6 { counter-set: D_partition-1-1-6 0; }
+#D_partition-1-1-6 > li::marker { content: ""counter(D_partition-1-1-6,decimal)""; }
+#D_partition-1-1-6 > li { counter-increment: D_partition-1-1-6; }
+#E_equivclasses2-4-2 { counter-set: E_equivclasses2-4-2 0; }
+#E_equivclasses2-4-2 > li::marker { content: ""counter(E_equivclasses2-4-2,lower-alpha)""; }
+#E_equivclasses2-4-2 > li { counter-increment: E_equivclasses2-4-2; }
+#SS_equivrelations-47-1-1-3 { counter-set: SS_equivrelations-47-1-1-3 0; }
+#SS_equivrelations-47-1-1-3 > li::marker { content: ""counter(SS_equivrelations-47-1-1-3,lower-alpha)""; }
+#SS_equivrelations-47-1-1-3 > li { counter-increment: SS_equivrelations-47-1-1-3; }
+#SS_equivrelations-47-2-1-3 { counter-set: SS_equivrelations-47-2-1-3 0; }
+#SS_equivrelations-47-2-1-3 > li::marker { content: ""counter(SS_equivrelations-47-2-1-3,lower-alpha)""; }
+#SS_equivrelations-47-2-1-3 > li { counter-increment: SS_equivrelations-47-2-1-3; }
+#SS_equivrelations-47-4-1-2 { counter-set: SS_equivrelations-47-4-1-2 0; }
+#SS_equivrelations-47-4-1-2 > li::marker { content: ""counter(SS_equivrelations-47-4-1-2,lower-alpha)""; }
+#SS_equivrelations-47-4-1-2 > li { counter-increment: SS_equivrelations-47-4-1-2; }
+#SS_equivrelations-47-5-1-2 { counter-set: SS_equivrelations-47-5-1-2 0; }
+#SS_equivrelations-47-5-1-2 > li::marker { content: ""counter(SS_equivrelations-47-5-1-2,lower-alpha)""; }
+#SS_equivrelations-47-5-1-2 > li { counter-increment: SS_equivrelations-47-5-1-2; }
+#SS_equivrelations-47-6-1-2 { counter-set: SS_equivrelations-47-6-1-2 0; }
+#SS_equivrelations-47-6-1-2 > li::marker { content: ""counter(SS_equivrelations-47-6-1-2,lower-alpha)""; }
+#SS_equivrelations-47-6-1-2 > li { counter-increment: SS_equivrelations-47-6-1-2; }
+#SS_equivrelations-47-7-1-2 { counter-set: SS_equivrelations-47-7-1-2 0; }
+#SS_equivrelations-47-7-1-2 > li::marker { content: ""counter(SS_equivrelations-47-7-1-2,lower-alpha)""; }
+#SS_equivrelations-47-7-1-2 > li { counter-increment: SS_equivrelations-47-7-1-2; }
+#SS_equivrelations-47-8-1-2 { counter-set: SS_equivrelations-47-8-1-2 0; }
+#SS_equivrelations-47-8-1-2 > li::marker { content: ""counter(SS_equivrelations-47-8-1-2,lower-alpha)""; }
+#SS_equivrelations-47-8-1-2 > li { counter-increment: SS_equivrelations-47-8-1-2; }
+#SS_equivrelations-47-9-1-2 { counter-set: SS_equivrelations-47-9-1-2 0; }
+#SS_equivrelations-47-9-1-2 > li::marker { content: ""counter(SS_equivrelations-47-9-1-2,lower-alpha)""; }
+#SS_equivrelations-47-9-1-2 > li { counter-increment: SS_equivrelations-47-9-1-2; }
+#D_RSTprop2-1-1-3 { counter-set: D_RSTprop2-1-1-3 0; }
+#D_RSTprop2-1-1-3 > li::marker { content: ""counter(D_RSTprop2-1-1-3,decimal)""; }
+#D_RSTprop2-1-1-3 > li { counter-increment: D_RSTprop2-1-1-3; }
+#T_totalorder-1-1-4 { counter-set: T_totalorder-1-1-4 0; }
+#T_totalorder-1-1-4 > li::marker { content: ""counter(T_totalorder-1-1-4,decimal)""; }
+#T_totalorder-1-1-4 > li { counter-increment: T_totalorder-1-1-4; }
+#orders-33-1-1-2 { counter-set: orders-33-1-1-2 0; }
+#orders-33-1-1-2 > li::marker { content: ""counter(orders-33-1-1-2,lower-alpha)""; }
+#orders-33-1-1-2 > li { counter-increment: orders-33-1-1-2; }
+#orders-33-2-1-2 { counter-set: orders-33-2-1-2 0; }
+#orders-33-2-1-2 > li::marker { content: ""counter(orders-33-2-1-2,lower-alpha)""; }
+#orders-33-2-1-2 > li { counter-increment: orders-33-2-1-2; }
+#orders-33-3-1-2 { counter-set: orders-33-3-1-2 0; }
+#orders-33-3-1-2 > li::marker { content: ""counter(orders-33-3-1-2,lower-alpha)""; }
+#orders-33-3-1-2 > li { counter-increment: orders-33-3-1-2; }
+#orders-33-4-1-2 { counter-set: orders-33-4-1-2 0; }
+#orders-33-4-1-2 > li::marker { content: ""counter(orders-33-4-1-2,lower-alpha)""; }
+#orders-33-4-1-2 > li { counter-increment: orders-33-4-1-2; }
+#binomial9-30-2-1-1-1 { counter-set: binomial9-30-2-1-1-1 0; }
+#binomial9-30-2-1-1-1 > li::marker { content: ""counter(binomial9-30-2-1-1-1,lower-alpha)""; }
+#binomial9-30-2-1-1-1 > li { counter-increment: binomial9-30-2-1-1-1; }
+#cardinality-31-6-1-2 { counter-set: cardinality-31-6-1-2 0; }
+#cardinality-31-6-1-2 > li::marker { content: ""counter(cardinality-31-6-1-2,lower-alpha)""; }
+#cardinality-31-6-1-2 > li { counter-increment: cardinality-31-6-1-2; }
+</style>
 </head>
 <body class="pretext book ignore-math">
-<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
-<a id="logo-link" href=""></a><div class="title-container">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
 <h1 class="heading"><a href="IntroProofs.html"><span class="title">Introduction to Proofs:</span> <span class="subtitle">An Active Exploration of Mathematical Language</span></a></h1>
 <p class="byline">Jennifer Firkins Nordstrom</p>
 </div>
-<div id="searchresultsplaceholder" style="display: none">
-<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
-</h2>
-<div id="searchempty"><span>No results.</span></div>
-<ol id="searchresults"></ol>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-2.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
 </div>
-</div></header><nav id="ptx-navbar" class="navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><a class="index-button button" href="index-1.html" title="Index"><span class="name">Index</span></a><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="theavatarbutton" class="name">You!</span><div id="preferences_menu_holder" class="hidden"><ol id="preferences_menu" style="font-family: 'Roboto Serif', serif;">
-<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
-<ol class="hidden avatar">
-<li data-val="You!" tabindex="-1">
-<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
-<li data-val="😺" tabindex="-1">
-<span id="the😺" class="avatarcheck"></span>😺</li>
-<li data-val="👤" tabindex="-1">
-<span id="the👤" class="avatarcheck"></span>👤</li>
-<li data-val="👽" tabindex="-1">
-<span id="the👽" class="avatarcheck"></span>👽</li>
-<li data-val="🐶" tabindex="-1">
-<span id="the🐶" class="avatarcheck"></span>🐶</li>
-<li data-val="🐼" tabindex="-1">
-<span id="the🐼" class="avatarcheck"></span>🐼</li>
-<li data-val="🌈" tabindex="-1">
-<span id="the🌈" class="avatarcheck"></span>🌈</li>
-</ol>
-</li>
-<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
-<ol class="hidden fontfamily">
-<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
-<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
-</li>
-<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
-<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
-</li>
-</ol>
-</li>
-<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
-<ol class="hidden fonts">
-<li>Size</li>
-<li><span id="thesize">12</span></li>
-<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
-<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
-<li>Width</li>
-<li><span id="thewdth">100</span></li>
-<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
-<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
-<li>Weight</li>
-<li><span id="thewght">400</span></li>
-<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
-<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
-<li>Letter spacing</li>
-<li>
-<span id="thelspace">0</span><span class="byunits">/200</span>
-</li>
-<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
-<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
-<li>Word spacing</li>
-<li>
-<span id="thewspace">0</span><span class="byunits">/50</span>
-</li>
-<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
-<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
-<li>Line Spacing</li>
-<li>
-<span id="theheight">135</span><span class="byunits">/100</span>
-</li>
-<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
-<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
-</ol>
-</li>
-<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
-<ol class="hidden atmosphere">
-<li data-val="default" tabindex="-1">
-<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
-<li data-val="pastel" tabindex="-1">
-<span id="thepastel" class="atmospherecheck"></span>pastel</li>
-<li data-val="darktwilight" tabindex="-1">
-<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
-<li data-val="dark" tabindex="-1">
-<span id="thedark" class="atmospherecheck"></span>dark</li>
-<li data-val="darkmidnight" tabindex="-1">
-<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
-</ol>
-</li>
-<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
-<ol class="hidden ruler">
-<li data-val="none" tabindex="-1">
-<span id="thenone" class="rulercheck">✔️</span>none</li>
-<li data-val="underline" tabindex="-1">
-<span id="theunderline" class="rulercheck"></span>underline</li>
-<li data-val="lunderline" tabindex="-1">
-<span id="thelunderline" class="rulercheck"></span>L-underline</li>
-<li data-val="greybar" tabindex="-1">
-<span id="thegreybar" class="rulercheck"></span>grey bar</li>
-<li data-val="lightbox" tabindex="-1">
-<span id="thelightbox" class="rulercheck"></span>light box</li>
-<li data-val="sunrise" tabindex="-1">
-<span id="thesunrise" class="rulercheck"></span>sunrise</li>
-<li data-val="sunriseunderline" tabindex="-1">
-<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
-<li class="moveQ">Motion by:</li>
-<li data-val="mouse" tabindex="-1">
-<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
-<li data-val="arrow" tabindex="-1">
-<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
-<li data-val="eye" tabindex="-1">
-<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
-</ol>
-</li>
-</ol></div></button><span class="treebuttons"><a class="previous-button button" href="chapter4.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter4.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="induction.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
-<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
-</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(     \newcommand{\MyTikzmark}[2]{
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="chapter4.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="chapter4.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="induction.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(     \newcommand{\MyTikzmark}[2]{
      \tikz[overlay,remember picture,baseline] \node [anchor=base] (#1) {$#2$};}
 \newcommand{\DrawVLine}[3][]{
   \begin{tikzpicture}[overlay,remember picture]
@@ -198,237 +429,244 @@ window.MathJax = {
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div id="ptx-sidebar"><nav id="ptx-toc" class="depth2"><ul class="structural">
-<li>
-<div class="toc-item"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="colophon-1.html" class="internal"><span class="title">Colophon</span></a></div></li>
-<li><div class="toc-item"><a href="preface-1.html" class="internal"><span class="title">Preface</span></a></div></li>
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="2" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Preface</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="chapter1.html" class="internal"><span class="codenumber">1</span> <span class="title">Logic</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="whatisaproof.html" class="internal"><span class="codenumber">1.1</span> <span class="title">What is a Proof?</span></a></div></li>
-<li>
-<div class="toc-item"><a href="arguments.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Validity and Soundness</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="arguments.html#exercises-1" class="internal"><span class="codenumber">1.2</span> <span class="title">Exercises</span></a></div></li></ul>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter1.html" class="internal"><span class="codenumber">1</span> <span class="title">Logic</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="whatisaproof.html" class="internal"><span class="codenumber">1.1</span> <span class="title">What is a Proof?</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="arguments.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Validity and Soundness</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="arguments.html#arguments-20" class="internal"><span class="codenumber">1.2</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
-<li>
-<div class="toc-item"><a href="connectives.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Logical Connectives</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="connectives.html#exercises-2" class="internal"><span class="codenumber">1.3</span> <span class="title">Exercises</span></a></div></li></ul>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="connectives.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Logical Connectives</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="connectives.html#connectives-73" class="internal"><span class="codenumber">1.3</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
-<li>
-<div class="toc-item"><a href="argumentswconnectives.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Logical Arguments with Connectives</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="argumentswconnectives.html#exercises-3" class="internal"><span class="codenumber">1.4</span> <span class="title">Exercises</span></a></div></li></ul>
-</li>
-</ul>
-</li>
-<li>
-<div class="toc-item"><a href="chapter2.html" class="internal"><span class="codenumber">2</span> <span class="title">Mathematical Statements</span></a></div>
-<ul class="structural">
-<li>
-<div class="toc-item"><a href="setnotation.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Introduction to Sets</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="setnotation.html#exercises-4" class="internal"><span class="codenumber">2.1</span> <span class="title">Exercises</span></a></div></li></ul>
-</li>
-<li>
-<div class="toc-item"><a href="quantifiers.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Quantifiers</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="quantifiers.html#SS_quantifiers" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Quantified Statements</span></a></div></li>
-<li><div class="toc-item"><a href="quantifiers.html#SS_negquant" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Negating Quantified Statements</span></a></div></li>
-<li>
-<div class="toc-item"><a href="quantifiers.html#subsection-3" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Multiple Quantifiers</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="quantifiers.html#exercises-5" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Exercises</span></a></div></li></ul>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="argumentswconnectives.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Logical Arguments with Connectives</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="argumentswconnectives.html#argumentswconnectives-20" class="internal"><span class="codenumber">1.4</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="conditionals.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Conditional Statements</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="conditionals.html#exercises-6" class="internal"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></div></li></ul>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter2.html" class="internal"><span class="codenumber">2</span> <span class="title">Mathematical Statements</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="setnotation.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Introduction to Sets</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="setnotation.html#setnotation-22" class="internal"><span class="codenumber">2.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="quantifiers.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Quantifiers</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="quantifiers.html#SS_quantifiers" class="internal"><span class="codenumber">2.2.1</span> <span class="title">Quantified Statements</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="quantifiers.html#SS_negquant" class="internal"><span class="codenumber">2.2.2</span> <span class="title">Negating Quantified Statements</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="quantifiers.html#quantifiers-6" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Multiple Quantifiers</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="quantifiers.html#quantifiers-6-14" class="internal"><span class="codenumber">2.2.3</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="chapter3.html" class="internal"><span class="codenumber">3</span> <span class="title">Basic Proof Techniques</span></a></div>
-<ul class="structural">
-<li>
-<div class="toc-item"><a href="directproof.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Direct Proof and Counterexample</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="directproof.html#exercises-7" class="internal"><span class="codenumber">3.1</span> <span class="title">Exercises</span></a></div></li></ul>
-</li>
-<li>
-<div class="toc-item"><a href="moredirect.html" class="internal"><span class="codenumber">3.2</span> <span class="title">More Direct Proof: Rational Numbers and Divisibility</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="moredirect.html#SS_rational" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Rational Numbers</span></a></div></li>
-<li><div class="toc-item"><a href="moredirect.html#SS_divisibility" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Divisibility</span></a></div></li>
-<li><div class="toc-item"><a href="moredirect.html#exercises-8" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Exercises</span></a></div></li>
-</ul>
-</li>
-<li>
-<div class="toc-item"><a href="cases.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Proof by Cases</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="cases.html#exercises-9" class="internal"><span class="codenumber">3.3</span> <span class="title">Exercises</span></a></div></li></ul>
-</li>
-<li>
-<div class="toc-item"><a href="contradiction.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Proof by Contradiction and Contrapositive</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="contradiction.html#SS_contradiction" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Proof by Contradiction</span></a></div></li>
-<li><div class="toc-item"><a href="contradiction.html#SS_contrapositive" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Proof by Contrapositive</span></a></div></li>
-<li>
-<div class="toc-item"><a href="contradiction.html#SS_twoproofs" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Two Classical Proofs</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="contradiction.html#exercises-10" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Exercises</span></a></div></li></ul>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="conditionals.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Conditional Statements</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="conditionals.html#conditionals-33" class="internal"><span class="codenumber">2.3</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter3.html" class="internal"><span class="codenumber">3</span> <span class="title">Basic Proof Techniques</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="directproof.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Direct Proof and Counterexample</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="directproof.html#directproof-29" class="internal"><span class="codenumber">3.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="moredirect.html" class="internal"><span class="codenumber">3.2</span> <span class="title">More Direct Proof: Rational Numbers and Divisibility</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="moredirect.html#SS_rational" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Rational Numbers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="moredirect.html#SS_divisibility" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Divisibility</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="moredirect.html#moredirect-7" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Exercises</span></a></div></li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="chapter4.html" class="internal"><span class="codenumber">4</span> <span class="title">Proof by Induction</span></a></div>
-<ul class="structural">
-<li class="active">
-<div class="toc-item"><a href="summation.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Summation Notation</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="summation.html#exercises-11" class="internal"><span class="codenumber">4.1</span> <span class="title">Exercises</span></a></div></li></ul>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="cases.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Proof by Cases</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="cases.html#cases-31" class="internal"><span class="codenumber">3.3</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
-<li>
-<div class="toc-item"><a href="induction.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Mathematical Induction</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="induction.html#exercises-12" class="internal"><span class="codenumber">4.2</span> <span class="title">Exercises</span></a></div></li></ul>
-</li>
-<li>
-<div class="toc-item"><a href="moreinduction.html" class="internal"><span class="codenumber">4.3</span> <span class="title">More Mathematical Induction</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="moreinduction.html#exercises-13" class="internal"><span class="codenumber">4.3</span> <span class="title">Exercises</span></a></div></li></ul>
-</li>
-<li>
-<div class="toc-item"><a href="stronginduction.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Strong Induction</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="stronginduction.html#exercises-14" class="internal"><span class="codenumber">4.4</span> <span class="title">Exercises</span></a></div></li></ul>
-</li>
-</ul>
-</li>
-<li>
-<div class="toc-item"><a href="chapter5.html" class="internal"><span class="codenumber">5</span> <span class="title">Proofs in Specific Contexts</span></a></div>
-<ul class="structural">
-<li>
-<div class="toc-item"><a href="existunique.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Existence and Uniqueness Proofs</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="existunique.html#exercises-15" class="internal"><span class="codenumber">5.1</span> <span class="title">Exercises</span></a></div></li></ul>
-</li>
-<li>
-<div class="toc-item"><a href="settheory.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Set Theory</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="settheory.html#SS_STnotation" class="internal"><span class="codenumber">5.2.1</span> <span class="title">Set Notation</span></a></div></li>
-<li><div class="toc-item"><a href="settheory.html#SS_setoperations" class="internal"><span class="codenumber">5.2.2</span> <span class="title">Operations on Sets</span></a></div></li>
-<li>
-<div class="toc-item"><a href="settheory.html#SS_setproofs" class="internal"><span class="codenumber">5.2.3</span> <span class="title">Proofs of Set Properties</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="settheory.html#exercises-16" class="internal"><span class="codenumber">5.2.3</span> <span class="title">Exercises</span></a></div></li></ul>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="contradiction.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Proof by Contradiction and Contrapositive</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="contradiction.html#SS_contradiction" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Proof by Contradiction</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="contradiction.html#SS_contrapositive" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Proof by Contrapositive</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="contradiction.html#SS_twoproofs" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Two Classical Proofs</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="contradiction.html#SS_twoproofs-18" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="functions.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Functions</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="functions.html#exercises-17" class="internal"><span class="codenumber">5.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</ul>
 </li>
-<li>
-<div class="toc-item"><a href="relations.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Equivalence Relations</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="relations.html#SS_introrelation" class="internal"><span class="codenumber">5.4.1</span> <span class="title">Introduction to Relations</span></a></div></li>
-<li>
-<div class="toc-item"><a href="relations.html#SS_equivrelations" class="internal"><span class="codenumber">5.4.2</span> <span class="title">Equivalence Relations</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="relations.html#exercises-18" class="internal"><span class="codenumber">5.4.2</span> <span class="title">Exercises</span></a></div></li></ul>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="chapter4.html" class="internal"><span class="codenumber">4</span> <span class="title">Proof by Induction</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="summation.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Summation Notation</span></a></div>
+<ul class="structural toc-item-list active"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="summation.html#summation-27" class="internal"><span class="codenumber">4.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="induction.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Mathematical Induction</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="induction.html#induction-22" class="internal"><span class="codenumber">4.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="moreinduction.html" class="internal"><span class="codenumber">4.3</span> <span class="title">More Mathematical Induction</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="moreinduction.html#moreinduction-13" class="internal"><span class="codenumber">4.3</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="stronginduction.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Strong Induction</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="stronginduction.html#stronginduction-21" class="internal"><span class="codenumber">4.4</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="orders.html" class="internal"><span class="codenumber">5.5</span> <span class="title">Ordered Sets</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="orders.html#exercises-19" class="internal"><span class="codenumber">5.5</span> <span class="title">Exercises</span></a></div></li></ul>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter5.html" class="internal"><span class="codenumber">5</span> <span class="title">Proofs in Specific Contexts</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="existunique.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Existence and Uniqueness Proofs</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="existunique.html#existunique-29" class="internal"><span class="codenumber">5.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="settheory.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Set Theory</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="settheory.html#SS_STnotation" class="internal"><span class="codenumber">5.2.1</span> <span class="title">Set Notation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="settheory.html#SS_setoperations" class="internal"><span class="codenumber">5.2.2</span> <span class="title">Operations on Sets</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="settheory.html#SS_setproofs" class="internal"><span class="codenumber">5.2.3</span> <span class="title">Proofs of Set Properties</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="settheory.html#SS_setproofs-25" class="internal"><span class="codenumber">5.2.3</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="chapter6.html" class="internal"><span class="codenumber">6</span> <span class="title">Additional Topics</span></a></div>
-<ul class="structural">
-<li>
-<div class="toc-item"><a href="binomial9.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Binomial Theorem</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="binomial9.html#exercises-20" class="internal"><span class="codenumber">6.1</span> <span class="title">Exercises</span></a></div></li></ul>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="functions.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Functions</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="functions.html#functions-45" class="internal"><span class="codenumber">5.3</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
-<li>
-<div class="toc-item"><a href="cardinality.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Cardinality</span></a></div>
-<ul class="structural"><li><div class="toc-item"><a href="cardinality.html#exercises-21" class="internal"><span class="codenumber">6.2</span> <span class="title">Exercises</span></a></div></li></ul>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="relations.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Equivalence Relations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="relations.html#SS_introrelation" class="internal"><span class="codenumber">5.4.1</span> <span class="title">Introduction to Relations</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="relations.html#SS_equivrelations" class="internal"><span class="codenumber">5.4.2</span> <span class="title">Equivalence Relations</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="relations.html#SS_equivrelations-47" class="internal"><span class="codenumber">5.4.2</span> <span class="title">Exercises</span></a></div></li></ul>
 </li>
 </ul>
 </li>
-<li>
-<div class="toc-item"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
-<ul class="structural">
-<li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Index</span></a></div></li>
-<li><div class="toc-item"><a href="appendix-1.html" class="internal"><span class="codenumber">A</span> <span class="title">Notation</span></a></div></li>
-<li><div class="toc-item"><a href="colophon-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="orders.html" class="internal"><span class="codenumber">5.5</span> <span class="title">Ordered Sets</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="orders.html#orders-33" class="internal"><span class="codenumber">5.5</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="chapter6.html" class="internal"><span class="codenumber">6</span> <span class="title">Additional Topics</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="binomial9.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Binomial Theorem</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="binomial9.html#binomial9-30" class="internal"><span class="codenumber">6.1</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="cardinality.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Cardinality</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="cardinality.html#cardinality-31" class="internal"><span class="codenumber">6.2</span> <span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-2.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="backmatter-3.html" class="internal"><span class="codenumber">A</span> <span class="title">Notation</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="backmatter-4.html" class="internal"><span class="title">Colophon</span></a></div></li>
 </ul>
 </li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="summation"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">4.1</span> <span class="title">Summation Notation</span>
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">4.1</span><span class="space"> </span><span class="title">Summation Notation</span>
 </h2>
-<div class="para" id="p-843">In this section we look at summation notation, which is used to represent general sums, even infinite sums. Before we add terms together, we need some notation for the terms themselves.</div>
-<div class="para" id="p-844">A <dfn class="terminology">sequence</dfn> is an ordered list, <span class="process-math">\(a_1, a_2, a_3, \ldots, a_k, \ldots\text{.}\)</span>
+<div class="para" id="summation-3">In this section we look at summation notation, which is used to represent general sums, even infinite sums. Before we add terms together, we need some notation for the terms themselves.</div>
+<div class="para" id="summation-4">A <dfn class="terminology">sequence</dfn> is an ordered list, <span class="process-math">\(a_1, a_2, a_3, \ldots, a_k, \ldots\text{.}\)</span>
 </div>
-<div class="para" id="p-845">Each <span class="process-math">\(a_k\)</span> is called a <dfn class="terminology">term</dfn> in the sequence. The subscript <span class="process-math">\(k\)</span> is called the <dfn class="terminology">index</dfn>. The index will be an integer, and almost always a nonnegative integer. The first term <span class="process-math">\(a_1\)</span> (or sometimes <span class="process-math">\(a_0\)</span>) is called the <dfn class="terminology">initial term</dfn>. The term <span class="process-math">\(a_k\)</span> is called the <span class="process-math">\(k^{th}\)</span> term. It is also often called the <dfn class="terminology">general</dfn> term of the sequence.</div>
-<article class="example example-like" id="E_sequences"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_sequences"><h3 class="heading">
+<div class="para" id="summation-5">Each <span class="process-math">\(a_k\)</span> is called a <dfn class="terminology">term</dfn> in the sequence. The subscript <span class="process-math">\(k\)</span> is called the <dfn class="terminology">index</dfn>. The index will be an integer, and almost always a nonnegative integer. The first term <span class="process-math">\(a_1\)</span> (or sometimes <span class="process-math">\(a_0\)</span>) is called the <dfn class="terminology">initial term</dfn>. The term <span class="process-math">\(a_k\)</span> is called the <span class="process-math">\(k^{th}\)</span> term. It is also often called the <dfn class="terminology">general</dfn> term of the sequence.</div>
+<details id="E_sequences" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Sequences.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_sequences"><article class="example example-like"><div class="para" id="p-846">Consider the sequence <span class="process-math">\(2, 4, 6, 8, 10, \ldots\text{.}\)</span> The initial term is <span class="process-math">\(a_1=2\text{.}\)</span> The <span class="process-math">\(k^{th}\)</span> term is <span class="process-math">\(a_k=2k\text{.}\)</span>
-</div> <div class="para" id="p-847">We need to be careful with subscripts. For example, <span class="process-math">\(a_{4+1}=a_{5}=10\text{,}\)</span> but <span class="process-math">\(a_{4}+1=8+1=9\text{.}\)</span> If we add 1 to the index, we get the next term, which is not the same as adding 1 to the term.</div></article></div>
-<article class="example example-like" id="E_generalsequences"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_generalsequences"><h3 class="heading">
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_sequences-2">Consider the sequence <span class="process-math">\(2, 4, 6, 8, 10, \ldots\text{.}\)</span> The initial term is <span class="process-math">\(a_1=2\text{.}\)</span> The <span class="process-math">\(k^{th}\)</span> term is <span class="process-math">\(a_k=2k\text{.}\)</span>
+</div>
+<div class="para" id="E_sequences-3">We need to be careful with subscripts. For example, <span class="process-math">\(a_{4+1}=a_{5}=10\text{,}\)</span> but <span class="process-math">\(a_{4}+1=8+1=9\text{.}\)</span> If we add 1 to the index, we get the next term, which is not the same as adding 1 to the term.</div></article></details><details id="E_generalsequences" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Explicitly Defined Sequences.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_generalsequences"><article class="example example-like"><div class="para" id="p-848">We can define a sequence by giving the general term.</div> <div class="para" id="p-849">Let <span class="process-math">\(a_k=2^k, k\geq 0\text{.}\)</span> Give the first five terms of the sequence.</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-48" id="answer-48"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-48"><div class="answer solution-like">1, 2, 4, 8, 16</div></div> <div class="para" id="p-850">Let <span class="process-math">\(a_k=2^k, k\geq 0\text{.}\)</span> Give the <span class="process-math">\(k+1\)</span> term of the sequence.</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-49" id="answer-49"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-49"><div class="answer solution-like"><div class="para" id="p-851"><span class="process-math">\(a_{k+1}=2^{k+1}\)</span></div></div></div> <div class="para" id="p-852">Let <span class="process-math">\(a_k=\frac{1}{k+1}, k\geq 1\text{.}\)</span> Give the first five terms of the sequence.</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-50" id="answer-50"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-50"><div class="answer solution-like"><div class="para" id="p-853">1/2, 1/3, 1/4, 1/5, 1/6</div></div></div> <div class="para" id="p-854">Let <span class="process-math">\(a_k=\frac{1}{k+1}, k\geq 1\text{.}\)</span> Give the <span class="process-math">\(k+1\)</span> term of the sequence.</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-51" id="answer-51"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-51"><div class="answer solution-like"><span class="process-math">\(a_{k+1}=\frac{1}{k+2}\)</span></div></div></article></div>
-<article class="activity project-like" id="A_sequence1"><h3 class="heading">
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_generalsequences-2">We can define a sequence by giving the general term.</div>
+<div class="para" id="E_generalsequences-3">Let <span class="process-math">\(a_k=2^k, k\geq 0\text{.}\)</span> Give the first five terms of the sequence.</div>
+<details id="E_generalsequences-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"></div></details><div class="para" id="E_generalsequences-5">Let <span class="process-math">\(a_k=2^k, k\geq 0\text{.}\)</span> Give the <span class="process-math">\(k+1\)</span> term of the sequence.</div>
+<details id="E_generalsequences-6" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="E_generalsequences-6-1"><span class="process-math">\(a_{k+1}=2^{k+1}\)</span></div></div></details><div class="para" id="E_generalsequences-7">Let <span class="process-math">\(a_k=\frac{1}{k+1}, k\geq 1\text{.}\)</span> Give the first five terms of the sequence.</div>
+<details id="E_generalsequences-8" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="E_generalsequences-8-1">1/2, 1/3, 1/4, 1/5, 1/6</div></div></details><div class="para" id="E_generalsequences-9">Let <span class="process-math">\(a_k=\frac{1}{k+1}, k\geq 1\text{.}\)</span> Give the <span class="process-math">\(k+1\)</span> term of the sequence.</div>
+<details id="E_generalsequences-10" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><span class="process-math">\(a_{k+1}=\frac{1}{k+2}\)</span></div></details></article></details><article class="activity project-like" id="A_sequence1"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.1.1</span><span class="period">.</span><span class="space"> </span><span class="title">An Alternating Sequence.</span>
 </h3>
-<div class="introduction" id="introduction-42"><div class="para" id="p-855">Consider the sequence <span class="process-math">\(a_k=(-1)^k\)</span> for <span class="process-math">\(k\geq 0\text{.}\)</span>
+<div class="introduction" id="A_sequence1-2"><div class="para" id="A_sequence1-2-1">Consider the sequence <span class="process-math">\(a_k=(-1)^k\)</span> for <span class="process-math">\(k\geq 0\text{.}\)</span>
 </div></div>
-<article class="task exercise-like" id="task-120"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="p-856">Write the first 5 terms of the sequence.</div></article><article class="task exercise-like" id="task-121"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-857">What is the initial term?</div></article></article><article class="activity project-like" id="A_sequence2"><h3 class="heading">
+<article class="task exercise-like" id="A_sequence1-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="A_sequence1-3-1">Write the first 5 terms of the sequence.</div></article><article class="task exercise-like" id="A_sequence1-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="A_sequence1-4-1">What is the initial term?</div></article></article><article class="activity project-like" id="A_sequence2"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">A Fractional Sequence.</span>
 </h3>
-<div class="introduction" id="introduction-43"><div class="para" id="p-858">Consider the sequence <span class="process-math">\(a_k=\frac{1}{k-1}\)</span> for <span class="process-math">\(k\geq 3\text{.}\)</span>
+<div class="introduction" id="A_sequence2-2"><div class="para" id="A_sequence2-2-1">Consider the sequence <span class="process-math">\(a_k=\frac{1}{k-1}\)</span> for <span class="process-math">\(k\geq 3\text{.}\)</span>
 </div></div>
-<article class="task exercise-like" id="task-122"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="p-859">Write the first 5 terms of the sequence.</div></article><article class="task exercise-like" id="task-123"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-860">What is the initial term?</div></article></article><article class="activity project-like" id="A_sequence3"><h3 class="heading">
+<article class="task exercise-like" id="A_sequence2-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="A_sequence2-3-1">Write the first 5 terms of the sequence.</div></article><article class="task exercise-like" id="A_sequence2-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="A_sequence2-4-1">What is the initial term?</div></article></article><article class="activity project-like" id="A_sequence3"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.1.3</span><span class="period">.</span><span class="space"> </span><span class="title">Another Alternating Sequence.</span>
 </h3>
-<div class="para" id="p-861">Consider the sequence <span class="process-math">\(0, 1, -2, 3, -4, 5,  \ldots\text{.}\)</span> Find a general formula for the <span class="process-math">\(k\)</span>th term, <span class="process-math">\(a_k\text{.}\)</span>
-</div></article><div class="para" id="p-862">Now that we have general forms for sequences, we look at many examples where we add terms in a sequence.</div>
+<div class="para" id="A_sequence3-2-1">Consider the sequence <span class="process-math">\(0, 1, -2, 3, -4, 5,  \ldots\text{.}\)</span> Find a general formula for the <span class="process-math">\(k\)</span>th term, <span class="process-math">\(a_k\text{.}\)</span>
+</div></article><div class="para" id="summation-11">Now that we have general forms for sequences, we look at many examples where we add terms in a sequence.</div>
 <article class="assemblage assemblage-like" id="B_sumnotation"><h3 class="heading"><span class="title">Summation Notation.</span></h3>
-<div class="para logical" id="p-863">
+<div class="para logical" id="B_sumnotation-4">
 <div class="displaymath process-math">
 \begin{equation*}
 a_1+a_2+\cdots +a_n=\sum_{k=1}^{n}a_k
 \end{equation*}
 </div>
 <div class="para">We read <span class="process-math">\(\sum_{k=1}^{n}a_k\)</span> as “the sum of <span class="process-math">\(a_k\)</span> from <span class="process-math">\(k=1\)</span> to <span class="process-math">\(n\text{.}\)</span>”</div>
-</div></article><article class="example example-like" id="E_sumnotation"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_sumnotation"><h3 class="heading">
+</div></article><details id="E_sumnotation" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.1.3</span><span class="period">.</span><span class="space"> </span><span class="title">Summation Notation.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_sumnotation"><article class="example example-like"> <div class="para" id="p-864">Find <span class="process-math">\(\sum_{k=1}^4 k\text{.}\)</span>
-</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-52" id="answer-52"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-52"><div class="answer solution-like"><div class="para" id="p-865"><span class="process-math">\(1+2+3+4=10\)</span></div></div></div> <div class="para" id="p-866">Find <span class="process-math">\(\sum_{k=1}^5 k^2\text{.}\)</span>
-</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-53" id="answer-53"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-53"><div class="answer solution-like"><div class="para" id="p-867"><span class="process-math">\(1^2+2^2+3^2+4^2+5^2=55\)</span></div></div></div> <div class="para" id="p-868">Find <span class="process-math">\(\sum_{k=1}^n k^2\text{.}\)</span>
-</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-54" id="answer-54"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-54"><div class="answer solution-like"><div class="para" id="p-869"><span class="process-math">\(1^2+2^2+3^2+\cdots+n^2\)</span></div></div></div> <div class="para" id="p-870">Find <span class="process-math">\(\sum_{k=2}^2 k^2\text{.}\)</span>
-</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-55" id="answer-55"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-55"><div class="answer solution-like"><div class="para" id="p-871"><span class="process-math">\(2^2=4\)</span></div></div></div></article></div>
-<div class="para" id="p-872">Note, as we can see in <a href="" class="xref" data-knowl="./knowl/E_sumnotation.html" title="Example 4.1.3: Summation Notation">Example 4.1.3</a>, <span class="process-math">\(\sum_{k=m}^{m}a_k=a_m\text{.}\)</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_sumnotation-2">Find <span class="process-math">\(\sum_{k=1}^4 k\text{.}\)</span>
+</div>
+<details id="E_sumnotation-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="E_sumnotation-3-1"><span class="process-math">\(1+2+3+4=10\)</span></div></div></details><div class="para" id="E_sumnotation-4">Find <span class="process-math">\(\sum_{k=1}^5 k^2\text{.}\)</span>
+</div>
+<details id="E_sumnotation-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="E_sumnotation-5-1"><span class="process-math">\(1^2+2^2+3^2+4^2+5^2=55\)</span></div></div></details><div class="para" id="E_sumnotation-6">Find <span class="process-math">\(\sum_{k=1}^n k^2\text{.}\)</span>
+</div>
+<details id="E_sumnotation-7" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="E_sumnotation-7-1"><span class="process-math">\(1^2+2^2+3^2+\cdots+n^2\)</span></div></div></details><div class="para" id="E_sumnotation-8">Find <span class="process-math">\(\sum_{k=2}^2 k^2\text{.}\)</span>
+</div>
+<details id="E_sumnotation-9" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="E_sumnotation-9-1"><span class="process-math">\(2^2=4\)</span></div></div></details></article></details><div class="para" id="summation-14">Note, as we can see in <a href="summation.html#E_sumnotation" class="xref" data-knowl="./knowl/xref/E_sumnotation.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 4.1.3: Summation Notation">Example 4.1.3</a>, <span class="process-math">\(\sum_{k=m}^{m}a_k=a_m\text{.}\)</span>
 </div>
 <article class="activity project-like" id="A_summation"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.1.4</span><span class="period">.</span><span class="space"> </span><span class="title">Using Summation Notation.</span>
 </h3>Consider the sum <span class="process-math">\(\sum_{k=1}^{5}(2k-1)\text{.}\)</span> Write out the summation and find the sum.</article><article class="activity project-like" id="A_shiftedsum"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.1.5</span><span class="period">.</span><span class="space"> </span><span class="title">A Shifted Sum.</span>
 </h3>
-<div class="introduction" id="introduction-44"><div class="para" id="p-873">Consider the sum <span class="process-math">\(\sum_{k=1}^{n}\frac{1}{k}\text{.}\)</span>
+<div class="introduction" id="A_shiftedsum-2"><div class="para" id="A_shiftedsum-2-1">Consider the sum <span class="process-math">\(\sum_{k=1}^{n}\frac{1}{k}\text{.}\)</span>
 </div></div>
-<article class="task exercise-like" id="task-124"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="p-874">Write out the summation.</div></article><article class="task exercise-like" id="task-125"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-875">Now write out the summation for <span class="process-math">\(\sum_{k=1}^{n+1}\frac{1}{k}\text{.}\)</span> How do (a) and (b) differ?</div></article><article class="task exercise-like" id="task-126"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="p-876">Now write out the summation for <span class="process-math">\(\sum_{k=0}^{n}\frac{1}{k+1}\text{.}\)</span> Is this the same as either of the previous sums?</div></article></article><article class="activity project-like" id="A_nplus1sum"><h3 class="heading">
+<article class="task exercise-like" id="A_shiftedsum-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="A_shiftedsum-3-1">Write out the summation.</div></article><article class="task exercise-like" id="A_shiftedsum-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="A_shiftedsum-4-1">Now write out the summation for <span class="process-math">\(\sum_{k=1}^{n+1}\frac{1}{k}\text{.}\)</span> How do (a) and (b) differ?</div></article><article class="task exercise-like" id="A_shiftedsum-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="A_shiftedsum-5-1">Now write out the summation for <span class="process-math">\(\sum_{k=0}^{n}\frac{1}{k+1}\text{.}\)</span> Is this the same as either of the previous sums?</div></article></article><article class="activity project-like" id="A_nplus1sum"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.1.6</span><span class="period">.</span><span class="space"> </span><span class="title">Adding Another Term.</span>
 </h3>
-<div class="introduction" id="introduction-45"><div class="para" id="p-877">Consider the sum <span class="process-math">\(\sum_{k=1}^{n}\frac{1}{k(k+1)}\text{.}\)</span>
+<div class="introduction" id="A_nplus1sum-2"><div class="para" id="A_nplus1sum-2-1">Consider the sum <span class="process-math">\(\sum_{k=1}^{n}\frac{1}{k(k+1)}\text{.}\)</span>
 </div></div>
-<article class="task exercise-like" id="task-127"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="p-878">Write out the summation.</div></article><article class="task exercise-like" id="task-128"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-879">Now write out the summation for <span class="process-math">\(\sum_{k=1}^{n+1}\frac{1}{k(k+1)}\text{.}\)</span> How do (a) and (b) differ?</div></article></article><div class="para logical" id="p-880">
+<article class="task exercise-like" id="A_nplus1sum-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="A_nplus1sum-3-1">Write out the summation.</div></article><article class="task exercise-like" id="A_nplus1sum-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="A_nplus1sum-4-1">Now write out the summation for <span class="process-math">\(\sum_{k=1}^{n+1}\frac{1}{k(k+1)}\text{.}\)</span> How do (a) and (b) differ?</div></article></article><div class="para logical" id="summation-18">
 <div class="para">Just as we can add several terms of a sequence, <dfn class="terminology">product notation</dfn> allows us to multiply several terms of a sequence.</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -436,18 +674,19 @@ a_1\cdot a_2\cdot a_3\cdots a_n=\prod_{k=1}^{n}a_k\text{.}
 \end{equation*}
 </div>
 </div>
-<article class="example example-like" id="E_prodnotation"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_prodnotation"><h3 class="heading">
+<details id="E_prodnotation" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.1.4</span><span class="period">.</span><span class="space"> </span><span class="title">Product Notation.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_prodnotation"><article class="example example-like"> <div class="para" id="p-881">Find <span class="process-math">\(\prod_{k=1}^4 k\text{.}\)</span>
-</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-56" id="answer-56"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-56"><div class="answer solution-like"><div class="para" id="p-882"><span class="process-math">\(1\cdot2\cdot3\cdot 4=24\)</span></div></div></div> <div class="para" id="p-883">Find <span class="process-math">\(\prod_{k=1}^3 k^2\text{.}\)</span>
-</div> <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-57" id="answer-57"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-57"><div class="answer solution-like"><div class="para" id="p-884"><span class="process-math">\(1^2\cdot2^2\cdot3^2=36\)</span></div></div></div></article></div>
-<article class="activity project-like" id="A_products"><h3 class="heading">
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_prodnotation-2">Find <span class="process-math">\(\prod_{k=1}^4 k\text{.}\)</span>
+</div>
+<details id="E_prodnotation-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="E_prodnotation-3-1"><span class="process-math">\(1\cdot2\cdot3\cdot 4=24\)</span></div></div></details><div class="para" id="E_prodnotation-4">Find <span class="process-math">\(\prod_{k=1}^3 k^2\text{.}\)</span>
+</div>
+<details id="E_prodnotation-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="E_prodnotation-5-1"><span class="process-math">\(1^2\cdot2^2\cdot3^2=36\)</span></div></div></details></article></details><article class="activity project-like" id="A_products"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.1.7</span><span class="period">.</span><span class="space"> </span><span class="title">Products.</span>
 </h3>
-<div class="introduction" id="introduction-46"><div class="para" id="p-885">Write out the following products.</div></div>
-<article class="task exercise-like" id="task-129"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="p-886"><span class="process-math">\(\prod_{k=1}^{5}(2k-1)\)</span></div></article><article class="task exercise-like" id="task-130"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-887"><span class="process-math">\(\prod_{k=1}^{n+1}(2k)\)</span></div></article></article><div class="para logical" id="p-888">
+<div class="introduction" id="A_products-2"><div class="para" id="A_products-2-1">Write out the following products.</div></div>
+<article class="task exercise-like" id="A_products-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="A_products-3-1"><span class="process-math">\(\prod_{k=1}^{5}(2k-1)\)</span></div></article><article class="task exercise-like" id="A_products-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="A_products-4-1"><span class="process-math">\(\prod_{k=1}^{n+1}(2k)\)</span></div></article></article><div class="para logical" id="summation-21">
 <div class="para">A particularly useful product is <span class="process-math">\(n\)</span> <dfn class="terminology">factorial</dfn>,</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -458,70 +697,69 @@ n!=(n)(n-1)\cdots(2)(1).
 </div>
 </div>
 <article class="assemblage assemblage-like" id="B_propsums"><h3 class="heading"><span class="title">Properties of Sums and Products.</span></h3>
-<div class="para logical" id="p-889">
+<div class="para logical" id="B_propsums-2">
 <div class="para">The following are useful properties when working with summation and product notation.</div>
-<ol class="decimal">
-<li id="li-254"><div class="para" id="p-derived-li-254"><span class="process-math">\(\displaystyle \sum_{k=m}^{n}a_k+\sum_{k=m}^{n}b_k=\sum_{k=m}^{n}(a_k+b_k)\)</span></div></li>
-<li id="li-255"><div class="para" id="p-derived-li-255"><span class="process-math">\(\displaystyle c\sum_{k=m}^{n}a_k=\sum_{k=m}^{n}(ca_k)\)</span></div></li>
-<li id="li-256"><div class="para" id="p-derived-li-256"><span class="process-math">\(\displaystyle \biggl(\prod_{k=m}^{n}a_k\biggr)\biggl(\prod_{k=m}^{n}b_k\biggr)=\prod_{k=m}^{n}(a_k\cdot b_k)\)</span></div></li>
+<ol class="decimal" id="B_propsums-2-1">
+<li id="B_propsums-2-1-1"><div class="para" id="p-derived-B_propsums-2-1-1"><span class="process-math">\(\displaystyle \sum_{k=m}^{n}a_k+\sum_{k=m}^{n}b_k=\sum_{k=m}^{n}(a_k+b_k)\)</span></div></li>
+<li id="B_propsums-2-1-2"><div class="para" id="p-derived-B_propsums-2-1-2"><span class="process-math">\(\displaystyle c\sum_{k=m}^{n}a_k=\sum_{k=m}^{n}(ca_k)\)</span></div></li>
+<li id="B_propsums-2-1-3"><div class="para" id="p-derived-B_propsums-2-1-3"><span class="process-math">\(\displaystyle \biggl(\prod_{k=m}^{n}a_k\biggr)\biggl(\prod_{k=m}^{n}b_k\biggr)=\prod_{k=m}^{n}(a_k\cdot b_k)\)</span></div></li>
 </ol>
 </div></article><article class="activity project-like" id="A_sumofsums"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.1.8</span><span class="period">.</span><span class="space"> </span><span class="title">Summing Two Sums.</span>
 </h3>
-<div class="para" id="p-890">Prove <span class="process-math">\(\sum_{k=1}^{n}a_k + \sum_{k=1}^{n}b_k=\sum_{1}^{n}(a_k+b_k)\text{.}\)</span>
+<div class="para" id="A_sumofsums-2-1">Prove <span class="process-math">\(\sum_{k=1}^{n}a_k + \sum_{k=1}^{n}b_k=\sum_{1}^{n}(a_k+b_k)\text{.}\)</span>
 </div>
-<div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-7" id="hint-7"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-7"><div class="hint solution-like"><div class="para" id="p-891">Try writing out the sum rather than using summation notation.</div></div></div>
-</div></article><div class="para logical" id="p-892">
+<div class="solutions"><details id="A_sumofsums-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="A_sumofsums-3-1">Try writing out the sum rather than using summation notation.</div></div></details></div></article><div class="para logical" id="summation-24">
 <div class="para">When we get to mathematical induction in <a href="induction.html" class="internal" title="Section 4.2: Mathematical Induction">Section 4.2</a>, it will be important that we can work with summations where we want to add “the <span class="process-math">\(n+1\)</span> term” to a summation. In particular, the following observation is useful:</div>
-<div class="displaymath process-math" data-contains-math-knowls="./knowl/induction.html">
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/induction.html">
 \begin{equation*}
 \biggl(\sum_{k=1}^{n}a_{k}\biggr)+a_{n+1}=\sum_{k=1}^{n+1}a_k.
 \end{equation*}
 </div>
 </div>
-<div class="para" id="p-893">We should also note that there are often multiple ways to write the same sum.</div>
-<article class="example example-like" id="E_changevariables"><a href="" data-knowl="" class="id-ref example-knowl original" data-refid="hk-E_changevariables"><h3 class="heading">
+<div class="para" id="summation-25">We should also note that there are often multiple ways to write the same sum.</div>
+<details id="E_changevariables" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.1.5</span><span class="period">.</span><span class="space"> </span><span class="title">Writing a Sum in Two Different Ways.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-E_changevariables"><article class="example example-like"> <div class="para" id="p-894">Consider the sum <span class="process-math">\(1^2+2^2+3^2\text{.}\)</span> Depending on how we index the sum, we can write it in different ways.</div> <div class="para" id="p-895">If we index from <span class="process-math">\(k=1\)</span> to 3, we have <span class="process-math">\(\sum_{k=1}^3k^2=1^2+2^2+3^2\text{.}\)</span>
-</div> <div class="para" id="p-896">If we index from <span class="process-math">\(k=2\)</span> to 4, we have <span class="process-math">\(\sum_{k=2}^4(k-1)^2=1^2+2^2+3^2\text{.}\)</span>
-</div></article></div>
-<section class="exercises" id="exercises-11"><h3 class="heading hide-type">
-<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_changevariables-2">Consider the sum <span class="process-math">\(1^2+2^2+3^2\text{.}\)</span> Depending on how we index the sum, we can write it in different ways.</div>
+<div class="para" id="E_changevariables-3">If we index from <span class="process-math">\(k=1\)</span> to 3, we have <span class="process-math">\(\sum_{k=1}^3k^2=1^2+2^2+3^2\text{.}\)</span>
+</div>
+<div class="para" id="E_changevariables-4">If we index from <span class="process-math">\(k=2\)</span> to 4, we have <span class="process-math">\(\sum_{k=2}^4(k-1)^2=1^2+2^2+3^2\text{.}\)</span>
+</div></article></details><section class="exercises" id="summation-27"><h3 class="heading hide-type">
+<span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Exercises</span>
 </h3>
-<article class="exercise exercise-like" id="exercise-70"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="p-897">Find an explicit formula for the following sequences with the given initial terms.</div> <ol class="lower-alpha">
-<li id="li-257"><div class="para" id="p-898"><span class="process-math">\(\displaystyle \frac{1}{3}, \frac{4}{9},\frac{9}{27}, \frac{16}{81},\frac{25}{243}, \frac{36}{729}\)</span></div></li>
-<li id="li-258"><div class="para" id="p-899"><span class="process-math">\(\displaystyle 3, 6, 12, 24, 48, 96\)</span></div></li>
-</ol></article><article class="exercise exercise-like" id="exercise-71"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para" id="p-900">Compute the given product or sum.</div> <ol class="lower-alpha">
-<li id="li-259"><div class="para" id="p-901"><span class="process-math">\(\displaystyle \prod_{k=2}^{4}{k^2}\)</span></div></li>
-<li id="li-260"><div class="para" id="p-902"><span class="process-math">\(\displaystyle \prod_{k=2}^{2}{\Bigl(1-\frac{1}{k}\Bigr)}\)</span></div></li>
-<li id="li-261"><div class="para" id="p-903"><span class="process-math">\(\displaystyle \sum_{k=-1}^{1}{(k^2+3)}\)</span></div></li>
-</ol></article><article class="exercise exercise-like" id="exercise-72"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="para" id="p-904">Write out the sum in expanded form.</div> <ol class="lower-alpha">
-<li id="li-262"><div class="para" id="p-905"><span class="process-math">\(\displaystyle \sum_{j=1}^{n}{j(j+1)}\)</span></div></li>
-<li id="li-263"><div class="para" id="p-906"><span class="process-math">\(\displaystyle \sum_{i=1}^{k+1}{i(i!)}\)</span></div></li>
-</ol></article><article class="exercise exercise-like" id="exercise-73"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para" id="p-907">Rewrite by separating off the final term: <span class="process-math">\(\sum_{i=1}^{k+1}{i(i!)}\)</span>
-</div></article><article class="exercise exercise-like" id="exercise-74"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<div class="para logical" id="p-908">
+<article class="exercise exercise-like" id="summation-27-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<div class="para" id="summation-27-1-1-1">Find an explicit formula for the following sequences with the given initial terms.</div> <ol class="lower-alpha" id="summation-27-1-1-2">
+<li id="summation-27-1-1-2-1"><div class="para" id="summation-27-1-1-2-1-1"><span class="process-math">\(\displaystyle \frac{1}{3}, \frac{4}{9},\frac{9}{27}, \frac{16}{81},\frac{25}{243}, \frac{36}{729}\)</span></div></li>
+<li id="summation-27-1-1-2-2"><div class="para" id="summation-27-1-1-2-2-1"><span class="process-math">\(\displaystyle 3, 6, 12, 24, 48, 96\)</span></div></li>
+</ol></article><article class="exercise exercise-like" id="summation-27-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="para" id="summation-27-2-1-1">Compute the given product or sum.</div> <ol class="lower-alpha" id="summation-27-2-1-2">
+<li id="summation-27-2-1-2-1"><div class="para" id="summation-27-2-1-2-1-1"><span class="process-math">\(\displaystyle \prod_{k=2}^{4}{k^2}\)</span></div></li>
+<li id="summation-27-2-1-2-2"><div class="para" id="summation-27-2-1-2-2-1"><span class="process-math">\(\displaystyle \prod_{k=2}^{2}{\Bigl(1-\frac{1}{k}\Bigr)}\)</span></div></li>
+<li id="summation-27-2-1-2-3"><div class="para" id="summation-27-2-1-2-3-1"><span class="process-math">\(\displaystyle \sum_{k=-1}^{1}{(k^2+3)}\)</span></div></li>
+</ol></article><article class="exercise exercise-like" id="summation-27-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="para" id="summation-27-3-1-1">Write out the sum in expanded form.</div> <ol class="lower-alpha" id="summation-27-3-1-2">
+<li id="summation-27-3-1-2-1"><div class="para" id="summation-27-3-1-2-1-1"><span class="process-math">\(\displaystyle \sum_{j=1}^{n}{j(j+1)}\)</span></div></li>
+<li id="summation-27-3-1-2-2"><div class="para" id="summation-27-3-1-2-2-1"><span class="process-math">\(\displaystyle \sum_{i=1}^{k+1}{i(i!)}\)</span></div></li>
+</ol></article><article class="exercise exercise-like" id="summation-27-4"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="para" id="summation-27-4-1-1">Rewrite by separating off the final term: <span class="process-math">\(\sum_{i=1}^{k+1}{i(i!)}\)</span>
+</div></article><article class="exercise exercise-like" id="summation-27-5"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="para logical" id="summation-27-5-1-1">
 <div class="para">Write using product notation:</div>
 <div class="displaymath process-math">
 \begin{equation*}
 (2^2-1)\cdot(3^2-1)\cdot(4^2-1).
 \end{equation*}
 </div>
-</div></article><article class="exercise exercise-like" id="exercise-75"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
-<div class="para logical" id="p-909">
+</div></article><article class="exercise exercise-like" id="summation-27-6"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="para logical" id="summation-27-6-1-1">
 <div class="para">Write using summation notation:</div>
 <div class="displaymath process-math">
 \begin{equation*}
 1^3+2^3+3^3+\cdots+n^3.
 \end{equation*}
 </div>
-</div></article><article class="exercise exercise-like" id="exercise-76"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
-<div class="para logical" id="p-910">
+</div></article><article class="exercise exercise-like" id="summation-27-7"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<div class="para logical" id="summation-27-7-1-1">
 <div class="para">Transform the sum by making the change of variable <span class="process-math">\(j=i-1\text{:}\)</span>
 </div>
 <div class="displaymath process-math">
@@ -529,14 +767,14 @@ n!=(n)(n-1)\cdots(2)(1).
 \sum_{i=1}^{n+1}\frac{(i-1)^2}{i\cdot n}.
 \end{equation*}
 </div>
-</div></article><article class="exercise exercise-like" id="exercise-77"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
-<div class="para" id="p-911">Simplify.</div> <ol class="lower-alpha">
-<li id="li-264"><div class="para" id="p-derived-li-264"><span class="process-math">\(\displaystyle \frac{((n+1)!)^2}{(n!)^2}\)</span></div></li>
-<li id="li-265"><div class="para" id="p-derived-li-265"><span class="process-math">\(\displaystyle \frac{n!}{(n-k+1)!}\)</span></div></li>
-</ol></article><article class="exercise exercise-like" id="exercise-78"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
-<div class="para logical" id="p-912">
+</div></article><article class="exercise exercise-like" id="summation-27-8"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<div class="para" id="summation-27-8-1-1">Simplify.</div> <ol class="lower-alpha" id="summation-27-8-1-2">
+<li id="summation-27-8-1-2-1"><div class="para" id="p-derived-summation-27-8-1-2-1"><span class="process-math">\(\displaystyle \frac{((n+1)!)^2}{(n!)^2}\)</span></div></li>
+<li id="summation-27-8-1-2-2"><div class="para" id="p-derived-summation-27-8-1-2-2"><span class="process-math">\(\displaystyle \frac{n!}{(n-k+1)!}\)</span></div></li>
+</ol></article><article class="exercise exercise-like" id="summation-27-9"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
+<div class="para logical" id="summation-27-9-1-1">
 <div class="para">Observe that</div>
-<div class="displaymath process-math" id="md-8">
+<div class="displaymath process-math" id="summation-27-9-1-1-1">
 \begin{align*}
 \frac{1}{1\cdot 3}\amp =\frac{1}{3}\\
 \frac{1}{1\cdot 3}+\frac{1}{3\cdot 5}\amp =\frac{2}{5}\\
@@ -544,16 +782,16 @@ n!=(n)(n-1)\cdots(2)(1).
 \frac{1}{1\cdot 3}+\frac{1}{3\cdot 5}+\frac{1}{5\cdot 7}+\frac{1}{7\cdot 9}\amp =\frac{4}{9}
 \end{align*}
 </div>
-</div> <div class="para" id="p-913">Find a general formula for <span class="process-math">\(\sum_{i=1}^{n}\frac{1}{(2i-1)(2i+1)}\text{.}\)</span>
-</div></article><article class="exercise exercise-like" id="exercise-79"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
-<div class="para" id="p-914">Evaluate the sum <span class="process-math">\(\sum_{i=1}^{n}\frac{i}{(i+1)!}\)</span> for all <span class="process-math">\(n=1, 2, 3, 4, 5\text{.}\)</span> Find a formula for the sum for a general <span class="process-math">\(n\text{.}\)</span>
+</div> <div class="para" id="summation-27-9-1-2">Find a general formula for <span class="process-math">\(\sum_{i=1}^{n}\frac{1}{(2i-1)(2i+1)}\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="summation-27-10"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
+<div class="para" id="summation-27-10-1-1">Evaluate the sum <span class="process-math">\(\sum_{i=1}^{n}\frac{i}{(i+1)!}\)</span> for all <span class="process-math">\(n=1, 2, 3, 4, 5\text{.}\)</span> Find a formula for the sum for a general <span class="process-math">\(n\text{.}\)</span>
 </div></article></section></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="chapter4.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="induction.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+<a class="previous-button button" href="chapter4.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="induction.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
-<div id="ptx-page-footer">
-<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
 </div>
 <!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
 var sc_project=12871717;

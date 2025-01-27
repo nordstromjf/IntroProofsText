@@ -311,23 +311,23 @@
       </p>
  </example>
 
- <activity xml:id="A_real5x"><title>Multiplication in the Reals</title><introduction>Define <m>f:\mathbb{R}\rightarrow\mathbb{R}</m> by <m>f(x)=5x</m>.</introduction>
+ <activity xml:id="A_real5x"><title>Multiplication in the Reals</title><introduction><p>Define <m>f:\mathbb{R}\rightarrow\mathbb{R}</m> by <m>f(x)=5x</m>.</p></introduction>
 <task><p>Prove or disprove <m>f</m> is one-to-one.</p></task>
 <task><p>Prove or disprove <m>f</m> is onto <m>\mathbb{R}</m>.</p></task></activity>
 
-<activity xml:id="A_int5n"><title>Multiplication in the Integers</title><introduction>Define <m>f:\mathbb{Z}\rightarrow\mathbb{Z}</m> by <m>f(n)=5n</m>.</introduction>
+<activity xml:id="A_int5n"><title>Multiplication in the Integers</title><introduction><p>Define <m>f:\mathbb{Z}\rightarrow\mathbb{Z}</m> by <m>f(n)=5n</m>.</p></introduction>
 <task><p>Prove or disprove <m>f</m> is one-to-one.</p></task>
 <task><p>Prove or disprove <m>f</m> is onto <m>\mathbb{Z}</m>.</p></task></activity>
 
-<activity xml:id="A_rmod3"><title>Remainders</title><introduction>Define <m>g:\mathbb{Z}\rightarrow\{0, 1, 2\}</m>  by <m>g(n)=r</m> where <m>r</m> is the remainder when <m>n</m> is divided by 3.</introduction>
+<activity xml:id="A_rmod3"><title>Remainders</title><introduction><p>Define <m>g:\mathbb{Z}\rightarrow\{0, 1, 2\}</m>  by <m>g(n)=r</m> where <m>r</m> is the remainder when <m>n</m> is divided by 3.</p></introduction>
 <task><p>Prove or disprove <m>g</m> is one-to-one.</p></task>
 <task><p>Prove or disprove <m>g</m> is onto <m>\{0, 1, 2\}</m>.</p></task></activity>
 
-<activity xml:id="A_aminusb"><title>Subtraction</title><introduction>Define <m>h:\mathbb{Z}\times\mathbb{Z}\rightarrow\mathbb{Z}</m> by <m>h(a, b)=a-b</m>.</introduction>
+<activity xml:id="A_aminusb"><title>Subtraction</title><introduction><p>Define <m>h:\mathbb{Z}\times\mathbb{Z}\rightarrow\mathbb{Z}</m> by <m>h(a, b)=a-b</m>.</p></introduction>
 <task><p>Prove or disprove <m>h</m> is one-to-one.</p></task>
 <task><p>Prove or disprove <m>h</m> is onto <m>\mathbb{Z}</m>.</p></task></activity>
 
-<!--<activity xml:id="A_diag"><introduction>Define <m>d:\mathbb{Z}\rightarrow\mathbb{Z}\times\mathbb{Z}</m> by <m>d(a)=(a, a)</m>.</introduction>
+<!--<activity xml:id="A_diag"><introduction><p>Define <m>d:\mathbb{Z}\rightarrow\mathbb{Z}\times\mathbb{Z}</m> by <m>d(a)=(a, a)</m>.</p></introduction>
 <task><p>Prove or disprove <m>d</m> is one-to-one.</p></task>
 <task><p>Prove or disprove <m>d</m> is onto <m>\mathbb{Z}\times\mathbb{Z}</m>.</p></task></activity>-->
 

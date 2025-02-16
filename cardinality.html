@@ -97,14 +97,14 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.5.3';
+eBookConfig.runestone_version = '7.5.6';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.596d7408a9995282.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<script src="_static/prefix-runtime.82032a8574f6ce75.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6a985cbf816db5c7.css">
 <style>
 #arguments-20-1-1-4 { counter-set: arguments-20-1-1-4 0; }
@@ -611,7 +611,7 @@ eBookConfig.enable_chatcodes =  false;
 </h3>Give a set for each of the following cardinalities: 5, 1, 0.</article><div class="para" id="cardinality-9">Two finite sets have the same cardinality if they have the same number of elements. But what about infinite sets?</div>
 <details id="E_intandevencard" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">6.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">Cardinality of the Even Integers.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_intandevencard-2">Let <span class="process-math">\(E\)</span> be the set of even integers, <span class="process-math">\(E=\{2k : k\in \mathbb{Z}\}\text{.}\)</span> Consider the map <span class="process-math">\(f:\mathbb{Z}\rightarrow E\)</span> given by <span class="process-math">\(f(n)=2n\text{.}\)</span> You can check that <span class="process-math">\(f\)</span> is one-to-one and onto <span class="process-math">\(E\text{.}\)</span> Thus, <span class="process-math">\(f\)</span> gives us a one-to-one correspondence between the integers and the even integers. Hence, they have the same cardinailty.</div></article></details><div class="para" id="cardinality-11">Is <a href="cardinality.html#E_intandevencard" class="xref" data-knowl="./knowl/xref/E_intandevencard.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 6.2.3: Cardinality of the Even Integers">Example 6.2.3</a> surprising? On one hand, it may seem surprising since the even integers is a proper subset of the integers, so it may seem like there are “more” integers then even integers (maybe even twice as many!). On the other hand, both sets have infinitely many elements, so since they both have infinite “size,” it may seem reasonable that the two sets have the same size. The idea behind the definition of cardinality is that the map gives us a way to match up elements in the two sets. Since they can be matched up exactly, the two sets must have the same size, or cardinality.</div>
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_intandevencard-2">Let <span class="process-math">\(E\)</span> be the set of even integers, <span class="process-math">\(E=\{2k : k\in \mathbb{Z}\}\text{.}\)</span> Consider the map <span class="process-math">\(f:\mathbb{Z}\rightarrow E\)</span> given by <span class="process-math">\(f(n)=2n\text{.}\)</span> You can check that <span class="process-math">\(f\)</span> is one-to-one and onto <span class="process-math">\(E\text{.}\)</span> Thus, <span class="process-math">\(f\)</span> gives us a one-to-one correspondence between the integers and the even integers. Hence, they have the same cardinality.</div></article></details><div class="para" id="cardinality-11">Is <a href="cardinality.html#E_intandevencard" class="xref" data-knowl="./knowl/xref/E_intandevencard.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 6.2.3: Cardinality of the Even Integers">Example 6.2.3</a> surprising? On one hand, it may seem surprising since the even integers is a proper subset of the integers, so it may seem like there are “more” integers then even integers (maybe even twice as many!). On the other hand, both sets have infinitely many elements, so since they both have infinite “size,” it may seem reasonable that the two sets have the same size. The idea behind the definition of cardinality is that the map gives us a way to match up elements in the two sets. Since they can be matched up exactly, the two sets must have the same size, or cardinality.</div>
 <article class="definition definition-like" id="D_countable"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.2.4</span><span class="period">.</span>
 </h3>
@@ -746,51 +746,47 @@ eBookConfig.enable_chatcodes =  false;
 </h3>
 <div class="introduction" id="A_unlistable-2"><div class="para" id="A_unlistable-2-1">To get an understanding of the construction used in the proof of <a href="cardinality.html#T_realintervaluncount" class="xref" data-knowl="./knowl/xref/T_realintervaluncount.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 6.2.9">Theorem 6.2.9</a>, we will look at a very specific example.</div></div>
 <article class="task exercise-like" id="A_unlistable-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para logical" id="A_unlistable-3-1">
-<div class="para">Consider the following list of numbers:</div>
-<div class="displaymath process-math">
+<div class="para" id="A_unlistable-3-1">Consider the following list of numbers:</div>
+<div class="para logical" id="A_unlistable-3-2"><div class="displaymath process-math">
 \begin{equation*}
 0.1112345
 \end{equation*}
-</div>
-<div class="displaymath process-math">
+</div></div>
+<div class="para logical" id="A_unlistable-3-3"><div class="displaymath process-math">
 \begin{equation*}
 0.00083576
 \end{equation*}
-</div>
-<div class="displaymath process-math">
+</div></div>
+<div class="para logical" id="A_unlistable-3-4"><div class="displaymath process-math">
 \begin{equation*}
 0.99999999
 \end{equation*}
-</div>
-<div class="displaymath process-math">
+</div></div>
+<div class="para logical" id="A_unlistable-3-5"><div class="displaymath process-math">
 \begin{equation*}
 0.12000000
 \end{equation*}
+</div></div>
+<div class="para" id="A_unlistable-3-6">Now, construct a new number, <span class="process-math">\(d=0.d_1d_2d_3\ldots\text{,}\)</span> where we change the <span class="process-math">\(i\)</span>th digit after the decimal in the <span class="process-math">\(i\)</span>th number in the list and use the new number in the <span class="process-math">\(i\)</span>th position of <span class="process-math">\(d\text{.}\)</span> For example, the first digit in <span class="process-math">\(0.1112345\)</span> is a 1, so make that a new number, like 2. The second digit in <span class="process-math">\(0.00083576\)</span> is 0, make that a 2. Now <span class="process-math">\(d=0.22\ldots\text{.}\)</span>
 </div>
-</div>
-<div class="para" id="A_unlistable-3-2">Now, construct a new number, <span class="process-math">\(d=0.d_1d_2d_3\ldots\text{,}\)</span> where we change the <span class="process-math">\(i\)</span>th digit after the decimal in the <span class="process-math">\(i\)</span>th number in the list and use the new number in the <span class="process-math">\(i\)</span>th position of <span class="process-math">\(d\text{.}\)</span> For example, the first digit in <span class="process-math">\(0.1112345\)</span> is a 1, so make that a new number, like 2. The second digit in <span class="process-math">\(0.00083576\)</span> is 0, make that a 2. Now <span class="process-math">\(d=0.22\ldots\text{.}\)</span>
-</div>
-<div class="para" id="A_unlistable-3-3">Give an example of <span class="process-math">\(d\)</span> by changing the <span class="process-math">\(i\)</span>th digit of each number in the list.</div></article><article class="task exercise-like" id="A_unlistable-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para logical" id="A_unlistable-4-1">
-<div class="para">We need some better notation for our list and our new number <span class="process-math">\(d\text{.}\)</span> We will use a double subscript, <span class="process-math">\(a_{ij}\)</span> where <span class="process-math">\(i\)</span> represents which number in the list and <span class="process-math">\(j\)</span> represents the decimal position. For example, from our above list</div>
-<div class="displaymath process-math">
+<div class="para" id="A_unlistable-3-7">Give an example of <span class="process-math">\(d\)</span> by changing the <span class="process-math">\(i\)</span>th digit of each number in the list.</div></article><article class="task exercise-like" id="A_unlistable-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="A_unlistable-4-1">We need some better notation for our list and our new number <span class="process-math">\(d\text{.}\)</span> We will use a double subscript, <span class="process-math">\(a_{ij}\)</span> where <span class="process-math">\(i\)</span> represents which number in the list and <span class="process-math">\(j\)</span> represents the decimal position. For example, from our above list</div>
+<div class="para logical" id="A_unlistable-4-2"><div class="displaymath process-math">
 \begin{equation*}
 0.1112345=0.a_{11}a_{12}a_{13}\ldots
 \end{equation*}
-</div>
-<div class="displaymath process-math">
+</div></div>
+<div class="para logical" id="A_unlistable-4-3"><div class="displaymath process-math">
 \begin{equation*}
 0.00083576=0.a_{21}a_{22}a_{23}\ldots
 \end{equation*}
-</div>
-<div class="displaymath process-math">
+</div></div>
+<div class="para logical" id="A_unlistable-4-4"><div class="displaymath process-math">
 \begin{equation*}
 0.99999999=0.a_{31}a_{32}a_{33}\ldots
 \end{equation*}
-</div>
-</div>
-<div class="para" id="A_unlistable-4-2">What digit is <span class="process-math">\(a_{24}\text{?}\)</span> How about <span class="process-math">\(a_{42}?\)</span>
+</div></div>
+<div class="para" id="A_unlistable-4-5">What digit is <span class="process-math">\(a_{24}\text{?}\)</span> How about <span class="process-math">\(a_{42}?\)</span>
 </div></article><article class="task exercise-like" id="A_unlistable-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para" id="A_unlistable-5-1">Now define our new number <span class="process-math">\(d=0.d_1d_2d_3\ldots\)</span> by <span class="process-math">\(d_i=1\)</span> if <span class="process-math">\(a_{ii}\neq 1\text{;}\)</span> otherwise, <span class="process-math">\(d_i=2\text{.}\)</span> Find <span class="process-math">\(d\)</span> for the list in (a).</div></article><article class="task exercise-like" id="A_unlistable-6"><h4 class="heading"><span class="codenumber">(d)</span></h4>
 <div class="para" id="A_unlistable-6-1">Make your own list of at least 6 decimals between 0 and 1, each with at least 6 decimal places and find the corresponding <span class="process-math">\(d\text{,}\)</span> using the rule in (c).</div></article><article class="task exercise-like" id="A_unlistable-7"><h4 class="heading"><span class="codenumber">(e)</span></h4>
@@ -878,10 +874,10 @@ b_3=0.a_{31}a_{32}a_{33}\ldots
 <div class="para">Since we assumed we had a listing of every real number in <span class="process-math">\([0, 1]\text{,}\)</span> every such decimal must be on our list.</div>
 </div>
 <div class="para logical" id="cardinality-29-2">
-<div class="para">Now define</div>
+<div class="para">Now define <span class="process-math">\(d=0.d_1d_2\ldots d_n\ldots\)</span> where</div>
 <div class="displaymath process-math">
 \begin{equation*}
-d_1=\begin{cases}
+d_i=\begin{cases}
 1  &amp;  \text{ if } a_{ii}\neq 1;\\
 2 &amp;  \text{ if } a_{ii}=1.
 \end{cases}

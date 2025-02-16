@@ -178,9 +178,9 @@
   
   <figure xml:id="F_arrowdiagnotonetoone">
   <caption>A function which is not one-to-one.</caption>
-  <image width="10%" xml:id="adnotonetoone">
+  <image width="15%" xml:id="adnotonetoone">
     <latex-image>
-  \begin{tikzpicture}[node distance = 1cm, thick]% 
+  \begin{tikzpicture}[node distance = 0.5cm, thick]% 
 %ontonotonetoone
         \node (1) {$a$};
         \node (2) [below=of 1] {$b$};
@@ -256,9 +256,9 @@
   
   <figure xml:id="F_arrowdiagnotonto">
   <caption>A function which is not onto <m>Y</m> </caption>
-  <image width="10%" xml:id="adnotonto">
+  <image width="15%" xml:id="adnotonto">
     <latex-image>
-  \begin{tikzpicture}[node distance = 1cm, thick]% 
+  \begin{tikzpicture}[node distance = 0.7cm, thick]% 
 %onetoonenotonto
         \node (1) {$a$};
         \node (2) [below=of 1] {$b$};

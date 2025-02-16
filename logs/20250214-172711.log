@@ -1,0 +1,23 @@
+INFO    : Using PreTeXt-CLI version 2.11.1.  The latest stable version available is 2.13.3. Run `pretext upgrade` to update.
+
+INFO    : PreTeXt project found in `/Users/jennifernordstrom/pretextbooks/introproofs`.
+WARNING : Using CLI version 2.11.1 but project's `requirements.txt`
+WARNING : is configured to use 1.5.2. Consider either installing
+WARNING : CLI version 1.5.2 or running `pretext init --refresh`
+WARNING : to update `requirements.txt` to match 2.11.1.
+INFO    : Now preparing local server to preview your project directory `/Users/jennifernordstrom/pretextbooks/introproofs`.
+INFO    :   (Reminder: use `pretext deploy` to deploy your built project to a public
+INFO    :   GitHub Pages site that can be shared with readers who cannot access your
+INFO    :   personal computer.)
+INFO    : 
+INFO    : starting server ...
+INFO    : setting up ...
+INFO    : values set...
+INFO    : adding server entry
+INFO    : Added server entry 2ced8e8618 46380 8128 localhost
+
+INFO    : Starting the server
+INFO    : Server will soon be available at http://localhost:8128
+INFO    : Opening browser for target `web` at http://localhost:8128/output/web
+INFO    : Stopping server.
+INFO    : 

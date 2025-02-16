@@ -15,7 +15,7 @@
 
 <p>Two finite sets have the same cardinality if they have the same number of elements. But what about infinite sets?</p>
 
-<example xml:id="E_intandevencard"><title>Cardinality of the Even Integers</title><p>Let <m>E</m> be the set of even integers, <m>E=\{2k : k\in \mathbb{Z}\}</m>. Consider the map <m>f:\mathbb{Z}\rightarrow E</m> given by <m>f(n)=2n</m>. You can check that <m>f</m> is one-to-one and onto <m>E</m>. Thus, <m>f</m> gives us a one-to-one correspondence between the integers and the even integers. Hence, they have the same cardinailty.</p></example>
+<example xml:id="E_intandevencard"><title>Cardinality of the Even Integers</title><p>Let <m>E</m> be the set of even integers, <m>E=\{2k : k\in \mathbb{Z}\}</m>. Consider the map <m>f:\mathbb{Z}\rightarrow E</m> given by <m>f(n)=2n</m>. You can check that <m>f</m> is one-to-one and onto <m>E</m>. Thus, <m>f</m> gives us a one-to-one correspondence between the integers and the even integers. Hence, they have the same cardinality.</p></example>
 
 <p>Is <xref ref="E_intandevencard"/> surprising? On one hand, it may seem surprising since the even integers is a proper subset of the integers, so it may seem like there are <q>more</q> integers then even integers (maybe even twice as many!). On the other hand, both sets have infinitely many elements, so since they both have infinite <q>size,</q> it may seem reasonable that the two sets have the same size. The idea behind the definition of cardinality is that the map gives us a way to match up elements in the two sets. Since they can be matched up exactly, the two sets must have the same size, or cardinality.</p>
 
@@ -108,21 +108,21 @@
 <p>Before proving the theorem, we will explore the main idea of the proof in the following activity.</p>
 
 <activity xml:id="A_unlistable"><title>Unlistable Elements</title><introduction><p>To get an understanding of the construction used in the proof of <xref ref="T_realintervaluncount"/>, we will look at a very specific example.</p></introduction>
-<task><p>Consider the following list of numbers:
-<me>0.1112345</me>
-<me>0.00083576</me>
-<me>0.99999999</me>
-<me>0.12000000</me>
+<task><p>Consider the following list of numbers:</p>
+<p><me>0.1112345</me></p>
+<p><me>0.00083576</me></p>
+<p><me>0.99999999</me></p>
+<p><me>0.12000000</me></p>
 
-</p>
+
 <p>Now, construct a new number, <m>d=0.d_1d_2d_3\ldots</m>, where we change the <m>i</m>th digit after the decimal in the <m>i</m>th number in the list and use the new number in the <m>i</m>th position of <m>d</m>. For example, the first digit in <m>0.1112345</m> is a 1, so make that a new number, like 2. The second digit in <m>0.00083576</m> is 0, make that a 2. Now <m>d=0.22\ldots</m>.</p>
 <p>Give an example of <m>d</m> by changing the <m>i</m>th digit of each number in the list.</p></task>
 
-<task><p>We need some better notation for our list and our new number <m>d</m>. We will use a double subscript, <m>a_{ij}</m> where <m>i</m> represents which number in the list and <m>j</m> represents the decimal position. For example, from our above list
-<me>0.1112345=0.a_{11}a_{12}a_{13}\ldots</me>
-<me>0.00083576=0.a_{21}a_{22}a_{23}\ldots</me>
-<me>0.99999999=0.a_{31}a_{32}a_{33}\ldots</me>
-</p>
+<task><p>We need some better notation for our list and our new number <m>d</m>. We will use a double subscript, <m>a_{ij}</m> where <m>i</m> represents which number in the list and <m>j</m> represents the decimal position. For example, from our above list</p>
+<p><me>0.1112345=0.a_{11}a_{12}a_{13}\ldots</me></p>
+<p><me>0.00083576=0.a_{21}a_{22}a_{23}\ldots</me></p>
+<p><me>0.99999999=0.a_{31}a_{32}a_{33}\ldots</me></p>
+
 <p>What digit is <m>a_{24}</m>? How about <m>a_{42}?</m></p></task>
 <task><p>Now define our new number <m>d=0.d_1d_2d_3\ldots</m> by <m>d_i=1</m> if <m>a_{ii}\neq 1</m>; otherwise, <m>d_i=2</m>. Find <m>d</m> for the list in (a).</p></task>
 
@@ -161,8 +161,8 @@
   <me>b_3=0.a_{31}a_{32}a_{33}\ldots</me>
   <me>\vdots</me>
 Since we assumed we had a listing of every real number in <m>[0, 1]</m>, every such decimal must be on our list.</p>
-<p>Now define 
-  <me>d_1=\begin{cases}
+<p>Now define <m>d=0.d_1d_2\ldots d_n\ldots</m> where
+  <me>d_i=\begin{cases}
   1  &amp;  \text{ if } a_{ii}\neq 1;\\
   2 &amp;  \text{ if } a_{ii}=1.
 \end{cases}</me>

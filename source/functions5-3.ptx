@@ -8,7 +8,7 @@
   </statement></definition>
 
   <example xml:id="E_notfunctionimages"><title>Exploring the Definition of a Function</title>
-  <p><ol marker="a">
+  <p><ol marker="(a)">
     <li><p>Let <m>f: X\rightarrow Y</m> be a map as shown in the figure.</p>
     <figure xml:id="F_notfnonetotwo">
   <!--<caption> </caption>-->
@@ -106,7 +106,7 @@
   <example xml:id="E_addasfn"><title>Addition as a Function</title>
   <p>We may have functions involving Cartesian products of sets. This is common when we want to define algebraic operations. For example, we can define addition on the integers as the function <m>f:\mathbb{Z}\times\mathbb{Z}\rightarrow\mathbb{Z}</m> given by <m>f(a, b)=a+b</m>.</p>
 <p>
-  <ol marker="a">
+  <ol marker="(a)">
     <li><p>Find <m>f(3, 2), f(5, 5), f(2, -4)</m>.</p>
     <answer><m>5, 10, -2</m></answer></li>
     <li><p>What is the image of <m>\mathbb{Z}\times\mathbb{Z}</m> under <m>f</m>?</p>
@@ -414,7 +414,7 @@
     All but two of the following are correct ways to express the fact that a function <m>f</m> is onto. Find the two that are incorrect.
   </p>
 
-  <ol marker="a">
+  <ol>
     <li>
       <p>
     <m>f</m> is onto if and only if every element in its codomain is the image of some element in its domain.
@@ -452,7 +452,7 @@
     Let <m>X=\{1, 5, 9\}</m> and <m>Y=\{3, 4, 7\}</m>.
   </p>
 
-  <ol marker="a">
+  <ol>
     <li>
       <p>
     Define <m>f:X\rightarrow Y</m> by specifying that <m>f(1)=4, f(5)=7, f(9)=4</m>.
@@ -480,7 +480,7 @@
     Let <m>X=\{1, 2, 3\}</m>, <m>Y=\{1, 2, 3, 4\}</m> and <m>Z=\{1, 2\}</m>.
   </p>
 
-  <ol marker="a">
+  <ol>
     <li>
       <p>
     Define a function <m>f:X\rightarrow Y</m> that is one-to-one but not onto.
@@ -513,7 +513,7 @@
     Let <m>f</m> be a function from the integers to the even integers given by <m>f(a)=2a</m>.
   </p>
 
-  <ol marker="a">
+  <ol>
     <li>
       <p>
     Prove <m>f</m> is one-to-one.
@@ -533,7 +533,7 @@
     Define <m>f:\mathbb{Z}\rightarrow\mathbb{Z}</m> by <m>f(n)=4n-5</m>.
   </p>
 
-  <ol marker="a">
+  <ol>
     <li>
       <p>
     Prove or disprove <m>f</m> is one-to-one.
@@ -553,7 +553,7 @@
     Define <m>g:\mathbb{R}\rightarrow\mathbb{R}</m> by <m>f(x)=4x-5</m>.
   </p>
 
-  <ol marker="a">
+  <ol>
     <li>
       <p>
     Prove or disprove <m>g</m> is one-to-one.
@@ -583,7 +583,7 @@
     <m>F(A)=</m> the number of elements in <m>A</m>.
   </p>
 
-  <ol marker="a">
+  <ol>
     <li>
       <p>
     Prove or disprove <m>F</m> is one-to-one.
@@ -604,7 +604,7 @@
     Let <m>f:{\mathbb Z}\times{\mathbb Z}\rightarrow{\mathbb Z}</m> be given by <m>f(a, b)=a</m>.
     </p>
 
-  <ol marker="a">
+  <ol>
     <li>
       <p>
     Prove or disprove <m>f</m> is one-to-one.
@@ -626,7 +626,7 @@
     Let <m>f:{\mathbb Z}\rightarrow{\mathbb Z}\times{\mathbb Z}</m> be given by <m>f(a) =(a, a)</m>.
   </p>
 
-  <ol marker="a">
+  <ol>
     <li>
       <p>
     Prove or disprove <m>f</m> is one-to-one.
@@ -651,7 +651,7 @@
     <m>G(x, y)=(2y, -x)</m>.
   </p>
 
-  <ol marker="a">
+  <ol>
     <li>
       <p>
     Prove or disprove <m>G</m> is one-to-one.
@@ -675,7 +675,7 @@
     <m>H(x, y)=(x+1, 2-y)</m>.
   </p>
 
-  <ol marker="a">
+  <ol>
     <li>
       <p>
     Prove or disprove <m>H</m> is one-to-one.
@@ -696,7 +696,7 @@
     Let <m>f:{\mathbb Q}\times{\mathbb Q}\rightarrow{\mathbb Q}\times{\mathbb Q}</m> be given by <m>f(a, b) =(2a, a+b)</m>.
   </p>
 
-  <ol marker="a">
+  <ol>
     <li>
       <p>
     Prove or disprove <m>f</m> is one-to-one.

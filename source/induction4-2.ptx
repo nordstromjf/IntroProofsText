@@ -7,7 +7,7 @@
 <assemblage xml:id="B_induction">
   <title>Principle of Mathematical Induction</title><idx><h>mathematical induction</h><h>Principle of</h></idx>
   <p>Let <m>P(n)</m> be a property defined for integers <m>n</m>, and let <m>a</m> be a fixed integer. Suppose the following are true:
-<ol marker="1"><li><m>P(a)</m> is true;</li>
+<ol><li><m>P(a)</m> is true;</li>
 <li>For all <m>k\in\mathbb{Z}</m> with <m>k\geq a</m>, if <m>P(k)</m> is true then <m>P(k+1)</m> is true;</li></ol>
 
 then for all <m>n\geq a</m>, <m>P(n)</m> is true.
@@ -17,7 +17,7 @@ then for all <m>n\geq a</m>, <m>P(n)</m> is true.
 <p>The way to think about the Principle of Mathematical Induction is that if you know the statement is true for some starting value, (<m>P(a)</m> is true), and if you can show that knowing the statement is true for some value allows you to know it is true for the next value (<m>P(k)\rightarrow P(k+1)</m>), then you know it for all values greater than or equal to <m>a</m>.</p>
 
 <p>So why should this work? Suppose you know two things: 
-<ol marker="(1)">
+<ol>
   <li><m>P(1)</m> is true, and </li>
   <li> <m>P(k)\rightarrow P(k+1)</m>.</li>
  </ol>
@@ -222,7 +222,7 @@ Thus, <m>\sum_{i=0}^{k+1}r^i=\frac{r^{k+2}-1}{r-1}</m>.</p>
       <exercise><statement>
         <p>
     Use one of the formulas <xref ref="Q_sumofn"/> or <xref ref="Q_geosum" /> to write the closed form of the following sums.</p>
-    <ol marker="a">
+    <ol>
       <li><me>1+2+3+\cdots +(k-1), \text{ where } k\in\mathbb{Z} \text{ and } k\geq 2.</me>
     </li>
 
@@ -238,7 +238,7 @@ Thus, <m>\sum_{i=0}^{k+1}r^i=\frac{r^{k+2}-1}{r-1}</m>.</p>
       <exercise><statement><p>
     For each integer <m>n</m> with <m>n\geq 2</m>, let <m>P(n)</m> be the formula <me>\sum_{i=1}^{n-1}i(i+1)=\frac{n(n-1)(n+1)}{3}.</me>
   </p>
-      <ol marker="a">
+      <ol>
       <li>  <p>
     Write out the statement <m>P(2)</m>. Is <m>P(2)</m> true?
   </p>

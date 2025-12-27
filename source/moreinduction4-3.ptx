@@ -194,7 +194,7 @@ Thus, <m>2(k+1)+1&lt; 2^{k+1}</m>, which is what we wanted to show.
 
       <exercise xml:id="ER_indpowersof2"><statement>
         <p>Use mathematical induction to prove the following statements.</p>
-          <ol marker="a">
+          <ol>
     <li>
       <p>
     For all non-negative integers <m>n</m>, <m>7\mid 2^{3n}-1</m>.

@@ -109,7 +109,7 @@
 <assemblage xml:id="B_propsums">
   <title>Properties of Sums and Products</title>
   <p>The following are useful properties when working with summation and product notation.
-<ol marker="1">
+<ol>
   <li><m>\sum_{k=m}^{n}a_k+\sum_{k=m}^{n}b_k=\sum_{k=m}^{n}(a_k+b_k)</m></li>
   <li><m>c\sum_{k=m}^{n}a_k=\sum_{k=m}^{n}(ca_k)</m></li>
   <li><m>\biggl(\prod_{k=m}^{n}a_k\biggr)\biggl(\prod_{k=m}^{n}b_k\biggr)=\prod_{k=m}^{n}(a_k\cdot b_k)</m></li>
@@ -196,7 +196,7 @@
 
     <exercises>
       <exercise><statement><p>Find an explicit formula for the following sequences with the given initial terms.</p>
-      <ol marker="a">
+      <ol>
         <li>
       <p>
     <m>\frac{1}{3}, \frac{4}{9},\frac{9}{27}, \frac{16}{81},\frac{25}{243}, \frac{36}{729}</m>
@@ -211,7 +211,7 @@
      
     </statement></exercise>
      <exercise><statement><p>Compute the given product or sum.</p>
-     <ol marker="a">
+     <ol>
       <li>
       <p>
    <m>\prod_{k=2}^{4}{k^2}</m>
@@ -231,7 +231,7 @@
     </li></ol>
       </statement></exercise>
       <exercise><statement><p>Write out the sum in expanded form.</p>
-      <ol marker="a">
+      <ol>
         <li><p><m>\sum_{j=1}^{n}{j(j+1)}</m></p></li>
       <li><p><m>\sum_{i=1}^{k+1}{i(i!)}</m></p></li>
     </ol></statement></exercise>
@@ -256,12 +256,12 @@
   </p>
       </statement></exercise>
       <exercise><statement><p>Simplify.</p>
-      <ol marker="a">
+      <ol>
         <li><m>\frac{((n+1)!)^2}{(n!)^2}</m></li>
       <li><m>\frac{n!}{(n-k+1)!}</m></li>
     </ol></statement></exercise>
      <!-- <exercise><statement><p>Compute.</p>
-      <ol marker="a">
+      <ol>
         <li><m>{3 \choose 0}</m></li>
         <li><m>{n \choose n-1}</m></li>
         <li><m>{n+1 \choose n-1}</m></li>

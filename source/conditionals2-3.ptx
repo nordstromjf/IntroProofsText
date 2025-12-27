@@ -195,14 +195,14 @@ We determined, using a truth table, that this is an invalid argument. We can con
 
 <exercises>
   <exercise><statement><p>Often it is necessary to convert an informal mathematical statement into a more formal one. Complete the following statements so they are equivalent to <q>The reciprocal of any positive number is positive.</q></p>
-      <ol marker="a">
+      <ol>
         <li><p>Given any positive real number <m>r</m>, the reciprocal of ___.</p></li>
         <li><p>For any real number <m>r</m>, if <m>r</m> is ___ then ___.</p></li>
         <li><p>If a real number <m>r</m> ___, then ___.</p></li>
       </ol>
     </statement></exercise>
       <exercise><statement><p>Complete the following statements so they are equivalent to <q>The cube root of any negative real number is negative.</q></p>
-      <ol marker="a">
+      <ol>
         <li><p>Given any negative real number <m>s</m>, the cube root of ___.</p></li>
         <li><p>For any real number <m>s</m>, if <m>s</m> is ___, then ___.</p></li>
         <li><p>If a real number <m>s</m>___, then ___.</p></li>
@@ -212,7 +212,7 @@ We determined, using a truth table, that this is an invalid argument. We can con
       <exercise><statement><p>
         In order to better understand mathematical statements, it can be helpful to write statements less formally. First rewrite each statement without using variables, then determine whether the statements are true or false.
       </p>
-      <ol marker="a">
+      <ol>
         <li><p>There are real numbers <m>u</m> and <m>v</m> with the property that <m>u+v &lt; v-u</m>.</p></li>
         <li><p>There is a real number <m>x</m> such that <m>x^2 &lt; x</m>.</p></li>
         <li><p>For all positive integers <m>n</m>, <m>n^2\geq n</m>.</p></li>
@@ -221,7 +221,7 @@ We determined, using a truth table, that this is an invalid argument. We can con
       <exercise><statement><p>
         Fill in the blanks to rewrite the statement <q>Every nonzero real number has a reciprocal.</q>
       </p>
-      <ol marker="a">
+      <ol>
         <li><p>All nonzero real numbers ___.</p></li>
         <li><p>For all nonzero real numbers <m>r</m>, there is ___ for <m>r</m>.</p></li>
         <li><p>For all nonzero real numbers <m>r</m>, there is a real number <m>s</m> such that ___.</p></li></ol>
@@ -230,7 +230,7 @@ We determined, using a truth table, that this is an invalid argument. We can con
      <exercise><statement>
         <p>
     Write the negation of each of the statements.</p>
-    <ol marker="a">
+    <ol>
     <li><p><m>\forall</m> real numbers <m>x</m>, if <m>x&gt;3</m> then <m>x^2&gt;9</m>.
   </p></li>
   <li><p>

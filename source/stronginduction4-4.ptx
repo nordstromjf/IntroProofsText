@@ -6,7 +6,7 @@
 <assemblage xml:id="B_strongind">
   <title>Strong Induction</title><idx>strong induction</idx><idx><h>mathematical induction</h><h>strong</h></idx>
   <p>Let <m>P(n)</m> be a property defined for integers <m>n</m>. If 
-  <ol marker="1">
+  <ol>
   <li><m>P(1), \ldots P(a)</m> are true for some <m>a</m>, and</li>
   <li>if <m>P(i)</m> is true for all <m>1\leq i\leq k</m>, then <m>P(k+1)</m> is true;</li>
  </ol>

@@ -188,7 +188,7 @@ for some <m>2k^2+3k+1\in\mathbb{Z}</m>. Let <m>m=2k^2+3k+1</m>. Then <m>n</m> ha
     <exercises>
     <exercise><statement>
       <p> For the given <m>n</m> and <m>d</m>, find <m>q</m> and <m>r</m> such that <m>n=dq+r</m> with <m>0\leq r&lt;d</m> (as in the Division Algorithm).</p>
-      <ol marker="a">
+      <ol>
         <li><p><m>n=36</m> and <m>d=40</m></p></li>
         <li><p><m>n=-45</m> and <m>d=11</m></p></li>
       </ol>

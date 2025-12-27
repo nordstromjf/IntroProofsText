@@ -185,7 +185,7 @@ We can see that for every <m>n</m>, <m>d\neq b_n</m> since it differs in the <m>
   <exercise><statement><p>Let <m>A</m> and <m>B</m> be countable sets. Prove <m>A\cup B</m> is countable.</p></statement></exercise>
 
   <exercise><statement><p>Determine if the following are true or false. Justify your answer.</p>
-<ol marker="a">
+<ol>
   <li><p>A finite union of countable sets, <m>\bigcup_{i=1}^{n}A_i</m>, is countable.</p></li>
   <li><p>A countable union of countable sets, <m>\bigcup_{i=1}^{\infty}A_i</m>, is countable.</p></li>
   <li><p>The union of a countable set and an uncountable set in uncountable.</p></li>

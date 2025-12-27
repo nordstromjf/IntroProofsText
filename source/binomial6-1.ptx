@@ -168,7 +168,9 @@ by induction on <m>n</m>.</p>
   </p>
       </statement></exercise>
       <exercise><statement>
-        <p><ol marker="a">
+        <p>In this exercise we find the 7th row of Pascal's triangle using the binomial coefficients.</p>
+
+    <ol>
     <li>
       <p>
     Use Pascal’s triangle to compute the values of <m>{6\choose 2}, {6\choose 3}, {6\choose 4}</m> and <m>{6\choose 5}</m>
@@ -187,7 +189,7 @@ by induction on <m>n</m>.</p>
   </p>
     </li>
 
-  </ol></p>
+  </ol>
       </statement></exercise>
       <exercise><statement>
         <p>

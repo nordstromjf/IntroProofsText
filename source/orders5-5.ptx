@@ -7,7 +7,7 @@
   <p>We will still need the properies from <xref ref="relations" />.</p>
 
   <definition xml:id="D_RSTprop2"><statement><p>Let <m>R</m> be a relation on <m>A</m>. Then 
-  <ol marker="1">
+  <ol>
     <li><p><m>R</m> is <term>reflexive</term><idx>reflexive</idx> if for all <m>x\in A</m>, <m>x R x</m>. In ordered pair notation, <m>(x, x)\in R</m>.</p></li>
     <li><p><m>R</m> is <term>symmetric</term><idx>symmetric</idx> if for all <m>x, y\in A</m>, if <m>x R y</m> then <m>y R x</m>. In ordered pair notation, if <m>(x, y)\in R</m> then <m>(y, x)\in R</m>.</p></li>
 
@@ -127,7 +127,7 @@
 <p>The following Theorem is useful when working with orders.</p>
 
 <theorem xml:id="T_totalorder"><statement><p>A set <m>A</m> with order <m>\leq</m> is a totally ordered set<idx>totally ordered set</idx> if and only if exactly one of the following is true:
-<ol marker="1">
+<ol>
   <li><m>a &lt; b</m>,</li>
   <li><m>b &lt; a</m>,</li>
   <li><m>a = b</m>.</li>
@@ -144,7 +144,7 @@
     Define <m>a\leq b</m> if <m>a \mid b</m>.
   </p>
 
-  <ol marker="a">
+  <ol>
     <li>
       <p>
     Prove or disprove <m>\leq</m> is a partial order on <m>\mathbb{Z}^+</m>.
@@ -167,7 +167,7 @@
     Define <m>(a, b)\leq (c, d)</m> if <m>a\leq c</m> and <m>b\leq d</m>.
   </p>
 
-  <ol marker="a">
+  <ol>
     <li>
       <p>
     Prove or disprove <m>\leq</m> is a partial order on <m>\mathbb{Z}\times\mathbb{Z}</m>.
@@ -187,7 +187,7 @@
     Define <m>(a, b)\leq (c, d)</m> if <m>a\leq c</m> and if <m>a=c</m> then <m>b\leq d</m>.
   </p>
 
-  <ol marker="a">
+  <ol>
     <li>
       <p>
     Prove or disprove <m>\leq</m> is a partial order on <m>\mathbb{Z}\times\mathbb{Z}</m>.
@@ -208,7 +208,7 @@
     Define <m>(a, b)\leq (c, d)</m> if <m>a+b\leq c+d</m>.
   </p>
 
-  <ol marker="a">
+  <ol>
     <li>
       <p>
     Prove or disprove <m>\leq</m> is a partial order on <m>\mathbb{Z}\times\mathbb{Z}</m>.

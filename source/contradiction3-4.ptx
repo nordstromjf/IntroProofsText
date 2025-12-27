@@ -223,7 +223,7 @@ Since <m>k-j\in\mathbb{Z}, p\mid 1</m>, and <m>p</m> is a factor of 1. However, 
     Consider the statement: for all integers <m>n</m>, if <m>n^2</m> is odd then <m>n</m> is odd.
   </p>
 
-  <ol marker="a">
+  <ol>
     <li>
       <p>
     Write what you would assume and what you would need to show to prove this statement by contradiction.
@@ -246,7 +246,7 @@ Since <m>k-j\in\mathbb{Z}, p\mid 1</m>, and <m>p</m> is a factor of 1. However, 
     Use this test to determine if the following numbers are prime or not.
   </p>
 
-  <ol marker="a">
+  <ol>
     <li>
       <p>
     527
@@ -265,7 +265,7 @@ Since <m>k-j\in\mathbb{Z}, p\mid 1</m>, and <m>p</m> is a factor of 1. However, 
         <p>
     Carefully write the negation of each statement then prove the statement by contradiction.
   </p>
-  <ol marker="a">
+  <ol>
     <li><p>
     There is no greatest even integer.
   </p></li>
@@ -281,7 +281,7 @@ Since <m>k-j\in\mathbb{Z}, p\mid 1</m>, and <m>p</m> is a factor of 1. However, 
     Prove the following by contrapositive. Make sure you carefully write what you are assuming and what you need to show.
   </p>
 
-  <ol marker="a">
+  <ol>
     <li>
       <p>
     If the product of two positive real numbers is greater than 100, then at least one of the numbers is greater than 10.
@@ -303,7 +303,7 @@ Since <m>k-j\in\mathbb{Z}, p\mid 1</m>, and <m>p</m> is a factor of 1. However, 
     Prove the following statements by either contradiction or contrapositive (be sure to note which method you used).
   </p>
 
-  <ol marker="a">
+  <ol>
     <li>
       <p>
     For all integers <m>n</m>, if <m>n^2</m> is odd then <m>n</m> is odd.
@@ -329,7 +329,7 @@ Since <m>k-j\in\mathbb{Z}, p\mid 1</m>, and <m>p</m> is a factor of 1. However, 
     Determine whether the following statements are true or false. Prove the true statements by contradiction and provide counterexamples for the false ones.
   </p>
 
-  <ol marker="a">
+  <ol>
     <li>
       <p>
     The sum of any two irrational numbers is irrational.

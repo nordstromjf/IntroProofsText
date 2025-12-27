@@ -13,7 +13,7 @@
   <p>In <xref ref="quantifiers"/>, we were generally able to find a specific <m>x</m> in order to show a existential statement was true.</p>
 
   <example xml:id="E_domainqexist1"><title>Existential Statements</title><idx>existential statement</idx>
-  <p><ol marker="a">
+  <p><ol marker="(a)">
     <li><p>Let <m>D=\mathbb{Z}</m>. Determine whether the statement <q>there exists <m>x\in D</m> such that <m>x+3/2=4</m></q> is true or false.</p>
     <answer><p>Since <m>x=5/2</m> is the only value satisfying the equation, but <m>x\notin \mathbb{Z}</m>, the statement is false.</p></answer></li>
 
@@ -29,7 +29,7 @@
 <assemblage xml:id="B_pfexistential">
   <title>Proving an Existential Statement</title><idx><h>proof</h><h>existential statement</h></idx>
   <p>To prove there exists <m>x\in D</m> such that <m>P(x)</m>:
-    <ol marker="1">
+    <ol>
       <li><p>Produce a candidate. This means you state an <m>x\in D</m> which makes <m>P(x)</m> true. You may need to do work to find <m>x</m>, but that work is not part of the actual proof.</p></li>
       <li><p>Show the candidate works. In other words, show <m>P(x)</m> is true. </p></li>
     </ol>
@@ -61,7 +61,7 @@ Thus, <m>r &lt; x  &lt; s</m>. (We showed that <m>x</m> satisfied all the necess
 <assemblage xml:id="B_pfunique">
   <title>Proving Uniqueness</title><idx><h>proof</h><h>uniqueness statement</h></idx>
 <p>To prove there exists a unique <m>x\in D</m> such that <m>P(x)</m>:
-<ol marker="1">
+<ol>
       <li><p>Produce a candidate. This means you state the <m>x</m> that makes <m>P(x)</m> true. You may need to do work to find <m>x</m>, but that work is not part of the actual proof.</p></li>
       <li><p>Show the candidate works. In other words, show <m>P(x)</m> is true. This shows <em>existence</em>. </p></li>
       <li><p>Assume <m>P(x)</m> is true and <m>P(y)</m> is true. Show <m>x=y</m>. This shows <em>uniqueness</em>.</p></li>
@@ -92,7 +92,7 @@ Hence, the solution is unique.</p></proof>
 
 
 <p>To check that the Well-Ordering Principle applies, you need to check three things:
-<ol marker="1">
+<ol>
   <li><m>S\neq \emptyset.</m></li>
   <li><m>S\subseteq \mathbb{Z}.</m></li>
   <li><p>Every element of <m>S</m> is greater than some fixed integer.</p></li>
@@ -104,7 +104,7 @@ Hence, the solution is unique.</p></proof>
 This is not a subset of the integers and does not have a least element, even though every element is greater than 0.</p>
 
 <p>Now consider <m>S=\{2k+1 : k\in \mathbb{Z}, k\geq 0\}</m>. Check each of the conditions.
-<ol marker="1">
+<ol>
   <li><p><m>S\neq \emptyset</m> since <m>1\in S</m>.</p></li>
   <li><p><m>S\subseteq \mathbb{Z}</m> since <m>2k+1\in \mathbb{Z}</m>.</p></li>
   <li><p>Every element of <m>S</m> is greater than some fixed integer since <m>2k+1\geq 1</m> when <m>k\geq 0</m>.</p></li>

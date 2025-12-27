@@ -152,7 +152,7 @@
     Now given these assigned truth-values, determine the validity and soundness of each of the following arguments:
   </p>
 
-  <ol marker="a">
+  <ol>
     <li>
       <p><tabular>
     <row><cell>All math students are sleep-deprived.</cell></row>
@@ -239,7 +239,7 @@
 
   </ul>
 
- <ol marker="a">
+ <ol>
     <li>
       <p>
     The argument is valid, but both premises and the conclusion are false.

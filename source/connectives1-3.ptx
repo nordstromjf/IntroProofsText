@@ -514,7 +514,7 @@ So, a statement such as <m>p</m> is necessary and sufficient for <m>q</m> means 
 
 <p>Let <m>p, q,</m> and <m>r</m> be variables representing statements. Let <m>\mathbf{t}</m> be a tautology and <m>\mathbf{c}</m> be a contradiction.
 
-<ol marker="1">
+<ol>
   <li><title>Commutative Laws</title> <m>p \wedge q \equiv q \wedge p; \ \ \ p \vee q \equiv q \vee p</m></li>
   <li><title>Associative Laws</title> <m>(p \wedge q)\wedge r \equiv p \wedge (q \wedge r);\ \ \ (p \vee q)\vee r \equiv p \vee (q \vee r)</m></li>
   <li><title>Distributive Laws</title> <m>p \wedge (q \vee r) \equiv (p \wedge q)\vee (p \wedge r);\ \ \ p \vee (q \wedge r) \equiv (p \vee q) \wedge (p \vee r)</m></li>
@@ -535,7 +535,7 @@ So, a statement such as <m>p</m> is necessary and sufficient for <m>q</m> means 
     Below is a list of pairs of statements. Determine, using a truth table, whether the two statements in each pair are logically equivalent.
   </p>
 
-  <ol marker="a">
+  <ol>
     <li>
       <p>
     <m>p\vee q</m>; <m>\neg (\neg p \ \wedge\ \neg q)</m>
@@ -590,7 +590,7 @@ So, a statement such as <m>p</m> is necessary and sufficient for <m>q</m> means 
     Determine, using a truth table, whether each of the following statements is a tautology, a contradiction, or neither.
   </p>
 
-  <ol marker="a">
+  <ol>
     <li>
       <p>
     <m>(p\rightarrow p)\rightarrow q</m>
@@ -648,7 +648,7 @@ q)</m>
     Produce truth tables for the following statements. Then abbreviate them by finding the shortest possible logically equivalent statement.
   </p>
 
-  <ol marker="a">
+  <ol >
     <li>
       <p>
     <m>\neg (p \ \wedge\ q)\rightarrow (p\ \veebar \ q)</m>
@@ -670,7 +670,7 @@ q)</m>
     Using <em>only</em> the connectives <q><m>\wedge</m></q> and <q><m>\neg</m></q>, write statements logically equivalent to each of the following:
   </p>
 
-  <ol marker="a">
+  <ol >
     <li>
       <p>
     <m>p \vee q</m>
@@ -701,7 +701,7 @@ q)</m>
     Using <em>only</em> the connective <q>//</q>, write statements logically equivalent to each of the following:
   </p>
 
-  <ol marker="a">
+  <ol >
     <li>
       <p>
     <m>\neg p</m>

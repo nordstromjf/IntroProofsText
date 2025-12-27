@@ -232,7 +232,7 @@
         <p>
     Use the definitions of even, odd, prime and composite to justify your answer to each of the following questions. Let <m>m</m> and <m>n</m> be integers.
   </p>
-  <ol marker="a">
+  <ol>
     <li>
       <p>
     Is <m>6m+8n</m> even?
@@ -323,7 +323,7 @@
     Prove or disprove the following statements using the method of direct proof or counterexample.
   </p>
 
-  <ol marker="a">
+  <ol>
     <li>
       <p>
     The difference of any two odd integers is odd.

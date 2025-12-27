@@ -226,7 +226,7 @@ Resulting in <m>123=999x</m>. Now we just solve for <m>x=123/999</m>.</p>
     Prove the following numbers are rational by writing them as a ratio of two integers.
   </p>
 
-  <ol marker="a">
+  <ol>
     <li>
       <p>
     <m>\frac{3}{7}+\frac{5}{9}</m>
@@ -246,7 +246,7 @@ Resulting in <m>123=999x</m>. Now we just solve for <m>x=123/999</m>.</p>
     The <term>zero product property</term> says that if a product of two real numbers is 0 then one of the numbers must be zero.
   </p>
 
-  <ol marker="a">
+  <ol>
     <li>
       <p>
     Write this property formally using quantifiers and variables.
@@ -308,7 +308,7 @@ Resulting in <m>123=999x</m>. Now we just solve for <m>x=123/999</m>.</p>
     Determine if the following statements are true or false. For <em>true</em> statements provide a proof. For <em>false</em> statements provide a counter example AND determine if a small change would make the statement true. If so, correct the statement and provide a proof of the new statement.
   </p>
 
-  <ol marker="a">
+  <ol>
     <li>
       <p>
     The quotient of any two rational numbers is a rational number.
@@ -331,7 +331,7 @@ Resulting in <m>123=999x</m>. Now we just solve for <m>x=123/999</m>.</p>
 
       <exercise><statement>
         <p>Let <m>n\in \mathbb{Z}</m>. Determine if the following statements are true or false. Justify your answer.</p>
-        <ol marker="a">
+        <ol>
         <li>
         <p>3 divides <m>(3n+1)(3n+2)(3n+3)</m>.</p>
         </li>
@@ -354,7 +354,7 @@ Resulting in <m>123=999x</m>. Now we just solve for <m>x=123/999</m>.</p>
     Prove or disprove the following statements using the method of direct proof or counterexample.
   </p>
 
-  <ol marker="a">
+  <ol>
     <li>
       <p>
     For all integers <m>a</m>, <m>b</m>, and <m>c</m>, if <m>a\mid b</m> and <m>a\mid c</m>, then <m>a\mid (b+c)</m>.

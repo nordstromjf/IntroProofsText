@@ -75,7 +75,7 @@
       <exercise><statement><p>How many elements are in the set <m>\{1, 2, 3, 1, 2, 1\}</m>?</p></statement></exercise>
       <!--<exercise><statement><p>How many elements are in the set <m>\{1, \{1\}, \{1, \{1\}\}\}</m>?</p></statement></exercise>-->
       <exercise><statement><p>Use set-roster notation to list the elements in each of the following sets.</p>
-        <ol marker="a">
+        <ol>
           <li><p><m>S=\{n\in \mathbb{Z}: n=(-1)^k, \text{ for some integer } k\}</m></p></li>
           <li><p><m>T=\{m\in \mathbb{Z}: m=1+(-1)^k, \text{ for some integer } k\}</m></p></li>
           <li><p><m>U=\{r\in \mathbb{Z}: 2\leq r\leq -2\}</m></p></li>
@@ -83,7 +83,7 @@
         </ol>
     </statement></exercise>
     <exercise><statement><p>Determine whether the following statements are true or false.</p>
-      <ol marker="a">
+      <ol>
         <li><p><m>3\in \{1, 2, 3\}</m></p></li>
         <li><p><m>1\subseteq \{1, 2, 3\}</m></p></li>
         <li><p><m>\{2\}\in \{1, 2, 3\}</m></p></li>

@@ -261,7 +261,7 @@
 
   <example xml:id="E_multquant1"><title>Statements with Multiple Quantifiers</title>
     <p>Let <m>x, y\in\mathbb{R}</m>. Determine whether the following statements are true or false.
-    <ol marker="a">
+    <ol marker="(a)">
     <li><me>\forall x, \exists y, x+y=5.</me>
     <p>For any <m>x</m> can you always find a corresponding <m>y</m> with <m>x+y=5</m>? </p>
     <answer><p>Yes, for each <m>x</m> let <m>y=5-x</m>. So the statement is true.</p></answer></li>
@@ -360,7 +360,7 @@
 
     <exercises>
      <!-- <exercise><statement><p>Let <m>P(x)</m> be the predicate <q><m>x&gt;1/x</m>.</q></p>
-      <ol marker="a">
+      <ol>
         <li><p>Write <m>P(2), P(1/2), P(-1), P(-1/2)</m>, and <m>P(-8)</m>. Indicate which of these is true and which is false.</p></li>
         <li>
       <p>
@@ -380,7 +380,7 @@
     Let <m>Q(x, y)</m> be the predicate <q>If <m>x&lt;y</m> then <m>x^2&lt;y^2</m></q> with domain for both <m>x</m> and <m>y</m> being <m>\mathbb{R}</m>.
   </p>
 
-  <ol marker="a">
+  <ol>
     <li>
       <p>
     Explain why <m>Q(x, y)</m> is false if <m>x=-4</m> and <m>y=2</m>.
@@ -426,7 +426,7 @@
     Consider the statement <me>\exists x\in \mathbb{R} \text{ such that } x^2=2.</me> Which of the following are equivalent ways of expressing this statement?
   </p>
 
-  <ol marker="a">
+  <ol>
      <li>
       <p>
     There is at least one real number whose square is 2.
@@ -468,7 +468,7 @@
     Consider the statement <me>\forall n\in \mathbb{Z} \text{ if } n^2 \text{ is even then } n \text{ is even}.</me> Which of the following are equivalent ways of expressing this statement?
   </p>
 
-  <ol marker="a">
+  <ol>
      <li>
       <p>
     If the square of an integer is even, then that integer is even
@@ -512,7 +512,7 @@
     <p>
     Rewrite the following statements using the form <q><m>\forall</m>____<m>x</m>,____.</q>
   </p>
-  <ol marker="a">
+  <ol>
     <li>
       <p>
     Every real number is positive, negative, or zero.
@@ -566,7 +566,7 @@
     Let <m>\mathbb{R}</m> be the set of possible values for the variable <m>x</m>. Which of the following are true and which are false? Give counter examples for the statements that are false.
   </p>
 
-  <ol marker="a">
+  <ol>
     <li>
       <p>
     If <m>x&gt;2</m> then <m>x&gt;1</m>.
@@ -596,7 +596,7 @@
     Let the domain of <m>x</m> be the set <m>D</m> of objects discussed in mathematics courses, and let Real(<m>x</m>) be <q><m>x</m> is a real number,</q> Pos(<m>x</m>) be <q><m>x</m> is a positive real number,</q> Neg(<m>x</m>) be <q><m>x</m> is a negative real number,</q> and Int(<m>x</m>) be <q><m>x</m> is an integer.</q> Rewrite each statement without using quantifiers or variables. Indicate which statements are true and which are false. 
   </p>
 
-  <ol marker="a">
+  <ol>
     <li>
       <p>
     Pos(0)
@@ -629,7 +629,7 @@
     Rewrite the statement in English without using the symbols <m>\forall</m> or <m>\exists</m>. Express your answer as simply as possible. Then write a negation for the statement. Determine which statement is true, the original or the negation.
   </p>
 
-  <ol marker="a">
+  <ol>
     <li>
       <p>
     <m>\exists</m> a book <m>b</m>, <m>\forall</m> people <m>p</m>, <m>p</m> has read <m>b</m>.
@@ -667,7 +667,7 @@
     Rewrite the statement formally using quantifiers and variables. Write the negation of the statement.
   </p>
 
-  <ol marker="a">
+  <ol>
     <li>
       <p>
     Everybody trusts somebody.
@@ -705,7 +705,7 @@
     For each statement write a new statement by interchanging the symbols <m>\forall</m> and <m>\exists</m>. Which is true– the given statement, the interchanged version, neither, or both?
   </p>
 
-  <ol marker="a">
+  <ol>
     <li>
       <p>
     <m>\forall x\in \mathbb{R}</m>, <m>\exists y\in \mathbb{R}</m> such that <m>x&lt;y</m>.

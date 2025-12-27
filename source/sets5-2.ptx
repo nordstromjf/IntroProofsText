@@ -15,7 +15,7 @@
 
   <example xml:id="E_setnotevarious"><title>Examples of Sets</title>
 
-  <ol marker="a">
+  <ol marker="(a)">
     <li><p><m>\{n\in \mathbb{Z} : n=2k, k\in \mathbb{Z}\}</m> is the set of even integers.</p></li>
     <li><p><m>\{(x, y): x+y=0, x\in \mathbb{R}, y\in \mathbb{R}\}</m> is the set of points in the plane whose coordinates sum to 0. </p></li>
     <li><p><m>\{x\in \mathbb{R} : 3\leq x\leq 7\}</m> is the closed interval <m>[3, 7]</m>.</p></li>
@@ -178,7 +178,7 @@
   <example xml:id="E_setops"><title>Operations on Sets</title><p>
     Let <m>A=\{x\in \mathbb{R} : 0\leq x\leq 4\}</m>  and <m>B=\{x\in \mathbb{R} : -1&lt; x &lt; 1\}</m>.</p>
     <p>Note, these sets can also be defined with interval notation, <m>A=[0, 4], B=(-1, 1)</m>.
-    <ol marker="a">
+    <ol marker="(a)">
       <li><p>Find <m>A\cup B</m>.</p>
     <answer><m>(-1, 4]</m></answer></li>
     <li><p>Find <m>A\cap B</m>.</p>
@@ -251,7 +251,7 @@ This is a set of <term>ordered pairs</term>, where the first coordinate comes fr
  <p>Now that we have defined operations on sets such as union and intersection, we can look at various properties of these operations. We saw that intersection involves an <q>and</q> statement, while union involves an <q>or</q>. As we work with these properties we will be able to see connections between properties of sets and the logical connectives we saw in <xref ref="chapter1"/>.</p>
 
   <p>We will refer to the following properties of sets as the <term>subset relations</term><idx>subset relations</idx>.
-    <ol marker="1">
+    <ol>
       <li><m>A\cap B\subseteq A</m>; <m>A\cap B\subseteq B</m>.</li>
       <li><m>A\subseteq A\cup B</m>; <m>B\subseteq A\cup B</m>.</li>
       <li><title>Transitivity</title><p>If <m>A\subseteq B</m> and  <m>B\subseteq C</m> then <m>A\subseteq C</m>.</p></li>
@@ -369,7 +369,7 @@ This is a set of <term>ordered pairs</term>, where the first coordinate comes fr
 <assemblage xml:id="L_SetIdent">
 <title>Summary of Set Identities</title><idx>set identities</idx><idx><h>set</h><h>properties</h></idx>
 <p>Let <m>U</m> be the universal set, and <m>A, B</m>, and <m>C</m> be subsets of the universal set.
-<ol marker="1">
+<ol>
 <li> <title>Commutative Laws</title> <m>A\cup B=B\cup A; \ \ A\cap B=B\cap A</m></li>
 <li> <title>Associative Laws</title> <m>(A\cup B)\cup C=A\cup(B\cup C);\ \ (A\cap B)\cap C=A\cap(B\cap C)</m></li>
 <li> <title>Distributive Laws</title> <m>A\cup(B\cap C)=(A\cup B)\cap (A\cup C);</m> <m>A\cap(B\cup C)=(A\cap B)\cup (A\cap C)</m></li>
@@ -441,7 +441,7 @@ This is a set of <term>ordered pairs</term>, where the first coordinate comes fr
     For each of the following determine if <m>A\subseteq B</m>. Then determine if <m>B\subseteq A</m>.
   </p>
 
-  <ol marker="a">
+  <ol >
     <li>
       <p>
     <m>A=\{2, \{2\}, (\sqrt{2})^2\}, B=\{2, \{2\}, \{\{2\}\}\}</m>.
@@ -478,7 +478,7 @@ This is a set of <term>ordered pairs</term>, where the first coordinate comes fr
     Complete the following sentences without using the symbols <m>\cup, \cap</m>, or <m>-</m>.
   </p>
 
-  <ol marker="a">
+  <ol>
     <li>
       <p>
     <m>x\notin A\cup B</m> if and only if ___.
@@ -505,7 +505,7 @@ This is a set of <term>ordered pairs</term>, where the first coordinate comes fr
     Let <m>A=\{1, 3, 5, 7, 9\}</m>, <m>B=\{3, 6, 9\}</m>, and <m>C=\{2, 4, 6, 8\}</m>. Find each of the following:
   </p>
 
-  <ol marker="a">
+  <ol>
     <li>
       <p>
     <m>A\cup B</m>.
@@ -562,7 +562,7 @@ This is a set of <term>ordered pairs</term>, where the first coordinate comes fr
     Let the universal set be <m>\mathbb{R}</m>, and let <m>A=\{x\in \mathbb{R}:0&lt; x\leq 2\}</m>, <m>B=\{x\in \mathbb{R}:1\leq x&lt; 4\}</m>, and <m>C=\{x\in \mathbb{R}:3\leq x&lt; 9\}</m>. Find each of the following:
   </p>
 
-  <ol marker="a">
+  <ol>
     <li>
       <p>
     <m>A\cup B</m>
@@ -630,7 +630,7 @@ This is a set of <term>ordered pairs</term>, where the first coordinate comes fr
     Determine whether each of the following are true or false.
   </p>
 
-  <ol marker="a">
+  <ol>
     <li>
       <p>
     <m>\mathbb{Z}^+\subseteq \mathbb{Q}</m>
@@ -692,7 +692,7 @@ This is a set of <term>ordered pairs</term>, where the first coordinate comes fr
     Let <m>A=\{a, b, c\}</m>, <m>B=\{b, c, d\}</m>, and <m>C=\{b, c, e\}</m>.
   </p>
 
-  <ol marker="a">
+  <ol>
     <li>
       <p>
     Find <m>A\cup(B\cap C)</m>, <m>(A\cup B)\cap C</m>, and <m>(A\cup B)\cap (A\cup C)</m>. Which of these sets are equal?
@@ -714,7 +714,7 @@ This is a set of <term>ordered pairs</term>, where the first coordinate comes fr
   </ol>
       </statement></exercise>
       <exercise><statement><p>Determine if the following statements are true or false. Give a justification for you answer.</p>
-        <ol marker="a">
+        <ol>
     <li>
       <p>
     The number 0 is in <m>\emptyset</m>.
@@ -746,7 +746,7 @@ This is a set of <term>ordered pairs</term>, where the first coordinate comes fr
     Let <m>A_i=\{x\in \mathbb{R}: -i\leq x\leq i\}</m> (the interval <m>[-i, i]</m>) for all nonnegative integers <m>i</m>.
   </p>
 
-  <ol marker="a">
+  <ol>
     <li>
       <p>
     Find <m>\bigcup_{i=0}^{4}A_i</m>.
@@ -792,7 +792,7 @@ This is a set of <term>ordered pairs</term>, where the first coordinate comes fr
   </ol>
       </statement></exercise>
     <!--  <exercise><statement><p>Determine if the set of sets is a partition of the given set.</p>
-        <ol marker="a">
+        <ol>
     <li>
       <p>
     Is <m>\{\{a, d, e\}, \{b, c\}, \{d, f\}\}</m> a partition of <m>\{a, b, c, d, e, f\}</m>?
@@ -844,7 +844,7 @@ A_3&amp;=\{n\in\mathbb{Z}: n=4k+3 \text{ for some } k\in \mathbb{Z}\}
     Let <m>A=\{1, 2\}</m> and <m>B=\{2, 3\}</m>. Find
   </p>
 
-  <ol marker="a">
+  <ol>
     <li>
       <p>
     <m>{\cal{P}}(A\cap B)</m>.
@@ -902,7 +902,7 @@ A_3&amp;=\{n\in\mathbb{Z}: n=4k+3 \text{ for some } k\in \mathbb{Z}\}
     True or False? If the statement is true give a proof. If the statement is false give a counterexample.
   </p>
 
-  <ol marker="a">
+  <ol>
     <li>
       <p>
     <m>A\cup(B- C)=(A\cup B)- (A\cup C)</m>.

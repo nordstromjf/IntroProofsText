@@ -1,0 +1,65 @@
+WARNING : Using CLI version 2.23.0 but project's `requirements.txt`
+WARNING : is configured to use 1.5.2. Consider either installing
+WARNING : CLI version 1.5.2 or running `pretext update`
+WARNING : to update `requirements.txt` and other managed files to match 2.23.0.
+WARNING : Could not find a target 'html', but found a target 'web' with format='html'; using this target.
+INFO    : Building target web
+INFO    : XSL conversion of /Users/jennifernordstrom/pretextbooks/introproofs/source/main.ptx by /Users/jennifernordstrom/.ptx/2.23.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/jennifernordstrom/.ptx/2.23.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : Generating any needed assets.
+INFO    : XSL conversion of /Users/jennifernordstrom/pretextbooks/introproofs/source/main.ptx by /Users/jennifernordstrom/.ptx/2.23.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/jennifernordstrom/.ptx/2.23.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/jennifernordstrom/pretextbooks/introproofs/source/main.ptx by /Users/jennifernordstrom/.ptx/2.23.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/jennifernordstrom/.ptx/2.23.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/jennifernordstrom/pretextbooks/introproofs/source/main.ptx by /Users/jennifernordstrom/.ptx/2.23.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/jennifernordstrom/.ptx/2.23.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/jennifernordstrom/pretextbooks/introproofs/source/main.ptx by /Users/jennifernordstrom/.ptx/2.23.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/jennifernordstrom/.ptx/2.23.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/jennifernordstrom/pretextbooks/introproofs/source/main.ptx by /Users/jennifernordstrom/.ptx/2.23.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/jennifernordstrom/.ptx/2.23.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/jennifernordstrom/pretextbooks/introproofs/source/main.ptx by /Users/jennifernordstrom/.ptx/2.23.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/jennifernordstrom/.ptx/2.23.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/jennifernordstrom/pretextbooks/introproofs/source/main.ptx by /Users/jennifernordstrom/.ptx/2.23.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/jennifernordstrom/.ptx/2.23.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/jennifernordstrom/pretextbooks/introproofs/source/main.ptx by /Users/jennifernordstrom/.ptx/2.23.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/jennifernordstrom/.ptx/2.23.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/jennifernordstrom/pretextbooks/introproofs/source/main.ptx by /Users/jennifernordstrom/.ptx/2.23.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/jennifernordstrom/.ptx/2.23.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/jennifernordstrom/pretextbooks/introproofs/source/main.ptx by /Users/jennifernordstrom/.ptx/2.23.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/jennifernordstrom/.ptx/2.23.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/jennifernordstrom/pretextbooks/introproofs/source/main.ptx by /Users/jennifernordstrom/.ptx/2.23.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/jennifernordstrom/.ptx/2.23.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/jennifernordstrom/pretextbooks/introproofs/source/main.ptx by /Users/jennifernordstrom/.ptx/2.23.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/jennifernordstrom/.ptx/2.23.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/jennifernordstrom/pretextbooks/introproofs/source/main.ptx by /Users/jennifernordstrom/.ptx/2.23.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/jennifernordstrom/.ptx/2.23.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : XSL conversion of /Users/jennifernordstrom/pretextbooks/introproofs/source/main.ptx by /Users/jennifernordstrom/.ptx/2.23.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/jennifernordstrom/.ptx/2.23.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : Finished generating assets.
+
+INFO    : Preparing to build into /Users/jennifernordstrom/pretextbooks/introproofs/output/web.
+INFO    : discovering source file's directory name: /Users/jennifernordstrom/pretextbooks/introproofs/source
+INFO    : verifying and expanding input directory: /Users/jennifernordstrom/pretextbooks/introproofs/source/../generated-assets
+INFO    : input directory expanded to absolute path: /Users/jennifernordstrom/pretextbooks/introproofs/generated-assets
+INFO    : verifying and expanding input directory: /Users/jennifernordstrom/pretextbooks/introproofs/source/../assets
+INFO    : input directory expanded to absolute path: /Users/jennifernordstrom/pretextbooks/introproofs/assets
+INFO    : discovering source file's directory name: /Users/jennifernordstrom/pretextbooks/introproofs/source
+INFO    : XSL conversion of /Users/jennifernordstrom/pretextbooks/introproofs/source/main.ptx by /Users/jennifernordstrom/.ptx/2.23.0/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : successful application of /Users/jennifernordstrom/.ptx/2.23.0/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : Downloading rs services file from https://runestone.academy/cdn/runestone/latest/webpack_static_imports.xml.
+INFO    : Runestone Services via online CDN query: version 7.11.5
+INFO    : Downloading Runestone Services, version 7.11.5
+INFO    : Extracting Runestone Services from archive file
+INFO    : Building custom css theme: theme-default-modern
+INFO    : converting /Users/jennifernordstrom/pretextbooks/introproofs/source/main.ptx to HTML in /var/folders/jx/_tr9kz5j537301qt36nttyh00000gn/T/ptx-2e23rfua
+INFO    : XSL conversion of /Users/jennifernordstrom/pretextbooks/introproofs/source/main.ptx by /Users/jennifernordstrom/.ptx/2.23.0/core/xsl/pretext-html.xsl
+INFO    : messages from the log for XSL processing:
+INFO    : * PTX:INFO:   checking ONLY the last TWO YEARS of element deprecations.
+Rerun with the string parameter "author.deprecations.all" set to "yes" to check your source against all deprecations.
+INFO    : successful application of /Users/jennifernordstrom/.ptx/2.23.0/core/xsl/pretext-html.xsl
+INFO    : Removing temporary directory /var/folders/jx/_tr9kz5j537301qt36nttyh00000gn/T/ptx-2e23rfua
+INFO    : Removing temporary directory /var/folders/jx/_tr9kz5j537301qt36nttyh00000gn/T/ptx-u1gkov9u
+INFO    : 
+Success! Run `pretext view web` to see the results.
+
+INFO    : 

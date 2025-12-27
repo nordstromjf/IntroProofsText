@@ -357,7 +357,7 @@ is the <term>equivalence class</term><idx>equivalence class</idx> of <m>a</m>.<n
 
   <p>Consider the equivalence relation <m>m\equiv n \mod 3</m>, on <m>\mathbb{Z}</m>.
 
-  <ol marker="a">
+  <ol marker="(a)">
 
   <li><p>Find <m>[0]</m>, the set of elements in <m>\mathbb{Z}</m> equivalent to 0.</p>
   <answer><m>[0]=\{0, 3, -3, 6, -6, \ldots\}=\{3k : k\in \mathbb{Z}\}</m></answer></li>
@@ -383,7 +383,7 @@ is the <term>equivalence class</term><idx>equivalence class</idx> of <m>a</m>.<n
   <p>A few other things to notice, distinct equivalence classes are disjoint--they have no elements in common. Also, <m>[a]</m> contains <m>a</m>. Furthermore, the equivalence classes <m>[0], [1], [2]</m> <term>partition</term> the integers.</p>
 
   <definition xml:id="D_partition"><statement><p>A set of subsets of a set <m>B</m>, <m>\{A_1, A_2, \ldots, A_n\}</m>, is a <term>partition</term><idx>partition</idx> of <m>B</m> if 
-  <ol marker="1">
+  <ol>
     <li><p><m>\bigcup_{i=1}^nA_i=B</m>,</p></li>
     <li><p><m>A_i\cap A_j=\emptyset</m> whenever <m>i\neq j</m>.</p></li>
   </ol>
@@ -404,7 +404,7 @@ is the <term>equivalence class</term><idx>equivalence class</idx> of <m>a</m>.<n
   <p>Consider the equivalence relation <m>A R B \Leftrightarrow N(a)=N(B)</m>, on <m>\mathcal{P}(\{1, 2, 3\})</m>.</p>
   <p>This is the relation where two subsets of <m>\{1, 2, 3\}</m> are related if they have the same number of elements. You can check that this is an equivalence relation.
 
-  <ol marker="a">
+  <ol marker="(a)">
   <li><p>Find <m>[\emptyset]</m>, the set of elements in <m>\mathcal{P}(\{1, 2, 3\})</m> equivalent to <m>\emptyset</m>.</p>
   <answer><m>[\emptyset]=\{\emptyset\}</m>, since this is the only subset with 0 elements.</answer></li>
   <li><p>Find <m>[\{1\}]</m>.</p>
@@ -524,7 +524,7 @@ is the <term>equivalence class</term><idx>equivalence class</idx> of <m>a</m>.<n
     <me>m\ T\ n \iff 3\mid (m-n).</me>
   </p>
 
-  <ol marker="a">
+  <ol>
     <li>
       <p>
     Is <m>10\ T\ 1</m>? Is <m>1\ T\ 10</m>? Is <m>(2, 2)\in T</m>? Is <m>(8, 1)\in T</m>?
@@ -556,7 +556,7 @@ is the <term>equivalence class</term><idx>equivalence class</idx> of <m>a</m>.<n
     Let <m>X=\{a, b, c\}</m> and <m>{\cal P}(X)</m> be the power set of <m>X</m>. Define the relation <m>R</m> on <m>{\cal P}(X)</m> by <me>A \ R\ B \iff A \text{ has the same number of elements as } B.</me>
   </p>
 
-  <ol marker="a">
+  <ol>
     <li>
       <p>
     Is <m>\{a, b\}\ R\ \{b, c\}</m>?
@@ -586,7 +586,7 @@ is the <term>equivalence class</term><idx>equivalence class</idx> of <m>a</m>.<n
     <me>m\ S\ n \iff 5\mid (m^2-n^2).</me>
   </p>
 
-  <ol marker="a">
+  <ol>
     <li>
       <p>
     Is <m>1\ S\ (-9)</m>?
@@ -618,7 +618,7 @@ is the <term>equivalence class</term><idx>equivalence class</idx> of <m>a</m>.<n
     Let <m>A=\{3, 4, 5\}</m> and <m>B=\{4, 5, 6\}</m> and let <m>R</m> be the <q>less than</q> relation. That is, for all <m>(x, y)\in A\times B</m>, <me>x\ R\ y \iff x&lt;y.</me>
   </p>
 
-  <ol marker="a">
+  <ol>
     <li>
       <p>
     Find the set of ordered pairs in <m>R</m>.
@@ -665,7 +665,7 @@ is the <term>equivalence class</term><idx>equivalence class</idx> of <m>a</m>.<n
     Let <m>G</m> be the relation on <m>\mathbb{R}</m> defined by <me>x\ G\ y\iff xy\geq 0.</me>
   </p>
 
-  <ol marker="a">
+  <ol>
     <li>
       <p>
     Determine if <m>G</m> is reflexive. Justify your answer.
@@ -691,7 +691,7 @@ is the <term>equivalence class</term><idx>equivalence class</idx> of <m>a</m>.<n
     Let <m>D</m> be the relation on <m>\mathbb{Z}^+</m> defined by <me>m\ D\ n\iff m\mid n.</me>
   </p>
 
-  <ol marker="a">
+  <ol>
     <li>
       <p>
     Determine if <m>D</m> is reflexive. Justify your answer.
@@ -717,7 +717,7 @@ is the <term>equivalence class</term><idx>equivalence class</idx> of <m>a</m>.<n
     Let <m>F</m> be the relation on <m>\mathbb{R}\times \mathbb{R}</m> defined by <me>(x_1, y_1)\ F\ (x_2, y_2)\iff x_1=x_2.</me>
   </p>
 
-  <ol marker="a">
+  <ol>
     <li>
       <p>
     Determine if <m>F</m> is reflexive. Justify your answer.
@@ -743,7 +743,7 @@ is the <term>equivalence class</term><idx>equivalence class</idx> of <m>a</m>.<n
     Define the relation <m>R</m> on <m>\mathbb{Z}</m> by <me>m\ R\ n \iff 5\mid(m-n).</me>
   </p>
 
-  <ol marker="a">
+  <ol>
     <li>
       <p>
     Prove or disprove <m>R</m> is reflexive.
@@ -769,7 +769,7 @@ is the <term>equivalence class</term><idx>equivalence class</idx> of <m>a</m>.<n
     Let <m>X=\{a, b, c\}</m> and <m>{\cal P}(X)</m> be the power set of <m>X</m>. Define the relation <m>L</m> on <m>{\cal P}(X)</m> by <me>A\ L\ B \iff \text{ the number of elements in $A$ is less than the number of elements in $B$.}</me>
   </p>
 
-  <ol marker="a">
+  <ol>
     <li>
       <p>
     Prove or disprove <m>L</m> is reflexive.
@@ -795,7 +795,7 @@ is the <term>equivalence class</term><idx>equivalence class</idx> of <m>a</m>.<n
     Let <m>X</m> be a nonempty set and <m>{\cal P}(X)</m> be the power set of <m>X</m>. Define the <q>subset</q> relation <m>S</m> on <m>{\cal P}(X)</m> by <me>A\ S\ B \iff A\subseteq B.</me>
   </p>
 
-  <ol marker="a">
+  <ol>
     <li>
       <p>
     Prove or disprove <m>S</m> is reflexive.

@@ -6,14 +6,20 @@
 <!--*                                          *-->
 <!--********************************************-->
 <html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Cardinality</title>
-<meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:type" content="book">
-<meta property="book:title" content="Introduction to Proofs">
-<meta property="book:author" content="Jennifer Firkins Nordstrom">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
 <script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
@@ -69,13 +75,12 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
-<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
-</script><link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
-<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
-<!--** eBookCongig is necessary to configure interactive       **-->
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Introduction to Proofs">
+<meta property="book:author" content="Jennifer Firkins Nordstrom">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -97,307 +102,23 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.5.6';
+eBookConfig.runestone_version = '7.11.5';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.82032a8574f6ce75.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6a985cbf816db5c7.css">
-<style>
-#arguments-20-1-1-4 { counter-set: arguments-20-1-1-4 0; }
-#arguments-20-1-1-4 > li::marker { content: ""counter(arguments-20-1-1-4,lower-alpha)""; }
-#arguments-20-1-1-4 > li { counter-increment: arguments-20-1-1-4; }
-#arguments-20-2-1-3 { counter-set: arguments-20-2-1-3 0; }
-#arguments-20-2-1-3 > li::marker { content: ""counter(arguments-20-2-1-3,lower-alpha)""; }
-#arguments-20-2-1-3 > li { counter-increment: arguments-20-2-1-3; }
-#arguments-20-3-1-2 { counter-set: arguments-20-3-1-2 0; }
-#arguments-20-3-1-2 > li::marker { content: "("counter(arguments-20-3-1-2,lower-alpha)")"; }
-#arguments-20-3-1-2 > li { counter-increment: arguments-20-3-1-2; }
-#B_logicalequivalences-3-5 { counter-set: B_logicalequivalences-3-5 0; }
-#B_logicalequivalences-3-5 > li::marker { content: ""counter(B_logicalequivalences-3-5,decimal)""; }
-#B_logicalequivalences-3-5 > li { counter-increment: B_logicalequivalences-3-5; }
-#connectives-73-1-1-2 { counter-set: connectives-73-1-1-2 0; }
-#connectives-73-1-1-2 > li::marker { content: ""counter(connectives-73-1-1-2,lower-alpha)""; }
-#connectives-73-1-1-2 > li { counter-increment: connectives-73-1-1-2; }
-#connectives-73-2-1-2 { counter-set: connectives-73-2-1-2 0; }
-#connectives-73-2-1-2 > li::marker { content: ""counter(connectives-73-2-1-2,lower-alpha)""; }
-#connectives-73-2-1-2 > li { counter-increment: connectives-73-2-1-2; }
-#connectives-73-3-1-2 { counter-set: connectives-73-3-1-2 0; }
-#connectives-73-3-1-2 > li::marker { content: ""counter(connectives-73-3-1-2,lower-alpha)""; }
-#connectives-73-3-1-2 > li { counter-increment: connectives-73-3-1-2; }
-#ER_onlyandnot-1-2 { counter-set: ER_onlyandnot-1-2 0; }
-#ER_onlyandnot-1-2 > li::marker { content: ""counter(ER_onlyandnot-1-2,lower-alpha)""; }
-#ER_onlyandnot-1-2 > li { counter-increment: ER_onlyandnot-1-2; }
-#connectives-73-5-1-2 { counter-set: connectives-73-5-1-2 0; }
-#connectives-73-5-1-2 > li::marker { content: ""counter(connectives-73-5-1-2,lower-alpha)""; }
-#connectives-73-5-1-2 > li { counter-increment: connectives-73-5-1-2; }
-#setnotation-22-4-1-2 { counter-set: setnotation-22-4-1-2 0; }
-#setnotation-22-4-1-2 > li::marker { content: ""counter(setnotation-22-4-1-2,lower-alpha)""; }
-#setnotation-22-4-1-2 > li { counter-increment: setnotation-22-4-1-2; }
-#setnotation-22-5-1-2 { counter-set: setnotation-22-5-1-2 0; }
-#setnotation-22-5-1-2 > li::marker { content: ""counter(setnotation-22-5-1-2,lower-alpha)""; }
-#setnotation-22-5-1-2 > li { counter-increment: setnotation-22-5-1-2; }
-#E_multquant1-2-2 { counter-set: E_multquant1-2-2 0; }
-#E_multquant1-2-2 > li::marker { content: ""counter(E_multquant1-2-2,lower-alpha)""; }
-#E_multquant1-2-2 > li { counter-increment: E_multquant1-2-2; }
-#quantifiers-6-14-3-1-2 { counter-set: quantifiers-6-14-3-1-2 0; }
-#quantifiers-6-14-3-1-2 > li::marker { content: ""counter(quantifiers-6-14-3-1-2,lower-alpha)""; }
-#quantifiers-6-14-3-1-2 > li { counter-increment: quantifiers-6-14-3-1-2; }
-#quantifiers-6-14-4-1-2 { counter-set: quantifiers-6-14-4-1-2 0; }
-#quantifiers-6-14-4-1-2 > li::marker { content: ""counter(quantifiers-6-14-4-1-2,lower-alpha)""; }
-#quantifiers-6-14-4-1-2 > li { counter-increment: quantifiers-6-14-4-1-2; }
-#quantifiers-6-14-5-1-2 { counter-set: quantifiers-6-14-5-1-2 0; }
-#quantifiers-6-14-5-1-2 > li::marker { content: ""counter(quantifiers-6-14-5-1-2,lower-alpha)""; }
-#quantifiers-6-14-5-1-2 > li { counter-increment: quantifiers-6-14-5-1-2; }
-#quantifiers-6-14-6-1-2 { counter-set: quantifiers-6-14-6-1-2 0; }
-#quantifiers-6-14-6-1-2 > li::marker { content: ""counter(quantifiers-6-14-6-1-2,lower-alpha)""; }
-#quantifiers-6-14-6-1-2 > li { counter-increment: quantifiers-6-14-6-1-2; }
-#quantifiers-6-14-7-1-2 { counter-set: quantifiers-6-14-7-1-2 0; }
-#quantifiers-6-14-7-1-2 > li::marker { content: ""counter(quantifiers-6-14-7-1-2,lower-alpha)""; }
-#quantifiers-6-14-7-1-2 > li { counter-increment: quantifiers-6-14-7-1-2; }
-#quantifiers-6-14-8-1-2 { counter-set: quantifiers-6-14-8-1-2 0; }
-#quantifiers-6-14-8-1-2 > li::marker { content: ""counter(quantifiers-6-14-8-1-2,lower-alpha)""; }
-#quantifiers-6-14-8-1-2 > li { counter-increment: quantifiers-6-14-8-1-2; }
-#conditionals-33-1-1-2 { counter-set: conditionals-33-1-1-2 0; }
-#conditionals-33-1-1-2 > li::marker { content: ""counter(conditionals-33-1-1-2,lower-alpha)""; }
-#conditionals-33-1-1-2 > li { counter-increment: conditionals-33-1-1-2; }
-#conditionals-33-2-1-2 { counter-set: conditionals-33-2-1-2 0; }
-#conditionals-33-2-1-2 > li::marker { content: ""counter(conditionals-33-2-1-2,lower-alpha)""; }
-#conditionals-33-2-1-2 > li { counter-increment: conditionals-33-2-1-2; }
-#conditionals-33-3-1-2 { counter-set: conditionals-33-3-1-2 0; }
-#conditionals-33-3-1-2 > li::marker { content: ""counter(conditionals-33-3-1-2,lower-alpha)""; }
-#conditionals-33-3-1-2 > li { counter-increment: conditionals-33-3-1-2; }
-#conditionals-33-4-1-2 { counter-set: conditionals-33-4-1-2 0; }
-#conditionals-33-4-1-2 > li::marker { content: ""counter(conditionals-33-4-1-2,lower-alpha)""; }
-#conditionals-33-4-1-2 > li { counter-increment: conditionals-33-4-1-2; }
-#conditionals-33-5-1-2 { counter-set: conditionals-33-5-1-2 0; }
-#conditionals-33-5-1-2 > li::marker { content: ""counter(conditionals-33-5-1-2,lower-alpha)""; }
-#conditionals-33-5-1-2 > li { counter-increment: conditionals-33-5-1-2; }
-#directproof-29-1-1-2 { counter-set: directproof-29-1-1-2 0; }
-#directproof-29-1-1-2 > li::marker { content: ""counter(directproof-29-1-1-2,lower-alpha)""; }
-#directproof-29-1-1-2 > li { counter-increment: directproof-29-1-1-2; }
-#directproof-29-11-1-2 { counter-set: directproof-29-11-1-2 0; }
-#directproof-29-11-1-2 > li::marker { content: ""counter(directproof-29-11-1-2,lower-alpha)""; }
-#directproof-29-11-1-2 > li { counter-increment: directproof-29-11-1-2; }
-#moredirect-7-1-1-2 { counter-set: moredirect-7-1-1-2 0; }
-#moredirect-7-1-1-2 > li::marker { content: ""counter(moredirect-7-1-1-2,lower-alpha)""; }
-#moredirect-7-1-1-2 > li { counter-increment: moredirect-7-1-1-2; }
-#moredirect-7-4-1-2 { counter-set: moredirect-7-4-1-2 0; }
-#moredirect-7-4-1-2 > li::marker { content: "("counter(moredirect-7-4-1-2,lower-alpha)")"; }
-#moredirect-7-4-1-2 > li { counter-increment: moredirect-7-4-1-2; }
-#ER_averagerat-1-2 { counter-set: ER_averagerat-1-2 0; }
-#ER_averagerat-1-2 > li::marker { content: ""counter(ER_averagerat-1-2,lower-alpha)""; }
-#ER_averagerat-1-2 > li { counter-increment: ER_averagerat-1-2; }
-#moredirect-7-7-1-2 { counter-set: moredirect-7-7-1-2 0; }
-#moredirect-7-7-1-2 > li::marker { content: ""counter(moredirect-7-7-1-2,lower-alpha)""; }
-#moredirect-7-7-1-2 > li { counter-increment: moredirect-7-7-1-2; }
-#moredirect-7-9-1-2 { counter-set: moredirect-7-9-1-2 0; }
-#moredirect-7-9-1-2 > li::marker { content: ""counter(moredirect-7-9-1-2,lower-alpha)""; }
-#moredirect-7-9-1-2 > li { counter-increment: moredirect-7-9-1-2; }
-#cases-31-1-1-2 { counter-set: cases-31-1-1-2 0; }
-#cases-31-1-1-2 > li::marker { content: ""counter(cases-31-1-1-2,lower-alpha)""; }
-#cases-31-1-1-2 > li { counter-increment: cases-31-1-1-2; }
-#SS_twoproofs-18-1-1-2 { counter-set: SS_twoproofs-18-1-1-2 0; }
-#SS_twoproofs-18-1-1-2 > li::marker { content: ""counter(SS_twoproofs-18-1-1-2,lower-alpha)""; }
-#SS_twoproofs-18-1-1-2 > li { counter-increment: SS_twoproofs-18-1-1-2; }
-#SS_twoproofs-18-2-1-2 { counter-set: SS_twoproofs-18-2-1-2 0; }
-#SS_twoproofs-18-2-1-2 > li::marker { content: ""counter(SS_twoproofs-18-2-1-2,lower-alpha)""; }
-#SS_twoproofs-18-2-1-2 > li { counter-increment: SS_twoproofs-18-2-1-2; }
-#SS_twoproofs-18-3-1-2 { counter-set: SS_twoproofs-18-3-1-2 0; }
-#SS_twoproofs-18-3-1-2 > li::marker { content: ""counter(SS_twoproofs-18-3-1-2,lower-alpha)""; }
-#SS_twoproofs-18-3-1-2 > li { counter-increment: SS_twoproofs-18-3-1-2; }
-#SS_twoproofs-18-4-1-2 { counter-set: SS_twoproofs-18-4-1-2 0; }
-#SS_twoproofs-18-4-1-2 > li::marker { content: ""counter(SS_twoproofs-18-4-1-2,lower-alpha)""; }
-#SS_twoproofs-18-4-1-2 > li { counter-increment: SS_twoproofs-18-4-1-2; }
-#SS_twoproofs-18-5-1-2 { counter-set: SS_twoproofs-18-5-1-2 0; }
-#SS_twoproofs-18-5-1-2 > li::marker { content: ""counter(SS_twoproofs-18-5-1-2,lower-alpha)""; }
-#SS_twoproofs-18-5-1-2 > li { counter-increment: SS_twoproofs-18-5-1-2; }
-#B_propsums-2-1 { counter-set: B_propsums-2-1 0; }
-#B_propsums-2-1 > li::marker { content: ""counter(B_propsums-2-1,decimal)""; }
-#B_propsums-2-1 > li { counter-increment: B_propsums-2-1; }
-#summation-27-1-1-2 { counter-set: summation-27-1-1-2 0; }
-#summation-27-1-1-2 > li::marker { content: ""counter(summation-27-1-1-2,lower-alpha)""; }
-#summation-27-1-1-2 > li { counter-increment: summation-27-1-1-2; }
-#summation-27-2-1-2 { counter-set: summation-27-2-1-2 0; }
-#summation-27-2-1-2 > li::marker { content: ""counter(summation-27-2-1-2,lower-alpha)""; }
-#summation-27-2-1-2 > li { counter-increment: summation-27-2-1-2; }
-#summation-27-3-1-2 { counter-set: summation-27-3-1-2 0; }
-#summation-27-3-1-2 > li::marker { content: ""counter(summation-27-3-1-2,lower-alpha)""; }
-#summation-27-3-1-2 > li { counter-increment: summation-27-3-1-2; }
-#summation-27-8-1-2 { counter-set: summation-27-8-1-2 0; }
-#summation-27-8-1-2 > li::marker { content: ""counter(summation-27-8-1-2,lower-alpha)""; }
-#summation-27-8-1-2 > li { counter-increment: summation-27-8-1-2; }
-#B_induction-3-4 { counter-set: B_induction-3-4 0; }
-#B_induction-3-4 > li::marker { content: ""counter(B_induction-3-4,decimal)""; }
-#B_induction-3-4 > li { counter-increment: B_induction-3-4; }
-#induction-6-1 { counter-set: induction-6-1 0; }
-#induction-6-1 > li::marker { content: "("counter(induction-6-1,decimal)")"; }
-#induction-6-1 > li { counter-increment: induction-6-1; }
-#ER_indpowersof2-1-2 { counter-set: ER_indpowersof2-1-2 0; }
-#ER_indpowersof2-1-2 > li::marker { content: ""counter(ER_indpowersof2-1-2,lower-alpha)""; }
-#ER_indpowersof2-1-2 > li { counter-increment: ER_indpowersof2-1-2; }
-#B_strongind-4-3 { counter-set: B_strongind-4-3 0; }
-#B_strongind-4-3 > li::marker { content: ""counter(B_strongind-4-3,decimal)""; }
-#B_strongind-4-3 > li { counter-increment: B_strongind-4-3; }
-#E_domainqexist1-3-1 { counter-set: E_domainqexist1-3-1 0; }
-#E_domainqexist1-3-1 > li::marker { content: ""counter(E_domainqexist1-3-1,lower-alpha)""; }
-#E_domainqexist1-3-1 > li { counter-increment: E_domainqexist1-3-1; }
-#B_pfexistential-3-3 { counter-set: B_pfexistential-3-3 0; }
-#B_pfexistential-3-3 > li::marker { content: ""counter(B_pfexistential-3-3,decimal)""; }
-#B_pfexistential-3-3 > li { counter-increment: B_pfexistential-3-3; }
-#B_pfunique-3-3 { counter-set: B_pfunique-3-3 0; }
-#B_pfunique-3-3 > li::marker { content: ""counter(B_pfunique-3-3,decimal)""; }
-#B_pfunique-3-3 > li { counter-increment: B_pfunique-3-3; }
-#existunique-23-1 { counter-set: existunique-23-1 0; }
-#existunique-23-1 > li::marker { content: ""counter(existunique-23-1,decimal)""; }
-#existunique-23-1 > li { counter-increment: existunique-23-1; }
-#E_wop-3-2 { counter-set: E_wop-3-2 0; }
-#E_wop-3-2 > li::marker { content: ""counter(E_wop-3-2,decimal)""; }
-#E_wop-3-2 > li { counter-increment: E_wop-3-2; }
-#E_setnotevarious-2 { counter-set: E_setnotevarious-2 0; }
-#E_setnotevarious-2 > li::marker { content: ""counter(E_setnotevarious-2,lower-alpha)""; }
-#E_setnotevarious-2 > li { counter-increment: E_setnotevarious-2; }
-#E_setops-3-2 { counter-set: E_setops-3-2 0; }
-#E_setops-3-2 > li::marker { content: ""counter(E_setops-3-2,lower-alpha)""; }
-#E_setops-3-2 > li { counter-increment: E_setops-3-2; }
-#SS_setproofs-3-3 { counter-set: SS_setproofs-3-3 0; }
-#SS_setproofs-3-3 > li::marker { content: ""counter(SS_setproofs-3-3,decimal)""; }
-#SS_setproofs-3-3 > li { counter-increment: SS_setproofs-3-3; }
-#L_SetIdent-4-4 { counter-set: L_SetIdent-4-4 0; }
-#L_SetIdent-4-4 > li::marker { content: ""counter(L_SetIdent-4-4,decimal)""; }
-#L_SetIdent-4-4 > li { counter-increment: L_SetIdent-4-4; }
-#SS_setproofs-25-1-1-2 { counter-set: SS_setproofs-25-1-1-2 0; }
-#SS_setproofs-25-1-1-2 > li::marker { content: ""counter(SS_setproofs-25-1-1-2,lower-alpha)""; }
-#SS_setproofs-25-1-1-2 > li { counter-increment: SS_setproofs-25-1-1-2; }
-#SS_setproofs-25-2-1-2 { counter-set: SS_setproofs-25-2-1-2 0; }
-#SS_setproofs-25-2-1-2 > li::marker { content: ""counter(SS_setproofs-25-2-1-2,lower-alpha)""; }
-#SS_setproofs-25-2-1-2 > li { counter-increment: SS_setproofs-25-2-1-2; }
-#SS_setproofs-25-3-1-2 { counter-set: SS_setproofs-25-3-1-2 0; }
-#SS_setproofs-25-3-1-2 > li::marker { content: ""counter(SS_setproofs-25-3-1-2,lower-alpha)""; }
-#SS_setproofs-25-3-1-2 > li { counter-increment: SS_setproofs-25-3-1-2; }
-#SS_setproofs-25-4-1-2 { counter-set: SS_setproofs-25-4-1-2 0; }
-#SS_setproofs-25-4-1-2 > li::marker { content: ""counter(SS_setproofs-25-4-1-2,lower-alpha)""; }
-#SS_setproofs-25-4-1-2 > li { counter-increment: SS_setproofs-25-4-1-2; }
-#SS_setproofs-25-5-1-2 { counter-set: SS_setproofs-25-5-1-2 0; }
-#SS_setproofs-25-5-1-2 > li::marker { content: ""counter(SS_setproofs-25-5-1-2,lower-alpha)""; }
-#SS_setproofs-25-5-1-2 > li { counter-increment: SS_setproofs-25-5-1-2; }
-#SS_setproofs-25-6-1-2 { counter-set: SS_setproofs-25-6-1-2 0; }
-#SS_setproofs-25-6-1-2 > li::marker { content: ""counter(SS_setproofs-25-6-1-2,lower-alpha)""; }
-#SS_setproofs-25-6-1-2 > li { counter-increment: SS_setproofs-25-6-1-2; }
-#SS_setproofs-25-7-1-2 { counter-set: SS_setproofs-25-7-1-2 0; }
-#SS_setproofs-25-7-1-2 > li::marker { content: ""counter(SS_setproofs-25-7-1-2,lower-alpha)""; }
-#SS_setproofs-25-7-1-2 > li { counter-increment: SS_setproofs-25-7-1-2; }
-#SS_setproofs-25-15-1-2 { counter-set: SS_setproofs-25-15-1-2 0; }
-#SS_setproofs-25-15-1-2 > li::marker { content: ""counter(SS_setproofs-25-15-1-2,lower-alpha)""; }
-#SS_setproofs-25-15-1-2 > li { counter-increment: SS_setproofs-25-15-1-2; }
-#E_notfunctionimages-2-1 { counter-set: E_notfunctionimages-2-1 0; }
-#E_notfunctionimages-2-1 > li::marker { content: ""counter(E_notfunctionimages-2-1,lower-alpha)""; }
-#E_notfunctionimages-2-1 > li { counter-increment: E_notfunctionimages-2-1; }
-#E_addasfn-3-1 { counter-set: E_addasfn-3-1 0; }
-#E_addasfn-3-1 > li::marker { content: ""counter(E_addasfn-3-1,lower-alpha)""; }
-#E_addasfn-3-1 > li { counter-increment: E_addasfn-3-1; }
-#functions-45-1-1-2 { counter-set: functions-45-1-1-2 0; }
-#functions-45-1-1-2 > li::marker { content: ""counter(functions-45-1-1-2,lower-alpha)""; }
-#functions-45-1-1-2 > li { counter-increment: functions-45-1-1-2; }
-#functions-45-2-1-2 { counter-set: functions-45-2-1-2 0; }
-#functions-45-2-1-2 > li::marker { content: ""counter(functions-45-2-1-2,lower-alpha)""; }
-#functions-45-2-1-2 > li { counter-increment: functions-45-2-1-2; }
-#functions-45-3-1-2 { counter-set: functions-45-3-1-2 0; }
-#functions-45-3-1-2 > li::marker { content: ""counter(functions-45-3-1-2,lower-alpha)""; }
-#functions-45-3-1-2 > li { counter-increment: functions-45-3-1-2; }
-#functions-45-4-1-2 { counter-set: functions-45-4-1-2 0; }
-#functions-45-4-1-2 > li::marker { content: ""counter(functions-45-4-1-2,lower-alpha)""; }
-#functions-45-4-1-2 > li { counter-increment: functions-45-4-1-2; }
-#functions-45-5-1-2 { counter-set: functions-45-5-1-2 0; }
-#functions-45-5-1-2 > li::marker { content: ""counter(functions-45-5-1-2,lower-alpha)""; }
-#functions-45-5-1-2 > li { counter-increment: functions-45-5-1-2; }
-#functions-45-7-1-3 { counter-set: functions-45-7-1-3 0; }
-#functions-45-7-1-3 > li::marker { content: ""counter(functions-45-7-1-3,lower-alpha)""; }
-#functions-45-7-1-3 > li { counter-increment: functions-45-7-1-3; }
-#functions-45-8-1-2 { counter-set: functions-45-8-1-2 0; }
-#functions-45-8-1-2 > li::marker { content: ""counter(functions-45-8-1-2,lower-alpha)""; }
-#functions-45-8-1-2 > li { counter-increment: functions-45-8-1-2; }
-#functions-45-9-1-2 { counter-set: functions-45-9-1-2 0; }
-#functions-45-9-1-2 > li::marker { content: ""counter(functions-45-9-1-2,lower-alpha)""; }
-#functions-45-9-1-2 > li { counter-increment: functions-45-9-1-2; }
-#functions-45-10-1-3 { counter-set: functions-45-10-1-3 0; }
-#functions-45-10-1-3 > li::marker { content: ""counter(functions-45-10-1-3,lower-alpha)""; }
-#functions-45-10-1-3 > li { counter-increment: functions-45-10-1-3; }
-#functions-45-11-1-3 { counter-set: functions-45-11-1-3 0; }
-#functions-45-11-1-3 > li::marker { content: ""counter(functions-45-11-1-3,lower-alpha)""; }
-#functions-45-11-1-3 > li { counter-increment: functions-45-11-1-3; }
-#functions-45-12-1-2 { counter-set: functions-45-12-1-2 0; }
-#functions-45-12-1-2 > li::marker { content: ""counter(functions-45-12-1-2,lower-alpha)""; }
-#functions-45-12-1-2 > li { counter-increment: functions-45-12-1-2; }
-#E_equivclasses-2-3 { counter-set: E_equivclasses-2-3 0; }
-#E_equivclasses-2-3 > li::marker { content: ""counter(E_equivclasses-2-3,lower-alpha)""; }
-#E_equivclasses-2-3 > li { counter-increment: E_equivclasses-2-3; }
-#D_partition-1-1-6 { counter-set: D_partition-1-1-6 0; }
-#D_partition-1-1-6 > li::marker { content: ""counter(D_partition-1-1-6,decimal)""; }
-#D_partition-1-1-6 > li { counter-increment: D_partition-1-1-6; }
-#E_equivclasses2-4-2 { counter-set: E_equivclasses2-4-2 0; }
-#E_equivclasses2-4-2 > li::marker { content: ""counter(E_equivclasses2-4-2,lower-alpha)""; }
-#E_equivclasses2-4-2 > li { counter-increment: E_equivclasses2-4-2; }
-#SS_equivrelations-47-1-1-3 { counter-set: SS_equivrelations-47-1-1-3 0; }
-#SS_equivrelations-47-1-1-3 > li::marker { content: ""counter(SS_equivrelations-47-1-1-3,lower-alpha)""; }
-#SS_equivrelations-47-1-1-3 > li { counter-increment: SS_equivrelations-47-1-1-3; }
-#SS_equivrelations-47-2-1-3 { counter-set: SS_equivrelations-47-2-1-3 0; }
-#SS_equivrelations-47-2-1-3 > li::marker { content: ""counter(SS_equivrelations-47-2-1-3,lower-alpha)""; }
-#SS_equivrelations-47-2-1-3 > li { counter-increment: SS_equivrelations-47-2-1-3; }
-#SS_equivrelations-47-4-1-2 { counter-set: SS_equivrelations-47-4-1-2 0; }
-#SS_equivrelations-47-4-1-2 > li::marker { content: ""counter(SS_equivrelations-47-4-1-2,lower-alpha)""; }
-#SS_equivrelations-47-4-1-2 > li { counter-increment: SS_equivrelations-47-4-1-2; }
-#SS_equivrelations-47-5-1-2 { counter-set: SS_equivrelations-47-5-1-2 0; }
-#SS_equivrelations-47-5-1-2 > li::marker { content: ""counter(SS_equivrelations-47-5-1-2,lower-alpha)""; }
-#SS_equivrelations-47-5-1-2 > li { counter-increment: SS_equivrelations-47-5-1-2; }
-#SS_equivrelations-47-6-1-2 { counter-set: SS_equivrelations-47-6-1-2 0; }
-#SS_equivrelations-47-6-1-2 > li::marker { content: ""counter(SS_equivrelations-47-6-1-2,lower-alpha)""; }
-#SS_equivrelations-47-6-1-2 > li { counter-increment: SS_equivrelations-47-6-1-2; }
-#SS_equivrelations-47-7-1-2 { counter-set: SS_equivrelations-47-7-1-2 0; }
-#SS_equivrelations-47-7-1-2 > li::marker { content: ""counter(SS_equivrelations-47-7-1-2,lower-alpha)""; }
-#SS_equivrelations-47-7-1-2 > li { counter-increment: SS_equivrelations-47-7-1-2; }
-#SS_equivrelations-47-8-1-2 { counter-set: SS_equivrelations-47-8-1-2 0; }
-#SS_equivrelations-47-8-1-2 > li::marker { content: ""counter(SS_equivrelations-47-8-1-2,lower-alpha)""; }
-#SS_equivrelations-47-8-1-2 > li { counter-increment: SS_equivrelations-47-8-1-2; }
-#SS_equivrelations-47-9-1-2 { counter-set: SS_equivrelations-47-9-1-2 0; }
-#SS_equivrelations-47-9-1-2 > li::marker { content: ""counter(SS_equivrelations-47-9-1-2,lower-alpha)""; }
-#SS_equivrelations-47-9-1-2 > li { counter-increment: SS_equivrelations-47-9-1-2; }
-#D_RSTprop2-1-1-3 { counter-set: D_RSTprop2-1-1-3 0; }
-#D_RSTprop2-1-1-3 > li::marker { content: ""counter(D_RSTprop2-1-1-3,decimal)""; }
-#D_RSTprop2-1-1-3 > li { counter-increment: D_RSTprop2-1-1-3; }
-#T_totalorder-1-1-4 { counter-set: T_totalorder-1-1-4 0; }
-#T_totalorder-1-1-4 > li::marker { content: ""counter(T_totalorder-1-1-4,decimal)""; }
-#T_totalorder-1-1-4 > li { counter-increment: T_totalorder-1-1-4; }
-#orders-33-1-1-2 { counter-set: orders-33-1-1-2 0; }
-#orders-33-1-1-2 > li::marker { content: ""counter(orders-33-1-1-2,lower-alpha)""; }
-#orders-33-1-1-2 > li { counter-increment: orders-33-1-1-2; }
-#orders-33-2-1-2 { counter-set: orders-33-2-1-2 0; }
-#orders-33-2-1-2 > li::marker { content: ""counter(orders-33-2-1-2,lower-alpha)""; }
-#orders-33-2-1-2 > li { counter-increment: orders-33-2-1-2; }
-#orders-33-3-1-2 { counter-set: orders-33-3-1-2 0; }
-#orders-33-3-1-2 > li::marker { content: ""counter(orders-33-3-1-2,lower-alpha)""; }
-#orders-33-3-1-2 > li { counter-increment: orders-33-3-1-2; }
-#orders-33-4-1-2 { counter-set: orders-33-4-1-2 0; }
-#orders-33-4-1-2 > li::marker { content: ""counter(orders-33-4-1-2,lower-alpha)""; }
-#orders-33-4-1-2 > li { counter-increment: orders-33-4-1-2; }
-#binomial9-30-2-1-1-1 { counter-set: binomial9-30-2-1-1-1 0; }
-#binomial9-30-2-1-1-1 > li::marker { content: ""counter(binomial9-30-2-1-1-1,lower-alpha)""; }
-#binomial9-30-2-1-1-1 > li { counter-increment: binomial9-30-2-1-1-1; }
-#cardinality-31-6-1-2 { counter-set: cardinality-31-6-1-2 0; }
-#cardinality-31-6-1-2 > li::marker { content: ""counter(cardinality-31-6-1-2,lower-alpha)""; }
-#cardinality-31-6-1-2 > li { counter-increment: cardinality-31-6-1-2; }
-</style>
+<script src="_static/prefix-runtime.42217a82c75796c8.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.7e141ad8414abf4a.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.f4ab138da65f4203.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
 </head>
 <body class="pretext book ignore-math">
-<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
-<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
-<h1 class="heading"><a href="IntroProofs.html"><span class="title">Introduction to Proofs:</span> <span class="subtitle">An Active Exploration of Mathematical Language</span></a></h1>
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="IntroProofs.html"><span class="title">Introduction to Proofs</span> <span class="subtitle">An Active Exploration of Mathematical Language</span></a></h1>
 <p class="byline">Jennifer Firkins Nordstrom</p>
-</div>
-</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
 <button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-2.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
 <div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
@@ -595,27 +316,37 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="cardinality"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">6.2</span><span class="space"> </span><span class="title">Cardinality</span>
 </h2>
-<div class="para" id="cardinality-3">In this section we will explore what it means for a set to be infinite and whether infinite sets such as the integers, the rational numbers, and the real numbers have the same “size”.</div>
-<div class="para" id="cardinality-4">First, start with finite sets. The size of a finite set is the number of elements in the set. It may seem simple to determine the size of a set by just counting the elements. But suppose I have a bag of candy and a class of students. I could decide if I have enough candy by just counting the pieces and the students and seeing if I have more candy or students. But suppose I have a lot of candy and a lot of students. It might be faster just to start passing out the candy to the students. If I run out of candy, I have more students; if I run out of students, I have more candy. We will use this idea of matching up objects in two sets to define the size of a set and to decide which set is bigger.</div>
+<div class="para" id="cardinality-3">In this section we will explore what it means for a set to be infinite and whether infinite sets such as the integers, the rational numbers, and the real numbers have the same “size”.<div class="autopermalink" data-description="Paragraph"><a href="#cardinality-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="cardinality-4">First, start with finite sets. The size of a finite set is the number of elements in the set. It may seem simple to determine the size of a set by just counting the elements. But suppose I have a bag of candy and a class of students. I could decide if I have enough candy by just counting the pieces and the students and seeing if I have more candy or students. But suppose I have a lot of candy and a lot of students. It might be faster just to start passing out the candy to the students. If I run out of candy, I have more students; if I run out of students, I have more candy. We will use this idea of matching up objects in two sets to define the size of a set and to decide which set is bigger.<div class="autopermalink" data-description="Paragraph"><a href="#cardinality-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="definition definition-like" id="D_cardinality"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.2.1</span><span class="period">.</span>
 </h3>
-<div class="para" id="D_cardinality-1">Two sets <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> have the same <dfn class="terminology">cardinality</dfn> if there is a one-to-one, onto map from <span class="process-math">\(A\)</span> to <span class="process-math">\(B\text{.}\)</span> We call a one-to-one, onto map a <dfn class="terminology">one-to-one correspondence</dfn> from <span class="process-math">\(A\)</span> to <span class="process-math">\(B\text{.}\)</span>
-</div></article><div class="para" id="cardinality-6">We will use <span class="process-math">\(|A|\)</span> to denote the cardinality if a set <span class="process-math">\(A\text{.}\)</span>
+<div class="para" id="D_cardinality-1">Two sets <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> have the same <dfn class="terminology">cardinality</dfn> if there is a one-to-one, onto map from <span class="process-math">\(A\)</span> to <span class="process-math">\(B\text{.}\)</span> We call a one-to-one, onto map a <dfn class="terminology">one-to-one correspondence</dfn> from <span class="process-math">\(A\)</span> to <span class="process-math">\(B\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#D_cardinality-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 6.2.1"><a href="#D_cardinality" title="Copy heading and permalink for Definition 6.2.1" aria-label="Copy heading and permalink for Definition 6.2.1">🔗</a></div></article><div class="para" id="cardinality-6">We will use <span class="process-math">\(|A|\)</span> to denote the cardinality if a set <span class="process-math">\(A\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#cardinality-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <details id="E_finitecard" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">6.2.2</span><span class="period">.</span><span class="space"> </span><span class="title">Finite Cardinality.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_finitecard-2">Let <span class="process-math">\(A=\{1, 2, 3, 4\}\text{.}\)</span> Then <span class="process-math">\(|A|=4\text{.}\)</span> Let <span class="process-math">\(B=\{2k : 1\leq k\leq 4, k\in \mathbb{Z}\}\text{.}\)</span> Then <span class="process-math">\(|B|=4\text{.}\)</span>
-</div></article></details><article class="activity project-like" id="A_setforcard"><h3 class="heading">
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_finitecard-2">Let <span class="process-math">\(A=\{1, 2, 3, 4\}\text{.}\)</span> Then <span class="process-math">\(|A|=4\text{.}\)</span> Let <span class="process-math">\(B=\{2k : 1\leq k\leq 4, k\in \mathbb{Z}\}\text{.}\)</span> Then <span class="process-math">\(|B|=4\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_finitecard-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 6.2.2: Finite Cardinality"><a href="#E_finitecard" title="Copy heading and permalink for Example 6.2.2: Finite Cardinality" aria-label="Copy heading and permalink for Example 6.2.2: Finite Cardinality">🔗</a></div></article></details><article class="activity project-like" id="A_setforcard"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">6.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Sets of a Given Cardinality.</span>
-</h3>Give a set for each of the following cardinalities: 5, 1, 0.</article><div class="para" id="cardinality-9">Two finite sets have the same cardinality if they have the same number of elements. But what about infinite sets?</div>
+</h3>Give a set for each of the following cardinalities: 5, 1, 0.<div class="autopermalink" data-description="Activity 6.2.1: Sets of a Given Cardinality"><a href="#A_setforcard" title="Copy heading and permalink for Activity 6.2.1: Sets of a Given Cardinality" aria-label="Copy heading and permalink for Activity 6.2.1: Sets of a Given Cardinality">🔗</a></div></article><div class="para" id="cardinality-9">Two finite sets have the same cardinality if they have the same number of elements. But what about infinite sets?<div class="autopermalink" data-description="Paragraph"><a href="#cardinality-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <details id="E_intandevencard" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">6.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">Cardinality of the Even Integers.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_intandevencard-2">Let <span class="process-math">\(E\)</span> be the set of even integers, <span class="process-math">\(E=\{2k : k\in \mathbb{Z}\}\text{.}\)</span> Consider the map <span class="process-math">\(f:\mathbb{Z}\rightarrow E\)</span> given by <span class="process-math">\(f(n)=2n\text{.}\)</span> You can check that <span class="process-math">\(f\)</span> is one-to-one and onto <span class="process-math">\(E\text{.}\)</span> Thus, <span class="process-math">\(f\)</span> gives us a one-to-one correspondence between the integers and the even integers. Hence, they have the same cardinality.</div></article></details><div class="para" id="cardinality-11">Is <a href="cardinality.html#E_intandevencard" class="xref" data-knowl="./knowl/xref/E_intandevencard.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 6.2.3: Cardinality of the Even Integers">Example 6.2.3</a> surprising? On one hand, it may seem surprising since the even integers is a proper subset of the integers, so it may seem like there are “more” integers then even integers (maybe even twice as many!). On the other hand, both sets have infinitely many elements, so since they both have infinite “size,” it may seem reasonable that the two sets have the same size. The idea behind the definition of cardinality is that the map gives us a way to match up elements in the two sets. Since they can be matched up exactly, the two sets must have the same size, or cardinality.</div>
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_intandevencard-2">Let <span class="process-math">\(E\)</span> be the set of even integers, <span class="process-math">\(E=\{2k : k\in \mathbb{Z}\}\text{.}\)</span> Consider the map <span class="process-math">\(f:\mathbb{Z}\rightarrow E\)</span> given by <span class="process-math">\(f(n)=2n\text{.}\)</span> You can check that <span class="process-math">\(f\)</span> is one-to-one and onto <span class="process-math">\(E\text{.}\)</span> Thus, <span class="process-math">\(f\)</span> gives us a one-to-one correspondence between the integers and the even integers. Hence, they have the same cardinality.<div class="autopermalink" data-description="Paragraph"><a href="#E_intandevencard-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 6.2.3: Cardinality of the Even Integers"><a href="#E_intandevencard" title="Copy heading and permalink for Example 6.2.3: Cardinality of the Even Integers" aria-label="Copy heading and permalink for Example 6.2.3: Cardinality of the Even Integers">🔗</a></div></article></details><div class="para" id="cardinality-11">Is <a href="cardinality.html#E_intandevencard" class="xref" data-knowl="./knowl/xref/E_intandevencard.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 6.2.3: Cardinality of the Even Integers">Example 6.2.3</a> surprising? On one hand, it may seem surprising since the even integers is a proper subset of the integers, so it may seem like there are “more” integers then even integers (maybe even twice as many!). On the other hand, both sets have infinitely many elements, so since they both have infinite “size,” it may seem reasonable that the two sets have the same size. The idea behind the definition of cardinality is that the map gives us a way to match up elements in the two sets. Since they can be matched up exactly, the two sets must have the same size, or cardinality.<div class="autopermalink" data-description="Paragraph"><a href="#cardinality-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="definition definition-like" id="D_countable"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.2.4</span><span class="period">.</span>
 </h3>
-<div class="para" id="D_countable-1-1">A set is <dfn class="terminology">countably infinite</dfn> if it has the same cardinailty as <span class="process-math">\(\mathbb{Z}^+\text{.}\)</span> A set is <dfn class="terminology">countable</dfn> if it is finite or countably infinite. Otherwise, a set is <dfn class="terminology">uncountable</dfn>.</div></article><div class="para" id="cardinality-13">For the sake of notational simplicity in this section, we will use <span class="process-math">\(\mathbb{N}\)</span> for the set of natural numbers, <span class="process-math">\(\{1, 2, 3, \ldots\}\text{,}\)</span> rather than <span class="process-math">\(\mathbb{Z}^+\text{.}\)</span> Thus, an infinite set is countable if it has the same cardinality as <span class="process-math">\(\mathbb{N}\text{.}\)</span>
+<div class="para" id="D_countable-1-1">A set is <dfn class="terminology">countably infinite</dfn> if it has the same cardinailty as <span class="process-math">\(\mathbb{Z}^+\text{.}\)</span> A set is <dfn class="terminology">countable</dfn> if it is finite or countably infinite. Otherwise, a set is <dfn class="terminology">uncountable</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#D_countable-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 6.2.4"><a href="#D_countable" title="Copy heading and permalink for Definition 6.2.4" aria-label="Copy heading and permalink for Definition 6.2.4">🔗</a></div></article><div class="para" id="cardinality-13">For the sake of notational simplicity in this section, we will use <span class="process-math">\(\mathbb{N}\)</span> for the set of natural numbers, <span class="process-math">\(\{1, 2, 3, \ldots\}\text{,}\)</span> rather than <span class="process-math">\(\mathbb{Z}^+\text{.}\)</span> Thus, an infinite set is countable if it has the same cardinality as <span class="process-math">\(\mathbb{N}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#cardinality-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <details id="E_Zcountable" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">6.2.5</span><span class="period">.</span><span class="space"> </span><span class="title">The Integers are Countable.</span>
@@ -626,8 +357,10 @@ eBookConfig.enable_chatcodes =  false;
 0, 1, -1, 2, -2, 3, -3, \ldots
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#E_Zcountable-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="E_Zcountable-3">We can now assign each integer to its place in the list:</div>
+<div class="para" id="E_Zcountable-3">We can now assign each integer to its place in the list:<div class="autopermalink" data-description="Paragraph"><a href="#E_Zcountable-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines">
@@ -652,17 +385,21 @@ eBookConfig.enable_chatcodes =  false;
 <td class="l m b0 r0 l0 t0 lines">...</td>
 </tr>
 </table></div>
-<div class="para" id="E_Zcountable-5">Since there is a one-to-one correspondence between the natural numbers and the integers, <span class="process-math">\(|\mathbb{N}|=|\mathbb{Z}|\text{,}\)</span> and <span class="process-math">\(\mathbb{Z}\)</span> is countable.</div></article></details><article class="theorem theorem-like" id="T_cardequivrel"><h3 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.2.6</span><span class="period">.</span>
-</h3>Consider sets <span class="process-math">\(A, B\text{,}\)</span> and the relation given by <span class="process-math">\((A, B)\in R\)</span> if an only if <span class="process-math">\(|A|=|B|\text{.}\)</span> In other words, we say two sets are related if they have the same cardinality. Then <span class="process-math">\(R\)</span> is an equivalence relation.</article><div class="para" id="cardinality-16">We leave it as an exercise to prove the cardinality relation is reflexive, symmetric, and transitive, and hence, and equivalence relation.</div>
-<div class="para" id="cardinality-17">
-<a href="cardinality.html#T_cardequivrel" class="xref" data-knowl="./knowl/xref/T_cardequivrel.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 6.2.6">Theorem 6.2.6</a> is important, as we can now use it directly to show the set of even integers, <span class="process-math">\(E\text{,}\)</span> is countable. Since <span class="process-math">\(|E|=|\mathbb{Z}|=|\mathbb{N}|\text{,}\)</span> we have <span class="process-math">\(|E|=|\mathbb{N}|\text{.}\)</span> Thus we can say <span class="process-math">\(E\)</span> is countable without needing to find a specific correspondence between <span class="process-math">\(E\)</span> and <span class="process-math">\(\mathbb{N}\text{.}\)</span>
+<div class="para" id="E_Zcountable-5">Since there is a one-to-one correspondence between the natural numbers and the integers, <span class="process-math">\(|\mathbb{N}|=|\mathbb{Z}|\text{,}\)</span> and <span class="process-math">\(\mathbb{Z}\)</span> is countable.<div class="autopermalink" data-description="Paragraph"><a href="#E_Zcountable-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="cardinality-18">So what about the set of rational numbers, <span class="process-math">\(\mathbb{Q}\text{?}\)</span> To show it is countable, we need to find a one-to-one correspondence with <span class="process-math">\(\mathbb{N}\text{.}\)</span> As we saw in <a href="cardinality.html#E_Zcountable" class="xref" data-knowl="./knowl/xref/E_Zcountable.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 6.2.5: The Integers are Countable">Example 6.2.5</a> is that it is enough to find a way to list the rational numbers. However, one of the properties of the rational numbers that makes this challenging is that between any two rational numbers, <span class="process-math">\(a, b\text{,}\)</span> there is another rational number. We proved this in <a href="existunique.html#E_generalexistence" class="xref" data-knowl="./knowl/xref/E_generalexistence.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 5.1.2: A More General Existence Proof">Example 5.1.2</a> by showing the average, <span class="process-math">\(\frac{a+b}{2}\)</span> is between <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{.}\)</span> But since the average is also rational, there is another rational number between <span class="process-math">\(a\)</span> and <span class="process-math">\(\frac{a+b}{2}\text{,}\)</span> and so on. Thus, in fact, between any two rational numbers there are infinitely many rational numbers. So it would seem the rationals might be “larger” than <span class="process-math">\(\mathbb{N}\text{.}\)</span>
+<div class="autopermalink" data-description="Example 6.2.5: The Integers are Countable"><a href="#E_Zcountable" title="Copy heading and permalink for Example 6.2.5: The Integers are Countable" aria-label="Copy heading and permalink for Example 6.2.5: The Integers are Countable">🔗</a></div></article></details><article class="theorem theorem-like" id="T_cardequivrel"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.2.6</span><span class="period">.</span>
+</h3>Consider sets <span class="process-math">\(A, B\text{,}\)</span> and the relation given by <span class="process-math">\((A, B)\in R\)</span> if an only if <span class="process-math">\(|A|=|B|\text{.}\)</span> In other words, we say two sets are related if they have the same cardinality. Then <span class="process-math">\(R\)</span> is an equivalence relation.<div class="autopermalink" data-description="Theorem 6.2.6"><a href="#T_cardequivrel" title="Copy heading and permalink for Theorem 6.2.6" aria-label="Copy heading and permalink for Theorem 6.2.6">🔗</a></div></article><div class="para" id="cardinality-16">We leave it as an exercise to prove the cardinality relation is reflexive, symmetric, and transitive, and hence, and equivalence relation.<div class="autopermalink" data-description="Paragraph"><a href="#cardinality-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="cardinality-17">
+<a href="cardinality.html#T_cardequivrel" class="xref" data-knowl="./knowl/xref/T_cardequivrel.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 6.2.6">Theorem 6.2.6</a> is important, as we can now use it directly to show the set of even integers, <span class="process-math">\(E\text{,}\)</span> is countable. Since <span class="process-math">\(|E|=|\mathbb{Z}|=|\mathbb{N}|\text{,}\)</span> we have <span class="process-math">\(|E|=|\mathbb{N}|\text{.}\)</span> Thus we can say <span class="process-math">\(E\)</span> is countable without needing to find a specific correspondence between <span class="process-math">\(E\)</span> and <span class="process-math">\(\mathbb{N}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#cardinality-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="cardinality-18">So what about the set of rational numbers, <span class="process-math">\(\mathbb{Q}\text{?}\)</span> To show it is countable, we need to find a one-to-one correspondence with <span class="process-math">\(\mathbb{N}\text{.}\)</span> As we saw in <a href="cardinality.html#E_Zcountable" class="xref" data-knowl="./knowl/xref/E_Zcountable.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 6.2.5: The Integers are Countable">Example 6.2.5</a> is that it is enough to find a way to list the rational numbers. However, one of the properties of the rational numbers that makes this challenging is that between any two rational numbers, <span class="process-math">\(a, b\text{,}\)</span> there is another rational number. We proved this in <a href="existunique.html#E_generalexistence" class="xref" data-knowl="./knowl/xref/E_generalexistence.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 5.1.2: A More General Existence Proof">Example 5.1.2</a> by showing the average, <span class="process-math">\(\frac{a+b}{2}\)</span> is between <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{.}\)</span> But since the average is also rational, there is another rational number between <span class="process-math">\(a\)</span> and <span class="process-math">\(\frac{a+b}{2}\text{,}\)</span> and so on. Thus, in fact, between any two rational numbers there are infinitely many rational numbers. So it would seem the rationals might be “larger” than <span class="process-math">\(\mathbb{N}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#cardinality-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <details id="E_Qcountable" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">6.2.7</span><span class="period">.</span><span class="space"> </span><span class="title">The Positive Rational Numbers are Countable.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_Qcountable-2">To show the rational numbers are countable, we need to rely on a clever way to list them. To simplify our proof, we first just show the positive rational numbers are countable. Recall a number is rational if it can be written as <span class="process-math">\(\frac{a}{b}\)</span> with <span class="process-math">\(a, b\in \mathbb{Z}, b\neq 0\text{.}\)</span> Since we just want positive rational numbers, we can assume <span class="process-math">\(a, b\in \mathbb{Z}^+\text{.}\)</span> Now we make a table with columns for <span class="process-math">\(b=1, 2, 3, \ldots\)</span> and rows for <span class="process-math">\(a=1, 2, 3\ldots\text{,}\)</span> and the corresponding fraction <span class="process-math">\(\frac{a}{b}\)</span> as entries.</div>
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_Qcountable-2">To show the rational numbers are countable, we need to rely on a clever way to list them. To simplify our proof, we first just show the positive rational numbers are countable. Recall a number is rational if it can be written as <span class="process-math">\(\frac{a}{b}\)</span> with <span class="process-math">\(a, b\in \mathbb{Z}, b\neq 0\text{.}\)</span> Since we just want positive rational numbers, we can assume <span class="process-math">\(a, b\in \mathbb{Z}^+\text{.}\)</span> Now we make a table with columns for <span class="process-math">\(b=1, 2, 3, \ldots\)</span> and rows for <span class="process-math">\(a=1, 2, 3\ldots\text{,}\)</span> and the corresponding fraction <span class="process-math">\(\frac{a}{b}\)</span> as entries.<div class="autopermalink" data-description="Paragraph"><a href="#E_Qcountable-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\frac{1}{1}\)</span></td>
@@ -716,81 +453,144 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para logical" id="E_Qcountable-4">
 <div class="para">We can see that the table contains every positive rational number, though many are repeated. For example, <span class="process-math">\(1=1/1=2/2=3/3\text{,}\)</span> etc. If we start trying to make our list of rational numbers by starting at <span class="process-math">\(1/1\)</span> and just moving along the row, we we never make it to row 2, since there are infinitely many elements in row 1. Similarly, if we start at <span class="process-math">\(1/1\)</span> and move down the column, we will never make it to column 2. So instead we are going to make a serpentine pattern through the table, as follows:</div>
 <ul class="disc" id="E_Qcountable-4-4">
-<li id="E_Qcountable-4-4-1"><div class="para" id="p-derived-E_Qcountable-4-4-1">start in the upper left corner with <span class="process-math">\(\frac{1}{1}\text{,}\)</span>
-</div></li>
-<li id="E_Qcountable-4-4-2"><div class="para" id="p-derived-E_Qcountable-4-4-2">move right to <span class="process-math">\(\frac{1}{2}\text{,}\)</span>
-</div></li>
-<li id="E_Qcountable-4-4-3"><div class="para" id="p-derived-E_Qcountable-4-4-3">move diagonally down to <span class="process-math">\(\frac{2}{1}\text{,}\)</span>
-</div></li>
-<li id="E_Qcountable-4-4-4"><div class="para" id="p-derived-E_Qcountable-4-4-4">move down to <span class="process-math">\(\frac{3}{1}\text{,}\)</span>
-</div></li>
-<li id="E_Qcountable-4-4-5"><div class="para" id="p-derived-E_Qcountable-4-4-5">move diagonally up to <span class="process-math">\(\frac{2}{2}\text{,}\)</span> and then <span class="process-math">\(\frac{1}{3}\text{,}\)</span>
-</div></li>
-<li id="E_Qcountable-4-4-6"><div class="para" id="p-derived-E_Qcountable-4-4-6">repeat the process, moving right one, then diagonally down to the first column,</div></li>
-<li id="E_Qcountable-4-4-7"><div class="para" id="p-derived-E_Qcountable-4-4-7">then move down one and then diagonally up to the first row.</div></li>
-</ul>
+<li id="E_Qcountable-4-4-1">
+<div class="para" id="p-derived-E_Qcountable-4-4-1">start in the upper left corner with <span class="process-math">\(\frac{1}{1}\text{,}\)</span>
 </div>
-<div class="para" id="E_Qcountable-5">The pattern can be seen in the following figure.</div>
+<div class="autopermalink" data-description="Item"><a href="#E_Qcountable-4-4-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="E_Qcountable-4-4-2">
+<div class="para" id="p-derived-E_Qcountable-4-4-2">move right to <span class="process-math">\(\frac{1}{2}\text{,}\)</span>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#E_Qcountable-4-4-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="E_Qcountable-4-4-3">
+<div class="para" id="p-derived-E_Qcountable-4-4-3">move diagonally down to <span class="process-math">\(\frac{2}{1}\text{,}\)</span>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#E_Qcountable-4-4-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="E_Qcountable-4-4-4">
+<div class="para" id="p-derived-E_Qcountable-4-4-4">move down to <span class="process-math">\(\frac{3}{1}\text{,}\)</span>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#E_Qcountable-4-4-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="E_Qcountable-4-4-5">
+<div class="para" id="p-derived-E_Qcountable-4-4-5">move diagonally up to <span class="process-math">\(\frac{2}{2}\text{,}\)</span> and then <span class="process-math">\(\frac{1}{3}\text{,}\)</span>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#E_Qcountable-4-4-5" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="E_Qcountable-4-4-6">
+<div class="para" id="p-derived-E_Qcountable-4-4-6">repeat the process, moving right one, then diagonally down to the first column,</div>
+<div class="autopermalink" data-description="Item"><a href="#E_Qcountable-4-4-6" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="E_Qcountable-4-4-7">
+<div class="para" id="p-derived-E_Qcountable-4-4-7">then move down one and then diagonally up to the first row.</div>
+<div class="autopermalink" data-description="Item"><a href="#E_Qcountable-4-4-7" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#E_Qcountable-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="E_Qcountable-5">The pattern can be seen in the following figure.<div class="autopermalink" data-description="Paragraph"><a href="#E_Qcountable-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <figure class="figure figure-like" id="F_countablerational"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/countableQ.svg" role="img" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">6.2.8<span class="period">.</span></span><span class="space"> </span>A listing for the positive rational numbers</figcaption></figure><div class="para" id="E_Qcountable-7">As you trace through the diagonal pattern, you will see that you will be able to include every element of the table, eventually. Since we don’t actually want to count repeated rational numbers, we could just skip any numbers that we have already included.</div>
-<div class="para" id="E_Qcountable-8">Since it is possible to list the elements in one-to-one correspondence with <span class="process-math">\(\mathbb{N}\text{,}\)</span> the positive rational numbers are countable and <span class="process-math">\(|\mathbb{Q}^+|=|\mathbb{N}|\text{.}\)</span>
-</div></article></details><article class="activity project-like" id="A_allQcountable"><h3 class="heading">
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">6.2.8<span class="period">.</span></span><span class="space"> </span>A listing for the positive rational numbers<div class="autopermalink" data-description="Figure 6.2.8"><a href="#F_countablerational" title="Copy heading and permalink for Figure 6.2.8" aria-label="Copy heading and permalink for Figure 6.2.8">🔗</a></div></figcaption></figure><div class="para" id="E_Qcountable-7">As you trace through the diagonal pattern, you will see that you will be able to include every element of the table, eventually. Since we don’t actually want to count repeated rational numbers, we could just skip any numbers that we have already included.<div class="autopermalink" data-description="Paragraph"><a href="#E_Qcountable-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="E_Qcountable-8">Since it is possible to list the elements in one-to-one correspondence with <span class="process-math">\(\mathbb{N}\text{,}\)</span> the positive rational numbers are countable and <span class="process-math">\(|\mathbb{Q}^+|=|\mathbb{N}|\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_Qcountable-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 6.2.7: The Positive Rational Numbers are Countable"><a href="#E_Qcountable" title="Copy heading and permalink for Example 6.2.7: The Positive Rational Numbers are Countable" aria-label="Copy heading and permalink for Example 6.2.7: The Positive Rational Numbers are Countable">🔗</a></div></article></details><article class="activity project-like" id="A_allQcountable"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">6.2.2</span><span class="period">.</span><span class="space"> </span><span class="title">Extending to All Rational Numbers.</span>
 </h3>
-<div class="para" id="A_allQcountable-2-1">Extend the argument used in <a href="cardinality.html#E_Qcountable" class="xref" data-knowl="./knowl/xref/E_Qcountable.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 6.2.7: The Positive Rational Numbers are Countable">Example 6.2.7</a> to include all of the rational numbers. Can you adjust the table to include 0? Can you adjust it to include the negative rational numbers?</div></article><div class="para" id="cardinality-21">We have seen that <span class="process-math">\(|\mathbb{Q}|=|\mathbb{Z}|=|\mathbb{N}|\text{,}\)</span> so maybe every infinite set really does have the same size. Are there any sets that are uncountable?</div>
+<div class="para" id="A_allQcountable-2-1">Extend the argument used in <a href="cardinality.html#E_Qcountable" class="xref" data-knowl="./knowl/xref/E_Qcountable.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 6.2.7: The Positive Rational Numbers are Countable">Example 6.2.7</a> to include all of the rational numbers. Can you adjust the table to include 0? Can you adjust it to include the negative rational numbers?<div class="autopermalink" data-description="Paragraph"><a href="#A_allQcountable-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Activity 6.2.2: Extending to All Rational Numbers"><a href="#A_allQcountable" title="Copy heading and permalink for Activity 6.2.2: Extending to All Rational Numbers" aria-label="Copy heading and permalink for Activity 6.2.2: Extending to All Rational Numbers">🔗</a></div></article><div class="para" id="cardinality-21">We have seen that <span class="process-math">\(|\mathbb{Q}|=|\mathbb{Z}|=|\mathbb{N}|\text{,}\)</span> so maybe every infinite set really does have the same size. Are there any sets that are uncountable?<div class="autopermalink" data-description="Paragraph"><a href="#cardinality-21" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="theorem theorem-like" id="T_realintervaluncount"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.2.9</span><span class="period">.</span>
-</h3>The interval <span class="process-math">\([0, 1]\)</span> of real numbers is uncountable.</article><div class="para" id="cardinality-23">Before proving the theorem, we will explore the main idea of the proof in the following activity.</div>
+</h3>The interval <span class="process-math">\([0, 1]\)</span> of real numbers is uncountable.<div class="autopermalink" data-description="Theorem 6.2.9"><a href="#T_realintervaluncount" title="Copy heading and permalink for Theorem 6.2.9" aria-label="Copy heading and permalink for Theorem 6.2.9">🔗</a></div></article><div class="para" id="cardinality-23">Before proving the theorem, we will explore the main idea of the proof in the following activity.<div class="autopermalink" data-description="Paragraph"><a href="#cardinality-23" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="activity project-like" id="A_unlistable"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">6.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">Unlistable Elements.</span>
 </h3>
-<div class="introduction" id="A_unlistable-2"><div class="para" id="A_unlistable-2-1">To get an understanding of the construction used in the proof of <a href="cardinality.html#T_realintervaluncount" class="xref" data-knowl="./knowl/xref/T_realintervaluncount.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 6.2.9">Theorem 6.2.9</a>, we will look at a very specific example.</div></div>
+<div class="introduction" id="A_unlistable-2"><div class="para" id="A_unlistable-2-1">To get an understanding of the construction used in the proof of <a href="cardinality.html#T_realintervaluncount" class="xref" data-knowl="./knowl/xref/T_realintervaluncount.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 6.2.9">Theorem 6.2.9</a>, we will look at a very specific example.<div class="autopermalink" data-description="Paragraph"><a href="#A_unlistable-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
 <article class="task exercise-like" id="A_unlistable-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="A_unlistable-3-1">Consider the following list of numbers:</div>
-<div class="para logical" id="A_unlistable-3-2"><div class="displaymath process-math">
+<div class="para" id="A_unlistable-3-1">Consider the following list of numbers:<div class="autopermalink" data-description="Paragraph"><a href="#A_unlistable-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="A_unlistable-3-2">
+<div class="displaymath process-math">
 \begin{equation*}
 0.1112345
 \end{equation*}
-</div></div>
-<div class="para logical" id="A_unlistable-3-3"><div class="displaymath process-math">
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#A_unlistable-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="A_unlistable-3-3">
+<div class="displaymath process-math">
 \begin{equation*}
 0.00083576
 \end{equation*}
-</div></div>
-<div class="para logical" id="A_unlistable-3-4"><div class="displaymath process-math">
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#A_unlistable-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="A_unlistable-3-4">
+<div class="displaymath process-math">
 \begin{equation*}
 0.99999999
 \end{equation*}
-</div></div>
-<div class="para logical" id="A_unlistable-3-5"><div class="displaymath process-math">
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#A_unlistable-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="A_unlistable-3-5">
+<div class="displaymath process-math">
 \begin{equation*}
 0.12000000
 \end{equation*}
-</div></div>
-<div class="para" id="A_unlistable-3-6">Now, construct a new number, <span class="process-math">\(d=0.d_1d_2d_3\ldots\text{,}\)</span> where we change the <span class="process-math">\(i\)</span>th digit after the decimal in the <span class="process-math">\(i\)</span>th number in the list and use the new number in the <span class="process-math">\(i\)</span>th position of <span class="process-math">\(d\text{.}\)</span> For example, the first digit in <span class="process-math">\(0.1112345\)</span> is a 1, so make that a new number, like 2. The second digit in <span class="process-math">\(0.00083576\)</span> is 0, make that a 2. Now <span class="process-math">\(d=0.22\ldots\text{.}\)</span>
 </div>
-<div class="para" id="A_unlistable-3-7">Give an example of <span class="process-math">\(d\)</span> by changing the <span class="process-math">\(i\)</span>th digit of each number in the list.</div></article><article class="task exercise-like" id="A_unlistable-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="A_unlistable-4-1">We need some better notation for our list and our new number <span class="process-math">\(d\text{.}\)</span> We will use a double subscript, <span class="process-math">\(a_{ij}\)</span> where <span class="process-math">\(i\)</span> represents which number in the list and <span class="process-math">\(j\)</span> represents the decimal position. For example, from our above list</div>
-<div class="para logical" id="A_unlistable-4-2"><div class="displaymath process-math">
+<div class="autopermalink" data-description="Paragraph"><a href="#A_unlistable-3-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="A_unlistable-3-6">Now, construct a new number, <span class="process-math">\(d=0.d_1d_2d_3\ldots\text{,}\)</span> where we change the <span class="process-math">\(i\)</span>th digit after the decimal in the <span class="process-math">\(i\)</span>th number in the list and use the new number in the <span class="process-math">\(i\)</span>th position of <span class="process-math">\(d\text{.}\)</span> For example, the first digit in <span class="process-math">\(0.1112345\)</span> is a 1, so make that a new number, like 2. The second digit in <span class="process-math">\(0.00083576\)</span> is 0, make that a 2. Now <span class="process-math">\(d=0.22\ldots\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_unlistable-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="A_unlistable-3-7">Give an example of <span class="process-math">\(d\)</span> by changing the <span class="process-math">\(i\)</span>th digit of each number in the list.<div class="autopermalink" data-description="Paragraph"><a href="#A_unlistable-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 6.2.3.a"><a href="#A_unlistable-3" title="Copy heading and permalink for Task 6.2.3.a" aria-label="Copy heading and permalink for Task 6.2.3.a">🔗</a></div></article><article class="task exercise-like" id="A_unlistable-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="A_unlistable-4-1">We need some better notation for our list and our new number <span class="process-math">\(d\text{.}\)</span> We will use a double subscript, <span class="process-math">\(a_{ij}\)</span> where <span class="process-math">\(i\)</span> represents which number in the list and <span class="process-math">\(j\)</span> represents the decimal position. For example, from our above list<div class="autopermalink" data-description="Paragraph"><a href="#A_unlistable-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="A_unlistable-4-2">
+<div class="displaymath process-math">
 \begin{equation*}
 0.1112345=0.a_{11}a_{12}a_{13}\ldots
 \end{equation*}
-</div></div>
-<div class="para logical" id="A_unlistable-4-3"><div class="displaymath process-math">
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#A_unlistable-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="A_unlistable-4-3">
+<div class="displaymath process-math">
 \begin{equation*}
 0.00083576=0.a_{21}a_{22}a_{23}\ldots
 \end{equation*}
-</div></div>
-<div class="para logical" id="A_unlistable-4-4"><div class="displaymath process-math">
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#A_unlistable-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="A_unlistable-4-4">
+<div class="displaymath process-math">
 \begin{equation*}
 0.99999999=0.a_{31}a_{32}a_{33}\ldots
 \end{equation*}
-</div></div>
-<div class="para" id="A_unlistable-4-5">What digit is <span class="process-math">\(a_{24}\text{?}\)</span> How about <span class="process-math">\(a_{42}?\)</span>
-</div></article><article class="task exercise-like" id="A_unlistable-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="A_unlistable-5-1">Now define our new number <span class="process-math">\(d=0.d_1d_2d_3\ldots\)</span> by <span class="process-math">\(d_i=1\)</span> if <span class="process-math">\(a_{ii}\neq 1\text{;}\)</span> otherwise, <span class="process-math">\(d_i=2\text{.}\)</span> Find <span class="process-math">\(d\)</span> for the list in (a).</div></article><article class="task exercise-like" id="A_unlistable-6"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="A_unlistable-6-1">Make your own list of at least 6 decimals between 0 and 1, each with at least 6 decimal places and find the corresponding <span class="process-math">\(d\text{,}\)</span> using the rule in (c).</div></article><article class="task exercise-like" id="A_unlistable-7"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<div class="para" id="A_unlistable-7-1">Explain why your <span class="process-math">\(d\)</span> must be different from every decimal on your list.</div></article></article><div class="para" id="cardinality-25">The key idea explored in <a href="cardinality.html#A_unlistable" class="xref" data-knowl="./knowl/xref/A_unlistable.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 6.2.3: Unlistable Elements">Activity 6.2.3</a> is that if we create a list of decimals, <span class="process-math">\(0.a_{i1}a_{i2}a_{i3}\ldots\)</span> then by changing the digit in the <span class="process-math">\(a_{ii}\)</span> position, we will always get a decimal that is not on our list, as it will differ from each number on the list by at least one digit.</div>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#A_unlistable-4-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="A_unlistable-4-5">What digit is <span class="process-math">\(a_{24}\text{?}\)</span> How about <span class="process-math">\(a_{42}?\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_unlistable-4-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 6.2.3.b"><a href="#A_unlistable-4" title="Copy heading and permalink for Task 6.2.3.b" aria-label="Copy heading and permalink for Task 6.2.3.b">🔗</a></div></article><article class="task exercise-like" id="A_unlistable-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="A_unlistable-5-1">Now define our new number <span class="process-math">\(d=0.d_1d_2d_3\ldots\)</span> by <span class="process-math">\(d_i=1\)</span> if <span class="process-math">\(a_{ii}\neq 1\text{;}\)</span> otherwise, <span class="process-math">\(d_i=2\text{.}\)</span> Find <span class="process-math">\(d\)</span> for the list in (a).<div class="autopermalink" data-description="Paragraph"><a href="#A_unlistable-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 6.2.3.c"><a href="#A_unlistable-5" title="Copy heading and permalink for Task 6.2.3.c" aria-label="Copy heading and permalink for Task 6.2.3.c">🔗</a></div></article><article class="task exercise-like" id="A_unlistable-6"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="A_unlistable-6-1">Make your own list of at least 6 decimals between 0 and 1, each with at least 6 decimal places and find the corresponding <span class="process-math">\(d\text{,}\)</span> using the rule in (c).<div class="autopermalink" data-description="Paragraph"><a href="#A_unlistable-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 6.2.3.d"><a href="#A_unlistable-6" title="Copy heading and permalink for Task 6.2.3.d" aria-label="Copy heading and permalink for Task 6.2.3.d">🔗</a></div></article><article class="task exercise-like" id="A_unlistable-7"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para" id="A_unlistable-7-1">Explain why your <span class="process-math">\(d\)</span> must be different from every decimal on your list.<div class="autopermalink" data-description="Paragraph"><a href="#A_unlistable-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 6.2.3.e"><a href="#A_unlistable-7" title="Copy heading and permalink for Task 6.2.3.e" aria-label="Copy heading and permalink for Task 6.2.3.e">🔗</a></div></article><div class="autopermalink" data-description="Activity 6.2.3: Unlistable Elements"><a href="#A_unlistable" title="Copy heading and permalink for Activity 6.2.3: Unlistable Elements" aria-label="Copy heading and permalink for Activity 6.2.3: Unlistable Elements">🔗</a></div></article><div class="para" id="cardinality-25">The key idea explored in <a href="cardinality.html#A_unlistable" class="xref" data-knowl="./knowl/xref/A_unlistable.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 6.2.3: Unlistable Elements">Activity 6.2.3</a> is that if we create a list of decimals, <span class="process-math">\(0.a_{i1}a_{i2}a_{i3}\ldots\)</span> then by changing the digit in the <span class="process-math">\(a_{ii}\)</span> position, we will always get a decimal that is not on our list, as it will differ from each number on the list by at least one digit.<div class="autopermalink" data-description="Paragraph"><a href="#cardinality-25" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <details id="E_creatingd" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">6.2.10</span><span class="period">.</span><span class="space"> </span><span class="title">Finding <span class="process-math">\(d\)</span>.</span>
 </h3></summary><article class="example example-like knowl__content"><div class="para logical" id="E_creatingd-2">
@@ -803,6 +603,7 @@ d_1=\begin{cases}
 \end{cases}
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#E_creatingd-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="E_creatingd-3">
 <div class="para">Find <span class="process-math">\(d\)</span> for the following list.</div>
@@ -846,9 +647,14 @@ d_1=\begin{cases}
 0.1230000{\color{blue}{0}}0
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#E_creatingd-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="E_creatingd-4">Note, the blue digits are the ones we are considering for <span class="process-math">\(d\text{.}\)</span> Since <span class="process-math">\(a_{11}=1, d_1=2\text{.}\)</span> Since <span class="process-math">\(a_{22}=1, d_2=2\text{.}\)</span> Since <span class="process-math">\(a_{33}=9, d_3=1\text{.}\)</span> Continuing in this way, we get <span class="process-math">\(d=0.22121111\text{.}\)</span> Clearly, <span class="process-math">\(d\)</span> differs from each decimal on the list.</div></article></details><div class="para" id="cardinality-27">One last idea before beginning the proof, make sure you understand that every real number in <span class="process-math">\([0, 1]\)</span> can be represented by a decimal of the form <span class="process-math">\(0.a_{i1}a_{i2}a_{i3}\ldots\)</span> with infinitely many decimal places. This should be clear if the decimal is repeating or nonterminating, nonrepeating. If the decimal is terminating, we can just add infinitely many 0’s. We also note that <span class="process-math">\(0=0.000000000\ldots\)</span> and <span class="process-math">\(1=0.99999999\ldots\)</span> (see <a href="moredirect.html" class="internal" title="Section 3.2: More Direct Proof: Rational Numbers and Divisibility">Section 3.2</a> for how to prove this).</div>
-<div class="para" id="cardinality-28">Now that we have a way to write a list of numbers in <span class="process-math">\([0, 1]\)</span> as decimals, and we have a understanding of a way to construct a new number not on our list, we are ready to prove <a href="cardinality.html#T_realintervaluncount" class="xref" data-knowl="./knowl/xref/T_realintervaluncount.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 6.2.9">Theorem 6.2.9</a>.</div>
+<div class="para" id="E_creatingd-4">Note, the blue digits are the ones we are considering for <span class="process-math">\(d\text{.}\)</span> Since <span class="process-math">\(a_{11}=1, d_1=2\text{.}\)</span> Since <span class="process-math">\(a_{22}=1, d_2=2\text{.}\)</span> Since <span class="process-math">\(a_{33}=9, d_3=1\text{.}\)</span> Continuing in this way, we get <span class="process-math">\(d=0.22121111\text{.}\)</span> Clearly, <span class="process-math">\(d\)</span> differs from each decimal on the list.<div class="autopermalink" data-description="Paragraph"><a href="#E_creatingd-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 6.2.10: Finding d"><a href="#E_creatingd" title="Copy heading and permalink for Example 6.2.10: Finding d" aria-label="Copy heading and permalink for Example 6.2.10: Finding d">🔗</a></div></article></details><div class="para" id="cardinality-27">One last idea before beginning the proof, make sure you understand that every real number in <span class="process-math">\([0, 1]\)</span> can be represented by a decimal of the form <span class="process-math">\(0.a_{i1}a_{i2}a_{i3}\ldots\)</span> with infinitely many decimal places. This should be clear if the decimal is repeating or nonterminating, nonrepeating. If the decimal is terminating, we can just add infinitely many 0’s. We also note that <span class="process-math">\(0=0.000000000\ldots\)</span> and <span class="process-math">\(1=0.99999999\ldots\)</span> (see <a href="moredirect.html" class="internal" title="Section 3.2: More Direct Proof: Rational Numbers and Divisibility">Section 3.2</a> for how to prove this).<div class="autopermalink" data-description="Paragraph"><a href="#cardinality-27" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="cardinality-28">Now that we have a way to write a list of numbers in <span class="process-math">\([0, 1]\)</span> as decimals, and we have a understanding of a way to construct a new number not on our list, we are ready to prove <a href="cardinality.html#T_realintervaluncount" class="xref" data-knowl="./knowl/xref/T_realintervaluncount.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 6.2.9">Theorem 6.2.9</a>.<div class="autopermalink" data-description="Paragraph"><a href="#cardinality-28" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <details id="cardinality-29" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="cardinality-29-1">
 <div class="para">We will prove this by contradiction. Assume <span class="process-math">\([0, 1]\)</span> is countable. That means there is a one-to-one correspondence between <span class="process-math">\(\mathbb{N}\)</span> and <span class="process-math">\([0, 1]\text{.}\)</span> We don’t need to know what it is, just that it exists. Since there is a one-to-one correspondence, there is a way to list the elements of <span class="process-math">\([0, 1]\text{.}\)</span> First, note that every real number has a decimal representation, and since our elements are less than or equal to one, each real number can be represented by <span class="process-math">\(0.a_{i1}a_{i2}a_{i3}\ldots\text{.}\)</span> Thus, we can write our list as</div>
 <div class="displaymath process-math">
@@ -872,6 +678,7 @@ b_3=0.a_{31}a_{32}a_{33}\ldots
 \end{equation*}
 </div>
 <div class="para">Since we assumed we had a listing of every real number in <span class="process-math">\([0, 1]\text{,}\)</span> every such decimal must be on our list.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#cardinality-29-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="cardinality-29-2">
 <div class="para">Now define <span class="process-math">\(d=0.d_1d_2\ldots d_n\ldots\)</span> where</div>
@@ -884,32 +691,74 @@ d_i=\begin{cases}
 \end{equation*}
 </div>
 <div class="para">We can see that for every <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(d\neq b_n\)</span> since it differs in the <span class="process-math">\(n\)</span>th decimal place. Thus <span class="process-math">\(d\)</span> is not on our list. This is a contradiction since we assumed we were able to include every real number in <span class="process-math">\([0, 1]\)</span> on our list. Hence, <span class="process-math">\([0, 1]\)</span> is not countable.</div>
-</div></article></details><div class="para" id="cardinality-30">We finally have an infinite set that has a different cardinality from <span class="process-math">\(\mathbb{N}\text{.}\)</span> Since <span class="process-math">\([0, 1]\)</span> is a subset of <span class="process-math">\(\mathbb{R}\text{,}\)</span> that means <span class="process-math">\(\mathbb{R}\)</span> is uncountable, too.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#cardinality-29-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 6.2.1"><a href="#cardinality-29" title="Copy heading and permalink for Proof 6.2.1" aria-label="Copy heading and permalink for Proof 6.2.1">🔗</a></div></article></details><div class="para" id="cardinality-30">We finally have an infinite set that has a different cardinality from <span class="process-math">\(\mathbb{N}\text{.}\)</span> Since <span class="process-math">\([0, 1]\)</span> is a subset of <span class="process-math">\(\mathbb{R}\text{,}\)</span> that means <span class="process-math">\(\mathbb{R}\)</span> is uncountable, too.<div class="autopermalink" data-description="Paragraph"><a href="#cardinality-30" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <section class="exercises" id="cardinality-31"><h3 class="heading hide-type">
 <span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Exercises</span>
 </h3>
 <article class="exercise exercise-like" id="cardinality-31-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="cardinality-31-1-1-1">Prove the set of perfect squares, <span class="process-math">\(S=\{n^2 : n\in \mathbb{Z}\}\text{,}\)</span> has the same cardinaility as <span class="process-math">\(\mathbb{N}\)</span> by finding a one-to-one correspondence from <span class="process-math">\(\mathbb{N}\)</span> to <span class="process-math">\(S\text{.}\)</span>
-</div></article><article class="exercise exercise-like" id="cardinality-31-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para" id="cardinality-31-2-1-1">Prove <a href="cardinality.html#T_cardequivrel" class="xref" data-knowl="./knowl/xref/T_cardequivrel.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 6.2.6">Theorem 6.2.6</a>, that the cardinality relation is an equivalence relation.</div></article><article class="exercise exercise-like" id="cardinality-31-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="para" id="cardinality-31-3-1-1">Show that the intervals <span class="process-math">\([0, 1]\)</span> and <span class="process-math">\([3, 6]\)</span> have the same cardinality by finding a one-to-one correspondence between the sets.</div>
-<div class="solutions"><details id="cardinality-31-3-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="cardinality-31-3-2-1">Can you find a line segment whose inputs are <span class="process-math">\([0, 1]\)</span> and outputs are <span class="process-math">\([3, 6]\text{?}\)</span> Then show your line is one-to-one and onto.</div></div></details></div></article><article class="exercise exercise-like" id="cardinality-31-4"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para" id="cardinality-31-4-1-1">Assume <span class="process-math">\(a, b, c, d\in \mathbb{R}\)</span> with <span class="process-math">\(a &lt; b\)</span> and <span class="process-math">\(c &lt; d\text{.}\)</span> Show that the intervals <span class="process-math">\([a, b]\)</span> and <span class="process-math">\([c, d]\)</span> have the same cardinality by finding a one-to-one correspondence between the sets.</div>
-<div class="solutions"><details id="cardinality-31-4-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="cardinality-31-4-2-1">Can you find a line segment whose inputs are <span class="process-math">\([a, b]\)</span> and outputs are <span class="process-math">\([c, d]\text{?}\)</span> Then show your line is one-to-one and onto.</div></div></details></div></article><article class="exercise exercise-like" id="cardinality-31-5"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<div class="para" id="cardinality-31-5-1-1">Let <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> be countable sets. Prove <span class="process-math">\(A\cup B\)</span> is countable.</div></article><article class="exercise exercise-like" id="cardinality-31-6"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
-<div class="para" id="cardinality-31-6-1-1">Determine if the following are true or false. Justify your answer.</div> <ol class="lower-alpha" id="cardinality-31-6-1-2">
-<li id="cardinality-31-6-1-2-1"><div class="para" id="cardinality-31-6-1-2-1-1">A finite union of countable sets, <span class="process-math">\(\bigcup_{i=1}^{n}A_i\text{,}\)</span> is countable.</div></li>
-<li id="cardinality-31-6-1-2-2"><div class="para" id="cardinality-31-6-1-2-2-1">A countable union of countable sets, <span class="process-math">\(\bigcup_{i=1}^{\infty}A_i\text{,}\)</span> is countable.</div></li>
-<li id="cardinality-31-6-1-2-3"><div class="para" id="cardinality-31-6-1-2-3-1">The union of a countable set and an uncountable set in uncountable.</div></li>
-<li id="cardinality-31-6-1-2-4"><div class="para" id="cardinality-31-6-1-2-4-1">The set of irrational numbers is countable.</div></li>
-<li id="cardinality-31-6-1-2-5"><div class="para" id="cardinality-31-6-1-2-5-1">The set of prime numbers is countable.</div></li>
-</ol></article></section></section></div>
-<div class="ptx-content-footer">
+<div class="para" id="cardinality-31-1-1-1">Prove the set of perfect squares, <span class="process-math">\(S=\{n^2 : n\in \mathbb{Z}\}\text{,}\)</span> has the same cardinaility as <span class="process-math">\(\mathbb{N}\)</span> by finding a one-to-one correspondence from <span class="process-math">\(\mathbb{N}\)</span> to <span class="process-math">\(S\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#cardinality-31-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 6.2.1"><a href="#cardinality-31-1" title="Copy heading and permalink for Exercise 6.2.1" aria-label="Copy heading and permalink for Exercise 6.2.1">🔗</a></div></article><article class="exercise exercise-like" id="cardinality-31-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="para" id="cardinality-31-2-1-1">Prove <a href="cardinality.html#T_cardequivrel" class="xref" data-knowl="./knowl/xref/T_cardequivrel.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 6.2.6">Theorem 6.2.6</a>, that the cardinality relation is an equivalence relation.<div class="autopermalink" data-description="Paragraph"><a href="#cardinality-31-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 6.2.2"><a href="#cardinality-31-2" title="Copy heading and permalink for Exercise 6.2.2" aria-label="Copy heading and permalink for Exercise 6.2.2">🔗</a></div></article><article class="exercise exercise-like" id="cardinality-31-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="para" id="cardinality-31-3-1-1">Show that the intervals <span class="process-math">\([0, 1]\)</span> and <span class="process-math">\([3, 6]\)</span> have the same cardinality by finding a one-to-one correspondence between the sets.<div class="autopermalink" data-description="Paragraph"><a href="#cardinality-31-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="cardinality-31-3-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="cardinality-31-3-2-1">Can you find a line segment whose inputs are <span class="process-math">\([0, 1]\)</span> and outputs are <span class="process-math">\([3, 6]\text{?}\)</span> Then show your line is one-to-one and onto.<div class="autopermalink" data-description="Paragraph"><a href="#cardinality-31-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 6.2.3.1"><a href="#cardinality-31-3-2" title="Copy heading and permalink for Hint 6.2.3.1" aria-label="Copy heading and permalink for Hint 6.2.3.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 6.2.3"><a href="#cardinality-31-3" title="Copy heading and permalink for Exercise 6.2.3" aria-label="Copy heading and permalink for Exercise 6.2.3">🔗</a></div></article><article class="exercise exercise-like" id="cardinality-31-4"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="para" id="cardinality-31-4-1-1">Assume <span class="process-math">\(a, b, c, d\in \mathbb{R}\)</span> with <span class="process-math">\(a &lt; b\)</span> and <span class="process-math">\(c &lt; d\text{.}\)</span> Show that the intervals <span class="process-math">\([a, b]\)</span> and <span class="process-math">\([c, d]\)</span> have the same cardinality by finding a one-to-one correspondence between the sets.<div class="autopermalink" data-description="Paragraph"><a href="#cardinality-31-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="cardinality-31-4-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="cardinality-31-4-2-1">Can you find a line segment whose inputs are <span class="process-math">\([a, b]\)</span> and outputs are <span class="process-math">\([c, d]\text{?}\)</span> Then show your line is one-to-one and onto.<div class="autopermalink" data-description="Paragraph"><a href="#cardinality-31-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 6.2.4.1"><a href="#cardinality-31-4-2" title="Copy heading and permalink for Hint 6.2.4.1" aria-label="Copy heading and permalink for Hint 6.2.4.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 6.2.4"><a href="#cardinality-31-4" title="Copy heading and permalink for Exercise 6.2.4" aria-label="Copy heading and permalink for Exercise 6.2.4">🔗</a></div></article><article class="exercise exercise-like" id="cardinality-31-5"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="para" id="cardinality-31-5-1-1">Let <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> be countable sets. Prove <span class="process-math">\(A\cup B\)</span> is countable.<div class="autopermalink" data-description="Paragraph"><a href="#cardinality-31-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 6.2.5"><a href="#cardinality-31-5" title="Copy heading and permalink for Exercise 6.2.5" aria-label="Copy heading and permalink for Exercise 6.2.5">🔗</a></div></article><article class="exercise exercise-like" id="cardinality-31-6"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="para" id="cardinality-31-6-1-1">Determine if the following are true or false. Justify your answer.<div class="autopermalink" data-description="Paragraph"><a href="#cardinality-31-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha lower-alpha-level-1" id="cardinality-31-6-1-2">
+<li id="cardinality-31-6-1-2-1">
+<div class="para" id="cardinality-31-6-1-2-1-1">A finite union of countable sets, <span class="process-math">\(\bigcup_{i=1}^{n}A_i\text{,}\)</span> is countable.<div class="autopermalink" data-description="Paragraph"><a href="#cardinality-31-6-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 6.2.6.a"><a href="#cardinality-31-6-1-2-1" title="Copy heading and permalink for Item 6.2.6.a" aria-label="Copy heading and permalink for Item 6.2.6.a">🔗</a></div>
+</li>
+<li id="cardinality-31-6-1-2-2">
+<div class="para" id="cardinality-31-6-1-2-2-1">A countable union of countable sets, <span class="process-math">\(\bigcup_{i=1}^{\infty}A_i\text{,}\)</span> is countable.<div class="autopermalink" data-description="Paragraph"><a href="#cardinality-31-6-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 6.2.6.b"><a href="#cardinality-31-6-1-2-2" title="Copy heading and permalink for Item 6.2.6.b" aria-label="Copy heading and permalink for Item 6.2.6.b">🔗</a></div>
+</li>
+<li id="cardinality-31-6-1-2-3">
+<div class="para" id="cardinality-31-6-1-2-3-1">The union of a countable set and an uncountable set in uncountable.<div class="autopermalink" data-description="Paragraph"><a href="#cardinality-31-6-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 6.2.6.c"><a href="#cardinality-31-6-1-2-3" title="Copy heading and permalink for Item 6.2.6.c" aria-label="Copy heading and permalink for Item 6.2.6.c">🔗</a></div>
+</li>
+<li id="cardinality-31-6-1-2-4">
+<div class="para" id="cardinality-31-6-1-2-4-1">The set of irrational numbers is countable.<div class="autopermalink" data-description="Paragraph"><a href="#cardinality-31-6-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 6.2.6.d"><a href="#cardinality-31-6-1-2-4" title="Copy heading and permalink for Item 6.2.6.d" aria-label="Copy heading and permalink for Item 6.2.6.d">🔗</a></div>
+</li>
+<li id="cardinality-31-6-1-2-5">
+<div class="para" id="cardinality-31-6-1-2-5-1">The set of prime numbers is countable.<div class="autopermalink" data-description="Paragraph"><a href="#cardinality-31-6-1-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 6.2.6.e"><a href="#cardinality-31-6-1-2-5" title="Copy heading and permalink for Item 6.2.6.e" aria-label="Copy heading and permalink for Item 6.2.6.e">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 6.2.6"><a href="#cardinality-31-6" title="Copy heading and permalink for Exercise 6.2.6" aria-label="Copy heading and permalink for Exercise 6.2.6">🔗</a></div></article><div class="autopermalink" data-description="Exercises 6.2"><a href="#cardinality-31" title="Copy heading and permalink for Exercises 6.2" aria-label="Copy heading and permalink for Exercises 6.2">🔗</a></div></section><div class="autopermalink" data-description="Section 6.2: Cardinality"><a href="#cardinality" title="Copy heading and permalink for Section 6.2: Cardinality" aria-label="Copy heading and permalink for Section 6.2: Cardinality">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="binomial9.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
-<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
 </div>
 <!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
 var sc_project=12871717;

@@ -6,14 +6,20 @@
 <!--*                                          *-->
 <!--********************************************-->
 <html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>More Direct Proof: Rational Numbers and Divisibility</title>
-<meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:type" content="book">
-<meta property="book:title" content="Introduction to Proofs">
-<meta property="book:author" content="Jennifer Firkins Nordstrom">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
 <script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
@@ -69,13 +75,12 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
-<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
-</script><link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
-<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
-<!--** eBookCongig is necessary to configure interactive       **-->
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Introduction to Proofs">
+<meta property="book:author" content="Jennifer Firkins Nordstrom">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -97,307 +102,23 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.5.6';
+eBookConfig.runestone_version = '7.11.5';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.82032a8574f6ce75.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6a985cbf816db5c7.css">
-<style>
-#arguments-20-1-1-4 { counter-set: arguments-20-1-1-4 0; }
-#arguments-20-1-1-4 > li::marker { content: ""counter(arguments-20-1-1-4,lower-alpha)""; }
-#arguments-20-1-1-4 > li { counter-increment: arguments-20-1-1-4; }
-#arguments-20-2-1-3 { counter-set: arguments-20-2-1-3 0; }
-#arguments-20-2-1-3 > li::marker { content: ""counter(arguments-20-2-1-3,lower-alpha)""; }
-#arguments-20-2-1-3 > li { counter-increment: arguments-20-2-1-3; }
-#arguments-20-3-1-2 { counter-set: arguments-20-3-1-2 0; }
-#arguments-20-3-1-2 > li::marker { content: "("counter(arguments-20-3-1-2,lower-alpha)")"; }
-#arguments-20-3-1-2 > li { counter-increment: arguments-20-3-1-2; }
-#B_logicalequivalences-3-5 { counter-set: B_logicalequivalences-3-5 0; }
-#B_logicalequivalences-3-5 > li::marker { content: ""counter(B_logicalequivalences-3-5,decimal)""; }
-#B_logicalequivalences-3-5 > li { counter-increment: B_logicalequivalences-3-5; }
-#connectives-73-1-1-2 { counter-set: connectives-73-1-1-2 0; }
-#connectives-73-1-1-2 > li::marker { content: ""counter(connectives-73-1-1-2,lower-alpha)""; }
-#connectives-73-1-1-2 > li { counter-increment: connectives-73-1-1-2; }
-#connectives-73-2-1-2 { counter-set: connectives-73-2-1-2 0; }
-#connectives-73-2-1-2 > li::marker { content: ""counter(connectives-73-2-1-2,lower-alpha)""; }
-#connectives-73-2-1-2 > li { counter-increment: connectives-73-2-1-2; }
-#connectives-73-3-1-2 { counter-set: connectives-73-3-1-2 0; }
-#connectives-73-3-1-2 > li::marker { content: ""counter(connectives-73-3-1-2,lower-alpha)""; }
-#connectives-73-3-1-2 > li { counter-increment: connectives-73-3-1-2; }
-#ER_onlyandnot-1-2 { counter-set: ER_onlyandnot-1-2 0; }
-#ER_onlyandnot-1-2 > li::marker { content: ""counter(ER_onlyandnot-1-2,lower-alpha)""; }
-#ER_onlyandnot-1-2 > li { counter-increment: ER_onlyandnot-1-2; }
-#connectives-73-5-1-2 { counter-set: connectives-73-5-1-2 0; }
-#connectives-73-5-1-2 > li::marker { content: ""counter(connectives-73-5-1-2,lower-alpha)""; }
-#connectives-73-5-1-2 > li { counter-increment: connectives-73-5-1-2; }
-#setnotation-22-4-1-2 { counter-set: setnotation-22-4-1-2 0; }
-#setnotation-22-4-1-2 > li::marker { content: ""counter(setnotation-22-4-1-2,lower-alpha)""; }
-#setnotation-22-4-1-2 > li { counter-increment: setnotation-22-4-1-2; }
-#setnotation-22-5-1-2 { counter-set: setnotation-22-5-1-2 0; }
-#setnotation-22-5-1-2 > li::marker { content: ""counter(setnotation-22-5-1-2,lower-alpha)""; }
-#setnotation-22-5-1-2 > li { counter-increment: setnotation-22-5-1-2; }
-#E_multquant1-2-2 { counter-set: E_multquant1-2-2 0; }
-#E_multquant1-2-2 > li::marker { content: ""counter(E_multquant1-2-2,lower-alpha)""; }
-#E_multquant1-2-2 > li { counter-increment: E_multquant1-2-2; }
-#quantifiers-6-14-3-1-2 { counter-set: quantifiers-6-14-3-1-2 0; }
-#quantifiers-6-14-3-1-2 > li::marker { content: ""counter(quantifiers-6-14-3-1-2,lower-alpha)""; }
-#quantifiers-6-14-3-1-2 > li { counter-increment: quantifiers-6-14-3-1-2; }
-#quantifiers-6-14-4-1-2 { counter-set: quantifiers-6-14-4-1-2 0; }
-#quantifiers-6-14-4-1-2 > li::marker { content: ""counter(quantifiers-6-14-4-1-2,lower-alpha)""; }
-#quantifiers-6-14-4-1-2 > li { counter-increment: quantifiers-6-14-4-1-2; }
-#quantifiers-6-14-5-1-2 { counter-set: quantifiers-6-14-5-1-2 0; }
-#quantifiers-6-14-5-1-2 > li::marker { content: ""counter(quantifiers-6-14-5-1-2,lower-alpha)""; }
-#quantifiers-6-14-5-1-2 > li { counter-increment: quantifiers-6-14-5-1-2; }
-#quantifiers-6-14-6-1-2 { counter-set: quantifiers-6-14-6-1-2 0; }
-#quantifiers-6-14-6-1-2 > li::marker { content: ""counter(quantifiers-6-14-6-1-2,lower-alpha)""; }
-#quantifiers-6-14-6-1-2 > li { counter-increment: quantifiers-6-14-6-1-2; }
-#quantifiers-6-14-7-1-2 { counter-set: quantifiers-6-14-7-1-2 0; }
-#quantifiers-6-14-7-1-2 > li::marker { content: ""counter(quantifiers-6-14-7-1-2,lower-alpha)""; }
-#quantifiers-6-14-7-1-2 > li { counter-increment: quantifiers-6-14-7-1-2; }
-#quantifiers-6-14-8-1-2 { counter-set: quantifiers-6-14-8-1-2 0; }
-#quantifiers-6-14-8-1-2 > li::marker { content: ""counter(quantifiers-6-14-8-1-2,lower-alpha)""; }
-#quantifiers-6-14-8-1-2 > li { counter-increment: quantifiers-6-14-8-1-2; }
-#conditionals-33-1-1-2 { counter-set: conditionals-33-1-1-2 0; }
-#conditionals-33-1-1-2 > li::marker { content: ""counter(conditionals-33-1-1-2,lower-alpha)""; }
-#conditionals-33-1-1-2 > li { counter-increment: conditionals-33-1-1-2; }
-#conditionals-33-2-1-2 { counter-set: conditionals-33-2-1-2 0; }
-#conditionals-33-2-1-2 > li::marker { content: ""counter(conditionals-33-2-1-2,lower-alpha)""; }
-#conditionals-33-2-1-2 > li { counter-increment: conditionals-33-2-1-2; }
-#conditionals-33-3-1-2 { counter-set: conditionals-33-3-1-2 0; }
-#conditionals-33-3-1-2 > li::marker { content: ""counter(conditionals-33-3-1-2,lower-alpha)""; }
-#conditionals-33-3-1-2 > li { counter-increment: conditionals-33-3-1-2; }
-#conditionals-33-4-1-2 { counter-set: conditionals-33-4-1-2 0; }
-#conditionals-33-4-1-2 > li::marker { content: ""counter(conditionals-33-4-1-2,lower-alpha)""; }
-#conditionals-33-4-1-2 > li { counter-increment: conditionals-33-4-1-2; }
-#conditionals-33-5-1-2 { counter-set: conditionals-33-5-1-2 0; }
-#conditionals-33-5-1-2 > li::marker { content: ""counter(conditionals-33-5-1-2,lower-alpha)""; }
-#conditionals-33-5-1-2 > li { counter-increment: conditionals-33-5-1-2; }
-#directproof-29-1-1-2 { counter-set: directproof-29-1-1-2 0; }
-#directproof-29-1-1-2 > li::marker { content: ""counter(directproof-29-1-1-2,lower-alpha)""; }
-#directproof-29-1-1-2 > li { counter-increment: directproof-29-1-1-2; }
-#directproof-29-11-1-2 { counter-set: directproof-29-11-1-2 0; }
-#directproof-29-11-1-2 > li::marker { content: ""counter(directproof-29-11-1-2,lower-alpha)""; }
-#directproof-29-11-1-2 > li { counter-increment: directproof-29-11-1-2; }
-#moredirect-7-1-1-2 { counter-set: moredirect-7-1-1-2 0; }
-#moredirect-7-1-1-2 > li::marker { content: ""counter(moredirect-7-1-1-2,lower-alpha)""; }
-#moredirect-7-1-1-2 > li { counter-increment: moredirect-7-1-1-2; }
-#moredirect-7-4-1-2 { counter-set: moredirect-7-4-1-2 0; }
-#moredirect-7-4-1-2 > li::marker { content: "("counter(moredirect-7-4-1-2,lower-alpha)")"; }
-#moredirect-7-4-1-2 > li { counter-increment: moredirect-7-4-1-2; }
-#ER_averagerat-1-2 { counter-set: ER_averagerat-1-2 0; }
-#ER_averagerat-1-2 > li::marker { content: ""counter(ER_averagerat-1-2,lower-alpha)""; }
-#ER_averagerat-1-2 > li { counter-increment: ER_averagerat-1-2; }
-#moredirect-7-7-1-2 { counter-set: moredirect-7-7-1-2 0; }
-#moredirect-7-7-1-2 > li::marker { content: ""counter(moredirect-7-7-1-2,lower-alpha)""; }
-#moredirect-7-7-1-2 > li { counter-increment: moredirect-7-7-1-2; }
-#moredirect-7-9-1-2 { counter-set: moredirect-7-9-1-2 0; }
-#moredirect-7-9-1-2 > li::marker { content: ""counter(moredirect-7-9-1-2,lower-alpha)""; }
-#moredirect-7-9-1-2 > li { counter-increment: moredirect-7-9-1-2; }
-#cases-31-1-1-2 { counter-set: cases-31-1-1-2 0; }
-#cases-31-1-1-2 > li::marker { content: ""counter(cases-31-1-1-2,lower-alpha)""; }
-#cases-31-1-1-2 > li { counter-increment: cases-31-1-1-2; }
-#SS_twoproofs-18-1-1-2 { counter-set: SS_twoproofs-18-1-1-2 0; }
-#SS_twoproofs-18-1-1-2 > li::marker { content: ""counter(SS_twoproofs-18-1-1-2,lower-alpha)""; }
-#SS_twoproofs-18-1-1-2 > li { counter-increment: SS_twoproofs-18-1-1-2; }
-#SS_twoproofs-18-2-1-2 { counter-set: SS_twoproofs-18-2-1-2 0; }
-#SS_twoproofs-18-2-1-2 > li::marker { content: ""counter(SS_twoproofs-18-2-1-2,lower-alpha)""; }
-#SS_twoproofs-18-2-1-2 > li { counter-increment: SS_twoproofs-18-2-1-2; }
-#SS_twoproofs-18-3-1-2 { counter-set: SS_twoproofs-18-3-1-2 0; }
-#SS_twoproofs-18-3-1-2 > li::marker { content: ""counter(SS_twoproofs-18-3-1-2,lower-alpha)""; }
-#SS_twoproofs-18-3-1-2 > li { counter-increment: SS_twoproofs-18-3-1-2; }
-#SS_twoproofs-18-4-1-2 { counter-set: SS_twoproofs-18-4-1-2 0; }
-#SS_twoproofs-18-4-1-2 > li::marker { content: ""counter(SS_twoproofs-18-4-1-2,lower-alpha)""; }
-#SS_twoproofs-18-4-1-2 > li { counter-increment: SS_twoproofs-18-4-1-2; }
-#SS_twoproofs-18-5-1-2 { counter-set: SS_twoproofs-18-5-1-2 0; }
-#SS_twoproofs-18-5-1-2 > li::marker { content: ""counter(SS_twoproofs-18-5-1-2,lower-alpha)""; }
-#SS_twoproofs-18-5-1-2 > li { counter-increment: SS_twoproofs-18-5-1-2; }
-#B_propsums-2-1 { counter-set: B_propsums-2-1 0; }
-#B_propsums-2-1 > li::marker { content: ""counter(B_propsums-2-1,decimal)""; }
-#B_propsums-2-1 > li { counter-increment: B_propsums-2-1; }
-#summation-27-1-1-2 { counter-set: summation-27-1-1-2 0; }
-#summation-27-1-1-2 > li::marker { content: ""counter(summation-27-1-1-2,lower-alpha)""; }
-#summation-27-1-1-2 > li { counter-increment: summation-27-1-1-2; }
-#summation-27-2-1-2 { counter-set: summation-27-2-1-2 0; }
-#summation-27-2-1-2 > li::marker { content: ""counter(summation-27-2-1-2,lower-alpha)""; }
-#summation-27-2-1-2 > li { counter-increment: summation-27-2-1-2; }
-#summation-27-3-1-2 { counter-set: summation-27-3-1-2 0; }
-#summation-27-3-1-2 > li::marker { content: ""counter(summation-27-3-1-2,lower-alpha)""; }
-#summation-27-3-1-2 > li { counter-increment: summation-27-3-1-2; }
-#summation-27-8-1-2 { counter-set: summation-27-8-1-2 0; }
-#summation-27-8-1-2 > li::marker { content: ""counter(summation-27-8-1-2,lower-alpha)""; }
-#summation-27-8-1-2 > li { counter-increment: summation-27-8-1-2; }
-#B_induction-3-4 { counter-set: B_induction-3-4 0; }
-#B_induction-3-4 > li::marker { content: ""counter(B_induction-3-4,decimal)""; }
-#B_induction-3-4 > li { counter-increment: B_induction-3-4; }
-#induction-6-1 { counter-set: induction-6-1 0; }
-#induction-6-1 > li::marker { content: "("counter(induction-6-1,decimal)")"; }
-#induction-6-1 > li { counter-increment: induction-6-1; }
-#ER_indpowersof2-1-2 { counter-set: ER_indpowersof2-1-2 0; }
-#ER_indpowersof2-1-2 > li::marker { content: ""counter(ER_indpowersof2-1-2,lower-alpha)""; }
-#ER_indpowersof2-1-2 > li { counter-increment: ER_indpowersof2-1-2; }
-#B_strongind-4-3 { counter-set: B_strongind-4-3 0; }
-#B_strongind-4-3 > li::marker { content: ""counter(B_strongind-4-3,decimal)""; }
-#B_strongind-4-3 > li { counter-increment: B_strongind-4-3; }
-#E_domainqexist1-3-1 { counter-set: E_domainqexist1-3-1 0; }
-#E_domainqexist1-3-1 > li::marker { content: ""counter(E_domainqexist1-3-1,lower-alpha)""; }
-#E_domainqexist1-3-1 > li { counter-increment: E_domainqexist1-3-1; }
-#B_pfexistential-3-3 { counter-set: B_pfexistential-3-3 0; }
-#B_pfexistential-3-3 > li::marker { content: ""counter(B_pfexistential-3-3,decimal)""; }
-#B_pfexistential-3-3 > li { counter-increment: B_pfexistential-3-3; }
-#B_pfunique-3-3 { counter-set: B_pfunique-3-3 0; }
-#B_pfunique-3-3 > li::marker { content: ""counter(B_pfunique-3-3,decimal)""; }
-#B_pfunique-3-3 > li { counter-increment: B_pfunique-3-3; }
-#existunique-23-1 { counter-set: existunique-23-1 0; }
-#existunique-23-1 > li::marker { content: ""counter(existunique-23-1,decimal)""; }
-#existunique-23-1 > li { counter-increment: existunique-23-1; }
-#E_wop-3-2 { counter-set: E_wop-3-2 0; }
-#E_wop-3-2 > li::marker { content: ""counter(E_wop-3-2,decimal)""; }
-#E_wop-3-2 > li { counter-increment: E_wop-3-2; }
-#E_setnotevarious-2 { counter-set: E_setnotevarious-2 0; }
-#E_setnotevarious-2 > li::marker { content: ""counter(E_setnotevarious-2,lower-alpha)""; }
-#E_setnotevarious-2 > li { counter-increment: E_setnotevarious-2; }
-#E_setops-3-2 { counter-set: E_setops-3-2 0; }
-#E_setops-3-2 > li::marker { content: ""counter(E_setops-3-2,lower-alpha)""; }
-#E_setops-3-2 > li { counter-increment: E_setops-3-2; }
-#SS_setproofs-3-3 { counter-set: SS_setproofs-3-3 0; }
-#SS_setproofs-3-3 > li::marker { content: ""counter(SS_setproofs-3-3,decimal)""; }
-#SS_setproofs-3-3 > li { counter-increment: SS_setproofs-3-3; }
-#L_SetIdent-4-4 { counter-set: L_SetIdent-4-4 0; }
-#L_SetIdent-4-4 > li::marker { content: ""counter(L_SetIdent-4-4,decimal)""; }
-#L_SetIdent-4-4 > li { counter-increment: L_SetIdent-4-4; }
-#SS_setproofs-25-1-1-2 { counter-set: SS_setproofs-25-1-1-2 0; }
-#SS_setproofs-25-1-1-2 > li::marker { content: ""counter(SS_setproofs-25-1-1-2,lower-alpha)""; }
-#SS_setproofs-25-1-1-2 > li { counter-increment: SS_setproofs-25-1-1-2; }
-#SS_setproofs-25-2-1-2 { counter-set: SS_setproofs-25-2-1-2 0; }
-#SS_setproofs-25-2-1-2 > li::marker { content: ""counter(SS_setproofs-25-2-1-2,lower-alpha)""; }
-#SS_setproofs-25-2-1-2 > li { counter-increment: SS_setproofs-25-2-1-2; }
-#SS_setproofs-25-3-1-2 { counter-set: SS_setproofs-25-3-1-2 0; }
-#SS_setproofs-25-3-1-2 > li::marker { content: ""counter(SS_setproofs-25-3-1-2,lower-alpha)""; }
-#SS_setproofs-25-3-1-2 > li { counter-increment: SS_setproofs-25-3-1-2; }
-#SS_setproofs-25-4-1-2 { counter-set: SS_setproofs-25-4-1-2 0; }
-#SS_setproofs-25-4-1-2 > li::marker { content: ""counter(SS_setproofs-25-4-1-2,lower-alpha)""; }
-#SS_setproofs-25-4-1-2 > li { counter-increment: SS_setproofs-25-4-1-2; }
-#SS_setproofs-25-5-1-2 { counter-set: SS_setproofs-25-5-1-2 0; }
-#SS_setproofs-25-5-1-2 > li::marker { content: ""counter(SS_setproofs-25-5-1-2,lower-alpha)""; }
-#SS_setproofs-25-5-1-2 > li { counter-increment: SS_setproofs-25-5-1-2; }
-#SS_setproofs-25-6-1-2 { counter-set: SS_setproofs-25-6-1-2 0; }
-#SS_setproofs-25-6-1-2 > li::marker { content: ""counter(SS_setproofs-25-6-1-2,lower-alpha)""; }
-#SS_setproofs-25-6-1-2 > li { counter-increment: SS_setproofs-25-6-1-2; }
-#SS_setproofs-25-7-1-2 { counter-set: SS_setproofs-25-7-1-2 0; }
-#SS_setproofs-25-7-1-2 > li::marker { content: ""counter(SS_setproofs-25-7-1-2,lower-alpha)""; }
-#SS_setproofs-25-7-1-2 > li { counter-increment: SS_setproofs-25-7-1-2; }
-#SS_setproofs-25-15-1-2 { counter-set: SS_setproofs-25-15-1-2 0; }
-#SS_setproofs-25-15-1-2 > li::marker { content: ""counter(SS_setproofs-25-15-1-2,lower-alpha)""; }
-#SS_setproofs-25-15-1-2 > li { counter-increment: SS_setproofs-25-15-1-2; }
-#E_notfunctionimages-2-1 { counter-set: E_notfunctionimages-2-1 0; }
-#E_notfunctionimages-2-1 > li::marker { content: ""counter(E_notfunctionimages-2-1,lower-alpha)""; }
-#E_notfunctionimages-2-1 > li { counter-increment: E_notfunctionimages-2-1; }
-#E_addasfn-3-1 { counter-set: E_addasfn-3-1 0; }
-#E_addasfn-3-1 > li::marker { content: ""counter(E_addasfn-3-1,lower-alpha)""; }
-#E_addasfn-3-1 > li { counter-increment: E_addasfn-3-1; }
-#functions-45-1-1-2 { counter-set: functions-45-1-1-2 0; }
-#functions-45-1-1-2 > li::marker { content: ""counter(functions-45-1-1-2,lower-alpha)""; }
-#functions-45-1-1-2 > li { counter-increment: functions-45-1-1-2; }
-#functions-45-2-1-2 { counter-set: functions-45-2-1-2 0; }
-#functions-45-2-1-2 > li::marker { content: ""counter(functions-45-2-1-2,lower-alpha)""; }
-#functions-45-2-1-2 > li { counter-increment: functions-45-2-1-2; }
-#functions-45-3-1-2 { counter-set: functions-45-3-1-2 0; }
-#functions-45-3-1-2 > li::marker { content: ""counter(functions-45-3-1-2,lower-alpha)""; }
-#functions-45-3-1-2 > li { counter-increment: functions-45-3-1-2; }
-#functions-45-4-1-2 { counter-set: functions-45-4-1-2 0; }
-#functions-45-4-1-2 > li::marker { content: ""counter(functions-45-4-1-2,lower-alpha)""; }
-#functions-45-4-1-2 > li { counter-increment: functions-45-4-1-2; }
-#functions-45-5-1-2 { counter-set: functions-45-5-1-2 0; }
-#functions-45-5-1-2 > li::marker { content: ""counter(functions-45-5-1-2,lower-alpha)""; }
-#functions-45-5-1-2 > li { counter-increment: functions-45-5-1-2; }
-#functions-45-7-1-3 { counter-set: functions-45-7-1-3 0; }
-#functions-45-7-1-3 > li::marker { content: ""counter(functions-45-7-1-3,lower-alpha)""; }
-#functions-45-7-1-3 > li { counter-increment: functions-45-7-1-3; }
-#functions-45-8-1-2 { counter-set: functions-45-8-1-2 0; }
-#functions-45-8-1-2 > li::marker { content: ""counter(functions-45-8-1-2,lower-alpha)""; }
-#functions-45-8-1-2 > li { counter-increment: functions-45-8-1-2; }
-#functions-45-9-1-2 { counter-set: functions-45-9-1-2 0; }
-#functions-45-9-1-2 > li::marker { content: ""counter(functions-45-9-1-2,lower-alpha)""; }
-#functions-45-9-1-2 > li { counter-increment: functions-45-9-1-2; }
-#functions-45-10-1-3 { counter-set: functions-45-10-1-3 0; }
-#functions-45-10-1-3 > li::marker { content: ""counter(functions-45-10-1-3,lower-alpha)""; }
-#functions-45-10-1-3 > li { counter-increment: functions-45-10-1-3; }
-#functions-45-11-1-3 { counter-set: functions-45-11-1-3 0; }
-#functions-45-11-1-3 > li::marker { content: ""counter(functions-45-11-1-3,lower-alpha)""; }
-#functions-45-11-1-3 > li { counter-increment: functions-45-11-1-3; }
-#functions-45-12-1-2 { counter-set: functions-45-12-1-2 0; }
-#functions-45-12-1-2 > li::marker { content: ""counter(functions-45-12-1-2,lower-alpha)""; }
-#functions-45-12-1-2 > li { counter-increment: functions-45-12-1-2; }
-#E_equivclasses-2-3 { counter-set: E_equivclasses-2-3 0; }
-#E_equivclasses-2-3 > li::marker { content: ""counter(E_equivclasses-2-3,lower-alpha)""; }
-#E_equivclasses-2-3 > li { counter-increment: E_equivclasses-2-3; }
-#D_partition-1-1-6 { counter-set: D_partition-1-1-6 0; }
-#D_partition-1-1-6 > li::marker { content: ""counter(D_partition-1-1-6,decimal)""; }
-#D_partition-1-1-6 > li { counter-increment: D_partition-1-1-6; }
-#E_equivclasses2-4-2 { counter-set: E_equivclasses2-4-2 0; }
-#E_equivclasses2-4-2 > li::marker { content: ""counter(E_equivclasses2-4-2,lower-alpha)""; }
-#E_equivclasses2-4-2 > li { counter-increment: E_equivclasses2-4-2; }
-#SS_equivrelations-47-1-1-3 { counter-set: SS_equivrelations-47-1-1-3 0; }
-#SS_equivrelations-47-1-1-3 > li::marker { content: ""counter(SS_equivrelations-47-1-1-3,lower-alpha)""; }
-#SS_equivrelations-47-1-1-3 > li { counter-increment: SS_equivrelations-47-1-1-3; }
-#SS_equivrelations-47-2-1-3 { counter-set: SS_equivrelations-47-2-1-3 0; }
-#SS_equivrelations-47-2-1-3 > li::marker { content: ""counter(SS_equivrelations-47-2-1-3,lower-alpha)""; }
-#SS_equivrelations-47-2-1-3 > li { counter-increment: SS_equivrelations-47-2-1-3; }
-#SS_equivrelations-47-4-1-2 { counter-set: SS_equivrelations-47-4-1-2 0; }
-#SS_equivrelations-47-4-1-2 > li::marker { content: ""counter(SS_equivrelations-47-4-1-2,lower-alpha)""; }
-#SS_equivrelations-47-4-1-2 > li { counter-increment: SS_equivrelations-47-4-1-2; }
-#SS_equivrelations-47-5-1-2 { counter-set: SS_equivrelations-47-5-1-2 0; }
-#SS_equivrelations-47-5-1-2 > li::marker { content: ""counter(SS_equivrelations-47-5-1-2,lower-alpha)""; }
-#SS_equivrelations-47-5-1-2 > li { counter-increment: SS_equivrelations-47-5-1-2; }
-#SS_equivrelations-47-6-1-2 { counter-set: SS_equivrelations-47-6-1-2 0; }
-#SS_equivrelations-47-6-1-2 > li::marker { content: ""counter(SS_equivrelations-47-6-1-2,lower-alpha)""; }
-#SS_equivrelations-47-6-1-2 > li { counter-increment: SS_equivrelations-47-6-1-2; }
-#SS_equivrelations-47-7-1-2 { counter-set: SS_equivrelations-47-7-1-2 0; }
-#SS_equivrelations-47-7-1-2 > li::marker { content: ""counter(SS_equivrelations-47-7-1-2,lower-alpha)""; }
-#SS_equivrelations-47-7-1-2 > li { counter-increment: SS_equivrelations-47-7-1-2; }
-#SS_equivrelations-47-8-1-2 { counter-set: SS_equivrelations-47-8-1-2 0; }
-#SS_equivrelations-47-8-1-2 > li::marker { content: ""counter(SS_equivrelations-47-8-1-2,lower-alpha)""; }
-#SS_equivrelations-47-8-1-2 > li { counter-increment: SS_equivrelations-47-8-1-2; }
-#SS_equivrelations-47-9-1-2 { counter-set: SS_equivrelations-47-9-1-2 0; }
-#SS_equivrelations-47-9-1-2 > li::marker { content: ""counter(SS_equivrelations-47-9-1-2,lower-alpha)""; }
-#SS_equivrelations-47-9-1-2 > li { counter-increment: SS_equivrelations-47-9-1-2; }
-#D_RSTprop2-1-1-3 { counter-set: D_RSTprop2-1-1-3 0; }
-#D_RSTprop2-1-1-3 > li::marker { content: ""counter(D_RSTprop2-1-1-3,decimal)""; }
-#D_RSTprop2-1-1-3 > li { counter-increment: D_RSTprop2-1-1-3; }
-#T_totalorder-1-1-4 { counter-set: T_totalorder-1-1-4 0; }
-#T_totalorder-1-1-4 > li::marker { content: ""counter(T_totalorder-1-1-4,decimal)""; }
-#T_totalorder-1-1-4 > li { counter-increment: T_totalorder-1-1-4; }
-#orders-33-1-1-2 { counter-set: orders-33-1-1-2 0; }
-#orders-33-1-1-2 > li::marker { content: ""counter(orders-33-1-1-2,lower-alpha)""; }
-#orders-33-1-1-2 > li { counter-increment: orders-33-1-1-2; }
-#orders-33-2-1-2 { counter-set: orders-33-2-1-2 0; }
-#orders-33-2-1-2 > li::marker { content: ""counter(orders-33-2-1-2,lower-alpha)""; }
-#orders-33-2-1-2 > li { counter-increment: orders-33-2-1-2; }
-#orders-33-3-1-2 { counter-set: orders-33-3-1-2 0; }
-#orders-33-3-1-2 > li::marker { content: ""counter(orders-33-3-1-2,lower-alpha)""; }
-#orders-33-3-1-2 > li { counter-increment: orders-33-3-1-2; }
-#orders-33-4-1-2 { counter-set: orders-33-4-1-2 0; }
-#orders-33-4-1-2 > li::marker { content: ""counter(orders-33-4-1-2,lower-alpha)""; }
-#orders-33-4-1-2 > li { counter-increment: orders-33-4-1-2; }
-#binomial9-30-2-1-1-1 { counter-set: binomial9-30-2-1-1-1 0; }
-#binomial9-30-2-1-1-1 > li::marker { content: ""counter(binomial9-30-2-1-1-1,lower-alpha)""; }
-#binomial9-30-2-1-1-1 > li { counter-increment: binomial9-30-2-1-1-1; }
-#cardinality-31-6-1-2 { counter-set: cardinality-31-6-1-2 0; }
-#cardinality-31-6-1-2 > li::marker { content: ""counter(cardinality-31-6-1-2,lower-alpha)""; }
-#cardinality-31-6-1-2 > li { counter-increment: cardinality-31-6-1-2; }
-</style>
+<script src="_static/prefix-runtime.42217a82c75796c8.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.7e141ad8414abf4a.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.f4ab138da65f4203.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
 </head>
 <body class="pretext book ignore-math">
-<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
-<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
-<h1 class="heading"><a href="IntroProofs.html"><span class="title">Introduction to Proofs:</span> <span class="subtitle">An Active Exploration of Mathematical Language</span></a></h1>
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="IntroProofs.html"><span class="title">Introduction to Proofs</span> <span class="subtitle">An Active Exploration of Mathematical Language</span></a></h1>
 <p class="byline">Jennifer Firkins Nordstrom</p>
-</div>
-</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
 <button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-2.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
 <div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
@@ -595,33 +316,54 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="moredirect"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">3.2</span><span class="space"> </span><span class="title">More Direct Proof: Rational Numbers and Divisibility</span>
 </h2>
-<section class="introduction" id="moredirect-4"><div class="para" id="moredirect-4-1">In this section we introduce some new defintions and use them to practice with the technique of direct proof.</div></section><section class="subsection" id="SS_rational"><h3 class="heading hide-type">
+<section class="introduction" id="moredirect-4"><div class="para" id="moredirect-4-1">In this section we introduce some new defintions and use them to practice with the technique of direct proof.<div class="autopermalink" data-description="Paragraph"><a href="#moredirect-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="subsection" id="SS_rational"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.2.1</span><span class="space"> </span><span class="title">Rational Numbers</span>
 </h3>
-<div class="para" id="SS_rational-2">The set of real numbers is the set you are likely familiar with from your previous math courses, particularly algebra and calculus. These are all the numbers found on the number line, such as <span class="process-math">\(0, 1, -3, 1/2, \pi, \sqrt{2}\text{,}\)</span> etc. Recall, we use the notation <span class="process-math">\(\mathbb{R}\)</span> for the set of real numbers.</div>
+<div class="para" id="SS_rational-2">The set of real numbers is the set you are likely familiar with from your previous math courses, particularly algebra and calculus. These are all the numbers found on the number line, such as <span class="process-math">\(0, 1, -3, 1/2, \pi, \sqrt{2}\text{,}\)</span> etc. Recall, we use the notation <span class="process-math">\(\mathbb{R}\)</span> for the set of real numbers.<div class="autopermalink" data-description="Paragraph"><a href="#SS_rational-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="definition definition-like" id="D_rational"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.2.1</span><span class="period">.</span>
 </h4>
-<div class="para" id="D_rational-1-1">A real number, <span class="process-math">\(r\text{,}\)</span> is <dfn class="terminology">rational</dfn> if there exist <span class="process-math">\(a, b\in \mathbb{Z}\)</span> such that <span class="process-math">\(r=\frac{a}{b}\)</span> and <span class="process-math">\(b\neq 0\text{.}\)</span>  The set of rational numbers is represented by <span class="process-math">\(\mathbb{Q}\)</span>
-</div></article><article class="definition definition-like" id="D_irrational"><h4 class="heading">
+<div class="para" id="D_rational-1-1">A real number, <span class="process-math">\(r\text{,}\)</span> is <dfn class="terminology">rational</dfn> if there exist <span class="process-math">\(a, b\in \mathbb{Z}\)</span> such that <span class="process-math">\(r=\frac{a}{b}\)</span> and <span class="process-math">\(b\neq 0\text{.}\)</span>  The set of rational numbers is represented by <span class="process-math">\(\mathbb{Q}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#D_rational-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 3.2.1"><a href="#D_rational" title="Copy heading and permalink for Definition 3.2.1" aria-label="Copy heading and permalink for Definition 3.2.1">🔗</a></div></article><article class="definition definition-like" id="D_irrational"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.2.2</span><span class="period">.</span>
 </h4>
-<div class="para" id="D_irrational-1-1">A real number, <span class="process-math">\(r\text{,}\)</span> that is not rational is <dfn class="terminology">irrational</dfn>. There is not a nice notation for the irrational numbers. We will use <span class="process-math">\(\mathbb{R}\setminus\mathbb{Q}\)</span>, which is the set of real numbers minus the set of rationals.</div></article><div class="para" id="SS_rational-5">To determine if a given number is rational, we need to be able to find a way to write it as a fraction of integers. To prove a number is rational is really a type of existence proof--we need to show <span class="process-math">\(a, b\in \mathbb{Z}\)</span> exist. To prove a number is not rational, we need to show there is no possible way to write it as a fraction of integers. Also, keep in mind that rational and irrational numbers first need to be real numbers. It is possible that a number that is not rational is not a real number, and thus, not irrational either.</div>
+<div class="para" id="D_irrational-1-1">A real number, <span class="process-math">\(r\text{,}\)</span> that is not rational is <dfn class="terminology">irrational</dfn>. There is not a nice notation for the irrational numbers. We will use <span class="process-math">\(\mathbb{R}\setminus\mathbb{Q}\)</span>, which is the set of real numbers minus the set of rationals.<div class="autopermalink" data-description="Paragraph"><a href="#D_irrational-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 3.2.2"><a href="#D_irrational" title="Copy heading and permalink for Definition 3.2.2" aria-label="Copy heading and permalink for Definition 3.2.2">🔗</a></div></article><div class="para" id="SS_rational-5">To determine if a given number is rational, we need to be able to find a way to write it as a fraction of integers. To prove a number is rational is really a type of existence proof--we need to show <span class="process-math">\(a, b\in \mathbb{Z}\)</span> exist. To prove a number is not rational, we need to show there is no possible way to write it as a fraction of integers. Also, keep in mind that rational and irrational numbers first need to be real numbers. It is possible that a number that is not rational is not a real number, and thus, not irrational either.<div class="autopermalink" data-description="Paragraph"><a href="#SS_rational-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <details id="E_rationals" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">Rational Numbers.</span>
-</h4></summary><article class="example example-like knowl__content"><div class="para" id="E_rationals-2">Is <span class="process-math">\(O\)</span> is rational?</div>
-<details id="E_rationals-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><span class="process-math">\(0=0/1\text{.}\)</span></div></details><div class="para" id="E_rationals-4">Is <span class="process-math">\(2\)</span> rational?</div>
-<details id="E_rationals-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><span class="process-math">\(2=2/1\text{.}\)</span></div></details><div class="para" id="E_rationals-6">Is <span class="process-math">\(9/5\)</span> rational?</div>
-<details id="E_rationals-7" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"></div></details><div class="para" id="E_rationals-8">Is <span class="process-math">\(2/0\)</span> rational?</div>
-<details id="E_rationals-9" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><span class="process-math">\(2/0\)</span></div></details></article></details><div class="para" id="SS_rational-7">You have seen some common examples of irrational numbers in previous courses: <span class="process-math">\(\sqrt{2}, \pi, e\text{.}\)</span> It is, in fact, challenging to prove these are irrational. We will see the proof that <span class="process-math">\(\sqrt{2}\)</span> is irrational later in <a href="contradiction.html" class="internal" title="Section 3.4: Proof by Contradiction and Contrapositive">Section 3.4</a>.</div>
-<div class="para" id="SS_rational-8">In your earlier dealings with rational and irrational numbers, you may have seen the property that rational numbers are ones with terminating or repeating decimal expansions, while irrational numbers have non-terminating and non-repeating decimal expansions. The next couple of examples explore this property.</div>
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="E_rationals-2">Is <span class="process-math">\(O\)</span> is rational?<div class="autopermalink" data-description="Paragraph"><a href="#E_rationals-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="E_rationals-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<span class="process-math">\(0=0/1\text{.}\)</span><div class="autopermalink" data-description="Answer 3.2.3.1"><a href="#E_rationals-3" title="Copy heading and permalink for Answer 3.2.3.1" aria-label="Copy heading and permalink for Answer 3.2.3.1">🔗</a></div>
+</div></details><div class="para" id="E_rationals-4">Is <span class="process-math">\(2\)</span> rational?<div class="autopermalink" data-description="Paragraph"><a href="#E_rationals-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="E_rationals-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<span class="process-math">\(2=2/1\text{.}\)</span><div class="autopermalink" data-description="Answer 3.2.3.2"><a href="#E_rationals-5" title="Copy heading and permalink for Answer 3.2.3.2" aria-label="Copy heading and permalink for Answer 3.2.3.2">🔗</a></div>
+</div></details><div class="para" id="E_rationals-6">Is <span class="process-math">\(9/5\)</span> rational?<div class="autopermalink" data-description="Paragraph"><a href="#E_rationals-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="E_rationals-7" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="autopermalink" data-description="Answer 3.2.3.3"><a href="#E_rationals-7" title="Copy heading and permalink for Answer 3.2.3.3" aria-label="Copy heading and permalink for Answer 3.2.3.3">🔗</a></div></div></details><div class="para" id="E_rationals-8">Is <span class="process-math">\(2/0\)</span> rational?<div class="autopermalink" data-description="Paragraph"><a href="#E_rationals-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="E_rationals-9" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<span class="process-math">\(2/0\)</span><div class="autopermalink" data-description="Answer 3.2.3.4"><a href="#E_rationals-9" title="Copy heading and permalink for Answer 3.2.3.4" aria-label="Copy heading and permalink for Answer 3.2.3.4">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 3.2.3: Rational Numbers"><a href="#E_rationals" title="Copy heading and permalink for Example 3.2.3: Rational Numbers" aria-label="Copy heading and permalink for Example 3.2.3: Rational Numbers">🔗</a></div></article></details><div class="para" id="SS_rational-7">You have seen some common examples of irrational numbers in previous courses: <span class="process-math">\(\sqrt{2}, \pi, e\text{.}\)</span> It is, in fact, challenging to prove these are irrational. We will see the proof that <span class="process-math">\(\sqrt{2}\)</span> is irrational later in <a href="contradiction.html" class="internal" title="Section 3.4: Proof by Contradiction and Contrapositive">Section 3.4</a>.<div class="autopermalink" data-description="Paragraph"><a href="#SS_rational-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="SS_rational-8">In your earlier dealings with rational and irrational numbers, you may have seen the property that rational numbers are ones with terminating or repeating decimal expansions, while irrational numbers have non-terminating and non-repeating decimal expansions. The next couple of examples explore this property.<div class="autopermalink" data-description="Paragraph"><a href="#SS_rational-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <details id="E_termdecimal" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.2.4</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(0.2345\)</span> is Rational.</span>
-</h4></summary><article class="example example-like knowl__content"><div class="para" id="E_termdecimal-2">Show <span class="process-math">\(0.2345\)</span> is a rational number.</div>
-<div class="para" id="E_termdecimal-3">We need to find <span class="process-math">\(a, b\in \mathbb{Z}\)</span> such that <span class="process-math">\(0.2345=\frac{a}{b}\)</span> and <span class="process-math">\(b\neq 0\text{.}\)</span> We can use what we know about decimals: for example, <span class="process-math">\(0.1=1/10; 0.01=1/100\text{.}\)</span> Thus, <span class="process-math">\(0.2345=2345/10000\text{.}\)</span> Letting <span class="process-math">\(a=2345, b=10000\text{,}\)</span> we can see that <span class="process-math">\(a, b\in \mathbb{Z}, b\neq 0\text{.}\)</span>
-</div></article></details><details id="E_repeatdecimal" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="E_termdecimal-2">Show <span class="process-math">\(0.2345\)</span> is a rational number.<div class="autopermalink" data-description="Paragraph"><a href="#E_termdecimal-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="E_termdecimal-3">We need to find <span class="process-math">\(a, b\in \mathbb{Z}\)</span> such that <span class="process-math">\(0.2345=\frac{a}{b}\)</span> and <span class="process-math">\(b\neq 0\text{.}\)</span> We can use what we know about decimals: for example, <span class="process-math">\(0.1=1/10; 0.01=1/100\text{.}\)</span> Thus, <span class="process-math">\(0.2345=2345/10000\text{.}\)</span> Letting <span class="process-math">\(a=2345, b=10000\text{,}\)</span> we can see that <span class="process-math">\(a, b\in \mathbb{Z}, b\neq 0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_termdecimal-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 3.2.4: 0.2345 is Rational"><a href="#E_termdecimal" title="Copy heading and permalink for Example 3.2.4: 0.2345 is Rational" aria-label="Copy heading and permalink for Example 3.2.4: 0.2345 is Rational">🔗</a></div></article></details><details id="E_repeatdecimal" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.2.5</span><span class="period">.</span><span class="space"> </span><span class="title"><span class="process-math">\(0.\overline{123}\)</span> is Rational.</span>
-</h4></summary><article class="example example-like knowl__content"><div class="para" id="E_repeatdecimal-2">Show the repeating decimal <span class="process-math">\(0.\overline{123}\)</span> is a rational number.</div>
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="E_repeatdecimal-2">Show the repeating decimal <span class="process-math">\(0.\overline{123}\)</span> is a rational number.<div class="autopermalink" data-description="Paragraph"><a href="#E_repeatdecimal-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para logical" id="E_repeatdecimal-3">
 <div class="para">We need to find <span class="process-math">\(a, b\in \mathbb{Z}\)</span> such that <span class="process-math">\(0.\overline{123}=\frac{a}{b}\)</span> and <span class="process-math">\(b\neq 0\text{.}\)</span> This one is trickier than the last example and requires a new technique. First, let <span class="process-math">\(x=0.\overline{123}=0.123123\ldots\text{.}\)</span> Then multiply both sides of <span class="process-math">\(x=0.123123\ldots\)</span> by 1000, so that <span class="process-math">\(1000x=123.123123\ldots\text{.}\)</span> We chose 1000 in order to get one set of the repeated digits in front of the decimal point. Now we subtract the two equations from each other:</div>
 <div class="displaymath process-math" id="E_repeatdecimal-3-7">
@@ -632,21 +374,27 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="para">Resulting in <span class="process-math">\(123=999x\text{.}\)</span> Now we just solve for <span class="process-math">\(x=123/999\text{.}\)</span>
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#E_repeatdecimal-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="E_repeatdecimal-4">Letting <span class="process-math">\(a=123, b=999\text{,}\)</span> we can see that <span class="process-math">\(a, b\in \mathbb{Z}, b\neq 0\text{.}\)</span>
-</div></article></details><article class="activity project-like" id="A_rationalpractice"><h4 class="heading">
+<div class="para" id="E_repeatdecimal-4">Letting <span class="process-math">\(a=123, b=999\text{,}\)</span> we can see that <span class="process-math">\(a, b\in \mathbb{Z}, b\neq 0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_repeatdecimal-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 3.2.5: 0.\overline{123} is Rational"><a href="#E_repeatdecimal" title="Copy heading and permalink for Example 3.2.5: 0.\overline{123} is Rational" aria-label="Copy heading and permalink for Example 3.2.5: 0.\overline{123} is Rational">🔗</a></div></article></details><article class="activity project-like" id="A_rationalpractice"><h4 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Practice with Rational Numbers.</span>
 </h4>
-<div class="introduction" id="A_rationalpractice-2"><div class="para" id="A_rationalpractice-2-1">Prove the following numbers, <span class="process-math">\(x\text{,}\)</span> are rational by finding integers, <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> so that <span class="process-math">\(x=\frac{a}{b}\text{.}\)</span>
+<div class="introduction" id="A_rationalpractice-2"><div class="para" id="A_rationalpractice-2-1">Prove the following numbers, <span class="process-math">\(x\text{,}\)</span> are rational by finding integers, <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> so that <span class="process-math">\(x=\frac{a}{b}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_rationalpractice-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></div>
 <article class="task exercise-like" id="A_rationalpractice-3"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<span class="process-math">\(x=12.345\)</span></article><article class="task exercise-like" id="A_rationalpractice-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<span class="process-math">\(x=12.\overline{3}\)</span></article><article class="task exercise-like" id="A_rationalpractice-5"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<span class="process-math">\(x=1.2\overline{34}\)</span></article></article><div class="para" id="SS_rational-12">The next theorem gives us an example of how to prove more general statements with rational numbers.</div>
+<span class="process-math">\(x=12.345\)</span><div class="autopermalink" data-description="Task 3.2.1.a"><a href="#A_rationalpractice-3" title="Copy heading and permalink for Task 3.2.1.a" aria-label="Copy heading and permalink for Task 3.2.1.a">🔗</a></div></article><article class="task exercise-like" id="A_rationalpractice-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<span class="process-math">\(x=12.\overline{3}\)</span><div class="autopermalink" data-description="Task 3.2.1.b"><a href="#A_rationalpractice-4" title="Copy heading and permalink for Task 3.2.1.b" aria-label="Copy heading and permalink for Task 3.2.1.b">🔗</a></div></article><article class="task exercise-like" id="A_rationalpractice-5"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<span class="process-math">\(x=1.2\overline{34}\)</span><div class="autopermalink" data-description="Task 3.2.1.c"><a href="#A_rationalpractice-5" title="Copy heading and permalink for Task 3.2.1.c" aria-label="Copy heading and permalink for Task 3.2.1.c">🔗</a></div></article><div class="autopermalink" data-description="Activity 3.2.1: Practice with Rational Numbers"><a href="#A_rationalpractice" title="Copy heading and permalink for Activity 3.2.1: Practice with Rational Numbers" aria-label="Copy heading and permalink for Activity 3.2.1: Practice with Rational Numbers">🔗</a></div></article><div class="para" id="SS_rational-12">The next theorem gives us an example of how to prove more general statements with rational numbers.<div class="autopermalink" data-description="Paragraph"><a href="#SS_rational-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="theorem theorem-like" id="T_sumofrationals"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.2.6</span><span class="period">.</span>
 </h4>
-<div class="para" id="T_sumofrationals-1-1">The sum of two rational numbers is rational.</div></article><details id="SS_rational-14" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="SS_rational-14-1">Let <span class="process-math">\(r, s\)</span> be rational. Show <span class="process-math">\(r+s\)</span> is rational.</div>
+<div class="para" id="T_sumofrationals-1-1">The sum of two rational numbers is rational.<div class="autopermalink" data-description="Paragraph"><a href="#T_sumofrationals-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 3.2.6"><a href="#T_sumofrationals" title="Copy heading and permalink for Theorem 3.2.6" aria-label="Copy heading and permalink for Theorem 3.2.6">🔗</a></div></article><details id="SS_rational-14" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="SS_rational-14-1">Let <span class="process-math">\(r, s\)</span> be rational. Show <span class="process-math">\(r+s\)</span> is rational.<div class="autopermalink" data-description="Paragraph"><a href="#SS_rational-14-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para logical" id="SS_rational-14-2">
 <div class="para">Since <span class="process-math">\(r\)</span> is rational, it can be written as <span class="process-math">\(\frac{a}{b}\)</span> for some <span class="process-math">\(a, b\in \mathbb{Z}, b\neq 0\text{.}\)</span> Similarly, since <span class="process-math">\(s\)</span> is rational, it can be written as <span class="process-math">\(\frac{p}{q}\)</span> for some <span class="process-math">\(p, q\in \mathbb{Z}, q\neq 0\text{.}\)</span> (Note, we need to use different letters since <span class="process-math">\(r\)</span> and <span class="process-math">\(s\)</span> are not necessarily the same.) Now,</div>
 <div class="displaymath process-math">
@@ -660,130 +408,210 @@ r+s=\frac{a}{b}+\frac{p}{q}.
 r+s=\frac{aq+bp}{pq}.
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#SS_rational-14-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="SS_rational-14-3">Then <span class="process-math">\(aq+pb, pq \in \mathbb{Z}\)</span> and, since <span class="process-math">\(p, q\neq 0, pq\neq 0\text{.}\)</span> Therefore, <span class="process-math">\(r+s\)</span> is rational.</div></article></details><div class="para" id="SS_rational-15">Once we have proven a theorem, we can use it to prove additional statements. Note, a <dfn class="terminology">corollary</dfn> is just a theorem that follows almost directly from a previous theorem.</div>
+<div class="para" id="SS_rational-14-3">Then <span class="process-math">\(aq+pb, pq \in \mathbb{Z}\)</span> and, since <span class="process-math">\(p, q\neq 0, pq\neq 0\text{.}\)</span> Therefore, <span class="process-math">\(r+s\)</span> is rational.<div class="autopermalink" data-description="Paragraph"><a href="#SS_rational-14-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 3.2.1.1"><a href="#SS_rational-14" title="Copy heading and permalink for Proof 3.2.1.1" aria-label="Copy heading and permalink for Proof 3.2.1.1">🔗</a></div></article></details><div class="para" id="SS_rational-15">Once we have proven a theorem, we can use it to prove additional statements. Note, a <dfn class="terminology">corollary</dfn> is just a theorem that follows almost directly from a previous theorem.<div class="autopermalink" data-description="Paragraph"><a href="#SS_rational-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="corollary theorem-like" id="SS_rational-16"><h4 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">3.2.7</span><span class="period">.</span>
 </h4>
-<div class="para" id="SS_rational-16-1-1">The double of a rational number is rational.</div></article><details id="SS_rational-17" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="SS_rational-17-1">Let <span class="process-math">\(r\)</span> be a rational number. We want to show <span class="process-math">\(2r\)</span> is rational. But <span class="process-math">\(2r=r+r\text{.}\)</span> By <a href="moredirect.html#T_sumofrationals" class="xref" data-knowl="./knowl/xref/T_sumofrationals.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.2.6">Theorem 3.2.6</a>, <span class="process-math">\(r+r\)</span> is rational.</div></article></details><article class="activity project-like" id="A_rationalproofs"><h4 class="heading">
+<div class="para" id="SS_rational-16-1-1">The double of a rational number is rational.<div class="autopermalink" data-description="Paragraph"><a href="#SS_rational-16-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Corollary 3.2.7"><a href="#SS_rational-16" title="Copy heading and permalink for Corollary 3.2.7" aria-label="Copy heading and permalink for Corollary 3.2.7">🔗</a></div></article><details id="SS_rational-17" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="SS_rational-17-1">Let <span class="process-math">\(r\)</span> be a rational number. We want to show <span class="process-math">\(2r\)</span> is rational. But <span class="process-math">\(2r=r+r\text{.}\)</span> By <a href="moredirect.html#T_sumofrationals" class="xref" data-knowl="./knowl/xref/T_sumofrationals.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.2.6">Theorem 3.2.6</a>, <span class="process-math">\(r+r\)</span> is rational.<div class="autopermalink" data-description="Paragraph"><a href="#SS_rational-17-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 3.2.1.2"><a href="#SS_rational-17" title="Copy heading and permalink for Proof 3.2.1.2" aria-label="Copy heading and permalink for Proof 3.2.1.2">🔗</a></div></article></details><article class="activity project-like" id="A_rationalproofs"><h4 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.2.2</span><span class="period">.</span><span class="space"> </span><span class="title">Proofs with Rationals.</span>
 </h4>
-<div class="introduction" id="A_rationalproofs-2"><div class="para" id="A_rationalproofs-2-1">Let <span class="process-math">\(r, s\)</span> be rational numbers.</div></div>
+<div class="introduction" id="A_rationalproofs-2"><div class="para" id="A_rationalproofs-2-1">Let <span class="process-math">\(r, s\)</span> be rational numbers.<div class="autopermalink" data-description="Paragraph"><a href="#A_rationalproofs-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
 <article class="task exercise-like" id="A_rationalproofs-3"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para" id="A_rationalproofs-3-1">Prove <span class="process-math">\(r/2\)</span> is rational.</div></article><article class="task exercise-like" id="A_rationalproofs-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="A_rationalproofs-4-1">Prove <span class="process-math">\(5r-2s\)</span> is rational.</div></article><article class="task exercise-like" id="A_rationalproofs-5"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<div class="para" id="A_rationalproofs-5-1">Prove or disprove <span class="process-math">\(\frac{1}{r}\)</span> is rational.</div></article></article></section><section class="subsection" id="SS_divisibility"><h3 class="heading hide-type">
+<div class="para" id="A_rationalproofs-3-1">Prove <span class="process-math">\(r/2\)</span> is rational.<div class="autopermalink" data-description="Paragraph"><a href="#A_rationalproofs-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 3.2.2.a"><a href="#A_rationalproofs-3" title="Copy heading and permalink for Task 3.2.2.a" aria-label="Copy heading and permalink for Task 3.2.2.a">🔗</a></div></article><article class="task exercise-like" id="A_rationalproofs-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="A_rationalproofs-4-1">Prove <span class="process-math">\(5r-2s\)</span> is rational.<div class="autopermalink" data-description="Paragraph"><a href="#A_rationalproofs-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 3.2.2.b"><a href="#A_rationalproofs-4" title="Copy heading and permalink for Task 3.2.2.b" aria-label="Copy heading and permalink for Task 3.2.2.b">🔗</a></div></article><article class="task exercise-like" id="A_rationalproofs-5"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="A_rationalproofs-5-1">Prove or disprove <span class="process-math">\(\frac{1}{r}\)</span> is rational.<div class="autopermalink" data-description="Paragraph"><a href="#A_rationalproofs-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 3.2.2.c"><a href="#A_rationalproofs-5" title="Copy heading and permalink for Task 3.2.2.c" aria-label="Copy heading and permalink for Task 3.2.2.c">🔗</a></div></article><div class="autopermalink" data-description="Activity 3.2.2: Proofs with Rationals"><a href="#A_rationalproofs" title="Copy heading and permalink for Activity 3.2.2: Proofs with Rationals" aria-label="Copy heading and permalink for Activity 3.2.2: Proofs with Rationals">🔗</a></div></article><div class="autopermalink" data-description="Subsection 3.2.1: Rational Numbers"><a href="#SS_rational" title="Copy heading and permalink for Subsection 3.2.1: Rational Numbers" aria-label="Copy heading and permalink for Subsection 3.2.1: Rational Numbers">🔗</a></div></section><section class="subsection" id="SS_divisibility"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.2.2</span><span class="space"> </span><span class="title">Divisibility</span>
 </h3>
-<div class="para" id="SS_divisibility-4">We introduce the idea of divisibility for integers. It is important to understand that this concept involves only integers and is not the same thing as division. Divisibility is a property while division is an operation.</div>
+<div class="para" id="SS_divisibility-4">We introduce the idea of divisibility for integers. It is important to understand that this concept involves only integers and is not the same thing as division. Divisibility is a property while division is an operation.<div class="autopermalink" data-description="Paragraph"><a href="#SS_divisibility-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="definition definition-like" id="D_divisible"><h4 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.2.8</span><span class="period">.</span>
 </h4>
-<div class="para" id="D_divisible-1-1">Let <span class="process-math">\(n, d\in \mathbb{Z}\text{.}\)</span> Then <span class="process-math">\(n\)</span> is <dfn class="terminology">divisible</dfn> by <span class="process-math">\(d\)</span> if <span class="process-math">\(n=dk\)</span> for some <span class="process-math">\(k\in \mathbb{Z}\text{.}\)</span>
-</div></article><div class="para logical" id="SS_divisibility-6">
+<div class="para" id="D_divisible-1-1">Let <span class="process-math">\(n, d\in \mathbb{Z}\text{.}\)</span> Then <span class="process-math">\(n\)</span> is <dfn class="terminology">divisible</dfn> by <span class="process-math">\(d\)</span> if <span class="process-math">\(n=dk\)</span> for some <span class="process-math">\(k\in \mathbb{Z}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#D_divisible-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 3.2.8"><a href="#D_divisible" title="Copy heading and permalink for Definition 3.2.8" aria-label="Copy heading and permalink for Definition 3.2.8">🔗</a></div></article><div class="para logical" id="SS_divisibility-6">
 <div class="para">If <span class="process-math">\(n=dk\)</span> for some <span class="process-math">\(k\in \mathbb{Z}\)</span> we can also say</div>
 <ul class="disc" id="SS_divisibility-6-3">
-<li id="SS_divisibility-6-3-1"><div class="para" id="p-derived-SS_divisibility-6-3-1">
+<li id="SS_divisibility-6-3-1">
+<div class="para" id="p-derived-SS_divisibility-6-3-1">
 <span class="process-math">\(n\)</span> is a <dfn class="terminology">multiple</dfn> of <span class="process-math">\(d\text{;}\)</span>
-</div></li>
-<li id="SS_divisibility-6-3-2"><div class="para" id="p-derived-SS_divisibility-6-3-2">
-<span class="process-math">\(d\)</span> is a <dfn class="terminology">factor</dfn> of <span class="process-math">\(n\text{;}\)</span>
-</div></li>
-<li id="SS_divisibility-6-3-3"><div class="para" id="p-derived-SS_divisibility-6-3-3">
-<span class="process-math">\(d\)</span> is a <dfn class="terminology">divisor</dfn> of <span class="process-math">\(n\text{;}\)</span>
-</div></li>
-<li id="SS_divisibility-6-3-4"><div class="para" id="p-derived-SS_divisibility-6-3-4">
-<span class="process-math">\(d\)</span> <dfn class="terminology">divides</dfn> <span class="process-math">\(n\text{.}\)</span>
-</div></li>
-</ul>
 </div>
-<div class="para" id="SS_divisibility-7">We use the notation <span class="process-math">\(d\mid n\)</span>, read “<span class="process-math">\(d\)</span> divides <span class="process-math">\(n\text{.}\)</span>”</div>
-<div class="para" id="SS_divisibility-8">Important note: <span class="process-math">\(d\mid n\)</span> is a relationship between two integers. It is a statement that is either true or false. It does NOT equal a number. It is NOT the same thing as a fraction. It is not an equation, but it can be translated to the equation <span class="process-math">\(n=dk\)</span> for some integer <span class="process-math">\(k\text{.}\)</span>
+<div class="autopermalink" data-description="Item"><a href="#SS_divisibility-6-3-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="SS_divisibility-6-3-2">
+<div class="para" id="p-derived-SS_divisibility-6-3-2">
+<span class="process-math">\(d\)</span> is a <dfn class="terminology">factor</dfn> of <span class="process-math">\(n\text{;}\)</span>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#SS_divisibility-6-3-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="SS_divisibility-6-3-3">
+<div class="para" id="p-derived-SS_divisibility-6-3-3">
+<span class="process-math">\(d\)</span> is a <dfn class="terminology">divisor</dfn> of <span class="process-math">\(n\text{;}\)</span>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#SS_divisibility-6-3-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="SS_divisibility-6-3-4">
+<div class="para" id="p-derived-SS_divisibility-6-3-4">
+<span class="process-math">\(d\)</span> <dfn class="terminology">divides</dfn> <span class="process-math">\(n\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#SS_divisibility-6-3-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#SS_divisibility-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="SS_divisibility-7">We use the notation <span class="process-math">\(d\mid n\)</span>, read “<span class="process-math">\(d\)</span> divides <span class="process-math">\(n\text{.}\)</span>”<div class="autopermalink" data-description="Paragraph"><a href="#SS_divisibility-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="SS_divisibility-8">Important note: <span class="process-math">\(d\mid n\)</span> is a relationship between two integers. It is a statement that is either true or false. It does NOT equal a number. It is NOT the same thing as a fraction. It is not an equation, but it can be translated to the equation <span class="process-math">\(n=dk\)</span> for some integer <span class="process-math">\(k\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#SS_divisibility-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="SS_divisibility-9">
 <div class="para">It is useful to look at the special case when <span class="process-math">\(n\)</span> or <span class="process-math">\(d\)</span> is 0.</div>
 <ul class="disc" id="SS_divisibility-9-3">
-<li id="SS_divisibility-9-3-1"><div class="para" id="p-derived-SS_divisibility-9-3-1">
-<span class="process-math">\(0\mid n\)</span> is always false.</div></li>
-<li id="SS_divisibility-9-3-2"><div class="para" id="p-derived-SS_divisibility-9-3-2">
+<li id="SS_divisibility-9-3-1">
+<div class="para" id="p-derived-SS_divisibility-9-3-1">
+<span class="process-math">\(0\mid n\)</span> is always false.</div>
+<div class="autopermalink" data-description="Item"><a href="#SS_divisibility-9-3-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="SS_divisibility-9-3-2">
+<div class="para" id="p-derived-SS_divisibility-9-3-2">
 <span class="process-math">\(d\mid 0\)</span> is true if <span class="process-math">\(d\neq 0\text{.}\)</span>
-</div></li>
-<li id="SS_divisibility-9-3-3"><div class="para" id="p-derived-SS_divisibility-9-3-3">Thus, <span class="process-math">\(0\mid 0\)</span> is false, even though, technically, one could write <span class="process-math">\(0=0\cdot k\text{.}\)</span>
-</div></li>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#SS_divisibility-9-3-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="SS_divisibility-9-3-3">
+<div class="para" id="p-derived-SS_divisibility-9-3-3">Thus, <span class="process-math">\(0\mid 0\)</span> is false, even though, technically, one could write <span class="process-math">\(0=0\cdot k\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#SS_divisibility-9-3-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
 </ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#SS_divisibility-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <details id="E_divides" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.2.9</span><span class="period">.</span><span class="space"> </span><span class="title">Finding Divisors.</span>
-</h4></summary><article class="example example-like knowl__content"><div class="para" id="E_divides-2">Find the divisors of 6.</div>
-<details id="E_divides-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"></div></details><div class="para" id="E_divides-4">Find the divisors of 5.</div>
-<details id="E_divides-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"></div></details><div class="para" id="E_divides-6">Find the divisors of 1.</div>
-<details id="E_divides-7" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"></div></details></article></details><div class="para" id="SS_divisibility-11">If <span class="process-math">\(d\)</span> does not divide <span class="process-math">\(n\text{,}\)</span> then for every <span class="process-math">\(k\in \mathbb{Z}, n\neq dk\text{.}\)</span> This can be difficult to show in general, but if <span class="process-math">\(n\)</span> and <span class="process-math">\(d\)</span> are specific integers, you could show <span class="process-math">\(\frac{n}{d}\)</span> is not an integer. This is the ONLY time a fraction can show up in proofs about divisibility.</div>
-<div class="para" id="SS_divisibility-12">Notation: <span class="process-math">\(d\nmid n\)</span> means <span class="process-math">\(d\)</span> does not divide <span class="process-math">\(n\text{.}\)</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="E_divides-2">Find the divisors of 6.<div class="autopermalink" data-description="Paragraph"><a href="#E_divides-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="E_divides-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="autopermalink" data-description="Answer 3.2.9.1"><a href="#E_divides-3" title="Copy heading and permalink for Answer 3.2.9.1" aria-label="Copy heading and permalink for Answer 3.2.9.1">🔗</a></div></div></details><div class="para" id="E_divides-4">Find the divisors of 5.<div class="autopermalink" data-description="Paragraph"><a href="#E_divides-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="E_divides-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="autopermalink" data-description="Answer 3.2.9.2"><a href="#E_divides-5" title="Copy heading and permalink for Answer 3.2.9.2" aria-label="Copy heading and permalink for Answer 3.2.9.2">🔗</a></div></div></details><div class="para" id="E_divides-6">Find the divisors of 1.<div class="autopermalink" data-description="Paragraph"><a href="#E_divides-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="E_divides-7" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="autopermalink" data-description="Answer 3.2.9.3"><a href="#E_divides-7" title="Copy heading and permalink for Answer 3.2.9.3" aria-label="Copy heading and permalink for Answer 3.2.9.3">🔗</a></div></div></details><div class="autopermalink" data-description="Example 3.2.9: Finding Divisors"><a href="#E_divides" title="Copy heading and permalink for Example 3.2.9: Finding Divisors" aria-label="Copy heading and permalink for Example 3.2.9: Finding Divisors">🔗</a></div></article></details><div class="para" id="SS_divisibility-11">If <span class="process-math">\(d\)</span> does not divide <span class="process-math">\(n\text{,}\)</span> then for every <span class="process-math">\(k\in \mathbb{Z}, n\neq dk\text{.}\)</span> This can be difficult to show in general, but if <span class="process-math">\(n\)</span> and <span class="process-math">\(d\)</span> are specific integers, you could show <span class="process-math">\(\frac{n}{d}\)</span> is not an integer. This is the ONLY time a fraction can show up in proofs about divisibility.<div class="autopermalink" data-description="Paragraph"><a href="#SS_divisibility-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="SS_divisibility-12">Notation: <span class="process-math">\(d\nmid n\)</span> means <span class="process-math">\(d\)</span> does not divide <span class="process-math">\(n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#SS_divisibility-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <details id="E_TFdivides" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.2.10</span><span class="period">.</span><span class="space"> </span><span class="title">Determining Divisibility.</span>
-</h4></summary><article class="example example-like knowl__content"><div class="para" id="E_TFdivides-2">True or false: <span class="process-math">\(8\mid 24\text{.}\)</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="E_TFdivides-2">True or false: <span class="process-math">\(8\mid 24\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_TFdivides-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="E_TFdivides-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><span class="process-math">\(24=8(3)\text{.}\)</span></div></details><div class="para" id="E_TFdivides-4">True or false: <span class="process-math">\(8\mid 4\text{.}\)</span>
+<details id="E_TFdivides-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<span class="process-math">\(24=8(3)\text{.}\)</span><div class="autopermalink" data-description="Answer 3.2.10.1"><a href="#E_TFdivides-3" title="Copy heading and permalink for Answer 3.2.10.1" aria-label="Copy heading and permalink for Answer 3.2.10.1">🔗</a></div>
+</div></details><div class="para" id="E_TFdivides-4">True or false: <span class="process-math">\(8\mid 4\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_TFdivides-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <details id="E_TFdivides-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
-<span class="process-math">\(4=8(k)\)</span><span class="process-math">\(k=1/2\text{.}\)</span>
-</div></details><div class="para" id="E_TFdivides-6">True or false: <span class="process-math">\(8\mid 10\text{.}\)</span>
+<span class="process-math">\(4=8(k)\)</span><span class="process-math">\(k=1/2\text{.}\)</span><div class="autopermalink" data-description="Answer 3.2.10.2"><a href="#E_TFdivides-5" title="Copy heading and permalink for Answer 3.2.10.2" aria-label="Copy heading and permalink for Answer 3.2.10.2">🔗</a></div>
+</div></details><div class="para" id="E_TFdivides-6">True or false: <span class="process-math">\(8\mid 10\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_TFdivides-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <details id="E_TFdivides-7" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
-<span class="process-math">\(10=8(k)\)</span><span class="process-math">\(k=5/4\text{.}\)</span>
-</div></details><div class="para" id="E_TFdivides-8">True or false: <span class="process-math">\(8\mid -8\text{.}\)</span>
+<span class="process-math">\(10=8(k)\)</span><span class="process-math">\(k=5/4\text{.}\)</span><div class="autopermalink" data-description="Answer 3.2.10.3"><a href="#E_TFdivides-7" title="Copy heading and permalink for Answer 3.2.10.3" aria-label="Copy heading and permalink for Answer 3.2.10.3">🔗</a></div>
+</div></details><div class="para" id="E_TFdivides-8">True or false: <span class="process-math">\(8\mid -8\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_TFdivides-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="E_TFdivides-9" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><span class="process-math">\(-8=8(-1)\text{.}\)</span></div></details><div class="para" id="E_TFdivides-10">True or false: <span class="process-math">\(-2\mid 8\text{.}\)</span>
+<details id="E_TFdivides-9" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<span class="process-math">\(-8=8(-1)\text{.}\)</span><div class="autopermalink" data-description="Answer 3.2.10.4"><a href="#E_TFdivides-9" title="Copy heading and permalink for Answer 3.2.10.4" aria-label="Copy heading and permalink for Answer 3.2.10.4">🔗</a></div>
+</div></details><div class="para" id="E_TFdivides-10">True or false: <span class="process-math">\(-2\mid 8\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_TFdivides-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="E_TFdivides-11" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">5</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><span class="process-math">\(8=-2(-4)\text{.}\)</span></div></details><div class="para" id="E_TFdivides-12">True or false: <span class="process-math">\(1\mid 4\text{.}\)</span>
+<details id="E_TFdivides-11" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">5</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<span class="process-math">\(8=-2(-4)\text{.}\)</span><div class="autopermalink" data-description="Answer 3.2.10.5"><a href="#E_TFdivides-11" title="Copy heading and permalink for Answer 3.2.10.5" aria-label="Copy heading and permalink for Answer 3.2.10.5">🔗</a></div>
+</div></details><div class="para" id="E_TFdivides-12">True or false: <span class="process-math">\(1\mid 4\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_TFdivides-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="E_TFdivides-13" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">6</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><span class="process-math">\(4=1(4)\text{.}\)</span></div></details><div class="para" id="E_TFdivides-14">True or false: <span class="process-math">\(8\mid 0\text{.}\)</span>
+<details id="E_TFdivides-13" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">6</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<span class="process-math">\(4=1(4)\text{.}\)</span><div class="autopermalink" data-description="Answer 3.2.10.6"><a href="#E_TFdivides-13" title="Copy heading and permalink for Answer 3.2.10.6" aria-label="Copy heading and permalink for Answer 3.2.10.6">🔗</a></div>
+</div></details><div class="para" id="E_TFdivides-14">True or false: <span class="process-math">\(8\mid 0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_TFdivides-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="E_TFdivides-15" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">7</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><span class="process-math">\(0=8(0)\text{.}\)</span></div></details><div class="para" id="E_TFdivides-16">True or false: <span class="process-math">\(4\mid 1\text{.}\)</span>
+<details id="E_TFdivides-15" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">7</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<span class="process-math">\(0=8(0)\text{.}\)</span><div class="autopermalink" data-description="Answer 3.2.10.7"><a href="#E_TFdivides-15" title="Copy heading and permalink for Answer 3.2.10.7" aria-label="Copy heading and permalink for Answer 3.2.10.7">🔗</a></div>
+</div></details><div class="para" id="E_TFdivides-16">True or false: <span class="process-math">\(4\mid 1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_TFdivides-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <details id="E_TFdivides-17" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">8</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
-<span class="process-math">\(1=4(k)\)</span><span class="process-math">\(k=1/4\text{.}\)</span>
-</div></details><div class="para" id="E_TFdivides-18">True or false: <span class="process-math">\(0\mid 8\text{.}\)</span>
+<span class="process-math">\(1=4(k)\)</span><span class="process-math">\(k=1/4\text{.}\)</span><div class="autopermalink" data-description="Answer 3.2.10.8"><a href="#E_TFdivides-17" title="Copy heading and permalink for Answer 3.2.10.8" aria-label="Copy heading and permalink for Answer 3.2.10.8">🔗</a></div>
+</div></details><div class="para" id="E_TFdivides-18">True or false: <span class="process-math">\(0\mid 8\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_TFdivides-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="E_TFdivides-19" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">9</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><span class="process-math">\(8=0(k)\)</span></div></details></article></details><article class="activity project-like" id="A_practicedivisible"><h4 class="heading">
+<details id="E_TFdivides-19" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">9</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<span class="process-math">\(8=0(k)\)</span><div class="autopermalink" data-description="Answer 3.2.10.9"><a href="#E_TFdivides-19" title="Copy heading and permalink for Answer 3.2.10.9" aria-label="Copy heading and permalink for Answer 3.2.10.9">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 3.2.10: Determining Divisibility"><a href="#E_TFdivides" title="Copy heading and permalink for Example 3.2.10: Determining Divisibility" aria-label="Copy heading and permalink for Example 3.2.10: Determining Divisibility">🔗</a></div></article></details><article class="activity project-like" id="A_practicedivisible"><h4 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">Divisibility Practice.</span>
 </h4>
-<div class="introduction" id="A_practicedivisible-2"><div class="para" id="A_practicedivisible-2-1">Determine if the following divisibility statements are true or false, and justify your answer.</div></div>
+<div class="introduction" id="A_practicedivisible-2"><div class="para" id="A_practicedivisible-2-1">Determine if the following divisibility statements are true or false, and justify your answer.<div class="autopermalink" data-description="Paragraph"><a href="#A_practicedivisible-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
 <article class="task exercise-like" id="A_practicedivisible-3"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<span class="process-math">\(3\mid 10\)</span></article><article class="task exercise-like" id="A_practicedivisible-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<span class="process-math">\(3\mid 0\)</span></article><article class="task exercise-like" id="A_practicedivisible-5"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<span class="process-math">\(3\mid 36\)</span></article><article class="task exercise-like" id="A_practicedivisible-6"><h5 class="heading"><span class="codenumber">(d)</span></h5>
-<span class="process-math">\(12\mid 4\)</span></article><article class="task exercise-like" id="A_practicedivisible-7"><h5 class="heading"><span class="codenumber">(e)</span></h5>
-<span class="process-math">\(0\mid 4\)</span></article></article><div class="para" id="SS_divisibility-15">Now, we use the definition of divisibility to prove a more general theorem.</div>
+<span class="process-math">\(3\mid 10\)</span><div class="autopermalink" data-description="Task 3.2.3.a"><a href="#A_practicedivisible-3" title="Copy heading and permalink for Task 3.2.3.a" aria-label="Copy heading and permalink for Task 3.2.3.a">🔗</a></div></article><article class="task exercise-like" id="A_practicedivisible-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<span class="process-math">\(3\mid 0\)</span><div class="autopermalink" data-description="Task 3.2.3.b"><a href="#A_practicedivisible-4" title="Copy heading and permalink for Task 3.2.3.b" aria-label="Copy heading and permalink for Task 3.2.3.b">🔗</a></div></article><article class="task exercise-like" id="A_practicedivisible-5"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<span class="process-math">\(3\mid 36\)</span><div class="autopermalink" data-description="Task 3.2.3.c"><a href="#A_practicedivisible-5" title="Copy heading and permalink for Task 3.2.3.c" aria-label="Copy heading and permalink for Task 3.2.3.c">🔗</a></div></article><article class="task exercise-like" id="A_practicedivisible-6"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<span class="process-math">\(12\mid 4\)</span><div class="autopermalink" data-description="Task 3.2.3.d"><a href="#A_practicedivisible-6" title="Copy heading and permalink for Task 3.2.3.d" aria-label="Copy heading and permalink for Task 3.2.3.d">🔗</a></div></article><article class="task exercise-like" id="A_practicedivisible-7"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<span class="process-math">\(0\mid 4\)</span><div class="autopermalink" data-description="Task 3.2.3.e"><a href="#A_practicedivisible-7" title="Copy heading and permalink for Task 3.2.3.e" aria-label="Copy heading and permalink for Task 3.2.3.e">🔗</a></div></article><div class="autopermalink" data-description="Activity 3.2.3: Divisibility Practice"><a href="#A_practicedivisible" title="Copy heading and permalink for Activity 3.2.3: Divisibility Practice" aria-label="Copy heading and permalink for Activity 3.2.3: Divisibility Practice">🔗</a></div></article><div class="para" id="SS_divisibility-15">Now, we use the definition of divisibility to prove a more general theorem.<div class="autopermalink" data-description="Paragraph"><a href="#SS_divisibility-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="theorem theorem-like" id="T_transdivides"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.2.11</span><span class="period">.</span>
 </h4>
-<div class="para" id="T_transdivides-1-1">For all integers, <span class="process-math">\(a, b, c\text{,}\)</span> if  <span class="process-math">\(a\mid b\)</span> and <span class="process-math">\(b\mid c\text{,}\)</span> then <span class="process-math">\(a\mid c\text{.}\)</span>
-</div></article><details id="SS_divisibility-17" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="SS_divisibility-17-1">Let <span class="process-math">\(a, b, c\in \mathbb{Z}\text{.}\)</span> Assume <span class="process-math">\(a\mid b\)</span> and <span class="process-math">\(b\mid c\text{.}\)</span> Then by definition, <span class="process-math">\(b=ak\)</span> for some <span class="process-math">\(k\in \mathbb{Z}\)</span> and <span class="process-math">\(c=bj\)</span> for some <span class="process-math">\(j\in \mathbb{Z}\text{.}\)</span> Substituting the first equation into the second, <span class="process-math">\(c=(ak)j=a(kj)\text{.}\)</span> Since <span class="process-math">\(kj\in\mathbb{Z}\text{,}\)</span> <span class="process-math">\(a\mid c\text{.}\)</span>
-</div></article></details><article class="activity project-like" id="A_15divides"><h4 class="heading">
+<div class="para" id="T_transdivides-1-1">For all integers, <span class="process-math">\(a, b, c\text{,}\)</span> if  <span class="process-math">\(a\mid b\)</span> and <span class="process-math">\(b\mid c\text{,}\)</span> then <span class="process-math">\(a\mid c\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#T_transdivides-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 3.2.11"><a href="#T_transdivides" title="Copy heading and permalink for Theorem 3.2.11" aria-label="Copy heading and permalink for Theorem 3.2.11">🔗</a></div></article><details id="SS_divisibility-17" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="SS_divisibility-17-1">Let <span class="process-math">\(a, b, c\in \mathbb{Z}\text{.}\)</span> Assume <span class="process-math">\(a\mid b\)</span> and <span class="process-math">\(b\mid c\text{.}\)</span> Then by definition, <span class="process-math">\(b=ak\)</span> for some <span class="process-math">\(k\in \mathbb{Z}\)</span> and <span class="process-math">\(c=bj\)</span> for some <span class="process-math">\(j\in \mathbb{Z}\text{.}\)</span> Substituting the first equation into the second, <span class="process-math">\(c=(ak)j=a(kj)\text{.}\)</span> Since <span class="process-math">\(kj\in\mathbb{Z}\text{,}\)</span> <span class="process-math">\(a\mid c\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#SS_divisibility-17-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 3.2.2.1"><a href="#SS_divisibility-17" title="Copy heading and permalink for Proof 3.2.2.1" aria-label="Copy heading and permalink for Proof 3.2.2.1">🔗</a></div></article></details><article class="activity project-like" id="A_15divides"><h4 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.2.4</span><span class="period">.</span><span class="space"> </span><span class="title">Divisibility Proof.</span>
 </h4>
-<div class="para" id="A_15divides-2-1">Prove if 15 divides <span class="process-math">\(n\text{,}\)</span> then 5 divides <span class="process-math">\(n\text{.}\)</span>
-</div></article><article class="activity project-like" id="A_6divides"><h4 class="heading">
+<div class="para" id="A_15divides-2-1">Prove if 15 divides <span class="process-math">\(n\text{,}\)</span> then 5 divides <span class="process-math">\(n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_15divides-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Activity 3.2.4: Divisibility Proof"><a href="#A_15divides" title="Copy heading and permalink for Activity 3.2.4: Divisibility Proof" aria-label="Copy heading and permalink for Activity 3.2.4: Divisibility Proof">🔗</a></div></article><article class="activity project-like" id="A_6divides"><h4 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.2.5</span><span class="period">.</span><span class="space"> </span><span class="title">Prove or Disprove.</span>
 </h4>
-<div class="para" id="A_6divides-2-1">Prove or disprove if 6 divides <span class="process-math">\(n\text{,}\)</span> then 12 divides <span class="process-math">\(n\text{.}\)</span>
-</div></article><article class="activity project-like" id="A_divsum"><h4 class="heading">
+<div class="para" id="A_6divides-2-1">Prove or disprove if 6 divides <span class="process-math">\(n\text{,}\)</span> then 12 divides <span class="process-math">\(n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_6divides-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Activity 3.2.5: Prove or Disprove"><a href="#A_6divides" title="Copy heading and permalink for Activity 3.2.5: Prove or Disprove" aria-label="Copy heading and permalink for Activity 3.2.5: Prove or Disprove">🔗</a></div></article><article class="activity project-like" id="A_divsum"><h4 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.2.6</span><span class="period">.</span><span class="space"> </span><span class="title">Divisibility and Addition.</span>
 </h4>
-<div class="para" id="A_divsum-2-1">Prove if <span class="process-math">\(d\mid n\)</span> and <span class="process-math">\(d\mid m\text{,}\)</span> then <span class="process-math">\(d\mid (n+m)\text{.}\)</span>
-</div></article></section><section class="exercises" id="moredirect-7"><h3 class="heading hide-type">
+<div class="para" id="A_divsum-2-1">Prove if <span class="process-math">\(d\mid n\)</span> and <span class="process-math">\(d\mid m\text{,}\)</span> then <span class="process-math">\(d\mid (n+m)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_divsum-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Activity 3.2.6: Divisibility and Addition"><a href="#A_divsum" title="Copy heading and permalink for Activity 3.2.6: Divisibility and Addition" aria-label="Copy heading and permalink for Activity 3.2.6: Divisibility and Addition">🔗</a></div></article><div class="autopermalink" data-description="Subsection 3.2.2: Divisibility"><a href="#SS_divisibility" title="Copy heading and permalink for Subsection 3.2.2: Divisibility" aria-label="Copy heading and permalink for Subsection 3.2.2: Divisibility">🔗</a></div></section><section class="exercises" id="moredirect-7"><h3 class="heading hide-type">
 <span class="type">Exercises</span><span class="space"> </span><span class="codenumber">3.2.3</span><span class="space"> </span><span class="title">Exercises</span>
 </h3>
 <article class="exercise exercise-like" id="moredirect-7-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="moredirect-7-1-1-1">Prove the following numbers are rational by writing them as a ratio of two integers.</div> <ol class="lower-alpha" id="moredirect-7-1-1-2">
-<li id="moredirect-7-1-1-2-1"><div class="para" id="moredirect-7-1-1-2-1-1"><span class="process-math">\(\displaystyle \frac{3}{7}+\frac{5}{9}\)</span></div></li>
-<li id="moredirect-7-1-1-2-2"><div class="para" id="moredirect-7-1-1-2-2-1"><span class="process-math">\(\displaystyle 351.549249249\ldots\)</span></div></li>
-</ol></article><article class="exercise exercise-like" id="moredirect-7-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para" id="moredirect-7-2-1-1">Prove every integer is a rational number.</div></article><article class="exercise exercise-like" id="moredirect-7-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="para" id="moredirect-7-3-1-1">Find the mistakes in the following “proof.”</div> <div class="para" id="moredirect-7-3-1-2">
-<dfn class="terminology">Theorem:</dfn> The sum of any two rational numbers is rational.</div> <div class="para logical" id="moredirect-7-3-1-3">
+<div class="para" id="moredirect-7-1-1-1">Prove the following numbers are rational by writing them as a ratio of two integers.<div class="autopermalink" data-description="Paragraph"><a href="#moredirect-7-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha lower-alpha-level-1" id="moredirect-7-1-1-2">
+<li id="moredirect-7-1-1-2-1">
+<div class="para" id="moredirect-7-1-1-2-1-1">
+<span class="process-math">\(\displaystyle \frac{3}{7}+\frac{5}{9}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#moredirect-7-1-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.3.1.a"><a href="#moredirect-7-1-1-2-1" title="Copy heading and permalink for Item 3.2.3.1.a" aria-label="Copy heading and permalink for Item 3.2.3.1.a">🔗</a></div>
+</li>
+<li id="moredirect-7-1-1-2-2">
+<div class="para" id="moredirect-7-1-1-2-2-1">
+<span class="process-math">\(\displaystyle 351.549249249\ldots\)</span><div class="autopermalink" data-description="Paragraph"><a href="#moredirect-7-1-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.3.1.b"><a href="#moredirect-7-1-1-2-2" title="Copy heading and permalink for Item 3.2.3.1.b" aria-label="Copy heading and permalink for Item 3.2.3.1.b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 3.2.3.1"><a href="#moredirect-7-1" title="Copy heading and permalink for Exercise 3.2.3.1" aria-label="Copy heading and permalink for Exercise 3.2.3.1">🔗</a></div></article><article class="exercise exercise-like" id="moredirect-7-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="para" id="moredirect-7-2-1-1">Prove every integer is a rational number.<div class="autopermalink" data-description="Paragraph"><a href="#moredirect-7-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.2.3.2"><a href="#moredirect-7-2" title="Copy heading and permalink for Exercise 3.2.3.2" aria-label="Copy heading and permalink for Exercise 3.2.3.2">🔗</a></div></article><article class="exercise exercise-like" id="moredirect-7-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="para" id="moredirect-7-3-1-1">Find the mistakes in the following “proof.”<div class="autopermalink" data-description="Paragraph"><a href="#moredirect-7-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="moredirect-7-3-1-2">
+<dfn class="terminology">Theorem:</dfn> The sum of any two rational numbers is rational.<div class="autopermalink" data-description="Paragraph"><a href="#moredirect-7-3-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="moredirect-7-3-1-3">
 <div class="para">
 <dfn class="terminology">“Proof”:</dfn> Suppose <span class="process-math">\(r\)</span> and <span class="process-math">\(s\)</span> are rational numbers. If <span class="process-math">\(r+s\)</span> is rational, then by definition of rational <span class="process-math">\(r+s=a/b\)</span> for integers <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> with <span class="process-math">\(b\neq0\text{.}\)</span> Since <span class="process-math">\(r\)</span> and <span class="process-math">\(s\)</span> are rational, <span class="process-math">\(r=i/j\)</span> and <span class="process-math">\(s=m/n\)</span> for integers <span class="process-math">\(i, j, m\)</span> and <span class="process-math">\(n\)</span> with <span class="process-math">\(j\neq 0\)</span> and <span class="process-math">\(n\neq 0\text{.}\)</span> Thus</div>
 <div class="displaymath process-math">
@@ -792,15 +620,37 @@ r+s=\frac{i}{j}+\frac{m}{n}=\frac{a}{b},
 \end{equation*}
 </div>
 <div class="para">which is the quotient of two integers with nonzero denominator. Thus, it is rational.</div>
-</div></article><article class="exercise exercise-like" id="moredirect-7-4"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para" id="moredirect-7-4-1-1">Consider the statement: The square of any rational number is a rational number.</div> <ol class="lower-alpha" id="moredirect-7-4-1-2">
-<li id="moredirect-7-4-1-2-1"><div class="para" id="moredirect-7-4-1-2-1-1">Write the statement formally as a conditional statement using variables.</div></li>
-<li id="moredirect-7-4-1-2-2"><div class="para" id="moredirect-7-4-1-2-2-1">Determine whether the statement is true or false and justify your answer.</div></li>
-</ol></article><article class="exercise exercise-like" id="ER_averagerat"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<div class="para" id="ER_averagerat-1-1">Determine if the following statements are true or false. For <em class="emphasis">true</em> statements provide a proof. For <em class="emphasis">false</em> statements provide a counter example AND determine if a small change would make the statement true. If so, correct the statement and provide a proof of the new statement.</div> <ol class="lower-alpha" id="ER_averagerat-1-2">
-<li id="ER_averagerat-1-2-1"><div class="para" id="ER_averagerat-1-2-1-1">The quotient of any two rational numbers is a rational number.</div></li>
-<li id="ER_averagerat-1-2-2"><div class="para" id="ER_averagerat-1-2-2-1">If <span class="process-math">\(r\)</span> and <span class="process-math">\(s\)</span> are rational numbers then <span class="process-math">\(\frac{r+s}{2}\)</span> is a rational number.</div></li>
-</ol></article><article class="exercise exercise-like" id="moredirect-7-6"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="autopermalink" data-description="Paragraph"><a href="#moredirect-7-3-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.2.3.3"><a href="#moredirect-7-3" title="Copy heading and permalink for Exercise 3.2.3.3" aria-label="Copy heading and permalink for Exercise 3.2.3.3">🔗</a></div></article><article class="exercise exercise-like" id="moredirect-7-4"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="para" id="moredirect-7-4-1-1">Consider the statement: The square of any rational number is a rational number.<div class="autopermalink" data-description="Paragraph"><a href="#moredirect-7-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha lower-alpha-level-1" id="moredirect-7-4-1-2">
+<li id="moredirect-7-4-1-2-1">
+<div class="para" id="moredirect-7-4-1-2-1-1">Write the statement formally as a conditional statement using variables.<div class="autopermalink" data-description="Paragraph"><a href="#moredirect-7-4-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.3.4.a"><a href="#moredirect-7-4-1-2-1" title="Copy heading and permalink for Item 3.2.3.4.a" aria-label="Copy heading and permalink for Item 3.2.3.4.a">🔗</a></div>
+</li>
+<li id="moredirect-7-4-1-2-2">
+<div class="para" id="moredirect-7-4-1-2-2-1">Determine whether the statement is true or false and justify your answer.<div class="autopermalink" data-description="Paragraph"><a href="#moredirect-7-4-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.3.4.b"><a href="#moredirect-7-4-1-2-2" title="Copy heading and permalink for Item 3.2.3.4.b" aria-label="Copy heading and permalink for Item 3.2.3.4.b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 3.2.3.4"><a href="#moredirect-7-4" title="Copy heading and permalink for Exercise 3.2.3.4" aria-label="Copy heading and permalink for Exercise 3.2.3.4">🔗</a></div></article><article class="exercise exercise-like" id="ER_averagerat"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="para" id="ER_averagerat-1-1">Determine if the following statements are true or false. For <em class="emphasis">true</em> statements provide a proof. For <em class="emphasis">false</em> statements provide a counter example AND determine if a small change would make the statement true. If so, correct the statement and provide a proof of the new statement.<div class="autopermalink" data-description="Paragraph"><a href="#ER_averagerat-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha lower-alpha-level-1" id="ER_averagerat-1-2">
+<li id="ER_averagerat-1-2-1">
+<div class="para" id="ER_averagerat-1-2-1-1">The quotient of any two rational numbers is a rational number.<div class="autopermalink" data-description="Paragraph"><a href="#ER_averagerat-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.3.5.a"><a href="#ER_averagerat-1-2-1" title="Copy heading and permalink for Item 3.2.3.5.a" aria-label="Copy heading and permalink for Item 3.2.3.5.a">🔗</a></div>
+</li>
+<li id="ER_averagerat-1-2-2">
+<div class="para" id="ER_averagerat-1-2-2-1">If <span class="process-math">\(r\)</span> and <span class="process-math">\(s\)</span> are rational numbers then <span class="process-math">\(\frac{r+s}{2}\)</span> is a rational number.<div class="autopermalink" data-description="Paragraph"><a href="#ER_averagerat-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.3.5.b"><a href="#ER_averagerat-1-2-2" title="Copy heading and permalink for Item 3.2.3.5.b" aria-label="Copy heading and permalink for Item 3.2.3.5.b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 3.2.3.5"><a href="#ER_averagerat" title="Copy heading and permalink for Exercise 3.2.3.5" aria-label="Copy heading and permalink for Exercise 3.2.3.5">🔗</a></div></article><article class="exercise exercise-like" id="moredirect-7-6"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
 <div class="para logical" id="moredirect-7-6-1-1">
 <div class="para">Suppose <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> <span class="process-math">\(c\text{,}\)</span> and <span class="process-math">\(d\)</span> are integers and <span class="process-math">\(a\neq c\text{.}\)</span> Suppose also that <span class="process-math">\(x\)</span> is a real number that satisfies the equation</div>
 <div class="displaymath process-math">
@@ -809,44 +659,89 @@ r+s=\frac{i}{j}+\frac{m}{n}=\frac{a}{b},
 \end{equation*}
 </div>
 <div class="para">Must <span class="process-math">\(x\)</span> be rational? If so, express <span class="process-math">\(x\)</span> as a ratio of two integers. Is the condition <span class="process-math">\(a\neq c\)</span> important?</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#moredirect-7-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="moredirect-7-6-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="moredirect-7-6-2-1">Solve for <span class="process-math">\(x\text{.}\)</span>
-</div></div></details></div></article><article class="exercise exercise-like" id="moredirect-7-7"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
-<div class="para" id="moredirect-7-7-1-1">Let <span class="process-math">\(n\in \mathbb{Z}\text{.}\)</span> Determine if the following statements are true or false. Justify your answer.</div> <ol class="lower-alpha" id="moredirect-7-7-1-2">
-<li id="moredirect-7-7-1-2-1"><div class="para" id="moredirect-7-7-1-2-1-1">3 divides <span class="process-math">\((3n+1)(3n+2)(3n+3)\text{.}\)</span>
-</div></li>
-<li id="moredirect-7-7-1-2-2"><div class="para" id="moredirect-7-7-1-2-2-1">
-<span class="process-math">\(6n(2n+10)\)</span> is divisible by 4.</div></li>
-<li id="moredirect-7-7-1-2-3"><div class="para" id="moredirect-7-7-1-2-3-1">100 divides <span class="process-math">\((5n)^2(8n+24).\)</span>
-</div></li>
-</ol></article><article class="exercise exercise-like" id="moredirect-7-8"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
-<div class="para" id="moredirect-7-8-1-1">Show that the following statement is false.</div> <div class="para" id="moredirect-7-8-1-2">For all integers <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{,}\)</span> if <span class="process-math">\(3\mid (a+b)\)</span> then <span class="process-math">\(3\mid (a-b)\text{.}\)</span>
-</div></article><article class="exercise exercise-like" id="moredirect-7-9"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
-<div class="para" id="moredirect-7-9-1-1">Prove or disprove the following statements using the method of direct proof or counterexample.</div> <ol class="lower-alpha" id="moredirect-7-9-1-2">
-<li id="moredirect-7-9-1-2-1"><div class="para" id="moredirect-7-9-1-2-1-1">For all integers <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> and <span class="process-math">\(c\text{,}\)</span> if <span class="process-math">\(a\mid b\)</span> and <span class="process-math">\(a\mid c\text{,}\)</span> then <span class="process-math">\(a\mid (b+c)\text{.}\)</span>
-</div></li>
-<li id="moredirect-7-9-1-2-2"><div class="para" id="moredirect-7-9-1-2-2-1">For all integers <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> and <span class="process-math">\(c\text{,}\)</span> if <span class="process-math">\(a\mid b\)</span> then <span class="process-math">\(a\mid (bc)\text{.}\)</span>
-</div></li>
-<li id="moredirect-7-9-1-2-3"><div class="para" id="moredirect-7-9-1-2-3-1">For all integers <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> and <span class="process-math">\(c\text{,}\)</span> if <span class="process-math">\(a\)</span> is a factor of <span class="process-math">\(c\text{,}\)</span> then <span class="process-math">\(ab\)</span> is a factor of <span class="process-math">\(c\text{.}\)</span>
-</div></li>
-<li id="moredirect-7-9-1-2-4"><div class="para" id="moredirect-7-9-1-2-4-1">For all integers <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> and <span class="process-math">\(c\text{,}\)</span> if <span class="process-math">\(a\mid (b+c)\text{,}\)</span> then <span class="process-math">\(a\mid b\)</span> and <span class="process-math">\(a\mid c\text{.}\)</span>
-</div></li>
-<li id="moredirect-7-9-1-2-5"><div class="para" id="moredirect-7-9-1-2-5-1">For all integers <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> and <span class="process-math">\(c\text{,}\)</span> if <span class="process-math">\(a\mid (bc)\)</span> then <span class="process-math">\(a\mid b\)</span> or <span class="process-math">\(a\mid c\text{.}\)</span>
-</div></li>
-<li id="moredirect-7-9-1-2-6"><div class="para" id="moredirect-7-9-1-2-6-1">For all integers <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{,}\)</span> if <span class="process-math">\(a\mid b\)</span> then <span class="process-math">\(a^2\mid (b^2)\text{.}\)</span>
-</div></li>
-</ol></article><article class="exercise exercise-like" id="moredirect-7-10"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
-<div class="para" id="moredirect-7-10-1-1">A fast food chain has a contest in which a card with numbers on it is given to each customer who makes a purchase. If some of the numbers on the card add up to 100, then the customer wins $100. A certain customer receives a card with the numbers</div> <div class="para logical" id="moredirect-7-10-1-2"><div class="displaymath process-math">
+<div class="solutions"><details id="moredirect-7-6-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="moredirect-7-6-2-1">Solve for <span class="process-math">\(x\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#moredirect-7-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 3.2.3.6.1"><a href="#moredirect-7-6-2" title="Copy heading and permalink for Hint 3.2.3.6.1" aria-label="Copy heading and permalink for Hint 3.2.3.6.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 3.2.3.6"><a href="#moredirect-7-6" title="Copy heading and permalink for Exercise 3.2.3.6" aria-label="Copy heading and permalink for Exercise 3.2.3.6">🔗</a></div></article><article class="exercise exercise-like" id="moredirect-7-7"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<div class="para" id="moredirect-7-7-1-1">Let <span class="process-math">\(n\in \mathbb{Z}\text{.}\)</span> Determine if the following statements are true or false. Justify your answer.<div class="autopermalink" data-description="Paragraph"><a href="#moredirect-7-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha lower-alpha-level-1" id="moredirect-7-7-1-2">
+<li id="moredirect-7-7-1-2-1">
+<div class="para" id="moredirect-7-7-1-2-1-1">3 divides <span class="process-math">\((3n+1)(3n+2)(3n+3)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#moredirect-7-7-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.3.7.a"><a href="#moredirect-7-7-1-2-1" title="Copy heading and permalink for Item 3.2.3.7.a" aria-label="Copy heading and permalink for Item 3.2.3.7.a">🔗</a></div>
+</li>
+<li id="moredirect-7-7-1-2-2">
+<div class="para" id="moredirect-7-7-1-2-2-1">
+<span class="process-math">\(6n(2n+10)\)</span> is divisible by 4.<div class="autopermalink" data-description="Paragraph"><a href="#moredirect-7-7-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.3.7.b"><a href="#moredirect-7-7-1-2-2" title="Copy heading and permalink for Item 3.2.3.7.b" aria-label="Copy heading and permalink for Item 3.2.3.7.b">🔗</a></div>
+</li>
+<li id="moredirect-7-7-1-2-3">
+<div class="para" id="moredirect-7-7-1-2-3-1">100 divides <span class="process-math">\((5n)^2(8n+24).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#moredirect-7-7-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.3.7.c"><a href="#moredirect-7-7-1-2-3" title="Copy heading and permalink for Item 3.2.3.7.c" aria-label="Copy heading and permalink for Item 3.2.3.7.c">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 3.2.3.7"><a href="#moredirect-7-7" title="Copy heading and permalink for Exercise 3.2.3.7" aria-label="Copy heading and permalink for Exercise 3.2.3.7">🔗</a></div></article><article class="exercise exercise-like" id="moredirect-7-8"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<div class="para" id="moredirect-7-8-1-1">Show that the following statement is false.<div class="autopermalink" data-description="Paragraph"><a href="#moredirect-7-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="moredirect-7-8-1-2">For all integers <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{,}\)</span> if <span class="process-math">\(3\mid (a+b)\)</span> then <span class="process-math">\(3\mid (a-b)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#moredirect-7-8-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.2.3.8"><a href="#moredirect-7-8" title="Copy heading and permalink for Exercise 3.2.3.8" aria-label="Copy heading and permalink for Exercise 3.2.3.8">🔗</a></div></article><article class="exercise exercise-like" id="moredirect-7-9"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
+<div class="para" id="moredirect-7-9-1-1">Prove or disprove the following statements using the method of direct proof or counterexample.<div class="autopermalink" data-description="Paragraph"><a href="#moredirect-7-9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha lower-alpha-level-1" id="moredirect-7-9-1-2">
+<li id="moredirect-7-9-1-2-1">
+<div class="para" id="moredirect-7-9-1-2-1-1">For all integers <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> and <span class="process-math">\(c\text{,}\)</span> if <span class="process-math">\(a\mid b\)</span> and <span class="process-math">\(a\mid c\text{,}\)</span> then <span class="process-math">\(a\mid (b+c)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#moredirect-7-9-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.3.9.a"><a href="#moredirect-7-9-1-2-1" title="Copy heading and permalink for Item 3.2.3.9.a" aria-label="Copy heading and permalink for Item 3.2.3.9.a">🔗</a></div>
+</li>
+<li id="moredirect-7-9-1-2-2">
+<div class="para" id="moredirect-7-9-1-2-2-1">For all integers <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> and <span class="process-math">\(c\text{,}\)</span> if <span class="process-math">\(a\mid b\)</span> then <span class="process-math">\(a\mid (bc)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#moredirect-7-9-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.3.9.b"><a href="#moredirect-7-9-1-2-2" title="Copy heading and permalink for Item 3.2.3.9.b" aria-label="Copy heading and permalink for Item 3.2.3.9.b">🔗</a></div>
+</li>
+<li id="moredirect-7-9-1-2-3">
+<div class="para" id="moredirect-7-9-1-2-3-1">For all integers <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> and <span class="process-math">\(c\text{,}\)</span> if <span class="process-math">\(a\)</span> is a factor of <span class="process-math">\(c\text{,}\)</span> then <span class="process-math">\(ab\)</span> is a factor of <span class="process-math">\(c\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#moredirect-7-9-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.3.9.c"><a href="#moredirect-7-9-1-2-3" title="Copy heading and permalink for Item 3.2.3.9.c" aria-label="Copy heading and permalink for Item 3.2.3.9.c">🔗</a></div>
+</li>
+<li id="moredirect-7-9-1-2-4">
+<div class="para" id="moredirect-7-9-1-2-4-1">For all integers <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> and <span class="process-math">\(c\text{,}\)</span> if <span class="process-math">\(a\mid (b+c)\text{,}\)</span> then <span class="process-math">\(a\mid b\)</span> and <span class="process-math">\(a\mid c\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#moredirect-7-9-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.3.9.d"><a href="#moredirect-7-9-1-2-4" title="Copy heading and permalink for Item 3.2.3.9.d" aria-label="Copy heading and permalink for Item 3.2.3.9.d">🔗</a></div>
+</li>
+<li id="moredirect-7-9-1-2-5">
+<div class="para" id="moredirect-7-9-1-2-5-1">For all integers <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> and <span class="process-math">\(c\text{,}\)</span> if <span class="process-math">\(a\mid (bc)\)</span> then <span class="process-math">\(a\mid b\)</span> or <span class="process-math">\(a\mid c\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#moredirect-7-9-1-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.3.9.e"><a href="#moredirect-7-9-1-2-5" title="Copy heading and permalink for Item 3.2.3.9.e" aria-label="Copy heading and permalink for Item 3.2.3.9.e">🔗</a></div>
+</li>
+<li id="moredirect-7-9-1-2-6">
+<div class="para" id="moredirect-7-9-1-2-6-1">For all integers <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{,}\)</span> if <span class="process-math">\(a\mid b\)</span> then <span class="process-math">\(a^2\mid (b^2)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#moredirect-7-9-1-2-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.2.3.9.f"><a href="#moredirect-7-9-1-2-6" title="Copy heading and permalink for Item 3.2.3.9.f" aria-label="Copy heading and permalink for Item 3.2.3.9.f">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 3.2.3.9"><a href="#moredirect-7-9" title="Copy heading and permalink for Exercise 3.2.3.9" aria-label="Copy heading and permalink for Exercise 3.2.3.9">🔗</a></div></article><article class="exercise exercise-like" id="moredirect-7-10"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
+<div class="para" id="moredirect-7-10-1-1">A fast food chain has a contest in which a card with numbers on it is given to each customer who makes a purchase. If some of the numbers on the card add up to 100, then the customer wins $100. A certain customer receives a card with the numbers<div class="autopermalink" data-description="Paragraph"><a href="#moredirect-7-10-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="moredirect-7-10-1-2">
+<div class="displaymath process-math">
 \begin{equation*}
 72, 21, 15, 36, 69, 81, 9, 27, 42,\ {\rm and}\ 63\text{.}
 \end{equation*}
-</div></div> <div class="para" id="moredirect-7-10-1-3">Will the customer win $100? Prove or disprove your claim.</div></article></section></section></div>
-<div class="ptx-content-footer">
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#moredirect-7-10-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="moredirect-7-10-1-3">Will the customer win $100? Prove or disprove your claim.<div class="autopermalink" data-description="Paragraph"><a href="#moredirect-7-10-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.2.3.10"><a href="#moredirect-7-10" title="Copy heading and permalink for Exercise 3.2.3.10" aria-label="Copy heading and permalink for Exercise 3.2.3.10">🔗</a></div></article><div class="autopermalink" data-description="Exercises 3.2.3"><a href="#moredirect-7" title="Copy heading and permalink for Exercises 3.2.3" aria-label="Copy heading and permalink for Exercises 3.2.3">🔗</a></div></section><div class="autopermalink" data-description="Section 3.2: More Direct Proof: Rational Numbers and Divisibility"><a href="#moredirect" title="Copy heading and permalink for Section 3.2: More Direct Proof: Rational Numbers and Divisibility" aria-label="Copy heading and permalink for Section 3.2: More Direct Proof: Rational Numbers and Divisibility">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="directproof.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="cases.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
-<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
 </div>
 <!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
 var sc_project=12871717;

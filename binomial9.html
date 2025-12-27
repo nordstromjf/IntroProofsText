@@ -6,14 +6,20 @@
 <!--*                                          *-->
 <!--********************************************-->
 <html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Binomial Theorem</title>
-<meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:type" content="book">
-<meta property="book:title" content="Introduction to Proofs">
-<meta property="book:author" content="Jennifer Firkins Nordstrom">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
 <script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
@@ -69,13 +75,12 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
-<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
-</script><link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
-<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
-<!--** eBookCongig is necessary to configure interactive       **-->
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Introduction to Proofs">
+<meta property="book:author" content="Jennifer Firkins Nordstrom">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -97,307 +102,23 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.5.6';
+eBookConfig.runestone_version = '7.11.5';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.82032a8574f6ce75.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6a985cbf816db5c7.css">
-<style>
-#arguments-20-1-1-4 { counter-set: arguments-20-1-1-4 0; }
-#arguments-20-1-1-4 > li::marker { content: ""counter(arguments-20-1-1-4,lower-alpha)""; }
-#arguments-20-1-1-4 > li { counter-increment: arguments-20-1-1-4; }
-#arguments-20-2-1-3 { counter-set: arguments-20-2-1-3 0; }
-#arguments-20-2-1-3 > li::marker { content: ""counter(arguments-20-2-1-3,lower-alpha)""; }
-#arguments-20-2-1-3 > li { counter-increment: arguments-20-2-1-3; }
-#arguments-20-3-1-2 { counter-set: arguments-20-3-1-2 0; }
-#arguments-20-3-1-2 > li::marker { content: "("counter(arguments-20-3-1-2,lower-alpha)")"; }
-#arguments-20-3-1-2 > li { counter-increment: arguments-20-3-1-2; }
-#B_logicalequivalences-3-5 { counter-set: B_logicalequivalences-3-5 0; }
-#B_logicalequivalences-3-5 > li::marker { content: ""counter(B_logicalequivalences-3-5,decimal)""; }
-#B_logicalequivalences-3-5 > li { counter-increment: B_logicalequivalences-3-5; }
-#connectives-73-1-1-2 { counter-set: connectives-73-1-1-2 0; }
-#connectives-73-1-1-2 > li::marker { content: ""counter(connectives-73-1-1-2,lower-alpha)""; }
-#connectives-73-1-1-2 > li { counter-increment: connectives-73-1-1-2; }
-#connectives-73-2-1-2 { counter-set: connectives-73-2-1-2 0; }
-#connectives-73-2-1-2 > li::marker { content: ""counter(connectives-73-2-1-2,lower-alpha)""; }
-#connectives-73-2-1-2 > li { counter-increment: connectives-73-2-1-2; }
-#connectives-73-3-1-2 { counter-set: connectives-73-3-1-2 0; }
-#connectives-73-3-1-2 > li::marker { content: ""counter(connectives-73-3-1-2,lower-alpha)""; }
-#connectives-73-3-1-2 > li { counter-increment: connectives-73-3-1-2; }
-#ER_onlyandnot-1-2 { counter-set: ER_onlyandnot-1-2 0; }
-#ER_onlyandnot-1-2 > li::marker { content: ""counter(ER_onlyandnot-1-2,lower-alpha)""; }
-#ER_onlyandnot-1-2 > li { counter-increment: ER_onlyandnot-1-2; }
-#connectives-73-5-1-2 { counter-set: connectives-73-5-1-2 0; }
-#connectives-73-5-1-2 > li::marker { content: ""counter(connectives-73-5-1-2,lower-alpha)""; }
-#connectives-73-5-1-2 > li { counter-increment: connectives-73-5-1-2; }
-#setnotation-22-4-1-2 { counter-set: setnotation-22-4-1-2 0; }
-#setnotation-22-4-1-2 > li::marker { content: ""counter(setnotation-22-4-1-2,lower-alpha)""; }
-#setnotation-22-4-1-2 > li { counter-increment: setnotation-22-4-1-2; }
-#setnotation-22-5-1-2 { counter-set: setnotation-22-5-1-2 0; }
-#setnotation-22-5-1-2 > li::marker { content: ""counter(setnotation-22-5-1-2,lower-alpha)""; }
-#setnotation-22-5-1-2 > li { counter-increment: setnotation-22-5-1-2; }
-#E_multquant1-2-2 { counter-set: E_multquant1-2-2 0; }
-#E_multquant1-2-2 > li::marker { content: ""counter(E_multquant1-2-2,lower-alpha)""; }
-#E_multquant1-2-2 > li { counter-increment: E_multquant1-2-2; }
-#quantifiers-6-14-3-1-2 { counter-set: quantifiers-6-14-3-1-2 0; }
-#quantifiers-6-14-3-1-2 > li::marker { content: ""counter(quantifiers-6-14-3-1-2,lower-alpha)""; }
-#quantifiers-6-14-3-1-2 > li { counter-increment: quantifiers-6-14-3-1-2; }
-#quantifiers-6-14-4-1-2 { counter-set: quantifiers-6-14-4-1-2 0; }
-#quantifiers-6-14-4-1-2 > li::marker { content: ""counter(quantifiers-6-14-4-1-2,lower-alpha)""; }
-#quantifiers-6-14-4-1-2 > li { counter-increment: quantifiers-6-14-4-1-2; }
-#quantifiers-6-14-5-1-2 { counter-set: quantifiers-6-14-5-1-2 0; }
-#quantifiers-6-14-5-1-2 > li::marker { content: ""counter(quantifiers-6-14-5-1-2,lower-alpha)""; }
-#quantifiers-6-14-5-1-2 > li { counter-increment: quantifiers-6-14-5-1-2; }
-#quantifiers-6-14-6-1-2 { counter-set: quantifiers-6-14-6-1-2 0; }
-#quantifiers-6-14-6-1-2 > li::marker { content: ""counter(quantifiers-6-14-6-1-2,lower-alpha)""; }
-#quantifiers-6-14-6-1-2 > li { counter-increment: quantifiers-6-14-6-1-2; }
-#quantifiers-6-14-7-1-2 { counter-set: quantifiers-6-14-7-1-2 0; }
-#quantifiers-6-14-7-1-2 > li::marker { content: ""counter(quantifiers-6-14-7-1-2,lower-alpha)""; }
-#quantifiers-6-14-7-1-2 > li { counter-increment: quantifiers-6-14-7-1-2; }
-#quantifiers-6-14-8-1-2 { counter-set: quantifiers-6-14-8-1-2 0; }
-#quantifiers-6-14-8-1-2 > li::marker { content: ""counter(quantifiers-6-14-8-1-2,lower-alpha)""; }
-#quantifiers-6-14-8-1-2 > li { counter-increment: quantifiers-6-14-8-1-2; }
-#conditionals-33-1-1-2 { counter-set: conditionals-33-1-1-2 0; }
-#conditionals-33-1-1-2 > li::marker { content: ""counter(conditionals-33-1-1-2,lower-alpha)""; }
-#conditionals-33-1-1-2 > li { counter-increment: conditionals-33-1-1-2; }
-#conditionals-33-2-1-2 { counter-set: conditionals-33-2-1-2 0; }
-#conditionals-33-2-1-2 > li::marker { content: ""counter(conditionals-33-2-1-2,lower-alpha)""; }
-#conditionals-33-2-1-2 > li { counter-increment: conditionals-33-2-1-2; }
-#conditionals-33-3-1-2 { counter-set: conditionals-33-3-1-2 0; }
-#conditionals-33-3-1-2 > li::marker { content: ""counter(conditionals-33-3-1-2,lower-alpha)""; }
-#conditionals-33-3-1-2 > li { counter-increment: conditionals-33-3-1-2; }
-#conditionals-33-4-1-2 { counter-set: conditionals-33-4-1-2 0; }
-#conditionals-33-4-1-2 > li::marker { content: ""counter(conditionals-33-4-1-2,lower-alpha)""; }
-#conditionals-33-4-1-2 > li { counter-increment: conditionals-33-4-1-2; }
-#conditionals-33-5-1-2 { counter-set: conditionals-33-5-1-2 0; }
-#conditionals-33-5-1-2 > li::marker { content: ""counter(conditionals-33-5-1-2,lower-alpha)""; }
-#conditionals-33-5-1-2 > li { counter-increment: conditionals-33-5-1-2; }
-#directproof-29-1-1-2 { counter-set: directproof-29-1-1-2 0; }
-#directproof-29-1-1-2 > li::marker { content: ""counter(directproof-29-1-1-2,lower-alpha)""; }
-#directproof-29-1-1-2 > li { counter-increment: directproof-29-1-1-2; }
-#directproof-29-11-1-2 { counter-set: directproof-29-11-1-2 0; }
-#directproof-29-11-1-2 > li::marker { content: ""counter(directproof-29-11-1-2,lower-alpha)""; }
-#directproof-29-11-1-2 > li { counter-increment: directproof-29-11-1-2; }
-#moredirect-7-1-1-2 { counter-set: moredirect-7-1-1-2 0; }
-#moredirect-7-1-1-2 > li::marker { content: ""counter(moredirect-7-1-1-2,lower-alpha)""; }
-#moredirect-7-1-1-2 > li { counter-increment: moredirect-7-1-1-2; }
-#moredirect-7-4-1-2 { counter-set: moredirect-7-4-1-2 0; }
-#moredirect-7-4-1-2 > li::marker { content: "("counter(moredirect-7-4-1-2,lower-alpha)")"; }
-#moredirect-7-4-1-2 > li { counter-increment: moredirect-7-4-1-2; }
-#ER_averagerat-1-2 { counter-set: ER_averagerat-1-2 0; }
-#ER_averagerat-1-2 > li::marker { content: ""counter(ER_averagerat-1-2,lower-alpha)""; }
-#ER_averagerat-1-2 > li { counter-increment: ER_averagerat-1-2; }
-#moredirect-7-7-1-2 { counter-set: moredirect-7-7-1-2 0; }
-#moredirect-7-7-1-2 > li::marker { content: ""counter(moredirect-7-7-1-2,lower-alpha)""; }
-#moredirect-7-7-1-2 > li { counter-increment: moredirect-7-7-1-2; }
-#moredirect-7-9-1-2 { counter-set: moredirect-7-9-1-2 0; }
-#moredirect-7-9-1-2 > li::marker { content: ""counter(moredirect-7-9-1-2,lower-alpha)""; }
-#moredirect-7-9-1-2 > li { counter-increment: moredirect-7-9-1-2; }
-#cases-31-1-1-2 { counter-set: cases-31-1-1-2 0; }
-#cases-31-1-1-2 > li::marker { content: ""counter(cases-31-1-1-2,lower-alpha)""; }
-#cases-31-1-1-2 > li { counter-increment: cases-31-1-1-2; }
-#SS_twoproofs-18-1-1-2 { counter-set: SS_twoproofs-18-1-1-2 0; }
-#SS_twoproofs-18-1-1-2 > li::marker { content: ""counter(SS_twoproofs-18-1-1-2,lower-alpha)""; }
-#SS_twoproofs-18-1-1-2 > li { counter-increment: SS_twoproofs-18-1-1-2; }
-#SS_twoproofs-18-2-1-2 { counter-set: SS_twoproofs-18-2-1-2 0; }
-#SS_twoproofs-18-2-1-2 > li::marker { content: ""counter(SS_twoproofs-18-2-1-2,lower-alpha)""; }
-#SS_twoproofs-18-2-1-2 > li { counter-increment: SS_twoproofs-18-2-1-2; }
-#SS_twoproofs-18-3-1-2 { counter-set: SS_twoproofs-18-3-1-2 0; }
-#SS_twoproofs-18-3-1-2 > li::marker { content: ""counter(SS_twoproofs-18-3-1-2,lower-alpha)""; }
-#SS_twoproofs-18-3-1-2 > li { counter-increment: SS_twoproofs-18-3-1-2; }
-#SS_twoproofs-18-4-1-2 { counter-set: SS_twoproofs-18-4-1-2 0; }
-#SS_twoproofs-18-4-1-2 > li::marker { content: ""counter(SS_twoproofs-18-4-1-2,lower-alpha)""; }
-#SS_twoproofs-18-4-1-2 > li { counter-increment: SS_twoproofs-18-4-1-2; }
-#SS_twoproofs-18-5-1-2 { counter-set: SS_twoproofs-18-5-1-2 0; }
-#SS_twoproofs-18-5-1-2 > li::marker { content: ""counter(SS_twoproofs-18-5-1-2,lower-alpha)""; }
-#SS_twoproofs-18-5-1-2 > li { counter-increment: SS_twoproofs-18-5-1-2; }
-#B_propsums-2-1 { counter-set: B_propsums-2-1 0; }
-#B_propsums-2-1 > li::marker { content: ""counter(B_propsums-2-1,decimal)""; }
-#B_propsums-2-1 > li { counter-increment: B_propsums-2-1; }
-#summation-27-1-1-2 { counter-set: summation-27-1-1-2 0; }
-#summation-27-1-1-2 > li::marker { content: ""counter(summation-27-1-1-2,lower-alpha)""; }
-#summation-27-1-1-2 > li { counter-increment: summation-27-1-1-2; }
-#summation-27-2-1-2 { counter-set: summation-27-2-1-2 0; }
-#summation-27-2-1-2 > li::marker { content: ""counter(summation-27-2-1-2,lower-alpha)""; }
-#summation-27-2-1-2 > li { counter-increment: summation-27-2-1-2; }
-#summation-27-3-1-2 { counter-set: summation-27-3-1-2 0; }
-#summation-27-3-1-2 > li::marker { content: ""counter(summation-27-3-1-2,lower-alpha)""; }
-#summation-27-3-1-2 > li { counter-increment: summation-27-3-1-2; }
-#summation-27-8-1-2 { counter-set: summation-27-8-1-2 0; }
-#summation-27-8-1-2 > li::marker { content: ""counter(summation-27-8-1-2,lower-alpha)""; }
-#summation-27-8-1-2 > li { counter-increment: summation-27-8-1-2; }
-#B_induction-3-4 { counter-set: B_induction-3-4 0; }
-#B_induction-3-4 > li::marker { content: ""counter(B_induction-3-4,decimal)""; }
-#B_induction-3-4 > li { counter-increment: B_induction-3-4; }
-#induction-6-1 { counter-set: induction-6-1 0; }
-#induction-6-1 > li::marker { content: "("counter(induction-6-1,decimal)")"; }
-#induction-6-1 > li { counter-increment: induction-6-1; }
-#ER_indpowersof2-1-2 { counter-set: ER_indpowersof2-1-2 0; }
-#ER_indpowersof2-1-2 > li::marker { content: ""counter(ER_indpowersof2-1-2,lower-alpha)""; }
-#ER_indpowersof2-1-2 > li { counter-increment: ER_indpowersof2-1-2; }
-#B_strongind-4-3 { counter-set: B_strongind-4-3 0; }
-#B_strongind-4-3 > li::marker { content: ""counter(B_strongind-4-3,decimal)""; }
-#B_strongind-4-3 > li { counter-increment: B_strongind-4-3; }
-#E_domainqexist1-3-1 { counter-set: E_domainqexist1-3-1 0; }
-#E_domainqexist1-3-1 > li::marker { content: ""counter(E_domainqexist1-3-1,lower-alpha)""; }
-#E_domainqexist1-3-1 > li { counter-increment: E_domainqexist1-3-1; }
-#B_pfexistential-3-3 { counter-set: B_pfexistential-3-3 0; }
-#B_pfexistential-3-3 > li::marker { content: ""counter(B_pfexistential-3-3,decimal)""; }
-#B_pfexistential-3-3 > li { counter-increment: B_pfexistential-3-3; }
-#B_pfunique-3-3 { counter-set: B_pfunique-3-3 0; }
-#B_pfunique-3-3 > li::marker { content: ""counter(B_pfunique-3-3,decimal)""; }
-#B_pfunique-3-3 > li { counter-increment: B_pfunique-3-3; }
-#existunique-23-1 { counter-set: existunique-23-1 0; }
-#existunique-23-1 > li::marker { content: ""counter(existunique-23-1,decimal)""; }
-#existunique-23-1 > li { counter-increment: existunique-23-1; }
-#E_wop-3-2 { counter-set: E_wop-3-2 0; }
-#E_wop-3-2 > li::marker { content: ""counter(E_wop-3-2,decimal)""; }
-#E_wop-3-2 > li { counter-increment: E_wop-3-2; }
-#E_setnotevarious-2 { counter-set: E_setnotevarious-2 0; }
-#E_setnotevarious-2 > li::marker { content: ""counter(E_setnotevarious-2,lower-alpha)""; }
-#E_setnotevarious-2 > li { counter-increment: E_setnotevarious-2; }
-#E_setops-3-2 { counter-set: E_setops-3-2 0; }
-#E_setops-3-2 > li::marker { content: ""counter(E_setops-3-2,lower-alpha)""; }
-#E_setops-3-2 > li { counter-increment: E_setops-3-2; }
-#SS_setproofs-3-3 { counter-set: SS_setproofs-3-3 0; }
-#SS_setproofs-3-3 > li::marker { content: ""counter(SS_setproofs-3-3,decimal)""; }
-#SS_setproofs-3-3 > li { counter-increment: SS_setproofs-3-3; }
-#L_SetIdent-4-4 { counter-set: L_SetIdent-4-4 0; }
-#L_SetIdent-4-4 > li::marker { content: ""counter(L_SetIdent-4-4,decimal)""; }
-#L_SetIdent-4-4 > li { counter-increment: L_SetIdent-4-4; }
-#SS_setproofs-25-1-1-2 { counter-set: SS_setproofs-25-1-1-2 0; }
-#SS_setproofs-25-1-1-2 > li::marker { content: ""counter(SS_setproofs-25-1-1-2,lower-alpha)""; }
-#SS_setproofs-25-1-1-2 > li { counter-increment: SS_setproofs-25-1-1-2; }
-#SS_setproofs-25-2-1-2 { counter-set: SS_setproofs-25-2-1-2 0; }
-#SS_setproofs-25-2-1-2 > li::marker { content: ""counter(SS_setproofs-25-2-1-2,lower-alpha)""; }
-#SS_setproofs-25-2-1-2 > li { counter-increment: SS_setproofs-25-2-1-2; }
-#SS_setproofs-25-3-1-2 { counter-set: SS_setproofs-25-3-1-2 0; }
-#SS_setproofs-25-3-1-2 > li::marker { content: ""counter(SS_setproofs-25-3-1-2,lower-alpha)""; }
-#SS_setproofs-25-3-1-2 > li { counter-increment: SS_setproofs-25-3-1-2; }
-#SS_setproofs-25-4-1-2 { counter-set: SS_setproofs-25-4-1-2 0; }
-#SS_setproofs-25-4-1-2 > li::marker { content: ""counter(SS_setproofs-25-4-1-2,lower-alpha)""; }
-#SS_setproofs-25-4-1-2 > li { counter-increment: SS_setproofs-25-4-1-2; }
-#SS_setproofs-25-5-1-2 { counter-set: SS_setproofs-25-5-1-2 0; }
-#SS_setproofs-25-5-1-2 > li::marker { content: ""counter(SS_setproofs-25-5-1-2,lower-alpha)""; }
-#SS_setproofs-25-5-1-2 > li { counter-increment: SS_setproofs-25-5-1-2; }
-#SS_setproofs-25-6-1-2 { counter-set: SS_setproofs-25-6-1-2 0; }
-#SS_setproofs-25-6-1-2 > li::marker { content: ""counter(SS_setproofs-25-6-1-2,lower-alpha)""; }
-#SS_setproofs-25-6-1-2 > li { counter-increment: SS_setproofs-25-6-1-2; }
-#SS_setproofs-25-7-1-2 { counter-set: SS_setproofs-25-7-1-2 0; }
-#SS_setproofs-25-7-1-2 > li::marker { content: ""counter(SS_setproofs-25-7-1-2,lower-alpha)""; }
-#SS_setproofs-25-7-1-2 > li { counter-increment: SS_setproofs-25-7-1-2; }
-#SS_setproofs-25-15-1-2 { counter-set: SS_setproofs-25-15-1-2 0; }
-#SS_setproofs-25-15-1-2 > li::marker { content: ""counter(SS_setproofs-25-15-1-2,lower-alpha)""; }
-#SS_setproofs-25-15-1-2 > li { counter-increment: SS_setproofs-25-15-1-2; }
-#E_notfunctionimages-2-1 { counter-set: E_notfunctionimages-2-1 0; }
-#E_notfunctionimages-2-1 > li::marker { content: ""counter(E_notfunctionimages-2-1,lower-alpha)""; }
-#E_notfunctionimages-2-1 > li { counter-increment: E_notfunctionimages-2-1; }
-#E_addasfn-3-1 { counter-set: E_addasfn-3-1 0; }
-#E_addasfn-3-1 > li::marker { content: ""counter(E_addasfn-3-1,lower-alpha)""; }
-#E_addasfn-3-1 > li { counter-increment: E_addasfn-3-1; }
-#functions-45-1-1-2 { counter-set: functions-45-1-1-2 0; }
-#functions-45-1-1-2 > li::marker { content: ""counter(functions-45-1-1-2,lower-alpha)""; }
-#functions-45-1-1-2 > li { counter-increment: functions-45-1-1-2; }
-#functions-45-2-1-2 { counter-set: functions-45-2-1-2 0; }
-#functions-45-2-1-2 > li::marker { content: ""counter(functions-45-2-1-2,lower-alpha)""; }
-#functions-45-2-1-2 > li { counter-increment: functions-45-2-1-2; }
-#functions-45-3-1-2 { counter-set: functions-45-3-1-2 0; }
-#functions-45-3-1-2 > li::marker { content: ""counter(functions-45-3-1-2,lower-alpha)""; }
-#functions-45-3-1-2 > li { counter-increment: functions-45-3-1-2; }
-#functions-45-4-1-2 { counter-set: functions-45-4-1-2 0; }
-#functions-45-4-1-2 > li::marker { content: ""counter(functions-45-4-1-2,lower-alpha)""; }
-#functions-45-4-1-2 > li { counter-increment: functions-45-4-1-2; }
-#functions-45-5-1-2 { counter-set: functions-45-5-1-2 0; }
-#functions-45-5-1-2 > li::marker { content: ""counter(functions-45-5-1-2,lower-alpha)""; }
-#functions-45-5-1-2 > li { counter-increment: functions-45-5-1-2; }
-#functions-45-7-1-3 { counter-set: functions-45-7-1-3 0; }
-#functions-45-7-1-3 > li::marker { content: ""counter(functions-45-7-1-3,lower-alpha)""; }
-#functions-45-7-1-3 > li { counter-increment: functions-45-7-1-3; }
-#functions-45-8-1-2 { counter-set: functions-45-8-1-2 0; }
-#functions-45-8-1-2 > li::marker { content: ""counter(functions-45-8-1-2,lower-alpha)""; }
-#functions-45-8-1-2 > li { counter-increment: functions-45-8-1-2; }
-#functions-45-9-1-2 { counter-set: functions-45-9-1-2 0; }
-#functions-45-9-1-2 > li::marker { content: ""counter(functions-45-9-1-2,lower-alpha)""; }
-#functions-45-9-1-2 > li { counter-increment: functions-45-9-1-2; }
-#functions-45-10-1-3 { counter-set: functions-45-10-1-3 0; }
-#functions-45-10-1-3 > li::marker { content: ""counter(functions-45-10-1-3,lower-alpha)""; }
-#functions-45-10-1-3 > li { counter-increment: functions-45-10-1-3; }
-#functions-45-11-1-3 { counter-set: functions-45-11-1-3 0; }
-#functions-45-11-1-3 > li::marker { content: ""counter(functions-45-11-1-3,lower-alpha)""; }
-#functions-45-11-1-3 > li { counter-increment: functions-45-11-1-3; }
-#functions-45-12-1-2 { counter-set: functions-45-12-1-2 0; }
-#functions-45-12-1-2 > li::marker { content: ""counter(functions-45-12-1-2,lower-alpha)""; }
-#functions-45-12-1-2 > li { counter-increment: functions-45-12-1-2; }
-#E_equivclasses-2-3 { counter-set: E_equivclasses-2-3 0; }
-#E_equivclasses-2-3 > li::marker { content: ""counter(E_equivclasses-2-3,lower-alpha)""; }
-#E_equivclasses-2-3 > li { counter-increment: E_equivclasses-2-3; }
-#D_partition-1-1-6 { counter-set: D_partition-1-1-6 0; }
-#D_partition-1-1-6 > li::marker { content: ""counter(D_partition-1-1-6,decimal)""; }
-#D_partition-1-1-6 > li { counter-increment: D_partition-1-1-6; }
-#E_equivclasses2-4-2 { counter-set: E_equivclasses2-4-2 0; }
-#E_equivclasses2-4-2 > li::marker { content: ""counter(E_equivclasses2-4-2,lower-alpha)""; }
-#E_equivclasses2-4-2 > li { counter-increment: E_equivclasses2-4-2; }
-#SS_equivrelations-47-1-1-3 { counter-set: SS_equivrelations-47-1-1-3 0; }
-#SS_equivrelations-47-1-1-3 > li::marker { content: ""counter(SS_equivrelations-47-1-1-3,lower-alpha)""; }
-#SS_equivrelations-47-1-1-3 > li { counter-increment: SS_equivrelations-47-1-1-3; }
-#SS_equivrelations-47-2-1-3 { counter-set: SS_equivrelations-47-2-1-3 0; }
-#SS_equivrelations-47-2-1-3 > li::marker { content: ""counter(SS_equivrelations-47-2-1-3,lower-alpha)""; }
-#SS_equivrelations-47-2-1-3 > li { counter-increment: SS_equivrelations-47-2-1-3; }
-#SS_equivrelations-47-4-1-2 { counter-set: SS_equivrelations-47-4-1-2 0; }
-#SS_equivrelations-47-4-1-2 > li::marker { content: ""counter(SS_equivrelations-47-4-1-2,lower-alpha)""; }
-#SS_equivrelations-47-4-1-2 > li { counter-increment: SS_equivrelations-47-4-1-2; }
-#SS_equivrelations-47-5-1-2 { counter-set: SS_equivrelations-47-5-1-2 0; }
-#SS_equivrelations-47-5-1-2 > li::marker { content: ""counter(SS_equivrelations-47-5-1-2,lower-alpha)""; }
-#SS_equivrelations-47-5-1-2 > li { counter-increment: SS_equivrelations-47-5-1-2; }
-#SS_equivrelations-47-6-1-2 { counter-set: SS_equivrelations-47-6-1-2 0; }
-#SS_equivrelations-47-6-1-2 > li::marker { content: ""counter(SS_equivrelations-47-6-1-2,lower-alpha)""; }
-#SS_equivrelations-47-6-1-2 > li { counter-increment: SS_equivrelations-47-6-1-2; }
-#SS_equivrelations-47-7-1-2 { counter-set: SS_equivrelations-47-7-1-2 0; }
-#SS_equivrelations-47-7-1-2 > li::marker { content: ""counter(SS_equivrelations-47-7-1-2,lower-alpha)""; }
-#SS_equivrelations-47-7-1-2 > li { counter-increment: SS_equivrelations-47-7-1-2; }
-#SS_equivrelations-47-8-1-2 { counter-set: SS_equivrelations-47-8-1-2 0; }
-#SS_equivrelations-47-8-1-2 > li::marker { content: ""counter(SS_equivrelations-47-8-1-2,lower-alpha)""; }
-#SS_equivrelations-47-8-1-2 > li { counter-increment: SS_equivrelations-47-8-1-2; }
-#SS_equivrelations-47-9-1-2 { counter-set: SS_equivrelations-47-9-1-2 0; }
-#SS_equivrelations-47-9-1-2 > li::marker { content: ""counter(SS_equivrelations-47-9-1-2,lower-alpha)""; }
-#SS_equivrelations-47-9-1-2 > li { counter-increment: SS_equivrelations-47-9-1-2; }
-#D_RSTprop2-1-1-3 { counter-set: D_RSTprop2-1-1-3 0; }
-#D_RSTprop2-1-1-3 > li::marker { content: ""counter(D_RSTprop2-1-1-3,decimal)""; }
-#D_RSTprop2-1-1-3 > li { counter-increment: D_RSTprop2-1-1-3; }
-#T_totalorder-1-1-4 { counter-set: T_totalorder-1-1-4 0; }
-#T_totalorder-1-1-4 > li::marker { content: ""counter(T_totalorder-1-1-4,decimal)""; }
-#T_totalorder-1-1-4 > li { counter-increment: T_totalorder-1-1-4; }
-#orders-33-1-1-2 { counter-set: orders-33-1-1-2 0; }
-#orders-33-1-1-2 > li::marker { content: ""counter(orders-33-1-1-2,lower-alpha)""; }
-#orders-33-1-1-2 > li { counter-increment: orders-33-1-1-2; }
-#orders-33-2-1-2 { counter-set: orders-33-2-1-2 0; }
-#orders-33-2-1-2 > li::marker { content: ""counter(orders-33-2-1-2,lower-alpha)""; }
-#orders-33-2-1-2 > li { counter-increment: orders-33-2-1-2; }
-#orders-33-3-1-2 { counter-set: orders-33-3-1-2 0; }
-#orders-33-3-1-2 > li::marker { content: ""counter(orders-33-3-1-2,lower-alpha)""; }
-#orders-33-3-1-2 > li { counter-increment: orders-33-3-1-2; }
-#orders-33-4-1-2 { counter-set: orders-33-4-1-2 0; }
-#orders-33-4-1-2 > li::marker { content: ""counter(orders-33-4-1-2,lower-alpha)""; }
-#orders-33-4-1-2 > li { counter-increment: orders-33-4-1-2; }
-#binomial9-30-2-1-1-1 { counter-set: binomial9-30-2-1-1-1 0; }
-#binomial9-30-2-1-1-1 > li::marker { content: ""counter(binomial9-30-2-1-1-1,lower-alpha)""; }
-#binomial9-30-2-1-1-1 > li { counter-increment: binomial9-30-2-1-1-1; }
-#cardinality-31-6-1-2 { counter-set: cardinality-31-6-1-2 0; }
-#cardinality-31-6-1-2 > li::marker { content: ""counter(cardinality-31-6-1-2,lower-alpha)""; }
-#cardinality-31-6-1-2 > li { counter-increment: cardinality-31-6-1-2; }
-</style>
+<script src="_static/prefix-runtime.42217a82c75796c8.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.7e141ad8414abf4a.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.f4ab138da65f4203.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
 </head>
 <body class="pretext book ignore-math">
-<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
-<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
-<h1 class="heading"><a href="IntroProofs.html"><span class="title">Introduction to Proofs:</span> <span class="subtitle">An Active Exploration of Mathematical Language</span></a></h1>
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="IntroProofs.html"><span class="title">Introduction to Proofs</span> <span class="subtitle">An Active Exploration of Mathematical Language</span></a></h1>
 <p class="byline">Jennifer Firkins Nordstrom</p>
-</div>
-</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
 <button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-2.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
 <div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
@@ -595,14 +316,17 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="binomial9"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">6.1</span><span class="space"> </span><span class="title">Binomial Theorem</span>
 </h2>
-<div class="para" id="binomial9-3">The Binomial Theorem has applications in many areas of mathematics, from calculus, to number theory, to probability. In this section we look at the connection between Pascal’s triangle and binomial coefficients. We ultimately prove the Binomial Theorem using induction.</div>
+<div class="para" id="binomial9-3">The Binomial Theorem has applications in many areas of mathematics, from calculus, to number theory, to probability. In this section we look at the connection between Pascal’s triangle and binomial coefficients. We ultimately prove the Binomial Theorem using induction.<div class="autopermalink" data-description="Paragraph"><a href="#binomial9-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="definition definition-like" id="D_combination"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.1.1</span><span class="period">.</span>
 </h3>
-<div class="para" id="D_combination-1-1">Let <span class="process-math">\(n, r\)</span> be nonnegative integers with <span class="process-math">\(r\leq n\text{.}\)</span> An <dfn class="terminology"><span class="process-math">\(r\)</span>-combination</dfn> of a set of <span class="process-math">\(n\)</span> elements is the number of subsets of size <span class="process-math">\(r\)</span> that can be chosen from a set of <span class="process-math">\(n\)</span> elements. We will use the notation <span class="process-math">\(\binom{n}{r}\text{.}\)</span>
-</div></article><div class="para" id="binomial9-5">Other common notations are <span class="process-math">\(C(n, r)\)</span> or <span class="process-math">\(nCr\text{.}\)</span>
+<div class="para" id="D_combination-1-1">Let <span class="process-math">\(n, r\)</span> be nonnegative integers with <span class="process-math">\(r\leq n\text{.}\)</span> An <dfn class="terminology"><span class="process-math">\(r\)</span>-combination</dfn> of a set of <span class="process-math">\(n\)</span> elements is the number of subsets of size <span class="process-math">\(r\)</span> that can be chosen from a set of <span class="process-math">\(n\)</span> elements. We will use the notation <span class="process-math">\(\binom{n}{r}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#D_combination-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="binomial9-6">For reasons we will see later in this section, <span class="process-math">\(\binom{n}{r}\)</span> are also called <dfn class="terminology">binomial coefficients</dfn>.</div>
+<div class="autopermalink" data-description="Definition 6.1.1"><a href="#D_combination" title="Copy heading and permalink for Definition 6.1.1" aria-label="Copy heading and permalink for Definition 6.1.1">🔗</a></div></article><div class="para" id="binomial9-5">Other common notations are <span class="process-math">\(C(n, r)\)</span> or <span class="process-math">\(nCr\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#binomial9-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="binomial9-6">For reasons we will see later in this section, <span class="process-math">\(\binom{n}{r}\)</span> are also called <dfn class="terminology">binomial coefficients</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#binomial9-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para logical" id="binomial9-7">
 <div class="para">We can calculate combinations or binomial coefficients using the formula</div>
 <div class="displaymath process-math">
@@ -610,12 +334,14 @@ eBookConfig.enable_chatcodes =  false;
 \binom{n}{r}=\frac{n!}{r!(n-r)!}\text{.}
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#binomial9-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="binomial9-8">Using the definition that <span class="process-math">\(0!=1\text{,}\)</span> we can see that <span class="process-math">\(\binom{n}{0}=1\)</span> and <span class="process-math">\(\binom{0}{0}=1\text{.}\)</span>
+<div class="para" id="binomial9-8">Using the definition that <span class="process-math">\(0!=1\text{,}\)</span> we can see that <span class="process-math">\(\binom{n}{0}=1\)</span> and <span class="process-math">\(\binom{0}{0}=1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#binomial9-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <details id="E_calcbinom" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">6.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Calculating a Combination.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_calcbinom-2">Calculate <span class="process-math">\(\binom{5}{4}\text{,}\)</span> the number of subsets of size 4 chosen from a set of 5 elements.</div>
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_calcbinom-2">Calculate <span class="process-math">\(\binom{5}{4}\text{,}\)</span> the number of subsets of size 4 chosen from a set of 5 elements.<div class="autopermalink" data-description="Paragraph"><a href="#E_calcbinom-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para logical" id="E_calcbinom-3">
 <div class="para">Using the formula,</div>
 <div class="displaymath process-math">
@@ -628,20 +354,28 @@ eBookConfig.enable_chatcodes =  false;
 =\frac{(5)(4)(3)(2)(1)}{(4)(3)(2)(1)(1)}=5
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#E_calcbinom-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="E_calcbinom-4">This means there are 5 different subsets with 4 elements of any set with 5 elements.</div></article></details><article class="activity project-like" id="A_calcbinomial"><h3 class="heading">
+<div class="para" id="E_calcbinom-4">This means there are 5 different subsets with 4 elements of any set with 5 elements.<div class="autopermalink" data-description="Paragraph"><a href="#E_calcbinom-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 6.1.2: Calculating a Combination"><a href="#E_calcbinom" title="Copy heading and permalink for Example 6.1.2: Calculating a Combination" aria-label="Copy heading and permalink for Example 6.1.2: Calculating a Combination">🔗</a></div></article></details><article class="activity project-like" id="A_calcbinomial"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">6.1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Calculating Binomial Coefficients.</span>
 </h3>
-<div class="introduction" id="A_calcbinomial-2"><div class="para" id="A_calcbinomial-2-1">Calculate the following binomial coefficients.</div></div>
+<div class="introduction" id="A_calcbinomial-2"><div class="para" id="A_calcbinomial-2-1">Calculate the following binomial coefficients.<div class="autopermalink" data-description="Paragraph"><a href="#A_calcbinomial-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
 <article class="task exercise-like" id="A_calcbinomial-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="A_calcbinomial-3-1">Calculate <span class="process-math">\({6 \choose 2}\text{.}\)</span>
-</div></article><article class="task exercise-like" id="A_calcbinomial-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="A_calcbinomial-4-1">Calculate <span class="process-math">\({6 \choose 4}\text{.}\)</span>
-</div></article><article class="task exercise-like" id="A_calcbinomial-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="A_calcbinomial-5-1">Calculate <span class="process-math">\({4 \choose 0}\text{.}\)</span>
-</div></article><article class="task exercise-like" id="A_calcbinomial-6"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="A_calcbinomial-6-1">Calculate <span class="process-math">\({4 \choose 4}\text{.}\)</span>
-</div></article></article><article class="theorem theorem-like" id="T_requalsnminusr"><h3 class="heading">
+<div class="para" id="A_calcbinomial-3-1">Calculate <span class="process-math">\({6 \choose 2}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_calcbinomial-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 6.1.1.a"><a href="#A_calcbinomial-3" title="Copy heading and permalink for Task 6.1.1.a" aria-label="Copy heading and permalink for Task 6.1.1.a">🔗</a></div></article><article class="task exercise-like" id="A_calcbinomial-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="A_calcbinomial-4-1">Calculate <span class="process-math">\({6 \choose 4}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_calcbinomial-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 6.1.1.b"><a href="#A_calcbinomial-4" title="Copy heading and permalink for Task 6.1.1.b" aria-label="Copy heading and permalink for Task 6.1.1.b">🔗</a></div></article><article class="task exercise-like" id="A_calcbinomial-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="A_calcbinomial-5-1">Calculate <span class="process-math">\({4 \choose 0}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_calcbinomial-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 6.1.1.c"><a href="#A_calcbinomial-5" title="Copy heading and permalink for Task 6.1.1.c" aria-label="Copy heading and permalink for Task 6.1.1.c">🔗</a></div></article><article class="task exercise-like" id="A_calcbinomial-6"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="A_calcbinomial-6-1">Calculate <span class="process-math">\({4 \choose 4}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_calcbinomial-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 6.1.1.d"><a href="#A_calcbinomial-6" title="Copy heading and permalink for Task 6.1.1.d" aria-label="Copy heading and permalink for Task 6.1.1.d">🔗</a></div></article><div class="autopermalink" data-description="Activity 6.1.1: Calculating Binomial Coefficients"><a href="#A_calcbinomial" title="Copy heading and permalink for Activity 6.1.1: Calculating Binomial Coefficients" aria-label="Copy heading and permalink for Activity 6.1.1: Calculating Binomial Coefficients">🔗</a></div></article><article class="theorem theorem-like" id="T_requalsnminusr"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.1.3</span><span class="period">.</span>
 </h3>
 <div class="para logical" id="T_requalsnminusr-1-1">
@@ -651,7 +385,10 @@ eBookConfig.enable_chatcodes =  false;
 \binom{n}{r}=\binom{n}{n-r}.
 \end{equation*}
 </div>
-</div></article><div class="para" id="binomial9-12">The proof of <a href="binomial9.html#T_requalsnminusr" class="xref" data-knowl="./knowl/xref/T_requalsnminusr.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 6.1.3">Theorem 6.1.3</a> is left as an exercise.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#T_requalsnminusr-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 6.1.3"><a href="#T_requalsnminusr" title="Copy heading and permalink for Theorem 6.1.3" aria-label="Copy heading and permalink for Theorem 6.1.3">🔗</a></div></article><div class="para" id="binomial9-12">The proof of <a href="binomial9.html#T_requalsnminusr" class="xref" data-knowl="./knowl/xref/T_requalsnminusr.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 6.1.3">Theorem 6.1.3</a> is left as an exercise.<div class="autopermalink" data-description="Paragraph"><a href="#binomial9-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="theorem theorem-like" id="T_pascalsformula"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.1.4</span><span class="period">.</span><span class="space"> </span><span class="title">Pascal’s Formula.</span>
 </h3>
@@ -662,7 +399,9 @@ eBookConfig.enable_chatcodes =  false;
 \binom{n+1}{r}=\binom{n}{r-1}+\binom{n}{r}.
 \end{equation*}
 </div>
-</div></article><article class="activity project-like" id="A_pascalalg"><h3 class="heading">
+<div class="autopermalink" data-description="Paragraph"><a href="#T_pascalsformula-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 6.1.4: Pascal’s Formula"><a href="#T_pascalsformula" title="Copy heading and permalink for Theorem 6.1.4: Pascal’s Formula" aria-label="Copy heading and permalink for Theorem 6.1.4: Pascal’s Formula">🔗</a></div></article><article class="activity project-like" id="A_pascalalg"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">6.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Proof of Pascal’s Formula.</span>
 </h3>
 <div class="para logical" id="A_pascalalg-2-1">
@@ -672,8 +411,15 @@ eBookConfig.enable_chatcodes =  false;
 {{n+1}\choose {r}}={n\choose {r-1}}+{n \choose r}.
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#A_pascalalg-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="A_pascalalg-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="A_pascalalg-3-1">Start with the right-hand side. Use the definition of “choose,” then find a common denominator. Note, you will save yourself a lot of work if you find the <em class="emphasis">least</em> common denominator.</div></div></details></div></article><div class="para" id="binomial9-15">There is a connection between binomial coefficients and Pascal’s triangle.</div>
+<div class="solutions"><details id="A_pascalalg-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="A_pascalalg-3-1">Start with the right-hand side. Use the definition of “choose,” then find a common denominator. Note, you will save yourself a lot of work if you find the <em class="emphasis">least</em> common denominator.<div class="autopermalink" data-description="Paragraph"><a href="#A_pascalalg-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 6.1.2.1"><a href="#A_pascalalg-3" title="Copy heading and permalink for Hint 6.1.2.1" aria-label="Copy heading and permalink for Hint 6.1.2.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Activity 6.1.2: Proof of Pascal’s Formula"><a href="#A_pascalalg" title="Copy heading and permalink for Activity 6.1.2: Proof of Pascal’s Formula" aria-label="Copy heading and permalink for Activity 6.1.2: Proof of Pascal’s Formula">🔗</a></div></article><div class="para" id="binomial9-15">There is a connection between binomial coefficients and Pascal’s triangle.<div class="autopermalink" data-description="Paragraph"><a href="#binomial9-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="binomial9-16">You may have seen Pascal’s triangle before, the start of which is <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines"></td>
@@ -712,8 +458,10 @@ eBookConfig.enable_chatcodes =  false;
 <td class="l m b0 r0 l0 t0 lines">1</td>
 </tr>
 </table></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#binomial9-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="binomial9-17">We get the numbers in each row by adding the two numbers above. If there is only one number, you just get 1. For example, the fourth row is 1, 3, 3, 1, since <span class="process-math">\(1+2=3\text{.}\)</span> The next row would be 1, 4, 6, 4, 1.</div>
+<div class="para" id="binomial9-17">We get the numbers in each row by adding the two numbers above. If there is only one number, you just get 1. For example, the fourth row is 1, 3, 3, 1, since <span class="process-math">\(1+2=3\text{.}\)</span> The next row would be 1, 4, 6, 4, 1.<div class="autopermalink" data-description="Paragraph"><a href="#binomial9-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="binomial9-18">If we think about the first row as actually being the 0th row, we can make a triangle with the binomial coefficients: <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines"></td>
@@ -752,18 +500,33 @@ eBookConfig.enable_chatcodes =  false;
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(\binom{3}{3}\)</span></td>
 </tr>
 </table></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#binomial9-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="binomial9-19">If you calculate the binomial coefficients, you will see that you get the same values as Pascal’s triangle. Furthermore, Pascal’s formula, <a href="binomial9.html#T_pascalsformula" class="xref" data-knowl="./knowl/xref/T_pascalsformula.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 6.1.4: Pascal’s Formula">Theorem 6.1.4</a>, is just the rule we use to get the triangle: add the <span class="process-math">\(r-1\)</span> and <span class="process-math">\(r\)</span> terms from the <span class="process-math">\(n^{th}\)</span> row to get the <span class="process-math">\(r\)</span> term in the <span class="process-math">\(n+1\)</span> row.</div>
-<div class="para" id="binomial9-20">Why do we call <span class="process-math">\(\binom{n}{r}\)</span> a binomial coefficient? First, a <dfn class="terminology">binomial</dfn> is an expression of the form <span class="process-math">\(a+b\text{.}\)</span> We will see that the Binomial Theorem gives a formula for calculating <span class="process-math">\((a+b)^n\text{.}\)</span> The coefficients in this formula are the binomial coefficients.</div>
+<div class="para" id="binomial9-19">If you calculate the binomial coefficients, you will see that you get the same values as Pascal’s triangle. Furthermore, Pascal’s formula, <a href="binomial9.html#T_pascalsformula" class="xref" data-knowl="./knowl/xref/T_pascalsformula.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 6.1.4: Pascal’s Formula">Theorem 6.1.4</a>, is just the rule we use to get the triangle: add the <span class="process-math">\(r-1\)</span> and <span class="process-math">\(r\)</span> terms from the <span class="process-math">\(n^{th}\)</span> row to get the <span class="process-math">\(r\)</span> term in the <span class="process-math">\(n+1\)</span> row.<div class="autopermalink" data-description="Paragraph"><a href="#binomial9-19" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="binomial9-20">Why do we call <span class="process-math">\(\binom{n}{r}\)</span> a binomial coefficient? First, a <dfn class="terminology">binomial</dfn> is an expression of the form <span class="process-math">\(a+b\text{.}\)</span> We will see that the Binomial Theorem gives a formula for calculating <span class="process-math">\((a+b)^n\text{.}\)</span> The coefficients in this formula are the binomial coefficients.<div class="autopermalink" data-description="Paragraph"><a href="#binomial9-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <details id="E_combbinomialthm" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">6.1.5</span><span class="period">.</span><span class="space"> </span><span class="title">A Counting Argument for <span class="process-math">\((a+b)^3\)</span>.</span>
 </h3></summary><article class="example example-like knowl__content"><div class="para logical" id="E_combbinomialthm-2">
 <div class="para">Suppose we want to expand (or multiply) <span class="process-math">\((a+b)^3=(a+b)(a+b)(a+b)\text{.}\)</span> We can think of the multiplication in this way:</div>
 <ul class="disc" id="E_combbinomialthm-2-2">
-<li id="E_combbinomialthm-2-2-1"><div class="para" id="p-derived-E_combbinomialthm-2-2-1">there is 1 way to get <span class="process-math">\(a^3\text{:}\)</span> choose 0 <span class="process-math">\(b\)</span>’s from the three factors.</div></li>
-<li id="E_combbinomialthm-2-2-2"><div class="para" id="p-derived-E_combbinomialthm-2-2-2">there are 3 ways to get <span class="process-math">\(a^2b\text{:}\)</span> choose 1 <span class="process-math">\(b\)</span> from the three factors.</div></li>
-<li id="E_combbinomialthm-2-2-3"><div class="para" id="p-derived-E_combbinomialthm-2-2-3">there are 3 ways to get <span class="process-math">\(ab^2\text{:}\)</span> choose 2 <span class="process-math">\(b\)</span>’s’ from the three factors.</div></li>
-<li id="E_combbinomialthm-2-2-4"><div class="para" id="p-derived-E_combbinomialthm-2-2-4">there is 1 way to get <span class="process-math">\(b^3\text{:}\)</span> choose 3 <span class="process-math">\(b\)</span>’s from the three factors.</div></li>
+<li id="E_combbinomialthm-2-2-1">
+<div class="para" id="p-derived-E_combbinomialthm-2-2-1">there is 1 way to get <span class="process-math">\(a^3\text{:}\)</span> choose 0 <span class="process-math">\(b\)</span>’s from the three factors.</div>
+<div class="autopermalink" data-description="Item"><a href="#E_combbinomialthm-2-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="E_combbinomialthm-2-2-2">
+<div class="para" id="p-derived-E_combbinomialthm-2-2-2">there are 3 ways to get <span class="process-math">\(a^2b\text{:}\)</span> choose 1 <span class="process-math">\(b\)</span> from the three factors.</div>
+<div class="autopermalink" data-description="Item"><a href="#E_combbinomialthm-2-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="E_combbinomialthm-2-2-3">
+<div class="para" id="p-derived-E_combbinomialthm-2-2-3">there are 3 ways to get <span class="process-math">\(ab^2\text{:}\)</span> choose 2 <span class="process-math">\(b\)</span>’s’ from the three factors.</div>
+<div class="autopermalink" data-description="Item"><a href="#E_combbinomialthm-2-2-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="E_combbinomialthm-2-2-4">
+<div class="para" id="p-derived-E_combbinomialthm-2-2-4">there is 1 way to get <span class="process-math">\(b^3\text{:}\)</span> choose 3 <span class="process-math">\(b\)</span>’s from the three factors.</div>
+<div class="autopermalink" data-description="Item"><a href="#E_combbinomialthm-2-2-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
 </ul>
 <div class="para">This give us</div>
 <div class="displaymath process-math">
@@ -771,8 +534,11 @@ eBookConfig.enable_chatcodes =  false;
 (a+b)^3=\binom{3}{0}a^3+\binom{3}{1}a^2b+\binom{3}{2}ab^2+\binom{3}{3}b^3.
 \end{equation*}
 </div>
-</div></article></details><div class="para" id="binomial9-22">
-<a href="binomial9.html#E_combbinomialthm" class="xref" data-knowl="./knowl/xref/E_combbinomialthm.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 6.1.5: A Counting Argument for (a+b)^3">Example 6.1.5</a> can be generalized to <span class="process-math">\((a+b)^n\)</span> in the Binomial Theorem.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#E_combbinomialthm-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 6.1.5: A Counting Argument for (a+b)^3"><a href="#E_combbinomialthm" title="Copy heading and permalink for Example 6.1.5: A Counting Argument for (a+b)^3" aria-label="Copy heading and permalink for Example 6.1.5: A Counting Argument for (a+b)^3">🔗</a></div></article></details><div class="para" id="binomial9-22">
+<a href="binomial9.html#E_combbinomialthm" class="xref" data-knowl="./knowl/xref/E_combbinomialthm.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 6.1.5: A Counting Argument for (a+b)^3">Example 6.1.5</a> can be generalized to <span class="process-math">\((a+b)^n\)</span> in the Binomial Theorem.<div class="autopermalink" data-description="Paragraph"><a href="#binomial9-22" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="theorem theorem-like" id="T_binomial"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.1.6</span><span class="period">.</span><span class="space"> </span><span class="title">Binomial Theorem.</span>
 </h3>Let <span class="process-math">\(n\)</span> be a nonnegative integer, then<div class="displaymath process-math" id="T_binomial-3-2">
@@ -780,7 +546,9 @@ eBookConfig.enable_chatcodes =  false;
 (a+b)^n&amp;= \binom{n}{0}a^n+\binom{n}{1}a^{n-1}b+\binom{n}{2}a^{n-2}b^{2}+\cdots +\binom{n}{n-1}ab^{n-1}+\binom{n}{n}b^n\\
 &amp;=\sum_{k=0}^{n}\binom{n}{k}a^{n-k}b^k.
 \end{align*}
-</div></article><div class="para" id="binomial9-24">We can generalize the counting argument from <a href="binomial9.html#E_combbinomialthm" class="xref" data-knowl="./knowl/xref/E_combbinomialthm.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 6.1.5: A Counting Argument for (a+b)^3">Example 6.1.5</a> to prove the Binomial Theorem. This is the type of proof you would encounter in a course which emphasizes counting techniques. However, we can also prove the Binomial Theorem using induction, which is more appropriate for this course.</div>
+</div>
+<div class="autopermalink" data-description="Theorem 6.1.6: Binomial Theorem"><a href="#T_binomial" title="Copy heading and permalink for Theorem 6.1.6: Binomial Theorem" aria-label="Copy heading and permalink for Theorem 6.1.6: Binomial Theorem">🔗</a></div></article><div class="para" id="binomial9-24">We can generalize the counting argument from <a href="binomial9.html#E_combbinomialthm" class="xref" data-knowl="./knowl/xref/E_combbinomialthm.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 6.1.5: A Counting Argument for (a+b)^3">Example 6.1.5</a> to prove the Binomial Theorem. This is the type of proof you would encounter in a course which emphasizes counting techniques. However, we can also prove the Binomial Theorem using induction, which is more appropriate for this course.<div class="autopermalink" data-description="Paragraph"><a href="#binomial9-24" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <details id="binomial9-25" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="binomial9-25-1">
 <div class="para">Prove</div>
 <div class="displaymath process-math">
@@ -790,6 +558,7 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="para">by induction on <span class="process-math">\(n\text{.}\)</span>
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#binomial9-25-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="binomial9-25-2">
 <div class="para">Base step: Let <span class="process-math">\(n=0\text{.}\)</span> Then</div>
@@ -804,19 +573,23 @@ eBookConfig.enable_chatcodes =  false;
 \sum_{i=0}^{0}\binom{0}{i}a^{0-i}b^i=a^0b^0=1.
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#binomial9-25-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="binomial9-25-3">Induction step: Assume <span class="process-math">\((a+b)^k=\sum_{i=0}^{k}\binom{k}{i}a^{k-i}b^i\text{.}\)</span>
+<div class="para" id="binomial9-25-3">Induction step: Assume <span class="process-math">\((a+b)^k=\sum_{i=0}^{k}\binom{k}{i}a^{k-i}b^i\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#binomial9-25-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="binomial9-25-4">Show <span class="process-math">\((a+b)^{k+1}=\sum_{i=0}^{k+1}\binom{k+1}{i}a^{k+1-i}b^i\)</span>
+<div class="para" id="binomial9-25-4">Show <span class="process-math">\((a+b)^{k+1}=\sum_{i=0}^{k+1}\binom{k+1}{i}a^{k+1-i}b^i\)</span><div class="autopermalink" data-description="Paragraph"><a href="#binomial9-25-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para logical" id="binomial9-25-5"><div class="displaymath process-math" id="binomial9-25-5-1">
+<div class="para logical" id="binomial9-25-5">
+<div class="displaymath process-math" id="binomial9-25-5-1">
 \begin{align*}
 (a+b)^{k+1}&amp;=(a+b)^k(a+b)\\
 &amp;=\biggl(\sum_{i=0}^{k}\binom{k}{i}a^{k-i}b^i\biggr)(a+b)\\
 &amp;=a\sum_{i=0}^{k}\binom{k}{i}a^{k-i}b^i+b\sum_{i=0}^{k}\binom{k}{i}a^{k-i}b^i\\
 &amp;=\sum_{i=0}^{k}\binom{k}{i}a^{k+1-i}b^i+\sum_{i=0}^{k}\binom{k}{i}a^{k-i}b^{i+1}
 \end{align*}
-</div></div>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#binomial9-25-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para logical" id="binomial9-25-6">
 <div class="para">Now we want to change the index of the second sum. This is just a substitution of variable that allows us to shift how we index the terms. If we were to write out the sum, rather than have it in summation notation, we would not need this step. But it allows us to easily combine like terms in the two summations. So, in the second sum, let <span class="process-math">\(j=i+1\text{,}\)</span> so when <span class="process-math">\(i=0, j=1\text{;}\)</span> when <span class="process-math">\(i=k, j=k+1\text{,}\)</span> and <span class="process-math">\(i=j-1\text{.}\)</span> We get</div>
 <div class="displaymath process-math" id="binomial9-25-6-5">
@@ -835,29 +608,44 @@ eBookConfig.enable_chatcodes =  false;
 &amp;=\sum_{i=0}^{k+1}\binom{k+1}{i}a^{k+1-i}b^i
 \end{align*}
 </div>
-</div></article></details><article class="activity project-like" id="A_binomthmcalc"><h3 class="heading">
+<div class="autopermalink" data-description="Paragraph"><a href="#binomial9-25-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 6.1.1"><a href="#binomial9-25" title="Copy heading and permalink for Proof 6.1.1" aria-label="Copy heading and permalink for Proof 6.1.1">🔗</a></div></article></details><article class="activity project-like" id="A_binomthmcalc"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">6.1.3</span><span class="period">.</span><span class="space"> </span><span class="title">Understanding the Binomial Theorem.</span>
 </h3>
-<div class="para" id="A_binomthmcalc-2-1">Show the Binomial Theorem holds for <span class="process-math">\(n=2\)</span> and <span class="process-math">\(n=3\text{.}\)</span>
-</div></article><details id="E_closedform" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<div class="para" id="A_binomthmcalc-2-1">Show the Binomial Theorem holds for <span class="process-math">\(n=2\)</span> and <span class="process-math">\(n=3\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_binomthmcalc-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Activity 6.1.3: Understanding the Binomial Theorem"><a href="#A_binomthmcalc" title="Copy heading and permalink for Activity 6.1.3: Understanding the Binomial Theorem" aria-label="Copy heading and permalink for Activity 6.1.3: Understanding the Binomial Theorem">🔗</a></div></article><details id="E_closedform" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">6.1.7</span><span class="period">.</span><span class="space"> </span><span class="title">Expressing a Sum in Closed Form.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_closedform-2">Express the sum, <span class="process-math">\(\sum_{i=0}^{n}\binom{n}{i}x^i\text{,}\)</span> in closed form.</div>
-<div class="para" id="E_closedform-3">We think of writing out the sum as expanding, so the closed form means the power of a binomial.</div>
-<div class="para" id="E_closedform-4">For problems such as this, we need to identify <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> as in the Binomial Theorem.</div>
-<div class="para" id="E_closedform-5">We can see that <span class="process-math">\(x=b\text{.}\)</span> Since there does not appear to be any term for <span class="process-math">\(a\text{,}\)</span> we can let <span class="process-math">\(a=1\text{.}\)</span> Thus, the closed form is <span class="process-math">\((1+x)^n\text{.}\)</span>
-</div></article></details><article class="activity project-like" id="A_closedformbt"><h3 class="heading">
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_closedform-2">Express the sum, <span class="process-math">\(\sum_{i=0}^{n}\binom{n}{i}x^i\text{,}\)</span> in closed form.<div class="autopermalink" data-description="Paragraph"><a href="#E_closedform-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="E_closedform-3">We think of writing out the sum as expanding, so the closed form means the power of a binomial.<div class="autopermalink" data-description="Paragraph"><a href="#E_closedform-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="E_closedform-4">For problems such as this, we need to identify <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> as in the Binomial Theorem.<div class="autopermalink" data-description="Paragraph"><a href="#E_closedform-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="E_closedform-5">We can see that <span class="process-math">\(x=b\text{.}\)</span> Since there does not appear to be any term for <span class="process-math">\(a\text{,}\)</span> we can let <span class="process-math">\(a=1\text{.}\)</span> Thus, the closed form is <span class="process-math">\((1+x)^n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_closedform-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 6.1.7: Expressing a Sum in Closed Form"><a href="#E_closedform" title="Copy heading and permalink for Example 6.1.7: Expressing a Sum in Closed Form" aria-label="Copy heading and permalink for Example 6.1.7: Expressing a Sum in Closed Form">🔗</a></div></article></details><article class="activity project-like" id="A_closedformbt"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">6.1.4</span><span class="period">.</span><span class="space"> </span><span class="title">An Expanded Form.</span>
 </h3>
-<div class="para" id="A_closedformbt-2-1">Use the Binomial Theorem to find <span class="process-math">\((3-2x)^3\text{.}\)</span>
+<div class="para" id="A_closedformbt-2-1">Use the Binomial Theorem to find <span class="process-math">\((3-2x)^3\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_closedformbt-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="A_closedformbt-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="A_closedformbt-3-1">In this expression, what are <span class="process-math">\(a, b, n\text{?}\)</span>
-</div></div></details></div></article><article class="activity project-like" id="A_powers2bt"><h3 class="heading">
+<div class="solutions"><details id="A_closedformbt-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="A_closedformbt-3-1">In this expression, what are <span class="process-math">\(a, b, n\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_closedformbt-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 6.1.4.1"><a href="#A_closedformbt-3" title="Copy heading and permalink for Hint 6.1.4.1" aria-label="Copy heading and permalink for Hint 6.1.4.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Activity 6.1.4: An Expanded Form"><a href="#A_closedformbt" title="Copy heading and permalink for Activity 6.1.4: An Expanded Form" aria-label="Copy heading and permalink for Activity 6.1.4: An Expanded Form">🔗</a></div></article><article class="activity project-like" id="A_powers2bt"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">6.1.5</span><span class="period">.</span><span class="space"> </span><span class="title">Powers of 2.</span>
 </h3>
-<div class="para" id="A_powers2bt-2-1">Prove <span class="process-math">\(2^n=\sum_{k=0}^n{n \choose k}\text{.}\)</span>
+<div class="para" id="A_powers2bt-2-1">Prove <span class="process-math">\(2^n=\sum_{k=0}^n{n \choose k}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_powers2bt-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="A_powers2bt-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="A_powers2bt-3-1">Use that <span class="process-math">\(2=(1+1)\text{.}\)</span>
-</div></div></details></div></article><section class="exercises" id="binomial9-30"><h3 class="heading hide-type">
+<div class="solutions"><details id="A_powers2bt-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="A_powers2bt-3-1">Use that <span class="process-math">\(2=(1+1)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_powers2bt-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 6.1.5.1"><a href="#A_powers2bt-3" title="Copy heading and permalink for Hint 6.1.5.1" aria-label="Copy heading and permalink for Hint 6.1.5.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Activity 6.1.5: Powers of 2"><a href="#A_powers2bt" title="Copy heading and permalink for Activity 6.1.5: Powers of 2" aria-label="Copy heading and permalink for Activity 6.1.5: Powers of 2">🔗</a></div></article><section class="exercises" id="binomial9-30"><h3 class="heading hide-type">
 <span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Exercises</span>
 </h3>
 <article class="exercise exercise-like" id="binomial9-30-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
@@ -870,15 +658,28 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="para">for integers <span class="process-math">\(n\)</span> and <span class="process-math">\(r\)</span> with <span class="process-math">\(0\leq r\leq n\text{.}\)</span>
 </div>
-</div></article><article class="exercise exercise-like" id="binomial9-30-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para logical" id="binomial9-30-2-1-1"><ol class="lower-alpha" id="binomial9-30-2-1-1-1">
-<li id="binomial9-30-2-1-1-1-1"><div class="para" id="binomial9-30-2-1-1-1-1-1">Use Pascal’s triangle to compute the values of <span class="process-math">\({6\choose 2}, {6\choose 3}, {6\choose 4}\)</span> and <span class="process-math">\({6\choose 5}\)</span>
-</div></li>
-<li id="binomial9-30-2-1-1-1-2"><div class="para" id="binomial9-30-2-1-1-1-2-1">Use the result of part (a) and Pascal’s Formula to compute <span class="process-math">\({7\choose 3}\text{,}\)</span> <span class="process-math">\({7\choose 4}\text{,}\)</span> and <span class="process-math">\({7\choose 5}\text{.}\)</span>
-</div></li>
-<li id="binomial9-30-2-1-1-1-3"><div class="para" id="binomial9-30-2-1-1-1-3-1">Complete the row of Pascal’s triangle that corresponds to <span class="process-math">\(n=7\text{.}\)</span>
-</div></li>
-</ol></div></article><article class="exercise exercise-like" id="binomial9-30-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="autopermalink" data-description="Paragraph"><a href="#binomial9-30-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 6.1.1"><a href="#binomial9-30-1" title="Copy heading and permalink for Exercise 6.1.1" aria-label="Copy heading and permalink for Exercise 6.1.1">🔗</a></div></article><article class="exercise exercise-like" id="binomial9-30-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="para" id="binomial9-30-2-1-1">In this exercise we find the 6th and 7th rows of Pascal’s triangle using the binomial coefficients.<div class="autopermalink" data-description="Paragraph"><a href="#binomial9-30-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha lower-alpha-level-1" id="binomial9-30-2-1-2">
+<li id="binomial9-30-2-1-2-1">
+<div class="para" id="binomial9-30-2-1-2-1-1">Use Pascal’s triangle to compute the values of <span class="process-math">\({6\choose 2}, {6\choose 3}, {6\choose 4}\)</span> and <span class="process-math">\({6\choose 5}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#binomial9-30-2-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 6.1.2.a"><a href="#binomial9-30-2-1-2-1" title="Copy heading and permalink for Item 6.1.2.a" aria-label="Copy heading and permalink for Item 6.1.2.a">🔗</a></div>
+</li>
+<li id="binomial9-30-2-1-2-2">
+<div class="para" id="binomial9-30-2-1-2-2-1">Use the result of part (a) and Pascal’s Formula to compute <span class="process-math">\({7\choose 3}\text{,}\)</span> <span class="process-math">\({7\choose 4}\text{,}\)</span> and <span class="process-math">\({7\choose 5}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#binomial9-30-2-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 6.1.2.b"><a href="#binomial9-30-2-1-2-2" title="Copy heading and permalink for Item 6.1.2.b" aria-label="Copy heading and permalink for Item 6.1.2.b">🔗</a></div>
+</li>
+<li id="binomial9-30-2-1-2-3">
+<div class="para" id="binomial9-30-2-1-2-3-1">Complete the row of Pascal’s triangle that corresponds to <span class="process-math">\(n=7\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#binomial9-30-2-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 6.1.2.c"><a href="#binomial9-30-2-1-2-3" title="Copy heading and permalink for Item 6.1.2.c" aria-label="Copy heading and permalink for Item 6.1.2.c">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 6.1.2"><a href="#binomial9-30-2" title="Copy heading and permalink for Exercise 6.1.2" aria-label="Copy heading and permalink for Exercise 6.1.2">🔗</a></div></article><article class="exercise exercise-like" id="binomial9-30-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
 <div class="para logical" id="binomial9-30-3-1-1">
 <div class="para">The row of Pascal’s triangle that corresponds to <span class="process-math">\(n=8\)</span> is</div>
 <div class="displaymath process-math">
@@ -886,18 +687,28 @@ eBookConfig.enable_chatcodes =  false;
 1\ \ \ 8\ \ \ 28\ \ \ 56\ \ \ 70\ \ \ 56\ \ \ 28\ \ \ 8\ \ \ 1.
 \end{equation*}
 </div>
-</div> <div class="para" id="binomial9-30-3-1-2">What is the row that corresponds to <span class="process-math">\(n=9\text{?}\)</span>
-</div></article><article class="exercise exercise-like" id="binomial9-30-4"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para" id="binomial9-30-4-1-1">Use the Binomial Theorem to expand <span class="process-math">\((u-v)^5\text{.}\)</span>
-</div></article><article class="exercise exercise-like" id="binomial9-30-5"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<div class="para" id="binomial9-30-5-1-1">Use the Binomial Theorem to expand <span class="process-math">\((p-2q)^4\text{.}\)</span>
-</div></article><article class="exercise exercise-like" id="binomial9-30-6"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
-<div class="para" id="binomial9-30-6-1-1">Find the coefficient of <span class="process-math">\(x^6y^3\)</span> in <span class="process-math">\((x+y)^9\text{.}\)</span>
-</div></article><article class="exercise exercise-like" id="binomial9-30-7"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
-<div class="para" id="binomial9-30-7-1-1">Find the coefficient of <span class="process-math">\(x^7\)</span> in <span class="process-math">\((2x+3)^{10}\text{.}\)</span>
-</div></article><article class="exercise exercise-like" id="binomial9-30-8"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
-<div class="para" id="binomial9-30-8-1-1">Express <span class="process-math">\(\sum_{k=0}^n{n\choose k}5^k\)</span> in closed form (without the summation symbol and without ellipses,…).</div></article><article class="exercise exercise-like" id="binomial9-30-9"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
-<div class="para" id="binomial9-30-9-1-1">Express <span class="process-math">\(\sum_{k=0}^m{m\choose k}2^{m-k}x^k\)</span> in closed form (without the summation symbol and without ellipses,…).</div></article><article class="exercise exercise-like" id="binomial9-30-10"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
+<div class="autopermalink" data-description="Paragraph"><a href="#binomial9-30-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="binomial9-30-3-1-2">What is the row that corresponds to <span class="process-math">\(n=9\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#binomial9-30-3-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 6.1.3"><a href="#binomial9-30-3" title="Copy heading and permalink for Exercise 6.1.3" aria-label="Copy heading and permalink for Exercise 6.1.3">🔗</a></div></article><article class="exercise exercise-like" id="binomial9-30-4"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="para" id="binomial9-30-4-1-1">Use the Binomial Theorem to expand <span class="process-math">\((u-v)^5\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#binomial9-30-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 6.1.4"><a href="#binomial9-30-4" title="Copy heading and permalink for Exercise 6.1.4" aria-label="Copy heading and permalink for Exercise 6.1.4">🔗</a></div></article><article class="exercise exercise-like" id="binomial9-30-5"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="para" id="binomial9-30-5-1-1">Use the Binomial Theorem to expand <span class="process-math">\((p-2q)^4\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#binomial9-30-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 6.1.5"><a href="#binomial9-30-5" title="Copy heading and permalink for Exercise 6.1.5" aria-label="Copy heading and permalink for Exercise 6.1.5">🔗</a></div></article><article class="exercise exercise-like" id="binomial9-30-6"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="para" id="binomial9-30-6-1-1">Find the coefficient of <span class="process-math">\(x^6y^3\)</span> in <span class="process-math">\((x+y)^9\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#binomial9-30-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 6.1.6"><a href="#binomial9-30-6" title="Copy heading and permalink for Exercise 6.1.6" aria-label="Copy heading and permalink for Exercise 6.1.6">🔗</a></div></article><article class="exercise exercise-like" id="binomial9-30-7"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<div class="para" id="binomial9-30-7-1-1">Find the coefficient of <span class="process-math">\(x^7\)</span> in <span class="process-math">\((2x+3)^{10}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#binomial9-30-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 6.1.7"><a href="#binomial9-30-7" title="Copy heading and permalink for Exercise 6.1.7" aria-label="Copy heading and permalink for Exercise 6.1.7">🔗</a></div></article><article class="exercise exercise-like" id="binomial9-30-8"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<div class="para" id="binomial9-30-8-1-1">Express <span class="process-math">\(\sum_{k=0}^n{n\choose k}5^k\)</span> in closed form (without the summation symbol and without ellipses,…).<div class="autopermalink" data-description="Paragraph"><a href="#binomial9-30-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 6.1.8"><a href="#binomial9-30-8" title="Copy heading and permalink for Exercise 6.1.8" aria-label="Copy heading and permalink for Exercise 6.1.8">🔗</a></div></article><article class="exercise exercise-like" id="binomial9-30-9"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
+<div class="para" id="binomial9-30-9-1-1">Express <span class="process-math">\(\sum_{k=0}^m{m\choose k}2^{m-k}x^k\)</span> in closed form (without the summation symbol and without ellipses,…).<div class="autopermalink" data-description="Paragraph"><a href="#binomial9-30-9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 6.1.9"><a href="#binomial9-30-9" title="Copy heading and permalink for Exercise 6.1.9" aria-label="Copy heading and permalink for Exercise 6.1.9">🔗</a></div></article><article class="exercise exercise-like" id="binomial9-30-10"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
 <div class="para logical" id="binomial9-30-10-1-1">
 <div class="para">Use Pascal’s Formula to prove by mathematical induction that if <span class="process-math">\(n\)</span> is an integer and <span class="process-math">\(n\geq 1\text{,}\)</span> then</div>
 <div class="displaymath process-math">
@@ -905,7 +716,9 @@ eBookConfig.enable_chatcodes =  false;
 \sum_{i=2}^{n+1}{i\choose 2}={2\choose 2}+{3\choose 2}+\ldots +{{n+1}\choose 2}={{n+2}\choose 3}.
 \end{equation*}
 </div>
-</div></article><article class="exercise exercise-like" id="binomial9-30-11"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
+<div class="autopermalink" data-description="Paragraph"><a href="#binomial9-30-10-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 6.1.10"><a href="#binomial9-30-10" title="Copy heading and permalink for Exercise 6.1.10" aria-label="Copy heading and permalink for Exercise 6.1.10">🔗</a></div></article><article class="exercise exercise-like" id="binomial9-30-11"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
 <div class="para logical" id="binomial9-30-11-1-1">
 <div class="para">Use the Binomial Theorem to prove for all integers <span class="process-math">\(n\geq 1\text{,}\)</span>
 </div>
@@ -914,9 +727,14 @@ eBookConfig.enable_chatcodes =  false;
 {n\choose 0}-{n\choose 1}+{n\choose 2}-\ldots +(-1)^n{n\choose n}=0.
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#binomial9-30-11-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="binomial9-30-11-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="binomial9-30-11-2-1">Use the fact that <span class="process-math">\(1+(-1)=0\text{.}\)</span>
-</div></div></details></div></article><article class="exercise exercise-like" id="binomial9-30-12"><h4 class="heading"><span class="codenumber">12<span class="period">.</span></span></h4>
+<div class="solutions"><details id="binomial9-30-11-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="binomial9-30-11-2-1">Use the fact that <span class="process-math">\(1+(-1)=0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#binomial9-30-11-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 6.1.11.1"><a href="#binomial9-30-11-2" title="Copy heading and permalink for Hint 6.1.11.1" aria-label="Copy heading and permalink for Hint 6.1.11.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 6.1.11"><a href="#binomial9-30-11" title="Copy heading and permalink for Exercise 6.1.11" aria-label="Copy heading and permalink for Exercise 6.1.11">🔗</a></div></article><article class="exercise exercise-like" id="binomial9-30-12"><h4 class="heading"><span class="codenumber">12<span class="period">.</span></span></h4>
 <div class="para logical" id="binomial9-30-12-1-1">
 <div class="para">Use the Binomial Theorem to prove for all integers <span class="process-math">\(n\geq 0\text{,}\)</span>
 </div>
@@ -925,13 +743,15 @@ eBookConfig.enable_chatcodes =  false;
 3^n={n\choose 0}+2{n\choose 1}+2^2{n\choose 2}+\ldots +2^n{n\choose n}.
 \end{equation*}
 </div>
-</div></article></section></section></div>
-<div class="ptx-content-footer">
+<div class="autopermalink" data-description="Paragraph"><a href="#binomial9-30-12-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 6.1.12"><a href="#binomial9-30-12" title="Copy heading and permalink for Exercise 6.1.12" aria-label="Copy heading and permalink for Exercise 6.1.12">🔗</a></div></article><div class="autopermalink" data-description="Exercises 6.1"><a href="#binomial9-30" title="Copy heading and permalink for Exercises 6.1" aria-label="Copy heading and permalink for Exercises 6.1">🔗</a></div></section><div class="autopermalink" data-description="Section 6.1: Binomial Theorem"><a href="#binomial9" title="Copy heading and permalink for Section 6.1: Binomial Theorem" aria-label="Copy heading and permalink for Section 6.1: Binomial Theorem">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="chapter6.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="cardinality.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
-<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
 </div>
 <!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
 var sc_project=12871717;

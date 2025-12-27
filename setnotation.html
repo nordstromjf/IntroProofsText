@@ -6,14 +6,20 @@
 <!--*                                          *-->
 <!--********************************************-->
 <html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Introduction to Sets</title>
-<meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:type" content="book">
-<meta property="book:title" content="Introduction to Proofs">
-<meta property="book:author" content="Jennifer Firkins Nordstrom">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
 <script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
@@ -69,13 +75,12 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
-<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
-</script><link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
-<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
-<!--** eBookCongig is necessary to configure interactive       **-->
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Introduction to Proofs">
+<meta property="book:author" content="Jennifer Firkins Nordstrom">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -97,307 +102,23 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.5.6';
+eBookConfig.runestone_version = '7.11.5';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.82032a8574f6ce75.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6a985cbf816db5c7.css">
-<style>
-#arguments-20-1-1-4 { counter-set: arguments-20-1-1-4 0; }
-#arguments-20-1-1-4 > li::marker { content: ""counter(arguments-20-1-1-4,lower-alpha)""; }
-#arguments-20-1-1-4 > li { counter-increment: arguments-20-1-1-4; }
-#arguments-20-2-1-3 { counter-set: arguments-20-2-1-3 0; }
-#arguments-20-2-1-3 > li::marker { content: ""counter(arguments-20-2-1-3,lower-alpha)""; }
-#arguments-20-2-1-3 > li { counter-increment: arguments-20-2-1-3; }
-#arguments-20-3-1-2 { counter-set: arguments-20-3-1-2 0; }
-#arguments-20-3-1-2 > li::marker { content: "("counter(arguments-20-3-1-2,lower-alpha)")"; }
-#arguments-20-3-1-2 > li { counter-increment: arguments-20-3-1-2; }
-#B_logicalequivalences-3-5 { counter-set: B_logicalequivalences-3-5 0; }
-#B_logicalequivalences-3-5 > li::marker { content: ""counter(B_logicalequivalences-3-5,decimal)""; }
-#B_logicalequivalences-3-5 > li { counter-increment: B_logicalequivalences-3-5; }
-#connectives-73-1-1-2 { counter-set: connectives-73-1-1-2 0; }
-#connectives-73-1-1-2 > li::marker { content: ""counter(connectives-73-1-1-2,lower-alpha)""; }
-#connectives-73-1-1-2 > li { counter-increment: connectives-73-1-1-2; }
-#connectives-73-2-1-2 { counter-set: connectives-73-2-1-2 0; }
-#connectives-73-2-1-2 > li::marker { content: ""counter(connectives-73-2-1-2,lower-alpha)""; }
-#connectives-73-2-1-2 > li { counter-increment: connectives-73-2-1-2; }
-#connectives-73-3-1-2 { counter-set: connectives-73-3-1-2 0; }
-#connectives-73-3-1-2 > li::marker { content: ""counter(connectives-73-3-1-2,lower-alpha)""; }
-#connectives-73-3-1-2 > li { counter-increment: connectives-73-3-1-2; }
-#ER_onlyandnot-1-2 { counter-set: ER_onlyandnot-1-2 0; }
-#ER_onlyandnot-1-2 > li::marker { content: ""counter(ER_onlyandnot-1-2,lower-alpha)""; }
-#ER_onlyandnot-1-2 > li { counter-increment: ER_onlyandnot-1-2; }
-#connectives-73-5-1-2 { counter-set: connectives-73-5-1-2 0; }
-#connectives-73-5-1-2 > li::marker { content: ""counter(connectives-73-5-1-2,lower-alpha)""; }
-#connectives-73-5-1-2 > li { counter-increment: connectives-73-5-1-2; }
-#setnotation-22-4-1-2 { counter-set: setnotation-22-4-1-2 0; }
-#setnotation-22-4-1-2 > li::marker { content: ""counter(setnotation-22-4-1-2,lower-alpha)""; }
-#setnotation-22-4-1-2 > li { counter-increment: setnotation-22-4-1-2; }
-#setnotation-22-5-1-2 { counter-set: setnotation-22-5-1-2 0; }
-#setnotation-22-5-1-2 > li::marker { content: ""counter(setnotation-22-5-1-2,lower-alpha)""; }
-#setnotation-22-5-1-2 > li { counter-increment: setnotation-22-5-1-2; }
-#E_multquant1-2-2 { counter-set: E_multquant1-2-2 0; }
-#E_multquant1-2-2 > li::marker { content: ""counter(E_multquant1-2-2,lower-alpha)""; }
-#E_multquant1-2-2 > li { counter-increment: E_multquant1-2-2; }
-#quantifiers-6-14-3-1-2 { counter-set: quantifiers-6-14-3-1-2 0; }
-#quantifiers-6-14-3-1-2 > li::marker { content: ""counter(quantifiers-6-14-3-1-2,lower-alpha)""; }
-#quantifiers-6-14-3-1-2 > li { counter-increment: quantifiers-6-14-3-1-2; }
-#quantifiers-6-14-4-1-2 { counter-set: quantifiers-6-14-4-1-2 0; }
-#quantifiers-6-14-4-1-2 > li::marker { content: ""counter(quantifiers-6-14-4-1-2,lower-alpha)""; }
-#quantifiers-6-14-4-1-2 > li { counter-increment: quantifiers-6-14-4-1-2; }
-#quantifiers-6-14-5-1-2 { counter-set: quantifiers-6-14-5-1-2 0; }
-#quantifiers-6-14-5-1-2 > li::marker { content: ""counter(quantifiers-6-14-5-1-2,lower-alpha)""; }
-#quantifiers-6-14-5-1-2 > li { counter-increment: quantifiers-6-14-5-1-2; }
-#quantifiers-6-14-6-1-2 { counter-set: quantifiers-6-14-6-1-2 0; }
-#quantifiers-6-14-6-1-2 > li::marker { content: ""counter(quantifiers-6-14-6-1-2,lower-alpha)""; }
-#quantifiers-6-14-6-1-2 > li { counter-increment: quantifiers-6-14-6-1-2; }
-#quantifiers-6-14-7-1-2 { counter-set: quantifiers-6-14-7-1-2 0; }
-#quantifiers-6-14-7-1-2 > li::marker { content: ""counter(quantifiers-6-14-7-1-2,lower-alpha)""; }
-#quantifiers-6-14-7-1-2 > li { counter-increment: quantifiers-6-14-7-1-2; }
-#quantifiers-6-14-8-1-2 { counter-set: quantifiers-6-14-8-1-2 0; }
-#quantifiers-6-14-8-1-2 > li::marker { content: ""counter(quantifiers-6-14-8-1-2,lower-alpha)""; }
-#quantifiers-6-14-8-1-2 > li { counter-increment: quantifiers-6-14-8-1-2; }
-#conditionals-33-1-1-2 { counter-set: conditionals-33-1-1-2 0; }
-#conditionals-33-1-1-2 > li::marker { content: ""counter(conditionals-33-1-1-2,lower-alpha)""; }
-#conditionals-33-1-1-2 > li { counter-increment: conditionals-33-1-1-2; }
-#conditionals-33-2-1-2 { counter-set: conditionals-33-2-1-2 0; }
-#conditionals-33-2-1-2 > li::marker { content: ""counter(conditionals-33-2-1-2,lower-alpha)""; }
-#conditionals-33-2-1-2 > li { counter-increment: conditionals-33-2-1-2; }
-#conditionals-33-3-1-2 { counter-set: conditionals-33-3-1-2 0; }
-#conditionals-33-3-1-2 > li::marker { content: ""counter(conditionals-33-3-1-2,lower-alpha)""; }
-#conditionals-33-3-1-2 > li { counter-increment: conditionals-33-3-1-2; }
-#conditionals-33-4-1-2 { counter-set: conditionals-33-4-1-2 0; }
-#conditionals-33-4-1-2 > li::marker { content: ""counter(conditionals-33-4-1-2,lower-alpha)""; }
-#conditionals-33-4-1-2 > li { counter-increment: conditionals-33-4-1-2; }
-#conditionals-33-5-1-2 { counter-set: conditionals-33-5-1-2 0; }
-#conditionals-33-5-1-2 > li::marker { content: ""counter(conditionals-33-5-1-2,lower-alpha)""; }
-#conditionals-33-5-1-2 > li { counter-increment: conditionals-33-5-1-2; }
-#directproof-29-1-1-2 { counter-set: directproof-29-1-1-2 0; }
-#directproof-29-1-1-2 > li::marker { content: ""counter(directproof-29-1-1-2,lower-alpha)""; }
-#directproof-29-1-1-2 > li { counter-increment: directproof-29-1-1-2; }
-#directproof-29-11-1-2 { counter-set: directproof-29-11-1-2 0; }
-#directproof-29-11-1-2 > li::marker { content: ""counter(directproof-29-11-1-2,lower-alpha)""; }
-#directproof-29-11-1-2 > li { counter-increment: directproof-29-11-1-2; }
-#moredirect-7-1-1-2 { counter-set: moredirect-7-1-1-2 0; }
-#moredirect-7-1-1-2 > li::marker { content: ""counter(moredirect-7-1-1-2,lower-alpha)""; }
-#moredirect-7-1-1-2 > li { counter-increment: moredirect-7-1-1-2; }
-#moredirect-7-4-1-2 { counter-set: moredirect-7-4-1-2 0; }
-#moredirect-7-4-1-2 > li::marker { content: "("counter(moredirect-7-4-1-2,lower-alpha)")"; }
-#moredirect-7-4-1-2 > li { counter-increment: moredirect-7-4-1-2; }
-#ER_averagerat-1-2 { counter-set: ER_averagerat-1-2 0; }
-#ER_averagerat-1-2 > li::marker { content: ""counter(ER_averagerat-1-2,lower-alpha)""; }
-#ER_averagerat-1-2 > li { counter-increment: ER_averagerat-1-2; }
-#moredirect-7-7-1-2 { counter-set: moredirect-7-7-1-2 0; }
-#moredirect-7-7-1-2 > li::marker { content: ""counter(moredirect-7-7-1-2,lower-alpha)""; }
-#moredirect-7-7-1-2 > li { counter-increment: moredirect-7-7-1-2; }
-#moredirect-7-9-1-2 { counter-set: moredirect-7-9-1-2 0; }
-#moredirect-7-9-1-2 > li::marker { content: ""counter(moredirect-7-9-1-2,lower-alpha)""; }
-#moredirect-7-9-1-2 > li { counter-increment: moredirect-7-9-1-2; }
-#cases-31-1-1-2 { counter-set: cases-31-1-1-2 0; }
-#cases-31-1-1-2 > li::marker { content: ""counter(cases-31-1-1-2,lower-alpha)""; }
-#cases-31-1-1-2 > li { counter-increment: cases-31-1-1-2; }
-#SS_twoproofs-18-1-1-2 { counter-set: SS_twoproofs-18-1-1-2 0; }
-#SS_twoproofs-18-1-1-2 > li::marker { content: ""counter(SS_twoproofs-18-1-1-2,lower-alpha)""; }
-#SS_twoproofs-18-1-1-2 > li { counter-increment: SS_twoproofs-18-1-1-2; }
-#SS_twoproofs-18-2-1-2 { counter-set: SS_twoproofs-18-2-1-2 0; }
-#SS_twoproofs-18-2-1-2 > li::marker { content: ""counter(SS_twoproofs-18-2-1-2,lower-alpha)""; }
-#SS_twoproofs-18-2-1-2 > li { counter-increment: SS_twoproofs-18-2-1-2; }
-#SS_twoproofs-18-3-1-2 { counter-set: SS_twoproofs-18-3-1-2 0; }
-#SS_twoproofs-18-3-1-2 > li::marker { content: ""counter(SS_twoproofs-18-3-1-2,lower-alpha)""; }
-#SS_twoproofs-18-3-1-2 > li { counter-increment: SS_twoproofs-18-3-1-2; }
-#SS_twoproofs-18-4-1-2 { counter-set: SS_twoproofs-18-4-1-2 0; }
-#SS_twoproofs-18-4-1-2 > li::marker { content: ""counter(SS_twoproofs-18-4-1-2,lower-alpha)""; }
-#SS_twoproofs-18-4-1-2 > li { counter-increment: SS_twoproofs-18-4-1-2; }
-#SS_twoproofs-18-5-1-2 { counter-set: SS_twoproofs-18-5-1-2 0; }
-#SS_twoproofs-18-5-1-2 > li::marker { content: ""counter(SS_twoproofs-18-5-1-2,lower-alpha)""; }
-#SS_twoproofs-18-5-1-2 > li { counter-increment: SS_twoproofs-18-5-1-2; }
-#B_propsums-2-1 { counter-set: B_propsums-2-1 0; }
-#B_propsums-2-1 > li::marker { content: ""counter(B_propsums-2-1,decimal)""; }
-#B_propsums-2-1 > li { counter-increment: B_propsums-2-1; }
-#summation-27-1-1-2 { counter-set: summation-27-1-1-2 0; }
-#summation-27-1-1-2 > li::marker { content: ""counter(summation-27-1-1-2,lower-alpha)""; }
-#summation-27-1-1-2 > li { counter-increment: summation-27-1-1-2; }
-#summation-27-2-1-2 { counter-set: summation-27-2-1-2 0; }
-#summation-27-2-1-2 > li::marker { content: ""counter(summation-27-2-1-2,lower-alpha)""; }
-#summation-27-2-1-2 > li { counter-increment: summation-27-2-1-2; }
-#summation-27-3-1-2 { counter-set: summation-27-3-1-2 0; }
-#summation-27-3-1-2 > li::marker { content: ""counter(summation-27-3-1-2,lower-alpha)""; }
-#summation-27-3-1-2 > li { counter-increment: summation-27-3-1-2; }
-#summation-27-8-1-2 { counter-set: summation-27-8-1-2 0; }
-#summation-27-8-1-2 > li::marker { content: ""counter(summation-27-8-1-2,lower-alpha)""; }
-#summation-27-8-1-2 > li { counter-increment: summation-27-8-1-2; }
-#B_induction-3-4 { counter-set: B_induction-3-4 0; }
-#B_induction-3-4 > li::marker { content: ""counter(B_induction-3-4,decimal)""; }
-#B_induction-3-4 > li { counter-increment: B_induction-3-4; }
-#induction-6-1 { counter-set: induction-6-1 0; }
-#induction-6-1 > li::marker { content: "("counter(induction-6-1,decimal)")"; }
-#induction-6-1 > li { counter-increment: induction-6-1; }
-#ER_indpowersof2-1-2 { counter-set: ER_indpowersof2-1-2 0; }
-#ER_indpowersof2-1-2 > li::marker { content: ""counter(ER_indpowersof2-1-2,lower-alpha)""; }
-#ER_indpowersof2-1-2 > li { counter-increment: ER_indpowersof2-1-2; }
-#B_strongind-4-3 { counter-set: B_strongind-4-3 0; }
-#B_strongind-4-3 > li::marker { content: ""counter(B_strongind-4-3,decimal)""; }
-#B_strongind-4-3 > li { counter-increment: B_strongind-4-3; }
-#E_domainqexist1-3-1 { counter-set: E_domainqexist1-3-1 0; }
-#E_domainqexist1-3-1 > li::marker { content: ""counter(E_domainqexist1-3-1,lower-alpha)""; }
-#E_domainqexist1-3-1 > li { counter-increment: E_domainqexist1-3-1; }
-#B_pfexistential-3-3 { counter-set: B_pfexistential-3-3 0; }
-#B_pfexistential-3-3 > li::marker { content: ""counter(B_pfexistential-3-3,decimal)""; }
-#B_pfexistential-3-3 > li { counter-increment: B_pfexistential-3-3; }
-#B_pfunique-3-3 { counter-set: B_pfunique-3-3 0; }
-#B_pfunique-3-3 > li::marker { content: ""counter(B_pfunique-3-3,decimal)""; }
-#B_pfunique-3-3 > li { counter-increment: B_pfunique-3-3; }
-#existunique-23-1 { counter-set: existunique-23-1 0; }
-#existunique-23-1 > li::marker { content: ""counter(existunique-23-1,decimal)""; }
-#existunique-23-1 > li { counter-increment: existunique-23-1; }
-#E_wop-3-2 { counter-set: E_wop-3-2 0; }
-#E_wop-3-2 > li::marker { content: ""counter(E_wop-3-2,decimal)""; }
-#E_wop-3-2 > li { counter-increment: E_wop-3-2; }
-#E_setnotevarious-2 { counter-set: E_setnotevarious-2 0; }
-#E_setnotevarious-2 > li::marker { content: ""counter(E_setnotevarious-2,lower-alpha)""; }
-#E_setnotevarious-2 > li { counter-increment: E_setnotevarious-2; }
-#E_setops-3-2 { counter-set: E_setops-3-2 0; }
-#E_setops-3-2 > li::marker { content: ""counter(E_setops-3-2,lower-alpha)""; }
-#E_setops-3-2 > li { counter-increment: E_setops-3-2; }
-#SS_setproofs-3-3 { counter-set: SS_setproofs-3-3 0; }
-#SS_setproofs-3-3 > li::marker { content: ""counter(SS_setproofs-3-3,decimal)""; }
-#SS_setproofs-3-3 > li { counter-increment: SS_setproofs-3-3; }
-#L_SetIdent-4-4 { counter-set: L_SetIdent-4-4 0; }
-#L_SetIdent-4-4 > li::marker { content: ""counter(L_SetIdent-4-4,decimal)""; }
-#L_SetIdent-4-4 > li { counter-increment: L_SetIdent-4-4; }
-#SS_setproofs-25-1-1-2 { counter-set: SS_setproofs-25-1-1-2 0; }
-#SS_setproofs-25-1-1-2 > li::marker { content: ""counter(SS_setproofs-25-1-1-2,lower-alpha)""; }
-#SS_setproofs-25-1-1-2 > li { counter-increment: SS_setproofs-25-1-1-2; }
-#SS_setproofs-25-2-1-2 { counter-set: SS_setproofs-25-2-1-2 0; }
-#SS_setproofs-25-2-1-2 > li::marker { content: ""counter(SS_setproofs-25-2-1-2,lower-alpha)""; }
-#SS_setproofs-25-2-1-2 > li { counter-increment: SS_setproofs-25-2-1-2; }
-#SS_setproofs-25-3-1-2 { counter-set: SS_setproofs-25-3-1-2 0; }
-#SS_setproofs-25-3-1-2 > li::marker { content: ""counter(SS_setproofs-25-3-1-2,lower-alpha)""; }
-#SS_setproofs-25-3-1-2 > li { counter-increment: SS_setproofs-25-3-1-2; }
-#SS_setproofs-25-4-1-2 { counter-set: SS_setproofs-25-4-1-2 0; }
-#SS_setproofs-25-4-1-2 > li::marker { content: ""counter(SS_setproofs-25-4-1-2,lower-alpha)""; }
-#SS_setproofs-25-4-1-2 > li { counter-increment: SS_setproofs-25-4-1-2; }
-#SS_setproofs-25-5-1-2 { counter-set: SS_setproofs-25-5-1-2 0; }
-#SS_setproofs-25-5-1-2 > li::marker { content: ""counter(SS_setproofs-25-5-1-2,lower-alpha)""; }
-#SS_setproofs-25-5-1-2 > li { counter-increment: SS_setproofs-25-5-1-2; }
-#SS_setproofs-25-6-1-2 { counter-set: SS_setproofs-25-6-1-2 0; }
-#SS_setproofs-25-6-1-2 > li::marker { content: ""counter(SS_setproofs-25-6-1-2,lower-alpha)""; }
-#SS_setproofs-25-6-1-2 > li { counter-increment: SS_setproofs-25-6-1-2; }
-#SS_setproofs-25-7-1-2 { counter-set: SS_setproofs-25-7-1-2 0; }
-#SS_setproofs-25-7-1-2 > li::marker { content: ""counter(SS_setproofs-25-7-1-2,lower-alpha)""; }
-#SS_setproofs-25-7-1-2 > li { counter-increment: SS_setproofs-25-7-1-2; }
-#SS_setproofs-25-15-1-2 { counter-set: SS_setproofs-25-15-1-2 0; }
-#SS_setproofs-25-15-1-2 > li::marker { content: ""counter(SS_setproofs-25-15-1-2,lower-alpha)""; }
-#SS_setproofs-25-15-1-2 > li { counter-increment: SS_setproofs-25-15-1-2; }
-#E_notfunctionimages-2-1 { counter-set: E_notfunctionimages-2-1 0; }
-#E_notfunctionimages-2-1 > li::marker { content: ""counter(E_notfunctionimages-2-1,lower-alpha)""; }
-#E_notfunctionimages-2-1 > li { counter-increment: E_notfunctionimages-2-1; }
-#E_addasfn-3-1 { counter-set: E_addasfn-3-1 0; }
-#E_addasfn-3-1 > li::marker { content: ""counter(E_addasfn-3-1,lower-alpha)""; }
-#E_addasfn-3-1 > li { counter-increment: E_addasfn-3-1; }
-#functions-45-1-1-2 { counter-set: functions-45-1-1-2 0; }
-#functions-45-1-1-2 > li::marker { content: ""counter(functions-45-1-1-2,lower-alpha)""; }
-#functions-45-1-1-2 > li { counter-increment: functions-45-1-1-2; }
-#functions-45-2-1-2 { counter-set: functions-45-2-1-2 0; }
-#functions-45-2-1-2 > li::marker { content: ""counter(functions-45-2-1-2,lower-alpha)""; }
-#functions-45-2-1-2 > li { counter-increment: functions-45-2-1-2; }
-#functions-45-3-1-2 { counter-set: functions-45-3-1-2 0; }
-#functions-45-3-1-2 > li::marker { content: ""counter(functions-45-3-1-2,lower-alpha)""; }
-#functions-45-3-1-2 > li { counter-increment: functions-45-3-1-2; }
-#functions-45-4-1-2 { counter-set: functions-45-4-1-2 0; }
-#functions-45-4-1-2 > li::marker { content: ""counter(functions-45-4-1-2,lower-alpha)""; }
-#functions-45-4-1-2 > li { counter-increment: functions-45-4-1-2; }
-#functions-45-5-1-2 { counter-set: functions-45-5-1-2 0; }
-#functions-45-5-1-2 > li::marker { content: ""counter(functions-45-5-1-2,lower-alpha)""; }
-#functions-45-5-1-2 > li { counter-increment: functions-45-5-1-2; }
-#functions-45-7-1-3 { counter-set: functions-45-7-1-3 0; }
-#functions-45-7-1-3 > li::marker { content: ""counter(functions-45-7-1-3,lower-alpha)""; }
-#functions-45-7-1-3 > li { counter-increment: functions-45-7-1-3; }
-#functions-45-8-1-2 { counter-set: functions-45-8-1-2 0; }
-#functions-45-8-1-2 > li::marker { content: ""counter(functions-45-8-1-2,lower-alpha)""; }
-#functions-45-8-1-2 > li { counter-increment: functions-45-8-1-2; }
-#functions-45-9-1-2 { counter-set: functions-45-9-1-2 0; }
-#functions-45-9-1-2 > li::marker { content: ""counter(functions-45-9-1-2,lower-alpha)""; }
-#functions-45-9-1-2 > li { counter-increment: functions-45-9-1-2; }
-#functions-45-10-1-3 { counter-set: functions-45-10-1-3 0; }
-#functions-45-10-1-3 > li::marker { content: ""counter(functions-45-10-1-3,lower-alpha)""; }
-#functions-45-10-1-3 > li { counter-increment: functions-45-10-1-3; }
-#functions-45-11-1-3 { counter-set: functions-45-11-1-3 0; }
-#functions-45-11-1-3 > li::marker { content: ""counter(functions-45-11-1-3,lower-alpha)""; }
-#functions-45-11-1-3 > li { counter-increment: functions-45-11-1-3; }
-#functions-45-12-1-2 { counter-set: functions-45-12-1-2 0; }
-#functions-45-12-1-2 > li::marker { content: ""counter(functions-45-12-1-2,lower-alpha)""; }
-#functions-45-12-1-2 > li { counter-increment: functions-45-12-1-2; }
-#E_equivclasses-2-3 { counter-set: E_equivclasses-2-3 0; }
-#E_equivclasses-2-3 > li::marker { content: ""counter(E_equivclasses-2-3,lower-alpha)""; }
-#E_equivclasses-2-3 > li { counter-increment: E_equivclasses-2-3; }
-#D_partition-1-1-6 { counter-set: D_partition-1-1-6 0; }
-#D_partition-1-1-6 > li::marker { content: ""counter(D_partition-1-1-6,decimal)""; }
-#D_partition-1-1-6 > li { counter-increment: D_partition-1-1-6; }
-#E_equivclasses2-4-2 { counter-set: E_equivclasses2-4-2 0; }
-#E_equivclasses2-4-2 > li::marker { content: ""counter(E_equivclasses2-4-2,lower-alpha)""; }
-#E_equivclasses2-4-2 > li { counter-increment: E_equivclasses2-4-2; }
-#SS_equivrelations-47-1-1-3 { counter-set: SS_equivrelations-47-1-1-3 0; }
-#SS_equivrelations-47-1-1-3 > li::marker { content: ""counter(SS_equivrelations-47-1-1-3,lower-alpha)""; }
-#SS_equivrelations-47-1-1-3 > li { counter-increment: SS_equivrelations-47-1-1-3; }
-#SS_equivrelations-47-2-1-3 { counter-set: SS_equivrelations-47-2-1-3 0; }
-#SS_equivrelations-47-2-1-3 > li::marker { content: ""counter(SS_equivrelations-47-2-1-3,lower-alpha)""; }
-#SS_equivrelations-47-2-1-3 > li { counter-increment: SS_equivrelations-47-2-1-3; }
-#SS_equivrelations-47-4-1-2 { counter-set: SS_equivrelations-47-4-1-2 0; }
-#SS_equivrelations-47-4-1-2 > li::marker { content: ""counter(SS_equivrelations-47-4-1-2,lower-alpha)""; }
-#SS_equivrelations-47-4-1-2 > li { counter-increment: SS_equivrelations-47-4-1-2; }
-#SS_equivrelations-47-5-1-2 { counter-set: SS_equivrelations-47-5-1-2 0; }
-#SS_equivrelations-47-5-1-2 > li::marker { content: ""counter(SS_equivrelations-47-5-1-2,lower-alpha)""; }
-#SS_equivrelations-47-5-1-2 > li { counter-increment: SS_equivrelations-47-5-1-2; }
-#SS_equivrelations-47-6-1-2 { counter-set: SS_equivrelations-47-6-1-2 0; }
-#SS_equivrelations-47-6-1-2 > li::marker { content: ""counter(SS_equivrelations-47-6-1-2,lower-alpha)""; }
-#SS_equivrelations-47-6-1-2 > li { counter-increment: SS_equivrelations-47-6-1-2; }
-#SS_equivrelations-47-7-1-2 { counter-set: SS_equivrelations-47-7-1-2 0; }
-#SS_equivrelations-47-7-1-2 > li::marker { content: ""counter(SS_equivrelations-47-7-1-2,lower-alpha)""; }
-#SS_equivrelations-47-7-1-2 > li { counter-increment: SS_equivrelations-47-7-1-2; }
-#SS_equivrelations-47-8-1-2 { counter-set: SS_equivrelations-47-8-1-2 0; }
-#SS_equivrelations-47-8-1-2 > li::marker { content: ""counter(SS_equivrelations-47-8-1-2,lower-alpha)""; }
-#SS_equivrelations-47-8-1-2 > li { counter-increment: SS_equivrelations-47-8-1-2; }
-#SS_equivrelations-47-9-1-2 { counter-set: SS_equivrelations-47-9-1-2 0; }
-#SS_equivrelations-47-9-1-2 > li::marker { content: ""counter(SS_equivrelations-47-9-1-2,lower-alpha)""; }
-#SS_equivrelations-47-9-1-2 > li { counter-increment: SS_equivrelations-47-9-1-2; }
-#D_RSTprop2-1-1-3 { counter-set: D_RSTprop2-1-1-3 0; }
-#D_RSTprop2-1-1-3 > li::marker { content: ""counter(D_RSTprop2-1-1-3,decimal)""; }
-#D_RSTprop2-1-1-3 > li { counter-increment: D_RSTprop2-1-1-3; }
-#T_totalorder-1-1-4 { counter-set: T_totalorder-1-1-4 0; }
-#T_totalorder-1-1-4 > li::marker { content: ""counter(T_totalorder-1-1-4,decimal)""; }
-#T_totalorder-1-1-4 > li { counter-increment: T_totalorder-1-1-4; }
-#orders-33-1-1-2 { counter-set: orders-33-1-1-2 0; }
-#orders-33-1-1-2 > li::marker { content: ""counter(orders-33-1-1-2,lower-alpha)""; }
-#orders-33-1-1-2 > li { counter-increment: orders-33-1-1-2; }
-#orders-33-2-1-2 { counter-set: orders-33-2-1-2 0; }
-#orders-33-2-1-2 > li::marker { content: ""counter(orders-33-2-1-2,lower-alpha)""; }
-#orders-33-2-1-2 > li { counter-increment: orders-33-2-1-2; }
-#orders-33-3-1-2 { counter-set: orders-33-3-1-2 0; }
-#orders-33-3-1-2 > li::marker { content: ""counter(orders-33-3-1-2,lower-alpha)""; }
-#orders-33-3-1-2 > li { counter-increment: orders-33-3-1-2; }
-#orders-33-4-1-2 { counter-set: orders-33-4-1-2 0; }
-#orders-33-4-1-2 > li::marker { content: ""counter(orders-33-4-1-2,lower-alpha)""; }
-#orders-33-4-1-2 > li { counter-increment: orders-33-4-1-2; }
-#binomial9-30-2-1-1-1 { counter-set: binomial9-30-2-1-1-1 0; }
-#binomial9-30-2-1-1-1 > li::marker { content: ""counter(binomial9-30-2-1-1-1,lower-alpha)""; }
-#binomial9-30-2-1-1-1 > li { counter-increment: binomial9-30-2-1-1-1; }
-#cardinality-31-6-1-2 { counter-set: cardinality-31-6-1-2 0; }
-#cardinality-31-6-1-2 > li::marker { content: ""counter(cardinality-31-6-1-2,lower-alpha)""; }
-#cardinality-31-6-1-2 > li { counter-increment: cardinality-31-6-1-2; }
-</style>
+<script src="_static/prefix-runtime.42217a82c75796c8.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.7e141ad8414abf4a.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.f4ab138da65f4203.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
 </head>
 <body class="pretext book ignore-math">
-<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
-<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
-<h1 class="heading"><a href="IntroProofs.html"><span class="title">Introduction to Proofs:</span> <span class="subtitle">An Active Exploration of Mathematical Language</span></a></h1>
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="IntroProofs.html"><span class="title">Introduction to Proofs</span> <span class="subtitle">An Active Exploration of Mathematical Language</span></a></h1>
 <p class="byline">Jennifer Firkins Nordstrom</p>
-</div>
-</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
 <button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-2.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
 <div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
@@ -595,18 +316,26 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="setnotation"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">2.1</span><span class="space"> </span><span class="title">Introduction to Sets</span>
 </h2>
-<div class="para" id="setnotation-5">Sets  are collections of objects. They may be collections of mathematical objects, such as numbers or functions. They may be collections of any other type of object such as students in a class or times of day. We can even have sets of sets.</div>
-<div class="para" id="setnotation-6">It is useful to understand some general notation when working with sets. We will work with sets more explicitly in later sections. For now, we really just need to be able to understand the notation.</div>
-<div class="para" id="setnotation-7">We will usually use capital letters for sets, such as <span class="process-math">\(S\)</span> or <span class="process-math">\(A\text{.}\)</span> If we want to talk about elements in a set <span class="process-math">\(S\text{,}\)</span> we use the notation <span class="process-math">\(x\in S\)</span>. We read this notatation as “<span class="process-math">\(x\)</span> is in <span class="process-math">\(S\)</span>” or “<span class="process-math">\(x\)</span> is an element of <span class="process-math">\(S\text{.}\)</span>” If <span class="process-math">\(x\)</span> is <em class="emphasis">not</em> in <span class="process-math">\(S\text{,}\)</span> then we use the notation <span class="process-math">\(x\notin S\)</span>.</div>
-<div class="para" id="setnotation-8">If we want to list the specific elements of a set, we use curly brackets, <span class="process-math">\(\{ \}\text{,}\)</span> around the elements of the set. We can also do this with a description of the elements in the set.</div>
+<div class="para" id="setnotation-5">Sets  are collections of objects. They may be collections of mathematical objects, such as numbers or functions. They may be collections of any other type of object such as students in a class or times of day. We can even have sets of sets.<div class="autopermalink" data-description="Paragraph"><a href="#setnotation-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="setnotation-6">It is useful to understand some general notation when working with sets. We will work with sets more explicitly in later sections. For now, we really just need to be able to understand the notation.<div class="autopermalink" data-description="Paragraph"><a href="#setnotation-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="setnotation-7">We will usually use capital letters for sets, such as <span class="process-math">\(S\)</span> or <span class="process-math">\(A\text{.}\)</span> If we want to talk about elements in a set <span class="process-math">\(S\text{,}\)</span> we use the notation <span class="process-math">\(x\in S\)</span>. We read this notatation as “<span class="process-math">\(x\)</span> is in <span class="process-math">\(S\)</span>” or “<span class="process-math">\(x\)</span> is an element of <span class="process-math">\(S\text{.}\)</span>” If <span class="process-math">\(x\)</span> is <em class="emphasis">not</em> in <span class="process-math">\(S\text{,}\)</span> then we use the notation <span class="process-math">\(x\notin S\)</span>.<div class="autopermalink" data-description="Paragraph"><a href="#setnotation-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="setnotation-8">If we want to list the specific elements of a set, we use curly brackets, <span class="process-math">\(\{ \}\text{,}\)</span> around the elements of the set. We can also do this with a description of the elements in the set.<div class="autopermalink" data-description="Paragraph"><a href="#setnotation-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <details id="E_roster" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Set roster notation.</span>
 </h3></summary><article class="example example-like knowl__content"><div class="para" id="E_roster-2">
-<span class="process-math">\(S=\{1, 2, 3, 4, 5\}\text{.}\)</span> This is the set whose elements are 1, 2, 3, 4, 5.</div>
+<span class="process-math">\(S=\{1, 2, 3, 4, 5\}\text{.}\)</span> This is the set whose elements are 1, 2, 3, 4, 5.<div class="autopermalink" data-description="Paragraph"><a href="#E_roster-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="E_roster-3">
-<span class="process-math">\(A=\{x\in S : x \text{ is odd}\}\text{.}\)</span> This describes the odd numbers in <span class="process-math">\(S\text{,}\)</span> so 1, 3, 5.</div>
+<span class="process-math">\(A=\{x\in S : x \text{ is odd}\}\text{.}\)</span> This describes the odd numbers in <span class="process-math">\(S\text{,}\)</span> so 1, 3, 5.<div class="autopermalink" data-description="Paragraph"><a href="#E_roster-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="E_roster-4">
-<span class="process-math">\(A=\{x\in \text{reals} : 1\leq x\leq 5\}\text{.}\)</span> This describes the real numbers between 1 and 5 (which there are too many to list).</div></article></details><div class="para logical" id="setnotation-10">
+<span class="process-math">\(A=\{x\in \text{reals} : 1\leq x\leq 5\}\text{.}\)</span> This describes the real numbers between 1 and 5 (which there are too many to list).<div class="autopermalink" data-description="Paragraph"><a href="#E_roster-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 2.1.1: Set roster notation"><a href="#E_roster" title="Copy heading and permalink for Example 2.1.1: Set roster notation" aria-label="Copy heading and permalink for Example 2.1.1: Set roster notation">🔗</a></div></article></details><div class="para logical" id="setnotation-10">
 <div class="para">In general, if we use <span class="process-math">\(P(x)\)</span> to describe a property of <span class="process-math">\(x\text{,}\)</span> we use the notation</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -614,86 +343,204 @@ eBookConfig.enable_chatcodes =  false;
 \end{equation*}
 </div>
 <div class="para">and read the statement as “<span class="process-math">\(x\)</span> in <span class="process-math">\(S\)</span> such that <span class="process-math">\(x\)</span> has property <span class="process-math">\(P\text{.}\)</span>”</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#setnotation-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="setnotation-11">A <dfn class="terminology">subset</dfn>, <span class="process-math">\(B\text{,}\)</span> of a set <span class="process-math">\(A\)</span> is a set of elements that are also in <span class="process-math">\(A\text{.}\)</span>
+<div class="para" id="setnotation-11">A <dfn class="terminology">subset</dfn>, <span class="process-math">\(B\text{,}\)</span> of a set <span class="process-math">\(A\)</span> is a set of elements that are also in <span class="process-math">\(A\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#setnotation-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="setnotation-12">We use the notation <span class="process-math">\(B\subseteq A\)</span> for “<span class="process-math">\(B\)</span> is a subset of <span class="process-math">\(A\)</span>”. If <span class="process-math">\(B\)</span> is not a subset of <span class="process-math">\(A\text{,}\)</span> then we use the notation <span class="process-math">\(B\nsubseteq A\)</span>. Note, some books use <span class="process-math">\(A\subset B\)</span> as the notation for subset.</div>
+<div class="para" id="setnotation-12">We use the notation <span class="process-math">\(B\subseteq A\)</span> for “<span class="process-math">\(B\)</span> is a subset of <span class="process-math">\(A\)</span>”. If <span class="process-math">\(B\)</span> is not a subset of <span class="process-math">\(A\text{,}\)</span> then we use the notation <span class="process-math">\(B\nsubseteq A\)</span>. Note, some books use <span class="process-math">\(A\subset B\)</span> as the notation for subset.<div class="autopermalink" data-description="Paragraph"><a href="#setnotation-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <details id="E_subsetnotsubset" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Subsets.</span>
 </h3></summary><article class="example example-like knowl__content"><div class="para" id="E_subsetnotsubset-2">
-<span class="process-math">\(\{1, 3\}\subseteq \{1, 2, 3, 4, 5\}\text{,}\)</span> but <span class="process-math">\(\{0, 1, 2, 3\}\nsubseteq \{1, 2, 3, 4, 5\}\text{.}\)</span>
-</div></article></details><div class="para" id="setnotation-14">It is important to understand the difference between subset, <span class="process-math">\(\subseteq\text{,}\)</span> and element, <span class="process-math">\(\in\text{.}\)</span> For example, if <span class="process-math">\(S=\{1, 2, 3, 4, 5\}\text{,}\)</span> then <span class="process-math">\(1\in S\text{,}\)</span> but <span class="process-math">\(1\nsubseteq S\text{.}\)</span> This is because 1 is an element, not a set. Similarly, <span class="process-math">\(\{1\}\subseteq S\text{,}\)</span> but <span class="process-math">\(\{1\}\notin S\text{.}\)</span> This is because <span class="process-math">\(\{1\}\)</span> is a set, not an element. In general, when working with sets, you should identify the elements of the set. Then sets of those elements are subsets. The curly brackets are our way of saying “set.”</div>
-<div class="para" id="setnotation-15">There are some special subsets that we will use throughout the course (and, in fact, the rest of your mathematical career).</div>
-<div class="para logical" id="setnotation-16"><ul class="disc" id="setnotation-16-1">
-<li id="setnotation-16-1-2"><div class="para" id="p-derived-setnotation-16-1-2">
-<span class="process-math">\(\mathbb{R}\)</span>, the set of real numbers. These are all the numbers your are familiar with from calculus: whole numbers, positives, negatives, fractions, decimals, square roots, <span class="process-math">\(e\text{,}\)</span> <span class="process-math">\(\pi\text{,}\)</span> etc.</div></li>
-<li id="setnotation-16-1-3"><div class="para" id="p-derived-setnotation-16-1-3">
-<span class="process-math">\(\mathbb{Z}\)</span>, the set integers. These are all the whole numbers: positive, negative, and zero.</div></li>
-<li id="setnotation-16-1-4"><div class="para" id="p-derived-setnotation-16-1-4">
-<span class="process-math">\(\mathbb{Q}\)</span>, the set rational numbers. These are all the whole numbers and fractions: positive, negative, and zero. We will revisit this set in more detail later.</div></li>
-<li id="setnotation-16-1-5"><div class="para" id="p-derived-setnotation-16-1-5">
-<span class="process-math">\(\mathbb{N}\)</span>, the set of natural numbers. These are all the positive whole numbers. Some books include zero, some do not. Since this can be confusing, we will avoid this notation in this class (but you might see it in future classes). Instead, we will use one of the next two notations, which more clearly denote inclusion of zero, or not.</div></li>
-<li id="setnotation-16-1-6"><div class="para" id="p-derived-setnotation-16-1-6">
-<span class="process-math">\(\mathbb{Z}^+\)</span>, the set of positive integers. These are all the positive whole numbers. This set does NOT include zero.</div></li>
-<li id="setnotation-16-1-7"><div class="para" id="p-derived-setnotation-16-1-7">
-<span class="process-math">\(\mathbb{Z}^{nonneg}\)</span>, the set of nonnegative integers. These are the whole numbers that are not negative. This set DOES include zero.</div></li>
-<li id="setnotation-16-1-8"><div class="para" id="p-derived-setnotation-16-1-8">
-<span class="process-math">\(\mathbb{R}^+\)</span>, the set of positive real numbers.</div></li>
-<li id="setnotation-16-1-9"><div class="para" id="p-derived-setnotation-16-1-9">
-<span class="process-math">\(\mathbb{R}^{nonneg}\)</span>, the set of nonnegative real numbers. These are the real numbers that are not negative.</div></li>
-</ul></div>
-<div class="para" id="setnotation-17">It is also useful to have a notation for the set with no elements. The <dfn class="terminology">empty set</dfn> is denoted <span class="process-math">\(\emptyset\)</span>.</div>
+<span class="process-math">\(\{1, 3\}\subseteq \{1, 2, 3, 4, 5\}\text{,}\)</span> but <span class="process-math">\(\{0, 1, 2, 3\}\nsubseteq \{1, 2, 3, 4, 5\}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_subsetnotsubset-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 2.1.2: Subsets"><a href="#E_subsetnotsubset" title="Copy heading and permalink for Example 2.1.2: Subsets" aria-label="Copy heading and permalink for Example 2.1.2: Subsets">🔗</a></div></article></details><div class="para" id="setnotation-14">It is important to understand the difference between subset, <span class="process-math">\(\subseteq\text{,}\)</span> and element, <span class="process-math">\(\in\text{.}\)</span> For example, if <span class="process-math">\(S=\{1, 2, 3, 4, 5\}\text{,}\)</span> then <span class="process-math">\(1\in S\text{,}\)</span> but <span class="process-math">\(1\nsubseteq S\text{.}\)</span> This is because 1 is an element, not a set. Similarly, <span class="process-math">\(\{1\}\subseteq S\text{,}\)</span> but <span class="process-math">\(\{1\}\notin S\text{.}\)</span> This is because <span class="process-math">\(\{1\}\)</span> is a set, not an element. In general, when working with sets, you should identify the elements of the set. Then sets of those elements are subsets. The curly brackets are our way of saying “set.”<div class="autopermalink" data-description="Paragraph"><a href="#setnotation-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="setnotation-15">There are some special subsets that we will use throughout the course (and, in fact, the rest of your mathematical career).<div class="autopermalink" data-description="Paragraph"><a href="#setnotation-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="setnotation-16">
+<ul class="disc" id="setnotation-16-1">
+<li id="setnotation-16-1-2">
+<div class="para" id="p-derived-setnotation-16-1-2">
+<span class="process-math">\(\mathbb{R}\)</span>, the set of real numbers. These are all the numbers your are familiar with from calculus: whole numbers, positives, negatives, fractions, decimals, square roots, <span class="process-math">\(e\text{,}\)</span> <span class="process-math">\(\pi\text{,}\)</span> etc.</div>
+<div class="autopermalink" data-description="Item"><a href="#setnotation-16-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="setnotation-16-1-3">
+<div class="para" id="p-derived-setnotation-16-1-3">
+<span class="process-math">\(\mathbb{Z}\)</span>, the set integers. These are all the whole numbers: positive, negative, and zero.</div>
+<div class="autopermalink" data-description="Item"><a href="#setnotation-16-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="setnotation-16-1-4">
+<div class="para" id="p-derived-setnotation-16-1-4">
+<span class="process-math">\(\mathbb{Q}\)</span>, the set rational numbers. These are all the whole numbers and fractions: positive, negative, and zero. We will revisit this set in more detail later.</div>
+<div class="autopermalink" data-description="Item"><a href="#setnotation-16-1-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="setnotation-16-1-5">
+<div class="para" id="p-derived-setnotation-16-1-5">
+<span class="process-math">\(\mathbb{N}\)</span>, the set of natural numbers. These are all the positive whole numbers. Some books include zero, some do not. Since this can be confusing, we will avoid this notation in this class (but you might see it in future classes). Instead, we will use one of the next two notations, which more clearly denote inclusion of zero, or not.</div>
+<div class="autopermalink" data-description="Item"><a href="#setnotation-16-1-5" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="setnotation-16-1-6">
+<div class="para" id="p-derived-setnotation-16-1-6">
+<span class="process-math">\(\mathbb{Z}^+\)</span>, the set of positive integers. These are all the positive whole numbers. This set does NOT include zero.</div>
+<div class="autopermalink" data-description="Item"><a href="#setnotation-16-1-6" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="setnotation-16-1-7">
+<div class="para" id="p-derived-setnotation-16-1-7">
+<span class="process-math">\(\mathbb{Z}^{nonneg}\)</span>, the set of nonnegative integers. These are the whole numbers that are not negative. This set DOES include zero.</div>
+<div class="autopermalink" data-description="Item"><a href="#setnotation-16-1-7" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="setnotation-16-1-8">
+<div class="para" id="p-derived-setnotation-16-1-8">
+<span class="process-math">\(\mathbb{R}^+\)</span>, the set of positive real numbers.</div>
+<div class="autopermalink" data-description="Item"><a href="#setnotation-16-1-8" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="setnotation-16-1-9">
+<div class="para" id="p-derived-setnotation-16-1-9">
+<span class="process-math">\(\mathbb{R}^{nonneg}\)</span>, the set of nonnegative real numbers. These are the real numbers that are not negative.</div>
+<div class="autopermalink" data-description="Item"><a href="#setnotation-16-1-9" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#setnotation-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="setnotation-17">It is also useful to have a notation for the set with no elements. The <dfn class="terminology">empty set</dfn> is denoted <span class="process-math">\(\emptyset\)</span>.<div class="autopermalink" data-description="Paragraph"><a href="#setnotation-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="activity project-like" id="A_notelessthan0"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.1.1</span><span class="period">.</span><span class="space"> </span><span class="title">New Notation.</span>
 </h3>
-<div class="para" id="A_notelessthan0-2-1">Based on the notations above, what would be a good notation for the set of integers less than zero?</div></article><article class="activity project-like" id="A_nozero"><h3 class="heading">
+<div class="para" id="A_notelessthan0-2-1">Based on the notations above, what would be a good notation for the set of integers less than zero?<div class="autopermalink" data-description="Paragraph"><a href="#A_notelessthan0-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Activity 2.1.1: New Notation"><a href="#A_notelessthan0" title="Copy heading and permalink for Activity 2.1.1: New Notation" aria-label="Copy heading and permalink for Activity 2.1.1: New Notation">🔗</a></div></article><article class="activity project-like" id="A_nozero"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">No Zero.</span>
 </h3>
-<div class="para" id="A_nozero-2-1">Which of the following sets do NOT contain zero: <span class="process-math">\(\mathbb{Q}, \mathbb{Z}, \mathbb{R}, \mathbb{R}^+, \mathbb{R}^{nonneg}\text{?}\)</span>
-</div></article><article class="activity project-like" id="A_setpractice"><h3 class="heading">
+<div class="para" id="A_nozero-2-1">Which of the following sets do NOT contain zero: <span class="process-math">\(\mathbb{Q}, \mathbb{Z}, \mathbb{R}, \mathbb{R}^+, \mathbb{R}^{nonneg}\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_nozero-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Activity 2.1.2: No Zero"><a href="#A_nozero" title="Copy heading and permalink for Activity 2.1.2: No Zero" aria-label="Copy heading and permalink for Activity 2.1.2: No Zero">🔗</a></div></article><article class="activity project-like" id="A_setpractice"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.1.3</span><span class="period">.</span><span class="space"> </span><span class="title">Practice with Sets.</span>
 </h3>
-<div class="introduction" id="A_setpractice-2"><div class="para" id="A_setpractice-2-1">Let <span class="process-math">\(S=\{1, 2, 3, 4, 5\}\text{.}\)</span> List the elements in each of the following sets.</div></div>
+<div class="introduction" id="A_setpractice-2"><div class="para" id="A_setpractice-2-1">Let <span class="process-math">\(S=\{1, 2, 3, 4, 5\}\text{.}\)</span> List the elements in each of the following sets.<div class="autopermalink" data-description="Paragraph"><a href="#A_setpractice-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
 <article class="task exercise-like" id="A_setpractice-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="A_setpractice-3-1"><span class="process-math">\(\{x\in S : 2 &lt;x\leq 5\}\)</span></div></article><article class="task exercise-like" id="A_setpractice-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="A_setpractice-4-1"><span class="process-math">\(\{x\in S: x \mbox{ is prime}\}\)</span></div></article><article class="task exercise-like" id="A_setpractice-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="A_setpractice-5-1"><span class="process-math">\(\{1/x: x \in S\}\)</span></div></article></article><article class="activity project-like" id="A_elementsubset"><h3 class="heading">
+<div class="para" id="A_setpractice-3-1">
+<span class="process-math">\(\{x\in S : 2 &lt;x\leq 5\}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_setpractice-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 2.1.3.a"><a href="#A_setpractice-3" title="Copy heading and permalink for Task 2.1.3.a" aria-label="Copy heading and permalink for Task 2.1.3.a">🔗</a></div></article><article class="task exercise-like" id="A_setpractice-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="A_setpractice-4-1">
+<span class="process-math">\(\{x\in S: x \mbox{ is prime}\}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_setpractice-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 2.1.3.b"><a href="#A_setpractice-4" title="Copy heading and permalink for Task 2.1.3.b" aria-label="Copy heading and permalink for Task 2.1.3.b">🔗</a></div></article><article class="task exercise-like" id="A_setpractice-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="A_setpractice-5-1">
+<span class="process-math">\(\{1/x: x \in S\}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_setpractice-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 2.1.3.c"><a href="#A_setpractice-5" title="Copy heading and permalink for Task 2.1.3.c" aria-label="Copy heading and permalink for Task 2.1.3.c">🔗</a></div></article><div class="autopermalink" data-description="Activity 2.1.3: Practice with Sets"><a href="#A_setpractice" title="Copy heading and permalink for Activity 2.1.3: Practice with Sets" aria-label="Copy heading and permalink for Activity 2.1.3: Practice with Sets">🔗</a></div></article><article class="activity project-like" id="A_elementsubset"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.1.4</span><span class="period">.</span><span class="space"> </span><span class="title">Elements or Subsets.</span>
 </h3>
-<div class="introduction" id="A_elementsubset-2"><div class="para" id="A_elementsubset-2-1">It is important to be able to distinguish between <em class="emphasis">elements</em> of a set and <em class="emphasis">subsets</em> of a set. Determine if each of the following is true or false. If it is false, what small change in notation would make it true?</div></div>
+<div class="introduction" id="A_elementsubset-2"><div class="para" id="A_elementsubset-2-1">It is important to be able to distinguish between <em class="emphasis">elements</em> of a set and <em class="emphasis">subsets</em> of a set. Determine if each of the following is true or false. If it is false, what small change in notation would make it true?<div class="autopermalink" data-description="Paragraph"><a href="#A_elementsubset-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
 <article class="task exercise-like" id="A_elementsubset-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="A_elementsubset-3-1"><span class="process-math">\(5\in \mathbb{Q}\)</span></div></article><article class="task exercise-like" id="A_elementsubset-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="A_elementsubset-4-1"><span class="process-math">\(\{2\} \in \mathbb{Z}\)</span></div></article><article class="task exercise-like" id="A_elementsubset-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="A_elementsubset-5-1"><span class="process-math">\(\{-1, -2, -3\}\subseteq \mathbb{Z}\)</span></div></article><article class="task exercise-like" id="A_elementsubset-6"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="A_elementsubset-6-1"><span class="process-math">\(0\subseteq \{0, 2, 4\}\)</span></div></article><article class="task exercise-like" id="A_elementsubset-7"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<div class="para" id="A_elementsubset-7-1"><span class="process-math">\(\{0\}\subseteq \{0, 2, 4\}\)</span></div></article></article><section class="exercises" id="setnotation-22"><h3 class="heading hide-type">
+<div class="para" id="A_elementsubset-3-1">
+<span class="process-math">\(5\in \mathbb{Q}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_elementsubset-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 2.1.4.a"><a href="#A_elementsubset-3" title="Copy heading and permalink for Task 2.1.4.a" aria-label="Copy heading and permalink for Task 2.1.4.a">🔗</a></div></article><article class="task exercise-like" id="A_elementsubset-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="A_elementsubset-4-1">
+<span class="process-math">\(\{2\} \in \mathbb{Z}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_elementsubset-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 2.1.4.b"><a href="#A_elementsubset-4" title="Copy heading and permalink for Task 2.1.4.b" aria-label="Copy heading and permalink for Task 2.1.4.b">🔗</a></div></article><article class="task exercise-like" id="A_elementsubset-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="A_elementsubset-5-1">
+<span class="process-math">\(\{-1, -2, -3\}\subseteq \mathbb{Z}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_elementsubset-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 2.1.4.c"><a href="#A_elementsubset-5" title="Copy heading and permalink for Task 2.1.4.c" aria-label="Copy heading and permalink for Task 2.1.4.c">🔗</a></div></article><article class="task exercise-like" id="A_elementsubset-6"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="A_elementsubset-6-1">
+<span class="process-math">\(0\subseteq \{0, 2, 4\}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_elementsubset-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 2.1.4.d"><a href="#A_elementsubset-6" title="Copy heading and permalink for Task 2.1.4.d" aria-label="Copy heading and permalink for Task 2.1.4.d">🔗</a></div></article><article class="task exercise-like" id="A_elementsubset-7"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para" id="A_elementsubset-7-1">
+<span class="process-math">\(\{0\}\subseteq \{0, 2, 4\}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_elementsubset-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 2.1.4.e"><a href="#A_elementsubset-7" title="Copy heading and permalink for Task 2.1.4.e" aria-label="Copy heading and permalink for Task 2.1.4.e">🔗</a></div></article><div class="autopermalink" data-description="Activity 2.1.4: Elements or Subsets"><a href="#A_elementsubset" title="Copy heading and permalink for Activity 2.1.4: Elements or Subsets" aria-label="Copy heading and permalink for Activity 2.1.4: Elements or Subsets">🔗</a></div></article><section class="exercises" id="setnotation-22"><h3 class="heading hide-type">
 <span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Exercises</span>
 </h3>
 <article class="exercise exercise-like" id="setnotation-22-2"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="setnotation-22-2-1-1">Explain in your own words why <span class="process-math">\(2\)</span> does not equal <span class="process-math">\(\{2\}\text{.}\)</span>
-</div></article><article class="exercise exercise-like" id="setnotation-22-3"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para" id="setnotation-22-3-1-1">How many elements are in the set <span class="process-math">\(\{1, 2, 3, 1, 2, 1\}\text{?}\)</span>
-</div></article><article class="exercise exercise-like" id="setnotation-22-4"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="para" id="setnotation-22-4-1-1">Use set-roster notation to list the elements in each of the following sets.</div> <ol class="lower-alpha" id="setnotation-22-4-1-2">
-<li id="setnotation-22-4-1-2-1"><div class="para" id="setnotation-22-4-1-2-1-1"><span class="process-math">\(\displaystyle S=\{n\in \mathbb{Z}: n=(-1)^k, \text{ for some integer } k\}\)</span></div></li>
-<li id="setnotation-22-4-1-2-2"><div class="para" id="setnotation-22-4-1-2-2-1"><span class="process-math">\(\displaystyle T=\{m\in \mathbb{Z}: m=1+(-1)^k, \text{ for some integer } k\}\)</span></div></li>
-<li id="setnotation-22-4-1-2-3"><div class="para" id="setnotation-22-4-1-2-3-1"><span class="process-math">\(\displaystyle U=\{r\in \mathbb{Z}: 2\leq r\leq -2\}\)</span></div></li>
-<li id="setnotation-22-4-1-2-4"><div class="para" id="setnotation-22-4-1-2-4-1"><span class="process-math">\(\displaystyle V=\{s\in \mathbb{Z}: s&gt;2 \text{ or } s\leq 3\}\)</span></div></li>
-</ol></article><article class="exercise exercise-like" id="setnotation-22-5"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para" id="setnotation-22-5-1-1">Determine whether the following statements are true or false.</div> <ol class="lower-alpha" id="setnotation-22-5-1-2">
-<li id="setnotation-22-5-1-2-1"><div class="para" id="setnotation-22-5-1-2-1-1"><span class="process-math">\(\displaystyle 3\in \{1, 2, 3\}\)</span></div></li>
-<li id="setnotation-22-5-1-2-2"><div class="para" id="setnotation-22-5-1-2-2-1"><span class="process-math">\(\displaystyle 1\subseteq \{1, 2, 3\}\)</span></div></li>
-<li id="setnotation-22-5-1-2-3"><div class="para" id="setnotation-22-5-1-2-3-1"><span class="process-math">\(\displaystyle \{2\}\in \{1, 2, 3\}\)</span></div></li>
-<li id="setnotation-22-5-1-2-4"><div class="para" id="setnotation-22-5-1-2-4-1"><span class="process-math">\(\displaystyle 1\in \{1\}\)</span></div></li>
-<li id="setnotation-22-5-1-2-5"><div class="para" id="setnotation-22-5-1-2-5-1"><span class="process-math">\(\displaystyle \{1\}\subseteq \{1, 2, 3\}\)</span></div></li>
-<li id="setnotation-22-5-1-2-6"><div class="para" id="setnotation-22-5-1-2-6-1"><span class="process-math">\(\displaystyle \{1\}\subseteq \{1\}\)</span></div></li>
-</ol></article></section></section></div>
-<div class="ptx-content-footer">
+<div class="para" id="setnotation-22-2-1-1">Explain in your own words why <span class="process-math">\(2\)</span> does not equal <span class="process-math">\(\{2\}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#setnotation-22-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 2.1.1"><a href="#setnotation-22-2" title="Copy heading and permalink for Exercise 2.1.1" aria-label="Copy heading and permalink for Exercise 2.1.1">🔗</a></div></article><article class="exercise exercise-like" id="setnotation-22-3"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="para" id="setnotation-22-3-1-1">How many elements are in the set <span class="process-math">\(\{1, 2, 3, 1, 2, 1\}\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#setnotation-22-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 2.1.2"><a href="#setnotation-22-3" title="Copy heading and permalink for Exercise 2.1.2" aria-label="Copy heading and permalink for Exercise 2.1.2">🔗</a></div></article><article class="exercise exercise-like" id="setnotation-22-4"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="para" id="setnotation-22-4-1-1">Use set-roster notation to list the elements in each of the following sets.<div class="autopermalink" data-description="Paragraph"><a href="#setnotation-22-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha lower-alpha-level-1" id="setnotation-22-4-1-2">
+<li id="setnotation-22-4-1-2-1">
+<div class="para" id="setnotation-22-4-1-2-1-1">
+<span class="process-math">\(\displaystyle S=\{n\in \mathbb{Z}: n=(-1)^k, \text{ for some integer } k\}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#setnotation-22-4-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.1.3.a"><a href="#setnotation-22-4-1-2-1" title="Copy heading and permalink for Item 2.1.3.a" aria-label="Copy heading and permalink for Item 2.1.3.a">🔗</a></div>
+</li>
+<li id="setnotation-22-4-1-2-2">
+<div class="para" id="setnotation-22-4-1-2-2-1">
+<span class="process-math">\(\displaystyle T=\{m\in \mathbb{Z}: m=1+(-1)^k, \text{ for some integer } k\}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#setnotation-22-4-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.1.3.b"><a href="#setnotation-22-4-1-2-2" title="Copy heading and permalink for Item 2.1.3.b" aria-label="Copy heading and permalink for Item 2.1.3.b">🔗</a></div>
+</li>
+<li id="setnotation-22-4-1-2-3">
+<div class="para" id="setnotation-22-4-1-2-3-1">
+<span class="process-math">\(\displaystyle U=\{r\in \mathbb{Z}: 2\leq r\leq -2\}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#setnotation-22-4-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.1.3.c"><a href="#setnotation-22-4-1-2-3" title="Copy heading and permalink for Item 2.1.3.c" aria-label="Copy heading and permalink for Item 2.1.3.c">🔗</a></div>
+</li>
+<li id="setnotation-22-4-1-2-4">
+<div class="para" id="setnotation-22-4-1-2-4-1">
+<span class="process-math">\(\displaystyle V=\{s\in \mathbb{Z}: s&gt;2 \text{ or } s\leq 3\}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#setnotation-22-4-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.1.3.d"><a href="#setnotation-22-4-1-2-4" title="Copy heading and permalink for Item 2.1.3.d" aria-label="Copy heading and permalink for Item 2.1.3.d">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 2.1.3"><a href="#setnotation-22-4" title="Copy heading and permalink for Exercise 2.1.3" aria-label="Copy heading and permalink for Exercise 2.1.3">🔗</a></div></article><article class="exercise exercise-like" id="setnotation-22-5"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="para" id="setnotation-22-5-1-1">Determine whether the following statements are true or false.<div class="autopermalink" data-description="Paragraph"><a href="#setnotation-22-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha lower-alpha-level-1" id="setnotation-22-5-1-2">
+<li id="setnotation-22-5-1-2-1">
+<div class="para" id="setnotation-22-5-1-2-1-1">
+<span class="process-math">\(\displaystyle 3\in \{1, 2, 3\}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#setnotation-22-5-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.1.4.a"><a href="#setnotation-22-5-1-2-1" title="Copy heading and permalink for Item 2.1.4.a" aria-label="Copy heading and permalink for Item 2.1.4.a">🔗</a></div>
+</li>
+<li id="setnotation-22-5-1-2-2">
+<div class="para" id="setnotation-22-5-1-2-2-1">
+<span class="process-math">\(\displaystyle 1\subseteq \{1, 2, 3\}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#setnotation-22-5-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.1.4.b"><a href="#setnotation-22-5-1-2-2" title="Copy heading and permalink for Item 2.1.4.b" aria-label="Copy heading and permalink for Item 2.1.4.b">🔗</a></div>
+</li>
+<li id="setnotation-22-5-1-2-3">
+<div class="para" id="setnotation-22-5-1-2-3-1">
+<span class="process-math">\(\displaystyle \{2\}\in \{1, 2, 3\}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#setnotation-22-5-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.1.4.c"><a href="#setnotation-22-5-1-2-3" title="Copy heading and permalink for Item 2.1.4.c" aria-label="Copy heading and permalink for Item 2.1.4.c">🔗</a></div>
+</li>
+<li id="setnotation-22-5-1-2-4">
+<div class="para" id="setnotation-22-5-1-2-4-1">
+<span class="process-math">\(\displaystyle 1\in \{1\}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#setnotation-22-5-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.1.4.d"><a href="#setnotation-22-5-1-2-4" title="Copy heading and permalink for Item 2.1.4.d" aria-label="Copy heading and permalink for Item 2.1.4.d">🔗</a></div>
+</li>
+<li id="setnotation-22-5-1-2-5">
+<div class="para" id="setnotation-22-5-1-2-5-1">
+<span class="process-math">\(\displaystyle \{1\}\subseteq \{1, 2, 3\}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#setnotation-22-5-1-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.1.4.e"><a href="#setnotation-22-5-1-2-5" title="Copy heading and permalink for Item 2.1.4.e" aria-label="Copy heading and permalink for Item 2.1.4.e">🔗</a></div>
+</li>
+<li id="setnotation-22-5-1-2-6">
+<div class="para" id="setnotation-22-5-1-2-6-1">
+<span class="process-math">\(\displaystyle \{1\}\subseteq \{1\}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#setnotation-22-5-1-2-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.1.4.f"><a href="#setnotation-22-5-1-2-6" title="Copy heading and permalink for Item 2.1.4.f" aria-label="Copy heading and permalink for Item 2.1.4.f">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 2.1.4"><a href="#setnotation-22-5" title="Copy heading and permalink for Exercise 2.1.4" aria-label="Copy heading and permalink for Exercise 2.1.4">🔗</a></div></article><div class="autopermalink" data-description="Exercises 2.1: Exercises"><a href="#setnotation-22" title="Copy heading and permalink for Exercises 2.1: Exercises" aria-label="Copy heading and permalink for Exercises 2.1: Exercises">🔗</a></div></section><div class="autopermalink" data-description="Section 2.1: Introduction to Sets"><a href="#setnotation" title="Copy heading and permalink for Section 2.1: Introduction to Sets" aria-label="Copy heading and permalink for Section 2.1: Introduction to Sets">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="chapter2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="quantifiers.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
-<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
 </div>
 <!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
 var sc_project=12871717;

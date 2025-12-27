@@ -6,14 +6,20 @@
 <!--*                                          *-->
 <!--********************************************-->
 <html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Proof by Contradiction and Contrapositive</title>
-<meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:type" content="book">
-<meta property="book:title" content="Introduction to Proofs">
-<meta property="book:author" content="Jennifer Firkins Nordstrom">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
 <script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
@@ -69,13 +75,12 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
-<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
-</script><link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
-<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
-<!--** eBookCongig is necessary to configure interactive       **-->
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Introduction to Proofs">
+<meta property="book:author" content="Jennifer Firkins Nordstrom">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -97,307 +102,23 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.5.6';
+eBookConfig.runestone_version = '7.11.5';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.82032a8574f6ce75.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6a985cbf816db5c7.css">
-<style>
-#arguments-20-1-1-4 { counter-set: arguments-20-1-1-4 0; }
-#arguments-20-1-1-4 > li::marker { content: ""counter(arguments-20-1-1-4,lower-alpha)""; }
-#arguments-20-1-1-4 > li { counter-increment: arguments-20-1-1-4; }
-#arguments-20-2-1-3 { counter-set: arguments-20-2-1-3 0; }
-#arguments-20-2-1-3 > li::marker { content: ""counter(arguments-20-2-1-3,lower-alpha)""; }
-#arguments-20-2-1-3 > li { counter-increment: arguments-20-2-1-3; }
-#arguments-20-3-1-2 { counter-set: arguments-20-3-1-2 0; }
-#arguments-20-3-1-2 > li::marker { content: "("counter(arguments-20-3-1-2,lower-alpha)")"; }
-#arguments-20-3-1-2 > li { counter-increment: arguments-20-3-1-2; }
-#B_logicalequivalences-3-5 { counter-set: B_logicalequivalences-3-5 0; }
-#B_logicalequivalences-3-5 > li::marker { content: ""counter(B_logicalequivalences-3-5,decimal)""; }
-#B_logicalequivalences-3-5 > li { counter-increment: B_logicalequivalences-3-5; }
-#connectives-73-1-1-2 { counter-set: connectives-73-1-1-2 0; }
-#connectives-73-1-1-2 > li::marker { content: ""counter(connectives-73-1-1-2,lower-alpha)""; }
-#connectives-73-1-1-2 > li { counter-increment: connectives-73-1-1-2; }
-#connectives-73-2-1-2 { counter-set: connectives-73-2-1-2 0; }
-#connectives-73-2-1-2 > li::marker { content: ""counter(connectives-73-2-1-2,lower-alpha)""; }
-#connectives-73-2-1-2 > li { counter-increment: connectives-73-2-1-2; }
-#connectives-73-3-1-2 { counter-set: connectives-73-3-1-2 0; }
-#connectives-73-3-1-2 > li::marker { content: ""counter(connectives-73-3-1-2,lower-alpha)""; }
-#connectives-73-3-1-2 > li { counter-increment: connectives-73-3-1-2; }
-#ER_onlyandnot-1-2 { counter-set: ER_onlyandnot-1-2 0; }
-#ER_onlyandnot-1-2 > li::marker { content: ""counter(ER_onlyandnot-1-2,lower-alpha)""; }
-#ER_onlyandnot-1-2 > li { counter-increment: ER_onlyandnot-1-2; }
-#connectives-73-5-1-2 { counter-set: connectives-73-5-1-2 0; }
-#connectives-73-5-1-2 > li::marker { content: ""counter(connectives-73-5-1-2,lower-alpha)""; }
-#connectives-73-5-1-2 > li { counter-increment: connectives-73-5-1-2; }
-#setnotation-22-4-1-2 { counter-set: setnotation-22-4-1-2 0; }
-#setnotation-22-4-1-2 > li::marker { content: ""counter(setnotation-22-4-1-2,lower-alpha)""; }
-#setnotation-22-4-1-2 > li { counter-increment: setnotation-22-4-1-2; }
-#setnotation-22-5-1-2 { counter-set: setnotation-22-5-1-2 0; }
-#setnotation-22-5-1-2 > li::marker { content: ""counter(setnotation-22-5-1-2,lower-alpha)""; }
-#setnotation-22-5-1-2 > li { counter-increment: setnotation-22-5-1-2; }
-#E_multquant1-2-2 { counter-set: E_multquant1-2-2 0; }
-#E_multquant1-2-2 > li::marker { content: ""counter(E_multquant1-2-2,lower-alpha)""; }
-#E_multquant1-2-2 > li { counter-increment: E_multquant1-2-2; }
-#quantifiers-6-14-3-1-2 { counter-set: quantifiers-6-14-3-1-2 0; }
-#quantifiers-6-14-3-1-2 > li::marker { content: ""counter(quantifiers-6-14-3-1-2,lower-alpha)""; }
-#quantifiers-6-14-3-1-2 > li { counter-increment: quantifiers-6-14-3-1-2; }
-#quantifiers-6-14-4-1-2 { counter-set: quantifiers-6-14-4-1-2 0; }
-#quantifiers-6-14-4-1-2 > li::marker { content: ""counter(quantifiers-6-14-4-1-2,lower-alpha)""; }
-#quantifiers-6-14-4-1-2 > li { counter-increment: quantifiers-6-14-4-1-2; }
-#quantifiers-6-14-5-1-2 { counter-set: quantifiers-6-14-5-1-2 0; }
-#quantifiers-6-14-5-1-2 > li::marker { content: ""counter(quantifiers-6-14-5-1-2,lower-alpha)""; }
-#quantifiers-6-14-5-1-2 > li { counter-increment: quantifiers-6-14-5-1-2; }
-#quantifiers-6-14-6-1-2 { counter-set: quantifiers-6-14-6-1-2 0; }
-#quantifiers-6-14-6-1-2 > li::marker { content: ""counter(quantifiers-6-14-6-1-2,lower-alpha)""; }
-#quantifiers-6-14-6-1-2 > li { counter-increment: quantifiers-6-14-6-1-2; }
-#quantifiers-6-14-7-1-2 { counter-set: quantifiers-6-14-7-1-2 0; }
-#quantifiers-6-14-7-1-2 > li::marker { content: ""counter(quantifiers-6-14-7-1-2,lower-alpha)""; }
-#quantifiers-6-14-7-1-2 > li { counter-increment: quantifiers-6-14-7-1-2; }
-#quantifiers-6-14-8-1-2 { counter-set: quantifiers-6-14-8-1-2 0; }
-#quantifiers-6-14-8-1-2 > li::marker { content: ""counter(quantifiers-6-14-8-1-2,lower-alpha)""; }
-#quantifiers-6-14-8-1-2 > li { counter-increment: quantifiers-6-14-8-1-2; }
-#conditionals-33-1-1-2 { counter-set: conditionals-33-1-1-2 0; }
-#conditionals-33-1-1-2 > li::marker { content: ""counter(conditionals-33-1-1-2,lower-alpha)""; }
-#conditionals-33-1-1-2 > li { counter-increment: conditionals-33-1-1-2; }
-#conditionals-33-2-1-2 { counter-set: conditionals-33-2-1-2 0; }
-#conditionals-33-2-1-2 > li::marker { content: ""counter(conditionals-33-2-1-2,lower-alpha)""; }
-#conditionals-33-2-1-2 > li { counter-increment: conditionals-33-2-1-2; }
-#conditionals-33-3-1-2 { counter-set: conditionals-33-3-1-2 0; }
-#conditionals-33-3-1-2 > li::marker { content: ""counter(conditionals-33-3-1-2,lower-alpha)""; }
-#conditionals-33-3-1-2 > li { counter-increment: conditionals-33-3-1-2; }
-#conditionals-33-4-1-2 { counter-set: conditionals-33-4-1-2 0; }
-#conditionals-33-4-1-2 > li::marker { content: ""counter(conditionals-33-4-1-2,lower-alpha)""; }
-#conditionals-33-4-1-2 > li { counter-increment: conditionals-33-4-1-2; }
-#conditionals-33-5-1-2 { counter-set: conditionals-33-5-1-2 0; }
-#conditionals-33-5-1-2 > li::marker { content: ""counter(conditionals-33-5-1-2,lower-alpha)""; }
-#conditionals-33-5-1-2 > li { counter-increment: conditionals-33-5-1-2; }
-#directproof-29-1-1-2 { counter-set: directproof-29-1-1-2 0; }
-#directproof-29-1-1-2 > li::marker { content: ""counter(directproof-29-1-1-2,lower-alpha)""; }
-#directproof-29-1-1-2 > li { counter-increment: directproof-29-1-1-2; }
-#directproof-29-11-1-2 { counter-set: directproof-29-11-1-2 0; }
-#directproof-29-11-1-2 > li::marker { content: ""counter(directproof-29-11-1-2,lower-alpha)""; }
-#directproof-29-11-1-2 > li { counter-increment: directproof-29-11-1-2; }
-#moredirect-7-1-1-2 { counter-set: moredirect-7-1-1-2 0; }
-#moredirect-7-1-1-2 > li::marker { content: ""counter(moredirect-7-1-1-2,lower-alpha)""; }
-#moredirect-7-1-1-2 > li { counter-increment: moredirect-7-1-1-2; }
-#moredirect-7-4-1-2 { counter-set: moredirect-7-4-1-2 0; }
-#moredirect-7-4-1-2 > li::marker { content: "("counter(moredirect-7-4-1-2,lower-alpha)")"; }
-#moredirect-7-4-1-2 > li { counter-increment: moredirect-7-4-1-2; }
-#ER_averagerat-1-2 { counter-set: ER_averagerat-1-2 0; }
-#ER_averagerat-1-2 > li::marker { content: ""counter(ER_averagerat-1-2,lower-alpha)""; }
-#ER_averagerat-1-2 > li { counter-increment: ER_averagerat-1-2; }
-#moredirect-7-7-1-2 { counter-set: moredirect-7-7-1-2 0; }
-#moredirect-7-7-1-2 > li::marker { content: ""counter(moredirect-7-7-1-2,lower-alpha)""; }
-#moredirect-7-7-1-2 > li { counter-increment: moredirect-7-7-1-2; }
-#moredirect-7-9-1-2 { counter-set: moredirect-7-9-1-2 0; }
-#moredirect-7-9-1-2 > li::marker { content: ""counter(moredirect-7-9-1-2,lower-alpha)""; }
-#moredirect-7-9-1-2 > li { counter-increment: moredirect-7-9-1-2; }
-#cases-31-1-1-2 { counter-set: cases-31-1-1-2 0; }
-#cases-31-1-1-2 > li::marker { content: ""counter(cases-31-1-1-2,lower-alpha)""; }
-#cases-31-1-1-2 > li { counter-increment: cases-31-1-1-2; }
-#SS_twoproofs-18-1-1-2 { counter-set: SS_twoproofs-18-1-1-2 0; }
-#SS_twoproofs-18-1-1-2 > li::marker { content: ""counter(SS_twoproofs-18-1-1-2,lower-alpha)""; }
-#SS_twoproofs-18-1-1-2 > li { counter-increment: SS_twoproofs-18-1-1-2; }
-#SS_twoproofs-18-2-1-2 { counter-set: SS_twoproofs-18-2-1-2 0; }
-#SS_twoproofs-18-2-1-2 > li::marker { content: ""counter(SS_twoproofs-18-2-1-2,lower-alpha)""; }
-#SS_twoproofs-18-2-1-2 > li { counter-increment: SS_twoproofs-18-2-1-2; }
-#SS_twoproofs-18-3-1-2 { counter-set: SS_twoproofs-18-3-1-2 0; }
-#SS_twoproofs-18-3-1-2 > li::marker { content: ""counter(SS_twoproofs-18-3-1-2,lower-alpha)""; }
-#SS_twoproofs-18-3-1-2 > li { counter-increment: SS_twoproofs-18-3-1-2; }
-#SS_twoproofs-18-4-1-2 { counter-set: SS_twoproofs-18-4-1-2 0; }
-#SS_twoproofs-18-4-1-2 > li::marker { content: ""counter(SS_twoproofs-18-4-1-2,lower-alpha)""; }
-#SS_twoproofs-18-4-1-2 > li { counter-increment: SS_twoproofs-18-4-1-2; }
-#SS_twoproofs-18-5-1-2 { counter-set: SS_twoproofs-18-5-1-2 0; }
-#SS_twoproofs-18-5-1-2 > li::marker { content: ""counter(SS_twoproofs-18-5-1-2,lower-alpha)""; }
-#SS_twoproofs-18-5-1-2 > li { counter-increment: SS_twoproofs-18-5-1-2; }
-#B_propsums-2-1 { counter-set: B_propsums-2-1 0; }
-#B_propsums-2-1 > li::marker { content: ""counter(B_propsums-2-1,decimal)""; }
-#B_propsums-2-1 > li { counter-increment: B_propsums-2-1; }
-#summation-27-1-1-2 { counter-set: summation-27-1-1-2 0; }
-#summation-27-1-1-2 > li::marker { content: ""counter(summation-27-1-1-2,lower-alpha)""; }
-#summation-27-1-1-2 > li { counter-increment: summation-27-1-1-2; }
-#summation-27-2-1-2 { counter-set: summation-27-2-1-2 0; }
-#summation-27-2-1-2 > li::marker { content: ""counter(summation-27-2-1-2,lower-alpha)""; }
-#summation-27-2-1-2 > li { counter-increment: summation-27-2-1-2; }
-#summation-27-3-1-2 { counter-set: summation-27-3-1-2 0; }
-#summation-27-3-1-2 > li::marker { content: ""counter(summation-27-3-1-2,lower-alpha)""; }
-#summation-27-3-1-2 > li { counter-increment: summation-27-3-1-2; }
-#summation-27-8-1-2 { counter-set: summation-27-8-1-2 0; }
-#summation-27-8-1-2 > li::marker { content: ""counter(summation-27-8-1-2,lower-alpha)""; }
-#summation-27-8-1-2 > li { counter-increment: summation-27-8-1-2; }
-#B_induction-3-4 { counter-set: B_induction-3-4 0; }
-#B_induction-3-4 > li::marker { content: ""counter(B_induction-3-4,decimal)""; }
-#B_induction-3-4 > li { counter-increment: B_induction-3-4; }
-#induction-6-1 { counter-set: induction-6-1 0; }
-#induction-6-1 > li::marker { content: "("counter(induction-6-1,decimal)")"; }
-#induction-6-1 > li { counter-increment: induction-6-1; }
-#ER_indpowersof2-1-2 { counter-set: ER_indpowersof2-1-2 0; }
-#ER_indpowersof2-1-2 > li::marker { content: ""counter(ER_indpowersof2-1-2,lower-alpha)""; }
-#ER_indpowersof2-1-2 > li { counter-increment: ER_indpowersof2-1-2; }
-#B_strongind-4-3 { counter-set: B_strongind-4-3 0; }
-#B_strongind-4-3 > li::marker { content: ""counter(B_strongind-4-3,decimal)""; }
-#B_strongind-4-3 > li { counter-increment: B_strongind-4-3; }
-#E_domainqexist1-3-1 { counter-set: E_domainqexist1-3-1 0; }
-#E_domainqexist1-3-1 > li::marker { content: ""counter(E_domainqexist1-3-1,lower-alpha)""; }
-#E_domainqexist1-3-1 > li { counter-increment: E_domainqexist1-3-1; }
-#B_pfexistential-3-3 { counter-set: B_pfexistential-3-3 0; }
-#B_pfexistential-3-3 > li::marker { content: ""counter(B_pfexistential-3-3,decimal)""; }
-#B_pfexistential-3-3 > li { counter-increment: B_pfexistential-3-3; }
-#B_pfunique-3-3 { counter-set: B_pfunique-3-3 0; }
-#B_pfunique-3-3 > li::marker { content: ""counter(B_pfunique-3-3,decimal)""; }
-#B_pfunique-3-3 > li { counter-increment: B_pfunique-3-3; }
-#existunique-23-1 { counter-set: existunique-23-1 0; }
-#existunique-23-1 > li::marker { content: ""counter(existunique-23-1,decimal)""; }
-#existunique-23-1 > li { counter-increment: existunique-23-1; }
-#E_wop-3-2 { counter-set: E_wop-3-2 0; }
-#E_wop-3-2 > li::marker { content: ""counter(E_wop-3-2,decimal)""; }
-#E_wop-3-2 > li { counter-increment: E_wop-3-2; }
-#E_setnotevarious-2 { counter-set: E_setnotevarious-2 0; }
-#E_setnotevarious-2 > li::marker { content: ""counter(E_setnotevarious-2,lower-alpha)""; }
-#E_setnotevarious-2 > li { counter-increment: E_setnotevarious-2; }
-#E_setops-3-2 { counter-set: E_setops-3-2 0; }
-#E_setops-3-2 > li::marker { content: ""counter(E_setops-3-2,lower-alpha)""; }
-#E_setops-3-2 > li { counter-increment: E_setops-3-2; }
-#SS_setproofs-3-3 { counter-set: SS_setproofs-3-3 0; }
-#SS_setproofs-3-3 > li::marker { content: ""counter(SS_setproofs-3-3,decimal)""; }
-#SS_setproofs-3-3 > li { counter-increment: SS_setproofs-3-3; }
-#L_SetIdent-4-4 { counter-set: L_SetIdent-4-4 0; }
-#L_SetIdent-4-4 > li::marker { content: ""counter(L_SetIdent-4-4,decimal)""; }
-#L_SetIdent-4-4 > li { counter-increment: L_SetIdent-4-4; }
-#SS_setproofs-25-1-1-2 { counter-set: SS_setproofs-25-1-1-2 0; }
-#SS_setproofs-25-1-1-2 > li::marker { content: ""counter(SS_setproofs-25-1-1-2,lower-alpha)""; }
-#SS_setproofs-25-1-1-2 > li { counter-increment: SS_setproofs-25-1-1-2; }
-#SS_setproofs-25-2-1-2 { counter-set: SS_setproofs-25-2-1-2 0; }
-#SS_setproofs-25-2-1-2 > li::marker { content: ""counter(SS_setproofs-25-2-1-2,lower-alpha)""; }
-#SS_setproofs-25-2-1-2 > li { counter-increment: SS_setproofs-25-2-1-2; }
-#SS_setproofs-25-3-1-2 { counter-set: SS_setproofs-25-3-1-2 0; }
-#SS_setproofs-25-3-1-2 > li::marker { content: ""counter(SS_setproofs-25-3-1-2,lower-alpha)""; }
-#SS_setproofs-25-3-1-2 > li { counter-increment: SS_setproofs-25-3-1-2; }
-#SS_setproofs-25-4-1-2 { counter-set: SS_setproofs-25-4-1-2 0; }
-#SS_setproofs-25-4-1-2 > li::marker { content: ""counter(SS_setproofs-25-4-1-2,lower-alpha)""; }
-#SS_setproofs-25-4-1-2 > li { counter-increment: SS_setproofs-25-4-1-2; }
-#SS_setproofs-25-5-1-2 { counter-set: SS_setproofs-25-5-1-2 0; }
-#SS_setproofs-25-5-1-2 > li::marker { content: ""counter(SS_setproofs-25-5-1-2,lower-alpha)""; }
-#SS_setproofs-25-5-1-2 > li { counter-increment: SS_setproofs-25-5-1-2; }
-#SS_setproofs-25-6-1-2 { counter-set: SS_setproofs-25-6-1-2 0; }
-#SS_setproofs-25-6-1-2 > li::marker { content: ""counter(SS_setproofs-25-6-1-2,lower-alpha)""; }
-#SS_setproofs-25-6-1-2 > li { counter-increment: SS_setproofs-25-6-1-2; }
-#SS_setproofs-25-7-1-2 { counter-set: SS_setproofs-25-7-1-2 0; }
-#SS_setproofs-25-7-1-2 > li::marker { content: ""counter(SS_setproofs-25-7-1-2,lower-alpha)""; }
-#SS_setproofs-25-7-1-2 > li { counter-increment: SS_setproofs-25-7-1-2; }
-#SS_setproofs-25-15-1-2 { counter-set: SS_setproofs-25-15-1-2 0; }
-#SS_setproofs-25-15-1-2 > li::marker { content: ""counter(SS_setproofs-25-15-1-2,lower-alpha)""; }
-#SS_setproofs-25-15-1-2 > li { counter-increment: SS_setproofs-25-15-1-2; }
-#E_notfunctionimages-2-1 { counter-set: E_notfunctionimages-2-1 0; }
-#E_notfunctionimages-2-1 > li::marker { content: ""counter(E_notfunctionimages-2-1,lower-alpha)""; }
-#E_notfunctionimages-2-1 > li { counter-increment: E_notfunctionimages-2-1; }
-#E_addasfn-3-1 { counter-set: E_addasfn-3-1 0; }
-#E_addasfn-3-1 > li::marker { content: ""counter(E_addasfn-3-1,lower-alpha)""; }
-#E_addasfn-3-1 > li { counter-increment: E_addasfn-3-1; }
-#functions-45-1-1-2 { counter-set: functions-45-1-1-2 0; }
-#functions-45-1-1-2 > li::marker { content: ""counter(functions-45-1-1-2,lower-alpha)""; }
-#functions-45-1-1-2 > li { counter-increment: functions-45-1-1-2; }
-#functions-45-2-1-2 { counter-set: functions-45-2-1-2 0; }
-#functions-45-2-1-2 > li::marker { content: ""counter(functions-45-2-1-2,lower-alpha)""; }
-#functions-45-2-1-2 > li { counter-increment: functions-45-2-1-2; }
-#functions-45-3-1-2 { counter-set: functions-45-3-1-2 0; }
-#functions-45-3-1-2 > li::marker { content: ""counter(functions-45-3-1-2,lower-alpha)""; }
-#functions-45-3-1-2 > li { counter-increment: functions-45-3-1-2; }
-#functions-45-4-1-2 { counter-set: functions-45-4-1-2 0; }
-#functions-45-4-1-2 > li::marker { content: ""counter(functions-45-4-1-2,lower-alpha)""; }
-#functions-45-4-1-2 > li { counter-increment: functions-45-4-1-2; }
-#functions-45-5-1-2 { counter-set: functions-45-5-1-2 0; }
-#functions-45-5-1-2 > li::marker { content: ""counter(functions-45-5-1-2,lower-alpha)""; }
-#functions-45-5-1-2 > li { counter-increment: functions-45-5-1-2; }
-#functions-45-7-1-3 { counter-set: functions-45-7-1-3 0; }
-#functions-45-7-1-3 > li::marker { content: ""counter(functions-45-7-1-3,lower-alpha)""; }
-#functions-45-7-1-3 > li { counter-increment: functions-45-7-1-3; }
-#functions-45-8-1-2 { counter-set: functions-45-8-1-2 0; }
-#functions-45-8-1-2 > li::marker { content: ""counter(functions-45-8-1-2,lower-alpha)""; }
-#functions-45-8-1-2 > li { counter-increment: functions-45-8-1-2; }
-#functions-45-9-1-2 { counter-set: functions-45-9-1-2 0; }
-#functions-45-9-1-2 > li::marker { content: ""counter(functions-45-9-1-2,lower-alpha)""; }
-#functions-45-9-1-2 > li { counter-increment: functions-45-9-1-2; }
-#functions-45-10-1-3 { counter-set: functions-45-10-1-3 0; }
-#functions-45-10-1-3 > li::marker { content: ""counter(functions-45-10-1-3,lower-alpha)""; }
-#functions-45-10-1-3 > li { counter-increment: functions-45-10-1-3; }
-#functions-45-11-1-3 { counter-set: functions-45-11-1-3 0; }
-#functions-45-11-1-3 > li::marker { content: ""counter(functions-45-11-1-3,lower-alpha)""; }
-#functions-45-11-1-3 > li { counter-increment: functions-45-11-1-3; }
-#functions-45-12-1-2 { counter-set: functions-45-12-1-2 0; }
-#functions-45-12-1-2 > li::marker { content: ""counter(functions-45-12-1-2,lower-alpha)""; }
-#functions-45-12-1-2 > li { counter-increment: functions-45-12-1-2; }
-#E_equivclasses-2-3 { counter-set: E_equivclasses-2-3 0; }
-#E_equivclasses-2-3 > li::marker { content: ""counter(E_equivclasses-2-3,lower-alpha)""; }
-#E_equivclasses-2-3 > li { counter-increment: E_equivclasses-2-3; }
-#D_partition-1-1-6 { counter-set: D_partition-1-1-6 0; }
-#D_partition-1-1-6 > li::marker { content: ""counter(D_partition-1-1-6,decimal)""; }
-#D_partition-1-1-6 > li { counter-increment: D_partition-1-1-6; }
-#E_equivclasses2-4-2 { counter-set: E_equivclasses2-4-2 0; }
-#E_equivclasses2-4-2 > li::marker { content: ""counter(E_equivclasses2-4-2,lower-alpha)""; }
-#E_equivclasses2-4-2 > li { counter-increment: E_equivclasses2-4-2; }
-#SS_equivrelations-47-1-1-3 { counter-set: SS_equivrelations-47-1-1-3 0; }
-#SS_equivrelations-47-1-1-3 > li::marker { content: ""counter(SS_equivrelations-47-1-1-3,lower-alpha)""; }
-#SS_equivrelations-47-1-1-3 > li { counter-increment: SS_equivrelations-47-1-1-3; }
-#SS_equivrelations-47-2-1-3 { counter-set: SS_equivrelations-47-2-1-3 0; }
-#SS_equivrelations-47-2-1-3 > li::marker { content: ""counter(SS_equivrelations-47-2-1-3,lower-alpha)""; }
-#SS_equivrelations-47-2-1-3 > li { counter-increment: SS_equivrelations-47-2-1-3; }
-#SS_equivrelations-47-4-1-2 { counter-set: SS_equivrelations-47-4-1-2 0; }
-#SS_equivrelations-47-4-1-2 > li::marker { content: ""counter(SS_equivrelations-47-4-1-2,lower-alpha)""; }
-#SS_equivrelations-47-4-1-2 > li { counter-increment: SS_equivrelations-47-4-1-2; }
-#SS_equivrelations-47-5-1-2 { counter-set: SS_equivrelations-47-5-1-2 0; }
-#SS_equivrelations-47-5-1-2 > li::marker { content: ""counter(SS_equivrelations-47-5-1-2,lower-alpha)""; }
-#SS_equivrelations-47-5-1-2 > li { counter-increment: SS_equivrelations-47-5-1-2; }
-#SS_equivrelations-47-6-1-2 { counter-set: SS_equivrelations-47-6-1-2 0; }
-#SS_equivrelations-47-6-1-2 > li::marker { content: ""counter(SS_equivrelations-47-6-1-2,lower-alpha)""; }
-#SS_equivrelations-47-6-1-2 > li { counter-increment: SS_equivrelations-47-6-1-2; }
-#SS_equivrelations-47-7-1-2 { counter-set: SS_equivrelations-47-7-1-2 0; }
-#SS_equivrelations-47-7-1-2 > li::marker { content: ""counter(SS_equivrelations-47-7-1-2,lower-alpha)""; }
-#SS_equivrelations-47-7-1-2 > li { counter-increment: SS_equivrelations-47-7-1-2; }
-#SS_equivrelations-47-8-1-2 { counter-set: SS_equivrelations-47-8-1-2 0; }
-#SS_equivrelations-47-8-1-2 > li::marker { content: ""counter(SS_equivrelations-47-8-1-2,lower-alpha)""; }
-#SS_equivrelations-47-8-1-2 > li { counter-increment: SS_equivrelations-47-8-1-2; }
-#SS_equivrelations-47-9-1-2 { counter-set: SS_equivrelations-47-9-1-2 0; }
-#SS_equivrelations-47-9-1-2 > li::marker { content: ""counter(SS_equivrelations-47-9-1-2,lower-alpha)""; }
-#SS_equivrelations-47-9-1-2 > li { counter-increment: SS_equivrelations-47-9-1-2; }
-#D_RSTprop2-1-1-3 { counter-set: D_RSTprop2-1-1-3 0; }
-#D_RSTprop2-1-1-3 > li::marker { content: ""counter(D_RSTprop2-1-1-3,decimal)""; }
-#D_RSTprop2-1-1-3 > li { counter-increment: D_RSTprop2-1-1-3; }
-#T_totalorder-1-1-4 { counter-set: T_totalorder-1-1-4 0; }
-#T_totalorder-1-1-4 > li::marker { content: ""counter(T_totalorder-1-1-4,decimal)""; }
-#T_totalorder-1-1-4 > li { counter-increment: T_totalorder-1-1-4; }
-#orders-33-1-1-2 { counter-set: orders-33-1-1-2 0; }
-#orders-33-1-1-2 > li::marker { content: ""counter(orders-33-1-1-2,lower-alpha)""; }
-#orders-33-1-1-2 > li { counter-increment: orders-33-1-1-2; }
-#orders-33-2-1-2 { counter-set: orders-33-2-1-2 0; }
-#orders-33-2-1-2 > li::marker { content: ""counter(orders-33-2-1-2,lower-alpha)""; }
-#orders-33-2-1-2 > li { counter-increment: orders-33-2-1-2; }
-#orders-33-3-1-2 { counter-set: orders-33-3-1-2 0; }
-#orders-33-3-1-2 > li::marker { content: ""counter(orders-33-3-1-2,lower-alpha)""; }
-#orders-33-3-1-2 > li { counter-increment: orders-33-3-1-2; }
-#orders-33-4-1-2 { counter-set: orders-33-4-1-2 0; }
-#orders-33-4-1-2 > li::marker { content: ""counter(orders-33-4-1-2,lower-alpha)""; }
-#orders-33-4-1-2 > li { counter-increment: orders-33-4-1-2; }
-#binomial9-30-2-1-1-1 { counter-set: binomial9-30-2-1-1-1 0; }
-#binomial9-30-2-1-1-1 > li::marker { content: ""counter(binomial9-30-2-1-1-1,lower-alpha)""; }
-#binomial9-30-2-1-1-1 > li { counter-increment: binomial9-30-2-1-1-1; }
-#cardinality-31-6-1-2 { counter-set: cardinality-31-6-1-2 0; }
-#cardinality-31-6-1-2 > li::marker { content: ""counter(cardinality-31-6-1-2,lower-alpha)""; }
-#cardinality-31-6-1-2 > li { counter-increment: cardinality-31-6-1-2; }
-</style>
+<script src="_static/prefix-runtime.42217a82c75796c8.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.7e141ad8414abf4a.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.f4ab138da65f4203.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
 </head>
 <body class="pretext book ignore-math">
-<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
-<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
-<h1 class="heading"><a href="IntroProofs.html"><span class="title">Introduction to Proofs:</span> <span class="subtitle">An Active Exploration of Mathematical Language</span></a></h1>
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="IntroProofs.html"><span class="title">Introduction to Proofs</span> <span class="subtitle">An Active Exploration of Mathematical Language</span></a></h1>
 <p class="byline">Jennifer Firkins Nordstrom</p>
-</div>
-</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
 <button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-2.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
 <div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
@@ -595,106 +316,202 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="contradiction"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">3.4</span><span class="space"> </span><span class="title">Proof by Contradiction and Contrapositive</span>
 </h2>
-<section class="introduction" id="contradiction-4"><div class="para" id="contradiction-4-1">In this section we will learn two new proof techniques, contradiction and contrapositive. Both proof techniques rely on being able to negate mathematical statements.</div>
-<div class="para" id="contradiction-4-2">As we add more proof techniques, it is important to realize that you are not expected to know which technique to use when you start a proof. Proof-writing often takes some trial and error. First try a direct proof, if you get stuck, you may think about whether breaking your set into cases will  help, or whether negating a statement will make it easier to use. It is also quite possible that different methods can be used to prove the same statement.</div></section><section class="subsection" id="SS_contradiction"><h3 class="heading hide-type">
+<section class="introduction" id="contradiction-4"><div class="para" id="contradiction-4-1">In this section we will learn two new proof techniques, contradiction and contrapositive. Both proof techniques rely on being able to negate mathematical statements.<div class="autopermalink" data-description="Paragraph"><a href="#contradiction-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="contradiction-4-2">As we add more proof techniques, it is important to realize that you are not expected to know which technique to use when you start a proof. Proof-writing often takes some trial and error. First try a direct proof, if you get stuck, you may think about whether breaking your set into cases will  help, or whether negating a statement will make it easier to use. It is also quite possible that different methods can be used to prove the same statement.<div class="autopermalink" data-description="Paragraph"><a href="#contradiction-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="subsection" id="SS_contradiction"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.4.1</span><span class="space"> </span><span class="title">Proof by Contradiction</span>
 </h3>
-<div class="para" id="SS_contradiction-3">The basic idea behind proof by contradiction is that if you assume the statement you want to prove is false, and this forces a logical contradiction, then you must have been wrong to start. Thus, you can conclude the original statement was true. By a logical contradiction, we generally mean a statement that must be both true and false at the same time. When writing a proof by contradiction you must be very careful in your logical reasoning. It must be clear that you reach a contradiction though careful logical deduction.</div>
+<div class="para" id="SS_contradiction-3">The basic idea behind proof by contradiction is that if you assume the statement you want to prove is false, and this forces a logical contradiction, then you must have been wrong to start. Thus, you can conclude the original statement was true. By a logical contradiction, we generally mean a statement that must be both true and false at the same time. When writing a proof by contradiction you must be very careful in your logical reasoning. It must be clear that you reach a contradiction though careful logical deduction.<div class="autopermalink" data-description="Paragraph"><a href="#SS_contradiction-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="assemblage assemblage-like" id="B_contradictionpf"><h4 class="heading"><span class="title">Method of Proof by Contradiction.</span></h4>
-<div class="para logical" id="B_contradictionpf-4"><ul class="disc" id="B_contradictionpf-4-1">
-<li id="B_contradictionpf-4-1-1"><div class="para" id="B_contradictionpf-4-1-1-1">Assume the statement to be proved is false. Or, assume the negation of the statement is true.</div></li>
-<li id="B_contradictionpf-4-1-2"><div class="para" id="B_contradictionpf-4-1-2-1">Show you reach some logical contradiction. This means you have a statement in your proof that must be both true and false.</div></li>
-<li id="B_contradictionpf-4-1-3"><div class="para" id="B_contradictionpf-4-1-3-1">Conclude the original statement is true.</div></li>
-</ul></div></article><div class="para logical" id="SS_contradiction-5">
+<div class="para logical" id="B_contradictionpf-4">
+<ul class="disc" id="B_contradictionpf-4-1">
+<li id="B_contradictionpf-4-1-1">
+<div class="para" id="B_contradictionpf-4-1-1-1">Assume the statement to be proved is false. Or, assume the negation of the statement is true.<div class="autopermalink" data-description="Paragraph"><a href="#B_contradictionpf-4-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#B_contradictionpf-4-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="B_contradictionpf-4-1-2">
+<div class="para" id="B_contradictionpf-4-1-2-1">Show you reach some logical contradiction. This means you have a statement in your proof that must be both true and false.<div class="autopermalink" data-description="Paragraph"><a href="#B_contradictionpf-4-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#B_contradictionpf-4-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="B_contradictionpf-4-1-3">
+<div class="para" id="B_contradictionpf-4-1-3-1">Conclude the original statement is true.<div class="autopermalink" data-description="Paragraph"><a href="#B_contradictionpf-4-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#B_contradictionpf-4-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#B_contradictionpf-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Assemblage: Method of Proof by Contradiction"><a href="#B_contradictionpf" title="Copy heading and permalink for Assemblage: Method of Proof by Contradiction" aria-label="Copy heading and permalink for Assemblage: Method of Proof by Contradiction">🔗</a></div></article><div class="para logical" id="SS_contradiction-5">
 <div class="para">Since contradiction relies on negating statements, recall the following negations from <a href="connectives.html" class="internal" title="Section 1.3: Logical Connectives">Section 1.3</a>:</div>
 <ul class="disc" id="SS_contradiction-5-2">
-<li id="SS_contradiction-5-2-1"><div class="para" id="p-derived-SS_contradiction-5-2-1">
+<li id="SS_contradiction-5-2-1">
+<div class="para" id="p-derived-SS_contradiction-5-2-1">
 <span class="process-math">\(p\rightarrow q\)</span> has negation <span class="process-math">\(p\ \wedge \neg q\)</span>
-</div></li>
-<li id="SS_contradiction-5-2-2"><div class="para" id="p-derived-SS_contradiction-5-2-2">
+</div>
+<div class="autopermalink" data-description="Item"><a href="#SS_contradiction-5-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="SS_contradiction-5-2-2">
+<div class="para" id="p-derived-SS_contradiction-5-2-2">
 <span class="process-math">\(p\ \wedge q\)</span> has negation <span class="process-math">\(\neg p\ \vee \neg q\)</span>
-</div></li>
-<li id="SS_contradiction-5-2-3"><div class="para" id="p-derived-SS_contradiction-5-2-3">
+</div>
+<div class="autopermalink" data-description="Item"><a href="#SS_contradiction-5-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="SS_contradiction-5-2-3">
+<div class="para" id="p-derived-SS_contradiction-5-2-3">
 <span class="process-math">\(p\ \vee q\)</span> has negation <span class="process-math">\(\neg p\ \wedge \neg q\)</span>
-</div></li>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#SS_contradiction-5-2-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
 </ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#SS_contradiction-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <details id="E_contradiction" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.4.1</span><span class="period">.</span><span class="space"> </span><span class="title">Proof by Contradiction.</span>
-</h4></summary><article class="example example-like knowl__content"><div class="para" id="E_contradiction-2">Prove if <span class="process-math">\(x^2+y=13\)</span> and <span class="process-math">\(y\neq 4\)</span> then <span class="process-math">\(x\neq 3\text{.}\)</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="E_contradiction-2">Prove if <span class="process-math">\(x^2+y=13\)</span> and <span class="process-math">\(y\neq 4\)</span> then <span class="process-math">\(x\neq 3\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_contradiction-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="E_contradiction-3">Before proving this statement, we note that it has logical form <span class="process-math">\((p\wedge q)\rightarrow r\text{.}\)</span> Since we are doing a proof by contradiction, we need to negate this statement. The negation has form <span class="process-math">\((p\wedge q) \wedge \neg r\text{.}\)</span> Thus, we will assume <span class="process-math">\(p\)</span> is true, <span class="process-math">\(q\)</span> is true, and <span class="process-math">\(r\)</span> is false.</div>
-<details id="E_contradiction-4" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></summary><article class="hiddenproof knowl__content"><div class="para" id="E_contradiction-4-1">By contradiction. We assume <span class="process-math">\(x^2+y=13, y\neq 4\)</span> and <span class="process-math">\(x=3\text{.}\)</span> Since <span class="process-math">\(x=3\)</span> and  <span class="process-math">\(x^2+y=13\text{,}\)</span> we get <span class="process-math">\(9+y=13\text{.}\)</span> Thus, <span class="process-math">\(y=4\text{.}\)</span> But this contradicts that <span class="process-math">\(y\neq 4\text{.}\)</span>
-</div></article></details></article></details><details id="E_nogreatinteger" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<div class="para" id="E_contradiction-3">Before proving this statement, we note that it has logical form <span class="process-math">\((p\wedge q)\rightarrow r\text{.}\)</span> Since we are doing a proof by contradiction, we need to negate this statement. The negation has form <span class="process-math">\((p\wedge q) \wedge \neg r\text{.}\)</span> Thus, we will assume <span class="process-math">\(p\)</span> is true, <span class="process-math">\(q\)</span> is true, and <span class="process-math">\(r\)</span> is false.<div class="autopermalink" data-description="Paragraph"><a href="#E_contradiction-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="E_contradiction-4" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></summary><article class="hiddenproof knowl__content"><div class="para" id="E_contradiction-4-1">By contradiction. We assume <span class="process-math">\(x^2+y=13, y\neq 4\)</span> and <span class="process-math">\(x=3\text{.}\)</span> Since <span class="process-math">\(x=3\)</span> and  <span class="process-math">\(x^2+y=13\text{,}\)</span> we get <span class="process-math">\(9+y=13\text{.}\)</span> Thus, <span class="process-math">\(y=4\text{.}\)</span> But this contradicts that <span class="process-math">\(y\neq 4\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_contradiction-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 3.4.1.1"><a href="#E_contradiction-4" title="Copy heading and permalink for Proof 3.4.1.1" aria-label="Copy heading and permalink for Proof 3.4.1.1">🔗</a></div></article></details><div class="autopermalink" data-description="Example 3.4.1: Proof by Contradiction"><a href="#E_contradiction" title="Copy heading and permalink for Example 3.4.1: Proof by Contradiction" aria-label="Copy heading and permalink for Example 3.4.1: Proof by Contradiction">🔗</a></div></article></details><details id="E_nogreatinteger" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.4.2</span><span class="period">.</span><span class="space"> </span><span class="title">There Is No Greatest Integer.</span>
-</h4></summary><article class="example example-like knowl__content"><div class="para" id="E_nogreatinteger-2">Prove there is no greatest integer.</div>
-<details id="E_nogreatinteger-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></summary><article class="hiddenproof knowl__content"><div class="para" id="E_nogreatinteger-3-1">By contradiction. Assume there is a greatest integer. Call this greatest integer <span class="process-math">\(N\text{.}\)</span> Now consider <span class="process-math">\(N+1\text{.}\)</span> Since <span class="process-math">\(N\)</span> is an integer, <span class="process-math">\(N+1\)</span> is an integer. We can see that <span class="process-math">\(N+1&gt;N\text{,}\)</span> which contradicts that <span class="process-math">\(N\)</span> was the greatest. Therefore, there is no greatest integer.</div></article></details></article></details><article class="activity project-like" id="A_ratplusirr"><h4 class="heading">
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="E_nogreatinteger-2">Prove there is no greatest integer.<div class="autopermalink" data-description="Paragraph"><a href="#E_nogreatinteger-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="E_nogreatinteger-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></summary><article class="hiddenproof knowl__content"><div class="para" id="E_nogreatinteger-3-1">By contradiction. Assume there is a greatest integer. Call this greatest integer <span class="process-math">\(N\text{.}\)</span> Now consider <span class="process-math">\(N+1\text{.}\)</span> Since <span class="process-math">\(N\)</span> is an integer, <span class="process-math">\(N+1\)</span> is an integer. We can see that <span class="process-math">\(N+1&gt;N\text{,}\)</span> which contradicts that <span class="process-math">\(N\)</span> was the greatest. Therefore, there is no greatest integer.<div class="autopermalink" data-description="Paragraph"><a href="#E_nogreatinteger-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 3.4.2.1"><a href="#E_nogreatinteger-3" title="Copy heading and permalink for Proof 3.4.2.1" aria-label="Copy heading and permalink for Proof 3.4.2.1">🔗</a></div></article></details><div class="autopermalink" data-description="Example 3.4.2: There Is No Greatest Integer"><a href="#E_nogreatinteger" title="Copy heading and permalink for Example 3.4.2: There Is No Greatest Integer" aria-label="Copy heading and permalink for Example 3.4.2: There Is No Greatest Integer">🔗</a></div></article></details><article class="activity project-like" id="A_ratplusirr"><h4 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.4.1</span><span class="period">.</span><span class="space"> </span><span class="title">Rational Plus Irrational.</span>
 </h4>
-<div class="introduction" id="A_ratplusirr-2"><div class="para" id="A_ratplusirr-2-1">Consider the statement: the sum of a rational number and an irrational number is irrational.</div></div>
+<div class="introduction" id="A_ratplusirr-2"><div class="para" id="A_ratplusirr-2-1">Consider the statement: the sum of a rational number and an irrational number is irrational.<div class="autopermalink" data-description="Paragraph"><a href="#A_ratplusirr-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
 <article class="task exercise-like" id="A_ratplusirr-3"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para" id="A_ratplusirr-3-1">Try to determine if the statement is true or false by trying examples and looking for a counterexample.</div></article><article class="task exercise-like" id="A_ratplusirr-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="A_ratplusirr-4-1">Write the statement using variables and quantifiers.</div></article><article class="task exercise-like" id="A_ratplusirr-5"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<div class="para" id="A_ratplusirr-5-1">Write the negation of the statement.</div></article><article class="task exercise-like" id="A_ratplusirr-6"><h5 class="heading"><span class="codenumber">(d)</span></h5>
-<div class="para" id="A_ratplusirr-6-1">Now assume the negation is true and find a contradiction.</div></article><article class="task exercise-like" id="A_ratplusirr-7"><h5 class="heading"><span class="codenumber">(e)</span></h5>
-<div class="para" id="A_ratplusirr-7-1">The work in (d) is your scratch work. Write a careful proof by contradiction to show the original statement is true.</div></article></article></section><section class="subsection" id="SS_contrapositive"><h3 class="heading hide-type">
+<div class="para" id="A_ratplusirr-3-1">Try to determine if the statement is true or false by trying examples and looking for a counterexample.<div class="autopermalink" data-description="Paragraph"><a href="#A_ratplusirr-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 3.4.1.a"><a href="#A_ratplusirr-3" title="Copy heading and permalink for Task 3.4.1.a" aria-label="Copy heading and permalink for Task 3.4.1.a">🔗</a></div></article><article class="task exercise-like" id="A_ratplusirr-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="A_ratplusirr-4-1">Write the statement using variables and quantifiers.<div class="autopermalink" data-description="Paragraph"><a href="#A_ratplusirr-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 3.4.1.b"><a href="#A_ratplusirr-4" title="Copy heading and permalink for Task 3.4.1.b" aria-label="Copy heading and permalink for Task 3.4.1.b">🔗</a></div></article><article class="task exercise-like" id="A_ratplusirr-5"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="A_ratplusirr-5-1">Write the negation of the statement.<div class="autopermalink" data-description="Paragraph"><a href="#A_ratplusirr-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 3.4.1.c"><a href="#A_ratplusirr-5" title="Copy heading and permalink for Task 3.4.1.c" aria-label="Copy heading and permalink for Task 3.4.1.c">🔗</a></div></article><article class="task exercise-like" id="A_ratplusirr-6"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="A_ratplusirr-6-1">Now assume the negation is true and find a contradiction.<div class="autopermalink" data-description="Paragraph"><a href="#A_ratplusirr-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 3.4.1.d"><a href="#A_ratplusirr-6" title="Copy heading and permalink for Task 3.4.1.d" aria-label="Copy heading and permalink for Task 3.4.1.d">🔗</a></div></article><article class="task exercise-like" id="A_ratplusirr-7"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<div class="para" id="A_ratplusirr-7-1">The work in (d) is your scratch work. Write a careful proof by contradiction to show the original statement is true.<div class="autopermalink" data-description="Paragraph"><a href="#A_ratplusirr-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 3.4.1.e"><a href="#A_ratplusirr-7" title="Copy heading and permalink for Task 3.4.1.e" aria-label="Copy heading and permalink for Task 3.4.1.e">🔗</a></div></article><div class="autopermalink" data-description="Activity 3.4.1: Rational Plus Irrational"><a href="#A_ratplusirr" title="Copy heading and permalink for Activity 3.4.1: Rational Plus Irrational" aria-label="Copy heading and permalink for Activity 3.4.1: Rational Plus Irrational">🔗</a></div></article><div class="autopermalink" data-description="Subsection 3.4.1: Proof by Contradiction"><a href="#SS_contradiction" title="Copy heading and permalink for Subsection 3.4.1: Proof by Contradiction" aria-label="Copy heading and permalink for Subsection 3.4.1: Proof by Contradiction">🔗</a></div></section><section class="subsection" id="SS_contrapositive"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.4.2</span><span class="space"> </span><span class="title">Proof by Contrapositive</span>
 </h3>
-<div class="para" id="SS_contrapositive-3">Recall from <a href="connectives.html" class="internal" title="Section 1.3: Logical Connectives">Section 1.3</a> the contrapositive of <span class="process-math">\(p\rightarrow q\)</span> is <span class="process-math">\(\neg q\rightarrow \neg p\text{.}\)</span> Also recall, that <span class="process-math">\(p\rightarrow q\)</span> and <span class="process-math">\(\neg q\rightarrow \neg p\)</span> are logically equivalent. This allows us to use the contrapositive in place of the original statement. Thus, a proof by contrapositive is just a direct proof of the contrapositive statement.</div>
+<div class="para" id="SS_contrapositive-3">Recall from <a href="connectives.html" class="internal" title="Section 1.3: Logical Connectives">Section 1.3</a> the contrapositive of <span class="process-math">\(p\rightarrow q\)</span> is <span class="process-math">\(\neg q\rightarrow \neg p\text{.}\)</span> Also recall, that <span class="process-math">\(p\rightarrow q\)</span> and <span class="process-math">\(\neg q\rightarrow \neg p\)</span> are logically equivalent. This allows us to use the contrapositive in place of the original statement. Thus, a proof by contrapositive is just a direct proof of the contrapositive statement.<div class="autopermalink" data-description="Paragraph"><a href="#SS_contrapositive-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="assemblage assemblage-like" id="B_contrapositvepf"><h4 class="heading"><span class="title">Method of Proof by Contrapositive.</span></h4>
-<div class="para logical" id="B_contrapositvepf-4"><ul class="disc" id="B_contrapositvepf-4-1">
-<li id="B_contrapositvepf-4-1-1"><div class="para" id="B_contrapositvepf-4-1-1-1">Write the statement to be proved in the form <span class="process-math">\(\forall x\in D\text{,}\)</span> if <span class="process-math">\(P(x)\)</span> then <span class="process-math">\(Q(x)\text{.}\)</span>
-</div></li>
-<li id="B_contrapositvepf-4-1-2"><div class="para" id="B_contrapositvepf-4-1-2-1">Write the contrapositive of the statement: <span class="process-math">\(\forall x\in D\text{,}\)</span> if <span class="process-math">\(\neg Q(x)\)</span> then <span class="process-math">\(\neg P(x)\text{.}\)</span>
-</div></li>
-<li id="B_contrapositvepf-4-1-3"><div class="para" id="B_contrapositvepf-4-1-3-1">Prove the contrapositive directly: assume <span class="process-math">\(\neg Q(x)\text{,}\)</span> show <span class="process-math">\(\neg P(x)\text{.}\)</span>
-</div></li>
-</ul></div></article><details id="E_contrapositiveproof" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<div class="para logical" id="B_contrapositvepf-4">
+<ul class="disc" id="B_contrapositvepf-4-1">
+<li id="B_contrapositvepf-4-1-1">
+<div class="para" id="B_contrapositvepf-4-1-1-1">Write the statement to be proved in the form <span class="process-math">\(\forall x\in D\text{,}\)</span> if <span class="process-math">\(P(x)\)</span> then <span class="process-math">\(Q(x)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#B_contrapositvepf-4-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#B_contrapositvepf-4-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="B_contrapositvepf-4-1-2">
+<div class="para" id="B_contrapositvepf-4-1-2-1">Write the contrapositive of the statement: <span class="process-math">\(\forall x\in D\text{,}\)</span> if <span class="process-math">\(\neg Q(x)\)</span> then <span class="process-math">\(\neg P(x)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#B_contrapositvepf-4-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#B_contrapositvepf-4-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="B_contrapositvepf-4-1-3">
+<div class="para" id="B_contrapositvepf-4-1-3-1">Prove the contrapositive directly: assume <span class="process-math">\(\neg Q(x)\text{,}\)</span> show <span class="process-math">\(\neg P(x)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#B_contrapositvepf-4-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#B_contrapositvepf-4-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#B_contrapositvepf-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Assemblage: Method of Proof by Contrapositive"><a href="#B_contrapositvepf" title="Copy heading and permalink for Assemblage: Method of Proof by Contrapositive" aria-label="Copy heading and permalink for Assemblage: Method of Proof by Contrapositive">🔗</a></div></article><details id="E_contrapositiveproof" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.4.3</span><span class="period">.</span><span class="space"> </span><span class="title">A Divisibility Proof by Contrapositive.</span>
-</h4></summary><article class="example example-like knowl__content"><div class="para" id="E_contrapositiveproof-2">Prove for all <span class="process-math">\(a, b, c\in \mathbb{Z}\text{,}\)</span> if <span class="process-math">\(a \nmid bc\)</span> then <span class="process-math">\(a \nmid b\text{.}\)</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="E_contrapositiveproof-2">Prove for all <span class="process-math">\(a, b, c\in \mathbb{Z}\text{,}\)</span> if <span class="process-math">\(a \nmid bc\)</span> then <span class="process-math">\(a \nmid b\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_contrapositiveproof-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="E_contrapositiveproof-3">This statement has contrapositive: for all <span class="process-math">\(a, b, c\in \mathbb{Z}\text{,}\)</span> if <span class="process-math">\(a \mid b\)</span> then <span class="process-math">\(a \mid bc\text{.}\)</span>
+<div class="para" id="E_contrapositiveproof-3">This statement has contrapositive: for all <span class="process-math">\(a, b, c\in \mathbb{Z}\text{,}\)</span> if <span class="process-math">\(a \mid b\)</span> then <span class="process-math">\(a \mid bc\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_contrapositiveproof-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="E_contrapositiveproof-4" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></summary><article class="hiddenproof knowl__content"><div class="para" id="E_contrapositiveproof-4-1">By contrapositive. Let <span class="process-math">\(a, b, c\in \mathbb{Z}\text{.}\)</span> Assume <span class="process-math">\(a \mid b\text{.}\)</span> This means <span class="process-math">\(b=ak\)</span> for some <span class="process-math">\(k\in\mathbb{Z}\text{.}\)</span> Then <span class="process-math">\(bc=(ak)c=a(kc)\text{,}\)</span> where <span class="process-math">\(kc \in \mathbb{Z}\text{.}\)</span> Thus, <span class="process-math">\(a \mid bc\text{.}\)</span>
-</div></article></details></article></details><article class="activity project-like" id="A_n2evenneven"><h4 class="heading">
+<details id="E_contrapositiveproof-4" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h5 class="heading"><span class="type">Proof<span class="period">.</span></span></h5></summary><article class="hiddenproof knowl__content"><div class="para" id="E_contrapositiveproof-4-1">By contrapositive. Let <span class="process-math">\(a, b, c\in \mathbb{Z}\text{.}\)</span> Assume <span class="process-math">\(a \mid b\text{.}\)</span> This means <span class="process-math">\(b=ak\)</span> for some <span class="process-math">\(k\in\mathbb{Z}\text{.}\)</span> Then <span class="process-math">\(bc=(ak)c=a(kc)\text{,}\)</span> where <span class="process-math">\(kc \in \mathbb{Z}\text{.}\)</span> Thus, <span class="process-math">\(a \mid bc\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_contrapositiveproof-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 3.4.3.1"><a href="#E_contrapositiveproof-4" title="Copy heading and permalink for Proof 3.4.3.1" aria-label="Copy heading and permalink for Proof 3.4.3.1">🔗</a></div></article></details><div class="autopermalink" data-description="Example 3.4.3: A Divisibility Proof by Contrapositive"><a href="#E_contrapositiveproof" title="Copy heading and permalink for Example 3.4.3: A Divisibility Proof by Contrapositive" aria-label="Copy heading and permalink for Example 3.4.3: A Divisibility Proof by Contrapositive">🔗</a></div></article></details><article class="activity project-like" id="A_n2evenneven"><h4 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.4.2</span><span class="period">.</span><span class="space"> </span><span class="title">If the Square is Even.</span>
 </h4>
-<div class="introduction" id="A_n2evenneven-2"><div class="para" id="A_n2evenneven-2-1">Consider the statement: for all integers <span class="process-math">\(n\text{,}\)</span> if <span class="process-math">\(n^2\)</span> is even then <span class="process-math">\(n\)</span> is even.</div></div>
+<div class="introduction" id="A_n2evenneven-2"><div class="para" id="A_n2evenneven-2-1">Consider the statement: for all integers <span class="process-math">\(n\text{,}\)</span> if <span class="process-math">\(n^2\)</span> is even then <span class="process-math">\(n\)</span> is even.<div class="autopermalink" data-description="Paragraph"><a href="#A_n2evenneven-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
 <article class="task exercise-like" id="A_n2evenneven-3"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para" id="A_n2evenneven-3-1">Write the contrapositive of the statement.</div></article><article class="task exercise-like" id="A_n2evenneven-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="A_n2evenneven-4-1">To prove the statement by contrapositive, what should you assume?</div></article><article class="task exercise-like" id="A_n2evenneven-5"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<div class="para" id="A_n2evenneven-5-1">To prove the statement by contrapositive, what should you show?</div></article><article class="task exercise-like" id="A_n2evenneven-6"><h5 class="heading"><span class="codenumber">(d)</span></h5>
-<div class="para" id="A_n2evenneven-6-1">Give a direct proof of the contrapositive. You have now proven the original statement by contrapositive.</div></article></article><div class="para" id="SS_contrapositive-7">Since we can use either contradiction or contrapositive on statements of the form <span class="process-math">\(p\rightarrow q\text{,}\)</span> the following comparison may be helpful.</div>
+<div class="para" id="A_n2evenneven-3-1">Write the contrapositive of the statement.<div class="autopermalink" data-description="Paragraph"><a href="#A_n2evenneven-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 3.4.2.a"><a href="#A_n2evenneven-3" title="Copy heading and permalink for Task 3.4.2.a" aria-label="Copy heading and permalink for Task 3.4.2.a">🔗</a></div></article><article class="task exercise-like" id="A_n2evenneven-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="A_n2evenneven-4-1">To prove the statement by contrapositive, what should you assume?<div class="autopermalink" data-description="Paragraph"><a href="#A_n2evenneven-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 3.4.2.b"><a href="#A_n2evenneven-4" title="Copy heading and permalink for Task 3.4.2.b" aria-label="Copy heading and permalink for Task 3.4.2.b">🔗</a></div></article><article class="task exercise-like" id="A_n2evenneven-5"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="A_n2evenneven-5-1">To prove the statement by contrapositive, what should you show?<div class="autopermalink" data-description="Paragraph"><a href="#A_n2evenneven-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 3.4.2.c"><a href="#A_n2evenneven-5" title="Copy heading and permalink for Task 3.4.2.c" aria-label="Copy heading and permalink for Task 3.4.2.c">🔗</a></div></article><article class="task exercise-like" id="A_n2evenneven-6"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="A_n2evenneven-6-1">Give a direct proof of the contrapositive. You have now proven the original statement by contrapositive.<div class="autopermalink" data-description="Paragraph"><a href="#A_n2evenneven-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 3.4.2.d"><a href="#A_n2evenneven-6" title="Copy heading and permalink for Task 3.4.2.d" aria-label="Copy heading and permalink for Task 3.4.2.d">🔗</a></div></article><div class="autopermalink" data-description="Activity 3.4.2: If the Square is Even"><a href="#A_n2evenneven" title="Copy heading and permalink for Activity 3.4.2: If the Square is Even" aria-label="Copy heading and permalink for Activity 3.4.2: If the Square is Even">🔗</a></div></article><div class="para" id="SS_contrapositive-7">Since we can use either contradiction or contrapositive on statements of the form <span class="process-math">\(p\rightarrow q\text{,}\)</span> the following comparison may be helpful.<div class="autopermalink" data-description="Paragraph"><a href="#SS_contrapositive-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="assemblage assemblage-like" id="B_contvscont"><h4 class="heading"><span class="title">Comparison of the Techniques of Contradiction and Contrapositive.</span></h4>
 <div class="para logical" id="B_contvscont-2">
 <div class="para">Contradiction with <span class="process-math">\(p\rightarrow q\text{:}\)</span>
 </div>
 <ul class="disc" id="B_contvscont-2-2">
-<li id="B_contvscont-2-2-1"><div class="para" id="p-derived-B_contvscont-2-2-1">Assume <span class="process-math">\(p\ \wedge \neg q\text{.}\)</span>
-</div></li>
-<li id="B_contvscont-2-2-2"><div class="para" id="p-derived-B_contvscont-2-2-2">Show any contradiction. The contradiction may be <span class="process-math">\(\neg p\)</span> or it may be <span class="process-math">\(q\text{,}\)</span> or some other logical contradiction.</div></li>
-<li id="B_contvscont-2-2-3"><div class="para" id="p-derived-B_contvscont-2-2-3">Since you can reach any contradiction at all, it may be difficult to know what you are looking for. It also may be difficult to know if you’ve made an error.</div></li>
-<li id="B_contvscont-2-2-4"><div class="para" id="p-derived-B_contvscont-2-2-4">With contradiction you get to assume more, but it is less clear what you want to show.</div></li>
+<li id="B_contvscont-2-2-1">
+<div class="para" id="p-derived-B_contvscont-2-2-1">Assume <span class="process-math">\(p\ \wedge \neg q\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#B_contvscont-2-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="B_contvscont-2-2-2">
+<div class="para" id="p-derived-B_contvscont-2-2-2">Show any contradiction. The contradiction may be <span class="process-math">\(\neg p\)</span> or it may be <span class="process-math">\(q\text{,}\)</span> or some other logical contradiction.</div>
+<div class="autopermalink" data-description="Item"><a href="#B_contvscont-2-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="B_contvscont-2-2-3">
+<div class="para" id="p-derived-B_contvscont-2-2-3">Since you can reach any contradiction at all, it may be difficult to know what you are looking for. It also may be difficult to know if you’ve made an error.</div>
+<div class="autopermalink" data-description="Item"><a href="#B_contvscont-2-2-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="B_contvscont-2-2-4">
+<div class="para" id="p-derived-B_contvscont-2-2-4">With contradiction you get to assume more, but it is less clear what you want to show.</div>
+<div class="autopermalink" data-description="Item"><a href="#B_contvscont-2-2-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
 </ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#B_contvscont-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="B_contvscont-3">
 <div class="para">Contrapositive with <span class="process-math">\(p\rightarrow q\text{:}\)</span>
 </div>
 <ul class="disc" id="B_contvscont-3-2">
-<li id="B_contvscont-3-2-1"><div class="para" id="p-derived-B_contvscont-3-2-1">Assume <span class="process-math">\(\neg q\text{.}\)</span>
-</div></li>
-<li id="B_contvscont-3-2-2"><div class="para" id="p-derived-B_contvscont-3-2-2">Show <span class="process-math">\(\neg p\text{.}\)</span>
-</div></li>
-<li id="B_contvscont-3-2-3"><div class="para" id="p-derived-B_contvscont-3-2-3">With contrapositive you assume less than contradiction, but you know exactly what you are trying to show.</div></li>
+<li id="B_contvscont-3-2-1">
+<div class="para" id="p-derived-B_contvscont-3-2-1">Assume <span class="process-math">\(\neg q\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#B_contvscont-3-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="B_contvscont-3-2-2">
+<div class="para" id="p-derived-B_contvscont-3-2-2">Show <span class="process-math">\(\neg p\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#B_contvscont-3-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="B_contvscont-3-2-3">
+<div class="para" id="p-derived-B_contvscont-3-2-3">With contrapositive you assume less than contradiction, but you know exactly what you are trying to show.</div>
+<div class="autopermalink" data-description="Item"><a href="#B_contvscont-3-2-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
 </ul>
-</div></article></section><section class="subsection" id="SS_twoproofs"><h3 class="heading hide-type">
+<div class="autopermalink" data-description="Paragraph"><a href="#B_contvscont-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Assemblage: Comparison of the Techniques of Contradiction and Contrapositive"><a href="#B_contvscont" title="Copy heading and permalink for Assemblage: Comparison of the Techniques of Contradiction and Contrapositive" aria-label="Copy heading and permalink for Assemblage: Comparison of the Techniques of Contradiction and Contrapositive">🔗</a></div></article><div class="autopermalink" data-description="Subsection 3.4.2: Proof by Contrapositive"><a href="#SS_contrapositive" title="Copy heading and permalink for Subsection 3.4.2: Proof by Contrapositive" aria-label="Copy heading and permalink for Subsection 3.4.2: Proof by Contrapositive">🔗</a></div></section><section class="subsection" id="SS_twoproofs"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.4.3</span><span class="space"> </span><span class="title">Two Classical Proofs</span>
 </h3>
-<div class="para" id="SS_twoproofs-2">We are now able to use contradiction and contrapositive to prove two classical theorems in mathematics.</div>
-<div class="para" id="SS_twoproofs-3">In <a href="contradiction.html#A_n2evenneven" class="xref" data-knowl="./knowl/xref/A_n2evenneven.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 3.4.2: If the Square is Even">Activity 3.4.2</a> you used contrapositive to prove if <span class="process-math">\(n^2\)</span> is even, then <span class="process-math">\(n\)</span> is even. This statement is an important step in our first big theorem. We state it here formally as a lemma.</div>
+<div class="para" id="SS_twoproofs-2">We are now able to use contradiction and contrapositive to prove two classical theorems in mathematics.<div class="autopermalink" data-description="Paragraph"><a href="#SS_twoproofs-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="SS_twoproofs-3">In <a href="contradiction.html#A_n2evenneven" class="xref" data-knowl="./knowl/xref/A_n2evenneven.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 3.4.2: If the Square is Even">Activity 3.4.2</a> you used contrapositive to prove if <span class="process-math">\(n^2\)</span> is even, then <span class="process-math">\(n\)</span> is even. This statement is an important step in our first big theorem. We state it here formally as a lemma.<div class="autopermalink" data-description="Paragraph"><a href="#SS_twoproofs-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="lemma theorem-like" id="L_nsquaredeven"><h4 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">3.4.4</span><span class="period">.</span>
-</h4>Let <span class="process-math">\(n\in \mathbb{Z}\text{.}\)</span> If <span class="process-math">\(n^2\)</span> is even, then <span class="process-math">\(n\)</span> is even.</article><details id="SS_twoproofs-5" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="SS_twoproofs-5-1">
+</h4>Let <span class="process-math">\(n\in \mathbb{Z}\text{.}\)</span> If <span class="process-math">\(n^2\)</span> is even, then <span class="process-math">\(n\)</span> is even.<div class="autopermalink" data-description="Lemma 3.4.4"><a href="#L_nsquaredeven" title="Copy heading and permalink for Lemma 3.4.4" aria-label="Copy heading and permalink for Lemma 3.4.4">🔗</a></div></article><details id="SS_twoproofs-5" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="SS_twoproofs-5-1">
 <div class="para">We will prove this by contrapositive. Assume <span class="process-math">\(n\)</span> is odd. Show <span class="process-math">\(n^2\)</span> is odd. Since <span class="process-math">\(n\)</span> is odd, <span class="process-math">\(n=2k+1\)</span> for some <span class="process-math">\(k\in \mathbb{Z}\text{.}\)</span> Then</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -702,11 +519,16 @@ n^2=(2k+1)^2=4k^2+4k+1=2(2k^2+2k)+1.
 \end{equation*}
 </div>
 <div class="para">Since <span class="process-math">\(2k^2+2k\in \mathbb{Z}\text{,}\)</span> <span class="process-math">\(n^2\)</span> is odd.</div>
-</div></article></details><article class="theorem theorem-like" id="T_roottwoirrational"><h4 class="heading">
+<div class="autopermalink" data-description="Paragraph"><a href="#SS_twoproofs-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 3.4.3.1"><a href="#SS_twoproofs-5" title="Copy heading and permalink for Proof 3.4.3.1" aria-label="Copy heading and permalink for Proof 3.4.3.1">🔗</a></div></article></details><article class="theorem theorem-like" id="T_roottwoirrational"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.4.5</span><span class="period">.</span>
 </h4>
 <div class="para" id="T_roottwoirrational-1-1">
-<span class="process-math">\(\sqrt{2}\)</span> is irrational.</div></article><details id="SS_twoproofs-7" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="SS_twoproofs-7-1">We will prove this by contradiction. Assume <span class="process-math">\(\sqrt{2}\)</span> is rational. Then <span class="process-math">\(\sqrt{2}=\frac{p}{q}\)</span> with <span class="process-math">\(p, q\in\mathbb{Z}, q\neq 0\text{.}\)</span> We will additionally assume <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> have no common factors. [Note, this additional assumption just makes the proof simpler. You should convince yourself that it is reasonable to add this assumption--that given any fraction, we can always reduce so <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> have no common factors.]</div>
+<span class="process-math">\(\sqrt{2}\)</span> is irrational.<div class="autopermalink" data-description="Paragraph"><a href="#T_roottwoirrational-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 3.4.5"><a href="#T_roottwoirrational" title="Copy heading and permalink for Theorem 3.4.5" aria-label="Copy heading and permalink for Theorem 3.4.5">🔗</a></div></article><details id="SS_twoproofs-7" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="SS_twoproofs-7-1">We will prove this by contradiction. Assume <span class="process-math">\(\sqrt{2}\)</span> is rational. Then <span class="process-math">\(\sqrt{2}=\frac{p}{q}\)</span> with <span class="process-math">\(p, q\in\mathbb{Z}, q\neq 0\text{.}\)</span> We will additionally assume <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> have no common factors. [Note, this additional assumption just makes the proof simpler. You should convince yourself that it is reasonable to add this assumption--that given any fraction, we can always reduce so <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> have no common factors.]<div class="autopermalink" data-description="Paragraph"><a href="#SS_twoproofs-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para logical" id="SS_twoproofs-7-2">
 <div class="para">Now, using algebra on the equation,</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/L_nsquaredeven.html" id="SS_twoproofs-7-2-1">
@@ -717,6 +539,7 @@ n^2=(2k+1)^2=4k^2+4k+1=2(2k^2+2k)+1.
 \end{align*}
 </div>
 <div class="para">Since <span class="process-math">\(q^2\in\mathbb{Z}\text{,}\)</span> <span class="process-math">\(p^2\)</span> must be even. Then by <a href="contradiction.html#L_nsquaredeven" class="xref" data-knowl="./knowl/xref/L_nsquaredeven.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 3.4.4">Lemma 3.4.4</a>, <span class="process-math">\(p\)</span> must be even.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#SS_twoproofs-7-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="SS_twoproofs-7-3">
 <div class="para">Since <span class="process-math">\(p\)</span> is even, <span class="process-math">\(p=2k\)</span> for some <span class="process-math">\(k\in \mathbb{Z}\text{.}\)</span> Thus, we can substitute into the above equation.</div>
@@ -728,36 +551,64 @@ q^2&amp;=2k^2.
 \end{align*}
 </div>
 <div class="para">Since <span class="process-math">\(k^2\in\mathbb{Z}\text{,}\)</span> <span class="process-math">\(q^2\)</span> must be even. Then by <a href="contradiction.html#L_nsquaredeven" class="xref" data-knowl="./knowl/xref/L_nsquaredeven.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 3.4.4">Lemma 3.4.4</a>, <span class="process-math">\(q\)</span> must be even.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#SS_twoproofs-7-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="SS_twoproofs-7-4">But now we have <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> both even, which means they both have a common factor of 2. This contradicts our assumption that <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> have no common factors. Since we reached a contradiction, we can conclude that <span class="process-math">\(\sqrt{2}\)</span> is irrational.</div></article></details><div class="para" id="SS_twoproofs-8">Make sure you can read through the above proof and follow from one step to the next.</div>
+<div class="para" id="SS_twoproofs-7-4">But now we have <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> both even, which means they both have a common factor of 2. This contradicts our assumption that <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> have no common factors. Since we reached a contradiction, we can conclude that <span class="process-math">\(\sqrt{2}\)</span> is irrational.<div class="autopermalink" data-description="Paragraph"><a href="#SS_twoproofs-7-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 3.4.3.2"><a href="#SS_twoproofs-7" title="Copy heading and permalink for Proof 3.4.3.2" aria-label="Copy heading and permalink for Proof 3.4.3.2">🔗</a></div></article></details><div class="para" id="SS_twoproofs-8">Make sure you can read through the above proof and follow from one step to the next.<div class="autopermalink" data-description="Paragraph"><a href="#SS_twoproofs-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="activity project-like" id="A_squarediv3"><h4 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.4.3</span><span class="period">.</span><span class="space"> </span><span class="title">If the Square is Divisible by 3.</span>
 </h4>
-<div class="introduction" id="A_squarediv3-2"><div class="para" id="A_squarediv3-2-1">In <a href="contradiction.html#L_nsquaredeven" class="xref" data-knowl="./knowl/xref/L_nsquaredeven.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 3.4.4">Lemma 3.4.4</a> and <a href="contradiction.html#A_n2evenneven" class="xref" data-knowl="./knowl/xref/A_n2evenneven.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 3.4.2: If the Square is Even">Activity 3.4.2</a>, we proved if <span class="process-math">\(n^2\)</span> is even then <span class="process-math">\(n\)</span> is even. Now suppose you want to prove if <span class="process-math">\(n^2\)</span> is divisible by 3 then <span class="process-math">\(n\)</span> is divisible by 3.</div></div>
+<div class="introduction" id="A_squarediv3-2"><div class="para" id="A_squarediv3-2-1">In <a href="contradiction.html#L_nsquaredeven" class="xref" data-knowl="./knowl/xref/L_nsquaredeven.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 3.4.4">Lemma 3.4.4</a> and <a href="contradiction.html#A_n2evenneven" class="xref" data-knowl="./knowl/xref/A_n2evenneven.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 3.4.2: If the Square is Even">Activity 3.4.2</a>, we proved if <span class="process-math">\(n^2\)</span> is even then <span class="process-math">\(n\)</span> is even. Now suppose you want to prove if <span class="process-math">\(n^2\)</span> is divisible by 3 then <span class="process-math">\(n\)</span> is divisible by 3.<div class="autopermalink" data-description="Paragraph"><a href="#A_squarediv3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
 <article class="task exercise-like" id="A_squarediv3-3"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para" id="A_squarediv3-3-1">To prove the statement by contrapositive, what should you assume?</div></article><article class="task exercise-like" id="A_squarediv3-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="A_squarediv3-4-1">To prove the statement by contrapositive, what should you show?</div></article><article class="task exercise-like" id="A_squarediv3-5"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<div class="para" id="A_squarediv3-5-1-1">The problem with now giving a direct proof of the contrapositive is that we need to know what we mean by “<span class="process-math">\(n\)</span> is not divisible by 3.” Recall the Division Algorithm, <a href="cases.html#T_divisionalgorthm" class="xref" data-knowl="./knowl/xref/T_divisionalgorthm.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.3.3: The Division Algorithm">Theorem 3.3.3</a>. If <span class="process-math">\(n\)</span> is not divisible by 3, what are the possible forms for <span class="process-math">\(n\text{?}\)</span>
+<div class="para" id="A_squarediv3-3-1">To prove the statement by contrapositive, what should you assume?<div class="autopermalink" data-description="Paragraph"><a href="#A_squarediv3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="A_squarediv3-5-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><span class="process-math">\(n=3q+r\text{.}\)</span></div></details></div></article><article class="task exercise-like" id="A_squarediv3-6"><h5 class="heading"><span class="codenumber">(d)</span></h5>
-<div class="para" id="A_squarediv3-6-1">Now write a proof by cases using the cases for <span class="process-math">\(n\)</span> from (c) to show if <span class="process-math">\(n\)</span> is not divisible by 3, then <span class="process-math">\(n^2\)</span> is not divisible by 3.</div></article></article><div class="para" id="SS_twoproofs-10">Our second classical theorem is to prove there are infinitely many prime numbers. In <a href="contradiction.html#E_nogreatinteger" class="xref" data-knowl="./knowl/xref/E_nogreatinteger.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.4.2: There Is No Greatest Integer">Example 3.4.2</a> we proved there are infinitely many integers. In that proof, if we had a biggest integer, <span class="process-math">\(N\text{,}\)</span> we were able to construct an integer that was greater than <span class="process-math">\(N\text{,}\)</span> namely <span class="process-math">\(N+1\text{.}\)</span> However, primes are not that nice. If you were to list out several prime numbers, it would be impossible to find a pattern for the next prime. Sometimes primes are close together, like 17 and 19, and sometimes they are far apart. In fact, it is possible to prove that we can find a list of <span class="process-math">\(n\)</span> consecutive integers where none of the consecutive integers are prime for any positive integer <span class="process-math">\(n\text{.}\)</span> This means there are arbitrarily long sequences of consecutive integers with no primes, or there are primes that are arbitrarily far apart.</div>
-<div class="para" id="SS_twoproofs-11">First we need to understand a bit more about divisibilty with primes.</div>
+<div class="autopermalink" data-description="Task 3.4.3.a"><a href="#A_squarediv3-3" title="Copy heading and permalink for Task 3.4.3.a" aria-label="Copy heading and permalink for Task 3.4.3.a">🔗</a></div></article><article class="task exercise-like" id="A_squarediv3-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="A_squarediv3-4-1">To prove the statement by contrapositive, what should you show?<div class="autopermalink" data-description="Paragraph"><a href="#A_squarediv3-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 3.4.3.b"><a href="#A_squarediv3-4" title="Copy heading and permalink for Task 3.4.3.b" aria-label="Copy heading and permalink for Task 3.4.3.b">🔗</a></div></article><article class="task exercise-like" id="A_squarediv3-5"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="A_squarediv3-5-1-1">The problem with now giving a direct proof of the contrapositive is that we need to know what we mean by “<span class="process-math">\(n\)</span> is not divisible by 3.” Recall the Division Algorithm, <a href="cases.html#T_divisionalgorthm" class="xref" data-knowl="./knowl/xref/T_divisionalgorthm.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.3.3: The Division Algorithm">Theorem 3.3.3</a>. If <span class="process-math">\(n\)</span> is not divisible by 3, what are the possible forms for <span class="process-math">\(n\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_squarediv3-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="A_squarediv3-5-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<span class="process-math">\(n=3q+r\text{.}\)</span><div class="autopermalink" data-description="Hint 3.4.3.c.1"><a href="#A_squarediv3-5-2" title="Copy heading and permalink for Hint 3.4.3.c.1" aria-label="Copy heading and permalink for Hint 3.4.3.c.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Task 3.4.3.c"><a href="#A_squarediv3-5" title="Copy heading and permalink for Task 3.4.3.c" aria-label="Copy heading and permalink for Task 3.4.3.c">🔗</a></div></article><article class="task exercise-like" id="A_squarediv3-6"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="A_squarediv3-6-1">Now write a proof by cases using the cases for <span class="process-math">\(n\)</span> from (c) to show if <span class="process-math">\(n\)</span> is not divisible by 3, then <span class="process-math">\(n^2\)</span> is not divisible by 3.<div class="autopermalink" data-description="Paragraph"><a href="#A_squarediv3-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 3.4.3.d"><a href="#A_squarediv3-6" title="Copy heading and permalink for Task 3.4.3.d" aria-label="Copy heading and permalink for Task 3.4.3.d">🔗</a></div></article><div class="autopermalink" data-description="Activity 3.4.3: If the Square is Divisible by 3"><a href="#A_squarediv3" title="Copy heading and permalink for Activity 3.4.3: If the Square is Divisible by 3" aria-label="Copy heading and permalink for Activity 3.4.3: If the Square is Divisible by 3">🔗</a></div></article><div class="para" id="SS_twoproofs-10">Our second classical theorem is to prove there are infinitely many prime numbers. In <a href="contradiction.html#E_nogreatinteger" class="xref" data-knowl="./knowl/xref/E_nogreatinteger.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 3.4.2: There Is No Greatest Integer">Example 3.4.2</a> we proved there are infinitely many integers. In that proof, if we had a biggest integer, <span class="process-math">\(N\text{,}\)</span> we were able to construct an integer that was greater than <span class="process-math">\(N\text{,}\)</span> namely <span class="process-math">\(N+1\text{.}\)</span> However, primes are not that nice. If you were to list out several prime numbers, it would be impossible to find a pattern for the next prime. Sometimes primes are close together, like 17 and 19, and sometimes they are far apart. In fact, it is possible to prove that we can find a list of <span class="process-math">\(n\)</span> consecutive integers where none of the consecutive integers are prime for any positive integer <span class="process-math">\(n\text{.}\)</span> This means there are arbitrarily long sequences of consecutive integers with no primes, or there are primes that are arbitrarily far apart.<div class="autopermalink" data-description="Paragraph"><a href="#SS_twoproofs-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="SS_twoproofs-11">First we need to understand a bit more about divisibilty with primes.<div class="autopermalink" data-description="Paragraph"><a href="#SS_twoproofs-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="activity project-like" id="A_divprimes"><h4 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.4.4</span><span class="period">.</span><span class="space"> </span><span class="title">Prime Divisor of <span class="process-math">\(a+1\)</span>.</span>
 </h4>
-<div class="introduction" id="A_divprimes-2"><div class="para" id="A_divprimes-2-1">Consider the statement: for all <span class="process-math">\(a\in \mathbb{Z}\)</span> and primes <span class="process-math">\(p\text{,}\)</span> if <span class="process-math">\(p\mid a\)</span> then <span class="process-math">\(p \nmid (a+1)\text{.}\)</span>
+<div class="introduction" id="A_divprimes-2"><div class="para" id="A_divprimes-2-1">Consider the statement: for all <span class="process-math">\(a\in \mathbb{Z}\)</span> and primes <span class="process-math">\(p\text{,}\)</span> if <span class="process-math">\(p\mid a\)</span> then <span class="process-math">\(p \nmid (a+1)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_divprimes-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></div>
 <article class="task exercise-like" id="A_divprimes-3"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para" id="A_divprimes-3-1">Write the contrapositive of the statement.</div></article><article class="task exercise-like" id="A_divprimes-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="A_divprimes-4-1">Write the negation of the statement.</div></article><article class="task exercise-like" id="A_divprimes-5"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<div class="para" id="A_divprimes-5-1">Based on the contrapositive and the negation, which seem easier to use in a proof?</div></article><article class="task exercise-like" id="A_divprimes-6"><h5 class="heading"><span class="codenumber">(d)</span></h5>
-<div class="para" id="A_divprimes-6-1">Assume <span class="process-math">\(p\mid a\)</span> and <span class="process-math">\(p \mid (a+1)\text{.}\)</span> Can you find a contradiction?</div></article><article class="task exercise-like" id="A_divprimes-7"><h5 class="heading"><span class="codenumber">(e)</span></h5>
-<div class="para" id="A_divprimes-7-1">If you were able to find a contradiction, try to write a careful proof by contradiction for the statement.</div></article></article><div class="para" id="SS_twoproofs-13">The statement in <a href="contradiction.html#A_divprimes" class="xref" data-knowl="./knowl/xref/A_divprimes.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 3.4.4: Prime Divisor of a+1">Activity 3.4.4</a> is an important lemma for proving there are infinitely many primes.</div>
+<div class="para" id="A_divprimes-3-1">Write the contrapositive of the statement.<div class="autopermalink" data-description="Paragraph"><a href="#A_divprimes-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 3.4.4.a"><a href="#A_divprimes-3" title="Copy heading and permalink for Task 3.4.4.a" aria-label="Copy heading and permalink for Task 3.4.4.a">🔗</a></div></article><article class="task exercise-like" id="A_divprimes-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="A_divprimes-4-1">Write the negation of the statement.<div class="autopermalink" data-description="Paragraph"><a href="#A_divprimes-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 3.4.4.b"><a href="#A_divprimes-4" title="Copy heading and permalink for Task 3.4.4.b" aria-label="Copy heading and permalink for Task 3.4.4.b">🔗</a></div></article><article class="task exercise-like" id="A_divprimes-5"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="A_divprimes-5-1">Based on the contrapositive and the negation, which seem easier to use in a proof?<div class="autopermalink" data-description="Paragraph"><a href="#A_divprimes-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 3.4.4.c"><a href="#A_divprimes-5" title="Copy heading and permalink for Task 3.4.4.c" aria-label="Copy heading and permalink for Task 3.4.4.c">🔗</a></div></article><article class="task exercise-like" id="A_divprimes-6"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="A_divprimes-6-1">Assume <span class="process-math">\(p\mid a\)</span> and <span class="process-math">\(p \mid (a+1)\text{.}\)</span> Can you find a contradiction?<div class="autopermalink" data-description="Paragraph"><a href="#A_divprimes-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 3.4.4.d"><a href="#A_divprimes-6" title="Copy heading and permalink for Task 3.4.4.d" aria-label="Copy heading and permalink for Task 3.4.4.d">🔗</a></div></article><article class="task exercise-like" id="A_divprimes-7"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<div class="para" id="A_divprimes-7-1">If you were able to find a contradiction, try to write a careful proof by contradiction for the statement.<div class="autopermalink" data-description="Paragraph"><a href="#A_divprimes-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 3.4.4.e"><a href="#A_divprimes-7" title="Copy heading and permalink for Task 3.4.4.e" aria-label="Copy heading and permalink for Task 3.4.4.e">🔗</a></div></article><div class="autopermalink" data-description="Activity 3.4.4: Prime Divisor of a+1"><a href="#A_divprimes" title="Copy heading and permalink for Activity 3.4.4: Prime Divisor of a+1" aria-label="Copy heading and permalink for Activity 3.4.4: Prime Divisor of a+1">🔗</a></div></article><div class="para" id="SS_twoproofs-13">The statement in <a href="contradiction.html#A_divprimes" class="xref" data-knowl="./knowl/xref/A_divprimes.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 3.4.4: Prime Divisor of a+1">Activity 3.4.4</a> is an important lemma for proving there are infinitely many primes.<div class="autopermalink" data-description="Paragraph"><a href="#SS_twoproofs-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="lemma theorem-like" id="L_primedivplus1"><h4 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">3.4.6</span><span class="period">.</span>
 </h4>
-<div class="para" id="L_primedivplus1-1-1">For all <span class="process-math">\(n\in\mathbb{Z}\)</span> and all primes <span class="process-math">\(p\text{,}\)</span> if <span class="process-math">\(p\mid n\)</span> then <span class="process-math">\(p\nmid n+1\text{.}\)</span>
-</div></article><details id="SS_twoproofs-15" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="SS_twoproofs-15-1">
+<div class="para" id="L_primedivplus1-1-1">For all <span class="process-math">\(n\in\mathbb{Z}\)</span> and all primes <span class="process-math">\(p\text{,}\)</span> if <span class="process-math">\(p\mid n\)</span> then <span class="process-math">\(p\nmid n+1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#L_primedivplus1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Lemma 3.4.6"><a href="#L_primedivplus1" title="Copy heading and permalink for Lemma 3.4.6" aria-label="Copy heading and permalink for Lemma 3.4.6">🔗</a></div></article><details id="SS_twoproofs-15" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="SS_twoproofs-15-1">
 <div class="para">We will prove this by contradiction. Let <span class="process-math">\(n\in\mathbb{Z}\text{,}\)</span> <span class="process-math">\(p\)</span> prime. Assume <span class="process-math">\(p\mid n\)</span> and <span class="process-math">\(p\mid n+1\text{.}\)</span> Since <span class="process-math">\(p\mid n\text{,}\)</span> <span class="process-math">\(n=pk\)</span> for some <span class="process-math">\(k\in \mathbb{Z}\text{.}\)</span> Since <span class="process-math">\(p\mid n+1\text{,}\)</span> <span class="process-math">\(n+1=pj\)</span> for some <span class="process-math">\(j\in \mathbb{Z}\text{.}\)</span> Thus,</div>
 <div class="displaymath process-math" id="SS_twoproofs-15-1-11">
 \begin{align*}
@@ -767,47 +618,118 @@ pk+1&amp;=pj\\
 \end{align*}
 </div>
 <div class="para">Since <span class="process-math">\(k-j\in\mathbb{Z}, p\mid 1\text{,}\)</span> and <span class="process-math">\(p\)</span> is a factor of 1. However, the only factors of 1 are 1 and -1, which are not prime. Thus, we have a contradiction.</div>
-</div></article></details><article class="theorem theorem-like" id="T_infmanyprimes"><h4 class="heading">
+<div class="autopermalink" data-description="Paragraph"><a href="#SS_twoproofs-15-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 3.4.3.3"><a href="#SS_twoproofs-15" title="Copy heading and permalink for Proof 3.4.3.3" aria-label="Copy heading and permalink for Proof 3.4.3.3">🔗</a></div></article></details><article class="theorem theorem-like" id="T_infmanyprimes"><h4 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.4.7</span><span class="period">.</span>
 </h4>
-<div class="para" id="T_infmanyprimes-1-1">There are infinitely many primes.</div></article><details id="SS_twoproofs-17" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="SS_twoproofs-17-1">Assume there are finitely many primes. Since there are finitely many, we can list them all, say, <span class="process-math">\(p_1, p_2, \ldots, p_n\text{.}\)</span> Now let <span class="process-math">\(N=p_1\cdot p_2\cdot p_3\cdots p_n\text{,}\)</span> the product of all the primes. Consider <span class="process-math">\(N+1\text{.}\)</span> We know <span class="process-math">\(p_i\mid N\)</span> for each prime <span class="process-math">\(p_i\text{.}\)</span> By <a href="contradiction.html#L_primedivplus1" class="xref" data-knowl="./knowl/xref/L_primedivplus1.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 3.4.6">Lemma 3.4.6</a>, <span class="process-math">\(p_i\nmid N+1\text{.}\)</span> This means <span class="process-math">\(N+1\)</span> is an integer greater than 1 with no prime divisor, which contradicts <a href="cases.html#T_divbyprime" class="xref" data-knowl="./knowl/xref/T_divbyprime.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.3.2">Theorem 3.3.2</a>.</div></article></details><section class="exercises" id="SS_twoproofs-18"><h4 class="heading hide-type">
+<div class="para" id="T_infmanyprimes-1-1">There are infinitely many primes.<div class="autopermalink" data-description="Paragraph"><a href="#T_infmanyprimes-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 3.4.7"><a href="#T_infmanyprimes" title="Copy heading and permalink for Theorem 3.4.7" aria-label="Copy heading and permalink for Theorem 3.4.7">🔗</a></div></article><details id="SS_twoproofs-17" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="SS_twoproofs-17-1">Assume there are finitely many primes. Since there are finitely many, we can list them all, say, <span class="process-math">\(p_1, p_2, \ldots, p_n\text{.}\)</span> Now let <span class="process-math">\(N=p_1\cdot p_2\cdot p_3\cdots p_n\text{,}\)</span> the product of all the primes. Consider <span class="process-math">\(N+1\text{.}\)</span> We know <span class="process-math">\(p_i\mid N\)</span> for each prime <span class="process-math">\(p_i\text{.}\)</span> By <a href="contradiction.html#L_primedivplus1" class="xref" data-knowl="./knowl/xref/L_primedivplus1.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 3.4.6">Lemma 3.4.6</a>, <span class="process-math">\(p_i\nmid N+1\text{.}\)</span> This means <span class="process-math">\(N+1\)</span> is an integer greater than 1 with no prime divisor, which contradicts <a href="cases.html#T_divbyprime" class="xref" data-knowl="./knowl/xref/T_divbyprime.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 3.3.2">Theorem 3.3.2</a>.<div class="autopermalink" data-description="Paragraph"><a href="#SS_twoproofs-17-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 3.4.3.4"><a href="#SS_twoproofs-17" title="Copy heading and permalink for Proof 3.4.3.4" aria-label="Copy heading and permalink for Proof 3.4.3.4">🔗</a></div></article></details><section class="exercises" id="SS_twoproofs-18"><h4 class="heading hide-type">
 <span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Exercises</span>
 </h4>
 <article class="exercise exercise-like" id="SS_twoproofs-18-1"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
-<div class="para" id="SS_twoproofs-18-1-1-1">Consider the statement: for all integers <span class="process-math">\(n\text{,}\)</span> if <span class="process-math">\(n^2\)</span> is odd then <span class="process-math">\(n\)</span> is odd.</div> <ol class="lower-alpha" id="SS_twoproofs-18-1-1-2">
-<li id="SS_twoproofs-18-1-1-2-1"><div class="para" id="SS_twoproofs-18-1-1-2-1-1">Write what you would assume and what you would need to show to prove this statement by contradiction.</div></li>
-<li id="SS_twoproofs-18-1-1-2-2"><div class="para" id="SS_twoproofs-18-1-1-2-2-1">Write what you would assume and what you would need to show to prove this statement by contrapositive.</div></li>
-</ol></article><article class="exercise exercise-like" id="SS_twoproofs-18-2"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
-<div class="para" id="SS_twoproofs-18-2-1-1">Carefully write the negation of each statement then prove the statement by contradiction.</div> <ol class="lower-alpha" id="SS_twoproofs-18-2-1-2">
-<li id="SS_twoproofs-18-2-1-2-1"><div class="para" id="SS_twoproofs-18-2-1-2-1-1">There is no greatest even integer.</div></li>
-<li id="SS_twoproofs-18-2-1-2-2"><div class="para" id="SS_twoproofs-18-2-1-2-2-1">There is no least positive rational number.</div></li>
-</ol></article><article class="exercise exercise-like" id="SS_twoproofs-18-3"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
-<div class="para" id="SS_twoproofs-18-3-1-1">Prove the following by contrapositive. Make sure you carefully write what you are assuming and what you need to show.</div> <ol class="lower-alpha" id="SS_twoproofs-18-3-1-2">
-<li id="SS_twoproofs-18-3-1-2-1"><div class="para" id="SS_twoproofs-18-3-1-2-1-1">If the product of two positive real numbers is greater than 100, then at least one of the numbers is greater than 10.</div></li>
-<li id="SS_twoproofs-18-3-1-2-2"><div class="para" id="SS_twoproofs-18-3-1-2-2-1">If the sum of two real numbers is less than 50 then at least one of the numbers is less than 25.</div></li>
-</ol></article><article class="exercise exercise-like" id="SS_twoproofs-18-4"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
-<div class="para" id="SS_twoproofs-18-4-1-1">Prove the following statements by either contradiction or contrapositive (be sure to note which method you used).</div> <ol class="lower-alpha" id="SS_twoproofs-18-4-1-2">
-<li id="SS_twoproofs-18-4-1-2-1"><div class="para" id="SS_twoproofs-18-4-1-2-1-1">For all integers <span class="process-math">\(n\text{,}\)</span> if <span class="process-math">\(n^2\)</span> is odd then <span class="process-math">\(n\)</span> is odd.</div></li>
-<li id="SS_twoproofs-18-4-1-2-2"><div class="para" id="SS_twoproofs-18-4-1-2-2-1">For all integers <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> and <span class="process-math">\(c\text{,}\)</span> if <span class="process-math">\(a\)</span> does not divide <span class="process-math">\((bc)\text{,}\)</span> then <span class="process-math">\(a\)</span> does not divide <span class="process-math">\(b\text{.}\)</span>
-</div></li>
-<li id="SS_twoproofs-18-4-1-2-3"><div class="para" id="SS_twoproofs-18-4-1-2-3-1">For all integers <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> and <span class="process-math">\(c\text{,}\)</span> if <span class="process-math">\(a\)</span> divides <span class="process-math">\(b\)</span> and <span class="process-math">\(a\)</span> does not divide <span class="process-math">\(c\text{,}\)</span> then <span class="process-math">\(a\)</span> does not divide <span class="process-math">\((b+c)\text{.}\)</span>
-</div></li>
-</ol></article><article class="exercise exercise-like" id="SS_twoproofs-18-5"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
-<div class="para" id="SS_twoproofs-18-5-1-1">Determine whether the following statements are true or false. Prove the true statements by contradiction and provide counterexamples for the false ones.</div> <ol class="lower-alpha" id="SS_twoproofs-18-5-1-2">
-<li id="SS_twoproofs-18-5-1-2-1"><div class="para" id="SS_twoproofs-18-5-1-2-1-1">The sum of any two irrational numbers is irrational.</div></li>
-<li id="SS_twoproofs-18-5-1-2-2"><div class="para" id="SS_twoproofs-18-5-1-2-2-1">If <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are rational numbers, <span class="process-math">\(b\neq 0\text{,}\)</span> and <span class="process-math">\(r\)</span> is an irrational number, then <span class="process-math">\(a+br\)</span> is irrational.</div></li>
-<li id="SS_twoproofs-18-5-1-2-3"><div class="para" id="SS_twoproofs-18-5-1-2-3-1">If <span class="process-math">\(r\)</span> is any rational number, and <span class="process-math">\(s\)</span> is any irrational number, then <span class="process-math">\({r\over s}\)</span> is irrational.</div></li>
-</ol></article><article class="exercise exercise-like" id="ER_neednot"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>
-<div class="para" id="ER_neednot-1-1">From <a href="connectives.html#ER_onlyandnot" class="xref" data-knowl="./knowl/xref/ER_onlyandnot.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 1.3.4">Exercise 1.3.4</a> we know that, given any statement of truth-functional logic, we can always find a logically equivalent statement that uses only the connectives <span class="process-math">\(\neg\)</span> and <span class="process-math">\(\wedge\text{.}\)</span> For example, <span class="process-math">\([(p\leftrightarrow q) \vee r]\)</span> is logically equivalent to <span class="process-math">\(\neg\{\neg r\ \wedge\ [\neg (\neg p\ \wedge\ \neg q)\ \wedge\ \neg (p\ \wedge\ q)]\}\text{.}\)</span> So we could, if we wanted to, do without the connectives <span class="process-math">\(\vee\text{,}\)</span> <span class="process-math">\(\veebar\text{,}\)</span> <span class="process-math">\(\rightarrow\text{,}\)</span> and <span class="process-math">\(\leftrightarrow\text{.}\)</span> Suppose that, instead, we chose to use <em class="emphasis">only</em> the connectives <span class="process-math">\(\wedge\text{,}\)</span> <span class="process-math">\(\vee\text{,}\)</span> <span class="process-math">\(\rightarrow\text{,}\)</span> and <span class="process-math">\(\leftrightarrow\text{.}\)</span> Would these connective suffice? Why or why not? Remember that whatever your response, you should be able to offer a <em class="emphasis">proof</em> of it!</div></article><article class="exercise exercise-like" id="SS_twoproofs-18-7"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>
-<div class="para" id="SS_twoproofs-18-7-1-1">Consider the following statement and “proof.” Is the proof correct? If so, what proof strategies does it use? If not, can it be fixed? Is the theorem correct?</div> <div class="para" id="SS_twoproofs-18-7-1-2"><article class="theorem theorem-like" id="SS_twoproofs-18-7-1-2-1"><h6 class="heading">
+<div class="para" id="SS_twoproofs-18-1-1-1">Consider the statement: for all integers <span class="process-math">\(n\text{,}\)</span> if <span class="process-math">\(n^2\)</span> is odd then <span class="process-math">\(n\)</span> is odd.<div class="autopermalink" data-description="Paragraph"><a href="#SS_twoproofs-18-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha lower-alpha-level-1" id="SS_twoproofs-18-1-1-2">
+<li id="SS_twoproofs-18-1-1-2-1">
+<div class="para" id="SS_twoproofs-18-1-1-2-1-1">Write what you would assume and what you would need to show to prove this statement by contradiction.<div class="autopermalink" data-description="Paragraph"><a href="#SS_twoproofs-18-1-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.4.3.1.a"><a href="#SS_twoproofs-18-1-1-2-1" title="Copy heading and permalink for Item 3.4.3.1.a" aria-label="Copy heading and permalink for Item 3.4.3.1.a">🔗</a></div>
+</li>
+<li id="SS_twoproofs-18-1-1-2-2">
+<div class="para" id="SS_twoproofs-18-1-1-2-2-1">Write what you would assume and what you would need to show to prove this statement by contrapositive.<div class="autopermalink" data-description="Paragraph"><a href="#SS_twoproofs-18-1-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.4.3.1.b"><a href="#SS_twoproofs-18-1-1-2-2" title="Copy heading and permalink for Item 3.4.3.1.b" aria-label="Copy heading and permalink for Item 3.4.3.1.b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 3.4.3.1"><a href="#SS_twoproofs-18-1" title="Copy heading and permalink for Exercise 3.4.3.1" aria-label="Copy heading and permalink for Exercise 3.4.3.1">🔗</a></div></article><article class="exercise exercise-like" id="SS_twoproofs-18-2"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<div class="para" id="SS_twoproofs-18-2-1-1">Carefully write the negation of each statement then prove the statement by contradiction.<div class="autopermalink" data-description="Paragraph"><a href="#SS_twoproofs-18-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha lower-alpha-level-1" id="SS_twoproofs-18-2-1-2">
+<li id="SS_twoproofs-18-2-1-2-1">
+<div class="para" id="SS_twoproofs-18-2-1-2-1-1">There is no greatest even integer.<div class="autopermalink" data-description="Paragraph"><a href="#SS_twoproofs-18-2-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.4.3.2.a"><a href="#SS_twoproofs-18-2-1-2-1" title="Copy heading and permalink for Item 3.4.3.2.a" aria-label="Copy heading and permalink for Item 3.4.3.2.a">🔗</a></div>
+</li>
+<li id="SS_twoproofs-18-2-1-2-2">
+<div class="para" id="SS_twoproofs-18-2-1-2-2-1">There is no least positive rational number.<div class="autopermalink" data-description="Paragraph"><a href="#SS_twoproofs-18-2-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.4.3.2.b"><a href="#SS_twoproofs-18-2-1-2-2" title="Copy heading and permalink for Item 3.4.3.2.b" aria-label="Copy heading and permalink for Item 3.4.3.2.b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 3.4.3.2"><a href="#SS_twoproofs-18-2" title="Copy heading and permalink for Exercise 3.4.3.2" aria-label="Copy heading and permalink for Exercise 3.4.3.2">🔗</a></div></article><article class="exercise exercise-like" id="SS_twoproofs-18-3"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
+<div class="para" id="SS_twoproofs-18-3-1-1">Prove the following by contrapositive. Make sure you carefully write what you are assuming and what you need to show.<div class="autopermalink" data-description="Paragraph"><a href="#SS_twoproofs-18-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha lower-alpha-level-1" id="SS_twoproofs-18-3-1-2">
+<li id="SS_twoproofs-18-3-1-2-1">
+<div class="para" id="SS_twoproofs-18-3-1-2-1-1">If the product of two positive real numbers is greater than 100, then at least one of the numbers is greater than 10.<div class="autopermalink" data-description="Paragraph"><a href="#SS_twoproofs-18-3-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.4.3.3.a"><a href="#SS_twoproofs-18-3-1-2-1" title="Copy heading and permalink for Item 3.4.3.3.a" aria-label="Copy heading and permalink for Item 3.4.3.3.a">🔗</a></div>
+</li>
+<li id="SS_twoproofs-18-3-1-2-2">
+<div class="para" id="SS_twoproofs-18-3-1-2-2-1">If the sum of two real numbers is less than 50 then at least one of the numbers is less than 25.<div class="autopermalink" data-description="Paragraph"><a href="#SS_twoproofs-18-3-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.4.3.3.b"><a href="#SS_twoproofs-18-3-1-2-2" title="Copy heading and permalink for Item 3.4.3.3.b" aria-label="Copy heading and permalink for Item 3.4.3.3.b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 3.4.3.3"><a href="#SS_twoproofs-18-3" title="Copy heading and permalink for Exercise 3.4.3.3" aria-label="Copy heading and permalink for Exercise 3.4.3.3">🔗</a></div></article><article class="exercise exercise-like" id="SS_twoproofs-18-4"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
+<div class="para" id="SS_twoproofs-18-4-1-1">Prove the following statements by either contradiction or contrapositive (be sure to note which method you used).<div class="autopermalink" data-description="Paragraph"><a href="#SS_twoproofs-18-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha lower-alpha-level-1" id="SS_twoproofs-18-4-1-2">
+<li id="SS_twoproofs-18-4-1-2-1">
+<div class="para" id="SS_twoproofs-18-4-1-2-1-1">For all integers <span class="process-math">\(n\text{,}\)</span> if <span class="process-math">\(n^2\)</span> is odd then <span class="process-math">\(n\)</span> is odd.<div class="autopermalink" data-description="Paragraph"><a href="#SS_twoproofs-18-4-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.4.3.4.a"><a href="#SS_twoproofs-18-4-1-2-1" title="Copy heading and permalink for Item 3.4.3.4.a" aria-label="Copy heading and permalink for Item 3.4.3.4.a">🔗</a></div>
+</li>
+<li id="SS_twoproofs-18-4-1-2-2">
+<div class="para" id="SS_twoproofs-18-4-1-2-2-1">For all integers <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> and <span class="process-math">\(c\text{,}\)</span> if <span class="process-math">\(a\)</span> does not divide <span class="process-math">\((bc)\text{,}\)</span> then <span class="process-math">\(a\)</span> does not divide <span class="process-math">\(b\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#SS_twoproofs-18-4-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.4.3.4.b"><a href="#SS_twoproofs-18-4-1-2-2" title="Copy heading and permalink for Item 3.4.3.4.b" aria-label="Copy heading and permalink for Item 3.4.3.4.b">🔗</a></div>
+</li>
+<li id="SS_twoproofs-18-4-1-2-3">
+<div class="para" id="SS_twoproofs-18-4-1-2-3-1">For all integers <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> and <span class="process-math">\(c\text{,}\)</span> if <span class="process-math">\(a\)</span> divides <span class="process-math">\(b\)</span> and <span class="process-math">\(a\)</span> does not divide <span class="process-math">\(c\text{,}\)</span> then <span class="process-math">\(a\)</span> does not divide <span class="process-math">\((b+c)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#SS_twoproofs-18-4-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.4.3.4.c"><a href="#SS_twoproofs-18-4-1-2-3" title="Copy heading and permalink for Item 3.4.3.4.c" aria-label="Copy heading and permalink for Item 3.4.3.4.c">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 3.4.3.4"><a href="#SS_twoproofs-18-4" title="Copy heading and permalink for Exercise 3.4.3.4" aria-label="Copy heading and permalink for Exercise 3.4.3.4">🔗</a></div></article><article class="exercise exercise-like" id="SS_twoproofs-18-5"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
+<div class="para" id="SS_twoproofs-18-5-1-1">Determine whether the following statements are true or false. Prove the true statements by contradiction and provide counterexamples for the false ones.<div class="autopermalink" data-description="Paragraph"><a href="#SS_twoproofs-18-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha lower-alpha-level-1" id="SS_twoproofs-18-5-1-2">
+<li id="SS_twoproofs-18-5-1-2-1">
+<div class="para" id="SS_twoproofs-18-5-1-2-1-1">The sum of any two irrational numbers is irrational.<div class="autopermalink" data-description="Paragraph"><a href="#SS_twoproofs-18-5-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.4.3.5.a"><a href="#SS_twoproofs-18-5-1-2-1" title="Copy heading and permalink for Item 3.4.3.5.a" aria-label="Copy heading and permalink for Item 3.4.3.5.a">🔗</a></div>
+</li>
+<li id="SS_twoproofs-18-5-1-2-2">
+<div class="para" id="SS_twoproofs-18-5-1-2-2-1">If <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are rational numbers, <span class="process-math">\(b\neq 0\text{,}\)</span> and <span class="process-math">\(r\)</span> is an irrational number, then <span class="process-math">\(a+br\)</span> is irrational.<div class="autopermalink" data-description="Paragraph"><a href="#SS_twoproofs-18-5-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.4.3.5.b"><a href="#SS_twoproofs-18-5-1-2-2" title="Copy heading and permalink for Item 3.4.3.5.b" aria-label="Copy heading and permalink for Item 3.4.3.5.b">🔗</a></div>
+</li>
+<li id="SS_twoproofs-18-5-1-2-3">
+<div class="para" id="SS_twoproofs-18-5-1-2-3-1">If <span class="process-math">\(r\)</span> is any rational number, and <span class="process-math">\(s\)</span> is any irrational number, then <span class="process-math">\({r\over s}\)</span> is irrational.<div class="autopermalink" data-description="Paragraph"><a href="#SS_twoproofs-18-5-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.4.3.5.c"><a href="#SS_twoproofs-18-5-1-2-3" title="Copy heading and permalink for Item 3.4.3.5.c" aria-label="Copy heading and permalink for Item 3.4.3.5.c">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 3.4.3.5"><a href="#SS_twoproofs-18-5" title="Copy heading and permalink for Exercise 3.4.3.5" aria-label="Copy heading and permalink for Exercise 3.4.3.5">🔗</a></div></article><article class="exercise exercise-like" id="ER_neednot"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>
+<div class="para" id="ER_neednot-1-1">From <a href="connectives.html#ER_onlyandnot" class="xref" data-knowl="./knowl/xref/ER_onlyandnot.html" data-reveal-label="Reveal" data-close-label="Close" title="Exercise 1.3.4">Exercise 1.3.4</a> we know that, given any statement of truth-functional logic, we can always find a logically equivalent statement that uses only the connectives <span class="process-math">\(\neg\)</span> and <span class="process-math">\(\wedge\text{.}\)</span> For example, <span class="process-math">\([(p\leftrightarrow q) \vee r]\)</span> is logically equivalent to <span class="process-math">\(\neg\{\neg r\ \wedge\ [\neg (\neg p\ \wedge\ \neg q)\ \wedge\ \neg (p\ \wedge\ q)]\}\text{.}\)</span> So we could, if we wanted to, do without the connectives <span class="process-math">\(\vee\text{,}\)</span> <span class="process-math">\(\veebar\text{,}\)</span> <span class="process-math">\(\rightarrow\text{,}\)</span> and <span class="process-math">\(\leftrightarrow\text{.}\)</span> Suppose that, instead, we chose to use <em class="emphasis">only</em> the connectives <span class="process-math">\(\wedge\text{,}\)</span> <span class="process-math">\(\vee\text{,}\)</span> <span class="process-math">\(\rightarrow\text{,}\)</span> and <span class="process-math">\(\leftrightarrow\text{.}\)</span> Would these connective suffice? Why or why not? Remember that whatever your response, you should be able to offer a <em class="emphasis">proof</em> of it!<div class="autopermalink" data-description="Paragraph"><a href="#ER_neednot-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.4.3.6"><a href="#ER_neednot" title="Copy heading and permalink for Exercise 3.4.3.6" aria-label="Copy heading and permalink for Exercise 3.4.3.6">🔗</a></div></article><article class="exercise exercise-like" id="SS_twoproofs-18-7"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>
+<div class="para" id="SS_twoproofs-18-7-1-1">Consider the following statement and “proof.” Is the proof correct? If so, what proof strategies does it use? If not, can it be fixed? Is the theorem correct?<div class="autopermalink" data-description="Paragraph"><a href="#SS_twoproofs-18-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="SS_twoproofs-18-7-1-2">
+<article class="theorem theorem-like" id="SS_twoproofs-18-7-1-2-1"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.4.8</span><span class="period">.</span>
-</h6>There are irrational numbers <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> such that <span class="process-math">\(a^b\)</span> is rational.</article></div> <div class="para" id="SS_twoproofs-18-7-1-3">“Proof:” Either <span class="process-math">\(\sqrt{2}^{\sqrt{2}}\)</span> is rational or it is irrational.</div> <div class="para" id="SS_twoproofs-18-7-1-4">Case 1: <span class="process-math">\(\sqrt{2}^{\sqrt{2}}\)</span> is rational. Let <span class="process-math">\(a=b=\sqrt{2}\text{.}\)</span> Then <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are irrational, and <span class="process-math">\(a^b=\sqrt{2}^{\sqrt{2}}\text{,}\)</span> which we assumed was rational.</div> <div class="para" id="SS_twoproofs-18-7-1-5">Case 2: <span class="process-math">\(\sqrt{2}^{\sqrt{2}}\)</span> is irrational. Let <span class="process-math">\(a=\sqrt{2}^{\sqrt{2}}\)</span> and <span class="process-math">\(b=\sqrt{2}\text{.}\)</span> Then <span class="process-math">\(a\)</span> is irrational by assumption, and we know that <span class="process-math">\(b\)</span> is also irrational. Furthermore, <span class="process-math">\(a^b=\bigl(\sqrt{2}^{\sqrt{2}}\bigr)^{\sqrt{2}}=\sqrt{2}^{(\sqrt{2}\sqrt{2})}=2\text{.}\)</span> Which is rational.</div></article></section></section></section></div>
-<div class="ptx-content-footer">
+</h6>There are irrational numbers <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> such that <span class="process-math">\(a^b\)</span> is rational.<div class="autopermalink" data-description="Theorem 3.4.8"><a href="#SS_twoproofs-18-7-1-2-1" title="Copy heading and permalink for Theorem 3.4.8" aria-label="Copy heading and permalink for Theorem 3.4.8">🔗</a></div></article><div class="autopermalink" data-description="Paragraph"><a href="#SS_twoproofs-18-7-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="SS_twoproofs-18-7-1-3">“Proof:” Either <span class="process-math">\(\sqrt{2}^{\sqrt{2}}\)</span> is rational or it is irrational.<div class="autopermalink" data-description="Paragraph"><a href="#SS_twoproofs-18-7-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="SS_twoproofs-18-7-1-4">Case 1: <span class="process-math">\(\sqrt{2}^{\sqrt{2}}\)</span> is rational. Let <span class="process-math">\(a=b=\sqrt{2}\text{.}\)</span> Then <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are irrational, and <span class="process-math">\(a^b=\sqrt{2}^{\sqrt{2}}\text{,}\)</span> which we assumed was rational.<div class="autopermalink" data-description="Paragraph"><a href="#SS_twoproofs-18-7-1-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="SS_twoproofs-18-7-1-5">Case 2: <span class="process-math">\(\sqrt{2}^{\sqrt{2}}\)</span> is irrational. Let <span class="process-math">\(a=\sqrt{2}^{\sqrt{2}}\)</span> and <span class="process-math">\(b=\sqrt{2}\text{.}\)</span> Then <span class="process-math">\(a\)</span> is irrational by assumption, and we know that <span class="process-math">\(b\)</span> is also irrational. Furthermore, <span class="process-math">\(a^b=\bigl(\sqrt{2}^{\sqrt{2}}\bigr)^{\sqrt{2}}=\sqrt{2}^{(\sqrt{2}\sqrt{2})}=2\text{.}\)</span> Which is rational.<div class="autopermalink" data-description="Paragraph"><a href="#SS_twoproofs-18-7-1-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.4.3.7"><a href="#SS_twoproofs-18-7" title="Copy heading and permalink for Exercise 3.4.3.7" aria-label="Copy heading and permalink for Exercise 3.4.3.7">🔗</a></div></article><div class="autopermalink" data-description="Exercises 3.4.3"><a href="#SS_twoproofs-18" title="Copy heading and permalink for Exercises 3.4.3" aria-label="Copy heading and permalink for Exercises 3.4.3">🔗</a></div></section><div class="autopermalink" data-description="Subsection 3.4.3: Two Classical Proofs"><a href="#SS_twoproofs" title="Copy heading and permalink for Subsection 3.4.3: Two Classical Proofs" aria-label="Copy heading and permalink for Subsection 3.4.3: Two Classical Proofs">🔗</a></div></section><div class="autopermalink" data-description="Section 3.4: Proof by Contradiction and Contrapositive"><a href="#contradiction" title="Copy heading and permalink for Section 3.4: Proof by Contradiction and Contrapositive" aria-label="Copy heading and permalink for Section 3.4: Proof by Contradiction and Contrapositive">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="cases.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="chapter4.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
-<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
 </div>
 <!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
 var sc_project=12871717;

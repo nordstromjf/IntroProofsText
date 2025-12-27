@@ -6,14 +6,20 @@
 <!--*                                          *-->
 <!--********************************************-->
 <html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Quantifiers</title>
-<meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:type" content="book">
-<meta property="book:title" content="Introduction to Proofs">
-<meta property="book:author" content="Jennifer Firkins Nordstrom">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
 <script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
@@ -69,13 +75,12 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
-<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
-</script><link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
-<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
-<!--** eBookCongig is necessary to configure interactive       **-->
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Introduction to Proofs">
+<meta property="book:author" content="Jennifer Firkins Nordstrom">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -97,307 +102,23 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.5.6';
+eBookConfig.runestone_version = '7.11.5';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.82032a8574f6ce75.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6a985cbf816db5c7.css">
-<style>
-#arguments-20-1-1-4 { counter-set: arguments-20-1-1-4 0; }
-#arguments-20-1-1-4 > li::marker { content: ""counter(arguments-20-1-1-4,lower-alpha)""; }
-#arguments-20-1-1-4 > li { counter-increment: arguments-20-1-1-4; }
-#arguments-20-2-1-3 { counter-set: arguments-20-2-1-3 0; }
-#arguments-20-2-1-3 > li::marker { content: ""counter(arguments-20-2-1-3,lower-alpha)""; }
-#arguments-20-2-1-3 > li { counter-increment: arguments-20-2-1-3; }
-#arguments-20-3-1-2 { counter-set: arguments-20-3-1-2 0; }
-#arguments-20-3-1-2 > li::marker { content: "("counter(arguments-20-3-1-2,lower-alpha)")"; }
-#arguments-20-3-1-2 > li { counter-increment: arguments-20-3-1-2; }
-#B_logicalequivalences-3-5 { counter-set: B_logicalequivalences-3-5 0; }
-#B_logicalequivalences-3-5 > li::marker { content: ""counter(B_logicalequivalences-3-5,decimal)""; }
-#B_logicalequivalences-3-5 > li { counter-increment: B_logicalequivalences-3-5; }
-#connectives-73-1-1-2 { counter-set: connectives-73-1-1-2 0; }
-#connectives-73-1-1-2 > li::marker { content: ""counter(connectives-73-1-1-2,lower-alpha)""; }
-#connectives-73-1-1-2 > li { counter-increment: connectives-73-1-1-2; }
-#connectives-73-2-1-2 { counter-set: connectives-73-2-1-2 0; }
-#connectives-73-2-1-2 > li::marker { content: ""counter(connectives-73-2-1-2,lower-alpha)""; }
-#connectives-73-2-1-2 > li { counter-increment: connectives-73-2-1-2; }
-#connectives-73-3-1-2 { counter-set: connectives-73-3-1-2 0; }
-#connectives-73-3-1-2 > li::marker { content: ""counter(connectives-73-3-1-2,lower-alpha)""; }
-#connectives-73-3-1-2 > li { counter-increment: connectives-73-3-1-2; }
-#ER_onlyandnot-1-2 { counter-set: ER_onlyandnot-1-2 0; }
-#ER_onlyandnot-1-2 > li::marker { content: ""counter(ER_onlyandnot-1-2,lower-alpha)""; }
-#ER_onlyandnot-1-2 > li { counter-increment: ER_onlyandnot-1-2; }
-#connectives-73-5-1-2 { counter-set: connectives-73-5-1-2 0; }
-#connectives-73-5-1-2 > li::marker { content: ""counter(connectives-73-5-1-2,lower-alpha)""; }
-#connectives-73-5-1-2 > li { counter-increment: connectives-73-5-1-2; }
-#setnotation-22-4-1-2 { counter-set: setnotation-22-4-1-2 0; }
-#setnotation-22-4-1-2 > li::marker { content: ""counter(setnotation-22-4-1-2,lower-alpha)""; }
-#setnotation-22-4-1-2 > li { counter-increment: setnotation-22-4-1-2; }
-#setnotation-22-5-1-2 { counter-set: setnotation-22-5-1-2 0; }
-#setnotation-22-5-1-2 > li::marker { content: ""counter(setnotation-22-5-1-2,lower-alpha)""; }
-#setnotation-22-5-1-2 > li { counter-increment: setnotation-22-5-1-2; }
-#E_multquant1-2-2 { counter-set: E_multquant1-2-2 0; }
-#E_multquant1-2-2 > li::marker { content: ""counter(E_multquant1-2-2,lower-alpha)""; }
-#E_multquant1-2-2 > li { counter-increment: E_multquant1-2-2; }
-#quantifiers-6-14-3-1-2 { counter-set: quantifiers-6-14-3-1-2 0; }
-#quantifiers-6-14-3-1-2 > li::marker { content: ""counter(quantifiers-6-14-3-1-2,lower-alpha)""; }
-#quantifiers-6-14-3-1-2 > li { counter-increment: quantifiers-6-14-3-1-2; }
-#quantifiers-6-14-4-1-2 { counter-set: quantifiers-6-14-4-1-2 0; }
-#quantifiers-6-14-4-1-2 > li::marker { content: ""counter(quantifiers-6-14-4-1-2,lower-alpha)""; }
-#quantifiers-6-14-4-1-2 > li { counter-increment: quantifiers-6-14-4-1-2; }
-#quantifiers-6-14-5-1-2 { counter-set: quantifiers-6-14-5-1-2 0; }
-#quantifiers-6-14-5-1-2 > li::marker { content: ""counter(quantifiers-6-14-5-1-2,lower-alpha)""; }
-#quantifiers-6-14-5-1-2 > li { counter-increment: quantifiers-6-14-5-1-2; }
-#quantifiers-6-14-6-1-2 { counter-set: quantifiers-6-14-6-1-2 0; }
-#quantifiers-6-14-6-1-2 > li::marker { content: ""counter(quantifiers-6-14-6-1-2,lower-alpha)""; }
-#quantifiers-6-14-6-1-2 > li { counter-increment: quantifiers-6-14-6-1-2; }
-#quantifiers-6-14-7-1-2 { counter-set: quantifiers-6-14-7-1-2 0; }
-#quantifiers-6-14-7-1-2 > li::marker { content: ""counter(quantifiers-6-14-7-1-2,lower-alpha)""; }
-#quantifiers-6-14-7-1-2 > li { counter-increment: quantifiers-6-14-7-1-2; }
-#quantifiers-6-14-8-1-2 { counter-set: quantifiers-6-14-8-1-2 0; }
-#quantifiers-6-14-8-1-2 > li::marker { content: ""counter(quantifiers-6-14-8-1-2,lower-alpha)""; }
-#quantifiers-6-14-8-1-2 > li { counter-increment: quantifiers-6-14-8-1-2; }
-#conditionals-33-1-1-2 { counter-set: conditionals-33-1-1-2 0; }
-#conditionals-33-1-1-2 > li::marker { content: ""counter(conditionals-33-1-1-2,lower-alpha)""; }
-#conditionals-33-1-1-2 > li { counter-increment: conditionals-33-1-1-2; }
-#conditionals-33-2-1-2 { counter-set: conditionals-33-2-1-2 0; }
-#conditionals-33-2-1-2 > li::marker { content: ""counter(conditionals-33-2-1-2,lower-alpha)""; }
-#conditionals-33-2-1-2 > li { counter-increment: conditionals-33-2-1-2; }
-#conditionals-33-3-1-2 { counter-set: conditionals-33-3-1-2 0; }
-#conditionals-33-3-1-2 > li::marker { content: ""counter(conditionals-33-3-1-2,lower-alpha)""; }
-#conditionals-33-3-1-2 > li { counter-increment: conditionals-33-3-1-2; }
-#conditionals-33-4-1-2 { counter-set: conditionals-33-4-1-2 0; }
-#conditionals-33-4-1-2 > li::marker { content: ""counter(conditionals-33-4-1-2,lower-alpha)""; }
-#conditionals-33-4-1-2 > li { counter-increment: conditionals-33-4-1-2; }
-#conditionals-33-5-1-2 { counter-set: conditionals-33-5-1-2 0; }
-#conditionals-33-5-1-2 > li::marker { content: ""counter(conditionals-33-5-1-2,lower-alpha)""; }
-#conditionals-33-5-1-2 > li { counter-increment: conditionals-33-5-1-2; }
-#directproof-29-1-1-2 { counter-set: directproof-29-1-1-2 0; }
-#directproof-29-1-1-2 > li::marker { content: ""counter(directproof-29-1-1-2,lower-alpha)""; }
-#directproof-29-1-1-2 > li { counter-increment: directproof-29-1-1-2; }
-#directproof-29-11-1-2 { counter-set: directproof-29-11-1-2 0; }
-#directproof-29-11-1-2 > li::marker { content: ""counter(directproof-29-11-1-2,lower-alpha)""; }
-#directproof-29-11-1-2 > li { counter-increment: directproof-29-11-1-2; }
-#moredirect-7-1-1-2 { counter-set: moredirect-7-1-1-2 0; }
-#moredirect-7-1-1-2 > li::marker { content: ""counter(moredirect-7-1-1-2,lower-alpha)""; }
-#moredirect-7-1-1-2 > li { counter-increment: moredirect-7-1-1-2; }
-#moredirect-7-4-1-2 { counter-set: moredirect-7-4-1-2 0; }
-#moredirect-7-4-1-2 > li::marker { content: "("counter(moredirect-7-4-1-2,lower-alpha)")"; }
-#moredirect-7-4-1-2 > li { counter-increment: moredirect-7-4-1-2; }
-#ER_averagerat-1-2 { counter-set: ER_averagerat-1-2 0; }
-#ER_averagerat-1-2 > li::marker { content: ""counter(ER_averagerat-1-2,lower-alpha)""; }
-#ER_averagerat-1-2 > li { counter-increment: ER_averagerat-1-2; }
-#moredirect-7-7-1-2 { counter-set: moredirect-7-7-1-2 0; }
-#moredirect-7-7-1-2 > li::marker { content: ""counter(moredirect-7-7-1-2,lower-alpha)""; }
-#moredirect-7-7-1-2 > li { counter-increment: moredirect-7-7-1-2; }
-#moredirect-7-9-1-2 { counter-set: moredirect-7-9-1-2 0; }
-#moredirect-7-9-1-2 > li::marker { content: ""counter(moredirect-7-9-1-2,lower-alpha)""; }
-#moredirect-7-9-1-2 > li { counter-increment: moredirect-7-9-1-2; }
-#cases-31-1-1-2 { counter-set: cases-31-1-1-2 0; }
-#cases-31-1-1-2 > li::marker { content: ""counter(cases-31-1-1-2,lower-alpha)""; }
-#cases-31-1-1-2 > li { counter-increment: cases-31-1-1-2; }
-#SS_twoproofs-18-1-1-2 { counter-set: SS_twoproofs-18-1-1-2 0; }
-#SS_twoproofs-18-1-1-2 > li::marker { content: ""counter(SS_twoproofs-18-1-1-2,lower-alpha)""; }
-#SS_twoproofs-18-1-1-2 > li { counter-increment: SS_twoproofs-18-1-1-2; }
-#SS_twoproofs-18-2-1-2 { counter-set: SS_twoproofs-18-2-1-2 0; }
-#SS_twoproofs-18-2-1-2 > li::marker { content: ""counter(SS_twoproofs-18-2-1-2,lower-alpha)""; }
-#SS_twoproofs-18-2-1-2 > li { counter-increment: SS_twoproofs-18-2-1-2; }
-#SS_twoproofs-18-3-1-2 { counter-set: SS_twoproofs-18-3-1-2 0; }
-#SS_twoproofs-18-3-1-2 > li::marker { content: ""counter(SS_twoproofs-18-3-1-2,lower-alpha)""; }
-#SS_twoproofs-18-3-1-2 > li { counter-increment: SS_twoproofs-18-3-1-2; }
-#SS_twoproofs-18-4-1-2 { counter-set: SS_twoproofs-18-4-1-2 0; }
-#SS_twoproofs-18-4-1-2 > li::marker { content: ""counter(SS_twoproofs-18-4-1-2,lower-alpha)""; }
-#SS_twoproofs-18-4-1-2 > li { counter-increment: SS_twoproofs-18-4-1-2; }
-#SS_twoproofs-18-5-1-2 { counter-set: SS_twoproofs-18-5-1-2 0; }
-#SS_twoproofs-18-5-1-2 > li::marker { content: ""counter(SS_twoproofs-18-5-1-2,lower-alpha)""; }
-#SS_twoproofs-18-5-1-2 > li { counter-increment: SS_twoproofs-18-5-1-2; }
-#B_propsums-2-1 { counter-set: B_propsums-2-1 0; }
-#B_propsums-2-1 > li::marker { content: ""counter(B_propsums-2-1,decimal)""; }
-#B_propsums-2-1 > li { counter-increment: B_propsums-2-1; }
-#summation-27-1-1-2 { counter-set: summation-27-1-1-2 0; }
-#summation-27-1-1-2 > li::marker { content: ""counter(summation-27-1-1-2,lower-alpha)""; }
-#summation-27-1-1-2 > li { counter-increment: summation-27-1-1-2; }
-#summation-27-2-1-2 { counter-set: summation-27-2-1-2 0; }
-#summation-27-2-1-2 > li::marker { content: ""counter(summation-27-2-1-2,lower-alpha)""; }
-#summation-27-2-1-2 > li { counter-increment: summation-27-2-1-2; }
-#summation-27-3-1-2 { counter-set: summation-27-3-1-2 0; }
-#summation-27-3-1-2 > li::marker { content: ""counter(summation-27-3-1-2,lower-alpha)""; }
-#summation-27-3-1-2 > li { counter-increment: summation-27-3-1-2; }
-#summation-27-8-1-2 { counter-set: summation-27-8-1-2 0; }
-#summation-27-8-1-2 > li::marker { content: ""counter(summation-27-8-1-2,lower-alpha)""; }
-#summation-27-8-1-2 > li { counter-increment: summation-27-8-1-2; }
-#B_induction-3-4 { counter-set: B_induction-3-4 0; }
-#B_induction-3-4 > li::marker { content: ""counter(B_induction-3-4,decimal)""; }
-#B_induction-3-4 > li { counter-increment: B_induction-3-4; }
-#induction-6-1 { counter-set: induction-6-1 0; }
-#induction-6-1 > li::marker { content: "("counter(induction-6-1,decimal)")"; }
-#induction-6-1 > li { counter-increment: induction-6-1; }
-#ER_indpowersof2-1-2 { counter-set: ER_indpowersof2-1-2 0; }
-#ER_indpowersof2-1-2 > li::marker { content: ""counter(ER_indpowersof2-1-2,lower-alpha)""; }
-#ER_indpowersof2-1-2 > li { counter-increment: ER_indpowersof2-1-2; }
-#B_strongind-4-3 { counter-set: B_strongind-4-3 0; }
-#B_strongind-4-3 > li::marker { content: ""counter(B_strongind-4-3,decimal)""; }
-#B_strongind-4-3 > li { counter-increment: B_strongind-4-3; }
-#E_domainqexist1-3-1 { counter-set: E_domainqexist1-3-1 0; }
-#E_domainqexist1-3-1 > li::marker { content: ""counter(E_domainqexist1-3-1,lower-alpha)""; }
-#E_domainqexist1-3-1 > li { counter-increment: E_domainqexist1-3-1; }
-#B_pfexistential-3-3 { counter-set: B_pfexistential-3-3 0; }
-#B_pfexistential-3-3 > li::marker { content: ""counter(B_pfexistential-3-3,decimal)""; }
-#B_pfexistential-3-3 > li { counter-increment: B_pfexistential-3-3; }
-#B_pfunique-3-3 { counter-set: B_pfunique-3-3 0; }
-#B_pfunique-3-3 > li::marker { content: ""counter(B_pfunique-3-3,decimal)""; }
-#B_pfunique-3-3 > li { counter-increment: B_pfunique-3-3; }
-#existunique-23-1 { counter-set: existunique-23-1 0; }
-#existunique-23-1 > li::marker { content: ""counter(existunique-23-1,decimal)""; }
-#existunique-23-1 > li { counter-increment: existunique-23-1; }
-#E_wop-3-2 { counter-set: E_wop-3-2 0; }
-#E_wop-3-2 > li::marker { content: ""counter(E_wop-3-2,decimal)""; }
-#E_wop-3-2 > li { counter-increment: E_wop-3-2; }
-#E_setnotevarious-2 { counter-set: E_setnotevarious-2 0; }
-#E_setnotevarious-2 > li::marker { content: ""counter(E_setnotevarious-2,lower-alpha)""; }
-#E_setnotevarious-2 > li { counter-increment: E_setnotevarious-2; }
-#E_setops-3-2 { counter-set: E_setops-3-2 0; }
-#E_setops-3-2 > li::marker { content: ""counter(E_setops-3-2,lower-alpha)""; }
-#E_setops-3-2 > li { counter-increment: E_setops-3-2; }
-#SS_setproofs-3-3 { counter-set: SS_setproofs-3-3 0; }
-#SS_setproofs-3-3 > li::marker { content: ""counter(SS_setproofs-3-3,decimal)""; }
-#SS_setproofs-3-3 > li { counter-increment: SS_setproofs-3-3; }
-#L_SetIdent-4-4 { counter-set: L_SetIdent-4-4 0; }
-#L_SetIdent-4-4 > li::marker { content: ""counter(L_SetIdent-4-4,decimal)""; }
-#L_SetIdent-4-4 > li { counter-increment: L_SetIdent-4-4; }
-#SS_setproofs-25-1-1-2 { counter-set: SS_setproofs-25-1-1-2 0; }
-#SS_setproofs-25-1-1-2 > li::marker { content: ""counter(SS_setproofs-25-1-1-2,lower-alpha)""; }
-#SS_setproofs-25-1-1-2 > li { counter-increment: SS_setproofs-25-1-1-2; }
-#SS_setproofs-25-2-1-2 { counter-set: SS_setproofs-25-2-1-2 0; }
-#SS_setproofs-25-2-1-2 > li::marker { content: ""counter(SS_setproofs-25-2-1-2,lower-alpha)""; }
-#SS_setproofs-25-2-1-2 > li { counter-increment: SS_setproofs-25-2-1-2; }
-#SS_setproofs-25-3-1-2 { counter-set: SS_setproofs-25-3-1-2 0; }
-#SS_setproofs-25-3-1-2 > li::marker { content: ""counter(SS_setproofs-25-3-1-2,lower-alpha)""; }
-#SS_setproofs-25-3-1-2 > li { counter-increment: SS_setproofs-25-3-1-2; }
-#SS_setproofs-25-4-1-2 { counter-set: SS_setproofs-25-4-1-2 0; }
-#SS_setproofs-25-4-1-2 > li::marker { content: ""counter(SS_setproofs-25-4-1-2,lower-alpha)""; }
-#SS_setproofs-25-4-1-2 > li { counter-increment: SS_setproofs-25-4-1-2; }
-#SS_setproofs-25-5-1-2 { counter-set: SS_setproofs-25-5-1-2 0; }
-#SS_setproofs-25-5-1-2 > li::marker { content: ""counter(SS_setproofs-25-5-1-2,lower-alpha)""; }
-#SS_setproofs-25-5-1-2 > li { counter-increment: SS_setproofs-25-5-1-2; }
-#SS_setproofs-25-6-1-2 { counter-set: SS_setproofs-25-6-1-2 0; }
-#SS_setproofs-25-6-1-2 > li::marker { content: ""counter(SS_setproofs-25-6-1-2,lower-alpha)""; }
-#SS_setproofs-25-6-1-2 > li { counter-increment: SS_setproofs-25-6-1-2; }
-#SS_setproofs-25-7-1-2 { counter-set: SS_setproofs-25-7-1-2 0; }
-#SS_setproofs-25-7-1-2 > li::marker { content: ""counter(SS_setproofs-25-7-1-2,lower-alpha)""; }
-#SS_setproofs-25-7-1-2 > li { counter-increment: SS_setproofs-25-7-1-2; }
-#SS_setproofs-25-15-1-2 { counter-set: SS_setproofs-25-15-1-2 0; }
-#SS_setproofs-25-15-1-2 > li::marker { content: ""counter(SS_setproofs-25-15-1-2,lower-alpha)""; }
-#SS_setproofs-25-15-1-2 > li { counter-increment: SS_setproofs-25-15-1-2; }
-#E_notfunctionimages-2-1 { counter-set: E_notfunctionimages-2-1 0; }
-#E_notfunctionimages-2-1 > li::marker { content: ""counter(E_notfunctionimages-2-1,lower-alpha)""; }
-#E_notfunctionimages-2-1 > li { counter-increment: E_notfunctionimages-2-1; }
-#E_addasfn-3-1 { counter-set: E_addasfn-3-1 0; }
-#E_addasfn-3-1 > li::marker { content: ""counter(E_addasfn-3-1,lower-alpha)""; }
-#E_addasfn-3-1 > li { counter-increment: E_addasfn-3-1; }
-#functions-45-1-1-2 { counter-set: functions-45-1-1-2 0; }
-#functions-45-1-1-2 > li::marker { content: ""counter(functions-45-1-1-2,lower-alpha)""; }
-#functions-45-1-1-2 > li { counter-increment: functions-45-1-1-2; }
-#functions-45-2-1-2 { counter-set: functions-45-2-1-2 0; }
-#functions-45-2-1-2 > li::marker { content: ""counter(functions-45-2-1-2,lower-alpha)""; }
-#functions-45-2-1-2 > li { counter-increment: functions-45-2-1-2; }
-#functions-45-3-1-2 { counter-set: functions-45-3-1-2 0; }
-#functions-45-3-1-2 > li::marker { content: ""counter(functions-45-3-1-2,lower-alpha)""; }
-#functions-45-3-1-2 > li { counter-increment: functions-45-3-1-2; }
-#functions-45-4-1-2 { counter-set: functions-45-4-1-2 0; }
-#functions-45-4-1-2 > li::marker { content: ""counter(functions-45-4-1-2,lower-alpha)""; }
-#functions-45-4-1-2 > li { counter-increment: functions-45-4-1-2; }
-#functions-45-5-1-2 { counter-set: functions-45-5-1-2 0; }
-#functions-45-5-1-2 > li::marker { content: ""counter(functions-45-5-1-2,lower-alpha)""; }
-#functions-45-5-1-2 > li { counter-increment: functions-45-5-1-2; }
-#functions-45-7-1-3 { counter-set: functions-45-7-1-3 0; }
-#functions-45-7-1-3 > li::marker { content: ""counter(functions-45-7-1-3,lower-alpha)""; }
-#functions-45-7-1-3 > li { counter-increment: functions-45-7-1-3; }
-#functions-45-8-1-2 { counter-set: functions-45-8-1-2 0; }
-#functions-45-8-1-2 > li::marker { content: ""counter(functions-45-8-1-2,lower-alpha)""; }
-#functions-45-8-1-2 > li { counter-increment: functions-45-8-1-2; }
-#functions-45-9-1-2 { counter-set: functions-45-9-1-2 0; }
-#functions-45-9-1-2 > li::marker { content: ""counter(functions-45-9-1-2,lower-alpha)""; }
-#functions-45-9-1-2 > li { counter-increment: functions-45-9-1-2; }
-#functions-45-10-1-3 { counter-set: functions-45-10-1-3 0; }
-#functions-45-10-1-3 > li::marker { content: ""counter(functions-45-10-1-3,lower-alpha)""; }
-#functions-45-10-1-3 > li { counter-increment: functions-45-10-1-3; }
-#functions-45-11-1-3 { counter-set: functions-45-11-1-3 0; }
-#functions-45-11-1-3 > li::marker { content: ""counter(functions-45-11-1-3,lower-alpha)""; }
-#functions-45-11-1-3 > li { counter-increment: functions-45-11-1-3; }
-#functions-45-12-1-2 { counter-set: functions-45-12-1-2 0; }
-#functions-45-12-1-2 > li::marker { content: ""counter(functions-45-12-1-2,lower-alpha)""; }
-#functions-45-12-1-2 > li { counter-increment: functions-45-12-1-2; }
-#E_equivclasses-2-3 { counter-set: E_equivclasses-2-3 0; }
-#E_equivclasses-2-3 > li::marker { content: ""counter(E_equivclasses-2-3,lower-alpha)""; }
-#E_equivclasses-2-3 > li { counter-increment: E_equivclasses-2-3; }
-#D_partition-1-1-6 { counter-set: D_partition-1-1-6 0; }
-#D_partition-1-1-6 > li::marker { content: ""counter(D_partition-1-1-6,decimal)""; }
-#D_partition-1-1-6 > li { counter-increment: D_partition-1-1-6; }
-#E_equivclasses2-4-2 { counter-set: E_equivclasses2-4-2 0; }
-#E_equivclasses2-4-2 > li::marker { content: ""counter(E_equivclasses2-4-2,lower-alpha)""; }
-#E_equivclasses2-4-2 > li { counter-increment: E_equivclasses2-4-2; }
-#SS_equivrelations-47-1-1-3 { counter-set: SS_equivrelations-47-1-1-3 0; }
-#SS_equivrelations-47-1-1-3 > li::marker { content: ""counter(SS_equivrelations-47-1-1-3,lower-alpha)""; }
-#SS_equivrelations-47-1-1-3 > li { counter-increment: SS_equivrelations-47-1-1-3; }
-#SS_equivrelations-47-2-1-3 { counter-set: SS_equivrelations-47-2-1-3 0; }
-#SS_equivrelations-47-2-1-3 > li::marker { content: ""counter(SS_equivrelations-47-2-1-3,lower-alpha)""; }
-#SS_equivrelations-47-2-1-3 > li { counter-increment: SS_equivrelations-47-2-1-3; }
-#SS_equivrelations-47-4-1-2 { counter-set: SS_equivrelations-47-4-1-2 0; }
-#SS_equivrelations-47-4-1-2 > li::marker { content: ""counter(SS_equivrelations-47-4-1-2,lower-alpha)""; }
-#SS_equivrelations-47-4-1-2 > li { counter-increment: SS_equivrelations-47-4-1-2; }
-#SS_equivrelations-47-5-1-2 { counter-set: SS_equivrelations-47-5-1-2 0; }
-#SS_equivrelations-47-5-1-2 > li::marker { content: ""counter(SS_equivrelations-47-5-1-2,lower-alpha)""; }
-#SS_equivrelations-47-5-1-2 > li { counter-increment: SS_equivrelations-47-5-1-2; }
-#SS_equivrelations-47-6-1-2 { counter-set: SS_equivrelations-47-6-1-2 0; }
-#SS_equivrelations-47-6-1-2 > li::marker { content: ""counter(SS_equivrelations-47-6-1-2,lower-alpha)""; }
-#SS_equivrelations-47-6-1-2 > li { counter-increment: SS_equivrelations-47-6-1-2; }
-#SS_equivrelations-47-7-1-2 { counter-set: SS_equivrelations-47-7-1-2 0; }
-#SS_equivrelations-47-7-1-2 > li::marker { content: ""counter(SS_equivrelations-47-7-1-2,lower-alpha)""; }
-#SS_equivrelations-47-7-1-2 > li { counter-increment: SS_equivrelations-47-7-1-2; }
-#SS_equivrelations-47-8-1-2 { counter-set: SS_equivrelations-47-8-1-2 0; }
-#SS_equivrelations-47-8-1-2 > li::marker { content: ""counter(SS_equivrelations-47-8-1-2,lower-alpha)""; }
-#SS_equivrelations-47-8-1-2 > li { counter-increment: SS_equivrelations-47-8-1-2; }
-#SS_equivrelations-47-9-1-2 { counter-set: SS_equivrelations-47-9-1-2 0; }
-#SS_equivrelations-47-9-1-2 > li::marker { content: ""counter(SS_equivrelations-47-9-1-2,lower-alpha)""; }
-#SS_equivrelations-47-9-1-2 > li { counter-increment: SS_equivrelations-47-9-1-2; }
-#D_RSTprop2-1-1-3 { counter-set: D_RSTprop2-1-1-3 0; }
-#D_RSTprop2-1-1-3 > li::marker { content: ""counter(D_RSTprop2-1-1-3,decimal)""; }
-#D_RSTprop2-1-1-3 > li { counter-increment: D_RSTprop2-1-1-3; }
-#T_totalorder-1-1-4 { counter-set: T_totalorder-1-1-4 0; }
-#T_totalorder-1-1-4 > li::marker { content: ""counter(T_totalorder-1-1-4,decimal)""; }
-#T_totalorder-1-1-4 > li { counter-increment: T_totalorder-1-1-4; }
-#orders-33-1-1-2 { counter-set: orders-33-1-1-2 0; }
-#orders-33-1-1-2 > li::marker { content: ""counter(orders-33-1-1-2,lower-alpha)""; }
-#orders-33-1-1-2 > li { counter-increment: orders-33-1-1-2; }
-#orders-33-2-1-2 { counter-set: orders-33-2-1-2 0; }
-#orders-33-2-1-2 > li::marker { content: ""counter(orders-33-2-1-2,lower-alpha)""; }
-#orders-33-2-1-2 > li { counter-increment: orders-33-2-1-2; }
-#orders-33-3-1-2 { counter-set: orders-33-3-1-2 0; }
-#orders-33-3-1-2 > li::marker { content: ""counter(orders-33-3-1-2,lower-alpha)""; }
-#orders-33-3-1-2 > li { counter-increment: orders-33-3-1-2; }
-#orders-33-4-1-2 { counter-set: orders-33-4-1-2 0; }
-#orders-33-4-1-2 > li::marker { content: ""counter(orders-33-4-1-2,lower-alpha)""; }
-#orders-33-4-1-2 > li { counter-increment: orders-33-4-1-2; }
-#binomial9-30-2-1-1-1 { counter-set: binomial9-30-2-1-1-1 0; }
-#binomial9-30-2-1-1-1 > li::marker { content: ""counter(binomial9-30-2-1-1-1,lower-alpha)""; }
-#binomial9-30-2-1-1-1 > li { counter-increment: binomial9-30-2-1-1-1; }
-#cardinality-31-6-1-2 { counter-set: cardinality-31-6-1-2 0; }
-#cardinality-31-6-1-2 > li::marker { content: ""counter(cardinality-31-6-1-2,lower-alpha)""; }
-#cardinality-31-6-1-2 > li { counter-increment: cardinality-31-6-1-2; }
-</style>
+<script src="_static/prefix-runtime.42217a82c75796c8.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.7e141ad8414abf4a.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.f4ab138da65f4203.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
 </head>
 <body class="pretext book ignore-math">
-<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
-<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
-<h1 class="heading"><a href="IntroProofs.html"><span class="title">Introduction to Proofs:</span> <span class="subtitle">An Active Exploration of Mathematical Language</span></a></h1>
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="IntroProofs.html"><span class="title">Introduction to Proofs</span> <span class="subtitle">An Active Exploration of Mathematical Language</span></a></h1>
 <p class="byline">Jennifer Firkins Nordstrom</p>
-</div>
-</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
 <button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-2.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
 <div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
@@ -595,204 +316,344 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="quantifiers"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">2.2</span><span class="space"> </span><span class="title">Quantifiers</span>
 </h2>
-<section class="introduction" id="quantifiers-3"><div class="para" id="quantifiers-3-1">As we move into proving mathematical statements, we need to better understand the statements themselves. In your previous work with mathematics, you’ve often used variables and equations.</div>
-<div class="para" id="quantifiers-3-2">Think of some examples of variables  you’ve seen in other math classes. What do these variables represent? Probably, the first example that comes to mind is something from an algebra class, such as <span class="process-math">\(y=x^2\)</span> or <span class="process-math">\(f(x)=3x+2\text{.}\)</span> You may also think of examples such as solving for <span class="process-math">\(x\)</span> in an expression such as <span class="process-math">\(x^2=4\text{.}\)</span> We use variables in mathematical statements to represent quantities that can vary. But we also use them to be more precise. Think of how much more confusing the first statement would be if we had to write it as "a number squared equals another number;" or the second statement, "the function which multiplies a number by 3 and adds 2." When you first learned varables, you probably WERE introduced to them in terms of sentences, but eventually, you got used to what the symbols mean.</div>
-<div class="para" id="quantifiers-3-3">In this class, we will rarely be interested in mathematical equations. We want to move to the common format of mathematical statements often found when describing mathematical defintions or theorems.</div>
+<section class="introduction" id="quantifiers-3"><div class="para" id="quantifiers-3-1">As we move into proving mathematical statements, we need to better understand the statements themselves. In your previous work with mathematics, you’ve often used variables and equations.<div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="quantifiers-3-2">Think of some examples of variables  you’ve seen in other math classes. What do these variables represent? Probably, the first example that comes to mind is something from an algebra class, such as <span class="process-math">\(y=x^2\)</span> or <span class="process-math">\(f(x)=3x+2\text{.}\)</span> You may also think of examples such as solving for <span class="process-math">\(x\)</span> in an expression such as <span class="process-math">\(x^2=4\text{.}\)</span> We use variables in mathematical statements to represent quantities that can vary. But we also use them to be more precise. Think of how much more confusing the first statement would be if we had to write it as "a number squared equals another number;" or the second statement, "the function which multiplies a number by 3 and adds 2." When you first learned varables, you probably WERE introduced to them in terms of sentences, but eventually, you got used to what the symbols mean.<div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="quantifiers-3-3">In this class, we will rarely be interested in mathematical equations. We want to move to the common format of mathematical statements often found when describing mathematical defintions or theorems.<div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para logical" id="quantifiers-3-4">
 <div class="para">Common forms of mathematical statements:</div>
 <ul class="disc" id="quantifiers-3-4-1">
 <li id="quantifiers-3-4-1-1">
-<span class="heading"><span class="title">Universal Statements.</span></span><div class="para" id="quantifiers-3-4-1-1-2">We use these statements when a property is true for all things in a set.</div>
-<div class="para" id="quantifiers-3-4-1-1-3">Example: Every math student takes Calculus.</div>
+<span class="heading"><span class="title">Universal Statements.</span></span><div class="para" id="quantifiers-3-4-1-1-2">We use these statements when a property is true for all things in a set.<div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-3-4-1-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="quantifiers-3-4-1-1-3">Example: Every math student takes Calculus.<div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-3-4-1-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Universal Statements"><a href="#quantifiers-3-4-1-1" title="Copy heading and permalink for Item: Universal Statements" aria-label="Copy heading and permalink for Item: Universal Statements">🔗</a></div>
 </li>
 <li id="quantifiers-3-4-1-2">
-<span class="heading"><span class="title">Conditional Statements.</span></span><div class="para" id="quantifiers-3-4-1-2-2">These statements usually have the form “if...then...”.</div>
-<div class="para" id="quantifiers-3-4-1-2-3">Example: If a student majors in Computer Science, then she takes Discrete Math.</div>
+<span class="heading"><span class="title">Conditional Statements.</span></span><div class="para" id="quantifiers-3-4-1-2-2">These statements usually have the form “if...then...”.<div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-3-4-1-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="quantifiers-3-4-1-2-3">Example: If a student majors in Computer Science, then she takes Discrete Math.<div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-3-4-1-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Conditional Statements"><a href="#quantifiers-3-4-1-2" title="Copy heading and permalink for Item: Conditional Statements" aria-label="Copy heading and permalink for Item: Conditional Statements">🔗</a></div>
 </li>
 <li id="quantifiers-3-4-1-3">
-<span class="heading"><span class="title">Existential Statements.</span></span><div class="para" id="quantifiers-3-4-1-3-2">We use these statements when somthing exists with a particular property.</div>
-<div class="para" id="quantifiers-3-4-1-3-3">Example: There exists a Linfield class that meets at 9am on Mondays.</div>
+<span class="heading"><span class="title">Existential Statements.</span></span><div class="para" id="quantifiers-3-4-1-3-2">We use these statements when somthing exists with a particular property.<div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-3-4-1-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="quantifiers-3-4-1-3-3">Example: There exists a Linfield class that meets at 9am on Mondays.<div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-3-4-1-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item: Existential Statements"><a href="#quantifiers-3-4-1-3" title="Copy heading and permalink for Item: Existential Statements" aria-label="Copy heading and permalink for Item: Existential Statements">🔗</a></div>
 </li>
 </ul>
-<div class="para"><div class="para" id="quantifiers-3-4-2">Many mathematical statements use variables. For example, <span class="process-math">\(x+3/2=4\)</span> is not a statement since it has no truth value. However, if we say, “there exists <span class="process-math">\(x\)</span> such that <span class="process-math">\(x+3/2=4\)</span>” or “for all <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(x+3/2=4\)</span>”, and we know what set <span class="process-math">\(x\)</span> belongs to, then we can decide whether these statements are true or false.</div></div>
+<div class="para"><div class="para" id="quantifiers-3-4-2">Many mathematical statements use variables. For example, <span class="process-math">\(x+3/2=4\)</span> is not a statement since it has no truth value. However, if we say, “there exists <span class="process-math">\(x\)</span> such that <span class="process-math">\(x+3/2=4\)</span>” or “for all <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(x+3/2=4\)</span>”, and we know what set <span class="process-math">\(x\)</span> belongs to, then we can decide whether these statements are true or false.<div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-3-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="activity project-like" id="A_statetypes"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Each Type.</span>
 </h3>
-<div class="para" id="A_statetypes-2-1">Give an additional example of each type of statement.</div></article></section><section class="subsection" id="SS_quantifiers"><h3 class="heading hide-type">
+<div class="para" id="A_statetypes-2-1">Give an additional example of each type of statement.<div class="autopermalink" data-description="Paragraph"><a href="#A_statetypes-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Activity 2.2.1: Each Type"><a href="#A_statetypes" title="Copy heading and permalink for Activity 2.2.1: Each Type" aria-label="Copy heading and permalink for Activity 2.2.1: Each Type">🔗</a></div></article></section><section class="subsection" id="SS_quantifiers"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.2.1</span><span class="space"> </span><span class="title">Quantified Statements</span>
 </h3>
-<div class="para" id="SS_quantifiers-2">We want to be able to work with generic statements, like <span class="process-math">\(p\)</span> and <span class="process-math">\(q\text{,}\)</span> but also with variables. So instead of <span class="process-math">\(p\text{,}\)</span> we will use <span class="process-math">\(P(x)\text{.}\)</span> An expression, <span class="process-math">\(P(x)\text{,}\)</span> represents some property or expression about <span class="process-math">\(x\text{.}\)</span> We call <span class="process-math">\(P(x)\)</span> the <dfn class="terminology">predicate</dfn>.</div>
+<div class="para" id="SS_quantifiers-2">We want to be able to work with generic statements, like <span class="process-math">\(p\)</span> and <span class="process-math">\(q\text{,}\)</span> but also with variables. So instead of <span class="process-math">\(p\text{,}\)</span> we will use <span class="process-math">\(P(x)\text{.}\)</span> An expression, <span class="process-math">\(P(x)\text{,}\)</span> represents some property or expression about <span class="process-math">\(x\text{.}\)</span> We call <span class="process-math">\(P(x)\)</span> the <dfn class="terminology">predicate</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#SS_quantifiers-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <details id="E_predicates" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Statements with Variables.</span>
-</h4></summary><article class="example example-like knowl__content"><div class="para" id="E_predicates-2">Let <span class="process-math">\(D=\mathbb{Z}\text{.}\)</span> Determine whether the statement “for all <span class="process-math">\(x\in D\text{,}\)</span> <span class="process-math">\(x+3/2=4\)</span>” is true or false.</div>
-<details id="E_predicates-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="E_predicates-3-1">Since <span class="process-math">\(x=5/2\)</span> is the only value satisfying the equation, certainly every integer does not satisfy the equation. The statement is false.</div></div></details><div class="para" id="E_predicates-4">Let <span class="process-math">\(D=\mathbb{R}\text{.}\)</span> Determine whether the statement “for all <span class="process-math">\(x\in D\text{,}\)</span> <span class="process-math">\(x+3/2=4\)</span>” is true or false.</div>
-<details id="E_predicates-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="E_predicates-5-1">Since <span class="process-math">\(x=5/2\)</span> is the only value satisfying the equation, certainly every real number does not satisfy the equation. The statement is false.</div></div></details><div class="para" id="E_predicates-6">Let <span class="process-math">\(D=\{5/2\}\text{.}\)</span> Determine whether the statement “for all <span class="process-math">\(x\in D\text{,}\)</span> <span class="process-math">\(x+3/2=4\)</span>” is true or false.</div>
-<details id="E_predicates-7" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="E_predicates-7-1">Since <span class="process-math">\(x=5/2\)</span> satisfies the equation, and is the only value in <span class="process-math">\(D\text{,}\)</span> the statement is true.</div></div></details><div class="para" id="E_predicates-8">In these examples, <span class="process-math">\(P(x)\)</span> is <span class="process-math">\(x+3/2=4\text{.}\)</span>
-</div></article></details><div class="para" id="SS_quantifiers-4">Our properties don’t just need to be mathematical, though. For example we could have a predicate such as <span class="process-math">\(P(x)\)</span> is “<span class="process-math">\(x\)</span> is a math major.” In this case the set of possible values for <span class="process-math">\(x\)</span> could be the set of students at Linfield, or the set of students in Introduction to Proofs. As we saw in <a href="quantifiers.html#E_predicates" class="xref" data-knowl="./knowl/xref/E_predicates.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.2.1: Statements with Variables">Example 2.2.1</a>, it is important that we define our set of interest, as changing the set can change whether the statement is true or false.</div>
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="E_predicates-2">Let <span class="process-math">\(D=\mathbb{Z}\text{.}\)</span> Determine whether the statement “for all <span class="process-math">\(x\in D\text{,}\)</span> <span class="process-math">\(x+3/2=4\)</span>” is true or false.<div class="autopermalink" data-description="Paragraph"><a href="#E_predicates-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="E_predicates-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="E_predicates-3-1">Since <span class="process-math">\(x=5/2\)</span> is the only value satisfying the equation, certainly every integer does not satisfy the equation. The statement is false.<div class="autopermalink" data-description="Paragraph"><a href="#E_predicates-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 2.2.1.1"><a href="#E_predicates-3" title="Copy heading and permalink for Answer 2.2.1.1" aria-label="Copy heading and permalink for Answer 2.2.1.1">🔗</a></div>
+</div></details><div class="para" id="E_predicates-4">Let <span class="process-math">\(D=\mathbb{R}\text{.}\)</span> Determine whether the statement “for all <span class="process-math">\(x\in D\text{,}\)</span> <span class="process-math">\(x+3/2=4\)</span>” is true or false.<div class="autopermalink" data-description="Paragraph"><a href="#E_predicates-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="E_predicates-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="E_predicates-5-1">Since <span class="process-math">\(x=5/2\)</span> is the only value satisfying the equation, certainly every real number does not satisfy the equation. The statement is false.<div class="autopermalink" data-description="Paragraph"><a href="#E_predicates-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 2.2.1.2"><a href="#E_predicates-5" title="Copy heading and permalink for Answer 2.2.1.2" aria-label="Copy heading and permalink for Answer 2.2.1.2">🔗</a></div>
+</div></details><div class="para" id="E_predicates-6">Let <span class="process-math">\(D=\{5/2\}\text{.}\)</span> Determine whether the statement “for all <span class="process-math">\(x\in D\text{,}\)</span> <span class="process-math">\(x+3/2=4\)</span>” is true or false.<div class="autopermalink" data-description="Paragraph"><a href="#E_predicates-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="E_predicates-7" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="E_predicates-7-1">Since <span class="process-math">\(x=5/2\)</span> satisfies the equation, and is the only value in <span class="process-math">\(D\text{,}\)</span> the statement is true.<div class="autopermalink" data-description="Paragraph"><a href="#E_predicates-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 2.2.1.3"><a href="#E_predicates-7" title="Copy heading and permalink for Answer 2.2.1.3" aria-label="Copy heading and permalink for Answer 2.2.1.3">🔗</a></div>
+</div></details><div class="para" id="E_predicates-8">In these examples, <span class="process-math">\(P(x)\)</span> is <span class="process-math">\(x+3/2=4\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_predicates-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 2.2.1: Statements with Variables"><a href="#E_predicates" title="Copy heading and permalink for Example 2.2.1: Statements with Variables" aria-label="Copy heading and permalink for Example 2.2.1: Statements with Variables">🔗</a></div></article></details><div class="para" id="SS_quantifiers-4">Our properties don’t just need to be mathematical, though. For example we could have a predicate such as <span class="process-math">\(P(x)\)</span> is “<span class="process-math">\(x\)</span> is a math major.” In this case the set of possible values for <span class="process-math">\(x\)</span> could be the set of students at Linfield, or the set of students in Introduction to Proofs. As we saw in <a href="quantifiers.html#E_predicates" class="xref" data-knowl="./knowl/xref/E_predicates.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.2.1: Statements with Variables">Example 2.2.1</a>, it is important that we define our set of interest, as changing the set can change whether the statement is true or false.<div class="autopermalink" data-description="Paragraph"><a href="#SS_quantifiers-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="assemblage assemblage-like" id="B_quantnotation"><h4 class="heading"><span class="title">Notation for Quantifiers.</span></h4>
-<div class="para logical" id="B_quantnotation-3"><ul class="disc" id="B_quantnotation-3-1">
+<div class="para logical" id="B_quantnotation-3">
+<ul class="disc" id="B_quantnotation-3-1">
 <li id="B_quantnotation-3-1-1">
 <span class="heading"><span class="title">Universal Quantifier.</span></span><div class="para" id="p-derived-B_quantnotation-3-1-1"> <span class="process-math">\(\forall\)</span>, read as “for all” or  “for every.”</div>
+<div class="autopermalink" data-description="Item: Universal Quantifier"><a href="#B_quantnotation-3-1-1" title="Copy heading and permalink for Item: Universal Quantifier" aria-label="Copy heading and permalink for Item: Universal Quantifier">🔗</a></div>
 </li>
 <li id="B_quantnotation-3-1-2">
 <span class="heading"><span class="title">Existential Quantifier.</span></span><div class="para" id="p-derived-B_quantnotation-3-1-2"> <span class="process-math">\(\exists\)</span>, read as “there exists” or  “for some.”</div>
+<div class="autopermalink" data-description="Item: Existential Quantifier"><a href="#B_quantnotation-3-1-2" title="Copy heading and permalink for Item: Existential Quantifier" aria-label="Copy heading and permalink for Item: Existential Quantifier">🔗</a></div>
 </li>
-</ul></div></article><div class="para" id="SS_quantifiers-6">A <dfn class="terminology">universal statement</dfn> has the form <span class="process-math">\(\forall x\in D, P(x)\text{.}\)</span>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#B_quantnotation-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="SS_quantifiers-7">To show a universal statement is <em class="alert">true</em>, you need to show all values in <span class="process-math">\(D\)</span> make <span class="process-math">\(P(x)\)</span> true. If your set is small, you can do this just by showing <span class="process-math">\(P(x)\)</span> is true for each <span class="process-math">\(x\text{.}\)</span> If <span class="process-math">\(D\)</span> is infinite, however, we will need more general techniques.</div>
-<div class="para" id="SS_quantifiers-8">To show a universal statement is <em class="alert">false</em>, you just need to find one value in <span class="process-math">\(D\)</span> which makes <span class="process-math">\(P(x)\)</span> false.</div>
-<div class="para" id="SS_quantifiers-9">An <dfn class="terminology">existential statement</dfn> has the form <span class="process-math">\(\exists x\in D, P(x)\text{.}\)</span>
+<div class="autopermalink" data-description="Assemblage: Notation for Quantifiers"><a href="#B_quantnotation" title="Copy heading and permalink for Assemblage: Notation for Quantifiers" aria-label="Copy heading and permalink for Assemblage: Notation for Quantifiers">🔗</a></div></article><div class="para" id="SS_quantifiers-6">A <dfn class="terminology">universal statement</dfn> has the form <span class="process-math">\(\forall x\in D, P(x)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#SS_quantifiers-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="SS_quantifiers-10">To show an existential statement is <em class="alert">true</em>, you just need to find one value in <span class="process-math">\(D\)</span> which makes <span class="process-math">\(P(x)\)</span> true.</div>
-<div class="para" id="SS_quantifiers-11">To show an existential statement is <em class="alert">false</em>, you need to show all values in <span class="process-math">\(D\)</span> make <span class="process-math">\(P(x)\)</span> false, or no values make it true. If your set is small, you can do this just by showing <span class="process-math">\(P(x)\)</span> is false for each <span class="process-math">\(x\text{.}\)</span> If <span class="process-math">\(D\)</span> is infinite, however, we will need more general techniques.</div>
+<div class="para" id="SS_quantifiers-7">To show a universal statement is <em class="alert">true</em>, you need to show all values in <span class="process-math">\(D\)</span> make <span class="process-math">\(P(x)\)</span> true. If your set is small, you can do this just by showing <span class="process-math">\(P(x)\)</span> is true for each <span class="process-math">\(x\text{.}\)</span> If <span class="process-math">\(D\)</span> is infinite, however, we will need more general techniques.<div class="autopermalink" data-description="Paragraph"><a href="#SS_quantifiers-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="SS_quantifiers-8">To show a universal statement is <em class="alert">false</em>, you just need to find one value in <span class="process-math">\(D\)</span> which makes <span class="process-math">\(P(x)\)</span> false.<div class="autopermalink" data-description="Paragraph"><a href="#SS_quantifiers-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="SS_quantifiers-9">An <dfn class="terminology">existential statement</dfn> has the form <span class="process-math">\(\exists x\in D, P(x)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#SS_quantifiers-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="SS_quantifiers-10">To show an existential statement is <em class="alert">true</em>, you just need to find one value in <span class="process-math">\(D\)</span> which makes <span class="process-math">\(P(x)\)</span> true.<div class="autopermalink" data-description="Paragraph"><a href="#SS_quantifiers-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="SS_quantifiers-11">To show an existential statement is <em class="alert">false</em>, you need to show all values in <span class="process-math">\(D\)</span> make <span class="process-math">\(P(x)\)</span> false, or no values make it true. If your set is small, you can do this just by showing <span class="process-math">\(P(x)\)</span> is false for each <span class="process-math">\(x\text{.}\)</span> If <span class="process-math">\(D\)</span> is infinite, however, we will need more general techniques.<div class="autopermalink" data-description="Paragraph"><a href="#SS_quantifiers-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="activity project-like" id="A_existT"><h4 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.2.2</span><span class="period">.</span><span class="space"> </span><span class="title">True Existential.</span>
 </h4>
-<div class="para" id="A_existT-2-1">Show the following statement is true: <span class="process-math">\(\exists x\in \mathbb{R}, 2x^2+1=5\text{.}\)</span>
-</div></article><article class="activity project-like" id="A_existF"><h4 class="heading">
+<div class="para" id="A_existT-2-1">Show the following statement is true: <span class="process-math">\(\exists x\in \mathbb{R}, 2x^2+1=5\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_existT-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Activity 2.2.2: True Existential"><a href="#A_existT" title="Copy heading and permalink for Activity 2.2.2: True Existential" aria-label="Copy heading and permalink for Activity 2.2.2: True Existential">🔗</a></div></article><article class="activity project-like" id="A_existF"><h4 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">False Existential.</span>
 </h4>
-<div class="para" id="A_existF-2-1">Show the following statement is false: <span class="process-math">\(\exists x\in \mathbb{Z}, 3x+5=6\text{.}\)</span>
-</div></article><article class="activity project-like" id="A_universalT"><h4 class="heading">
+<div class="para" id="A_existF-2-1">Show the following statement is false: <span class="process-math">\(\exists x\in \mathbb{Z}, 3x+5=6\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_existF-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Activity 2.2.3: False Existential"><a href="#A_existF" title="Copy heading and permalink for Activity 2.2.3: False Existential" aria-label="Copy heading and permalink for Activity 2.2.3: False Existential">🔗</a></div></article><article class="activity project-like" id="A_universalT"><h4 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.2.4</span><span class="period">.</span><span class="space"> </span><span class="title">True Universal.</span>
 </h4>
-<div class="para" id="A_universalT-2-1">Let <span class="process-math">\(D=\{2, 3, 4, 5\}\text{.}\)</span> Show the following statement is true: <span class="process-math">\(\forall x\in {D}, x^2&gt;2\text{.}\)</span>
-</div></article><article class="activity project-like" id="A_universalF"><h4 class="heading">
+<div class="para" id="A_universalT-2-1">Let <span class="process-math">\(D=\{2, 3, 4, 5\}\text{.}\)</span> Show the following statement is true: <span class="process-math">\(\forall x\in {D}, x^2&gt;2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_universalT-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Activity 2.2.4: True Universal"><a href="#A_universalT" title="Copy heading and permalink for Activity 2.2.4: True Universal" aria-label="Copy heading and permalink for Activity 2.2.4: True Universal">🔗</a></div></article><article class="activity project-like" id="A_universalF"><h4 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.2.5</span><span class="period">.</span><span class="space"> </span><span class="title">False Existential.</span>
 </h4>
-<div class="para" id="A_universalF-2-1">Let <span class="process-math">\(D=\{2, 3, 4, 5\}\text{.}\)</span> Show the following statement is false: <span class="process-math">\(\forall x\in D, x^2 &lt; 20\text{.}\)</span>
-</div></article><details id="E_translating" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<div class="para" id="A_universalF-2-1">Let <span class="process-math">\(D=\{2, 3, 4, 5\}\text{.}\)</span> Show the following statement is false: <span class="process-math">\(\forall x\in D, x^2 &lt; 20\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_universalF-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Activity 2.2.5: False Existential"><a href="#A_universalF" title="Copy heading and permalink for Activity 2.2.5: False Existential" aria-label="Copy heading and permalink for Activity 2.2.5: False Existential">🔗</a></div></article><details id="E_translating" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.2</span><span class="period">.</span><span class="space"> </span><span class="title">Translating Statements.</span>
-</h4></summary><article class="example example-like knowl__content"><div class="para" id="E_translating-2">Translate the statement using quantifiers and variables, “All positive real numbers have square roots greater than zero.”</div>
-<details id="E_translating-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><span class="process-math">\(\forall x\in \mathbb{R}^+, \sqrt{x}&gt;0.\)</span></div></details><div class="para" id="E_translating-4">Translate the statement using quantifiers and variables, “Nobody’s perfect.”</div>
-<details id="E_translating-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="E_translating-5-1">
-<span class="process-math">\(\forall x\in \{\textrm{people}\}, x\)</span> is not perfect.</div></div></details></article></details><article class="activity project-like" id="A_formaltrans"><h4 class="heading">
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="E_translating-2">Translate the statement using quantifiers and variables, “All positive real numbers have square roots greater than zero.”<div class="autopermalink" data-description="Paragraph"><a href="#E_translating-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="E_translating-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<span class="process-math">\(\forall x\in \mathbb{R}^+, \sqrt{x}&gt;0.\)</span><div class="autopermalink" data-description="Answer 2.2.2.1"><a href="#E_translating-3" title="Copy heading and permalink for Answer 2.2.2.1" aria-label="Copy heading and permalink for Answer 2.2.2.1">🔗</a></div>
+</div></details><div class="para" id="E_translating-4">Translate the statement using quantifiers and variables, “Nobody’s perfect.”<div class="autopermalink" data-description="Paragraph"><a href="#E_translating-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="E_translating-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="E_translating-5-1">
+<span class="process-math">\(\forall x\in \{\textrm{people}\}, x\)</span> is not perfect.<div class="autopermalink" data-description="Paragraph"><a href="#E_translating-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 2.2.2.2"><a href="#E_translating-5" title="Copy heading and permalink for Answer 2.2.2.2" aria-label="Copy heading and permalink for Answer 2.2.2.2">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 2.2.2: Translating Statements"><a href="#E_translating" title="Copy heading and permalink for Example 2.2.2: Translating Statements" aria-label="Copy heading and permalink for Example 2.2.2: Translating Statements">🔗</a></div></article></details><article class="activity project-like" id="A_formaltrans"><h4 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.2.6</span><span class="period">.</span><span class="space"> </span><span class="title">Translating a Statement.</span>
 </h4>
-<div class="para" id="A_formaltrans-2-1">Write the following statement formally using quantifiers and variables: Every differentiable function is continuous.</div></article><article class="activity project-like" id="A_moretrans"><h4 class="heading">
+<div class="para" id="A_formaltrans-2-1">Write the following statement formally using quantifiers and variables: Every differentiable function is continuous.<div class="autopermalink" data-description="Paragraph"><a href="#A_formaltrans-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Activity 2.2.6: Translating a Statement"><a href="#A_formaltrans" title="Copy heading and permalink for Activity 2.2.6: Translating a Statement" aria-label="Copy heading and permalink for Activity 2.2.6: Translating a Statement">🔗</a></div></article><article class="activity project-like" id="A_moretrans"><h4 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.2.7</span><span class="period">.</span><span class="space"> </span><span class="title">More Translation.</span>
 </h4>
-<div class="introduction" id="A_moretrans-2"><div class="para" id="A_moretrans-2-1">Write the following statements formally using quantifiers and variables.</div></div>
+<div class="introduction" id="A_moretrans-2"><div class="para" id="A_moretrans-2-1">Write the following statements formally using quantifiers and variables.<div class="autopermalink" data-description="Paragraph"><a href="#A_moretrans-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
 <article class="task exercise-like" id="A_moretrans-3"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para" id="A_moretrans-3-1">Some even integers are negative.</div></article><article class="task exercise-like" id="A_moretrans-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="A_moretrans-4-1">Everyone makes mistakes.</div></article><article class="task exercise-like" id="A_moretrans-5"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<div class="para" id="A_moretrans-5-1">Someone will get an A.</div></article></article></section><section class="subsection" id="SS_negquant"><h3 class="heading hide-type">
+<div class="para" id="A_moretrans-3-1">Some even integers are negative.<div class="autopermalink" data-description="Paragraph"><a href="#A_moretrans-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 2.2.7.a"><a href="#A_moretrans-3" title="Copy heading and permalink for Task 2.2.7.a" aria-label="Copy heading and permalink for Task 2.2.7.a">🔗</a></div></article><article class="task exercise-like" id="A_moretrans-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="A_moretrans-4-1">Everyone makes mistakes.<div class="autopermalink" data-description="Paragraph"><a href="#A_moretrans-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 2.2.7.b"><a href="#A_moretrans-4" title="Copy heading and permalink for Task 2.2.7.b" aria-label="Copy heading and permalink for Task 2.2.7.b">🔗</a></div></article><article class="task exercise-like" id="A_moretrans-5"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="A_moretrans-5-1">Someone will get an A.<div class="autopermalink" data-description="Paragraph"><a href="#A_moretrans-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 2.2.7.c"><a href="#A_moretrans-5" title="Copy heading and permalink for Task 2.2.7.c" aria-label="Copy heading and permalink for Task 2.2.7.c">🔗</a></div></article><div class="autopermalink" data-description="Activity 2.2.7: More Translation"><a href="#A_moretrans" title="Copy heading and permalink for Activity 2.2.7: More Translation" aria-label="Copy heading and permalink for Activity 2.2.7: More Translation">🔗</a></div></article><div class="autopermalink" data-description="Subsection 2.2.1: Quantified Statements"><a href="#SS_quantifiers" title="Copy heading and permalink for Subsection 2.2.1: Quantified Statements" aria-label="Copy heading and permalink for Subsection 2.2.1: Quantified Statements">🔗</a></div></section><section class="subsection" id="SS_negquant"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.2.2</span><span class="space"> </span><span class="title">Negating Quantified Statements</span>
 </h3>
-<div class="para" id="SS_negquant-2">In this section we will look at how to negate statements involving quantifiers.</div>
+<div class="para" id="SS_negquant-2">In this section we will look at how to negate statements involving quantifiers.<div class="autopermalink" data-description="Paragraph"><a href="#SS_negquant-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="assemblage assemblage-like" id="B_negquantstatements"><h4 class="heading"><span class="title">Negations of Quantified Statements.</span></h4>
-<div class="para logical" id="B_negquantstatements-3"><ul class="disc" id="B_negquantstatements-3-1">
-<li id="B_negquantstatements-3-1-1"><div class="para logical" id="B_negquantstatements-3-1-1-1">
+<div class="para logical" id="B_negquantstatements-3">
+<ul class="disc" id="B_negquantstatements-3-1">
+<li id="B_negquantstatements-3-1-1">
+<div class="para logical" id="B_negquantstatements-3-1-1-1">
 <div class="para">The negation of <span class="process-math">\(\forall x\in D, P(x)\)</span> is <span class="process-math">\(\exists x\in D, \neg P(x)\text{;}\)</span> or</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \neg(\forall x\in D, P(x))\equiv \exists x\in D, \neg P(x).
 \end{equation*}
 </div>
-</div></li>
-<li id="B_negquantstatements-3-1-2"><div class="para logical" id="B_negquantstatements-3-1-2-1">
+<div class="autopermalink" data-description="Paragraph"><a href="#B_negquantstatements-3-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#B_negquantstatements-3-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="B_negquantstatements-3-1-2">
+<div class="para logical" id="B_negquantstatements-3-1-2-1">
 <div class="para">The negation of <span class="process-math">\(\exists x\in D, P(x)\)</span> is <span class="process-math">\(\forall x\in D, \neg P(x)\text{;}\)</span> or</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \neg(\exists x\in D, P(x))\equiv \forall x\in D, \neg P(x).
 \end{equation*}
 </div>
-</div></li>
-</ul></div></article><div class="para" id="SS_negquant-4">We can think of negation as switching the quantifier and negating <span class="process-math">\(P(x)\text{,}\)</span> but it will be really helpful if we can understand WHY this is the negation. Thinking about negating a “for all” statement, we need the statement to not be true for all things, which means it must be false for something, Thus, there exists something making <span class="process-math">\(\neg P(x)\)</span> true. Thinking about negating a “there exists” statement, we need there not to exist anything making <span class="process-math">\(P(x)\)</span> true, which means <span class="process-math">\(P(x)\)</span> must be false for everything. Thus, everything makes <span class="process-math">\(\neg P(x)\)</span> true.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#B_negquantstatements-3-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#B_negquantstatements-3-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#B_negquantstatements-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Assemblage: Negations of Quantified Statements"><a href="#B_negquantstatements" title="Copy heading and permalink for Assemblage: Negations of Quantified Statements" aria-label="Copy heading and permalink for Assemblage: Negations of Quantified Statements">🔗</a></div></article><div class="para" id="SS_negquant-4">We can think of negation as switching the quantifier and negating <span class="process-math">\(P(x)\text{,}\)</span> but it will be really helpful if we can understand WHY this is the negation. Thinking about negating a “for all” statement, we need the statement to not be true for all things, which means it must be false for something, Thus, there exists something making <span class="process-math">\(\neg P(x)\)</span> true. Thinking about negating a “there exists” statement, we need there not to exist anything making <span class="process-math">\(P(x)\)</span> true, which means <span class="process-math">\(P(x)\)</span> must be false for everything. Thus, everything makes <span class="process-math">\(\neg P(x)\)</span> true.<div class="autopermalink" data-description="Paragraph"><a href="#SS_negquant-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <details id="E_negquant1" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.3</span><span class="period">.</span><span class="space"> </span><span class="title">Negating a Quantified Statement.</span>
-</h4></summary><article class="example example-like knowl__content"><div class="para" id="E_negquant1-2">Negate the statement: For all primes <span class="process-math">\(p\text{,}\)</span> <span class="process-math">\(p\)</span> is odd. Is this statement true or false?</div>
-<details id="E_negquant1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="E_negquant1-3-1">There exist a prime <span class="process-math">\(p\)</span> such that <span class="process-math">\(p\)</span> is not odd. The original statement is false, since we can find an even prime (<span class="process-math">\(p=2\)</span>).</div></div></details><div class="para" id="E_negquant1-4">Negate the statement: There exists a real number <span class="process-math">\(x\text{,}\)</span> such that <span class="process-math">\(x^2&lt; 0\text{.}\)</span> Is this statement true or false?</div>
-<details id="E_negquant1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="E_negquant1-5-1">For all real numbers <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(x^2\geq 0\text{.}\)</span> The original statement is false, since the negation is true.</div></div></details></article></details><article class="activity project-like" id="A_simpleneg"><h4 class="heading">
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="E_negquant1-2">Negate the statement: For all primes <span class="process-math">\(p\text{,}\)</span> <span class="process-math">\(p\)</span> is odd. Is this statement true or false?<div class="autopermalink" data-description="Paragraph"><a href="#E_negquant1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="E_negquant1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="E_negquant1-3-1">There exist a prime <span class="process-math">\(p\)</span> such that <span class="process-math">\(p\)</span> is not odd. The original statement is false, since we can find an even prime (<span class="process-math">\(p=2\)</span>).<div class="autopermalink" data-description="Paragraph"><a href="#E_negquant1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 2.2.3.1"><a href="#E_negquant1-3" title="Copy heading and permalink for Answer 2.2.3.1" aria-label="Copy heading and permalink for Answer 2.2.3.1">🔗</a></div>
+</div></details><div class="para" id="E_negquant1-4">Negate the statement: There exists a real number <span class="process-math">\(x\text{,}\)</span> such that <span class="process-math">\(x^2&lt; 0\text{.}\)</span> Is this statement true or false?<div class="autopermalink" data-description="Paragraph"><a href="#E_negquant1-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="E_negquant1-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="E_negquant1-5-1">For all real numbers <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(x^2\geq 0\text{.}\)</span> The original statement is false, since the negation is true.<div class="autopermalink" data-description="Paragraph"><a href="#E_negquant1-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 2.2.3.2"><a href="#E_negquant1-5" title="Copy heading and permalink for Answer 2.2.3.2" aria-label="Copy heading and permalink for Answer 2.2.3.2">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 2.2.3: Negating a Quantified Statement"><a href="#E_negquant1" title="Copy heading and permalink for Example 2.2.3: Negating a Quantified Statement" aria-label="Copy heading and permalink for Example 2.2.3: Negating a Quantified Statement">🔗</a></div></article></details><article class="activity project-like" id="A_simpleneg"><h4 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.2.8</span><span class="period">.</span><span class="space"> </span><span class="title">Writing Negations.</span>
 </h4>
-<div class="introduction" id="A_simpleneg-2"><div class="para" id="A_simpleneg-2-1">Write the negation of the following statements (in English).</div></div>
+<div class="introduction" id="A_simpleneg-2"><div class="para" id="A_simpleneg-2-1">Write the negation of the following statements (in English).<div class="autopermalink" data-description="Paragraph"><a href="#A_simpleneg-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
 <article class="task exercise-like" id="A_simpleneg-3"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para" id="A_simpleneg-3-1">For all integers <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(\sqrt{n}\)</span> is an integer.</div></article><article class="task exercise-like" id="A_simpleneg-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="A_simpleneg-4-1">There exists an integer <span class="process-math">\(n\text{,}\)</span> such that <span class="process-math">\(n^2=5\text{.}\)</span>
-</div></article></article><div class="para" id="SS_negquant-7">Many of our quantified statements may have predicates involving other logical connectives. So it is going to be important to remember how to negate "and"s, "or"s, and "if...then"s.</div>
-<div class="para" id="SS_negquant-8">Reminder, keep in mind the rules we saw in <a href="connectives.html" class="internal" title="Section 1.3: Logical Connectives">Section 1.3</a> for negating logical statements.</div>
+<div class="para" id="A_simpleneg-3-1">For all integers <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(\sqrt{n}\)</span> is an integer.<div class="autopermalink" data-description="Paragraph"><a href="#A_simpleneg-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 2.2.8.a"><a href="#A_simpleneg-3" title="Copy heading and permalink for Task 2.2.8.a" aria-label="Copy heading and permalink for Task 2.2.8.a">🔗</a></div></article><article class="task exercise-like" id="A_simpleneg-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="A_simpleneg-4-1">There exists an integer <span class="process-math">\(n\text{,}\)</span> such that <span class="process-math">\(n^2=5\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_simpleneg-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 2.2.8.b"><a href="#A_simpleneg-4" title="Copy heading and permalink for Task 2.2.8.b" aria-label="Copy heading and permalink for Task 2.2.8.b">🔗</a></div></article><div class="autopermalink" data-description="Activity 2.2.8: Writing Negations"><a href="#A_simpleneg" title="Copy heading and permalink for Activity 2.2.8: Writing Negations" aria-label="Copy heading and permalink for Activity 2.2.8: Writing Negations">🔗</a></div></article><div class="para" id="SS_negquant-7">Many of our quantified statements may have predicates involving other logical connectives. So it is going to be important to remember how to negate "and"s, "or"s, and "if...then"s.<div class="autopermalink" data-description="Paragraph"><a href="#SS_negquant-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="SS_negquant-8">Reminder, keep in mind the rules we saw in <a href="connectives.html" class="internal" title="Section 1.3: Logical Connectives">Section 1.3</a> for negating logical statements.<div class="autopermalink" data-description="Paragraph"><a href="#SS_negquant-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="assemblage assemblage-like" id="B_usefulnegations"><h4 class="heading"><span class="title">Useful Negation Rules.</span></h4>
-<div class="para logical" id="B_usefulnegations-2"><ul class="disc" id="B_usefulnegations-2-1">
+<div class="para logical" id="B_usefulnegations-2">
+<ul class="disc" id="B_usefulnegations-2-1">
 <li id="B_usefulnegations-2-1-1">
 <span class="heading"><span class="title">AND statements.</span></span><div class="para" id="p-derived-B_usefulnegations-2-1-1"> <span class="process-math">\(\neg(p\wedge q)\equiv \neg p\ \vee \neg q\text{.}\)</span> This is DeMorgan’s Law.</div>
+<div class="autopermalink" data-description="Item: AND statements"><a href="#B_usefulnegations-2-1-1" title="Copy heading and permalink for Item: AND statements" aria-label="Copy heading and permalink for Item: AND statements">🔗</a></div>
 </li>
 <li id="B_usefulnegations-2-1-2">
 <span class="heading"><span class="title">OR statements.</span></span><div class="para" id="p-derived-B_usefulnegations-2-1-2"> <span class="process-math">\(\neg(p\vee q)\equiv \neg p\ \wedge \neg q\text{.}\)</span> This is DeMorgan’s Law.</div>
+<div class="autopermalink" data-description="Item: OR statements"><a href="#B_usefulnegations-2-1-2" title="Copy heading and permalink for Item: OR statements" aria-label="Copy heading and permalink for Item: OR statements">🔗</a></div>
 </li>
 <li id="B_usefulnegations-2-1-3">
 <span class="heading"><span class="title">IF...THEN statements.</span></span><div class="para" id="p-derived-B_usefulnegations-2-1-3"> <span class="process-math">\(\neg(p\rightarrow q)\equiv p\ \wedge \neg q\text{.}\)</span> The negation of a conditional is NOT a conditional.</div>
+<div class="autopermalink" data-description="Item: IF...THEN statements"><a href="#B_usefulnegations-2-1-3" title="Copy heading and permalink for Item: IF...THEN statements" aria-label="Copy heading and permalink for Item: IF...THEN statements">🔗</a></div>
 </li>
-</ul></div></article><article class="activity project-like" id="A_complexneg"><h4 class="heading">
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#B_usefulnegations-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Assemblage: Useful Negation Rules"><a href="#B_usefulnegations" title="Copy heading and permalink for Assemblage: Useful Negation Rules" aria-label="Copy heading and permalink for Assemblage: Useful Negation Rules">🔗</a></div></article><article class="activity project-like" id="A_complexneg"><h4 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.2.9</span><span class="period">.</span><span class="space"> </span><span class="title">More Writing Negations.</span>
 </h4>
-<div class="introduction" id="A_complexneg-2"><div class="para" id="A_complexneg-2-1">Write the negation of the following statements (in English).</div></div>
+<div class="introduction" id="A_complexneg-2"><div class="para" id="A_complexneg-2-1">Write the negation of the following statements (in English).<div class="autopermalink" data-description="Paragraph"><a href="#A_complexneg-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
 <article class="task exercise-like" id="A_complexneg-3"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para" id="A_complexneg-3-1">There exists an integer <span class="process-math">\(n\text{,}\)</span> such that <span class="process-math">\(1 &lt; n &lt; 2\text{.}\)</span>
-</div></article><article class="task exercise-like" id="A_complexneg-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="A_complexneg-4-1">For all real numbers  <span class="process-math">\(x\text{,}\)</span> if <span class="process-math">\(x&gt;2\)</span> then <span class="process-math">\(x+5&gt;7\text{.}\)</span>
-</div></article><article class="task exercise-like" id="A_complexneg-5"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<div class="para" id="A_complexneg-5-1">For all functions <span class="process-math">\(f\text{,}\)</span> if <span class="process-math">\(f\)</span> is continuous, then <span class="process-math">\(f\)</span> is differentiable.</div></article></article><div class="para" id="SS_negquant-11">The relationship between “for all” and “there exists” can be used to show some surprising things. In particular, what happens if our domain, <span class="process-math">\(D\text{,}\)</span> has nothing in it? Let <span class="process-math">\(D=\emptyset\text{,}\)</span> the empty set. Is <span class="process-math">\(\forall x\in D, P(x)\)</span> true or false? Well, let’s look at the negation: <span class="process-math">\(\exists x\in D, \neg P(x)\text{.}\)</span> Now the negation MUST be false since <span class="process-math">\(D\)</span> has nothing in it, so there can’t exist something in <span class="process-math">\(D\)</span> making <span class="process-math">\(\neg P(x)\)</span> true. Since the negation is false, the original statement is true! We say <span class="process-math">\(\forall x\in D, P(x)\)</span> is <dfn class="terminology">vacuously</dfn> true.</div>
+<div class="para" id="A_complexneg-3-1">There exists an integer <span class="process-math">\(n\text{,}\)</span> such that <span class="process-math">\(1 &lt; n &lt; 2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_complexneg-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 2.2.9.a"><a href="#A_complexneg-3" title="Copy heading and permalink for Task 2.2.9.a" aria-label="Copy heading and permalink for Task 2.2.9.a">🔗</a></div></article><article class="task exercise-like" id="A_complexneg-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="A_complexneg-4-1">For all real numbers  <span class="process-math">\(x\text{,}\)</span> if <span class="process-math">\(x&gt;2\)</span> then <span class="process-math">\(x+5&gt;7\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_complexneg-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 2.2.9.b"><a href="#A_complexneg-4" title="Copy heading and permalink for Task 2.2.9.b" aria-label="Copy heading and permalink for Task 2.2.9.b">🔗</a></div></article><article class="task exercise-like" id="A_complexneg-5"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="A_complexneg-5-1">For all functions <span class="process-math">\(f\text{,}\)</span> if <span class="process-math">\(f\)</span> is continuous, then <span class="process-math">\(f\)</span> is differentiable.<div class="autopermalink" data-description="Paragraph"><a href="#A_complexneg-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 2.2.9.c"><a href="#A_complexneg-5" title="Copy heading and permalink for Task 2.2.9.c" aria-label="Copy heading and permalink for Task 2.2.9.c">🔗</a></div></article><div class="autopermalink" data-description="Activity 2.2.9: More Writing Negations"><a href="#A_complexneg" title="Copy heading and permalink for Activity 2.2.9: More Writing Negations" aria-label="Copy heading and permalink for Activity 2.2.9: More Writing Negations">🔗</a></div></article><div class="para" id="SS_negquant-11">The relationship between “for all” and “there exists” can be used to show some surprising things. In particular, what happens if our domain, <span class="process-math">\(D\text{,}\)</span> has nothing in it? Let <span class="process-math">\(D=\emptyset\text{,}\)</span> the empty set. Is <span class="process-math">\(\forall x\in D, P(x)\)</span> true or false? Well, let’s look at the negation: <span class="process-math">\(\exists x\in D, \neg P(x)\text{.}\)</span> Now the negation MUST be false since <span class="process-math">\(D\)</span> has nothing in it, so there can’t exist something in <span class="process-math">\(D\)</span> making <span class="process-math">\(\neg P(x)\)</span> true. Since the negation is false, the original statement is true! We say <span class="process-math">\(\forall x\in D, P(x)\)</span> is <dfn class="terminology">vacuously</dfn> true.<div class="autopermalink" data-description="Paragraph"><a href="#SS_negquant-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <details id="E_vacuouslytrue" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.4</span><span class="period">.</span><span class="space"> </span><span class="title">Vacuously True Statement.</span>
-</h4></summary><article class="example example-like knowl__content"><div class="para" id="E_vacuouslytrue-2">Consider the statement “For all turtles, <span class="process-math">\(T\text{,}\)</span> in Intro to Proofs, <span class="process-math">\(T\)</span> is getting an A.” The negation is “There exists a turtle, <span class="process-math">\(T\text{,}\)</span> in Intro to Proofs, such that  <span class="process-math">\(T\)</span> is not getting an A.” Since no such turtle exists, the negation is false. Making the original true. So every turtle in Intro to Proofs is getting an A.</div></article></details><div class="para" id="SS_negquant-13">As one additional note, it can be helpful in deciding if your negation is correct to find the truth value of both the original and the negation. They should have opposite values. Similarly, if you need to determine the truth value of a complex statement, it might be easier to find the truth value of the negation.</div>
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="E_vacuouslytrue-2">Consider the statement “For all turtles, <span class="process-math">\(T\text{,}\)</span> in Intro to Proofs, <span class="process-math">\(T\)</span> is getting an A.” The negation is “There exists a turtle, <span class="process-math">\(T\text{,}\)</span> in Intro to Proofs, such that  <span class="process-math">\(T\)</span> is not getting an A.” Since no such turtle exists, the negation is false. Making the original true. So every turtle in Intro to Proofs is getting an A.<div class="autopermalink" data-description="Paragraph"><a href="#E_vacuouslytrue-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 2.2.4: Vacuously True Statement"><a href="#E_vacuouslytrue" title="Copy heading and permalink for Example 2.2.4: Vacuously True Statement" aria-label="Copy heading and permalink for Example 2.2.4: Vacuously True Statement">🔗</a></div></article></details><div class="para" id="SS_negquant-13">As one additional note, it can be helpful in deciding if your negation is correct to find the truth value of both the original and the negation. They should have opposite values. Similarly, if you need to determine the truth value of a complex statement, it might be easier to find the truth value of the negation.<div class="autopermalink" data-description="Paragraph"><a href="#SS_negquant-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="activity project-like" id="A_TFquant"><h4 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.2.10</span><span class="period">.</span><span class="space"> </span><span class="title">True or False.</span>
 </h4>
-<div class="introduction" id="A_TFquant-2"><div class="para" id="A_TFquant-2-1">Determine if each of the following statements are true or false. It may be helpful to look at the negations you founds in the above activities, <a href="quantifiers.html#A_simpleneg" class="xref" data-knowl="./knowl/xref/A_simpleneg.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.2.8: Writing Negations">Activity 2.2.8</a>, <a href="quantifiers.html#A_complexneg" class="xref" data-knowl="./knowl/xref/A_complexneg.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.2.9: More Writing Negations">Activity 2.2.9</a>, <a href="conditionals.html#A_contrapos1" class="xref" data-knowl="./knowl/xref/A_contrapos1.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.3.8: Writing Contrapositives">Activity 2.3.8</a>, and <a href="conditionals.html#A_contrapos2" class="xref" data-knowl="./knowl/xref/A_contrapos2.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.3.9: More Writing Contrapositives">Activity 2.3.9</a>.</div></div>
+<div class="introduction" id="A_TFquant-2"><div class="para" id="A_TFquant-2-1">Determine if each of the following statements are true or false. It may be helpful to look at the negations you founds in the above activities, <a href="quantifiers.html#A_simpleneg" class="xref" data-knowl="./knowl/xref/A_simpleneg.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.2.8: Writing Negations">Activity 2.2.8</a>, <a href="quantifiers.html#A_complexneg" class="xref" data-knowl="./knowl/xref/A_complexneg.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.2.9: More Writing Negations">Activity 2.2.9</a>, <a href="conditionals.html#A_contrapos1" class="xref" data-knowl="./knowl/xref/A_contrapos1.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.3.8: Writing Contrapositives">Activity 2.3.8</a>, and <a href="conditionals.html#A_contrapos2" class="xref" data-knowl="./knowl/xref/A_contrapos2.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 2.3.9: More Writing Contrapositives">Activity 2.3.9</a>.<div class="autopermalink" data-description="Paragraph"><a href="#A_TFquant-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
 <article class="task exercise-like" id="A_TFquant-3"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para" id="A_TFquant-3-1">For all integers <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(\sqrt{n}\)</span> is an integer.</div></article><article class="task exercise-like" id="A_TFquant-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="A_TFquant-4-1">There exists an integer <span class="process-math">\(n\text{,}\)</span> such that <span class="process-math">\(n^2=5\text{.}\)</span>
-</div></article><article class="task exercise-like" id="A_TFquant-5"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<div class="para" id="A_TFquant-5-1">There exists an integer <span class="process-math">\(n\text{,}\)</span> such that <span class="process-math">\(1 &lt; n &lt; 2\text{.}\)</span>
-</div></article><article class="task exercise-like" id="A_TFquant-6"><h5 class="heading"><span class="codenumber">(d)</span></h5>
-<div class="para" id="A_TFquant-6-1">For all real numbers  <span class="process-math">\(x\text{,}\)</span> if <span class="process-math">\(x&gt;2\)</span> then <span class="process-math">\(x+5&gt;7\text{.}\)</span>
-</div></article><article class="task exercise-like" id="A_TFquant-7"><h5 class="heading"><span class="codenumber">(e)</span></h5>
-<div class="para" id="A_TFquant-7-1">For all functions <span class="process-math">\(f\text{,}\)</span> if <span class="process-math">\(f\)</span> is continuous, then <span class="process-math">\(f\)</span> is differentiable.</div></article><article class="task exercise-like" id="A_TFquant-8"><h5 class="heading"><span class="codenumber">(f)</span></h5>
-<div class="para" id="A_TFquant-8-1">For all real numbers  <span class="process-math">\(x\text{,}\)</span> if <span class="process-math">\((x+1)(x-2)&gt;0\)</span> then <span class="process-math">\(x &lt; -1\)</span> or <span class="process-math">\(x&gt;2\text{.}\)</span>
-</div></article><article class="task exercise-like" id="A_TFquant-9"><h5 class="heading"><span class="codenumber">(g)</span></h5>
-<div class="para" id="A_TFquant-9-1">For all integers  <span class="process-math">\(n\text{,}\)</span> if <span class="process-math">\(n\)</span> has a factor of 15, then <span class="process-math">\(n\)</span> has a factor of 3 and <span class="process-math">\(n\)</span> has a factor of 5.</div></article></article></section><section class="subsection" id="quantifiers-6"><h3 class="heading hide-type">
+<div class="para" id="A_TFquant-3-1">For all integers <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(\sqrt{n}\)</span> is an integer.<div class="autopermalink" data-description="Paragraph"><a href="#A_TFquant-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 2.2.10.a"><a href="#A_TFquant-3" title="Copy heading and permalink for Task 2.2.10.a" aria-label="Copy heading and permalink for Task 2.2.10.a">🔗</a></div></article><article class="task exercise-like" id="A_TFquant-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="A_TFquant-4-1">There exists an integer <span class="process-math">\(n\text{,}\)</span> such that <span class="process-math">\(n^2=5\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_TFquant-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 2.2.10.b"><a href="#A_TFquant-4" title="Copy heading and permalink for Task 2.2.10.b" aria-label="Copy heading and permalink for Task 2.2.10.b">🔗</a></div></article><article class="task exercise-like" id="A_TFquant-5"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="A_TFquant-5-1">There exists an integer <span class="process-math">\(n\text{,}\)</span> such that <span class="process-math">\(1 &lt; n &lt; 2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_TFquant-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 2.2.10.c"><a href="#A_TFquant-5" title="Copy heading and permalink for Task 2.2.10.c" aria-label="Copy heading and permalink for Task 2.2.10.c">🔗</a></div></article><article class="task exercise-like" id="A_TFquant-6"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="A_TFquant-6-1">For all real numbers  <span class="process-math">\(x\text{,}\)</span> if <span class="process-math">\(x&gt;2\)</span> then <span class="process-math">\(x+5&gt;7\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_TFquant-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 2.2.10.d"><a href="#A_TFquant-6" title="Copy heading and permalink for Task 2.2.10.d" aria-label="Copy heading and permalink for Task 2.2.10.d">🔗</a></div></article><article class="task exercise-like" id="A_TFquant-7"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<div class="para" id="A_TFquant-7-1">For all functions <span class="process-math">\(f\text{,}\)</span> if <span class="process-math">\(f\)</span> is continuous, then <span class="process-math">\(f\)</span> is differentiable.<div class="autopermalink" data-description="Paragraph"><a href="#A_TFquant-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 2.2.10.e"><a href="#A_TFquant-7" title="Copy heading and permalink for Task 2.2.10.e" aria-label="Copy heading and permalink for Task 2.2.10.e">🔗</a></div></article><article class="task exercise-like" id="A_TFquant-8"><h5 class="heading"><span class="codenumber">(f)</span></h5>
+<div class="para" id="A_TFquant-8-1">For all real numbers  <span class="process-math">\(x\text{,}\)</span> if <span class="process-math">\((x+1)(x-2)&gt;0\)</span> then <span class="process-math">\(x &lt; -1\)</span> or <span class="process-math">\(x&gt;2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_TFquant-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 2.2.10.f"><a href="#A_TFquant-8" title="Copy heading and permalink for Task 2.2.10.f" aria-label="Copy heading and permalink for Task 2.2.10.f">🔗</a></div></article><article class="task exercise-like" id="A_TFquant-9"><h5 class="heading"><span class="codenumber">(g)</span></h5>
+<div class="para" id="A_TFquant-9-1">For all integers  <span class="process-math">\(n\text{,}\)</span> if <span class="process-math">\(n\)</span> has a factor of 15, then <span class="process-math">\(n\)</span> has a factor of 3 and <span class="process-math">\(n\)</span> has a factor of 5.<div class="autopermalink" data-description="Paragraph"><a href="#A_TFquant-9-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 2.2.10.g"><a href="#A_TFquant-9" title="Copy heading and permalink for Task 2.2.10.g" aria-label="Copy heading and permalink for Task 2.2.10.g">🔗</a></div></article><div class="autopermalink" data-description="Activity 2.2.10: True or False"><a href="#A_TFquant" title="Copy heading and permalink for Activity 2.2.10: True or False" aria-label="Copy heading and permalink for Activity 2.2.10: True or False">🔗</a></div></article><div class="autopermalink" data-description="Subsection 2.2.2: Negating Quantified Statements"><a href="#SS_negquant" title="Copy heading and permalink for Subsection 2.2.2: Negating Quantified Statements" aria-label="Copy heading and permalink for Subsection 2.2.2: Negating Quantified Statements">🔗</a></div></section><section class="subsection" id="quantifiers-6"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.2.3</span><span class="space"> </span><span class="title">Multiple Quantifiers</span>
 </h3>
-<div class="para" id="quantifiers-6-2">Many statements in mathematics involve multple quantifiers. For example, “For all real numbers <span class="process-math">\(x\text{,}\)</span> there exists a real number <span class="process-math">\(y\)</span> with <span class="process-math">\(x+y=0\text{.}\)</span>” These statements, though frequent in math courses, represent some of the most complicated types of statements to understand. In this section we will try to understand the general structure of such statements.</div>
-<div class="para" id="quantifiers-6-3">Let’s look at the various ways we could have statements with two quantifiers. Since we have two quantifiers, we will have two variables. Thus, our predicate will now involve both variables. We can use the notation <span class="process-math">\(P(x, y)\)</span> to mean a statement about <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{.}\)</span>
+<div class="para" id="quantifiers-6-2">Many statements in mathematics involve multple quantifiers. For example, “For all real numbers <span class="process-math">\(x\text{,}\)</span> there exists a real number <span class="process-math">\(y\)</span> with <span class="process-math">\(x+y=0\text{.}\)</span>” These statements, though frequent in math courses, represent some of the most complicated types of statements to understand. In this section we will try to understand the general structure of such statements.<div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-6-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="quantifiers-6-3">Let’s look at the various ways we could have statements with two quantifiers. Since we have two quantifiers, we will have two variables. Thus, our predicate will now involve both variables. We can use the notation <span class="process-math">\(P(x, y)\)</span> to mean a statement about <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-6-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <ul class="disc" id="quantifiers-6-4">
 <li id="quantifiers-6-4-1">
-<div class="para" id="quantifiers-6-4-1-1"><span class="process-math">\(\forall x\in D, \exists y\in E, P(x, y)\text{.}\)</span></div>
-<div class="para" id="quantifiers-6-4-1-2">This means we can find a <span class="process-math">\(y\)</span> in <span class="process-math">\(E\)</span> that makes <span class="process-math">\(P(x, y)\)</span> true for each <span class="process-math">\(x\)</span> in <span class="process-math">\(D\text{.}\)</span> In such statements <span class="process-math">\(y\)</span> will often depend on <span class="process-math">\(x\text{.}\)</span>
+<div class="para" id="quantifiers-6-4-1-1">
+<span class="process-math">\(\forall x\in D, \exists y\in E, P(x, y)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-6-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="para" id="quantifiers-6-4-1-2">This means we can find a <span class="process-math">\(y\)</span> in <span class="process-math">\(E\)</span> that makes <span class="process-math">\(P(x, y)\)</span> true for each <span class="process-math">\(x\)</span> in <span class="process-math">\(D\text{.}\)</span> In such statements <span class="process-math">\(y\)</span> will often depend on <span class="process-math">\(x\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-6-4-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#quantifiers-6-4-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 <li id="quantifiers-6-4-2">
-<div class="para" id="quantifiers-6-4-2-1"><span class="process-math">\(\exists x\in D, \forall y\in E, P(x, y)\text{.}\)</span></div>
-<div class="para" id="quantifiers-6-4-2-2">The order of the quantifiers matters. This means we can find a SINGLE <span class="process-math">\(x\)</span> in <span class="process-math">\(D\)</span> that makes <span class="process-math">\(P(x, y)\)</span> true for every <span class="process-math">\(y\)</span> in <span class="process-math">\(E\text{.}\)</span> In such statements <span class="process-math">\(x\)</span> does not depend on <span class="process-math">\(y\text{.}\)</span> The same <span class="process-math">\(x\)</span> must work for all the <span class="process-math">\(y\)</span>’s.</div>
+<div class="para" id="quantifiers-6-4-2-1">
+<span class="process-math">\(\exists x\in D, \forall y\in E, P(x, y)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-6-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="quantifiers-6-4-2-2">The order of the quantifiers matters. This means we can find a SINGLE <span class="process-math">\(x\)</span> in <span class="process-math">\(D\)</span> that makes <span class="process-math">\(P(x, y)\)</span> true for every <span class="process-math">\(y\)</span> in <span class="process-math">\(E\text{.}\)</span> In such statements <span class="process-math">\(x\)</span> does not depend on <span class="process-math">\(y\text{.}\)</span> The same <span class="process-math">\(x\)</span> must work for all the <span class="process-math">\(y\)</span>’s.<div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-6-4-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#quantifiers-6-4-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 <li id="quantifiers-6-4-3">
-<div class="para" id="quantifiers-6-4-3-1"><span class="process-math">\(\forall x\in D, \forall y\in E, P(x, y)\text{.}\)</span></div>
-<div class="para" id="quantifiers-6-4-3-2">This means <span class="process-math">\(P(x, y)\)</span> is true for all <span class="process-math">\(x\in D\)</span> and for all <span class="process-math">\(y\in E\text{.}\)</span>
+<div class="para" id="quantifiers-6-4-3-1">
+<span class="process-math">\(\forall x\in D, \forall y\in E, P(x, y)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-6-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="para" id="quantifiers-6-4-3-2">This means <span class="process-math">\(P(x, y)\)</span> is true for all <span class="process-math">\(x\in D\)</span> and for all <span class="process-math">\(y\in E\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-6-4-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#quantifiers-6-4-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 <li id="quantifiers-6-4-4">
-<div class="para" id="quantifiers-6-4-4-1"><span class="process-math">\(\exists x\in D, \exists y\in E, P(x, y)\text{.}\)</span></div>
-<div class="para" id="quantifiers-6-4-4-2">This means <span class="process-math">\(P(x, y)\)</span> is true for for at least one <span class="process-math">\(x\in D\)</span> and at least one <span class="process-math">\(y\in E\text{.}\)</span>
+<div class="para" id="quantifiers-6-4-4-1">
+<span class="process-math">\(\exists x\in D, \exists y\in E, P(x, y)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-6-4-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<div class="para" id="quantifiers-6-4-4-2">This means <span class="process-math">\(P(x, y)\)</span> is true for for at least one <span class="process-math">\(x\in D\)</span> and at least one <span class="process-math">\(y\in E\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-6-4-4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#quantifiers-6-4-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 </ul>
 <details id="E_multquant1" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.5</span><span class="period">.</span><span class="space"> </span><span class="title">Statements with Multiple Quantifiers.</span>
 </h4></summary><article class="example example-like knowl__content"><div class="para logical" id="E_multquant1-2">
 <div class="para">Let <span class="process-math">\(x, y\in\mathbb{R}\text{.}\)</span> Determine whether the following statements are true or false.</div>
-<ol class="lower-alpha" id="E_multquant1-2-2">
+<ol class="lower-alpha ol-marker-1" id="E_multquant1-2-2">
 <li id="E_multquant1-2-2-1">
 <div class="displaymath process-math">
 \begin{equation*}
 \forall x, \exists y, x+y=5.
 \end{equation*}
 </div>
-<div class="para" id="E_multquant1-2-2-1-2">For any <span class="process-math">\(x\)</span> can you always find a corresponding <span class="process-math">\(y\)</span> with <span class="process-math">\(x+y=5\text{?}\)</span>
+<div class="para" id="E_multquant1-2-2-1-2">For any <span class="process-math">\(x\)</span> can you always find a corresponding <span class="process-math">\(y\)</span> with <span class="process-math">\(x+y=5\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_multquant1-2-2-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="E_multquant1-2-2-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="E_multquant1-2-2-1-3-1">Yes, for each <span class="process-math">\(x\)</span> let <span class="process-math">\(y=5-x\text{.}\)</span> So the statement is true.</div></div></details>
+<details id="E_multquant1-2-2-1-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="E_multquant1-2-2-1-3-1">Yes, for each <span class="process-math">\(x\)</span> let <span class="process-math">\(y=5-x\text{.}\)</span> So the statement is true.<div class="autopermalink" data-description="Paragraph"><a href="#E_multquant1-2-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer a.1"><a href="#E_multquant1-2-2-1-3" title="Copy heading and permalink for Answer a.1" aria-label="Copy heading and permalink for Answer a.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Item a"><a href="#E_multquant1-2-2-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
 </li>
 <li id="E_multquant1-2-2-2">
 <div class="displaymath process-math">
@@ -800,22 +661,48 @@ eBookConfig.enable_chatcodes =  false;
 \exists x, \forall y, x+y=5.
 \end{equation*}
 </div>
-<div class="para" id="E_multquant1-2-2-2-2">Is there a single <span class="process-math">\(x\)</span> that works for all <span class="process-math">\(y\text{?}\)</span>
+<div class="para" id="E_multquant1-2-2-2-2">Is there a single <span class="process-math">\(x\)</span> that works for all <span class="process-math">\(y\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_multquant1-2-2-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="E_multquant1-2-2-2-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="E_multquant1-2-2-2-3-1">No, no single <span class="process-math">\(x\)</span> will always have <span class="process-math">\(x+y=5\text{.}\)</span> So the statement is false.</div></div></details>
+<details id="E_multquant1-2-2-2-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="E_multquant1-2-2-2-3-1">No, no single <span class="process-math">\(x\)</span> will always have <span class="process-math">\(x+y=5\text{.}\)</span> So the statement is false.<div class="autopermalink" data-description="Paragraph"><a href="#E_multquant1-2-2-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer b.1"><a href="#E_multquant1-2-2-2-3" title="Copy heading and permalink for Answer b.1" aria-label="Copy heading and permalink for Answer b.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Item b"><a href="#E_multquant1-2-2-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
 </li>
 </ol>
-</div></article></details><article class="activity project-like" id="quantifiers-6-6"><h4 class="heading">
+<div class="autopermalink" data-description="Paragraph"><a href="#E_multquant1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 2.2.5: Statements with Multiple Quantifiers"><a href="#E_multquant1" title="Copy heading and permalink for Example 2.2.5: Statements with Multiple Quantifiers" aria-label="Copy heading and permalink for Example 2.2.5: Statements with Multiple Quantifiers">🔗</a></div></article></details><article class="activity project-like" id="quantifiers-6-6"><h4 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.2.11</span><span class="period">.</span>
 </h4>
-<div class="introduction" id="quantifiers-6-6-1"><div class="para" id="quantifiers-6-6-1-1">Let <span class="process-math">\(x, y\in \mathbb{Z}^{nonneg}\text{.}\)</span> Determine if each statement is true or false. Give a reason for your answer.</div></div>
+<div class="introduction" id="quantifiers-6-6-1"><div class="para" id="quantifiers-6-6-1-1">Let <span class="process-math">\(x, y\in \mathbb{Z}^{nonneg}\text{.}\)</span> Determine if each statement is true or false. Give a reason for your answer.<div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-6-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
 <article class="task exercise-like" id="quantifiers-6-6-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para" id="quantifiers-6-6-2-1"><span class="process-math">\(\forall x\ \exists y, x &lt; y\text{.}\)</span></div></article><article class="task exercise-like" id="quantifiers-6-6-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="quantifiers-6-6-3-1"><span class="process-math">\(\exists y\ \forall x, x &lt; y\text{.}\)</span></div></article><article class="task exercise-like" id="quantifiers-6-6-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<div class="para" id="quantifiers-6-6-4-1"><span class="process-math">\(\exists x\ \forall y, x &lt; y\text{.}\)</span></div></article><article class="task exercise-like" id="quantifiers-6-6-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>
-<div class="para" id="quantifiers-6-6-5-1"><span class="process-math">\(\forall y\ \exists x, x &lt; y\text{.}\)</span></div></article><article class="task exercise-like" id="quantifiers-6-6-6"><h5 class="heading"><span class="codenumber">(e)</span></h5>
-<div class="para" id="quantifiers-6-6-6-1"><span class="process-math">\(\exists x\ \exists y, x &lt; y\text{.}\)</span></div></article><article class="task exercise-like" id="quantifiers-6-6-7"><h5 class="heading"><span class="codenumber">(f)</span></h5>
-<div class="para" id="quantifiers-6-6-7-1"><span class="process-math">\(\forall x\ \forall y, x &lt; y\text{.}\)</span></div></article></article><div class="para" id="quantifiers-6-7">Although we won’t study the mathematical context of the following example in this class, it is a classic example in mathematics of a statement with multiple quantifiers and a conditional. It is so important that it is the subject of one set of math bike racks in front of Taylor Hall! <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/bikerack.png" class="contained"></div>
+<div class="para" id="quantifiers-6-6-2-1">
+<span class="process-math">\(\forall x\ \exists y, x &lt; y\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-6-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 2.2.11.a"><a href="#quantifiers-6-6-2" title="Copy heading and permalink for Task 2.2.11.a" aria-label="Copy heading and permalink for Task 2.2.11.a">🔗</a></div></article><article class="task exercise-like" id="quantifiers-6-6-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="quantifiers-6-6-3-1">
+<span class="process-math">\(\exists y\ \forall x, x &lt; y\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-6-6-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 2.2.11.b"><a href="#quantifiers-6-6-3" title="Copy heading and permalink for Task 2.2.11.b" aria-label="Copy heading and permalink for Task 2.2.11.b">🔗</a></div></article><article class="task exercise-like" id="quantifiers-6-6-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="quantifiers-6-6-4-1">
+<span class="process-math">\(\exists x\ \forall y, x &lt; y\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-6-6-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 2.2.11.c"><a href="#quantifiers-6-6-4" title="Copy heading and permalink for Task 2.2.11.c" aria-label="Copy heading and permalink for Task 2.2.11.c">🔗</a></div></article><article class="task exercise-like" id="quantifiers-6-6-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="quantifiers-6-6-5-1">
+<span class="process-math">\(\forall y\ \exists x, x &lt; y\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-6-6-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 2.2.11.d"><a href="#quantifiers-6-6-5" title="Copy heading and permalink for Task 2.2.11.d" aria-label="Copy heading and permalink for Task 2.2.11.d">🔗</a></div></article><article class="task exercise-like" id="quantifiers-6-6-6"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<div class="para" id="quantifiers-6-6-6-1">
+<span class="process-math">\(\exists x\ \exists y, x &lt; y\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-6-6-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 2.2.11.e"><a href="#quantifiers-6-6-6" title="Copy heading and permalink for Task 2.2.11.e" aria-label="Copy heading and permalink for Task 2.2.11.e">🔗</a></div></article><article class="task exercise-like" id="quantifiers-6-6-7"><h5 class="heading"><span class="codenumber">(f)</span></h5>
+<div class="para" id="quantifiers-6-6-7-1">
+<span class="process-math">\(\forall x\ \forall y, x &lt; y\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-6-6-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 2.2.11.f"><a href="#quantifiers-6-6-7" title="Copy heading and permalink for Task 2.2.11.f" aria-label="Copy heading and permalink for Task 2.2.11.f">🔗</a></div></article><div class="autopermalink" data-description="Activity 2.2.11"><a href="#quantifiers-6-6" title="Copy heading and permalink for Activity 2.2.11" aria-label="Copy heading and permalink for Activity 2.2.11">🔗</a></div></article><div class="para" id="quantifiers-6-7">Although we won’t study the mathematical context of the following example in this class, it is a classic example in mathematics of a statement with multiple quantifiers and a conditional. It is so important that it is the subject of one set of math bike racks in front of Taylor Hall! <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/bikerack.png" class="contained"></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-6-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <details id="E_deflimit" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.6</span><span class="period">.</span><span class="space"> </span><span class="title">Definition of a Limit.</span>
@@ -826,78 +713,131 @@ eBookConfig.enable_chatcodes =  false;
 \forall\epsilon&gt;0, \exists\delta&gt;0, |x-a|&lt;\delta\rightarrow |f(x)-L|&lt;\epsilon\text{.}
 \end{equation*}
 </div>
-</div></article></details><div class="para" id="quantifiers-6-9">Now, we want to be able to negate statements with multiple quantifiers. There is nothing really new here, we just negate our quantified statements as we did for single quantifiers.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#E_deflimit-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 2.2.6: Definition of a Limit"><a href="#E_deflimit" title="Copy heading and permalink for Example 2.2.6: Definition of a Limit" aria-label="Copy heading and permalink for Example 2.2.6: Definition of a Limit">🔗</a></div></article></details><div class="para" id="quantifiers-6-9">Now, we want to be able to negate statements with multiple quantifiers. There is nothing really new here, we just negate our quantified statements as we did for single quantifiers.<div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-6-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="assemblage assemblage-like" id="B_negmultquant"><h4 class="heading"><span class="title">Negating Statements with Multiple Quantifiers:.</span></h4>
-<div class="para logical" id="B_negmultquant-3"><ul class="disc" id="B_negmultquant-3-1">
-<li id="B_negmultquant-3-1-1"><div class="para logical" id="B_negmultquant-3-1-1-1">
+<div class="para logical" id="B_negmultquant-3">
+<ul class="disc" id="B_negmultquant-3-1">
+<li id="B_negmultquant-3-1-1">
+<div class="para logical" id="B_negmultquant-3-1-1-1">
 <div class="para">The negation of <span class="process-math">\(\forall x\in D, \exists y\in E, P(x, y)\)</span> is <span class="process-math">\(\exists x\in D, \forall y\in E, \neg P(x, y)\text{;}\)</span>or</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \neg(\forall x\in D, \exists y\in E, P(x, y))\equiv \exists x\in D, \forall y\in E, \neg P(x, y).
 \end{equation*}
 </div>
-</div></li>
-<li id="B_negmultquant-3-1-2"><div class="para logical" id="B_negmultquant-3-1-2-1">
+<div class="autopermalink" data-description="Paragraph"><a href="#B_negmultquant-3-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#B_negmultquant-3-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="B_negmultquant-3-1-2">
+<div class="para logical" id="B_negmultquant-3-1-2-1">
 <div class="para">The negation of <span class="process-math">\(\exists x\in D, \forall y\in E, P(x, y)\)</span> is <span class="process-math">\(\forall x\in D, \exists y\in E, \neg P(x, y)\text{;}\)</span> or</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \neg(\exists x\in D, \forall y\in E, P(x, y))\equiv \forall x\in D, \exists y\in E, \neg P(x, y).
 \end{equation*}
 </div>
-</div></li>
-<li id="B_negmultquant-3-1-3"><div class="para logical" id="B_negmultquant-3-1-3-1">
+<div class="autopermalink" data-description="Paragraph"><a href="#B_negmultquant-3-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#B_negmultquant-3-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="B_negmultquant-3-1-3">
+<div class="para logical" id="B_negmultquant-3-1-3-1">
 <div class="para">The negation of <span class="process-math">\(\forall x\in D, \forall y\in E, P(x, y)\)</span> is <span class="process-math">\(\exists x\in D, \exists y\in E, \neg P(x, y)\text{;}\)</span> or</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \neg(\forall x\in D, \forall y\in E, P(x, y))\equiv \exists x\in D, \exists y\in E, \neg P(x, y).
 \end{equation*}
 </div>
-</div></li>
-<li id="B_negmultquant-3-1-4"><div class="para logical" id="B_negmultquant-3-1-4-1">
+<div class="autopermalink" data-description="Paragraph"><a href="#B_negmultquant-3-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#B_negmultquant-3-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="B_negmultquant-3-1-4">
+<div class="para logical" id="B_negmultquant-3-1-4-1">
 <div class="para">The negation of <span class="process-math">\(\exists x\in D, \exists y\in E, P(x, y)\)</span> is <span class="process-math">\(\forall x\in D, \forall y\in E, \neg P(x, y)\text{;}\)</span> or</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \neg(\exists x\in D, \exists y\in E, P(x, y))\equiv \forall x\in D, \forall y\in E, \neg P(x, y).
 \end{equation*}
 </div>
-</div></li>
-</ul></div></article><details id="E_negdeflimit" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.7</span><span class="period">.</span><span class="space"> </span><span class="title">Negating the Definition of a Limit.</span>
-</h4></summary><article class="example example-like knowl__content"><div class="para" id="E_negdeflimit-2">If you take Elementary Analysis, you will need to be able to negate the definition of the limit from <a href="quantifiers.html#E_deflimit" class="xref" data-knowl="./knowl/xref/E_deflimit.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.2.6: Definition of a Limit">Example 2.2.6</a>. Negate “For every <span class="process-math">\(\epsilon&gt;0\text{,}\)</span> there exists a <span class="process-math">\(\delta&gt;0\)</span> such that if <span class="process-math">\(|x-a|&lt;\delta\)</span> then <span class="process-math">\(|f(x)-L|&lt;\epsilon\)</span>”. Our statement has the form <span class="process-math">\(\forall \epsilon, \exists \delta, P(\delta)\rightarrow Q(\epsilon)\text{,}\)</span> so the negation has the form <span class="process-math">\(\exists \epsilon, \forall \delta, P(\delta)\wedge \neg Q(\epsilon).\)</span>
+<div class="autopermalink" data-description="Paragraph"><a href="#B_negmultquant-3-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="E_negdeflimit-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><span class="process-math">\(\exists\epsilon&gt;0, \forall\delta&gt;0, |x-a|&lt;\delta\wedge |f(x)-L|\geq\epsilon\text{.}\)</span></div></details></article></details><article class="activity project-like" id="A_negmultquant"><h4 class="heading">
+<div class="autopermalink" data-description="Item"><a href="#B_negmultquant-3-1-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#B_negmultquant-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Assemblage: Negating Statements with Multiple Quantifiers:"><a href="#B_negmultquant" title="Copy heading and permalink for Assemblage: Negating Statements with Multiple Quantifiers:" aria-label="Copy heading and permalink for Assemblage: Negating Statements with Multiple Quantifiers:">🔗</a></div></article><details id="E_negdeflimit" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.7</span><span class="period">.</span><span class="space"> </span><span class="title">Negating the Definition of a Limit.</span>
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="E_negdeflimit-2">If you take Elementary Analysis, you will need to be able to negate the definition of the limit from <a href="quantifiers.html#E_deflimit" class="xref" data-knowl="./knowl/xref/E_deflimit.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.2.6: Definition of a Limit">Example 2.2.6</a>. Negate “For every <span class="process-math">\(\epsilon&gt;0\text{,}\)</span> there exists a <span class="process-math">\(\delta&gt;0\)</span> such that if <span class="process-math">\(|x-a|&lt;\delta\)</span> then <span class="process-math">\(|f(x)-L|&lt;\epsilon\)</span>”. Our statement has the form <span class="process-math">\(\forall \epsilon, \exists \delta, P(\delta)\rightarrow Q(\epsilon)\text{,}\)</span> so the negation has the form <span class="process-math">\(\exists \epsilon, \forall \delta, P(\delta)\wedge \neg Q(\epsilon).\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_negdeflimit-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="E_negdeflimit-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<span class="process-math">\(\exists\epsilon&gt;0, \forall\delta&gt;0, |x-a|&lt;\delta\wedge |f(x)-L|\geq\epsilon\text{.}\)</span><div class="autopermalink" data-description="Answer 2.2.7.1"><a href="#E_negdeflimit-3" title="Copy heading and permalink for Answer 2.2.7.1" aria-label="Copy heading and permalink for Answer 2.2.7.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 2.2.7: Negating the Definition of a Limit"><a href="#E_negdeflimit" title="Copy heading and permalink for Example 2.2.7: Negating the Definition of a Limit" aria-label="Copy heading and permalink for Example 2.2.7: Negating the Definition of a Limit">🔗</a></div></article></details><article class="activity project-like" id="A_negmultquant"><h4 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.2.12</span><span class="period">.</span><span class="space"> </span><span class="title">Negating Statements with Multiple Quantifiers.</span>
 </h4>
-<div class="introduction" id="A_negmultquant-2"><div class="para" id="A_negmultquant-2-1">Write the negation of the following statements. Then determine whether the original statment is true or false.</div></div>
+<div class="introduction" id="A_negmultquant-2"><div class="para" id="A_negmultquant-2-1">Write the negation of the following statements. Then determine whether the original statment is true or false.<div class="autopermalink" data-description="Paragraph"><a href="#A_negmultquant-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
 <article class="task exercise-like" id="A_negmultquant-3"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para" id="A_negmultquant-3-1">There exists an integer <span class="process-math">\(n\)</span> such that for all integers <span class="process-math">\(m,\ nm=0\text{.}\)</span>
-</div></article><article class="task exercise-like" id="A_negmultquant-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="A_negmultquant-4-1">For every integer <span class="process-math">\(n\)</span> there exists an integer <span class="process-math">\(m\)</span> such that <span class="process-math">\(nm=0\text{.}\)</span>
-</div></article><article class="task exercise-like" id="A_negmultquant-5"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<div class="para" id="A_negmultquant-5-1">There exists an integer <span class="process-math">\(n\)</span> such that for all integers <span class="process-math">\(m,\ n+m=0\text{.}\)</span>
-</div></article><article class="task exercise-like" id="A_negmultquant-6"><h5 class="heading"><span class="codenumber">(d)</span></h5>
-<div class="para" id="A_negmultquant-6-1">For every integer <span class="process-math">\(n\)</span> there exists an integer <span class="process-math">\(m\)</span> such that <span class="process-math">\(n+m=0\text{.}\)</span>
-</div></article></article><details id="E_translatingmult" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<div class="para" id="A_negmultquant-3-1">There exists an integer <span class="process-math">\(n\)</span> such that for all integers <span class="process-math">\(m,\ nm=0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_negmultquant-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 2.2.12.a"><a href="#A_negmultquant-3" title="Copy heading and permalink for Task 2.2.12.a" aria-label="Copy heading and permalink for Task 2.2.12.a">🔗</a></div></article><article class="task exercise-like" id="A_negmultquant-4"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="A_negmultquant-4-1">For every integer <span class="process-math">\(n\)</span> there exists an integer <span class="process-math">\(m\)</span> such that <span class="process-math">\(nm=0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_negmultquant-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 2.2.12.b"><a href="#A_negmultquant-4" title="Copy heading and permalink for Task 2.2.12.b" aria-label="Copy heading and permalink for Task 2.2.12.b">🔗</a></div></article><article class="task exercise-like" id="A_negmultquant-5"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="A_negmultquant-5-1">There exists an integer <span class="process-math">\(n\)</span> such that for all integers <span class="process-math">\(m,\ n+m=0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_negmultquant-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 2.2.12.c"><a href="#A_negmultquant-5" title="Copy heading and permalink for Task 2.2.12.c" aria-label="Copy heading and permalink for Task 2.2.12.c">🔗</a></div></article><article class="task exercise-like" id="A_negmultquant-6"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="A_negmultquant-6-1">For every integer <span class="process-math">\(n\)</span> there exists an integer <span class="process-math">\(m\)</span> such that <span class="process-math">\(n+m=0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_negmultquant-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 2.2.12.d"><a href="#A_negmultquant-6" title="Copy heading and permalink for Task 2.2.12.d" aria-label="Copy heading and permalink for Task 2.2.12.d">🔗</a></div></article><div class="autopermalink" data-description="Activity 2.2.12: Negating Statements with Multiple Quantifiers"><a href="#A_negmultquant" title="Copy heading and permalink for Activity 2.2.12: Negating Statements with Multiple Quantifiers" aria-label="Copy heading and permalink for Activity 2.2.12: Negating Statements with Multiple Quantifiers">🔗</a></div></article><details id="E_translatingmult" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2.8</span><span class="period">.</span><span class="space"> </span><span class="title">Translating Statements with Multiple Quantifiers.</span>
-</h4></summary><article class="example example-like knowl__content"><div class="para" id="E_translatingmult-2">Let <span class="process-math">\(L(x, y)\)</span> be “<span class="process-math">\(x\)</span> loves <span class="process-math">\(y\)</span>”. Translate each of the following statements using quantifiers and variables.</div>
-<div class="para" id="E_translatingmult-3">Someone loves everyone.</div>
-<details id="E_translatingmult-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><span class="process-math">\(\exists x, \forall y, L(x, y).\)</span></div></details><div class="para" id="E_translatingmult-5">Someone is loved by everyone.</div>
-<details id="E_translatingmult-6" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><span class="process-math">\(\exists x, \forall y, L(y, x).\)</span></div></details><div class="para" id="E_translatingmult-7">Everyone loves someone.</div>
-<details id="E_translatingmult-8" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><span class="process-math">\(\forall x, \exists y, L(x, y).\)</span></div></details><div class="para" id="E_translatingmult-9">Everyone is loved by someone.</div>
-<details id="E_translatingmult-10" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><span class="process-math">\(\forall x, \exists y, L(y, x).\)</span></div></details></article></details><section class="exercises" id="quantifiers-6-14"><h4 class="heading hide-type">
+</h4></summary><article class="example example-like knowl__content"><div class="para" id="E_translatingmult-2">Let <span class="process-math">\(L(x, y)\)</span> be “<span class="process-math">\(x\)</span> loves <span class="process-math">\(y\)</span>”. Translate each of the following statements using quantifiers and variables.<div class="autopermalink" data-description="Paragraph"><a href="#E_translatingmult-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="E_translatingmult-3">Someone loves everyone.<div class="autopermalink" data-description="Paragraph"><a href="#E_translatingmult-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="E_translatingmult-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<span class="process-math">\(\exists x, \forall y, L(x, y).\)</span><div class="autopermalink" data-description="Answer 2.2.8.1"><a href="#E_translatingmult-4" title="Copy heading and permalink for Answer 2.2.8.1" aria-label="Copy heading and permalink for Answer 2.2.8.1">🔗</a></div>
+</div></details><div class="para" id="E_translatingmult-5">Someone is loved by everyone.<div class="autopermalink" data-description="Paragraph"><a href="#E_translatingmult-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="E_translatingmult-6" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<span class="process-math">\(\exists x, \forall y, L(y, x).\)</span><div class="autopermalink" data-description="Answer 2.2.8.2"><a href="#E_translatingmult-6" title="Copy heading and permalink for Answer 2.2.8.2" aria-label="Copy heading and permalink for Answer 2.2.8.2">🔗</a></div>
+</div></details><div class="para" id="E_translatingmult-7">Everyone loves someone.<div class="autopermalink" data-description="Paragraph"><a href="#E_translatingmult-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="E_translatingmult-8" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<span class="process-math">\(\forall x, \exists y, L(x, y).\)</span><div class="autopermalink" data-description="Answer 2.2.8.3"><a href="#E_translatingmult-8" title="Copy heading and permalink for Answer 2.2.8.3" aria-label="Copy heading and permalink for Answer 2.2.8.3">🔗</a></div>
+</div></details><div class="para" id="E_translatingmult-9">Everyone is loved by someone.<div class="autopermalink" data-description="Paragraph"><a href="#E_translatingmult-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="E_translatingmult-10" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<span class="process-math">\(\forall x, \exists y, L(y, x).\)</span><div class="autopermalink" data-description="Answer 2.2.8.4"><a href="#E_translatingmult-10" title="Copy heading and permalink for Answer 2.2.8.4" aria-label="Copy heading and permalink for Answer 2.2.8.4">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 2.2.8: Translating Statements with Multiple Quantifiers"><a href="#E_translatingmult" title="Copy heading and permalink for Example 2.2.8: Translating Statements with Multiple Quantifiers" aria-label="Copy heading and permalink for Example 2.2.8: Translating Statements with Multiple Quantifiers">🔗</a></div></article></details><section class="exercises" id="quantifiers-6-14"><h4 class="heading hide-type">
 <span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Exercises</span>
 </h4>
 <article class="exercise exercise-like" id="quantifiers-6-14-1"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
-<div class="para" id="quantifiers-6-14-1-1-1">Give an example to show the following statement is false.</div> <div class="para logical" id="quantifiers-6-14-1-1-2"><div class="displaymath process-math">
+<div class="para" id="quantifiers-6-14-1-1-1">Give an example to show the following statement is false.<div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-6-14-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="quantifiers-6-14-1-1-2">
+<div class="displaymath process-math">
 \begin{equation*}
 \forall a \in \mathbb{Z}, (a-1)/a \text{ is not an integer.}
 \end{equation*}
-</div></div></article><article class="exercise exercise-like" id="quantifiers-6-14-2"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
-<div class="para" id="quantifiers-6-14-2-1-1">Give an example to show the following statement is false.</div> <div class="para logical" id="quantifiers-6-14-2-1-2"><div class="displaymath process-math">
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-6-14-1-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 2.2.3.1"><a href="#quantifiers-6-14-1" title="Copy heading and permalink for Exercise 2.2.3.1" aria-label="Copy heading and permalink for Exercise 2.2.3.1">🔗</a></div></article><article class="exercise exercise-like" id="quantifiers-6-14-2"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<div class="para" id="quantifiers-6-14-2-1-1">Give an example to show the following statement is false.<div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-6-14-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="quantifiers-6-14-2-1-2">
+<div class="displaymath process-math">
 \begin{equation*}
 \forall a \text{ real numbers } x \text{ and } y, \sqrt{x+y}=\sqrt{x}+\sqrt{y}
 \end{equation*}
-</div></div></article><article class="exercise exercise-like" id="quantifiers-6-14-3"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-6-14-2-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 2.2.3.2"><a href="#quantifiers-6-14-2" title="Copy heading and permalink for Exercise 2.2.3.2" aria-label="Copy heading and permalink for Exercise 2.2.3.2">🔗</a></div></article><article class="exercise exercise-like" id="quantifiers-6-14-3"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
 <div class="para logical" id="quantifiers-6-14-3-1-1">
 <div class="para">Consider the statement</div>
 <div class="displaymath process-math">
@@ -906,16 +846,40 @@ eBookConfig.enable_chatcodes =  false;
 \end{equation*}
 </div>
 <div class="para">Which of the following are equivalent ways of expressing this statement?</div>
-</div> <ol class="lower-alpha" id="quantifiers-6-14-3-1-2">
-<li id="quantifiers-6-14-3-1-2-1"><div class="para" id="quantifiers-6-14-3-1-2-1-1">There is at least one real number whose square is 2.</div></li>
-<li id="quantifiers-6-14-3-1-2-2"><div class="para" id="quantifiers-6-14-3-1-2-2-1">The square of each real number is 2.</div></li>
-<li id="quantifiers-6-14-3-1-2-3"><div class="para" id="quantifiers-6-14-3-1-2-3-1">Some real numbers have square 2.</div></li>
-<li id="quantifiers-6-14-3-1-2-4"><div class="para" id="quantifiers-6-14-3-1-2-4-1">The number <span class="process-math">\(x\)</span> has square 2, for some real number <span class="process-math">\(x\text{.}\)</span>
-</div></li>
-<li id="quantifiers-6-14-3-1-2-5"><div class="para" id="quantifiers-6-14-3-1-2-5-1">If <span class="process-math">\(x\)</span> is a real number, then <span class="process-math">\(x^2=2\text{.}\)</span>
-</div></li>
-<li id="quantifiers-6-14-3-1-2-6"><div class="para" id="quantifiers-6-14-3-1-2-6-1">Some real number has square 2.</div></li>
-</ol></article><article class="exercise exercise-like" id="quantifiers-6-14-4"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
+<div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-6-14-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha lower-alpha-level-1" id="quantifiers-6-14-3-1-2">
+<li id="quantifiers-6-14-3-1-2-1">
+<div class="para" id="quantifiers-6-14-3-1-2-1-1">There is at least one real number whose square is 2.<div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-6-14-3-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.2.3.3.a"><a href="#quantifiers-6-14-3-1-2-1" title="Copy heading and permalink for Item 2.2.3.3.a" aria-label="Copy heading and permalink for Item 2.2.3.3.a">🔗</a></div>
+</li>
+<li id="quantifiers-6-14-3-1-2-2">
+<div class="para" id="quantifiers-6-14-3-1-2-2-1">The square of each real number is 2.<div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-6-14-3-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.2.3.3.b"><a href="#quantifiers-6-14-3-1-2-2" title="Copy heading and permalink for Item 2.2.3.3.b" aria-label="Copy heading and permalink for Item 2.2.3.3.b">🔗</a></div>
+</li>
+<li id="quantifiers-6-14-3-1-2-3">
+<div class="para" id="quantifiers-6-14-3-1-2-3-1">Some real numbers have square 2.<div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-6-14-3-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.2.3.3.c"><a href="#quantifiers-6-14-3-1-2-3" title="Copy heading and permalink for Item 2.2.3.3.c" aria-label="Copy heading and permalink for Item 2.2.3.3.c">🔗</a></div>
+</li>
+<li id="quantifiers-6-14-3-1-2-4">
+<div class="para" id="quantifiers-6-14-3-1-2-4-1">The number <span class="process-math">\(x\)</span> has square 2, for some real number <span class="process-math">\(x\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-6-14-3-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.2.3.3.d"><a href="#quantifiers-6-14-3-1-2-4" title="Copy heading and permalink for Item 2.2.3.3.d" aria-label="Copy heading and permalink for Item 2.2.3.3.d">🔗</a></div>
+</li>
+<li id="quantifiers-6-14-3-1-2-5">
+<div class="para" id="quantifiers-6-14-3-1-2-5-1">If <span class="process-math">\(x\)</span> is a real number, then <span class="process-math">\(x^2=2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-6-14-3-1-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.2.3.3.e"><a href="#quantifiers-6-14-3-1-2-5" title="Copy heading and permalink for Item 2.2.3.3.e" aria-label="Copy heading and permalink for Item 2.2.3.3.e">🔗</a></div>
+</li>
+<li id="quantifiers-6-14-3-1-2-6">
+<div class="para" id="quantifiers-6-14-3-1-2-6-1">Some real number has square 2.<div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-6-14-3-1-2-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.2.3.3.f"><a href="#quantifiers-6-14-3-1-2-6" title="Copy heading and permalink for Item 2.2.3.3.f" aria-label="Copy heading and permalink for Item 2.2.3.3.f">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 2.2.3.3"><a href="#quantifiers-6-14-3" title="Copy heading and permalink for Exercise 2.2.3.3" aria-label="Copy heading and permalink for Exercise 2.2.3.3">🔗</a></div></article><article class="exercise exercise-like" id="quantifiers-6-14-4"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
 <div class="para logical" id="quantifiers-6-14-4-1-1">
 <div class="para">Consider the statement</div>
 <div class="displaymath process-math">
@@ -924,59 +888,147 @@ eBookConfig.enable_chatcodes =  false;
 \end{equation*}
 </div>
 <div class="para">Which of the following are equivalent ways of expressing this statement?</div>
-</div> <ol class="lower-alpha" id="quantifiers-6-14-4-1-2">
-<li id="quantifiers-6-14-4-1-2-1"><div class="para" id="quantifiers-6-14-4-1-2-1-1">If the square of an integer is even, then that integer is even</div></li>
-<li id="quantifiers-6-14-4-1-2-2"><div class="para" id="quantifiers-6-14-4-1-2-2-1">All integers have even squares and are even.</div></li>
-<li id="quantifiers-6-14-4-1-2-3"><div class="para" id="quantifiers-6-14-4-1-2-3-1">Given any integer whose square is even, that integer is itself even.</div></li>
-<li id="quantifiers-6-14-4-1-2-4"><div class="para" id="quantifiers-6-14-4-1-2-4-1">For all integers, there are some whose square is even.</div></li>
-<li id="quantifiers-6-14-4-1-2-5"><div class="para" id="quantifiers-6-14-4-1-2-5-1">Any integer with an even square is even.</div></li>
-<li id="quantifiers-6-14-4-1-2-6"><div class="para" id="quantifiers-6-14-4-1-2-6-1">All even integers have even squares.</div></li>
-</ol></article><article class="exercise exercise-like" id="quantifiers-6-14-5"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
-<div class="para" id="quantifiers-6-14-5-1-1">Rewrite the following statements using the form “<span class="process-math">\(\forall\)</span>____<span class="process-math">\(x\text{,}\)</span>____.”</div> <ol class="lower-alpha" id="quantifiers-6-14-5-1-2">
-<li id="quantifiers-6-14-5-1-2-1"><div class="para" id="quantifiers-6-14-5-1-2-1-1">Every real number is positive, negative, or zero.</div></li>
-<li id="quantifiers-6-14-5-1-2-2"><div class="para" id="quantifiers-6-14-5-1-2-2-1">No irrational numbers are integers.</div></li>
-</ol></article><article class="exercise exercise-like" id="quantifiers-6-14-6"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>
-<div class="para" id="quantifiers-6-14-6-1-1">Rewrite the statement in English without using the symbols <span class="process-math">\(\forall\)</span> or <span class="process-math">\(\exists\text{.}\)</span> Express your answer as simply as possible. Then write a negation for the statement. Determine which statement is true, the original or the negation.</div> <ol class="lower-alpha" id="quantifiers-6-14-6-1-2">
-<li id="quantifiers-6-14-6-1-2-1"><div class="para" id="quantifiers-6-14-6-1-2-1-1">
-<span class="process-math">\(\exists\)</span> a book <span class="process-math">\(b\text{,}\)</span> <span class="process-math">\(\forall\)</span> people <span class="process-math">\(p\text{,}\)</span> <span class="process-math">\(p\)</span> has read <span class="process-math">\(b\text{.}\)</span>
-</div></li>
-<li id="quantifiers-6-14-6-1-2-2"><div class="para" id="quantifiers-6-14-6-1-2-2-1">
-<span class="process-math">\(\forall\)</span> odd integers <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(\exists\)</span> an integer <span class="process-math">\(k\)</span> such that <span class="process-math">\(n=2k+1\text{.}\)</span>
-</div></li>
-<li id="quantifiers-6-14-6-1-2-3"><div class="para" id="quantifiers-6-14-6-1-2-3-1">
-<span class="process-math">\(\forall r \in \mathbb{Q}\text{,}\)</span> <span class="process-math">\(\exists\)</span> integers <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> such that <span class="process-math">\(r=a/b\text{.}\)</span>
-</div></li>
-<li id="quantifiers-6-14-6-1-2-4"><div class="para" id="quantifiers-6-14-6-1-2-4-1">
-<span class="process-math">\(\forall x \in \mathbb{R}\text{,}\)</span> <span class="process-math">\(\exists y\in \mathbb{R}\)</span> such that <span class="process-math">\(x+y=0\text{.}\)</span>
-</div></li>
-<li id="quantifiers-6-14-6-1-2-5"><div class="para" id="quantifiers-6-14-6-1-2-5-1">
-<span class="process-math">\(\exists x \in \mathbb{R}\text{,}\)</span> <span class="process-math">\(\forall y\in \mathbb{R}\text{,}\)</span> <span class="process-math">\(x+y=0\text{.}\)</span>
-</div></li>
-</ol></article><article class="exercise exercise-like" id="quantifiers-6-14-7"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>
-<div class="para" id="quantifiers-6-14-7-1-1">Rewrite the statement formally using quantifiers and variables. Write the negation of the statement.</div> <ol class="lower-alpha" id="quantifiers-6-14-7-1-2">
-<li id="quantifiers-6-14-7-1-2-1"><div class="para" id="quantifiers-6-14-7-1-2-1-1">Everybody trusts somebody.</div></li>
-<li id="quantifiers-6-14-7-1-2-2"><div class="para" id="quantifiers-6-14-7-1-2-2-1">Somebody trusts everybody.</div></li>
-<li id="quantifiers-6-14-7-1-2-3"><div class="para" id="quantifiers-6-14-7-1-2-3-1">Any even integer equals twice some other integer.</div></li>
-<li id="quantifiers-6-14-7-1-2-4"><div class="para" id="quantifiers-6-14-7-1-2-4-1">The number of rows in any truth-table is <span class="process-math">\(2^n\)</span> for some integer <span class="process-math">\(n\text{.}\)</span>
-</div></li>
-<li id="quantifiers-6-14-7-1-2-5"><div class="para" id="quantifiers-6-14-7-1-2-5-1">There is a prime number between every integer and its double.</div></li>
-</ol></article><article class="exercise exercise-like" id="quantifiers-6-14-8"><h5 class="heading"><span class="codenumber">8<span class="period">.</span></span></h5>
-<div class="para" id="quantifiers-6-14-8-1-1">For each statement write a new statement by interchanging the symbols <span class="process-math">\(\forall\)</span> and <span class="process-math">\(\exists\text{.}\)</span> Which is true– the given statement, the interchanged version, neither, or both?</div> <ol class="lower-alpha" id="quantifiers-6-14-8-1-2">
-<li id="quantifiers-6-14-8-1-2-1"><div class="para" id="quantifiers-6-14-8-1-2-1-1">
-<span class="process-math">\(\forall x\in \mathbb{R}\text{,}\)</span> <span class="process-math">\(\exists y\in \mathbb{R}\)</span> such that <span class="process-math">\(x&lt;y\text{.}\)</span>
-</div></li>
-<li id="quantifiers-6-14-8-1-2-2"><div class="para" id="quantifiers-6-14-8-1-2-2-1">
-<span class="process-math">\(\exists x\in \mathbb{R}\text{,}\)</span> <span class="process-math">\(\forall y \in \mathbb{R}^-\)</span> (the set of negative real numbers), <span class="process-math">\(x&lt;y\text{.}\)</span>
-</div></li>
-</ol></article><article class="exercise exercise-like" id="quantifiers-6-14-9"><h5 class="heading"><span class="codenumber">9<span class="period">.</span></span></h5>
-<div class="para" id="quantifiers-6-14-9-1-1">Consider the following sequence of digits: 2300204. A person claims that all of the 1’s in the sequence are to the left of all of the 0’s in the sequence. Is this true? Justify your answer.</div>
-<div class="solutions"><details id="quantifiers-6-14-9-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="quantifiers-6-14-9-2-1">Write the claim formally and write a formal negation for it. Is the negation true or false?</div></div></details></div></article></section></section></section></div>
-<div class="ptx-content-footer">
+<div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-6-14-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha lower-alpha-level-1" id="quantifiers-6-14-4-1-2">
+<li id="quantifiers-6-14-4-1-2-1">
+<div class="para" id="quantifiers-6-14-4-1-2-1-1">If the square of an integer is even, then that integer is even<div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-6-14-4-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.2.3.4.a"><a href="#quantifiers-6-14-4-1-2-1" title="Copy heading and permalink for Item 2.2.3.4.a" aria-label="Copy heading and permalink for Item 2.2.3.4.a">🔗</a></div>
+</li>
+<li id="quantifiers-6-14-4-1-2-2">
+<div class="para" id="quantifiers-6-14-4-1-2-2-1">All integers have even squares and are even.<div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-6-14-4-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.2.3.4.b"><a href="#quantifiers-6-14-4-1-2-2" title="Copy heading and permalink for Item 2.2.3.4.b" aria-label="Copy heading and permalink for Item 2.2.3.4.b">🔗</a></div>
+</li>
+<li id="quantifiers-6-14-4-1-2-3">
+<div class="para" id="quantifiers-6-14-4-1-2-3-1">Given any integer whose square is even, that integer is itself even.<div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-6-14-4-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.2.3.4.c"><a href="#quantifiers-6-14-4-1-2-3" title="Copy heading and permalink for Item 2.2.3.4.c" aria-label="Copy heading and permalink for Item 2.2.3.4.c">🔗</a></div>
+</li>
+<li id="quantifiers-6-14-4-1-2-4">
+<div class="para" id="quantifiers-6-14-4-1-2-4-1">For all integers, there are some whose square is even.<div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-6-14-4-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.2.3.4.d"><a href="#quantifiers-6-14-4-1-2-4" title="Copy heading and permalink for Item 2.2.3.4.d" aria-label="Copy heading and permalink for Item 2.2.3.4.d">🔗</a></div>
+</li>
+<li id="quantifiers-6-14-4-1-2-5">
+<div class="para" id="quantifiers-6-14-4-1-2-5-1">Any integer with an even square is even.<div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-6-14-4-1-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.2.3.4.e"><a href="#quantifiers-6-14-4-1-2-5" title="Copy heading and permalink for Item 2.2.3.4.e" aria-label="Copy heading and permalink for Item 2.2.3.4.e">🔗</a></div>
+</li>
+<li id="quantifiers-6-14-4-1-2-6">
+<div class="para" id="quantifiers-6-14-4-1-2-6-1">All even integers have even squares.<div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-6-14-4-1-2-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.2.3.4.f"><a href="#quantifiers-6-14-4-1-2-6" title="Copy heading and permalink for Item 2.2.3.4.f" aria-label="Copy heading and permalink for Item 2.2.3.4.f">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 2.2.3.4"><a href="#quantifiers-6-14-4" title="Copy heading and permalink for Exercise 2.2.3.4" aria-label="Copy heading and permalink for Exercise 2.2.3.4">🔗</a></div></article><article class="exercise exercise-like" id="quantifiers-6-14-5"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
+<div class="para" id="quantifiers-6-14-5-1-1">Rewrite the following statements using the form “<span class="process-math">\(\forall\)</span>____<span class="process-math">\(x\text{,}\)</span>____.”<div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-6-14-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha lower-alpha-level-1" id="quantifiers-6-14-5-1-2">
+<li id="quantifiers-6-14-5-1-2-1">
+<div class="para" id="quantifiers-6-14-5-1-2-1-1">Every real number is positive, negative, or zero.<div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-6-14-5-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.2.3.5.a"><a href="#quantifiers-6-14-5-1-2-1" title="Copy heading and permalink for Item 2.2.3.5.a" aria-label="Copy heading and permalink for Item 2.2.3.5.a">🔗</a></div>
+</li>
+<li id="quantifiers-6-14-5-1-2-2">
+<div class="para" id="quantifiers-6-14-5-1-2-2-1">No irrational numbers are integers.<div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-6-14-5-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.2.3.5.b"><a href="#quantifiers-6-14-5-1-2-2" title="Copy heading and permalink for Item 2.2.3.5.b" aria-label="Copy heading and permalink for Item 2.2.3.5.b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 2.2.3.5"><a href="#quantifiers-6-14-5" title="Copy heading and permalink for Exercise 2.2.3.5" aria-label="Copy heading and permalink for Exercise 2.2.3.5">🔗</a></div></article><article class="exercise exercise-like" id="quantifiers-6-14-6"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>
+<div class="para" id="quantifiers-6-14-6-1-1">Rewrite the statement in English without using the symbols <span class="process-math">\(\forall\)</span> or <span class="process-math">\(\exists\text{.}\)</span> Express your answer as simply as possible. Then write a negation for the statement. Determine which statement is true, the original or the negation.<div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-6-14-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha lower-alpha-level-1" id="quantifiers-6-14-6-1-2">
+<li id="quantifiers-6-14-6-1-2-1">
+<div class="para" id="quantifiers-6-14-6-1-2-1-1">
+<span class="process-math">\(\exists\)</span> a book <span class="process-math">\(b\text{,}\)</span> <span class="process-math">\(\forall\)</span> people <span class="process-math">\(p\text{,}\)</span> <span class="process-math">\(p\)</span> has read <span class="process-math">\(b\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-6-14-6-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.2.3.6.a"><a href="#quantifiers-6-14-6-1-2-1" title="Copy heading and permalink for Item 2.2.3.6.a" aria-label="Copy heading and permalink for Item 2.2.3.6.a">🔗</a></div>
+</li>
+<li id="quantifiers-6-14-6-1-2-2">
+<div class="para" id="quantifiers-6-14-6-1-2-2-1">
+<span class="process-math">\(\forall\)</span> odd integers <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(\exists\)</span> an integer <span class="process-math">\(k\)</span> such that <span class="process-math">\(n=2k+1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-6-14-6-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.2.3.6.b"><a href="#quantifiers-6-14-6-1-2-2" title="Copy heading and permalink for Item 2.2.3.6.b" aria-label="Copy heading and permalink for Item 2.2.3.6.b">🔗</a></div>
+</li>
+<li id="quantifiers-6-14-6-1-2-3">
+<div class="para" id="quantifiers-6-14-6-1-2-3-1">
+<span class="process-math">\(\forall r \in \mathbb{Q}\text{,}\)</span> <span class="process-math">\(\exists\)</span> integers <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> such that <span class="process-math">\(r=a/b\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-6-14-6-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.2.3.6.c"><a href="#quantifiers-6-14-6-1-2-3" title="Copy heading and permalink for Item 2.2.3.6.c" aria-label="Copy heading and permalink for Item 2.2.3.6.c">🔗</a></div>
+</li>
+<li id="quantifiers-6-14-6-1-2-4">
+<div class="para" id="quantifiers-6-14-6-1-2-4-1">
+<span class="process-math">\(\forall x \in \mathbb{R}\text{,}\)</span> <span class="process-math">\(\exists y\in \mathbb{R}\)</span> such that <span class="process-math">\(x+y=0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-6-14-6-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.2.3.6.d"><a href="#quantifiers-6-14-6-1-2-4" title="Copy heading and permalink for Item 2.2.3.6.d" aria-label="Copy heading and permalink for Item 2.2.3.6.d">🔗</a></div>
+</li>
+<li id="quantifiers-6-14-6-1-2-5">
+<div class="para" id="quantifiers-6-14-6-1-2-5-1">
+<span class="process-math">\(\exists x \in \mathbb{R}\text{,}\)</span> <span class="process-math">\(\forall y\in \mathbb{R}\text{,}\)</span> <span class="process-math">\(x+y=0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-6-14-6-1-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.2.3.6.e"><a href="#quantifiers-6-14-6-1-2-5" title="Copy heading and permalink for Item 2.2.3.6.e" aria-label="Copy heading and permalink for Item 2.2.3.6.e">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 2.2.3.6"><a href="#quantifiers-6-14-6" title="Copy heading and permalink for Exercise 2.2.3.6" aria-label="Copy heading and permalink for Exercise 2.2.3.6">🔗</a></div></article><article class="exercise exercise-like" id="quantifiers-6-14-7"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>
+<div class="para" id="quantifiers-6-14-7-1-1">Rewrite the statement formally using quantifiers and variables. Write the negation of the statement.<div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-6-14-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha lower-alpha-level-1" id="quantifiers-6-14-7-1-2">
+<li id="quantifiers-6-14-7-1-2-1">
+<div class="para" id="quantifiers-6-14-7-1-2-1-1">Everybody trusts somebody.<div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-6-14-7-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.2.3.7.a"><a href="#quantifiers-6-14-7-1-2-1" title="Copy heading and permalink for Item 2.2.3.7.a" aria-label="Copy heading and permalink for Item 2.2.3.7.a">🔗</a></div>
+</li>
+<li id="quantifiers-6-14-7-1-2-2">
+<div class="para" id="quantifiers-6-14-7-1-2-2-1">Somebody trusts everybody.<div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-6-14-7-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.2.3.7.b"><a href="#quantifiers-6-14-7-1-2-2" title="Copy heading and permalink for Item 2.2.3.7.b" aria-label="Copy heading and permalink for Item 2.2.3.7.b">🔗</a></div>
+</li>
+<li id="quantifiers-6-14-7-1-2-3">
+<div class="para" id="quantifiers-6-14-7-1-2-3-1">Any even integer equals twice some other integer.<div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-6-14-7-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.2.3.7.c"><a href="#quantifiers-6-14-7-1-2-3" title="Copy heading and permalink for Item 2.2.3.7.c" aria-label="Copy heading and permalink for Item 2.2.3.7.c">🔗</a></div>
+</li>
+<li id="quantifiers-6-14-7-1-2-4">
+<div class="para" id="quantifiers-6-14-7-1-2-4-1">The number of rows in any truth-table is <span class="process-math">\(2^n\)</span> for some integer <span class="process-math">\(n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-6-14-7-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.2.3.7.d"><a href="#quantifiers-6-14-7-1-2-4" title="Copy heading and permalink for Item 2.2.3.7.d" aria-label="Copy heading and permalink for Item 2.2.3.7.d">🔗</a></div>
+</li>
+<li id="quantifiers-6-14-7-1-2-5">
+<div class="para" id="quantifiers-6-14-7-1-2-5-1">There is a prime number between every integer and its double.<div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-6-14-7-1-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.2.3.7.e"><a href="#quantifiers-6-14-7-1-2-5" title="Copy heading and permalink for Item 2.2.3.7.e" aria-label="Copy heading and permalink for Item 2.2.3.7.e">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 2.2.3.7"><a href="#quantifiers-6-14-7" title="Copy heading and permalink for Exercise 2.2.3.7" aria-label="Copy heading and permalink for Exercise 2.2.3.7">🔗</a></div></article><article class="exercise exercise-like" id="quantifiers-6-14-8"><h5 class="heading"><span class="codenumber">8<span class="period">.</span></span></h5>
+<div class="para" id="quantifiers-6-14-8-1-1">For each statement write a new statement by interchanging the symbols <span class="process-math">\(\forall\)</span> and <span class="process-math">\(\exists\text{.}\)</span> Which is true– the given statement, the interchanged version, neither, or both?<div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-6-14-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha lower-alpha-level-1" id="quantifiers-6-14-8-1-2">
+<li id="quantifiers-6-14-8-1-2-1">
+<div class="para" id="quantifiers-6-14-8-1-2-1-1">
+<span class="process-math">\(\forall x\in \mathbb{R}\text{,}\)</span> <span class="process-math">\(\exists y\in \mathbb{R}\)</span> such that <span class="process-math">\(x&lt;y\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-6-14-8-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.2.3.8.a"><a href="#quantifiers-6-14-8-1-2-1" title="Copy heading and permalink for Item 2.2.3.8.a" aria-label="Copy heading and permalink for Item 2.2.3.8.a">🔗</a></div>
+</li>
+<li id="quantifiers-6-14-8-1-2-2">
+<div class="para" id="quantifiers-6-14-8-1-2-2-1">
+<span class="process-math">\(\exists x\in \mathbb{R}\text{,}\)</span> <span class="process-math">\(\forall y \in \mathbb{R}^-\)</span> (the set of negative real numbers), <span class="process-math">\(x&lt;y\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-6-14-8-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2.2.3.8.b"><a href="#quantifiers-6-14-8-1-2-2" title="Copy heading and permalink for Item 2.2.3.8.b" aria-label="Copy heading and permalink for Item 2.2.3.8.b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 2.2.3.8"><a href="#quantifiers-6-14-8" title="Copy heading and permalink for Exercise 2.2.3.8" aria-label="Copy heading and permalink for Exercise 2.2.3.8">🔗</a></div></article><article class="exercise exercise-like" id="quantifiers-6-14-9"><h5 class="heading"><span class="codenumber">9<span class="period">.</span></span></h5>
+<div class="para" id="quantifiers-6-14-9-1-1">Consider the following sequence of digits: 2300204. A person claims that all of the 1’s in the sequence are to the left of all of the 0’s in the sequence. Is this true? Justify your answer.<div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-6-14-9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="quantifiers-6-14-9-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="quantifiers-6-14-9-2-1">Write the claim formally and write a formal negation for it. Is the negation true or false?<div class="autopermalink" data-description="Paragraph"><a href="#quantifiers-6-14-9-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 2.2.3.9.1"><a href="#quantifiers-6-14-9-2" title="Copy heading and permalink for Hint 2.2.3.9.1" aria-label="Copy heading and permalink for Hint 2.2.3.9.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Exercise 2.2.3.9"><a href="#quantifiers-6-14-9" title="Copy heading and permalink for Exercise 2.2.3.9" aria-label="Copy heading and permalink for Exercise 2.2.3.9">🔗</a></div></article><div class="autopermalink" data-description="Exercises 2.2.3"><a href="#quantifiers-6-14" title="Copy heading and permalink for Exercises 2.2.3" aria-label="Copy heading and permalink for Exercises 2.2.3">🔗</a></div></section><div class="autopermalink" data-description="Subsection 2.2.3: Multiple Quantifiers"><a href="#quantifiers-6" title="Copy heading and permalink for Subsection 2.2.3: Multiple Quantifiers" aria-label="Copy heading and permalink for Subsection 2.2.3: Multiple Quantifiers">🔗</a></div></section><div class="autopermalink" data-description="Section 2.2: Quantifiers"><a href="#quantifiers" title="Copy heading and permalink for Section 2.2: Quantifiers" aria-label="Copy heading and permalink for Section 2.2: Quantifiers">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="setnotation.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="conditionals.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
-<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
 </div>
 <!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
 var sc_project=12871717;

@@ -6,14 +6,20 @@
 <!--*                                          *-->
 <!--********************************************-->
 <html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Proof by Cases</title>
-<meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:type" content="book">
-<meta property="book:title" content="Introduction to Proofs">
-<meta property="book:author" content="Jennifer Firkins Nordstrom">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
 <script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
@@ -69,13 +75,12 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
-<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
-</script><link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
-<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
-<!--** eBookCongig is necessary to configure interactive       **-->
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Introduction to Proofs">
+<meta property="book:author" content="Jennifer Firkins Nordstrom">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -97,307 +102,23 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.5.6';
+eBookConfig.runestone_version = '7.11.5';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.82032a8574f6ce75.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6a985cbf816db5c7.css">
-<style>
-#arguments-20-1-1-4 { counter-set: arguments-20-1-1-4 0; }
-#arguments-20-1-1-4 > li::marker { content: ""counter(arguments-20-1-1-4,lower-alpha)""; }
-#arguments-20-1-1-4 > li { counter-increment: arguments-20-1-1-4; }
-#arguments-20-2-1-3 { counter-set: arguments-20-2-1-3 0; }
-#arguments-20-2-1-3 > li::marker { content: ""counter(arguments-20-2-1-3,lower-alpha)""; }
-#arguments-20-2-1-3 > li { counter-increment: arguments-20-2-1-3; }
-#arguments-20-3-1-2 { counter-set: arguments-20-3-1-2 0; }
-#arguments-20-3-1-2 > li::marker { content: "("counter(arguments-20-3-1-2,lower-alpha)")"; }
-#arguments-20-3-1-2 > li { counter-increment: arguments-20-3-1-2; }
-#B_logicalequivalences-3-5 { counter-set: B_logicalequivalences-3-5 0; }
-#B_logicalequivalences-3-5 > li::marker { content: ""counter(B_logicalequivalences-3-5,decimal)""; }
-#B_logicalequivalences-3-5 > li { counter-increment: B_logicalequivalences-3-5; }
-#connectives-73-1-1-2 { counter-set: connectives-73-1-1-2 0; }
-#connectives-73-1-1-2 > li::marker { content: ""counter(connectives-73-1-1-2,lower-alpha)""; }
-#connectives-73-1-1-2 > li { counter-increment: connectives-73-1-1-2; }
-#connectives-73-2-1-2 { counter-set: connectives-73-2-1-2 0; }
-#connectives-73-2-1-2 > li::marker { content: ""counter(connectives-73-2-1-2,lower-alpha)""; }
-#connectives-73-2-1-2 > li { counter-increment: connectives-73-2-1-2; }
-#connectives-73-3-1-2 { counter-set: connectives-73-3-1-2 0; }
-#connectives-73-3-1-2 > li::marker { content: ""counter(connectives-73-3-1-2,lower-alpha)""; }
-#connectives-73-3-1-2 > li { counter-increment: connectives-73-3-1-2; }
-#ER_onlyandnot-1-2 { counter-set: ER_onlyandnot-1-2 0; }
-#ER_onlyandnot-1-2 > li::marker { content: ""counter(ER_onlyandnot-1-2,lower-alpha)""; }
-#ER_onlyandnot-1-2 > li { counter-increment: ER_onlyandnot-1-2; }
-#connectives-73-5-1-2 { counter-set: connectives-73-5-1-2 0; }
-#connectives-73-5-1-2 > li::marker { content: ""counter(connectives-73-5-1-2,lower-alpha)""; }
-#connectives-73-5-1-2 > li { counter-increment: connectives-73-5-1-2; }
-#setnotation-22-4-1-2 { counter-set: setnotation-22-4-1-2 0; }
-#setnotation-22-4-1-2 > li::marker { content: ""counter(setnotation-22-4-1-2,lower-alpha)""; }
-#setnotation-22-4-1-2 > li { counter-increment: setnotation-22-4-1-2; }
-#setnotation-22-5-1-2 { counter-set: setnotation-22-5-1-2 0; }
-#setnotation-22-5-1-2 > li::marker { content: ""counter(setnotation-22-5-1-2,lower-alpha)""; }
-#setnotation-22-5-1-2 > li { counter-increment: setnotation-22-5-1-2; }
-#E_multquant1-2-2 { counter-set: E_multquant1-2-2 0; }
-#E_multquant1-2-2 > li::marker { content: ""counter(E_multquant1-2-2,lower-alpha)""; }
-#E_multquant1-2-2 > li { counter-increment: E_multquant1-2-2; }
-#quantifiers-6-14-3-1-2 { counter-set: quantifiers-6-14-3-1-2 0; }
-#quantifiers-6-14-3-1-2 > li::marker { content: ""counter(quantifiers-6-14-3-1-2,lower-alpha)""; }
-#quantifiers-6-14-3-1-2 > li { counter-increment: quantifiers-6-14-3-1-2; }
-#quantifiers-6-14-4-1-2 { counter-set: quantifiers-6-14-4-1-2 0; }
-#quantifiers-6-14-4-1-2 > li::marker { content: ""counter(quantifiers-6-14-4-1-2,lower-alpha)""; }
-#quantifiers-6-14-4-1-2 > li { counter-increment: quantifiers-6-14-4-1-2; }
-#quantifiers-6-14-5-1-2 { counter-set: quantifiers-6-14-5-1-2 0; }
-#quantifiers-6-14-5-1-2 > li::marker { content: ""counter(quantifiers-6-14-5-1-2,lower-alpha)""; }
-#quantifiers-6-14-5-1-2 > li { counter-increment: quantifiers-6-14-5-1-2; }
-#quantifiers-6-14-6-1-2 { counter-set: quantifiers-6-14-6-1-2 0; }
-#quantifiers-6-14-6-1-2 > li::marker { content: ""counter(quantifiers-6-14-6-1-2,lower-alpha)""; }
-#quantifiers-6-14-6-1-2 > li { counter-increment: quantifiers-6-14-6-1-2; }
-#quantifiers-6-14-7-1-2 { counter-set: quantifiers-6-14-7-1-2 0; }
-#quantifiers-6-14-7-1-2 > li::marker { content: ""counter(quantifiers-6-14-7-1-2,lower-alpha)""; }
-#quantifiers-6-14-7-1-2 > li { counter-increment: quantifiers-6-14-7-1-2; }
-#quantifiers-6-14-8-1-2 { counter-set: quantifiers-6-14-8-1-2 0; }
-#quantifiers-6-14-8-1-2 > li::marker { content: ""counter(quantifiers-6-14-8-1-2,lower-alpha)""; }
-#quantifiers-6-14-8-1-2 > li { counter-increment: quantifiers-6-14-8-1-2; }
-#conditionals-33-1-1-2 { counter-set: conditionals-33-1-1-2 0; }
-#conditionals-33-1-1-2 > li::marker { content: ""counter(conditionals-33-1-1-2,lower-alpha)""; }
-#conditionals-33-1-1-2 > li { counter-increment: conditionals-33-1-1-2; }
-#conditionals-33-2-1-2 { counter-set: conditionals-33-2-1-2 0; }
-#conditionals-33-2-1-2 > li::marker { content: ""counter(conditionals-33-2-1-2,lower-alpha)""; }
-#conditionals-33-2-1-2 > li { counter-increment: conditionals-33-2-1-2; }
-#conditionals-33-3-1-2 { counter-set: conditionals-33-3-1-2 0; }
-#conditionals-33-3-1-2 > li::marker { content: ""counter(conditionals-33-3-1-2,lower-alpha)""; }
-#conditionals-33-3-1-2 > li { counter-increment: conditionals-33-3-1-2; }
-#conditionals-33-4-1-2 { counter-set: conditionals-33-4-1-2 0; }
-#conditionals-33-4-1-2 > li::marker { content: ""counter(conditionals-33-4-1-2,lower-alpha)""; }
-#conditionals-33-4-1-2 > li { counter-increment: conditionals-33-4-1-2; }
-#conditionals-33-5-1-2 { counter-set: conditionals-33-5-1-2 0; }
-#conditionals-33-5-1-2 > li::marker { content: ""counter(conditionals-33-5-1-2,lower-alpha)""; }
-#conditionals-33-5-1-2 > li { counter-increment: conditionals-33-5-1-2; }
-#directproof-29-1-1-2 { counter-set: directproof-29-1-1-2 0; }
-#directproof-29-1-1-2 > li::marker { content: ""counter(directproof-29-1-1-2,lower-alpha)""; }
-#directproof-29-1-1-2 > li { counter-increment: directproof-29-1-1-2; }
-#directproof-29-11-1-2 { counter-set: directproof-29-11-1-2 0; }
-#directproof-29-11-1-2 > li::marker { content: ""counter(directproof-29-11-1-2,lower-alpha)""; }
-#directproof-29-11-1-2 > li { counter-increment: directproof-29-11-1-2; }
-#moredirect-7-1-1-2 { counter-set: moredirect-7-1-1-2 0; }
-#moredirect-7-1-1-2 > li::marker { content: ""counter(moredirect-7-1-1-2,lower-alpha)""; }
-#moredirect-7-1-1-2 > li { counter-increment: moredirect-7-1-1-2; }
-#moredirect-7-4-1-2 { counter-set: moredirect-7-4-1-2 0; }
-#moredirect-7-4-1-2 > li::marker { content: "("counter(moredirect-7-4-1-2,lower-alpha)")"; }
-#moredirect-7-4-1-2 > li { counter-increment: moredirect-7-4-1-2; }
-#ER_averagerat-1-2 { counter-set: ER_averagerat-1-2 0; }
-#ER_averagerat-1-2 > li::marker { content: ""counter(ER_averagerat-1-2,lower-alpha)""; }
-#ER_averagerat-1-2 > li { counter-increment: ER_averagerat-1-2; }
-#moredirect-7-7-1-2 { counter-set: moredirect-7-7-1-2 0; }
-#moredirect-7-7-1-2 > li::marker { content: ""counter(moredirect-7-7-1-2,lower-alpha)""; }
-#moredirect-7-7-1-2 > li { counter-increment: moredirect-7-7-1-2; }
-#moredirect-7-9-1-2 { counter-set: moredirect-7-9-1-2 0; }
-#moredirect-7-9-1-2 > li::marker { content: ""counter(moredirect-7-9-1-2,lower-alpha)""; }
-#moredirect-7-9-1-2 > li { counter-increment: moredirect-7-9-1-2; }
-#cases-31-1-1-2 { counter-set: cases-31-1-1-2 0; }
-#cases-31-1-1-2 > li::marker { content: ""counter(cases-31-1-1-2,lower-alpha)""; }
-#cases-31-1-1-2 > li { counter-increment: cases-31-1-1-2; }
-#SS_twoproofs-18-1-1-2 { counter-set: SS_twoproofs-18-1-1-2 0; }
-#SS_twoproofs-18-1-1-2 > li::marker { content: ""counter(SS_twoproofs-18-1-1-2,lower-alpha)""; }
-#SS_twoproofs-18-1-1-2 > li { counter-increment: SS_twoproofs-18-1-1-2; }
-#SS_twoproofs-18-2-1-2 { counter-set: SS_twoproofs-18-2-1-2 0; }
-#SS_twoproofs-18-2-1-2 > li::marker { content: ""counter(SS_twoproofs-18-2-1-2,lower-alpha)""; }
-#SS_twoproofs-18-2-1-2 > li { counter-increment: SS_twoproofs-18-2-1-2; }
-#SS_twoproofs-18-3-1-2 { counter-set: SS_twoproofs-18-3-1-2 0; }
-#SS_twoproofs-18-3-1-2 > li::marker { content: ""counter(SS_twoproofs-18-3-1-2,lower-alpha)""; }
-#SS_twoproofs-18-3-1-2 > li { counter-increment: SS_twoproofs-18-3-1-2; }
-#SS_twoproofs-18-4-1-2 { counter-set: SS_twoproofs-18-4-1-2 0; }
-#SS_twoproofs-18-4-1-2 > li::marker { content: ""counter(SS_twoproofs-18-4-1-2,lower-alpha)""; }
-#SS_twoproofs-18-4-1-2 > li { counter-increment: SS_twoproofs-18-4-1-2; }
-#SS_twoproofs-18-5-1-2 { counter-set: SS_twoproofs-18-5-1-2 0; }
-#SS_twoproofs-18-5-1-2 > li::marker { content: ""counter(SS_twoproofs-18-5-1-2,lower-alpha)""; }
-#SS_twoproofs-18-5-1-2 > li { counter-increment: SS_twoproofs-18-5-1-2; }
-#B_propsums-2-1 { counter-set: B_propsums-2-1 0; }
-#B_propsums-2-1 > li::marker { content: ""counter(B_propsums-2-1,decimal)""; }
-#B_propsums-2-1 > li { counter-increment: B_propsums-2-1; }
-#summation-27-1-1-2 { counter-set: summation-27-1-1-2 0; }
-#summation-27-1-1-2 > li::marker { content: ""counter(summation-27-1-1-2,lower-alpha)""; }
-#summation-27-1-1-2 > li { counter-increment: summation-27-1-1-2; }
-#summation-27-2-1-2 { counter-set: summation-27-2-1-2 0; }
-#summation-27-2-1-2 > li::marker { content: ""counter(summation-27-2-1-2,lower-alpha)""; }
-#summation-27-2-1-2 > li { counter-increment: summation-27-2-1-2; }
-#summation-27-3-1-2 { counter-set: summation-27-3-1-2 0; }
-#summation-27-3-1-2 > li::marker { content: ""counter(summation-27-3-1-2,lower-alpha)""; }
-#summation-27-3-1-2 > li { counter-increment: summation-27-3-1-2; }
-#summation-27-8-1-2 { counter-set: summation-27-8-1-2 0; }
-#summation-27-8-1-2 > li::marker { content: ""counter(summation-27-8-1-2,lower-alpha)""; }
-#summation-27-8-1-2 > li { counter-increment: summation-27-8-1-2; }
-#B_induction-3-4 { counter-set: B_induction-3-4 0; }
-#B_induction-3-4 > li::marker { content: ""counter(B_induction-3-4,decimal)""; }
-#B_induction-3-4 > li { counter-increment: B_induction-3-4; }
-#induction-6-1 { counter-set: induction-6-1 0; }
-#induction-6-1 > li::marker { content: "("counter(induction-6-1,decimal)")"; }
-#induction-6-1 > li { counter-increment: induction-6-1; }
-#ER_indpowersof2-1-2 { counter-set: ER_indpowersof2-1-2 0; }
-#ER_indpowersof2-1-2 > li::marker { content: ""counter(ER_indpowersof2-1-2,lower-alpha)""; }
-#ER_indpowersof2-1-2 > li { counter-increment: ER_indpowersof2-1-2; }
-#B_strongind-4-3 { counter-set: B_strongind-4-3 0; }
-#B_strongind-4-3 > li::marker { content: ""counter(B_strongind-4-3,decimal)""; }
-#B_strongind-4-3 > li { counter-increment: B_strongind-4-3; }
-#E_domainqexist1-3-1 { counter-set: E_domainqexist1-3-1 0; }
-#E_domainqexist1-3-1 > li::marker { content: ""counter(E_domainqexist1-3-1,lower-alpha)""; }
-#E_domainqexist1-3-1 > li { counter-increment: E_domainqexist1-3-1; }
-#B_pfexistential-3-3 { counter-set: B_pfexistential-3-3 0; }
-#B_pfexistential-3-3 > li::marker { content: ""counter(B_pfexistential-3-3,decimal)""; }
-#B_pfexistential-3-3 > li { counter-increment: B_pfexistential-3-3; }
-#B_pfunique-3-3 { counter-set: B_pfunique-3-3 0; }
-#B_pfunique-3-3 > li::marker { content: ""counter(B_pfunique-3-3,decimal)""; }
-#B_pfunique-3-3 > li { counter-increment: B_pfunique-3-3; }
-#existunique-23-1 { counter-set: existunique-23-1 0; }
-#existunique-23-1 > li::marker { content: ""counter(existunique-23-1,decimal)""; }
-#existunique-23-1 > li { counter-increment: existunique-23-1; }
-#E_wop-3-2 { counter-set: E_wop-3-2 0; }
-#E_wop-3-2 > li::marker { content: ""counter(E_wop-3-2,decimal)""; }
-#E_wop-3-2 > li { counter-increment: E_wop-3-2; }
-#E_setnotevarious-2 { counter-set: E_setnotevarious-2 0; }
-#E_setnotevarious-2 > li::marker { content: ""counter(E_setnotevarious-2,lower-alpha)""; }
-#E_setnotevarious-2 > li { counter-increment: E_setnotevarious-2; }
-#E_setops-3-2 { counter-set: E_setops-3-2 0; }
-#E_setops-3-2 > li::marker { content: ""counter(E_setops-3-2,lower-alpha)""; }
-#E_setops-3-2 > li { counter-increment: E_setops-3-2; }
-#SS_setproofs-3-3 { counter-set: SS_setproofs-3-3 0; }
-#SS_setproofs-3-3 > li::marker { content: ""counter(SS_setproofs-3-3,decimal)""; }
-#SS_setproofs-3-3 > li { counter-increment: SS_setproofs-3-3; }
-#L_SetIdent-4-4 { counter-set: L_SetIdent-4-4 0; }
-#L_SetIdent-4-4 > li::marker { content: ""counter(L_SetIdent-4-4,decimal)""; }
-#L_SetIdent-4-4 > li { counter-increment: L_SetIdent-4-4; }
-#SS_setproofs-25-1-1-2 { counter-set: SS_setproofs-25-1-1-2 0; }
-#SS_setproofs-25-1-1-2 > li::marker { content: ""counter(SS_setproofs-25-1-1-2,lower-alpha)""; }
-#SS_setproofs-25-1-1-2 > li { counter-increment: SS_setproofs-25-1-1-2; }
-#SS_setproofs-25-2-1-2 { counter-set: SS_setproofs-25-2-1-2 0; }
-#SS_setproofs-25-2-1-2 > li::marker { content: ""counter(SS_setproofs-25-2-1-2,lower-alpha)""; }
-#SS_setproofs-25-2-1-2 > li { counter-increment: SS_setproofs-25-2-1-2; }
-#SS_setproofs-25-3-1-2 { counter-set: SS_setproofs-25-3-1-2 0; }
-#SS_setproofs-25-3-1-2 > li::marker { content: ""counter(SS_setproofs-25-3-1-2,lower-alpha)""; }
-#SS_setproofs-25-3-1-2 > li { counter-increment: SS_setproofs-25-3-1-2; }
-#SS_setproofs-25-4-1-2 { counter-set: SS_setproofs-25-4-1-2 0; }
-#SS_setproofs-25-4-1-2 > li::marker { content: ""counter(SS_setproofs-25-4-1-2,lower-alpha)""; }
-#SS_setproofs-25-4-1-2 > li { counter-increment: SS_setproofs-25-4-1-2; }
-#SS_setproofs-25-5-1-2 { counter-set: SS_setproofs-25-5-1-2 0; }
-#SS_setproofs-25-5-1-2 > li::marker { content: ""counter(SS_setproofs-25-5-1-2,lower-alpha)""; }
-#SS_setproofs-25-5-1-2 > li { counter-increment: SS_setproofs-25-5-1-2; }
-#SS_setproofs-25-6-1-2 { counter-set: SS_setproofs-25-6-1-2 0; }
-#SS_setproofs-25-6-1-2 > li::marker { content: ""counter(SS_setproofs-25-6-1-2,lower-alpha)""; }
-#SS_setproofs-25-6-1-2 > li { counter-increment: SS_setproofs-25-6-1-2; }
-#SS_setproofs-25-7-1-2 { counter-set: SS_setproofs-25-7-1-2 0; }
-#SS_setproofs-25-7-1-2 > li::marker { content: ""counter(SS_setproofs-25-7-1-2,lower-alpha)""; }
-#SS_setproofs-25-7-1-2 > li { counter-increment: SS_setproofs-25-7-1-2; }
-#SS_setproofs-25-15-1-2 { counter-set: SS_setproofs-25-15-1-2 0; }
-#SS_setproofs-25-15-1-2 > li::marker { content: ""counter(SS_setproofs-25-15-1-2,lower-alpha)""; }
-#SS_setproofs-25-15-1-2 > li { counter-increment: SS_setproofs-25-15-1-2; }
-#E_notfunctionimages-2-1 { counter-set: E_notfunctionimages-2-1 0; }
-#E_notfunctionimages-2-1 > li::marker { content: ""counter(E_notfunctionimages-2-1,lower-alpha)""; }
-#E_notfunctionimages-2-1 > li { counter-increment: E_notfunctionimages-2-1; }
-#E_addasfn-3-1 { counter-set: E_addasfn-3-1 0; }
-#E_addasfn-3-1 > li::marker { content: ""counter(E_addasfn-3-1,lower-alpha)""; }
-#E_addasfn-3-1 > li { counter-increment: E_addasfn-3-1; }
-#functions-45-1-1-2 { counter-set: functions-45-1-1-2 0; }
-#functions-45-1-1-2 > li::marker { content: ""counter(functions-45-1-1-2,lower-alpha)""; }
-#functions-45-1-1-2 > li { counter-increment: functions-45-1-1-2; }
-#functions-45-2-1-2 { counter-set: functions-45-2-1-2 0; }
-#functions-45-2-1-2 > li::marker { content: ""counter(functions-45-2-1-2,lower-alpha)""; }
-#functions-45-2-1-2 > li { counter-increment: functions-45-2-1-2; }
-#functions-45-3-1-2 { counter-set: functions-45-3-1-2 0; }
-#functions-45-3-1-2 > li::marker { content: ""counter(functions-45-3-1-2,lower-alpha)""; }
-#functions-45-3-1-2 > li { counter-increment: functions-45-3-1-2; }
-#functions-45-4-1-2 { counter-set: functions-45-4-1-2 0; }
-#functions-45-4-1-2 > li::marker { content: ""counter(functions-45-4-1-2,lower-alpha)""; }
-#functions-45-4-1-2 > li { counter-increment: functions-45-4-1-2; }
-#functions-45-5-1-2 { counter-set: functions-45-5-1-2 0; }
-#functions-45-5-1-2 > li::marker { content: ""counter(functions-45-5-1-2,lower-alpha)""; }
-#functions-45-5-1-2 > li { counter-increment: functions-45-5-1-2; }
-#functions-45-7-1-3 { counter-set: functions-45-7-1-3 0; }
-#functions-45-7-1-3 > li::marker { content: ""counter(functions-45-7-1-3,lower-alpha)""; }
-#functions-45-7-1-3 > li { counter-increment: functions-45-7-1-3; }
-#functions-45-8-1-2 { counter-set: functions-45-8-1-2 0; }
-#functions-45-8-1-2 > li::marker { content: ""counter(functions-45-8-1-2,lower-alpha)""; }
-#functions-45-8-1-2 > li { counter-increment: functions-45-8-1-2; }
-#functions-45-9-1-2 { counter-set: functions-45-9-1-2 0; }
-#functions-45-9-1-2 > li::marker { content: ""counter(functions-45-9-1-2,lower-alpha)""; }
-#functions-45-9-1-2 > li { counter-increment: functions-45-9-1-2; }
-#functions-45-10-1-3 { counter-set: functions-45-10-1-3 0; }
-#functions-45-10-1-3 > li::marker { content: ""counter(functions-45-10-1-3,lower-alpha)""; }
-#functions-45-10-1-3 > li { counter-increment: functions-45-10-1-3; }
-#functions-45-11-1-3 { counter-set: functions-45-11-1-3 0; }
-#functions-45-11-1-3 > li::marker { content: ""counter(functions-45-11-1-3,lower-alpha)""; }
-#functions-45-11-1-3 > li { counter-increment: functions-45-11-1-3; }
-#functions-45-12-1-2 { counter-set: functions-45-12-1-2 0; }
-#functions-45-12-1-2 > li::marker { content: ""counter(functions-45-12-1-2,lower-alpha)""; }
-#functions-45-12-1-2 > li { counter-increment: functions-45-12-1-2; }
-#E_equivclasses-2-3 { counter-set: E_equivclasses-2-3 0; }
-#E_equivclasses-2-3 > li::marker { content: ""counter(E_equivclasses-2-3,lower-alpha)""; }
-#E_equivclasses-2-3 > li { counter-increment: E_equivclasses-2-3; }
-#D_partition-1-1-6 { counter-set: D_partition-1-1-6 0; }
-#D_partition-1-1-6 > li::marker { content: ""counter(D_partition-1-1-6,decimal)""; }
-#D_partition-1-1-6 > li { counter-increment: D_partition-1-1-6; }
-#E_equivclasses2-4-2 { counter-set: E_equivclasses2-4-2 0; }
-#E_equivclasses2-4-2 > li::marker { content: ""counter(E_equivclasses2-4-2,lower-alpha)""; }
-#E_equivclasses2-4-2 > li { counter-increment: E_equivclasses2-4-2; }
-#SS_equivrelations-47-1-1-3 { counter-set: SS_equivrelations-47-1-1-3 0; }
-#SS_equivrelations-47-1-1-3 > li::marker { content: ""counter(SS_equivrelations-47-1-1-3,lower-alpha)""; }
-#SS_equivrelations-47-1-1-3 > li { counter-increment: SS_equivrelations-47-1-1-3; }
-#SS_equivrelations-47-2-1-3 { counter-set: SS_equivrelations-47-2-1-3 0; }
-#SS_equivrelations-47-2-1-3 > li::marker { content: ""counter(SS_equivrelations-47-2-1-3,lower-alpha)""; }
-#SS_equivrelations-47-2-1-3 > li { counter-increment: SS_equivrelations-47-2-1-3; }
-#SS_equivrelations-47-4-1-2 { counter-set: SS_equivrelations-47-4-1-2 0; }
-#SS_equivrelations-47-4-1-2 > li::marker { content: ""counter(SS_equivrelations-47-4-1-2,lower-alpha)""; }
-#SS_equivrelations-47-4-1-2 > li { counter-increment: SS_equivrelations-47-4-1-2; }
-#SS_equivrelations-47-5-1-2 { counter-set: SS_equivrelations-47-5-1-2 0; }
-#SS_equivrelations-47-5-1-2 > li::marker { content: ""counter(SS_equivrelations-47-5-1-2,lower-alpha)""; }
-#SS_equivrelations-47-5-1-2 > li { counter-increment: SS_equivrelations-47-5-1-2; }
-#SS_equivrelations-47-6-1-2 { counter-set: SS_equivrelations-47-6-1-2 0; }
-#SS_equivrelations-47-6-1-2 > li::marker { content: ""counter(SS_equivrelations-47-6-1-2,lower-alpha)""; }
-#SS_equivrelations-47-6-1-2 > li { counter-increment: SS_equivrelations-47-6-1-2; }
-#SS_equivrelations-47-7-1-2 { counter-set: SS_equivrelations-47-7-1-2 0; }
-#SS_equivrelations-47-7-1-2 > li::marker { content: ""counter(SS_equivrelations-47-7-1-2,lower-alpha)""; }
-#SS_equivrelations-47-7-1-2 > li { counter-increment: SS_equivrelations-47-7-1-2; }
-#SS_equivrelations-47-8-1-2 { counter-set: SS_equivrelations-47-8-1-2 0; }
-#SS_equivrelations-47-8-1-2 > li::marker { content: ""counter(SS_equivrelations-47-8-1-2,lower-alpha)""; }
-#SS_equivrelations-47-8-1-2 > li { counter-increment: SS_equivrelations-47-8-1-2; }
-#SS_equivrelations-47-9-1-2 { counter-set: SS_equivrelations-47-9-1-2 0; }
-#SS_equivrelations-47-9-1-2 > li::marker { content: ""counter(SS_equivrelations-47-9-1-2,lower-alpha)""; }
-#SS_equivrelations-47-9-1-2 > li { counter-increment: SS_equivrelations-47-9-1-2; }
-#D_RSTprop2-1-1-3 { counter-set: D_RSTprop2-1-1-3 0; }
-#D_RSTprop2-1-1-3 > li::marker { content: ""counter(D_RSTprop2-1-1-3,decimal)""; }
-#D_RSTprop2-1-1-3 > li { counter-increment: D_RSTprop2-1-1-3; }
-#T_totalorder-1-1-4 { counter-set: T_totalorder-1-1-4 0; }
-#T_totalorder-1-1-4 > li::marker { content: ""counter(T_totalorder-1-1-4,decimal)""; }
-#T_totalorder-1-1-4 > li { counter-increment: T_totalorder-1-1-4; }
-#orders-33-1-1-2 { counter-set: orders-33-1-1-2 0; }
-#orders-33-1-1-2 > li::marker { content: ""counter(orders-33-1-1-2,lower-alpha)""; }
-#orders-33-1-1-2 > li { counter-increment: orders-33-1-1-2; }
-#orders-33-2-1-2 { counter-set: orders-33-2-1-2 0; }
-#orders-33-2-1-2 > li::marker { content: ""counter(orders-33-2-1-2,lower-alpha)""; }
-#orders-33-2-1-2 > li { counter-increment: orders-33-2-1-2; }
-#orders-33-3-1-2 { counter-set: orders-33-3-1-2 0; }
-#orders-33-3-1-2 > li::marker { content: ""counter(orders-33-3-1-2,lower-alpha)""; }
-#orders-33-3-1-2 > li { counter-increment: orders-33-3-1-2; }
-#orders-33-4-1-2 { counter-set: orders-33-4-1-2 0; }
-#orders-33-4-1-2 > li::marker { content: ""counter(orders-33-4-1-2,lower-alpha)""; }
-#orders-33-4-1-2 > li { counter-increment: orders-33-4-1-2; }
-#binomial9-30-2-1-1-1 { counter-set: binomial9-30-2-1-1-1 0; }
-#binomial9-30-2-1-1-1 > li::marker { content: ""counter(binomial9-30-2-1-1-1,lower-alpha)""; }
-#binomial9-30-2-1-1-1 > li { counter-increment: binomial9-30-2-1-1-1; }
-#cardinality-31-6-1-2 { counter-set: cardinality-31-6-1-2 0; }
-#cardinality-31-6-1-2 > li::marker { content: ""counter(cardinality-31-6-1-2,lower-alpha)""; }
-#cardinality-31-6-1-2 > li { counter-increment: cardinality-31-6-1-2; }
-</style>
+<script src="_static/prefix-runtime.42217a82c75796c8.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.7e141ad8414abf4a.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.f4ab138da65f4203.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
 </head>
 <body class="pretext book ignore-math">
-<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
-<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
-<h1 class="heading"><a href="IntroProofs.html"><span class="title">Introduction to Proofs:</span> <span class="subtitle">An Active Exploration of Mathematical Language</span></a></h1>
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="IntroProofs.html"><span class="title">Introduction to Proofs</span> <span class="subtitle">An Active Exploration of Mathematical Language</span></a></h1>
 <p class="byline">Jennifer Firkins Nordstrom</p>
-</div>
-</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
 <button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-2.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
 <div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
@@ -595,12 +316,16 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="cases"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">3.3</span><span class="space"> </span><span class="title">Proof by Cases</span>
 </h2>
-<div class="para" id="cases-3">In this section we will learn another proof technique, proof by cases. We will also see an important theorem that can be useful for proof by cases, the Division Algorithm.</div>
+<div class="para" id="cases-3">In this section we will learn another proof technique, proof by cases. We will also see an important theorem that can be useful for proof by cases, the Division Algorithm.<div class="autopermalink" data-description="Paragraph"><a href="#cases-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="cases-4">
-<dfn class="terminology">Proof by cases</dfn> is used for statements of the form for all <span class="process-math">\(x\in D, P(x)\text{,}\)</span> where the set <span class="process-math">\(D\)</span> can be broken into smaller sets. For example, a statement might be easier to prove for even numbers and odd numbers separately, rather than more general integers.</div>
-<div class="para" id="cases-5">Every truth table represents all possible cases of true and false for a logical statement. For example, when you use a truth table to determine if an argument is valid, you are really using proof by cases.</div>
+<dfn class="terminology">Proof by cases</dfn> is used for statements of the form for all <span class="process-math">\(x\in D, P(x)\text{,}\)</span> where the set <span class="process-math">\(D\)</span> can be broken into smaller sets. For example, a statement might be easier to prove for even numbers and odd numbers separately, rather than more general integers.<div class="autopermalink" data-description="Paragraph"><a href="#cases-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="cases-5">Every truth table represents all possible cases of true and false for a logical statement. For example, when you use a truth table to determine if an argument is valid, you are really using proof by cases.<div class="autopermalink" data-description="Paragraph"><a href="#cases-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="assemblage assemblage-like" id="B_cases"><h3 class="heading"><span class="title">Proof by Cases.</span></h3>
-<div class="para" id="B_cases-4">To prove for all <span class="process-math">\(x\in D, P(x)\)</span> by cases, break <span class="process-math">\(D\)</span> into smaller subsets. Each subset represents a case. Then each case is proven separately. Make sure you state each case, each subset, clearly.</div>
+<div class="para" id="B_cases-4">To prove for all <span class="process-math">\(x\in D, P(x)\)</span> by cases, break <span class="process-math">\(D\)</span> into smaller subsets. Each subset represents a case. Then each case is proven separately. Make sure you state each case, each subset, clearly.<div class="autopermalink" data-description="Paragraph"><a href="#B_cases-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para logical" id="B_cases-5">
 <div class="para">If <span class="process-math">\(D\)</span> can be broken into smaller subsets, say, <span class="process-math">\(D_1\)</span> and <span class="process-math">\(D_2\text{,}\)</span>
 </div>
@@ -608,23 +333,36 @@ eBookConfig.enable_chatcodes =  false;
 <li id="B_cases-5-4-1">
 <span class="heading"><span class="title">Case 1.</span></span><div class="para" id="p-derived-B_cases-5-4-1"> Let <span class="process-math">\(x\in D_1\text{,}\)</span> Prove <span class="process-math">\(P(x)\text{.}\)</span>
 </div>
+<div class="autopermalink" data-description="Item: Case 1"><a href="#B_cases-5-4-1" title="Copy heading and permalink for Item: Case 1" aria-label="Copy heading and permalink for Item: Case 1">🔗</a></div>
 </li>
 <li id="B_cases-5-4-2">
 <span class="heading"><span class="title">Case 2.</span></span><div class="para" id="p-derived-B_cases-5-4-2"> Let <span class="process-math">\(x\in D_2\text{,}\)</span> Prove <span class="process-math">\(P(x)\text{.}\)</span>
 </div>
+<div class="autopermalink" data-description="Item: Case 2"><a href="#B_cases-5-4-2" title="Copy heading and permalink for Item: Case 2" aria-label="Copy heading and permalink for Item: Case 2">🔗</a></div>
 </li>
 </ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#B_cases-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="B_cases-6">Important: in choosing your subsets, make sure you cover all the elements of <span class="process-math">\(D\text{.}\)</span> You can have as many cases as necessary.</div></article><details id="E_casesconsec" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<div class="para" id="B_cases-6">Important: in choosing your subsets, make sure you cover all the elements of <span class="process-math">\(D\text{.}\)</span> You can have as many cases as necessary.<div class="autopermalink" data-description="Paragraph"><a href="#B_cases-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Assemblage: Proof by Cases"><a href="#B_cases" title="Copy heading and permalink for Assemblage: Proof by Cases" aria-label="Copy heading and permalink for Assemblage: Proof by Cases">🔗</a></div></article><details id="E_casesconsec" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.3.1</span><span class="period">.</span><span class="space"> </span><span class="title">Proof by Cases.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_casesconsec-2">Prove given any two consecutive integers, one is even and one is odd.</div>
-<details id="E_casesconsec-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="E_casesconsec-3-1">Let <span class="process-math">\(n\)</span> and <span class="process-math">\(n+1\)</span> be consecutive integers.</div>
-<div class="para" id="E_casesconsec-3-2">Case 1: Let <span class="process-math">\(n\)</span> be even. Then <span class="process-math">\(n=2k\)</span> for some <span class="process-math">\(k\in\mathbb{Z}\text{.}\)</span> Then <span class="process-math">\(n+1=2k+1\)</span>  for <span class="process-math">\(k\in\mathbb{Z}\text{.}\)</span> Hence <span class="process-math">\(n+1\)</span> is odd.</div>
-<div class="para" id="E_casesconsec-3-3">Case 2: Let <span class="process-math">\(n\)</span> be odd. Then <span class="process-math">\(n=2k+1\)</span> for some <span class="process-math">\(k\in\mathbb{Z}\text{.}\)</span> Then <span class="process-math">\(n+1=2k+2=2(k+1)\)</span>  for <span class="process-math">\(k+1\in\mathbb{Z}\text{.}\)</span> Hence <span class="process-math">\(n+1\)</span> is even.</div>
-<div class="para" id="E_casesconsec-3-4">Thus, for any two consecutive integers, one is even and one is odd.</div></article></details></article></details><article class="activity project-like" id="A_twocases"><h3 class="heading">
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_casesconsec-2">Prove given any two consecutive integers, one is even and one is odd.<div class="autopermalink" data-description="Paragraph"><a href="#E_casesconsec-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="E_casesconsec-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="E_casesconsec-3-1">Let <span class="process-math">\(n\)</span> and <span class="process-math">\(n+1\)</span> be consecutive integers.<div class="autopermalink" data-description="Paragraph"><a href="#E_casesconsec-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="E_casesconsec-3-2">Case 1: Let <span class="process-math">\(n\)</span> be even. Then <span class="process-math">\(n=2k\)</span> for some <span class="process-math">\(k\in\mathbb{Z}\text{.}\)</span> Then <span class="process-math">\(n+1=2k+1\)</span>  for <span class="process-math">\(k\in\mathbb{Z}\text{.}\)</span> Hence <span class="process-math">\(n+1\)</span> is odd.<div class="autopermalink" data-description="Paragraph"><a href="#E_casesconsec-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="E_casesconsec-3-3">Case 2: Let <span class="process-math">\(n\)</span> be odd. Then <span class="process-math">\(n=2k+1\)</span> for some <span class="process-math">\(k\in\mathbb{Z}\text{.}\)</span> Then <span class="process-math">\(n+1=2k+2=2(k+1)\)</span>  for <span class="process-math">\(k+1\in\mathbb{Z}\text{.}\)</span> Hence <span class="process-math">\(n+1\)</span> is even.<div class="autopermalink" data-description="Paragraph"><a href="#E_casesconsec-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="E_casesconsec-3-4">Thus, for any two consecutive integers, one is even and one is odd.<div class="autopermalink" data-description="Paragraph"><a href="#E_casesconsec-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 3.3.1.1"><a href="#E_casesconsec-3" title="Copy heading and permalink for Proof 3.3.1.1" aria-label="Copy heading and permalink for Proof 3.3.1.1">🔗</a></div></article></details><div class="autopermalink" data-description="Example 3.3.1: Proof by Cases"><a href="#E_casesconsec" title="Copy heading and permalink for Example 3.3.1: Proof by Cases" aria-label="Copy heading and permalink for Example 3.3.1: Proof by Cases">🔗</a></div></article></details><article class="activity project-like" id="A_twocases"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.3.1</span><span class="period">.</span><span class="space"> </span><span class="title">Practice with Proof by Cases.</span>
 </h3>
-<div class="para" id="A_twocases-2-1">Prove for every integer <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(n^2+n\)</span> is even.</div></article><article class="activity project-like" id="A_absvalue"><h3 class="heading">
+<div class="para" id="A_twocases-2-1">Prove for every integer <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(n^2+n\)</span> is even.<div class="autopermalink" data-description="Paragraph"><a href="#A_twocases-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Activity 3.3.1: Practice with Proof by Cases"><a href="#A_twocases" title="Copy heading and permalink for Activity 3.3.1: Practice with Proof by Cases" aria-label="Copy heading and permalink for Activity 3.3.1: Practice with Proof by Cases">🔗</a></div></article><article class="activity project-like" id="A_absvalue"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.3.2</span><span class="period">.</span>
 </h3>
 <div class="para logical" id="A_absvalue-1-2">
@@ -639,73 +377,116 @@ x, \amp\text{if $x\geq 0$;}\\
 \end{equation*}
 </div>
 <div class="para">Prove for all <span class="process-math">\(x\in \mathbb{R}\text{,}\)</span> <span class="process-math">\(|x|=|-x|\text{.}\)</span> What would appropriate cases be?</div>
-</div></article><article class="activity project-like" id="A_fourcases"><h3 class="heading">
+<div class="autopermalink" data-description="Paragraph"><a href="#A_absvalue-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Activity 3.3.2"><a href="#A_absvalue" title="Copy heading and permalink for Activity 3.3.2" aria-label="Copy heading and permalink for Activity 3.3.2">🔗</a></div></article><article class="activity project-like" id="A_fourcases"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.3.3</span><span class="period">.</span>
 </h3>
-<div class="para" id="A_fourcases-1-2">Prove for all integers <span class="process-math">\(m\)</span> and  <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(m+n\)</span> and <span class="process-math">\(m-n\)</span> are either both even or both odd.</div>
-<div class="solutions"><details id="A_fourcases-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="A_fourcases-2-1">There are four cases, depending on whether <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> are even or odd.</div></div></details></div></article><div class="para" id="cases-11">The next theorem gives us an example of proof by cases, where the cases involve prime and compsite numbers. Although the theorem may seem like a well-known fact, the proof is not entirely simple.</div>
+<div class="para" id="A_fourcases-1-2">Prove for all integers <span class="process-math">\(m\)</span> and  <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(m+n\)</span> and <span class="process-math">\(m-n\)</span> are either both even or both odd.<div class="autopermalink" data-description="Paragraph"><a href="#A_fourcases-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions"><details id="A_fourcases-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="A_fourcases-2-1">There are four cases, depending on whether <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> are even or odd.<div class="autopermalink" data-description="Paragraph"><a href="#A_fourcases-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 3.3.3.1"><a href="#A_fourcases-2" title="Copy heading and permalink for Hint 3.3.3.1" aria-label="Copy heading and permalink for Hint 3.3.3.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Activity 3.3.3"><a href="#A_fourcases" title="Copy heading and permalink for Activity 3.3.3" aria-label="Copy heading and permalink for Activity 3.3.3">🔗</a></div></article><div class="para" id="cases-11">The next theorem gives us an example of proof by cases, where the cases involve prime and compsite numbers. Although the theorem may seem like a well-known fact, the proof is not entirely simple.<div class="autopermalink" data-description="Paragraph"><a href="#cases-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="theorem theorem-like" id="T_divbyprime"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.3.2</span><span class="period">.</span>
-</h3>Any integer <span class="process-math">\(n&gt;1\)</span> is divisible by a prime.</article><details id="cases-13" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="cases-13-1">We will divide this proof into two cases, where <span class="process-math">\(n\)</span> is prime and where <span class="process-math">\(n\)</span> is composite.</div>
-<div class="para" id="cases-13-2">Case 1: <span class="process-math">\(n\)</span> is prime. We can see that <span class="process-math">\(n\mid n\text{.}\)</span> Since <span class="process-math">\(\text{}\)</span> is prime, <span class="process-math">\(n\)</span> is divisible by a prime.</div>
-<div class="para" id="cases-13-3">Case 2: <span class="process-math">\(n\)</span> is composite. Then <span class="process-math">\(n=r_0s_0\)</span> where <span class="process-math">\(1&lt; r_0 &lt; n\text{,}\)</span> and <span class="process-math">\(r_0, s_0\in \mathbb{Z}\text{.}\)</span> If <span class="process-math">\(r_0\)</span> is prime, then <span class="process-math">\(n\)</span> is divisible by a prime.</div>
-<div class="para" id="cases-13-4">If <span class="process-math">\(r_0\)</span> is not prime, then <span class="process-math">\(r_0=r_1s_1\)</span> where <span class="process-math">\(1&lt; r_1 &lt; r_0\text{,}\)</span> and <span class="process-math">\(r_1, s_1\in \mathbb{Z}\text{.}\)</span> If <span class="process-math">\(r_1\)</span> is prime, then <span class="process-math">\(n=r_1s_1s_0\)</span> and <span class="process-math">\(n\)</span> is divisible by a prime.</div>
-<div class="para" id="cases-13-5">Similarly, if <span class="process-math">\(r_1\)</span> is not prime, then <span class="process-math">\(r_1=r_2s_2\)</span> where <span class="process-math">\(1&lt; r_2 &lt; r_1 &lt; r_0\text{,}\)</span> and <span class="process-math">\(r_2, s_2\in \mathbb{Z}\text{,}\)</span> etc.</div>
-<div class="para" id="cases-13-6">We can keep applying this process to get <span class="process-math">\(n=r_ks_k\cdots s_0\)</span> with <span class="process-math">\(1&lt; r_k &lt;\cdots&lt; r_1 &lt; r_0\text{,}\)</span> and <span class="process-math">\(r_k, s_k\in \mathbb{Z}\text{.}\)</span>
+</h3>Any integer <span class="process-math">\(n&gt;1\)</span> is divisible by a prime.<div class="autopermalink" data-description="Theorem 3.3.2"><a href="#T_divbyprime" title="Copy heading and permalink for Theorem 3.3.2" aria-label="Copy heading and permalink for Theorem 3.3.2">🔗</a></div></article><details id="cases-13" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="cases-13-1">We will divide this proof into two cases, where <span class="process-math">\(n\)</span> is prime and where <span class="process-math">\(n\)</span> is composite.<div class="autopermalink" data-description="Paragraph"><a href="#cases-13-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="cases-13-7">If at any point <span class="process-math">\(r_k\)</span> is prime, then we are done, as we have found a prime divisor of <span class="process-math">\(n\text{.}\)</span> We know that there cannot be infinitely many non-prime <span class="process-math">\(r_k\)</span> since there are only finitely many integers between 1 and <span class="process-math">\(n\text{.}\)</span> Thus, the process must terminate with a prime divisor of <span class="process-math">\(n\text{.}\)</span> Hence, every integer is divisible by a prime.</div></article></details><div class="para" id="cases-14">In <a href="moredirect.html" class="internal" title="Section 3.2: More Direct Proof: Rational Numbers and Divisibility">Section 3.2</a>, we looked at the idea of divisibility. Remember, this is a relationship between two integers, not actual division. We will continue to focus on integers. One of the issues with division of integers is that if you divide two integers, you no longer necessarily have an integer. So what if the only numbers we are allowed to use are integers? Can we still somehow think of division? Well, yes. This is, in fact, how you were probably introduced to division long ago. When you were first learning arithmetic you only knew about integers (probably only positive integers).</div>
-<div class="para" id="cases-15">Suppose you want to divide 15 by 5. This is easy, <span class="process-math">\(15\div 5=3\text{.}\)</span> But what if you want to divide 15 by 6? Now 6 does not "go evenly" into 10 (in other words, 6 does not divide 10). In this case, we get a remainder. In particular, 6 “goes into” 15 two times with a remainder of 3. Or, <span class="process-math">\(15\div 6\)</span> has quotient 2 and remainder 3.</div>
-<div class="para" id="cases-16">OK, we want to formalize this idea of division, making sure we are only using integers. We know 5 divides 15, since <span class="process-math">\(15=5(3)\text{.}\)</span> Can we do the same sort of thing for 15 and 6? Almost. In this case, <span class="process-math">\(15=6(2)+3\text{.}\)</span>
+<div class="para" id="cases-13-2">Case 1: <span class="process-math">\(n\)</span> is prime. We can see that <span class="process-math">\(n\mid n\text{.}\)</span> Since <span class="process-math">\(\text{}\)</span> is prime, <span class="process-math">\(n\)</span> is divisible by a prime.<div class="autopermalink" data-description="Paragraph"><a href="#cases-13-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="cases-17">In general, given any integers <span class="process-math">\(n, d\)</span> with <span class="process-math">\(d\neq 0\text{,}\)</span> we can find integers <span class="process-math">\(q, r\)</span> with <span class="process-math">\(n=dq+r\text{.}\)</span> In general, <span class="process-math">\(q, r\)</span> are not unique: <span class="process-math">\(15=6(1)+9\text{,}\)</span> or <span class="process-math">\(15=6(-2)+27\)</span> or <span class="process-math">\(15=6(3)-3\text{,}\)</span> for example. But as we noted, we want to think of <span class="process-math">\(r\)</span> as the remainder. If we are more specific about conditions on the remainder, then <span class="process-math">\(q\)</span> and <span class="process-math">\(r\)</span> are unique.</div>
+<div class="para" id="cases-13-3">Case 2: <span class="process-math">\(n\)</span> is composite. Then <span class="process-math">\(n=r_0s_0\)</span> where <span class="process-math">\(1&lt; r_0 &lt; n\text{,}\)</span> and <span class="process-math">\(r_0, s_0\in \mathbb{Z}\text{.}\)</span> If <span class="process-math">\(r_0\)</span> is prime, then <span class="process-math">\(n\)</span> is divisible by a prime.<div class="autopermalink" data-description="Paragraph"><a href="#cases-13-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="cases-13-4">If <span class="process-math">\(r_0\)</span> is not prime, then <span class="process-math">\(r_0=r_1s_1\)</span> where <span class="process-math">\(1&lt; r_1 &lt; r_0\text{,}\)</span> and <span class="process-math">\(r_1, s_1\in \mathbb{Z}\text{.}\)</span> If <span class="process-math">\(r_1\)</span> is prime, then <span class="process-math">\(n=r_1s_1s_0\)</span> and <span class="process-math">\(n\)</span> is divisible by a prime.<div class="autopermalink" data-description="Paragraph"><a href="#cases-13-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="cases-13-5">Similarly, if <span class="process-math">\(r_1\)</span> is not prime, then <span class="process-math">\(r_1=r_2s_2\)</span> where <span class="process-math">\(1&lt; r_2 &lt; r_1 &lt; r_0\text{,}\)</span> and <span class="process-math">\(r_2, s_2\in \mathbb{Z}\text{,}\)</span> etc.<div class="autopermalink" data-description="Paragraph"><a href="#cases-13-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="cases-13-6">We can keep applying this process to get <span class="process-math">\(n=r_ks_k\cdots s_0\)</span> with <span class="process-math">\(1&lt; r_k &lt;\cdots&lt; r_1 &lt; r_0\text{,}\)</span> and <span class="process-math">\(r_k, s_k\in \mathbb{Z}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#cases-13-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="cases-13-7">If at any point <span class="process-math">\(r_k\)</span> is prime, then we are done, as we have found a prime divisor of <span class="process-math">\(n\text{.}\)</span> We know that there cannot be infinitely many non-prime <span class="process-math">\(r_k\)</span> since there are only finitely many integers between 1 and <span class="process-math">\(n\text{.}\)</span> Thus, the process must terminate with a prime divisor of <span class="process-math">\(n\text{.}\)</span> Hence, every integer is divisible by a prime.<div class="autopermalink" data-description="Paragraph"><a href="#cases-13-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 3.3.1"><a href="#cases-13" title="Copy heading and permalink for Proof 3.3.1" aria-label="Copy heading and permalink for Proof 3.3.1">🔗</a></div></article></details><div class="para" id="cases-14">In <a href="moredirect.html" class="internal" title="Section 3.2: More Direct Proof: Rational Numbers and Divisibility">Section 3.2</a>, we looked at the idea of divisibility. Remember, this is a relationship between two integers, not actual division. We will continue to focus on integers. One of the issues with division of integers is that if you divide two integers, you no longer necessarily have an integer. So what if the only numbers we are allowed to use are integers? Can we still somehow think of division? Well, yes. This is, in fact, how you were probably introduced to division long ago. When you were first learning arithmetic you only knew about integers (probably only positive integers).<div class="autopermalink" data-description="Paragraph"><a href="#cases-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="cases-15">Suppose you want to divide 15 by 5. This is easy, <span class="process-math">\(15\div 5=3\text{.}\)</span> But what if you want to divide 15 by 6? Now 6 does not "go evenly" into 10 (in other words, 6 does not divide 10). In this case, we get a remainder. In particular, 6 “goes into” 15 two times with a remainder of 3. Or, <span class="process-math">\(15\div 6\)</span> has quotient 2 and remainder 3.<div class="autopermalink" data-description="Paragraph"><a href="#cases-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="cases-16">OK, we want to formalize this idea of division, making sure we are only using integers. We know 5 divides 15, since <span class="process-math">\(15=5(3)\text{.}\)</span> Can we do the same sort of thing for 15 and 6? Almost. In this case, <span class="process-math">\(15=6(2)+3\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#cases-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="cases-17">In general, given any integers <span class="process-math">\(n, d\)</span> with <span class="process-math">\(d\neq 0\text{,}\)</span> we can find integers <span class="process-math">\(q, r\)</span> with <span class="process-math">\(n=dq+r\text{.}\)</span> In general, <span class="process-math">\(q, r\)</span> are not unique: <span class="process-math">\(15=6(1)+9\text{,}\)</span> or <span class="process-math">\(15=6(-2)+27\)</span> or <span class="process-math">\(15=6(3)-3\text{,}\)</span> for example. But as we noted, we want to think of <span class="process-math">\(r\)</span> as the remainder. If we are more specific about conditions on the remainder, then <span class="process-math">\(q\)</span> and <span class="process-math">\(r\)</span> are unique.<div class="autopermalink" data-description="Paragraph"><a href="#cases-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="theorem theorem-like" id="T_divisionalgorthm"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.3.3</span><span class="period">.</span><span class="space"> </span><span class="title">The Division Algorithm.</span>
 </h3>
-<div class="para" id="T_divisionalgorthm-3-1">Given any integer <span class="process-math">\(n\)</span> and any positive integer <span class="process-math">\(d\text{,}\)</span> there exist unique integers <span class="process-math">\(q, r\)</span> such that <span class="process-math">\(n=dq+r\)</span> and <span class="process-math">\(0\leq r &lt; d\text{.}\)</span>
-</div></article><div class="para" id="cases-19">We say <span class="process-math">\(q\)</span> is the <dfn class="terminology">quotient</dfn> and <span class="process-math">\(r\)</span> is the <dfn class="terminology">remainder</dfn> when <span class="process-math">\(n\)</span> is divided by <span class="process-math">\(d\text{.}\)</span>
+<div class="para" id="T_divisionalgorthm-3-1">Given any integer <span class="process-math">\(n\)</span> and any positive integer <span class="process-math">\(d\text{,}\)</span> there exist unique integers <span class="process-math">\(q, r\)</span> such that <span class="process-math">\(n=dq+r\)</span> and <span class="process-math">\(0\leq r &lt; d\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#T_divisionalgorthm-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="cases-20">We will see the proof later, in <a href="existunique.html" class="internal" title="Section 5.1: Existence and Uniqueness Proofs">Section 5.1</a>
+<div class="autopermalink" data-description="Theorem 3.3.3: The Division Algorithm"><a href="#T_divisionalgorthm" title="Copy heading and permalink for Theorem 3.3.3: The Division Algorithm" aria-label="Copy heading and permalink for Theorem 3.3.3: The Division Algorithm">🔗</a></div></article><div class="para" id="cases-19">We say <span class="process-math">\(q\)</span> is the <dfn class="terminology">quotient</dfn> and <span class="process-math">\(r\)</span> is the <dfn class="terminology">remainder</dfn> when <span class="process-math">\(n\)</span> is divided by <span class="process-math">\(d\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#cases-19" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="cases-21">Although this theorem is usually called the Division Algorithm,  the name can be confusing. In particular, the Division Algorithm is not really an algorithm.</div>
-<div class="para" id="cases-22">Some important observations: the remainder MUST be nonnegative. It can be 0. This is what happens when <span class="process-math">\(d\mid n\text{.}\)</span> Although <span class="process-math">\(n\)</span> can be ANY integer, we will limit <span class="process-math">\(d\)</span> to being positive. The Division Algorithm can be extended to any <span class="process-math">\(d\neq 0\text{,}\)</span> but we will just need <span class="process-math">\(d&gt;0\)</span> in this class.</div>
+<div class="para" id="cases-20">We will see the proof later, in <a href="existunique.html" class="internal" title="Section 5.1: Existence and Uniqueness Proofs">Section 5.1</a><div class="autopermalink" data-description="Paragraph"><a href="#cases-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="cases-21">Although this theorem is usually called the Division Algorithm,  the name can be confusing. In particular, the Division Algorithm is not really an algorithm.<div class="autopermalink" data-description="Paragraph"><a href="#cases-21" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="cases-22">Some important observations: the remainder MUST be nonnegative. It can be 0. This is what happens when <span class="process-math">\(d\mid n\text{.}\)</span> Although <span class="process-math">\(n\)</span> can be ANY integer, we will limit <span class="process-math">\(d\)</span> to being positive. The Division Algorithm can be extended to any <span class="process-math">\(d\neq 0\text{,}\)</span> but we will just need <span class="process-math">\(d&gt;0\)</span> in this class.<div class="autopermalink" data-description="Paragraph"><a href="#cases-22" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <details id="E_divalgform" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.3.4</span><span class="period">.</span><span class="space"> </span><span class="title">Finding Quotients and Remainders.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_divalgform-2">Let <span class="process-math">\(n=15, d=7\text{,}\)</span> Find the quotient and remainder <span class="process-math">\(q, r\text{.}\)</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_divalgform-2">Let <span class="process-math">\(n=15, d=7\text{,}\)</span> Find the quotient and remainder <span class="process-math">\(q, r\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_divalgform-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="E_divalgform-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><span class="process-math">\(15=7(2)+1; q=2, r=1\)</span></div></details><div class="para" id="E_divalgform-4">Let <span class="process-math">\(n=28, d=7\text{,}\)</span> Find the quotient and remainder <span class="process-math">\(q, r\text{.}\)</span>
+<details id="E_divalgform-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<span class="process-math">\(15=7(2)+1; q=2, r=1\)</span><div class="autopermalink" data-description="Answer 3.3.4.1"><a href="#E_divalgform-3" title="Copy heading and permalink for Answer 3.3.4.1" aria-label="Copy heading and permalink for Answer 3.3.4.1">🔗</a></div>
+</div></details><div class="para" id="E_divalgform-4">Let <span class="process-math">\(n=28, d=7\text{,}\)</span> Find the quotient and remainder <span class="process-math">\(q, r\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_divalgform-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="E_divalgform-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><span class="process-math">\(28=7(4)+0; q=4, r=0\)</span></div></details><div class="para" id="E_divalgform-6">Let <span class="process-math">\(n=9, d=12\text{,}\)</span> Find the quotient and remainder <span class="process-math">\(q, r\text{.}\)</span>
+<details id="E_divalgform-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<span class="process-math">\(28=7(4)+0; q=4, r=0\)</span><div class="autopermalink" data-description="Answer 3.3.4.2"><a href="#E_divalgform-5" title="Copy heading and permalink for Answer 3.3.4.2" aria-label="Copy heading and permalink for Answer 3.3.4.2">🔗</a></div>
+</div></details><div class="para" id="E_divalgform-6">Let <span class="process-math">\(n=9, d=12\text{,}\)</span> Find the quotient and remainder <span class="process-math">\(q, r\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_divalgform-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="E_divalgform-7" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><span class="process-math">\(9=12(0)+9; q=0, r=9\)</span></div></details><div class="para" id="E_divalgform-8">Let <span class="process-math">\(n=-17, d=5\text{,}\)</span> Find the quotient and remainder <span class="process-math">\(q, r\text{.}\)</span>
+<details id="E_divalgform-7" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<span class="process-math">\(9=12(0)+9; q=0, r=9\)</span><div class="autopermalink" data-description="Answer 3.3.4.3"><a href="#E_divalgform-7" title="Copy heading and permalink for Answer 3.3.4.3" aria-label="Copy heading and permalink for Answer 3.3.4.3">🔗</a></div>
+</div></details><div class="para" id="E_divalgform-8">Let <span class="process-math">\(n=-17, d=5\text{,}\)</span> Find the quotient and remainder <span class="process-math">\(q, r\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_divalgform-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="E_divalgform-9" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><span class="process-math">\(-17=5(-4)+3; q=-4, r=3\)</span></div></details><div class="para" id="E_divalgform-10">Let <span class="process-math">\(n=0, d=7\text{,}\)</span> Find the quotient and remainder <span class="process-math">\(q, r\text{.}\)</span>
+<details id="E_divalgform-9" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<span class="process-math">\(-17=5(-4)+3; q=-4, r=3\)</span><div class="autopermalink" data-description="Answer 3.3.4.4"><a href="#E_divalgform-9" title="Copy heading and permalink for Answer 3.3.4.4" aria-label="Copy heading and permalink for Answer 3.3.4.4">🔗</a></div>
+</div></details><div class="para" id="E_divalgform-10">Let <span class="process-math">\(n=0, d=7\text{,}\)</span> Find the quotient and remainder <span class="process-math">\(q, r\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_divalgform-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="E_divalgform-11" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">5</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><span class="process-math">\(0=7(0)+0; q=0, r=0\)</span></div></details></article></details><article class="activity project-like" id="A_qrpractice"><h3 class="heading">
+<details id="E_divalgform-11" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">5</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<span class="process-math">\(0=7(0)+0; q=0, r=0\)</span><div class="autopermalink" data-description="Answer 3.3.4.5"><a href="#E_divalgform-11" title="Copy heading and permalink for Answer 3.3.4.5" aria-label="Copy heading and permalink for Answer 3.3.4.5">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 3.3.4: Finding Quotients and Remainders"><a href="#E_divalgform" title="Copy heading and permalink for Example 3.3.4: Finding Quotients and Remainders" aria-label="Copy heading and permalink for Example 3.3.4: Finding Quotients and Remainders">🔗</a></div></article></details><article class="activity project-like" id="A_qrpractice"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.3.4</span><span class="period">.</span><span class="space"> </span><span class="title">Quotients and Remainders.</span>
 </h3>
-<div class="introduction" id="A_qrpractice-2"><div class="para" id="A_qrpractice-2-1">For the given <span class="process-math">\(n\)</span> and <span class="process-math">\(d\text{,}\)</span> find <span class="process-math">\(q\)</span> and <span class="process-math">\(r\)</span> as in the Division Algorithm.</div></div>
+<div class="introduction" id="A_qrpractice-2"><div class="para" id="A_qrpractice-2-1">For the given <span class="process-math">\(n\)</span> and <span class="process-math">\(d\text{,}\)</span> find <span class="process-math">\(q\)</span> and <span class="process-math">\(r\)</span> as in the Division Algorithm.<div class="autopermalink" data-description="Paragraph"><a href="#A_qrpractice-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
 <article class="task exercise-like" id="A_qrpractice-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
 <div class="para" id="A_qrpractice-3-1">
-<span class="process-math">\(n=20\)</span> and <span class="process-math">\(d=8\)</span>
-</div></article><article class="task exercise-like" id="A_qrpractice-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<span class="process-math">\(n=20\)</span> and <span class="process-math">\(d=8\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_qrpractice-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 3.3.4.a"><a href="#A_qrpractice-3" title="Copy heading and permalink for Task 3.3.4.a" aria-label="Copy heading and permalink for Task 3.3.4.a">🔗</a></div></article><article class="task exercise-like" id="A_qrpractice-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
 <div class="para" id="A_qrpractice-4-1">
-<span class="process-math">\(n=45\)</span> and <span class="process-math">\(d=9\)</span>
-</div></article><article class="task exercise-like" id="A_qrpractice-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<span class="process-math">\(n=45\)</span> and <span class="process-math">\(d=9\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_qrpractice-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 3.3.4.b"><a href="#A_qrpractice-4" title="Copy heading and permalink for Task 3.3.4.b" aria-label="Copy heading and permalink for Task 3.3.4.b">🔗</a></div></article><article class="task exercise-like" id="A_qrpractice-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
 <div class="para" id="A_qrpractice-5-1">
-<span class="process-math">\(n=8\)</span> and <span class="process-math">\(d=12\)</span>
-</div></article><article class="task exercise-like" id="A_qrpractice-6"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<span class="process-math">\(n=8\)</span> and <span class="process-math">\(d=12\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_qrpractice-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 3.3.4.c"><a href="#A_qrpractice-5" title="Copy heading and permalink for Task 3.3.4.c" aria-label="Copy heading and permalink for Task 3.3.4.c">🔗</a></div></article><article class="task exercise-like" id="A_qrpractice-6"><h4 class="heading"><span class="codenumber">(d)</span></h4>
 <div class="para" id="A_qrpractice-6-1">
-<span class="process-math">\(n=-15\)</span> and <span class="process-math">\(d=7\)</span>
-</div></article></article><div class="para" id="cases-25">We can use the Division Algorithm to find <dfn class="terminology">representations of the integers</dfn>.</div>
-<div class="para" id="cases-26">For example, if we let <span class="process-math">\(d=2\text{,}\)</span> what are the possible remainders? In this case, <span class="process-math">\(r=0\)</span> or <span class="process-math">\(r=1\text{.}\)</span> Thus, there are two possible forms for <span class="process-math">\(n\text{:}\)</span> <span class="process-math">\(n=2q+0\)</span> or <span class="process-math">\(n=2q+1\text{.}\)</span> We see that these are the two forms corresponding to <span class="process-math">\(n\)</span> being even or odd. Now, as a corollary of the Division Algorithm, we have that every integer must be even or odd.</div>
-<div class="para" id="cases-27">We can use the Division Algorithm to get other forms, as well. For example, if <span class="process-math">\(d=4\text{,}\)</span> the possible forms are <span class="process-math">\(n=4q+0, n=4q+1, n=4q+2\)</span> or <span class="process-math">\(n=4q+3\text{.}\)</span> We can use these forms to get different <dfn class="terminology">cases</dfn> for the integers.</div>
+<span class="process-math">\(n=-15\)</span> and <span class="process-math">\(d=7\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_qrpractice-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 3.3.4.d"><a href="#A_qrpractice-6" title="Copy heading and permalink for Task 3.3.4.d" aria-label="Copy heading and permalink for Task 3.3.4.d">🔗</a></div></article><div class="autopermalink" data-description="Activity 3.3.4: Quotients and Remainders"><a href="#A_qrpractice" title="Copy heading and permalink for Activity 3.3.4: Quotients and Remainders" aria-label="Copy heading and permalink for Activity 3.3.4: Quotients and Remainders">🔗</a></div></article><div class="para" id="cases-25">We can use the Division Algorithm to find <dfn class="terminology">representations of the integers</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#cases-25" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="cases-26">For example, if we let <span class="process-math">\(d=2\text{,}\)</span> what are the possible remainders? In this case, <span class="process-math">\(r=0\)</span> or <span class="process-math">\(r=1\text{.}\)</span> Thus, there are two possible forms for <span class="process-math">\(n\text{:}\)</span> <span class="process-math">\(n=2q+0\)</span> or <span class="process-math">\(n=2q+1\text{.}\)</span> We see that these are the two forms corresponding to <span class="process-math">\(n\)</span> being even or odd. Now, as a corollary of the Division Algorithm, we have that every integer must be even or odd.<div class="autopermalink" data-description="Paragraph"><a href="#cases-26" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="cases-27">We can use the Division Algorithm to get other forms, as well. For example, if <span class="process-math">\(d=4\text{,}\)</span> the possible forms are <span class="process-math">\(n=4q+0, n=4q+1, n=4q+2\)</span> or <span class="process-math">\(n=4q+3\text{.}\)</span> We can use these forms to get different <dfn class="terminology">cases</dfn> for the integers.<div class="autopermalink" data-description="Paragraph"><a href="#cases-27" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <details id="E_morecases" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.3.5</span><span class="period">.</span><span class="space"> </span><span class="title">More Cases.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_morecases-2">Prove that the square of any odd integer has the form <span class="process-math">\(8m+1\)</span> for some <span class="process-math">\(m\in \mathbb{Z}\text{.}\)</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_morecases-2">Prove that the square of any odd integer has the form <span class="process-math">\(8m+1\)</span> for some <span class="process-math">\(m\in \mathbb{Z}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_morecases-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="E_morecases-3">First let’s try to just prove this directly.</div>
-<div class="para" id="E_morecases-4">Let <span class="process-math">\(n\)</span> be odd. Then <span class="process-math">\(n=2k+1, k\in\mathbb{Z}\text{.}\)</span> Thus, <span class="process-math">\(n^2=(2k+1)^2=4k^2+4k+1\text{.}\)</span> It is not clear this has the form <span class="process-math">\(8m+1\text{.}\)</span> If we try using some cases, we may get a bit more to work with. We know any integer has the form <span class="process-math">\(4k, 4k+1, 4k+2,\)</span> or <span class="process-math">\(4k+3\text{.}\)</span> But only <span class="process-math">\(4k+1\)</span> and <span class="process-math">\(4k+3\)</span> are odd.</div>
-<details id="E_morecases-5" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="E_morecases-5-1">Let <span class="process-math">\(n\)</span> be odd.</div>
+<div class="para" id="E_morecases-3">First let’s try to just prove this directly.<div class="autopermalink" data-description="Paragraph"><a href="#E_morecases-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="E_morecases-4">Let <span class="process-math">\(n\)</span> be odd. Then <span class="process-math">\(n=2k+1, k\in\mathbb{Z}\text{.}\)</span> Thus, <span class="process-math">\(n^2=(2k+1)^2=4k^2+4k+1\text{.}\)</span> It is not clear this has the form <span class="process-math">\(8m+1\text{.}\)</span> If we try using some cases, we may get a bit more to work with. We know any integer has the form <span class="process-math">\(4k, 4k+1, 4k+2,\)</span> or <span class="process-math">\(4k+3\text{.}\)</span> But only <span class="process-math">\(4k+1\)</span> and <span class="process-math">\(4k+3\)</span> are odd.<div class="autopermalink" data-description="Paragraph"><a href="#E_morecases-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="E_morecases-5" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="E_morecases-5-1">Let <span class="process-math">\(n\)</span> be odd.<div class="autopermalink" data-description="Paragraph"><a href="#E_morecases-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para logical" id="E_morecases-5-2">
 <div class="para">Case 1: Let <span class="process-math">\(n=4k+1\)</span> for some <span class="process-math">\(k\in\mathbb{Z}\text{.}\)</span> Then</div>
 <div class="displaymath process-math" id="E_morecases-5-2-3">
@@ -717,6 +498,7 @@ n^2&amp;=(4k+1)^2\\
 </div>
 <div class="para">for some <span class="process-math">\(2k^2+k\in\mathbb{Z}\text{.}\)</span> Let <span class="process-math">\(m=2k^2+k\text{.}\)</span> Then <span class="process-math">\(n\)</span> has the form <span class="process-math">\(8m+1, m\in \mathbb{Z}\text{.}\)</span>
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#E_morecases-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="E_morecases-5-3">
 <div class="para">Case 2: Let <span class="process-math">\(n=4k+3\)</span> for some <span class="process-math">\(k\in\mathbb{Z}\text{.}\)</span> Then</div>
@@ -731,43 +513,69 @@ n^2&amp;=(4k+3)^2\\
 </div>
 <div class="para">for some <span class="process-math">\(2k^2+3k+1\in\mathbb{Z}\text{.}\)</span> Let <span class="process-math">\(m=2k^2+3k+1\text{.}\)</span> Then <span class="process-math">\(n\)</span> has the form <span class="process-math">\(8m+1, m\in \mathbb{Z}\text{.}\)</span>
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#E_morecases-5-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="E_morecases-5-4">Thus, any odd integer has the form <span class="process-math">\(8m+1\text{.}\)</span>
-</div></article></details><div class="para" id="E_morecases-6">Note, what this theorem really says is that the square of an odd integer must have remainder 1 when divided by 8. That might be a little surprising.</div></article></details><article class="activity project-like" id="A_casesfor3"><h3 class="heading">
+<div class="para" id="E_morecases-5-4">Thus, any odd integer has the form <span class="process-math">\(8m+1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_morecases-5-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 3.3.5.1"><a href="#E_morecases-5" title="Copy heading and permalink for Proof 3.3.5.1" aria-label="Copy heading and permalink for Proof 3.3.5.1">🔗</a></div></article></details><div class="para" id="E_morecases-6">Note, what this theorem really says is that the square of an odd integer must have remainder 1 when divided by 8. That might be a little surprising.<div class="autopermalink" data-description="Paragraph"><a href="#E_morecases-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 3.3.5: More Cases"><a href="#E_morecases" title="Copy heading and permalink for Example 3.3.5: More Cases" aria-label="Copy heading and permalink for Example 3.3.5: More Cases">🔗</a></div></article></details><article class="activity project-like" id="A_casesfor3"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.3.5</span><span class="period">.</span><span class="space"> </span><span class="title">Dividing by 3.</span>
 </h3>
-<div class="para" id="A_casesfor3-2-1">Use the Division Algorithm to find the possible forms of an integer when <span class="process-math">\(d=3\text{.}\)</span>
+<div class="para" id="A_casesfor3-2-1">Use the Division Algorithm to find the possible forms of an integer when <span class="process-math">\(d=3\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_casesfor3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="A_casesfor3-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><span class="process-math">\(r\text{?}\)</span></div></details></div></article><article class="activity project-like" id="A_consec3"><h3 class="heading">
+<div class="solutions"><details id="A_casesfor3-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<span class="process-math">\(r\text{?}\)</span><div class="autopermalink" data-description="Hint 3.3.5.1"><a href="#A_casesfor3-3" title="Copy heading and permalink for Hint 3.3.5.1" aria-label="Copy heading and permalink for Hint 3.3.5.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Activity 3.3.5: Dividing by 3"><a href="#A_casesfor3" title="Copy heading and permalink for Activity 3.3.5: Dividing by 3" aria-label="Copy heading and permalink for Activity 3.3.5: Dividing by 3">🔗</a></div></article><article class="activity project-like" id="A_consec3"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.3.6</span><span class="period">.</span><span class="space"> </span><span class="title">Consecutive Integers.</span>
 </h3>
-<div class="para" id="A_consec3-2-1">Prove the product of any two consecutive integers has the form <span class="process-math">\(3k\)</span> or <span class="process-math">\(3k+2\)</span> for some integer <span class="process-math">\(k\text{.}\)</span>
+<div class="para" id="A_consec3-2-1">Prove the product of any two consecutive integers has the form <span class="process-math">\(3k\)</span> or <span class="process-math">\(3k+2\)</span> for some integer <span class="process-math">\(k\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_consec3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="A_consec3-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><a href="cases.html#A_casesfor3" class="xref" data-knowl="./knowl/xref/A_casesfor3.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 3.3.5: Dividing by 3">Activity 3.3.5</a></div></details></div></article><section class="exercises" id="cases-31"><h3 class="heading hide-type">
+<div class="solutions"><details id="A_consec3-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<a href="cases.html#A_casesfor3" class="xref" data-knowl="./knowl/xref/A_casesfor3.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 3.3.5: Dividing by 3">Activity 3.3.5</a><div class="autopermalink" data-description="Hint 3.3.6.1"><a href="#A_consec3-3" title="Copy heading and permalink for Hint 3.3.6.1" aria-label="Copy heading and permalink for Hint 3.3.6.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Activity 3.3.6: Consecutive Integers"><a href="#A_consec3" title="Copy heading and permalink for Activity 3.3.6: Consecutive Integers" aria-label="Copy heading and permalink for Activity 3.3.6: Consecutive Integers">🔗</a></div></article><section class="exercises" id="cases-31"><h3 class="heading hide-type">
 <span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Exercises</span>
 </h3>
 <article class="exercise exercise-like" id="cases-31-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="cases-31-1-1-1">For the given <span class="process-math">\(n\)</span> and <span class="process-math">\(d\text{,}\)</span> find <span class="process-math">\(q\)</span> and <span class="process-math">\(r\)</span> such that <span class="process-math">\(n=dq+r\)</span> with <span class="process-math">\(0\leq r&lt;d\)</span> (as in the Division Algorithm).</div> <ol class="lower-alpha" id="cases-31-1-1-2">
-<li id="cases-31-1-1-2-1"><div class="para" id="cases-31-1-1-2-1-1">
-<span class="process-math">\(n=36\)</span> and <span class="process-math">\(d=40\)</span>
-</div></li>
-<li id="cases-31-1-1-2-2"><div class="para" id="cases-31-1-1-2-2-1">
-<span class="process-math">\(n=-45\)</span> and <span class="process-math">\(d=11\)</span>
-</div></li>
-</ol></article><article class="exercise exercise-like" id="cases-31-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para" id="cases-31-2-1-1">Prove for all integers <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(n^2-n+3\)</span> is odd.</div></article><article class="exercise exercise-like" id="cases-31-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="para" id="cases-31-3-1-1">Prove the square of of any integer has the form <span class="process-math">\(4k\)</span> or <span class="process-math">\(4k+1\)</span> for some integer <span class="process-math">\(k\text{.}\)</span>
-</div></article><article class="exercise exercise-like" id="cases-31-4"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para" id="cases-31-4-1-1">Prove that the product of any two consecutive integers is even.</div></article><article class="exercise exercise-like" id="cases-31-5"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<div class="para" id="cases-31-5-1-1">Prove that the square of any integer has the form <span class="process-math">\(3k\)</span> or <span class="process-math">\(3k+1\)</span> for some integer <span class="process-math">\(k\text{.}\)</span>
-</div></article><article class="exercise exercise-like" id="cases-31-6"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
-<div class="para" id="cases-31-6-1-1">Prove that for any integer <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(n(n^2-1)(n+2)\)</span> is divisible by 4.</div></article></section></section></div>
-<div class="ptx-content-footer">
+<div class="para" id="cases-31-1-1-1">For the given <span class="process-math">\(n\)</span> and <span class="process-math">\(d\text{,}\)</span> find <span class="process-math">\(q\)</span> and <span class="process-math">\(r\)</span> such that <span class="process-math">\(n=dq+r\)</span> with <span class="process-math">\(0\leq r&lt;d\)</span> (as in the Division Algorithm).<div class="autopermalink" data-description="Paragraph"><a href="#cases-31-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha lower-alpha-level-1" id="cases-31-1-1-2">
+<li id="cases-31-1-1-2-1">
+<div class="para" id="cases-31-1-1-2-1-1">
+<span class="process-math">\(n=36\)</span> and <span class="process-math">\(d=40\)</span><div class="autopermalink" data-description="Paragraph"><a href="#cases-31-1-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.3.1.a"><a href="#cases-31-1-1-2-1" title="Copy heading and permalink for Item 3.3.1.a" aria-label="Copy heading and permalink for Item 3.3.1.a">🔗</a></div>
+</li>
+<li id="cases-31-1-1-2-2">
+<div class="para" id="cases-31-1-1-2-2-1">
+<span class="process-math">\(n=-45\)</span> and <span class="process-math">\(d=11\)</span><div class="autopermalink" data-description="Paragraph"><a href="#cases-31-1-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.3.1.b"><a href="#cases-31-1-1-2-2" title="Copy heading and permalink for Item 3.3.1.b" aria-label="Copy heading and permalink for Item 3.3.1.b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 3.3.1"><a href="#cases-31-1" title="Copy heading and permalink for Exercise 3.3.1" aria-label="Copy heading and permalink for Exercise 3.3.1">🔗</a></div></article><article class="exercise exercise-like" id="cases-31-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="para" id="cases-31-2-1-1">Prove for all integers <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(n^2-n+3\)</span> is odd.<div class="autopermalink" data-description="Paragraph"><a href="#cases-31-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.3.2"><a href="#cases-31-2" title="Copy heading and permalink for Exercise 3.3.2" aria-label="Copy heading and permalink for Exercise 3.3.2">🔗</a></div></article><article class="exercise exercise-like" id="cases-31-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="para" id="cases-31-3-1-1">Prove the square of of any integer has the form <span class="process-math">\(4k\)</span> or <span class="process-math">\(4k+1\)</span> for some integer <span class="process-math">\(k\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#cases-31-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.3.3"><a href="#cases-31-3" title="Copy heading and permalink for Exercise 3.3.3" aria-label="Copy heading and permalink for Exercise 3.3.3">🔗</a></div></article><article class="exercise exercise-like" id="cases-31-4"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="para" id="cases-31-4-1-1">Prove that the product of any two consecutive integers is even.<div class="autopermalink" data-description="Paragraph"><a href="#cases-31-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.3.4"><a href="#cases-31-4" title="Copy heading and permalink for Exercise 3.3.4" aria-label="Copy heading and permalink for Exercise 3.3.4">🔗</a></div></article><article class="exercise exercise-like" id="cases-31-5"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="para" id="cases-31-5-1-1">Prove that the square of any integer has the form <span class="process-math">\(3k\)</span> or <span class="process-math">\(3k+1\)</span> for some integer <span class="process-math">\(k\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#cases-31-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.3.5"><a href="#cases-31-5" title="Copy heading and permalink for Exercise 3.3.5" aria-label="Copy heading and permalink for Exercise 3.3.5">🔗</a></div></article><article class="exercise exercise-like" id="cases-31-6"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="para" id="cases-31-6-1-1">Prove that for any integer <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(n(n^2-1)(n+2)\)</span> is divisible by 4.<div class="autopermalink" data-description="Paragraph"><a href="#cases-31-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.3.6"><a href="#cases-31-6" title="Copy heading and permalink for Exercise 3.3.6" aria-label="Copy heading and permalink for Exercise 3.3.6">🔗</a></div></article><div class="autopermalink" data-description="Exercises 3.3"><a href="#cases-31" title="Copy heading and permalink for Exercises 3.3" aria-label="Copy heading and permalink for Exercises 3.3">🔗</a></div></section><div class="autopermalink" data-description="Section 3.3: Proof by Cases"><a href="#cases" title="Copy heading and permalink for Section 3.3: Proof by Cases" aria-label="Copy heading and permalink for Section 3.3: Proof by Cases">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="moredirect.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="contradiction.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
-<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
 </div>
 <!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
 var sc_project=12871717;

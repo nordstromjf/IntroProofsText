@@ -6,14 +6,20 @@
 <!--*                                          *-->
 <!--********************************************-->
 <html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Logical Connectives</title>
-<meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:type" content="book">
-<meta property="book:title" content="Introduction to Proofs">
-<meta property="book:author" content="Jennifer Firkins Nordstrom">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
 <script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
@@ -69,13 +75,12 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
-<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
-</script><link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
-<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
-<!--** eBookCongig is necessary to configure interactive       **-->
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Introduction to Proofs">
+<meta property="book:author" content="Jennifer Firkins Nordstrom">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -97,307 +102,23 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.5.6';
+eBookConfig.runestone_version = '7.11.5';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.82032a8574f6ce75.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6a985cbf816db5c7.css">
-<style>
-#arguments-20-1-1-4 { counter-set: arguments-20-1-1-4 0; }
-#arguments-20-1-1-4 > li::marker { content: ""counter(arguments-20-1-1-4,lower-alpha)""; }
-#arguments-20-1-1-4 > li { counter-increment: arguments-20-1-1-4; }
-#arguments-20-2-1-3 { counter-set: arguments-20-2-1-3 0; }
-#arguments-20-2-1-3 > li::marker { content: ""counter(arguments-20-2-1-3,lower-alpha)""; }
-#arguments-20-2-1-3 > li { counter-increment: arguments-20-2-1-3; }
-#arguments-20-3-1-2 { counter-set: arguments-20-3-1-2 0; }
-#arguments-20-3-1-2 > li::marker { content: "("counter(arguments-20-3-1-2,lower-alpha)")"; }
-#arguments-20-3-1-2 > li { counter-increment: arguments-20-3-1-2; }
-#B_logicalequivalences-3-5 { counter-set: B_logicalequivalences-3-5 0; }
-#B_logicalequivalences-3-5 > li::marker { content: ""counter(B_logicalequivalences-3-5,decimal)""; }
-#B_logicalequivalences-3-5 > li { counter-increment: B_logicalequivalences-3-5; }
-#connectives-73-1-1-2 { counter-set: connectives-73-1-1-2 0; }
-#connectives-73-1-1-2 > li::marker { content: ""counter(connectives-73-1-1-2,lower-alpha)""; }
-#connectives-73-1-1-2 > li { counter-increment: connectives-73-1-1-2; }
-#connectives-73-2-1-2 { counter-set: connectives-73-2-1-2 0; }
-#connectives-73-2-1-2 > li::marker { content: ""counter(connectives-73-2-1-2,lower-alpha)""; }
-#connectives-73-2-1-2 > li { counter-increment: connectives-73-2-1-2; }
-#connectives-73-3-1-2 { counter-set: connectives-73-3-1-2 0; }
-#connectives-73-3-1-2 > li::marker { content: ""counter(connectives-73-3-1-2,lower-alpha)""; }
-#connectives-73-3-1-2 > li { counter-increment: connectives-73-3-1-2; }
-#ER_onlyandnot-1-2 { counter-set: ER_onlyandnot-1-2 0; }
-#ER_onlyandnot-1-2 > li::marker { content: ""counter(ER_onlyandnot-1-2,lower-alpha)""; }
-#ER_onlyandnot-1-2 > li { counter-increment: ER_onlyandnot-1-2; }
-#connectives-73-5-1-2 { counter-set: connectives-73-5-1-2 0; }
-#connectives-73-5-1-2 > li::marker { content: ""counter(connectives-73-5-1-2,lower-alpha)""; }
-#connectives-73-5-1-2 > li { counter-increment: connectives-73-5-1-2; }
-#setnotation-22-4-1-2 { counter-set: setnotation-22-4-1-2 0; }
-#setnotation-22-4-1-2 > li::marker { content: ""counter(setnotation-22-4-1-2,lower-alpha)""; }
-#setnotation-22-4-1-2 > li { counter-increment: setnotation-22-4-1-2; }
-#setnotation-22-5-1-2 { counter-set: setnotation-22-5-1-2 0; }
-#setnotation-22-5-1-2 > li::marker { content: ""counter(setnotation-22-5-1-2,lower-alpha)""; }
-#setnotation-22-5-1-2 > li { counter-increment: setnotation-22-5-1-2; }
-#E_multquant1-2-2 { counter-set: E_multquant1-2-2 0; }
-#E_multquant1-2-2 > li::marker { content: ""counter(E_multquant1-2-2,lower-alpha)""; }
-#E_multquant1-2-2 > li { counter-increment: E_multquant1-2-2; }
-#quantifiers-6-14-3-1-2 { counter-set: quantifiers-6-14-3-1-2 0; }
-#quantifiers-6-14-3-1-2 > li::marker { content: ""counter(quantifiers-6-14-3-1-2,lower-alpha)""; }
-#quantifiers-6-14-3-1-2 > li { counter-increment: quantifiers-6-14-3-1-2; }
-#quantifiers-6-14-4-1-2 { counter-set: quantifiers-6-14-4-1-2 0; }
-#quantifiers-6-14-4-1-2 > li::marker { content: ""counter(quantifiers-6-14-4-1-2,lower-alpha)""; }
-#quantifiers-6-14-4-1-2 > li { counter-increment: quantifiers-6-14-4-1-2; }
-#quantifiers-6-14-5-1-2 { counter-set: quantifiers-6-14-5-1-2 0; }
-#quantifiers-6-14-5-1-2 > li::marker { content: ""counter(quantifiers-6-14-5-1-2,lower-alpha)""; }
-#quantifiers-6-14-5-1-2 > li { counter-increment: quantifiers-6-14-5-1-2; }
-#quantifiers-6-14-6-1-2 { counter-set: quantifiers-6-14-6-1-2 0; }
-#quantifiers-6-14-6-1-2 > li::marker { content: ""counter(quantifiers-6-14-6-1-2,lower-alpha)""; }
-#quantifiers-6-14-6-1-2 > li { counter-increment: quantifiers-6-14-6-1-2; }
-#quantifiers-6-14-7-1-2 { counter-set: quantifiers-6-14-7-1-2 0; }
-#quantifiers-6-14-7-1-2 > li::marker { content: ""counter(quantifiers-6-14-7-1-2,lower-alpha)""; }
-#quantifiers-6-14-7-1-2 > li { counter-increment: quantifiers-6-14-7-1-2; }
-#quantifiers-6-14-8-1-2 { counter-set: quantifiers-6-14-8-1-2 0; }
-#quantifiers-6-14-8-1-2 > li::marker { content: ""counter(quantifiers-6-14-8-1-2,lower-alpha)""; }
-#quantifiers-6-14-8-1-2 > li { counter-increment: quantifiers-6-14-8-1-2; }
-#conditionals-33-1-1-2 { counter-set: conditionals-33-1-1-2 0; }
-#conditionals-33-1-1-2 > li::marker { content: ""counter(conditionals-33-1-1-2,lower-alpha)""; }
-#conditionals-33-1-1-2 > li { counter-increment: conditionals-33-1-1-2; }
-#conditionals-33-2-1-2 { counter-set: conditionals-33-2-1-2 0; }
-#conditionals-33-2-1-2 > li::marker { content: ""counter(conditionals-33-2-1-2,lower-alpha)""; }
-#conditionals-33-2-1-2 > li { counter-increment: conditionals-33-2-1-2; }
-#conditionals-33-3-1-2 { counter-set: conditionals-33-3-1-2 0; }
-#conditionals-33-3-1-2 > li::marker { content: ""counter(conditionals-33-3-1-2,lower-alpha)""; }
-#conditionals-33-3-1-2 > li { counter-increment: conditionals-33-3-1-2; }
-#conditionals-33-4-1-2 { counter-set: conditionals-33-4-1-2 0; }
-#conditionals-33-4-1-2 > li::marker { content: ""counter(conditionals-33-4-1-2,lower-alpha)""; }
-#conditionals-33-4-1-2 > li { counter-increment: conditionals-33-4-1-2; }
-#conditionals-33-5-1-2 { counter-set: conditionals-33-5-1-2 0; }
-#conditionals-33-5-1-2 > li::marker { content: ""counter(conditionals-33-5-1-2,lower-alpha)""; }
-#conditionals-33-5-1-2 > li { counter-increment: conditionals-33-5-1-2; }
-#directproof-29-1-1-2 { counter-set: directproof-29-1-1-2 0; }
-#directproof-29-1-1-2 > li::marker { content: ""counter(directproof-29-1-1-2,lower-alpha)""; }
-#directproof-29-1-1-2 > li { counter-increment: directproof-29-1-1-2; }
-#directproof-29-11-1-2 { counter-set: directproof-29-11-1-2 0; }
-#directproof-29-11-1-2 > li::marker { content: ""counter(directproof-29-11-1-2,lower-alpha)""; }
-#directproof-29-11-1-2 > li { counter-increment: directproof-29-11-1-2; }
-#moredirect-7-1-1-2 { counter-set: moredirect-7-1-1-2 0; }
-#moredirect-7-1-1-2 > li::marker { content: ""counter(moredirect-7-1-1-2,lower-alpha)""; }
-#moredirect-7-1-1-2 > li { counter-increment: moredirect-7-1-1-2; }
-#moredirect-7-4-1-2 { counter-set: moredirect-7-4-1-2 0; }
-#moredirect-7-4-1-2 > li::marker { content: "("counter(moredirect-7-4-1-2,lower-alpha)")"; }
-#moredirect-7-4-1-2 > li { counter-increment: moredirect-7-4-1-2; }
-#ER_averagerat-1-2 { counter-set: ER_averagerat-1-2 0; }
-#ER_averagerat-1-2 > li::marker { content: ""counter(ER_averagerat-1-2,lower-alpha)""; }
-#ER_averagerat-1-2 > li { counter-increment: ER_averagerat-1-2; }
-#moredirect-7-7-1-2 { counter-set: moredirect-7-7-1-2 0; }
-#moredirect-7-7-1-2 > li::marker { content: ""counter(moredirect-7-7-1-2,lower-alpha)""; }
-#moredirect-7-7-1-2 > li { counter-increment: moredirect-7-7-1-2; }
-#moredirect-7-9-1-2 { counter-set: moredirect-7-9-1-2 0; }
-#moredirect-7-9-1-2 > li::marker { content: ""counter(moredirect-7-9-1-2,lower-alpha)""; }
-#moredirect-7-9-1-2 > li { counter-increment: moredirect-7-9-1-2; }
-#cases-31-1-1-2 { counter-set: cases-31-1-1-2 0; }
-#cases-31-1-1-2 > li::marker { content: ""counter(cases-31-1-1-2,lower-alpha)""; }
-#cases-31-1-1-2 > li { counter-increment: cases-31-1-1-2; }
-#SS_twoproofs-18-1-1-2 { counter-set: SS_twoproofs-18-1-1-2 0; }
-#SS_twoproofs-18-1-1-2 > li::marker { content: ""counter(SS_twoproofs-18-1-1-2,lower-alpha)""; }
-#SS_twoproofs-18-1-1-2 > li { counter-increment: SS_twoproofs-18-1-1-2; }
-#SS_twoproofs-18-2-1-2 { counter-set: SS_twoproofs-18-2-1-2 0; }
-#SS_twoproofs-18-2-1-2 > li::marker { content: ""counter(SS_twoproofs-18-2-1-2,lower-alpha)""; }
-#SS_twoproofs-18-2-1-2 > li { counter-increment: SS_twoproofs-18-2-1-2; }
-#SS_twoproofs-18-3-1-2 { counter-set: SS_twoproofs-18-3-1-2 0; }
-#SS_twoproofs-18-3-1-2 > li::marker { content: ""counter(SS_twoproofs-18-3-1-2,lower-alpha)""; }
-#SS_twoproofs-18-3-1-2 > li { counter-increment: SS_twoproofs-18-3-1-2; }
-#SS_twoproofs-18-4-1-2 { counter-set: SS_twoproofs-18-4-1-2 0; }
-#SS_twoproofs-18-4-1-2 > li::marker { content: ""counter(SS_twoproofs-18-4-1-2,lower-alpha)""; }
-#SS_twoproofs-18-4-1-2 > li { counter-increment: SS_twoproofs-18-4-1-2; }
-#SS_twoproofs-18-5-1-2 { counter-set: SS_twoproofs-18-5-1-2 0; }
-#SS_twoproofs-18-5-1-2 > li::marker { content: ""counter(SS_twoproofs-18-5-1-2,lower-alpha)""; }
-#SS_twoproofs-18-5-1-2 > li { counter-increment: SS_twoproofs-18-5-1-2; }
-#B_propsums-2-1 { counter-set: B_propsums-2-1 0; }
-#B_propsums-2-1 > li::marker { content: ""counter(B_propsums-2-1,decimal)""; }
-#B_propsums-2-1 > li { counter-increment: B_propsums-2-1; }
-#summation-27-1-1-2 { counter-set: summation-27-1-1-2 0; }
-#summation-27-1-1-2 > li::marker { content: ""counter(summation-27-1-1-2,lower-alpha)""; }
-#summation-27-1-1-2 > li { counter-increment: summation-27-1-1-2; }
-#summation-27-2-1-2 { counter-set: summation-27-2-1-2 0; }
-#summation-27-2-1-2 > li::marker { content: ""counter(summation-27-2-1-2,lower-alpha)""; }
-#summation-27-2-1-2 > li { counter-increment: summation-27-2-1-2; }
-#summation-27-3-1-2 { counter-set: summation-27-3-1-2 0; }
-#summation-27-3-1-2 > li::marker { content: ""counter(summation-27-3-1-2,lower-alpha)""; }
-#summation-27-3-1-2 > li { counter-increment: summation-27-3-1-2; }
-#summation-27-8-1-2 { counter-set: summation-27-8-1-2 0; }
-#summation-27-8-1-2 > li::marker { content: ""counter(summation-27-8-1-2,lower-alpha)""; }
-#summation-27-8-1-2 > li { counter-increment: summation-27-8-1-2; }
-#B_induction-3-4 { counter-set: B_induction-3-4 0; }
-#B_induction-3-4 > li::marker { content: ""counter(B_induction-3-4,decimal)""; }
-#B_induction-3-4 > li { counter-increment: B_induction-3-4; }
-#induction-6-1 { counter-set: induction-6-1 0; }
-#induction-6-1 > li::marker { content: "("counter(induction-6-1,decimal)")"; }
-#induction-6-1 > li { counter-increment: induction-6-1; }
-#ER_indpowersof2-1-2 { counter-set: ER_indpowersof2-1-2 0; }
-#ER_indpowersof2-1-2 > li::marker { content: ""counter(ER_indpowersof2-1-2,lower-alpha)""; }
-#ER_indpowersof2-1-2 > li { counter-increment: ER_indpowersof2-1-2; }
-#B_strongind-4-3 { counter-set: B_strongind-4-3 0; }
-#B_strongind-4-3 > li::marker { content: ""counter(B_strongind-4-3,decimal)""; }
-#B_strongind-4-3 > li { counter-increment: B_strongind-4-3; }
-#E_domainqexist1-3-1 { counter-set: E_domainqexist1-3-1 0; }
-#E_domainqexist1-3-1 > li::marker { content: ""counter(E_domainqexist1-3-1,lower-alpha)""; }
-#E_domainqexist1-3-1 > li { counter-increment: E_domainqexist1-3-1; }
-#B_pfexistential-3-3 { counter-set: B_pfexistential-3-3 0; }
-#B_pfexistential-3-3 > li::marker { content: ""counter(B_pfexistential-3-3,decimal)""; }
-#B_pfexistential-3-3 > li { counter-increment: B_pfexistential-3-3; }
-#B_pfunique-3-3 { counter-set: B_pfunique-3-3 0; }
-#B_pfunique-3-3 > li::marker { content: ""counter(B_pfunique-3-3,decimal)""; }
-#B_pfunique-3-3 > li { counter-increment: B_pfunique-3-3; }
-#existunique-23-1 { counter-set: existunique-23-1 0; }
-#existunique-23-1 > li::marker { content: ""counter(existunique-23-1,decimal)""; }
-#existunique-23-1 > li { counter-increment: existunique-23-1; }
-#E_wop-3-2 { counter-set: E_wop-3-2 0; }
-#E_wop-3-2 > li::marker { content: ""counter(E_wop-3-2,decimal)""; }
-#E_wop-3-2 > li { counter-increment: E_wop-3-2; }
-#E_setnotevarious-2 { counter-set: E_setnotevarious-2 0; }
-#E_setnotevarious-2 > li::marker { content: ""counter(E_setnotevarious-2,lower-alpha)""; }
-#E_setnotevarious-2 > li { counter-increment: E_setnotevarious-2; }
-#E_setops-3-2 { counter-set: E_setops-3-2 0; }
-#E_setops-3-2 > li::marker { content: ""counter(E_setops-3-2,lower-alpha)""; }
-#E_setops-3-2 > li { counter-increment: E_setops-3-2; }
-#SS_setproofs-3-3 { counter-set: SS_setproofs-3-3 0; }
-#SS_setproofs-3-3 > li::marker { content: ""counter(SS_setproofs-3-3,decimal)""; }
-#SS_setproofs-3-3 > li { counter-increment: SS_setproofs-3-3; }
-#L_SetIdent-4-4 { counter-set: L_SetIdent-4-4 0; }
-#L_SetIdent-4-4 > li::marker { content: ""counter(L_SetIdent-4-4,decimal)""; }
-#L_SetIdent-4-4 > li { counter-increment: L_SetIdent-4-4; }
-#SS_setproofs-25-1-1-2 { counter-set: SS_setproofs-25-1-1-2 0; }
-#SS_setproofs-25-1-1-2 > li::marker { content: ""counter(SS_setproofs-25-1-1-2,lower-alpha)""; }
-#SS_setproofs-25-1-1-2 > li { counter-increment: SS_setproofs-25-1-1-2; }
-#SS_setproofs-25-2-1-2 { counter-set: SS_setproofs-25-2-1-2 0; }
-#SS_setproofs-25-2-1-2 > li::marker { content: ""counter(SS_setproofs-25-2-1-2,lower-alpha)""; }
-#SS_setproofs-25-2-1-2 > li { counter-increment: SS_setproofs-25-2-1-2; }
-#SS_setproofs-25-3-1-2 { counter-set: SS_setproofs-25-3-1-2 0; }
-#SS_setproofs-25-3-1-2 > li::marker { content: ""counter(SS_setproofs-25-3-1-2,lower-alpha)""; }
-#SS_setproofs-25-3-1-2 > li { counter-increment: SS_setproofs-25-3-1-2; }
-#SS_setproofs-25-4-1-2 { counter-set: SS_setproofs-25-4-1-2 0; }
-#SS_setproofs-25-4-1-2 > li::marker { content: ""counter(SS_setproofs-25-4-1-2,lower-alpha)""; }
-#SS_setproofs-25-4-1-2 > li { counter-increment: SS_setproofs-25-4-1-2; }
-#SS_setproofs-25-5-1-2 { counter-set: SS_setproofs-25-5-1-2 0; }
-#SS_setproofs-25-5-1-2 > li::marker { content: ""counter(SS_setproofs-25-5-1-2,lower-alpha)""; }
-#SS_setproofs-25-5-1-2 > li { counter-increment: SS_setproofs-25-5-1-2; }
-#SS_setproofs-25-6-1-2 { counter-set: SS_setproofs-25-6-1-2 0; }
-#SS_setproofs-25-6-1-2 > li::marker { content: ""counter(SS_setproofs-25-6-1-2,lower-alpha)""; }
-#SS_setproofs-25-6-1-2 > li { counter-increment: SS_setproofs-25-6-1-2; }
-#SS_setproofs-25-7-1-2 { counter-set: SS_setproofs-25-7-1-2 0; }
-#SS_setproofs-25-7-1-2 > li::marker { content: ""counter(SS_setproofs-25-7-1-2,lower-alpha)""; }
-#SS_setproofs-25-7-1-2 > li { counter-increment: SS_setproofs-25-7-1-2; }
-#SS_setproofs-25-15-1-2 { counter-set: SS_setproofs-25-15-1-2 0; }
-#SS_setproofs-25-15-1-2 > li::marker { content: ""counter(SS_setproofs-25-15-1-2,lower-alpha)""; }
-#SS_setproofs-25-15-1-2 > li { counter-increment: SS_setproofs-25-15-1-2; }
-#E_notfunctionimages-2-1 { counter-set: E_notfunctionimages-2-1 0; }
-#E_notfunctionimages-2-1 > li::marker { content: ""counter(E_notfunctionimages-2-1,lower-alpha)""; }
-#E_notfunctionimages-2-1 > li { counter-increment: E_notfunctionimages-2-1; }
-#E_addasfn-3-1 { counter-set: E_addasfn-3-1 0; }
-#E_addasfn-3-1 > li::marker { content: ""counter(E_addasfn-3-1,lower-alpha)""; }
-#E_addasfn-3-1 > li { counter-increment: E_addasfn-3-1; }
-#functions-45-1-1-2 { counter-set: functions-45-1-1-2 0; }
-#functions-45-1-1-2 > li::marker { content: ""counter(functions-45-1-1-2,lower-alpha)""; }
-#functions-45-1-1-2 > li { counter-increment: functions-45-1-1-2; }
-#functions-45-2-1-2 { counter-set: functions-45-2-1-2 0; }
-#functions-45-2-1-2 > li::marker { content: ""counter(functions-45-2-1-2,lower-alpha)""; }
-#functions-45-2-1-2 > li { counter-increment: functions-45-2-1-2; }
-#functions-45-3-1-2 { counter-set: functions-45-3-1-2 0; }
-#functions-45-3-1-2 > li::marker { content: ""counter(functions-45-3-1-2,lower-alpha)""; }
-#functions-45-3-1-2 > li { counter-increment: functions-45-3-1-2; }
-#functions-45-4-1-2 { counter-set: functions-45-4-1-2 0; }
-#functions-45-4-1-2 > li::marker { content: ""counter(functions-45-4-1-2,lower-alpha)""; }
-#functions-45-4-1-2 > li { counter-increment: functions-45-4-1-2; }
-#functions-45-5-1-2 { counter-set: functions-45-5-1-2 0; }
-#functions-45-5-1-2 > li::marker { content: ""counter(functions-45-5-1-2,lower-alpha)""; }
-#functions-45-5-1-2 > li { counter-increment: functions-45-5-1-2; }
-#functions-45-7-1-3 { counter-set: functions-45-7-1-3 0; }
-#functions-45-7-1-3 > li::marker { content: ""counter(functions-45-7-1-3,lower-alpha)""; }
-#functions-45-7-1-3 > li { counter-increment: functions-45-7-1-3; }
-#functions-45-8-1-2 { counter-set: functions-45-8-1-2 0; }
-#functions-45-8-1-2 > li::marker { content: ""counter(functions-45-8-1-2,lower-alpha)""; }
-#functions-45-8-1-2 > li { counter-increment: functions-45-8-1-2; }
-#functions-45-9-1-2 { counter-set: functions-45-9-1-2 0; }
-#functions-45-9-1-2 > li::marker { content: ""counter(functions-45-9-1-2,lower-alpha)""; }
-#functions-45-9-1-2 > li { counter-increment: functions-45-9-1-2; }
-#functions-45-10-1-3 { counter-set: functions-45-10-1-3 0; }
-#functions-45-10-1-3 > li::marker { content: ""counter(functions-45-10-1-3,lower-alpha)""; }
-#functions-45-10-1-3 > li { counter-increment: functions-45-10-1-3; }
-#functions-45-11-1-3 { counter-set: functions-45-11-1-3 0; }
-#functions-45-11-1-3 > li::marker { content: ""counter(functions-45-11-1-3,lower-alpha)""; }
-#functions-45-11-1-3 > li { counter-increment: functions-45-11-1-3; }
-#functions-45-12-1-2 { counter-set: functions-45-12-1-2 0; }
-#functions-45-12-1-2 > li::marker { content: ""counter(functions-45-12-1-2,lower-alpha)""; }
-#functions-45-12-1-2 > li { counter-increment: functions-45-12-1-2; }
-#E_equivclasses-2-3 { counter-set: E_equivclasses-2-3 0; }
-#E_equivclasses-2-3 > li::marker { content: ""counter(E_equivclasses-2-3,lower-alpha)""; }
-#E_equivclasses-2-3 > li { counter-increment: E_equivclasses-2-3; }
-#D_partition-1-1-6 { counter-set: D_partition-1-1-6 0; }
-#D_partition-1-1-6 > li::marker { content: ""counter(D_partition-1-1-6,decimal)""; }
-#D_partition-1-1-6 > li { counter-increment: D_partition-1-1-6; }
-#E_equivclasses2-4-2 { counter-set: E_equivclasses2-4-2 0; }
-#E_equivclasses2-4-2 > li::marker { content: ""counter(E_equivclasses2-4-2,lower-alpha)""; }
-#E_equivclasses2-4-2 > li { counter-increment: E_equivclasses2-4-2; }
-#SS_equivrelations-47-1-1-3 { counter-set: SS_equivrelations-47-1-1-3 0; }
-#SS_equivrelations-47-1-1-3 > li::marker { content: ""counter(SS_equivrelations-47-1-1-3,lower-alpha)""; }
-#SS_equivrelations-47-1-1-3 > li { counter-increment: SS_equivrelations-47-1-1-3; }
-#SS_equivrelations-47-2-1-3 { counter-set: SS_equivrelations-47-2-1-3 0; }
-#SS_equivrelations-47-2-1-3 > li::marker { content: ""counter(SS_equivrelations-47-2-1-3,lower-alpha)""; }
-#SS_equivrelations-47-2-1-3 > li { counter-increment: SS_equivrelations-47-2-1-3; }
-#SS_equivrelations-47-4-1-2 { counter-set: SS_equivrelations-47-4-1-2 0; }
-#SS_equivrelations-47-4-1-2 > li::marker { content: ""counter(SS_equivrelations-47-4-1-2,lower-alpha)""; }
-#SS_equivrelations-47-4-1-2 > li { counter-increment: SS_equivrelations-47-4-1-2; }
-#SS_equivrelations-47-5-1-2 { counter-set: SS_equivrelations-47-5-1-2 0; }
-#SS_equivrelations-47-5-1-2 > li::marker { content: ""counter(SS_equivrelations-47-5-1-2,lower-alpha)""; }
-#SS_equivrelations-47-5-1-2 > li { counter-increment: SS_equivrelations-47-5-1-2; }
-#SS_equivrelations-47-6-1-2 { counter-set: SS_equivrelations-47-6-1-2 0; }
-#SS_equivrelations-47-6-1-2 > li::marker { content: ""counter(SS_equivrelations-47-6-1-2,lower-alpha)""; }
-#SS_equivrelations-47-6-1-2 > li { counter-increment: SS_equivrelations-47-6-1-2; }
-#SS_equivrelations-47-7-1-2 { counter-set: SS_equivrelations-47-7-1-2 0; }
-#SS_equivrelations-47-7-1-2 > li::marker { content: ""counter(SS_equivrelations-47-7-1-2,lower-alpha)""; }
-#SS_equivrelations-47-7-1-2 > li { counter-increment: SS_equivrelations-47-7-1-2; }
-#SS_equivrelations-47-8-1-2 { counter-set: SS_equivrelations-47-8-1-2 0; }
-#SS_equivrelations-47-8-1-2 > li::marker { content: ""counter(SS_equivrelations-47-8-1-2,lower-alpha)""; }
-#SS_equivrelations-47-8-1-2 > li { counter-increment: SS_equivrelations-47-8-1-2; }
-#SS_equivrelations-47-9-1-2 { counter-set: SS_equivrelations-47-9-1-2 0; }
-#SS_equivrelations-47-9-1-2 > li::marker { content: ""counter(SS_equivrelations-47-9-1-2,lower-alpha)""; }
-#SS_equivrelations-47-9-1-2 > li { counter-increment: SS_equivrelations-47-9-1-2; }
-#D_RSTprop2-1-1-3 { counter-set: D_RSTprop2-1-1-3 0; }
-#D_RSTprop2-1-1-3 > li::marker { content: ""counter(D_RSTprop2-1-1-3,decimal)""; }
-#D_RSTprop2-1-1-3 > li { counter-increment: D_RSTprop2-1-1-3; }
-#T_totalorder-1-1-4 { counter-set: T_totalorder-1-1-4 0; }
-#T_totalorder-1-1-4 > li::marker { content: ""counter(T_totalorder-1-1-4,decimal)""; }
-#T_totalorder-1-1-4 > li { counter-increment: T_totalorder-1-1-4; }
-#orders-33-1-1-2 { counter-set: orders-33-1-1-2 0; }
-#orders-33-1-1-2 > li::marker { content: ""counter(orders-33-1-1-2,lower-alpha)""; }
-#orders-33-1-1-2 > li { counter-increment: orders-33-1-1-2; }
-#orders-33-2-1-2 { counter-set: orders-33-2-1-2 0; }
-#orders-33-2-1-2 > li::marker { content: ""counter(orders-33-2-1-2,lower-alpha)""; }
-#orders-33-2-1-2 > li { counter-increment: orders-33-2-1-2; }
-#orders-33-3-1-2 { counter-set: orders-33-3-1-2 0; }
-#orders-33-3-1-2 > li::marker { content: ""counter(orders-33-3-1-2,lower-alpha)""; }
-#orders-33-3-1-2 > li { counter-increment: orders-33-3-1-2; }
-#orders-33-4-1-2 { counter-set: orders-33-4-1-2 0; }
-#orders-33-4-1-2 > li::marker { content: ""counter(orders-33-4-1-2,lower-alpha)""; }
-#orders-33-4-1-2 > li { counter-increment: orders-33-4-1-2; }
-#binomial9-30-2-1-1-1 { counter-set: binomial9-30-2-1-1-1 0; }
-#binomial9-30-2-1-1-1 > li::marker { content: ""counter(binomial9-30-2-1-1-1,lower-alpha)""; }
-#binomial9-30-2-1-1-1 > li { counter-increment: binomial9-30-2-1-1-1; }
-#cardinality-31-6-1-2 { counter-set: cardinality-31-6-1-2 0; }
-#cardinality-31-6-1-2 > li::marker { content: ""counter(cardinality-31-6-1-2,lower-alpha)""; }
-#cardinality-31-6-1-2 > li { counter-increment: cardinality-31-6-1-2; }
-</style>
+<script src="_static/prefix-runtime.42217a82c75796c8.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.7e141ad8414abf4a.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.f4ab138da65f4203.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
 </head>
 <body class="pretext book ignore-math">
-<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
-<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
-<h1 class="heading"><a href="IntroProofs.html"><span class="title">Introduction to Proofs:</span> <span class="subtitle">An Active Exploration of Mathematical Language</span></a></h1>
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="IntroProofs.html"><span class="title">Introduction to Proofs</span> <span class="subtitle">An Active Exploration of Mathematical Language</span></a></h1>
 <p class="byline">Jennifer Firkins Nordstrom</p>
-</div>
-</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
 <button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-2.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
 <div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
@@ -595,22 +316,32 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="connectives"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">1.3</span><span class="space"> </span><span class="title">Logical Connectives</span>
 </h2>
-<div class="para" id="connectives-10">We want to understand what makes a mathematical proof. One of the foundations for proofs is logical structure. If we build a good foundation in logic, then we can better understand mathematical statements and proof structures. We have already seen the general form for an argument. Now we want to focus on types of statements used to make up an argument. In this section we will be looking at logical forms, independent of content.</div>
-<div class="para" id="connectives-11">If <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> are variables representing statements, we can combine these statements into new statements using logical connectives.</div>
+<div class="para" id="connectives-10">We want to understand what makes a mathematical proof. One of the foundations for proofs is logical structure. If we build a good foundation in logic, then we can better understand mathematical statements and proof structures. We have already seen the general form for an argument. Now we want to focus on types of statements used to make up an argument. In this section we will be looking at logical forms, independent of content.<div class="autopermalink" data-description="Paragraph"><a href="#connectives-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="connectives-11">If <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> are variables representing statements, we can combine these statements into new statements using logical connectives.<div class="autopermalink" data-description="Paragraph"><a href="#connectives-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="assemblage assemblage-like" id="B_connectives"><h3 class="heading"><span class="title">Logical Connectives: NOT, AND, OR.</span></h3>
-<div class="para logical" id="B_connectives-2"><ul class="disc" id="B_connectives-2-1">
+<div class="para logical" id="B_connectives-2">
+<ul class="disc" id="B_connectives-2-1">
 <li id="B_connectives-2-1-1">
 <span class="heading"><span class="title">Negation.</span></span><div class="para" id="p-derived-B_connectives-2-1-1"> NOT. Notation: <span class="process-math">\(\neg p\text{,}\)</span> read as “not <span class="process-math">\(p\text{.}\)</span>”</div>
+<div class="autopermalink" data-description="Item: Negation"><a href="#B_connectives-2-1-1" title="Copy heading and permalink for Item: Negation" aria-label="Copy heading and permalink for Item: Negation">🔗</a></div>
 </li>
 <li id="B_connectives-2-1-2">
 <span class="heading"><span class="title">Conjunction.</span></span><div class="para" id="p-derived-B_connectives-2-1-2"> AND. Notation: <span class="process-math">\(p\wedge q\text{,}\)</span> read as “<span class="process-math">\(p\)</span> and <span class="process-math">\(q\text{.}\)</span>”</div>
+<div class="autopermalink" data-description="Item: Conjunction"><a href="#B_connectives-2-1-2" title="Copy heading and permalink for Item: Conjunction" aria-label="Copy heading and permalink for Item: Conjunction">🔗</a></div>
 </li>
 <li id="B_connectives-2-1-3">
 <span class="heading"><span class="title">Disjunction.</span></span><div class="para" id="p-derived-B_connectives-2-1-3"> OR. Notation: <span class="process-math">\(p\vee q\text{,}\)</span> read as “<span class="process-math">\(p\)</span> or <span class="process-math">\(q\text{.}\)</span>”</div>
+<div class="autopermalink" data-description="Item: Disjunction"><a href="#B_connectives-2-1-3" title="Copy heading and permalink for Item: Disjunction" aria-label="Copy heading and permalink for Item: Disjunction">🔗</a></div>
 </li>
-</ul></div></article><div class="para" id="connectives-13">Our goal is to determine when these new statements are true or false based on whether <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> are true or false. We can create a truth table  that looks at all the possibilities of true or false for <span class="process-math">\(p\)</span> and <span class="process-math">\(q\text{.}\)</span> When writing a truth table, make a column for each variable, list all the possible cases of true and false, then for each case, determine whether the new statement (with the connective) is true or false.</div>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#B_connectives-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Assemblage: Logical Connectives: NOT, AND, OR"><a href="#B_connectives" title="Copy heading and permalink for Assemblage: Logical Connectives: NOT, AND, OR" aria-label="Copy heading and permalink for Assemblage: Logical Connectives: NOT, AND, OR">🔗</a></div></article><div class="para" id="connectives-13">Our goal is to determine when these new statements are true or false based on whether <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> are true or false. We can create a truth table  that looks at all the possibilities of true or false for <span class="process-math">\(p\)</span> and <span class="process-math">\(q\text{.}\)</span> When writing a truth table, make a column for each variable, list all the possible cases of true and false, then for each case, determine whether the new statement (with the connective) is true or false.<div class="autopermalink" data-description="Paragraph"><a href="#connectives-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="connectives-14">
-<figure class="table table-like" id="T_ttnot"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">1.3.1<span class="period">.</span></span><span class="space"> </span>Truth table for <span class="process-math">\(\neg p\text{.}\)</span></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<figure class="table table-like" id="T_ttnot"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">1.3.1<span class="period">.</span></span><span class="space"> </span>Truth table for <span class="process-math">\(\neg p\text{.}\)</span><div class="autopermalink" data-description="Table 1.3.1: Truth table for \neg p"><a href="#T_ttnot" title="Copy heading and permalink for Table 1.3.1: Truth table for \neg p" aria-label="Copy heading and permalink for Table 1.3.1: Truth table for \neg p">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="c m b2 r2 l1 t1 lines"><span class="process-math">\(p\)</span></td>
 <td class="c m b2 r1 l0 t1 lines"><span class="process-math">\(\neg p\)</span></td>
@@ -623,9 +354,10 @@ eBookConfig.enable_chatcodes =  false;
 <td class="c m b1 r2 l1 t0 lines">F</td>
 <td class="c m b1 r1 l0 t0 lines">T</td>
 </tr>
-</table></div></figure> It should make sense that if we negate T we get F, and vice versa.</div>
+</table></div></figure> It should make sense that if we negate T we get F, and vice versa.<div class="autopermalink" data-description="Paragraph"><a href="#connectives-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="connectives-15">
-<figure class="table table-like" id="T_ttand"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">1.3.2<span class="period">.</span></span><span class="space"> </span>Truth table for <span class="process-math">\(p\wedge q\text{.}\)</span></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<figure class="table table-like" id="T_ttand"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">1.3.2<span class="period">.</span></span><span class="space"> </span>Truth table for <span class="process-math">\(p\wedge q\text{.}\)</span><div class="autopermalink" data-description="Table 1.3.2: Truth table for p\wedge q"><a href="#T_ttand" title="Copy heading and permalink for Table 1.3.2: Truth table for p\wedge q" aria-label="Copy heading and permalink for Table 1.3.2: Truth table for p\wedge q">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="c m b2 r1 l1 t1 lines"><span class="process-math">\(p\)</span></td>
 <td class="c m b2 r2 l0 t1 lines"><span class="process-math">\(q\)</span></td>
@@ -651,9 +383,10 @@ eBookConfig.enable_chatcodes =  false;
 <td class="c m b1 r2 l0 t0 lines">F</td>
 <td class="c m b1 r1 l0 t0 lines">F</td>
 </tr>
-</table></div></figure> Again, the truth values for an “and” statement should make sense. The only time it should be true is if both parts of the statement are true.</div>
+</table></div></figure> Again, the truth values for an “and” statement should make sense. The only time it should be true is if both parts of the statement are true.<div class="autopermalink" data-description="Paragraph"><a href="#connectives-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para" id="connectives-16">
-<figure class="table table-like" id="T_ttor"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">1.3.3<span class="period">.</span></span><span class="space"> </span>Truth table for <span class="process-math">\(p\vee q\text{.}\)</span></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<figure class="table table-like" id="T_ttor"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">1.3.3<span class="period">.</span></span><span class="space"> </span>Truth table for <span class="process-math">\(p\vee q\text{.}\)</span><div class="autopermalink" data-description="Table 1.3.3: Truth table for p\vee q"><a href="#T_ttor" title="Copy heading and permalink for Table 1.3.3: Truth table for p\vee q" aria-label="Copy heading and permalink for Table 1.3.3: Truth table for p\vee q">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="c m b2 r1 l1 t1 lines"><span class="process-math">\(p\)</span></td>
 <td class="c m b2 r2 l0 t1 lines"><span class="process-math">\(q\)</span></td>
@@ -679,16 +412,24 @@ eBookConfig.enable_chatcodes =  false;
 <td class="c m b1 r2 l0 t0 lines">F</td>
 <td class="c m b1 r1 l0 t0 lines">F</td>
 </tr>
-</table></div></figure> The truth values for an “or” statement should, mostly, make sense,  as long as one part of the “or” statement is true, the whole statement is true. You may ask about the case where both parts are true. We think of this as an “inclusive or,” which means we allow both to be true. For example, “A computer science major must take Math 175 or Math 250.” You will still get a major if you take both.</div>
-<div class="para" id="connectives-17">There is a connective for an “exclusive or” (one or the other, not both).</div>
+</table></div></figure> The truth values for an “or” statement should, mostly, make sense,  as long as one part of the “or” statement is true, the whole statement is true. You may ask about the case where both parts are true. We think of this as an “inclusive or,” which means we allow both to be true. For example, “A computer science major must take Math 175 or Math 250.” You will still get a major if you take both.<div class="autopermalink" data-description="Paragraph"><a href="#connectives-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="connectives-17">There is a connective for an “exclusive or” (one or the other, not both).<div class="autopermalink" data-description="Paragraph"><a href="#connectives-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="assemblage assemblage-like" id="B_connectivexor"><h3 class="heading"><span class="title">Logical Connective: EXCLUSIVE OR.</span></h3>
-<div class="para logical" id="B_connectivexor-2"><ul class="disc" id="B_connectivexor-2-1"><li id="B_connectivexor-2-1-1">
+<div class="para logical" id="B_connectivexor-2">
+<ul class="disc" id="B_connectivexor-2-1"><li id="B_connectivexor-2-1-1">
 <span class="heading"><span class="title">Exclusive Or.</span></span><div class="para" id="p-derived-B_connectivexor-2-1-1"> OR, NOT BOTH. Notation: <span class="process-math">\(p\veebar q\text{,}\)</span> read as “<span class="process-math">\(p\)</span> exclusive or <span class="process-math">\(q\text{.}\)</span>”</div>
-</li></ul></div></article><article class="activity project-like" id="A_xor"><h3 class="heading">
+<div class="autopermalink" data-description="Item: Exclusive Or"><a href="#B_connectivexor-2-1-1" title="Copy heading and permalink for Item: Exclusive Or" aria-label="Copy heading and permalink for Item: Exclusive Or">🔗</a></div>
+</li></ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#B_connectivexor-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Assemblage: Logical Connective: EXCLUSIVE OR"><a href="#B_connectivexor" title="Copy heading and permalink for Assemblage: Logical Connective: EXCLUSIVE OR" aria-label="Copy heading and permalink for Assemblage: Logical Connective: EXCLUSIVE OR">🔗</a></div></article><article class="activity project-like" id="A_xor"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.3.1</span><span class="period">.</span><span class="space"> </span><span class="title">Exclusive Or.</span>
 </h3>
-<div class="para" id="A_xor-2-1">Give the truth table for <span class="process-math">\(p \veebar q\)</span> based on a small change to the truth table for <span class="process-math">\(p \vee q\text{.}\)</span>
-</div></article><div class="para logical" id="connectives-20">
+<div class="para" id="A_xor-2-1">Give the truth table for <span class="process-math">\(p \veebar q\)</span> based on a small change to the truth table for <span class="process-math">\(p \vee q\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_xor-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Activity 1.3.1: Exclusive Or"><a href="#A_xor" title="Copy heading and permalink for Activity 1.3.1: Exclusive Or" aria-label="Copy heading and permalink for Activity 1.3.1: Exclusive Or">🔗</a></div></article><div class="para logical" id="connectives-20">
 <div class="para">Now that we can connect two statements, we can connect as many as we’d like using multiple quantifiers. For example, we could form the statement</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -697,8 +438,10 @@ p\vee(q\ \wedge \neg p).
 </div>
 <div class="para">Make sure you use parentheses when combining statements. For example, <span class="process-math">\(\neg p\vee q\)</span> is not the same as <span class="process-math">\(\neg (p\vee q)\text{.}\)</span>
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#connectives-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="connectives-21"><figure class="table table-like" id="T_ttparenexample"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">1.3.4<span class="period">.</span></span><span class="space"> </span>Truth table for <span class="process-math">\(\neg p\vee q\)</span> and <span class="process-math">\(\neg (p\vee q)\text{.}\)</span></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<div class="para" id="connectives-21">
+<figure class="table table-like" id="T_ttparenexample"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">1.3.4<span class="period">.</span></span><span class="space"> </span>Truth table for <span class="process-math">\(\neg p\vee q\)</span> and <span class="process-math">\(\neg (p\vee q)\text{.}\)</span><div class="autopermalink" data-description="Table 1.3.4: Truth table for \neg p\vee q and \neg (p\vee q)"><a href="#T_ttparenexample" title="Copy heading and permalink for Table 1.3.4: Truth table for \neg p\vee q and \neg (p\vee q)" aria-label="Copy heading and permalink for Table 1.3.4: Truth table for \neg p\vee q and \neg (p\vee q)">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="c m b2 r1 l1 t1 lines"><span class="process-math">\(p\)</span></td>
 <td class="c m b2 r2 l0 t1 lines"><span class="process-math">\(q\)</span></td>
@@ -739,32 +482,49 @@ p\vee(q\ \wedge \neg p).
 <td class="c m b1 r1 l0 t0 lines">F</td>
 <td class="c m b1 r1 l0 t0 lines">T</td>
 </tr>
-</table></div></figure></div>
+</table></div></figure><div class="autopermalink" data-description="Paragraph"><a href="#connectives-21" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="activity project-like" id="A_ttpractice"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.3.2</span><span class="period">.</span><span class="space"> </span><span class="title">Truth Table Practice.</span>
 </h3>
-<div class="para" id="A_ttpractice-2-1">Give the truth table for <span class="process-math">\(\neg p\  \vee \neg q\text{.}\)</span>
-</div></article><article class="activity project-like" id="A_morepractice"><h3 class="heading">
+<div class="para" id="A_ttpractice-2-1">Give the truth table for <span class="process-math">\(\neg p\  \vee \neg q\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_ttpractice-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Activity 1.3.2: Truth Table Practice"><a href="#A_ttpractice" title="Copy heading and permalink for Activity 1.3.2: Truth Table Practice" aria-label="Copy heading and permalink for Activity 1.3.2: Truth Table Practice">🔗</a></div></article><article class="activity project-like" id="A_morepractice"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.3.3</span><span class="period">.</span><span class="space"> </span><span class="title">More Truth Table Practice.</span>
 </h3>
-<div class="para" id="A_morepractice-2-1">Give the truth table for <span class="process-math">\((p \vee q) \wedge \neg(p \wedge q)\text{.}\)</span>
-</div></article><article class="activity project-like" id="A_numrows"><h3 class="heading">
+<div class="para" id="A_morepractice-2-1">Give the truth table for <span class="process-math">\((p \vee q) \wedge \neg(p \wedge q)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_morepractice-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Activity 1.3.3: More Truth Table Practice"><a href="#A_morepractice" title="Copy heading and permalink for Activity 1.3.3: More Truth Table Practice" aria-label="Copy heading and permalink for Activity 1.3.3: More Truth Table Practice">🔗</a></div></article><article class="activity project-like" id="A_numrows"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.3.4</span><span class="period">.</span><span class="space"> </span><span class="title">Truth Table with Three Variables.</span>
 </h3>
-<div class="para" id="A_numrows-2-1">Truth tables can have more than two variables. We just need to make sure we have a row for every possible combination of truth values for the variables. How many rows will you need in a truth table for 3 variables? Give the truth table for <span class="process-math">\((p \wedge q) \vee r\text{.}\)</span>
-</div></article><div class="para" id="connectives-25">One of the things we want to be able to do is to translate English (or mathematical) sentences into logical statements. We have to be careful about how common phrases are really hidden “and”s. For example, “<span class="process-math">\(p\)</span> but <span class="process-math">\(q\)</span>” is really <span class="process-math">\(p\wedge q\text{.}\)</span> Similarly, “neither <span class="process-math">\(p\)</span> nor <span class="process-math">\(q\)</span>” is really <span class="process-math">\(\neg p\ \wedge \neg q\text{.}\)</span>
+<div class="para" id="A_numrows-2-1">Truth tables can have more than two variables. We just need to make sure we have a row for every possible combination of truth values for the variables. How many rows will you need in a truth table for 3 variables? Give the truth table for <span class="process-math">\((p \wedge q) \vee r\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_numrows-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="connectives-26">A <dfn class="terminology">conditional statement</dfn> has the form “if <span class="process-math">\(p\)</span> then <span class="process-math">\(q\text{.}\)</span>” We use the connective <span class="process-math">\(p\rightarrow q\)</span> for conditional statements.</div>
+<div class="autopermalink" data-description="Activity 1.3.4: Truth Table with Three Variables"><a href="#A_numrows" title="Copy heading and permalink for Activity 1.3.4: Truth Table with Three Variables" aria-label="Copy heading and permalink for Activity 1.3.4: Truth Table with Three Variables">🔗</a></div></article><div class="para" id="connectives-25">One of the things we want to be able to do is to translate English (or mathematical) sentences into logical statements. We have to be careful about how common phrases are really hidden “and”s. For example, “<span class="process-math">\(p\)</span> but <span class="process-math">\(q\)</span>” is really <span class="process-math">\(p\wedge q\text{.}\)</span> Similarly, “neither <span class="process-math">\(p\)</span> nor <span class="process-math">\(q\)</span>” is really <span class="process-math">\(\neg p\ \wedge \neg q\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#connectives-25" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="connectives-26">A <dfn class="terminology">conditional statement</dfn> has the form “if <span class="process-math">\(p\)</span> then <span class="process-math">\(q\text{.}\)</span>” We use the connective <span class="process-math">\(p\rightarrow q\)</span> for conditional statements.<div class="autopermalink" data-description="Paragraph"><a href="#connectives-26" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="assemblage assemblage-like" id="B_connconditional"><h3 class="heading"><span class="title">Logical Connective: IF...THEN.</span></h3>
-<div class="para logical" id="B_connconditional-2"><ul class="disc" id="B_connconditional-2-1"><li id="B_connconditional-2-1-1">
+<div class="para logical" id="B_connconditional-2">
+<ul class="disc" id="B_connconditional-2-1"><li id="B_connconditional-2-1-1">
 <span class="heading"><span class="title">Conditional.</span></span><div class="para" id="p-derived-B_connconditional-2-1-1"> IF THEN. Notation: <span class="process-math">\(p\rightarrow q\text{,}\)</span> read as “if <span class="process-math">\(p\)</span> then <span class="process-math">\(q\text{.}\)</span>”</div>
-</li></ul></div></article><div class="para" id="connectives-28">In a conditional statement <span class="process-math">\(p\rightarrow q\text{,}\)</span> we call <span class="process-math">\(p\)</span> the <dfn class="terminology">hypothesis</dfn>, and <span class="process-math">\(q\)</span> the <dfn class="terminology">conclusion</dfn>.</div>
-<div class="para" id="connectives-29">Before looking at the truth table, we need to understand when an if...then... statement is true or false. This is actually trickier than it seems.</div>
+<div class="autopermalink" data-description="Item: Conditional"><a href="#B_connconditional-2-1-1" title="Copy heading and permalink for Item: Conditional" aria-label="Copy heading and permalink for Item: Conditional">🔗</a></div>
+</li></ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#B_connconditional-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Assemblage: Logical Connective: IF...THEN"><a href="#B_connconditional" title="Copy heading and permalink for Assemblage: Logical Connective: IF...THEN" aria-label="Copy heading and permalink for Assemblage: Logical Connective: IF...THEN">🔗</a></div></article><div class="para" id="connectives-28">In a conditional statement <span class="process-math">\(p\rightarrow q\text{,}\)</span> we call <span class="process-math">\(p\)</span> the <dfn class="terminology">hypothesis</dfn>, and <span class="process-math">\(q\)</span> the <dfn class="terminology">conclusion</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#connectives-28" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="connectives-29">Before looking at the truth table, we need to understand when an if...then... statement is true or false. This is actually trickier than it seems.<div class="autopermalink" data-description="Paragraph"><a href="#connectives-29" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <details id="E_condstatement" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.3.5</span><span class="period">.</span><span class="space"> </span><span class="title">Conditional Statement.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_condstatement-2">Suppose I say to you “If it rains tomorrow, then class is cancelled.” When would you accuse me of lying to you? For example, if it doesn’t rain and we have class, would you have thought my statement false? No. Now, you might not think my statement is true, either. But remember, statements must be either true or false. So if it is not false, then it is true.</div>
-<div class="para" id="E_condstatement-3">Now, what if it doesn’t rain, but I cancel class anyway? Would I have lied? No, I didn’t tell you I wouldn’t cancel class. So, again, this would be a true statement.</div>
-<div class="para" id="E_condstatement-4">The only time you could accuse me of having made a false statement is if it rains and we don’t cancel class. If we think of “it rains tomorrow” as <span class="process-math">\(p\)</span> and “class is cancelled” as <span class="process-math">\(q\text{,}\)</span> then the only time the statement is false is when <span class="process-math">\(p\)</span> is true and <span class="process-math">\(q\)</span> is false.</div></article></details><div class="para" id="connectives-31"><figure class="table table-like" id="T_ttconditional"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">1.3.6<span class="period">.</span></span><span class="space"> </span>Truth table for <span class="process-math">\(p\rightarrow q\text{.}\)</span></figcaption><div class="tabular-box natural-width"><table class="tabular">
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_condstatement-2">Suppose I say to you “If it rains tomorrow, then class is cancelled.” When would you accuse me of lying to you? For example, if it doesn’t rain and we have class, would you have thought my statement false? No. Now, you might not think my statement is true, either. But remember, statements must be either true or false. So if it is not false, then it is true.<div class="autopermalink" data-description="Paragraph"><a href="#E_condstatement-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="E_condstatement-3">Now, what if it doesn’t rain, but I cancel class anyway? Would I have lied? No, I didn’t tell you I wouldn’t cancel class. So, again, this would be a true statement.<div class="autopermalink" data-description="Paragraph"><a href="#E_condstatement-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="E_condstatement-4">The only time you could accuse me of having made a false statement is if it rains and we don’t cancel class. If we think of “it rains tomorrow” as <span class="process-math">\(p\)</span> and “class is cancelled” as <span class="process-math">\(q\text{,}\)</span> then the only time the statement is false is when <span class="process-math">\(p\)</span> is true and <span class="process-math">\(q\)</span> is false.<div class="autopermalink" data-description="Paragraph"><a href="#E_condstatement-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 1.3.5: Conditional Statement"><a href="#E_condstatement" title="Copy heading and permalink for Example 1.3.5: Conditional Statement" aria-label="Copy heading and permalink for Example 1.3.5: Conditional Statement">🔗</a></div></article></details><div class="para" id="connectives-31">
+<figure class="table table-like" id="T_ttconditional"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">1.3.6<span class="period">.</span></span><span class="space"> </span>Truth table for <span class="process-math">\(p\rightarrow q\text{.}\)</span><div class="autopermalink" data-description="Table 1.3.6: Truth table for p\rightarrow q"><a href="#T_ttconditional" title="Copy heading and permalink for Table 1.3.6: Truth table for p\rightarrow q" aria-label="Copy heading and permalink for Table 1.3.6: Truth table for p\rightarrow q">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="c m b2 r1 l1 t1 lines"><span class="process-math">\(p\)</span></td>
 <td class="c m b2 r2 l0 t1 lines"><span class="process-math">\(q\)</span></td>
@@ -790,28 +550,48 @@ p\vee(q\ \wedge \neg p).
 <td class="c m b1 r2 l0 t0 lines">F</td>
 <td class="c m b1 r1 l0 t0 lines">T</td>
 </tr>
-</table></div></figure></div>
-<div class="para" id="connectives-32">To better understand the truth or falsity of a conditional, let’s look at another example.</div>
+</table></div></figure><div class="autopermalink" data-description="Paragraph"><a href="#connectives-31" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="connectives-32">To better understand the truth or falsity of a conditional, let’s look at another example.<div class="autopermalink" data-description="Paragraph"><a href="#connectives-32" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <details id="E_mathcond" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.3.7</span><span class="period">.</span><span class="space"> </span><span class="title">A Mathematical Conditional Statement.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_mathcond-2">Consider the mathematical statement “If <span class="process-math">\(x&gt;2\)</span> then <span class="process-math">\(x^2&gt;4\)</span>”. Do you agree this is a true mathematical statement?</div>
-<div class="para" id="E_mathcond-3">Let <span class="process-math">\(p\)</span> be “<span class="process-math">\(x&gt;2\)</span>” and <span class="process-math">\(q\)</span> be “<span class="process-math">\(x^2&gt;4\text{.}\)</span>” Consider all the cases of <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> being true or false.</div>
-<div class="para" id="E_mathcond-4">For example, if <span class="process-math">\(x=5, x^2=25\text{,}\)</span> then we have the case where <span class="process-math">\(p\)</span> is true and <span class="process-math">\(q\)</span> is true.</div>
-<div class="para" id="E_mathcond-5">If <span class="process-math">\(x=-5, x^2=25\text{,}\)</span> then we have the case where <span class="process-math">\(p\)</span> is false and <span class="process-math">\(q\)</span> is true. But remember, the original statement is still true!</div>
-<div class="para" id="E_mathcond-6">If <span class="process-math">\(x=1, x^2=1\text{,}\)</span> then we have the case where <span class="process-math">\(p\)</span> is false and <span class="process-math">\(q\)</span> is false. But again, the original statement is still true.</div>
-<div class="para" id="E_mathcond-7">It is impossible to find an <span class="process-math">\(x\)</span> that makes <span class="process-math">\(x&gt;2\)</span> true and <span class="process-math">\(x^2&gt;4\)</span> false. Thus, we never have the case where the conditional, if <span class="process-math">\(x&gt;2\)</span> then <span class="process-math">\(x^2&gt;4\text{,}\)</span> is false.</div></article></details><article class="activity project-like" id="A_exconditional"><h3 class="heading">
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_mathcond-2">Consider the mathematical statement “If <span class="process-math">\(x&gt;2\)</span> then <span class="process-math">\(x^2&gt;4\)</span>”. Do you agree this is a true mathematical statement?<div class="autopermalink" data-description="Paragraph"><a href="#E_mathcond-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="E_mathcond-3">Let <span class="process-math">\(p\)</span> be “<span class="process-math">\(x&gt;2\)</span>” and <span class="process-math">\(q\)</span> be “<span class="process-math">\(x^2&gt;4\text{.}\)</span>” Consider all the cases of <span class="process-math">\(p\)</span> and <span class="process-math">\(q\)</span> being true or false.<div class="autopermalink" data-description="Paragraph"><a href="#E_mathcond-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="E_mathcond-4">For example, if <span class="process-math">\(x=5, x^2=25\text{,}\)</span> then we have the case where <span class="process-math">\(p\)</span> is true and <span class="process-math">\(q\)</span> is true.<div class="autopermalink" data-description="Paragraph"><a href="#E_mathcond-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="E_mathcond-5">If <span class="process-math">\(x=-5, x^2=25\text{,}\)</span> then we have the case where <span class="process-math">\(p\)</span> is false and <span class="process-math">\(q\)</span> is true. But remember, the original statement is still true!<div class="autopermalink" data-description="Paragraph"><a href="#E_mathcond-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="E_mathcond-6">If <span class="process-math">\(x=1, x^2=1\text{,}\)</span> then we have the case where <span class="process-math">\(p\)</span> is false and <span class="process-math">\(q\)</span> is false. But again, the original statement is still true.<div class="autopermalink" data-description="Paragraph"><a href="#E_mathcond-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="E_mathcond-7">It is impossible to find an <span class="process-math">\(x\)</span> that makes <span class="process-math">\(x&gt;2\)</span> true and <span class="process-math">\(x^2&gt;4\)</span> false. Thus, we never have the case where the conditional, if <span class="process-math">\(x&gt;2\)</span> then <span class="process-math">\(x^2&gt;4\text{,}\)</span> is false.<div class="autopermalink" data-description="Paragraph"><a href="#E_mathcond-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 1.3.7: A Mathematical Conditional Statement"><a href="#E_mathcond" title="Copy heading and permalink for Example 1.3.7: A Mathematical Conditional Statement" aria-label="Copy heading and permalink for Example 1.3.7: A Mathematical Conditional Statement">🔗</a></div></article></details><article class="activity project-like" id="A_exconditional"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.3.5</span><span class="period">.</span><span class="space"> </span><span class="title">Understanding Conditionals.</span>
 </h3>
-<div class="para" id="A_exconditional-2-1">Give an example of a conditional statement, not one of the examples from above. Write in your own words why <span class="process-math">\(p\rightarrow q\)</span> must be true whenever <span class="process-math">\(p\)</span> is false.</div></article><article class="activity project-like" id="A_condpractice"><h3 class="heading">
+<div class="para" id="A_exconditional-2-1">Give an example of a conditional statement, not one of the examples from above. Write in your own words why <span class="process-math">\(p\rightarrow q\)</span> must be true whenever <span class="process-math">\(p\)</span> is false.<div class="autopermalink" data-description="Paragraph"><a href="#A_exconditional-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Activity 1.3.5: Understanding Conditionals"><a href="#A_exconditional" title="Copy heading and permalink for Activity 1.3.5: Understanding Conditionals" aria-label="Copy heading and permalink for Activity 1.3.5: Understanding Conditionals">🔗</a></div></article><article class="activity project-like" id="A_condpractice"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.3.6</span><span class="period">.</span><span class="space"> </span><span class="title">Practice with Conditionals.</span>
 </h3>
-<div class="para" id="A_condpractice-2-1">Give the truth table for <span class="process-math">\((p \rightarrow q) \wedge (q\rightarrow p)\text{.}\)</span>
-</div></article><div class="para" id="connectives-36">The statement <span class="process-math">\((p \rightarrow q) \wedge (q\rightarrow p)\)</span> is useful in mathematics, but it is not very concise. We can simplify this statement by introducing another logical connective.</div>
+<div class="para" id="A_condpractice-2-1">Give the truth table for <span class="process-math">\((p \rightarrow q) \wedge (q\rightarrow p)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_condpractice-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Activity 1.3.6: Practice with Conditionals"><a href="#A_condpractice" title="Copy heading and permalink for Activity 1.3.6: Practice with Conditionals" aria-label="Copy heading and permalink for Activity 1.3.6: Practice with Conditionals">🔗</a></div></article><div class="para" id="connectives-36">The statement <span class="process-math">\((p \rightarrow q) \wedge (q\rightarrow p)\)</span> is useful in mathematics, but it is not very concise. We can simplify this statement by introducing another logical connective.<div class="autopermalink" data-description="Paragraph"><a href="#connectives-36" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="assemblage assemblage-like" id="B_connectivebicond"><h3 class="heading"><span class="title">Logical Connective: IF AND ONLY IF.</span></h3>
-<div class="para logical" id="B_connectivebicond-2"><ul class="disc" id="B_connectivebicond-2-1"><li id="B_connectivebicond-2-1-1">
+<div class="para logical" id="B_connectivebicond-2">
+<ul class="disc" id="B_connectivebicond-2-1"><li id="B_connectivebicond-2-1-1">
 <span class="heading"><span class="title">Biconditional.</span></span><div class="para" id="p-derived-B_connectivebicond-2-1-1"> IF AND ONLY IF. Notation: <span class="process-math">\(p\leftrightarrow q\text{,}\)</span> read as “<span class="process-math">\(p\)</span> if and only if <span class="process-math">\(q\text{.}\)</span>”</div>
-</li></ul></div></article><div class="para" id="connectives-38">The biconditional is really just the combination of two conditionals: <span class="process-math">\(p\rightarrow q\)</span> and <span class="process-math">\(q\rightarrow p\text{.}\)</span> In particular, <span class="process-math">\(p\leftrightarrow q\)</span> and <span class="process-math">\((p\rightarrow q)\wedge (q\rightarrow p)\)</span> have the same truth tables.</div>
-<div class="para" id="connectives-39"><figure class="table table-like" id="T_ttbicond"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">1.3.8<span class="period">.</span></span><span class="space"> </span>Truth table for <span class="process-math">\(p\leftrightarrow q\text{.}\)</span></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<div class="autopermalink" data-description="Item: Biconditional"><a href="#B_connectivebicond-2-1-1" title="Copy heading and permalink for Item: Biconditional" aria-label="Copy heading and permalink for Item: Biconditional">🔗</a></div>
+</li></ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#B_connectivebicond-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Assemblage: Logical Connective: IF AND ONLY IF"><a href="#B_connectivebicond" title="Copy heading and permalink for Assemblage: Logical Connective: IF AND ONLY IF" aria-label="Copy heading and permalink for Assemblage: Logical Connective: IF AND ONLY IF">🔗</a></div></article><div class="para" id="connectives-38">The biconditional is really just the combination of two conditionals: <span class="process-math">\(p\rightarrow q\)</span> and <span class="process-math">\(q\rightarrow p\text{.}\)</span> In particular, <span class="process-math">\(p\leftrightarrow q\)</span> and <span class="process-math">\((p\rightarrow q)\wedge (q\rightarrow p)\)</span> have the same truth tables.<div class="autopermalink" data-description="Paragraph"><a href="#connectives-38" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="connectives-39">
+<figure class="table table-like" id="T_ttbicond"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">1.3.8<span class="period">.</span></span><span class="space"> </span>Truth table for <span class="process-math">\(p\leftrightarrow q\text{.}\)</span><div class="autopermalink" data-description="Table 1.3.8: Truth table for p\leftrightarrow q"><a href="#T_ttbicond" title="Copy heading and permalink for Table 1.3.8: Truth table for p\leftrightarrow q" aria-label="Copy heading and permalink for Table 1.3.8: Truth table for p\leftrightarrow q">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="c m b2 r1 l1 t1 lines"><span class="process-math">\(p\)</span></td>
 <td class="c m b2 r2 l0 t1 lines"><span class="process-math">\(q\)</span></td>
@@ -837,22 +617,34 @@ p\vee(q\ \wedge \neg p).
 <td class="c m b1 r2 l0 t0 lines">F</td>
 <td class="c m b1 r1 l0 t0 lines">T</td>
 </tr>
-</table></div></figure></div>
+</table></div></figure><div class="autopermalink" data-description="Paragraph"><a href="#connectives-39" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="activity project-like" id="A_understandingbicond"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.3.7</span><span class="period">.</span><span class="space"> </span><span class="title">Understanding Biconditionals.</span>
 </h3>
-<div class="para" id="A_understandingbicond-2-1">Explain, in your own words, how to decide when <span class="process-math">\(p \leftrightarrow q\)</span> is true or false.</div></article><article class="activity project-like" id="A_piecebicond"><h3 class="heading">
+<div class="para" id="A_understandingbicond-2-1">Explain, in your own words, how to decide when <span class="process-math">\(p \leftrightarrow q\)</span> is true or false.<div class="autopermalink" data-description="Paragraph"><a href="#A_understandingbicond-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Activity 1.3.7: Understanding Biconditionals"><a href="#A_understandingbicond" title="Copy heading and permalink for Activity 1.3.7: Understanding Biconditionals" aria-label="Copy heading and permalink for Activity 1.3.7: Understanding Biconditionals">🔗</a></div></article><article class="activity project-like" id="A_piecebicond"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.3.8</span><span class="period">.</span><span class="space"> </span><span class="title">Biconditional as Two Conditionals.</span>
 </h3>
-<div class="para" id="A_piecebicond-2-1">We read the biconditional <span class="process-math">\(p \leftrightarrow q\)</span> as “<span class="process-math">\(p\)</span> if and only if <span class="process-math">\(q\text{.}\)</span>” Determine which of the two statements <span class="process-math">\(p \rightarrow q\)</span> and <span class="process-math">\(q\rightarrow p\)</span> means the same as “<span class="process-math">\(p\)</span> if <span class="process-math">\(q\)</span>” and which means the same as “<span class="process-math">\(p\)</span> only if <span class="process-math">\(q\text{.}\)</span>” Think about when each statement should be true (or false).</div></article><div class="para" id="connectives-42">In mathematics we might see statements such as “<span class="process-math">\(p\)</span> is necessary for <span class="process-math">\(q\)</span>” or “<span class="process-math">\(p\)</span> is sufficient for <span class="process-math">\(q\)</span>”. These are really conditional statements. In particular, <span class="process-math">\(p\)</span> is sufficient for <span class="process-math">\(q\)</span> means <span class="process-math">\(p\rightarrow q\text{;}\)</span> and <span class="process-math">\(p\)</span> is necessary for <span class="process-math">\(q\)</span> means <span class="process-math">\(\neg p\rightarrow \neg q\text{,}\)</span> which, we will see shortly, is equivalent to <span class="process-math">\(q\rightarrow p\text{.}\)</span> So, a statement such as <span class="process-math">\(p\)</span> is necessary and sufficient for <span class="process-math">\(q\)</span> means <span class="process-math">\(p\leftrightarrow q\text{.}\)</span>
+<div class="para" id="A_piecebicond-2-1">We read the biconditional <span class="process-math">\(p \leftrightarrow q\)</span> as “<span class="process-math">\(p\)</span> if and only if <span class="process-math">\(q\text{.}\)</span>” Determine which of the two statements <span class="process-math">\(p \rightarrow q\)</span> and <span class="process-math">\(q\rightarrow p\)</span> means the same as “<span class="process-math">\(p\)</span> if <span class="process-math">\(q\)</span>” and which means the same as “<span class="process-math">\(p\)</span> only if <span class="process-math">\(q\text{.}\)</span>” Think about when each statement should be true (or false).<div class="autopermalink" data-description="Paragraph"><a href="#A_piecebicond-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="connectives-43">We introduce one last connective, which is not as commonly used. It is nice to have an additional connective for practice, but this connective has a particularly nice property which we will explore in the exercises.</div>
+<div class="autopermalink" data-description="Activity 1.3.8: Biconditional as Two Conditionals"><a href="#A_piecebicond" title="Copy heading and permalink for Activity 1.3.8: Biconditional as Two Conditionals" aria-label="Copy heading and permalink for Activity 1.3.8: Biconditional as Two Conditionals">🔗</a></div></article><div class="para" id="connectives-42">In mathematics we might see statements such as “<span class="process-math">\(p\)</span> is necessary for <span class="process-math">\(q\)</span>” or “<span class="process-math">\(p\)</span> is sufficient for <span class="process-math">\(q\)</span>”. These are really conditional statements. In particular, <span class="process-math">\(p\)</span> is sufficient for <span class="process-math">\(q\)</span> means <span class="process-math">\(p\rightarrow q\text{;}\)</span> and <span class="process-math">\(p\)</span> is necessary for <span class="process-math">\(q\)</span> means <span class="process-math">\(\neg p\rightarrow \neg q\text{,}\)</span> which, we will see shortly, is equivalent to <span class="process-math">\(q\rightarrow p\text{.}\)</span> So, a statement such as <span class="process-math">\(p\)</span> is necessary and sufficient for <span class="process-math">\(q\)</span> means <span class="process-math">\(p\leftrightarrow q\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#connectives-42" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="connectives-43">We introduce one last connective, which is not as commonly used. It is nice to have an additional connective for practice, but this connective has a particularly nice property which we will explore in the exercises.<div class="autopermalink" data-description="Paragraph"><a href="#connectives-43" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="assemblage assemblage-like" id="connectives-44"><h3 class="heading"><span class="title">Logical Connective: NAND.</span></h3>
-<div class="para logical" id="connectives-44-2"><ul class="disc" id="connectives-44-2-1"><li id="connectives-44-2-1-1">
+<div class="para logical" id="connectives-44-2">
+<ul class="disc" id="connectives-44-2-1"><li id="connectives-44-2-1-1">
 <span class="heading"><span class="title">Nand.</span></span><div class="para" id="p-derived-connectives-44-2-1-1"> NOT BOTH. Notation: <span class="process-math">\(p//q\text{,}\)</span> read as “<span class="process-math">\(p\)</span> nand <span class="process-math">\(q\text{.}\)</span>”</div>
-</li></ul></div></article><div class="para" id="connectives-45">Nand is really just the negation of “and”: <span class="process-math">\(\neg (p\wedge q)\text{.}\)</span> In particular, <span class="process-math">\(p // q\)</span> has the same truth table as <span class="process-math">\(\neg(p\wedge q)\text{.}\)</span>
+<div class="autopermalink" data-description="Item: Nand"><a href="#connectives-44-2-1-1" title="Copy heading and permalink for Item: Nand" aria-label="Copy heading and permalink for Item: Nand">🔗</a></div>
+</li></ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#connectives-44-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="connectives-46"><figure class="table table-like" id="T_nand"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">1.3.9<span class="period">.</span></span><span class="space"> </span>Truth table for <span class="process-math">\(p // q\text{.}\)</span></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<div class="autopermalink" data-description="Assemblage: Logical Connective: NAND"><a href="#connectives-44" title="Copy heading and permalink for Assemblage: Logical Connective: NAND" aria-label="Copy heading and permalink for Assemblage: Logical Connective: NAND">🔗</a></div></article><div class="para" id="connectives-45">Nand is really just the negation of “and”: <span class="process-math">\(\neg (p\wedge q)\text{.}\)</span> In particular, <span class="process-math">\(p // q\)</span> has the same truth table as <span class="process-math">\(\neg(p\wedge q)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#connectives-45" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="connectives-46">
+<figure class="table table-like" id="T_nand"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">1.3.9<span class="period">.</span></span><span class="space"> </span>Truth table for <span class="process-math">\(p // q\text{.}\)</span><div class="autopermalink" data-description="Table 1.3.9: Truth table for p // q"><a href="#T_nand" title="Copy heading and permalink for Table 1.3.9: Truth table for p // q" aria-label="Copy heading and permalink for Table 1.3.9: Truth table for p // q">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="c m b2 r1 l1 t1 lines"><span class="process-math">\(p\)</span></td>
 <td class="c m b2 r2 l0 t1 lines"><span class="process-math">\(q\)</span></td>
@@ -878,22 +670,30 @@ p\vee(q\ \wedge \neg p).
 <td class="c m b1 r2 l0 t0 lines">F</td>
 <td class="c m b1 r1 l0 t0 lines">T</td>
 </tr>
-</table></div></figure></div>
+</table></div></figure><div class="autopermalink" data-description="Paragraph"><a href="#connectives-46" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="definition definition-like" id="D_tautology"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.3.10</span><span class="period">.</span>
 </h3>
-<div class="para" id="D_tautology-1-1">A <dfn class="terminology">tautology</dfn> is a statement that is always true.</div></article><div class="para" id="connectives-48">For example, <span class="process-math">\(p\ \vee \neg p\)</span> is a tautology. If you check the truth table, you will see that the only values in the column for the statement are T.</div>
+<div class="para" id="D_tautology-1-1">A <dfn class="terminology">tautology</dfn> is a statement that is always true.<div class="autopermalink" data-description="Paragraph"><a href="#D_tautology-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 1.3.10"><a href="#D_tautology" title="Copy heading and permalink for Definition 1.3.10" aria-label="Copy heading and permalink for Definition 1.3.10">🔗</a></div></article><div class="para" id="connectives-48">For example, <span class="process-math">\(p\ \vee \neg p\)</span> is a tautology. If you check the truth table, you will see that the only values in the column for the statement are T.<div class="autopermalink" data-description="Paragraph"><a href="#connectives-48" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="definition definition-like" id="D_contradiction"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.3.11</span><span class="period">.</span>
 </h3>
-<div class="para" id="D_contradiction-1-1">A <dfn class="terminology">contradiction</dfn> is a statement that is always false.</div></article><div class="para" id="connectives-50">For example, <span class="process-math">\(p\ \wedge \neg p\)</span> is a contradiction. If you check the truth table, you will see that the only values in the column for the statement are F.</div>
-<div class="para" id="connectives-51">Note that tautologies and contradictions are logical statements that are always true or always false, independent of the content of <span class="process-math">\(p\text{.}\)</span>
+<div class="para" id="D_contradiction-1-1">A <dfn class="terminology">contradiction</dfn> is a statement that is always false.<div class="autopermalink" data-description="Paragraph"><a href="#D_contradiction-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="connectives-52">If we want to make bigger statements using tautologies or contradictions, we can use <span class="process-math">\(\mathbf{t}\)</span> to represent a tautology and <span class="process-math">\(\mathbf{c}\)</span> to represent a contradiction. For example, we could find the truth table for <span class="process-math">\(p\wedge \mathbf{t}\text{.}\)</span>
+<div class="autopermalink" data-description="Definition 1.3.11"><a href="#D_contradiction" title="Copy heading and permalink for Definition 1.3.11" aria-label="Copy heading and permalink for Definition 1.3.11">🔗</a></div></article><div class="para" id="connectives-50">For example, <span class="process-math">\(p\ \wedge \neg p\)</span> is a contradiction. If you check the truth table, you will see that the only values in the column for the statement are F.<div class="autopermalink" data-description="Paragraph"><a href="#connectives-50" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="connectives-51">Note that tautologies and contradictions are logical statements that are always true or always false, independent of the content of <span class="process-math">\(p\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#connectives-51" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="connectives-52">If we want to make bigger statements using tautologies or contradictions, we can use <span class="process-math">\(\mathbf{t}\)</span> to represent a tautology and <span class="process-math">\(\mathbf{c}\)</span> to represent a contradiction. For example, we could find the truth table for <span class="process-math">\(p\wedge \mathbf{t}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#connectives-52" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <details id="connectives-53" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.3.12</span><span class="period">.</span><span class="space"> </span><span class="title">Example of <span class="process-math">\(p\wedge \mathbf{t}\)</span>.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para" id="connectives-53-2"><figure class="table table-like" id="T_ttwithtautology"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">1.3.13<span class="period">.</span></span><span class="space"> </span>Truth table for <span class="process-math">\(p\wedge \mathbf{t}\text{.}\)</span></figcaption><div class="tabular-box natural-width"><table class="tabular">
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="connectives-53-2">
+<figure class="table table-like" id="T_ttwithtautology"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">1.3.13<span class="period">.</span></span><span class="space"> </span>Truth table for <span class="process-math">\(p\wedge \mathbf{t}\text{.}\)</span><div class="autopermalink" data-description="Table 1.3.13: Truth table for p\wedge \mathbf{t}"><a href="#T_ttwithtautology" title="Copy heading and permalink for Table 1.3.13: Truth table for p\wedge \mathbf{t}" aria-label="Copy heading and permalink for Table 1.3.13: Truth table for p\wedge \mathbf{t}">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="c m b2 r2 l1 t1 lines"><span class="process-math">\(p\)</span></td>
 <td class="c m b2 r2 l0 t1 lines"><span class="process-math">\(\mathbf{t}\)</span></td>
@@ -909,9 +709,12 @@ p\vee(q\ \wedge \neg p).
 <td class="c m b1 r2 l0 t0 lines">T</td>
 <td class="c m b1 r1 l0 t0 lines">F</td>
 </tr>
-</table></div></figure></div></article></details><article class="definition definition-like" id="D_logequiv"><h3 class="heading">
+</table></div></figure><div class="autopermalink" data-description="Paragraph"><a href="#connectives-53-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 1.3.12: Example of p\wedge \mathbf{t}"><a href="#connectives-53" title="Copy heading and permalink for Example 1.3.12: Example of p\wedge \mathbf{t}" aria-label="Copy heading and permalink for Example 1.3.12: Example of p\wedge \mathbf{t}">🔗</a></div></article></details><article class="definition definition-like" id="D_logequiv"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.3.14</span><span class="period">.</span>
-</h3>Two statements are <dfn class="terminology">logically equivalent</dfn> if they have identical truth tables. If statements <span class="process-math">\(P\)</span> and <span class="process-math">\(Q\)</span> are logically equivalent, we denote it <span class="process-math">\(P\equiv Q\text{.}\)</span></article><div class="para" id="connectives-55">For example, we can see that <span class="process-math">\(p\)</span> is logically equivalent to <span class="process-math">\(p\wedge \mathbf{t}\)</span> by comparing the first and last columns of <a href="connectives.html#T_ttwithtautology" class="xref" data-knowl="./knowl/xref/T_ttwithtautology.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 1.3.13: Truth table for p\wedge \mathbf{t}">Table 1.3.13</a>.</div>
+</h3>Two statements are <dfn class="terminology">logically equivalent</dfn> if they have identical truth tables. If statements <span class="process-math">\(P\)</span> and <span class="process-math">\(Q\)</span> are logically equivalent, we denote it <span class="process-math">\(P\equiv Q\text{.}\)</span><div class="autopermalink" data-description="Definition 1.3.14"><a href="#D_logequiv" title="Copy heading and permalink for Definition 1.3.14" aria-label="Copy heading and permalink for Definition 1.3.14">🔗</a></div></article><div class="para" id="connectives-55">For example, we can see that <span class="process-math">\(p\)</span> is logically equivalent to <span class="process-math">\(p\wedge \mathbf{t}\)</span> by comparing the first and last columns of <a href="connectives.html#T_ttwithtautology" class="xref" data-knowl="./knowl/xref/T_ttwithtautology.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 1.3.13: Truth table for p\wedge \mathbf{t}">Table 1.3.13</a>.<div class="autopermalink" data-description="Paragraph"><a href="#connectives-55" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <details id="E_loqequivalence" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.3.15</span><span class="period">.</span>
 </h3></summary><article class="example example-like knowl__content"><div class="para logical" id="E_loqequivalence-1">
@@ -926,59 +729,102 @@ p\leftrightarrow q\equiv(p\rightarrow q)\wedge (q\rightarrow p);
 p // q\equiv\neg(p\wedge q).
 \end{equation*}
 </div>
-</div></article></details><article class="activity project-like" id="A_distribneg"><h3 class="heading">
+<div class="autopermalink" data-description="Paragraph"><a href="#E_loqequivalence-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 1.3.15"><a href="#E_loqequivalence" title="Copy heading and permalink for Example 1.3.15" aria-label="Copy heading and permalink for Example 1.3.15">🔗</a></div></article></details><article class="activity project-like" id="A_distribneg"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.3.9</span><span class="period">.</span><span class="space"> </span><span class="title">Logical Equivalence Practice.</span>
 </h3>
-<div class="para" id="A_distribneg-2-1">Use a truth table to determine if <span class="process-math">\(\neg(p \vee q)\)</span> and <span class="process-math">\(\neg p\  \vee \neg q\)</span> are logically equivalent. What does this tell you about “distributing” negation?</div></article><article class="activity project-like" id="A_demorgan1"><h3 class="heading">
+<div class="para" id="A_distribneg-2-1">Use a truth table to determine if <span class="process-math">\(\neg(p \vee q)\)</span> and <span class="process-math">\(\neg p\  \vee \neg q\)</span> are logically equivalent. What does this tell you about “distributing” negation?<div class="autopermalink" data-description="Paragraph"><a href="#A_distribneg-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Activity 1.3.9: Logical Equivalence Practice"><a href="#A_distribneg" title="Copy heading and permalink for Activity 1.3.9: Logical Equivalence Practice" aria-label="Copy heading and permalink for Activity 1.3.9: Logical Equivalence Practice">🔗</a></div></article><article class="activity project-like" id="A_demorgan1"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.3.10</span><span class="period">.</span><span class="space"> </span><span class="title">Negating Or.</span>
 </h3>
-<div class="para" id="A_demorgan1-2-1">Use a truth table to show <span class="process-math">\(\neg(p \vee q)\)</span> and <span class="process-math">\(\neg p\ \wedge \neg q\)</span> are logically equivalent.</div></article><article class="activity project-like" id="A_demorgan2"><h3 class="heading">
+<div class="para" id="A_demorgan1-2-1">Use a truth table to show <span class="process-math">\(\neg(p \vee q)\)</span> and <span class="process-math">\(\neg p\ \wedge \neg q\)</span> are logically equivalent.<div class="autopermalink" data-description="Paragraph"><a href="#A_demorgan1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Activity 1.3.10: Negating Or"><a href="#A_demorgan1" title="Copy heading and permalink for Activity 1.3.10: Negating Or" aria-label="Copy heading and permalink for Activity 1.3.10: Negating Or">🔗</a></div></article><article class="activity project-like" id="A_demorgan2"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.3.11</span><span class="period">.</span><span class="space"> </span><span class="title">Negating And.</span>
 </h3>
-<div class="para" id="A_demorgan2-2-1">Use a truth table to show <span class="process-math">\(\neg(p \wedge q)\)</span> and <span class="process-math">\(\neg p\ \vee \neg q\)</span> are logically equivalent.</div></article><div class="para" id="connectives-60">The equivalences in <a href="connectives.html#A_demorgan1" class="xref" data-knowl="./knowl/xref/A_demorgan1.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 1.3.10: Negating Or">Activity 1.3.10</a> and <a href="connectives.html#A_demorgan2" class="xref" data-knowl="./knowl/xref/A_demorgan2.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 1.3.11: Negating And">Activity 1.3.11</a> are called <dfn class="terminology">DeMorgan’s Laws</dfn>. These are useful equivalences and are worth committing to memory. As we’ve seen in the above activities, we cannot simply distribute a negation sign. However, DeMorgan’s Laws allow us to distribute the negation as long as we also change from “and” to “or” and vice versa. Given the importance of this concept in mathematics, it is useful at this point to convince yourself that the negation of and “and” statement is an “or” statement and vice versa using statements in English. For example, if the weather is not cold <em class="emphasis">and</em> rainy, then it is either not cold <em class="emphasis">or</em> not rainy.</div>
-<div class="para" id="connectives-61">One thing to be careful about with English statements is that they do not naturally contain parentheses. We often really have to think about the meaning of the statement and infer the intended parentheses. Even in the above cold and rainy sentence, we have to understand that we mean “not (cold and rainy)” rather than “(not cold) and rainy.”</div>
+<div class="para" id="A_demorgan2-2-1">Use a truth table to show <span class="process-math">\(\neg(p \wedge q)\)</span> and <span class="process-math">\(\neg p\ \vee \neg q\)</span> are logically equivalent.<div class="autopermalink" data-description="Paragraph"><a href="#A_demorgan2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Activity 1.3.11: Negating And"><a href="#A_demorgan2" title="Copy heading and permalink for Activity 1.3.11: Negating And" aria-label="Copy heading and permalink for Activity 1.3.11: Negating And">🔗</a></div></article><div class="para" id="connectives-60">The equivalences in <a href="connectives.html#A_demorgan1" class="xref" data-knowl="./knowl/xref/A_demorgan1.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 1.3.10: Negating Or">Activity 1.3.10</a> and <a href="connectives.html#A_demorgan2" class="xref" data-knowl="./knowl/xref/A_demorgan2.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 1.3.11: Negating And">Activity 1.3.11</a> are called <dfn class="terminology">DeMorgan’s Laws</dfn>. These are useful equivalences and are worth committing to memory. As we’ve seen in the above activities, we cannot simply distribute a negation sign. However, DeMorgan’s Laws allow us to distribute the negation as long as we also change from “and” to “or” and vice versa. Given the importance of this concept in mathematics, it is useful at this point to convince yourself that the negation of and “and” statement is an “or” statement and vice versa using statements in English. For example, if the weather is not cold <em class="emphasis">and</em> rainy, then it is either not cold <em class="emphasis">or</em> not rainy.<div class="autopermalink" data-description="Paragraph"><a href="#connectives-60" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="connectives-61">One thing to be careful about with English statements is that they do not naturally contain parentheses. We often really have to think about the meaning of the statement and infer the intended parentheses. Even in the above cold and rainy sentence, we have to understand that we mean “not (cold and rainy)” rather than “(not cold) and rainy.”<div class="autopermalink" data-description="Paragraph"><a href="#connectives-61" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="activity project-like" id="A_negcondit"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.3.12</span><span class="period">.</span><span class="space"> </span><span class="title">Negating Conditionals.</span>
 </h3>
-<div class="para" id="A_negcondit-2-1">Use a truth truth table to show <span class="process-math">\(\neg(p \rightarrow q)\)</span> is logically equivalent to <span class="process-math">\(p\ \wedge\neg q\text{.}\)</span> This is the rule for negating an if...then. Like DeMorgan’s Law, it is worth committing to memory.</div></article><div class="para" id="connectives-63">The following equivalences will be useful when working with conditional statements in mathematics.</div> <div class="para logical" id="B_equivforcond-3"><ul class="disc" id="B_equivforcond-3-1">
-<li id="B_equivforcond-3-1-1"><div class="para" id="p-derived-B_equivforcond-3-1-1"><span class="process-math">\(\displaystyle p\rightarrow q\equiv \neg p\ \vee q\)</span></div></li>
-<li id="B_equivforcond-3-1-2"><div class="para" id="p-derived-B_equivforcond-3-1-2"><span class="process-math">\(\neg(p\rightarrow q)\equiv p\ \wedge \neg q\)</span></div></li>
-</ul></div> <div class="para" id="B_equivforcond-4">This second equivalence is the <dfn class="terminology">negation of the conditional</dfn>. It is going to be really important that we understand that the negation of a conditional is <em class="emphasis">not</em> a conditional itself.</div>
+<div class="para" id="A_negcondit-2-1">Use a truth truth table to show <span class="process-math">\(\neg(p \rightarrow q)\)</span> is logically equivalent to <span class="process-math">\(p\ \wedge\neg q\text{.}\)</span> This is the rule for negating an if...then. Like DeMorgan’s Law, it is worth committing to memory.<div class="autopermalink" data-description="Paragraph"><a href="#A_negcondit-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Activity 1.3.12: Negating Conditionals"><a href="#A_negcondit" title="Copy heading and permalink for Activity 1.3.12: Negating Conditionals" aria-label="Copy heading and permalink for Activity 1.3.12: Negating Conditionals">🔗</a></div></article><div class="para" id="connectives-63">The following equivalences will be useful when working with conditional statements in mathematics.<div class="autopermalink" data-description="Paragraph"><a href="#connectives-63" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="B_equivforcond-3">
+<ul class="disc" id="B_equivforcond-3-1">
+<li id="B_equivforcond-3-1-1">
+<div class="para" id="p-derived-B_equivforcond-3-1-1"><span class="process-math">\(\displaystyle p\rightarrow q\equiv \neg p\ \vee q\)</span></div>
+<div class="autopermalink" data-description="Item"><a href="#B_equivforcond-3-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="B_equivforcond-3-1-2">
+<div class="para" id="p-derived-B_equivforcond-3-1-2"><span class="process-math">\(\neg(p\rightarrow q)\equiv p\ \wedge \neg q\)</span></div>
+<div class="autopermalink" data-description="Item"><a href="#B_equivforcond-3-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#B_equivforcond-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="B_equivforcond-4">This second equivalence is the <dfn class="terminology">negation of the conditional</dfn>. It is going to be really important that we understand that the negation of a conditional is <em class="emphasis">not</em> a conditional itself.<div class="autopermalink" data-description="Paragraph"><a href="#B_equivforcond-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="activity project-like" id="A_converse"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.3.13</span><span class="period">.</span><span class="space"> </span><span class="title">Converse.</span>
 </h3>
-<div class="para" id="A_converse-2-1">Give the truth table for <span class="process-math">\(q\rightarrow p\text{.}\)</span> Is it equivalent to <span class="process-math">\(p\rightarrow q\text{?}\)</span> The statement <span class="process-math">\(q\rightarrow p\)</span> is the <dfn class="terminology">converse</dfn> of <span class="process-math">\(p\rightarrow q\text{.}\)</span>
-</div></article><article class="activity project-like" id="A_contrapositive"><h3 class="heading">
+<div class="para" id="A_converse-2-1">Give the truth table for <span class="process-math">\(q\rightarrow p\text{.}\)</span> Is it equivalent to <span class="process-math">\(p\rightarrow q\text{?}\)</span> The statement <span class="process-math">\(q\rightarrow p\)</span> is the <dfn class="terminology">converse</dfn> of <span class="process-math">\(p\rightarrow q\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_converse-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Activity 1.3.13: Converse"><a href="#A_converse" title="Copy heading and permalink for Activity 1.3.13: Converse" aria-label="Copy heading and permalink for Activity 1.3.13: Converse">🔗</a></div></article><article class="activity project-like" id="A_contrapositive"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.3.14</span><span class="period">.</span><span class="space"> </span><span class="title">Contrapositive.</span>
 </h3>
-<div class="para" id="A_contrapositive-2-1">Give the truth table for <span class="process-math">\(\neg q\rightarrow \neg p\text{.}\)</span> Is it equivalent to <span class="process-math">\(p\rightarrow q\text{?}\)</span> The statement <span class="process-math">\(\neg q\rightarrow \neg p\)</span> is the <dfn class="terminology">contrapositive</dfn> of <span class="process-math">\(p\rightarrow q\text{.}\)</span>
-</div></article><article class="activity project-like" id="A_inverse"><h3 class="heading">
+<div class="para" id="A_contrapositive-2-1">Give the truth table for <span class="process-math">\(\neg q\rightarrow \neg p\text{.}\)</span> Is it equivalent to <span class="process-math">\(p\rightarrow q\text{?}\)</span> The statement <span class="process-math">\(\neg q\rightarrow \neg p\)</span> is the <dfn class="terminology">contrapositive</dfn> of <span class="process-math">\(p\rightarrow q\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_contrapositive-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Activity 1.3.14: Contrapositive"><a href="#A_contrapositive" title="Copy heading and permalink for Activity 1.3.14: Contrapositive" aria-label="Copy heading and permalink for Activity 1.3.14: Contrapositive">🔗</a></div></article><article class="activity project-like" id="A_inverse"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.3.15</span><span class="period">.</span><span class="space"> </span><span class="title">Inverse.</span>
 </h3>
-<div class="para" id="A_inverse-2-1">What is the contrapositive of <span class="process-math">\(q\rightarrow p\text{?}\)</span> This is also called the <dfn class="terminology">inverse</dfn> of <span class="process-math">\(p\rightarrow q\text{.}\)</span>
-</div></article><div class="para" id="connectives-68">We summarize the previous activities in the following definition.</div>
+<div class="para" id="A_inverse-2-1">What is the contrapositive of <span class="process-math">\(q\rightarrow p\text{?}\)</span> This is also called the <dfn class="terminology">inverse</dfn> of <span class="process-math">\(p\rightarrow q\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_inverse-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Activity 1.3.15: Inverse"><a href="#A_inverse" title="Copy heading and permalink for Activity 1.3.15: Inverse" aria-label="Copy heading and permalink for Activity 1.3.15: Inverse">🔗</a></div></article><div class="para" id="connectives-68">We summarize the previous activities in the following definition.<div class="autopermalink" data-description="Paragraph"><a href="#connectives-68" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="definition definition-like" id="D_contrapositiveetc"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.3.16</span><span class="period">.</span>
 </h3>
 <div class="para logical" id="D_contrapositiveetc-1-1">
 <div class="para">A conditional statement <span class="process-math">\(p\rightarrow q\)</span> has</div>
 <ul class="disc" id="D_contrapositiveetc-1-1-2">
-<li id="D_contrapositiveetc-1-1-2-1"><div class="para" id="p-derived-D_contrapositiveetc-1-1-2-1">
+<li id="D_contrapositiveetc-1-1-2-1">
+<div class="para" id="p-derived-D_contrapositiveetc-1-1-2-1">
 <dfn class="terminology">contrapositive</dfn>: <span class="process-math">\(\neg q\rightarrow \neg p\text{;}\)</span>
-</div></li>
-<li id="D_contrapositiveetc-1-1-2-2"><div class="para" id="p-derived-D_contrapositiveetc-1-1-2-2">
+</div>
+<div class="autopermalink" data-description="Item"><a href="#D_contrapositiveetc-1-1-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="D_contrapositiveetc-1-1-2-2">
+<div class="para" id="p-derived-D_contrapositiveetc-1-1-2-2">
 <dfn class="terminology">converse</dfn>: <span class="process-math">\(q\rightarrow p\text{;}\)</span>
-</div></li>
-<li id="D_contrapositiveetc-1-1-2-3"><div class="para" id="p-derived-D_contrapositiveetc-1-1-2-3">
+</div>
+<div class="autopermalink" data-description="Item"><a href="#D_contrapositiveetc-1-1-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="D_contrapositiveetc-1-1-2-3">
+<div class="para" id="p-derived-D_contrapositiveetc-1-1-2-3">
 <dfn class="terminology">inverse</dfn>: <span class="process-math">\(\neg p\rightarrow \neg q\text{.}\)</span>
-</div></li>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#D_contrapositiveetc-1-1-2-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
 </ul>
-</div></article><details id="E_contrapositive" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<div class="autopermalink" data-description="Paragraph"><a href="#D_contrapositiveetc-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 1.3.16"><a href="#D_contrapositiveetc" title="Copy heading and permalink for Definition 1.3.16" aria-label="Copy heading and permalink for Definition 1.3.16">🔗</a></div></article><details id="E_contrapositive" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.3.17</span><span class="period">.</span><span class="space"> </span><span class="title">Contrapositive and Converse.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_contrapositive-2">Consider the statement: If <span class="process-math">\(x&gt;2\)</span> then <span class="process-math">\(x^2&gt;4\text{.}\)</span> What is the contrapositive of this statement? What is the converse?</div>
-<div class="para" id="E_contrapositive-3"><details id="E_contrapositive-3-1" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
-<span class="process-math">\(x^2\leq 4\)</span><span class="process-math">\(x\leq 2\text{;}\)</span><span class="process-math">\(x^2&gt;4\)</span><span class="process-math">\(x&gt;2\text{.}\)</span>
-</div></details></div></article></details><div class="para" id="connectives-71">The following is a list of important logical equivalences. All of them can be checked using truth tables.</div>
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_contrapositive-2">Consider the statement: If <span class="process-math">\(x&gt;2\)</span> then <span class="process-math">\(x^2&gt;4\text{.}\)</span> What is the contrapositive of this statement? What is the converse?<div class="autopermalink" data-description="Paragraph"><a href="#E_contrapositive-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="E_contrapositive-3">
+<details id="E_contrapositive-3-1" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<span class="process-math">\(x^2\leq 4\)</span><span class="process-math">\(x\leq 2\text{;}\)</span><span class="process-math">\(x^2&gt;4\)</span><span class="process-math">\(x&gt;2\text{.}\)</span><div class="autopermalink" data-description="Answer 1"><a href="#E_contrapositive-3-1" title="Copy heading and permalink for Answer 1" aria-label="Copy heading and permalink for Answer 1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Paragraph"><a href="#E_contrapositive-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 1.3.17: Contrapositive and Converse"><a href="#E_contrapositive" title="Copy heading and permalink for Example 1.3.17: Contrapositive and Converse" aria-label="Copy heading and permalink for Example 1.3.17: Contrapositive and Converse">🔗</a></div></article></details><div class="para" id="connectives-71">The following is a list of important logical equivalences. All of them can be checked using truth tables.<div class="autopermalink" data-description="Paragraph"><a href="#connectives-71" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="assemblage assemblage-like" id="B_logicalequivalences"><h3 class="heading"><span class="title">Summary of Logical Equivalences.</span></h3>
 <div class="para logical" id="B_logicalequivalences-3">
 <div class="para">Let <span class="process-math">\(p, q,\)</span> and <span class="process-math">\(r\)</span> be variables representing statements. Let <span class="process-math">\(\mathbf{t}\)</span> be a tautology and <span class="process-math">\(\mathbf{c}\)</span> be a contradiction.</div>
@@ -986,112 +832,258 @@ p // q\equiv\neg(p\wedge q).
 <li id="B_logicalequivalences-3-5-1">
 <span class="heading"><span class="title">Commutative Laws.</span></span><div class="para" id="p-derived-B_logicalequivalences-3-5-1"> <span class="process-math">\(p \wedge q \equiv q \wedge p; \ \ \ p \vee q \equiv q \vee p\)</span>
 </div>
+<div class="autopermalink" data-description="Item 1: Commutative Laws"><a href="#B_logicalequivalences-3-5-1" title="Copy heading and permalink for Item 1: Commutative Laws" aria-label="Copy heading and permalink for Item 1: Commutative Laws">🔗</a></div>
 </li>
 <li id="B_logicalequivalences-3-5-2">
 <span class="heading"><span class="title">Associative Laws.</span></span><div class="para" id="p-derived-B_logicalequivalences-3-5-2"> <span class="process-math">\((p \wedge q)\wedge r \equiv p \wedge (q \wedge r);\ \ \ (p \vee q)\vee r \equiv p \vee (q \vee r)\)</span>
 </div>
+<div class="autopermalink" data-description="Item 2: Associative Laws"><a href="#B_logicalequivalences-3-5-2" title="Copy heading and permalink for Item 2: Associative Laws" aria-label="Copy heading and permalink for Item 2: Associative Laws">🔗</a></div>
 </li>
 <li id="B_logicalequivalences-3-5-3">
 <span class="heading"><span class="title">Distributive Laws.</span></span><div class="para" id="p-derived-B_logicalequivalences-3-5-3"> <span class="process-math">\(p \wedge (q \vee r) \equiv (p \wedge q)\vee (p \wedge r);\ \ \ p \vee (q \wedge r) \equiv (p \vee q) \wedge (p \vee r)\)</span>
 </div>
+<div class="autopermalink" data-description="Item 3: Distributive Laws"><a href="#B_logicalequivalences-3-5-3" title="Copy heading and permalink for Item 3: Distributive Laws" aria-label="Copy heading and permalink for Item 3: Distributive Laws">🔗</a></div>
 </li>
 <li id="B_logicalequivalences-3-5-4">
 <span class="heading"><span class="title">Identity Laws.</span></span><div class="para" id="p-derived-B_logicalequivalences-3-5-4"> <span class="process-math">\(p \wedge {\rm\textbf{t}} \equiv p;\ \ \ p \vee {\rm\textbf{c}} \equiv p\)</span>
 </div>
+<div class="autopermalink" data-description="Item 4: Identity Laws"><a href="#B_logicalequivalences-3-5-4" title="Copy heading and permalink for Item 4: Identity Laws" aria-label="Copy heading and permalink for Item 4: Identity Laws">🔗</a></div>
 </li>
 <li id="B_logicalequivalences-3-5-5">
 <span class="heading"><span class="title">Negation Laws.</span></span><div class="para" id="p-derived-B_logicalequivalences-3-5-5"> <span class="process-math">\(p\ \vee \neg p \equiv {\rm\textbf{t}};\ \ \ p\ \wedge \neg p \equiv \rm{\textbf{c}}\)</span>
 </div>
+<div class="autopermalink" data-description="Item 5: Negation Laws"><a href="#B_logicalequivalences-3-5-5" title="Copy heading and permalink for Item 5: Negation Laws" aria-label="Copy heading and permalink for Item 5: Negation Laws">🔗</a></div>
 </li>
 <li id="B_logicalequivalences-3-5-6">
 <span class="heading"><span class="title">Double Negation Law.</span></span><div class="para" id="p-derived-B_logicalequivalences-3-5-6"> <span class="process-math">\(\neg(\neg p)\equiv p\)</span>
 </div>
+<div class="autopermalink" data-description="Item 6: Double Negation Law"><a href="#B_logicalequivalences-3-5-6" title="Copy heading and permalink for Item 6: Double Negation Law" aria-label="Copy heading and permalink for Item 6: Double Negation Law">🔗</a></div>
 </li>
 <li id="B_logicalequivalences-3-5-7">
 <span class="heading"><span class="title">Idempotent Laws.</span></span><div class="para" id="p-derived-B_logicalequivalences-3-5-7"> <span class="process-math">\(p \wedge p \equiv p;\ \ \ p \vee p \equiv p\)</span>
 </div>
+<div class="autopermalink" data-description="Item 7: Idempotent Laws"><a href="#B_logicalequivalences-3-5-7" title="Copy heading and permalink for Item 7: Idempotent Laws" aria-label="Copy heading and permalink for Item 7: Idempotent Laws">🔗</a></div>
 </li>
 <li id="B_logicalequivalences-3-5-8">
 <span class="heading"><span class="title">Universal Bound Laws.</span></span><div class="para" id="p-derived-B_logicalequivalences-3-5-8"> <span class="process-math">\(p \vee {\rm\textbf{t}} \equiv {\rm\textbf{t}};\ \ \ p \wedge \rm{\textbf{c}} \equiv {\rm\textbf{c}}\)</span>
 </div>
+<div class="autopermalink" data-description="Item 8: Universal Bound Laws"><a href="#B_logicalequivalences-3-5-8" title="Copy heading and permalink for Item 8: Universal Bound Laws" aria-label="Copy heading and permalink for Item 8: Universal Bound Laws">🔗</a></div>
 </li>
 <li id="B_logicalequivalences-3-5-9">
 <span class="heading"><span class="title">DeMorgan’s Laws.</span></span><div class="para" id="p-derived-B_logicalequivalences-3-5-9"> <span class="process-math">\(\neg(p \wedge q) \equiv \neg p \vee \neg q;\ \ \ \neg(p \vee q) \equiv \neg p\ \wedge \neg q\)</span>
 </div>
+<div class="autopermalink" data-description="Item 9: DeMorgan’s Laws"><a href="#B_logicalequivalences-3-5-9" title="Copy heading and permalink for Item 9: DeMorgan’s Laws" aria-label="Copy heading and permalink for Item 9: DeMorgan’s Laws">🔗</a></div>
 </li>
 <li id="B_logicalequivalences-3-5-10">
 <span class="heading"><span class="title">Absorption Laws.</span></span><div class="para" id="p-derived-B_logicalequivalences-3-5-10"> <span class="process-math">\(p \vee (p \wedge q) \equiv p;\ \ \ p \wedge (p \vee q) \equiv p\)</span>
 </div>
+<div class="autopermalink" data-description="Item 10: Absorption Laws"><a href="#B_logicalequivalences-3-5-10" title="Copy heading and permalink for Item 10: Absorption Laws" aria-label="Copy heading and permalink for Item 10: Absorption Laws">🔗</a></div>
 </li>
 </ol>
-</div></article><section class="exercises" id="connectives-73"><h3 class="heading hide-type">
+<div class="autopermalink" data-description="Paragraph"><a href="#B_logicalequivalences-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Assemblage: Summary of Logical Equivalences"><a href="#B_logicalequivalences" title="Copy heading and permalink for Assemblage: Summary of Logical Equivalences" aria-label="Copy heading and permalink for Assemblage: Summary of Logical Equivalences">🔗</a></div></article><section class="exercises" id="connectives-73"><h3 class="heading hide-type">
 <span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Exercises</span>
 </h3>
 <article class="exercise exercise-like" id="connectives-73-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="connectives-73-1-1-1">Below is a list of pairs of statements. Determine, using a truth table, whether the two statements in each pair are logically equivalent.</div> <ol class="lower-alpha" id="connectives-73-1-1-2">
-<li id="connectives-73-1-1-2-1"><div class="para" id="connectives-73-1-1-2-1-1">
-<span class="process-math">\(p\vee q\text{;}\)</span> <span class="process-math">\(\neg (\neg p \ \wedge\ \neg q)\)</span>
-</div></li>
-<li id="connectives-73-1-1-2-2"><div class="para" id="connectives-73-1-1-2-2-1">
-<span class="process-math">\(\neg (p\ \wedge\ q)\text{;}\)</span> <span class="process-math">\(\neg p\ \wedge\ \neg q\)</span>
-</div></li>
-<li id="connectives-73-1-1-2-3"><div class="para" id="connectives-73-1-1-2-3-1">
-<span class="process-math">\(q\rightarrow (p\rightarrow \neg q)\text{;}\)</span> <span class="process-math">\(\neg(p\ \wedge\ q)\)</span>
-</div></li>
-<li id="connectives-73-1-1-2-4"><div class="para" id="connectives-73-1-1-2-4-1">
-<span class="process-math">\(\neg(p\vee q)\text{;}\)</span> <span class="process-math">\(\neg p \vee \neg q\)</span>
-</div></li>
-<li id="connectives-73-1-1-2-5"><div class="para" id="connectives-73-1-1-2-5-1">
-<span class="process-math">\(\neg (p\rightarrow q)\text{;}\)</span> <span class="process-math">\(\neg q\rightarrow \neg p\)</span>
-</div></li>
-<li id="connectives-73-1-1-2-6"><div class="para" id="connectives-73-1-1-2-6-1">
-<span class="process-math">\(p\ \wedge\ (p\rightarrow q)\text{;}\)</span> <span class="process-math">\(p\ \wedge\ q\)</span>
-</div></li>
-<li id="connectives-73-1-1-2-7"><div class="para" id="connectives-73-1-1-2-7-1">
-<span class="process-math">\(p\vee (q\ \wedge\ r)\text{;}\)</span> <span class="process-math">\((p\vee q)\ \wedge\ (p\vee r)\)</span>
-</div></li>
-<li id="connectives-73-1-1-2-8"><div class="para" id="connectives-73-1-1-2-8-1">
-<span class="process-math">\((p\ \wedge\ q)\rightarrow r\text{;}\)</span> <span class="process-math">\(p\rightarrow (q\rightarrow r)\)</span>
-</div></li>
-</ol></article><article class="exercise exercise-like" id="connectives-73-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para" id="connectives-73-2-1-1">Determine, using a truth table, whether each of the following statements is a tautology, a contradiction, or neither.</div> <ol class="lower-alpha" id="connectives-73-2-1-2">
-<li id="connectives-73-2-1-2-1"><div class="para" id="connectives-73-2-1-2-1-1"><span class="process-math">\(\displaystyle (p\rightarrow p)\rightarrow q\)</span></div></li>
-<li id="connectives-73-2-1-2-2"><div class="para" id="connectives-73-2-1-2-2-1"><span class="process-math">\(\displaystyle q\rightarrow (p\rightarrow q)\)</span></div></li>
-<li id="connectives-73-2-1-2-3"><div class="para" id="connectives-73-2-1-2-3-1"><span class="process-math">\(\displaystyle \neg ( p\vee (p\rightarrow q))\)</span></div></li>
-<li id="connectives-73-2-1-2-4"><div class="para" id="connectives-73-2-1-2-4-1"><span class="process-math">\(\displaystyle q\rightarrow (p \vee \neg p)\)</span></div></li>
-<li id="connectives-73-2-1-2-5"><div class="para" id="connectives-73-2-1-2-5-1"><span class="process-math">\(\displaystyle q\rightarrow (p\ \wedge\ \neg p)\)</span></div></li>
-<li id="connectives-73-2-1-2-6"><div class="para" id="connectives-73-2-1-2-6-1"><span class="process-math">\(\displaystyle \bigl(p\rightarrow (p\rightarrow q)\bigr)\rightarrow (p\rightarrow q)\)</span></div></li>
-<li id="connectives-73-2-1-2-7"><div class="para" id="connectives-73-2-1-2-7-1"><span class="process-math">\(\displaystyle \bigl( (p\ \veebar\  q)\rightarrow (r\ \veebar\  r)\bigr)
-\leftrightarrow (p\ \wedge\ q)\)</span></div></li>
-<li id="connectives-73-2-1-2-8"><div class="para" id="connectives-73-2-1-2-8-1"><span class="process-math">\(\displaystyle (p\vee q)\ \wedge\ (\neg p \vee r)\ \wedge\ (\neg r\vee\neg q)\ \wedge\ (p\leftrightarrow
-q)\)</span></div></li>
-</ol></article><article class="exercise exercise-like" id="connectives-73-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="para" id="connectives-73-3-1-1">Produce truth tables for the following statements. Then abbreviate them by finding the shortest possible logically equivalent statement.</div> <ol class="lower-alpha" id="connectives-73-3-1-2">
-<li id="connectives-73-3-1-2-1"><div class="para" id="connectives-73-3-1-2-1-1"><span class="process-math">\(\displaystyle \neg (p \ \wedge\ q)\rightarrow (p\ \veebar \ q)\)</span></div></li>
-<li id="connectives-73-3-1-2-2"><div class="para" id="connectives-73-3-1-2-2-1"><span class="process-math">\(\displaystyle \bigl( \bigl( (\neg p\rightarrow q)\ \wedge\ (r\ \veebar \ p)\bigr) \vee 
+<div class="para" id="connectives-73-1-1-1">Below is a list of pairs of statements. Determine, using a truth table, whether the two statements in each pair are logically equivalent.<div class="autopermalink" data-description="Paragraph"><a href="#connectives-73-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha lower-alpha-level-1" id="connectives-73-1-1-2">
+<li id="connectives-73-1-1-2-1">
+<div class="para" id="connectives-73-1-1-2-1-1">
+<span class="process-math">\(p\vee q\text{;}\)</span> <span class="process-math">\(\neg (\neg p \ \wedge\ \neg q)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#connectives-73-1-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1.3.1.a"><a href="#connectives-73-1-1-2-1" title="Copy heading and permalink for Item 1.3.1.a" aria-label="Copy heading and permalink for Item 1.3.1.a">🔗</a></div>
+</li>
+<li id="connectives-73-1-1-2-2">
+<div class="para" id="connectives-73-1-1-2-2-1">
+<span class="process-math">\(\neg (p\ \wedge\ q)\text{;}\)</span> <span class="process-math">\(\neg p\ \wedge\ \neg q\)</span><div class="autopermalink" data-description="Paragraph"><a href="#connectives-73-1-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1.3.1.b"><a href="#connectives-73-1-1-2-2" title="Copy heading and permalink for Item 1.3.1.b" aria-label="Copy heading and permalink for Item 1.3.1.b">🔗</a></div>
+</li>
+<li id="connectives-73-1-1-2-3">
+<div class="para" id="connectives-73-1-1-2-3-1">
+<span class="process-math">\(q\rightarrow (p\rightarrow \neg q)\text{;}\)</span> <span class="process-math">\(\neg(p\ \wedge\ q)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#connectives-73-1-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1.3.1.c"><a href="#connectives-73-1-1-2-3" title="Copy heading and permalink for Item 1.3.1.c" aria-label="Copy heading and permalink for Item 1.3.1.c">🔗</a></div>
+</li>
+<li id="connectives-73-1-1-2-4">
+<div class="para" id="connectives-73-1-1-2-4-1">
+<span class="process-math">\(\neg(p\vee q)\text{;}\)</span> <span class="process-math">\(\neg p \vee \neg q\)</span><div class="autopermalink" data-description="Paragraph"><a href="#connectives-73-1-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1.3.1.d"><a href="#connectives-73-1-1-2-4" title="Copy heading and permalink for Item 1.3.1.d" aria-label="Copy heading and permalink for Item 1.3.1.d">🔗</a></div>
+</li>
+<li id="connectives-73-1-1-2-5">
+<div class="para" id="connectives-73-1-1-2-5-1">
+<span class="process-math">\(\neg (p\rightarrow q)\text{;}\)</span> <span class="process-math">\(\neg q\rightarrow \neg p\)</span><div class="autopermalink" data-description="Paragraph"><a href="#connectives-73-1-1-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1.3.1.e"><a href="#connectives-73-1-1-2-5" title="Copy heading and permalink for Item 1.3.1.e" aria-label="Copy heading and permalink for Item 1.3.1.e">🔗</a></div>
+</li>
+<li id="connectives-73-1-1-2-6">
+<div class="para" id="connectives-73-1-1-2-6-1">
+<span class="process-math">\(p\ \wedge\ (p\rightarrow q)\text{;}\)</span> <span class="process-math">\(p\ \wedge\ q\)</span><div class="autopermalink" data-description="Paragraph"><a href="#connectives-73-1-1-2-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1.3.1.f"><a href="#connectives-73-1-1-2-6" title="Copy heading and permalink for Item 1.3.1.f" aria-label="Copy heading and permalink for Item 1.3.1.f">🔗</a></div>
+</li>
+<li id="connectives-73-1-1-2-7">
+<div class="para" id="connectives-73-1-1-2-7-1">
+<span class="process-math">\(p\vee (q\ \wedge\ r)\text{;}\)</span> <span class="process-math">\((p\vee q)\ \wedge\ (p\vee r)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#connectives-73-1-1-2-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1.3.1.g"><a href="#connectives-73-1-1-2-7" title="Copy heading and permalink for Item 1.3.1.g" aria-label="Copy heading and permalink for Item 1.3.1.g">🔗</a></div>
+</li>
+<li id="connectives-73-1-1-2-8">
+<div class="para" id="connectives-73-1-1-2-8-1">
+<span class="process-math">\((p\ \wedge\ q)\rightarrow r\text{;}\)</span> <span class="process-math">\(p\rightarrow (q\rightarrow r)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#connectives-73-1-1-2-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1.3.1.h"><a href="#connectives-73-1-1-2-8" title="Copy heading and permalink for Item 1.3.1.h" aria-label="Copy heading and permalink for Item 1.3.1.h">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 1.3.1"><a href="#connectives-73-1" title="Copy heading and permalink for Exercise 1.3.1" aria-label="Copy heading and permalink for Exercise 1.3.1">🔗</a></div></article><article class="exercise exercise-like" id="connectives-73-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="para" id="connectives-73-2-1-1">Determine, using a truth table, whether each of the following statements is a tautology, a contradiction, or neither.<div class="autopermalink" data-description="Paragraph"><a href="#connectives-73-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha lower-alpha-level-1" id="connectives-73-2-1-2">
+<li id="connectives-73-2-1-2-1">
+<div class="para" id="connectives-73-2-1-2-1-1">
+<span class="process-math">\(\displaystyle (p\rightarrow p)\rightarrow q\)</span><div class="autopermalink" data-description="Paragraph"><a href="#connectives-73-2-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1.3.2.a"><a href="#connectives-73-2-1-2-1" title="Copy heading and permalink for Item 1.3.2.a" aria-label="Copy heading and permalink for Item 1.3.2.a">🔗</a></div>
+</li>
+<li id="connectives-73-2-1-2-2">
+<div class="para" id="connectives-73-2-1-2-2-1">
+<span class="process-math">\(\displaystyle q\rightarrow (p\rightarrow q)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#connectives-73-2-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1.3.2.b"><a href="#connectives-73-2-1-2-2" title="Copy heading and permalink for Item 1.3.2.b" aria-label="Copy heading and permalink for Item 1.3.2.b">🔗</a></div>
+</li>
+<li id="connectives-73-2-1-2-3">
+<div class="para" id="connectives-73-2-1-2-3-1">
+<span class="process-math">\(\displaystyle \neg ( p\vee (p\rightarrow q))\)</span><div class="autopermalink" data-description="Paragraph"><a href="#connectives-73-2-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1.3.2.c"><a href="#connectives-73-2-1-2-3" title="Copy heading and permalink for Item 1.3.2.c" aria-label="Copy heading and permalink for Item 1.3.2.c">🔗</a></div>
+</li>
+<li id="connectives-73-2-1-2-4">
+<div class="para" id="connectives-73-2-1-2-4-1">
+<span class="process-math">\(\displaystyle q\rightarrow (p \vee \neg p)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#connectives-73-2-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1.3.2.d"><a href="#connectives-73-2-1-2-4" title="Copy heading and permalink for Item 1.3.2.d" aria-label="Copy heading and permalink for Item 1.3.2.d">🔗</a></div>
+</li>
+<li id="connectives-73-2-1-2-5">
+<div class="para" id="connectives-73-2-1-2-5-1">
+<span class="process-math">\(\displaystyle q\rightarrow (p\ \wedge\ \neg p)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#connectives-73-2-1-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1.3.2.e"><a href="#connectives-73-2-1-2-5" title="Copy heading and permalink for Item 1.3.2.e" aria-label="Copy heading and permalink for Item 1.3.2.e">🔗</a></div>
+</li>
+<li id="connectives-73-2-1-2-6">
+<div class="para" id="connectives-73-2-1-2-6-1">
+<span class="process-math">\(\displaystyle \bigl(p\rightarrow (p\rightarrow q)\bigr)\rightarrow (p\rightarrow q)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#connectives-73-2-1-2-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1.3.2.f"><a href="#connectives-73-2-1-2-6" title="Copy heading and permalink for Item 1.3.2.f" aria-label="Copy heading and permalink for Item 1.3.2.f">🔗</a></div>
+</li>
+<li id="connectives-73-2-1-2-7">
+<div class="para" id="connectives-73-2-1-2-7-1">
+<span class="process-math">\(\displaystyle \bigl( (p\ \veebar\  q)\rightarrow (r\ \veebar\  r)\bigr)
+\leftrightarrow (p\ \wedge\ q)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#connectives-73-2-1-2-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1.3.2.g"><a href="#connectives-73-2-1-2-7" title="Copy heading and permalink for Item 1.3.2.g" aria-label="Copy heading and permalink for Item 1.3.2.g">🔗</a></div>
+</li>
+<li id="connectives-73-2-1-2-8">
+<div class="para" id="connectives-73-2-1-2-8-1">
+<span class="process-math">\(\displaystyle (p\vee q)\ \wedge\ (\neg p \vee r)\ \wedge\ (\neg r\vee\neg q)\ \wedge\ (p\leftrightarrow
+q)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#connectives-73-2-1-2-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1.3.2.h"><a href="#connectives-73-2-1-2-8" title="Copy heading and permalink for Item 1.3.2.h" aria-label="Copy heading and permalink for Item 1.3.2.h">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 1.3.2"><a href="#connectives-73-2" title="Copy heading and permalink for Exercise 1.3.2" aria-label="Copy heading and permalink for Exercise 1.3.2">🔗</a></div></article><article class="exercise exercise-like" id="connectives-73-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="para" id="connectives-73-3-1-1">Produce truth tables for the following statements. Then abbreviate them by finding the shortest possible logically equivalent statement.<div class="autopermalink" data-description="Paragraph"><a href="#connectives-73-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha lower-alpha-level-1" id="connectives-73-3-1-2">
+<li id="connectives-73-3-1-2-1">
+<div class="para" id="connectives-73-3-1-2-1-1">
+<span class="process-math">\(\displaystyle \neg (p \ \wedge\ q)\rightarrow (p\ \veebar \ q)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#connectives-73-3-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1.3.3.a"><a href="#connectives-73-3-1-2-1" title="Copy heading and permalink for Item 1.3.3.a" aria-label="Copy heading and permalink for Item 1.3.3.a">🔗</a></div>
+</li>
+<li id="connectives-73-3-1-2-2">
+<div class="para" id="connectives-73-3-1-2-2-1">
+<span class="process-math">\(\displaystyle \bigl( \bigl( (\neg p\rightarrow q)\ \wedge\ (r\ \veebar \ p)\bigr) \vee 
 \bigl( ( \neg p \rightarrow q)\ \wedge\ (r\ \veebar \ q)\bigr) \bigr) \ \wedge\ 
-\bigl((p\leftrightarrow q)\rightarrow r\bigr)\)</span></div></li>
-</ol></article><article class="exercise exercise-like" id="ER_onlyandnot"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para" id="ER_onlyandnot-1-1">Using <em class="emphasis">only</em> the connectives “<span class="process-math">\(\wedge\)</span>” and “<span class="process-math">\(\neg\)</span>”, write statements logically equivalent to each of the following:</div> <ol class="lower-alpha" id="ER_onlyandnot-1-2">
-<li id="ER_onlyandnot-1-2-1"><div class="para" id="ER_onlyandnot-1-2-1-1"><span class="process-math">\(\displaystyle p \vee q\)</span></div></li>
-<li id="ER_onlyandnot-1-2-2"><div class="para" id="ER_onlyandnot-1-2-2-1"><span class="process-math">\(\displaystyle p\ \veebar\ q\)</span></div></li>
-<li id="ER_onlyandnot-1-2-3"><div class="para" id="ER_onlyandnot-1-2-3-1"><span class="process-math">\(\displaystyle p \rightarrow q\)</span></div></li>
-<li id="ER_onlyandnot-1-2-4"><div class="para" id="ER_onlyandnot-1-2-4-1"><span class="process-math">\(\displaystyle p \leftrightarrow q\)</span></div></li>
-</ol></article><article class="exercise exercise-like" id="connectives-73-5"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<div class="para" id="connectives-73-5-1-1">Using <em class="emphasis">only</em> the connective “//”, write statements logically equivalent to each of the following:</div> <ol class="lower-alpha" id="connectives-73-5-1-2">
-<li id="connectives-73-5-1-2-1"><div class="para" id="connectives-73-5-1-2-1-1"><span class="process-math">\(\displaystyle \neg p\)</span></div></li>
-<li id="connectives-73-5-1-2-2"><div class="para" id="connectives-73-5-1-2-2-1"><span class="process-math">\(\displaystyle p\ \wedge\ q\)</span></div></li>
-<li id="connectives-73-5-1-2-3"><div class="para" id="connectives-73-5-1-2-3-1"><span class="process-math">\(\displaystyle p \vee q\)</span></div></li>
-<li id="connectives-73-5-1-2-4"><div class="para" id="connectives-73-5-1-2-4-1"><span class="process-math">\(\displaystyle p\ \veebar\ q\)</span></div></li>
-<li id="connectives-73-5-1-2-5"><div class="para" id="connectives-73-5-1-2-5-1"><span class="process-math">\(\displaystyle p \rightarrow q\)</span></div></li>
-<li id="connectives-73-5-1-2-6"><div class="para" id="connectives-73-5-1-2-6-1"><span class="process-math">\(\displaystyle p \leftrightarrow q\)</span></div></li>
-</ol></article></section></section></div>
-<div class="ptx-content-footer">
+\bigl((p\leftrightarrow q)\rightarrow r\bigr)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#connectives-73-3-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1.3.3.b"><a href="#connectives-73-3-1-2-2" title="Copy heading and permalink for Item 1.3.3.b" aria-label="Copy heading and permalink for Item 1.3.3.b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 1.3.3"><a href="#connectives-73-3" title="Copy heading and permalink for Exercise 1.3.3" aria-label="Copy heading and permalink for Exercise 1.3.3">🔗</a></div></article><article class="exercise exercise-like" id="ER_onlyandnot"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="para" id="ER_onlyandnot-1-1">Using <em class="emphasis">only</em> the connectives “<span class="process-math">\(\wedge\)</span>” and “<span class="process-math">\(\neg\)</span>”, write statements logically equivalent to each of the following:<div class="autopermalink" data-description="Paragraph"><a href="#ER_onlyandnot-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha lower-alpha-level-1" id="ER_onlyandnot-1-2">
+<li id="ER_onlyandnot-1-2-1">
+<div class="para" id="ER_onlyandnot-1-2-1-1">
+<span class="process-math">\(\displaystyle p \vee q\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ER_onlyandnot-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1.3.4.a"><a href="#ER_onlyandnot-1-2-1" title="Copy heading and permalink for Item 1.3.4.a" aria-label="Copy heading and permalink for Item 1.3.4.a">🔗</a></div>
+</li>
+<li id="ER_onlyandnot-1-2-2">
+<div class="para" id="ER_onlyandnot-1-2-2-1">
+<span class="process-math">\(\displaystyle p\ \veebar\ q\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ER_onlyandnot-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1.3.4.b"><a href="#ER_onlyandnot-1-2-2" title="Copy heading and permalink for Item 1.3.4.b" aria-label="Copy heading and permalink for Item 1.3.4.b">🔗</a></div>
+</li>
+<li id="ER_onlyandnot-1-2-3">
+<div class="para" id="ER_onlyandnot-1-2-3-1">
+<span class="process-math">\(\displaystyle p \rightarrow q\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ER_onlyandnot-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1.3.4.c"><a href="#ER_onlyandnot-1-2-3" title="Copy heading and permalink for Item 1.3.4.c" aria-label="Copy heading and permalink for Item 1.3.4.c">🔗</a></div>
+</li>
+<li id="ER_onlyandnot-1-2-4">
+<div class="para" id="ER_onlyandnot-1-2-4-1">
+<span class="process-math">\(\displaystyle p \leftrightarrow q\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ER_onlyandnot-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1.3.4.d"><a href="#ER_onlyandnot-1-2-4" title="Copy heading and permalink for Item 1.3.4.d" aria-label="Copy heading and permalink for Item 1.3.4.d">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 1.3.4"><a href="#ER_onlyandnot" title="Copy heading and permalink for Exercise 1.3.4" aria-label="Copy heading and permalink for Exercise 1.3.4">🔗</a></div></article><article class="exercise exercise-like" id="connectives-73-5"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="para" id="connectives-73-5-1-1">Using <em class="emphasis">only</em> the connective “//”, write statements logically equivalent to each of the following:<div class="autopermalink" data-description="Paragraph"><a href="#connectives-73-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha lower-alpha-level-1" id="connectives-73-5-1-2">
+<li id="connectives-73-5-1-2-1">
+<div class="para" id="connectives-73-5-1-2-1-1">
+<span class="process-math">\(\displaystyle \neg p\)</span><div class="autopermalink" data-description="Paragraph"><a href="#connectives-73-5-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1.3.5.a"><a href="#connectives-73-5-1-2-1" title="Copy heading and permalink for Item 1.3.5.a" aria-label="Copy heading and permalink for Item 1.3.5.a">🔗</a></div>
+</li>
+<li id="connectives-73-5-1-2-2">
+<div class="para" id="connectives-73-5-1-2-2-1">
+<span class="process-math">\(\displaystyle p\ \wedge\ q\)</span><div class="autopermalink" data-description="Paragraph"><a href="#connectives-73-5-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1.3.5.b"><a href="#connectives-73-5-1-2-2" title="Copy heading and permalink for Item 1.3.5.b" aria-label="Copy heading and permalink for Item 1.3.5.b">🔗</a></div>
+</li>
+<li id="connectives-73-5-1-2-3">
+<div class="para" id="connectives-73-5-1-2-3-1">
+<span class="process-math">\(\displaystyle p \vee q\)</span><div class="autopermalink" data-description="Paragraph"><a href="#connectives-73-5-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1.3.5.c"><a href="#connectives-73-5-1-2-3" title="Copy heading and permalink for Item 1.3.5.c" aria-label="Copy heading and permalink for Item 1.3.5.c">🔗</a></div>
+</li>
+<li id="connectives-73-5-1-2-4">
+<div class="para" id="connectives-73-5-1-2-4-1">
+<span class="process-math">\(\displaystyle p\ \veebar\ q\)</span><div class="autopermalink" data-description="Paragraph"><a href="#connectives-73-5-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1.3.5.d"><a href="#connectives-73-5-1-2-4" title="Copy heading and permalink for Item 1.3.5.d" aria-label="Copy heading and permalink for Item 1.3.5.d">🔗</a></div>
+</li>
+<li id="connectives-73-5-1-2-5">
+<div class="para" id="connectives-73-5-1-2-5-1">
+<span class="process-math">\(\displaystyle p \rightarrow q\)</span><div class="autopermalink" data-description="Paragraph"><a href="#connectives-73-5-1-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1.3.5.e"><a href="#connectives-73-5-1-2-5" title="Copy heading and permalink for Item 1.3.5.e" aria-label="Copy heading and permalink for Item 1.3.5.e">🔗</a></div>
+</li>
+<li id="connectives-73-5-1-2-6">
+<div class="para" id="connectives-73-5-1-2-6-1">
+<span class="process-math">\(\displaystyle p \leftrightarrow q\)</span><div class="autopermalink" data-description="Paragraph"><a href="#connectives-73-5-1-2-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1.3.5.f"><a href="#connectives-73-5-1-2-6" title="Copy heading and permalink for Item 1.3.5.f" aria-label="Copy heading and permalink for Item 1.3.5.f">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 1.3.5"><a href="#connectives-73-5" title="Copy heading and permalink for Exercise 1.3.5" aria-label="Copy heading and permalink for Exercise 1.3.5">🔗</a></div></article><div class="autopermalink" data-description="Exercises 1.3"><a href="#connectives-73" title="Copy heading and permalink for Exercises 1.3" aria-label="Copy heading and permalink for Exercises 1.3">🔗</a></div></section><div class="autopermalink" data-description="Section 1.3: Logical Connectives"><a href="#connectives" title="Copy heading and permalink for Section 1.3: Logical Connectives" aria-label="Copy heading and permalink for Section 1.3: Logical Connectives">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="arguments.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="argumentswconnectives.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
-<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
 </div>
 <!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
 var sc_project=12871717;

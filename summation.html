@@ -6,14 +6,20 @@
 <!--*                                          *-->
 <!--********************************************-->
 <html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Summation Notation</title>
-<meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:type" content="book">
-<meta property="book:title" content="Introduction to Proofs">
-<meta property="book:author" content="Jennifer Firkins Nordstrom">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
 <script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
@@ -69,13 +75,12 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
-<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
-</script><link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
-<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
-<!--** eBookCongig is necessary to configure interactive       **-->
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Introduction to Proofs">
+<meta property="book:author" content="Jennifer Firkins Nordstrom">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -97,307 +102,23 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.5.6';
+eBookConfig.runestone_version = '7.11.5';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.82032a8574f6ce75.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6a985cbf816db5c7.css">
-<style>
-#arguments-20-1-1-4 { counter-set: arguments-20-1-1-4 0; }
-#arguments-20-1-1-4 > li::marker { content: ""counter(arguments-20-1-1-4,lower-alpha)""; }
-#arguments-20-1-1-4 > li { counter-increment: arguments-20-1-1-4; }
-#arguments-20-2-1-3 { counter-set: arguments-20-2-1-3 0; }
-#arguments-20-2-1-3 > li::marker { content: ""counter(arguments-20-2-1-3,lower-alpha)""; }
-#arguments-20-2-1-3 > li { counter-increment: arguments-20-2-1-3; }
-#arguments-20-3-1-2 { counter-set: arguments-20-3-1-2 0; }
-#arguments-20-3-1-2 > li::marker { content: "("counter(arguments-20-3-1-2,lower-alpha)")"; }
-#arguments-20-3-1-2 > li { counter-increment: arguments-20-3-1-2; }
-#B_logicalequivalences-3-5 { counter-set: B_logicalequivalences-3-5 0; }
-#B_logicalequivalences-3-5 > li::marker { content: ""counter(B_logicalequivalences-3-5,decimal)""; }
-#B_logicalequivalences-3-5 > li { counter-increment: B_logicalequivalences-3-5; }
-#connectives-73-1-1-2 { counter-set: connectives-73-1-1-2 0; }
-#connectives-73-1-1-2 > li::marker { content: ""counter(connectives-73-1-1-2,lower-alpha)""; }
-#connectives-73-1-1-2 > li { counter-increment: connectives-73-1-1-2; }
-#connectives-73-2-1-2 { counter-set: connectives-73-2-1-2 0; }
-#connectives-73-2-1-2 > li::marker { content: ""counter(connectives-73-2-1-2,lower-alpha)""; }
-#connectives-73-2-1-2 > li { counter-increment: connectives-73-2-1-2; }
-#connectives-73-3-1-2 { counter-set: connectives-73-3-1-2 0; }
-#connectives-73-3-1-2 > li::marker { content: ""counter(connectives-73-3-1-2,lower-alpha)""; }
-#connectives-73-3-1-2 > li { counter-increment: connectives-73-3-1-2; }
-#ER_onlyandnot-1-2 { counter-set: ER_onlyandnot-1-2 0; }
-#ER_onlyandnot-1-2 > li::marker { content: ""counter(ER_onlyandnot-1-2,lower-alpha)""; }
-#ER_onlyandnot-1-2 > li { counter-increment: ER_onlyandnot-1-2; }
-#connectives-73-5-1-2 { counter-set: connectives-73-5-1-2 0; }
-#connectives-73-5-1-2 > li::marker { content: ""counter(connectives-73-5-1-2,lower-alpha)""; }
-#connectives-73-5-1-2 > li { counter-increment: connectives-73-5-1-2; }
-#setnotation-22-4-1-2 { counter-set: setnotation-22-4-1-2 0; }
-#setnotation-22-4-1-2 > li::marker { content: ""counter(setnotation-22-4-1-2,lower-alpha)""; }
-#setnotation-22-4-1-2 > li { counter-increment: setnotation-22-4-1-2; }
-#setnotation-22-5-1-2 { counter-set: setnotation-22-5-1-2 0; }
-#setnotation-22-5-1-2 > li::marker { content: ""counter(setnotation-22-5-1-2,lower-alpha)""; }
-#setnotation-22-5-1-2 > li { counter-increment: setnotation-22-5-1-2; }
-#E_multquant1-2-2 { counter-set: E_multquant1-2-2 0; }
-#E_multquant1-2-2 > li::marker { content: ""counter(E_multquant1-2-2,lower-alpha)""; }
-#E_multquant1-2-2 > li { counter-increment: E_multquant1-2-2; }
-#quantifiers-6-14-3-1-2 { counter-set: quantifiers-6-14-3-1-2 0; }
-#quantifiers-6-14-3-1-2 > li::marker { content: ""counter(quantifiers-6-14-3-1-2,lower-alpha)""; }
-#quantifiers-6-14-3-1-2 > li { counter-increment: quantifiers-6-14-3-1-2; }
-#quantifiers-6-14-4-1-2 { counter-set: quantifiers-6-14-4-1-2 0; }
-#quantifiers-6-14-4-1-2 > li::marker { content: ""counter(quantifiers-6-14-4-1-2,lower-alpha)""; }
-#quantifiers-6-14-4-1-2 > li { counter-increment: quantifiers-6-14-4-1-2; }
-#quantifiers-6-14-5-1-2 { counter-set: quantifiers-6-14-5-1-2 0; }
-#quantifiers-6-14-5-1-2 > li::marker { content: ""counter(quantifiers-6-14-5-1-2,lower-alpha)""; }
-#quantifiers-6-14-5-1-2 > li { counter-increment: quantifiers-6-14-5-1-2; }
-#quantifiers-6-14-6-1-2 { counter-set: quantifiers-6-14-6-1-2 0; }
-#quantifiers-6-14-6-1-2 > li::marker { content: ""counter(quantifiers-6-14-6-1-2,lower-alpha)""; }
-#quantifiers-6-14-6-1-2 > li { counter-increment: quantifiers-6-14-6-1-2; }
-#quantifiers-6-14-7-1-2 { counter-set: quantifiers-6-14-7-1-2 0; }
-#quantifiers-6-14-7-1-2 > li::marker { content: ""counter(quantifiers-6-14-7-1-2,lower-alpha)""; }
-#quantifiers-6-14-7-1-2 > li { counter-increment: quantifiers-6-14-7-1-2; }
-#quantifiers-6-14-8-1-2 { counter-set: quantifiers-6-14-8-1-2 0; }
-#quantifiers-6-14-8-1-2 > li::marker { content: ""counter(quantifiers-6-14-8-1-2,lower-alpha)""; }
-#quantifiers-6-14-8-1-2 > li { counter-increment: quantifiers-6-14-8-1-2; }
-#conditionals-33-1-1-2 { counter-set: conditionals-33-1-1-2 0; }
-#conditionals-33-1-1-2 > li::marker { content: ""counter(conditionals-33-1-1-2,lower-alpha)""; }
-#conditionals-33-1-1-2 > li { counter-increment: conditionals-33-1-1-2; }
-#conditionals-33-2-1-2 { counter-set: conditionals-33-2-1-2 0; }
-#conditionals-33-2-1-2 > li::marker { content: ""counter(conditionals-33-2-1-2,lower-alpha)""; }
-#conditionals-33-2-1-2 > li { counter-increment: conditionals-33-2-1-2; }
-#conditionals-33-3-1-2 { counter-set: conditionals-33-3-1-2 0; }
-#conditionals-33-3-1-2 > li::marker { content: ""counter(conditionals-33-3-1-2,lower-alpha)""; }
-#conditionals-33-3-1-2 > li { counter-increment: conditionals-33-3-1-2; }
-#conditionals-33-4-1-2 { counter-set: conditionals-33-4-1-2 0; }
-#conditionals-33-4-1-2 > li::marker { content: ""counter(conditionals-33-4-1-2,lower-alpha)""; }
-#conditionals-33-4-1-2 > li { counter-increment: conditionals-33-4-1-2; }
-#conditionals-33-5-1-2 { counter-set: conditionals-33-5-1-2 0; }
-#conditionals-33-5-1-2 > li::marker { content: ""counter(conditionals-33-5-1-2,lower-alpha)""; }
-#conditionals-33-5-1-2 > li { counter-increment: conditionals-33-5-1-2; }
-#directproof-29-1-1-2 { counter-set: directproof-29-1-1-2 0; }
-#directproof-29-1-1-2 > li::marker { content: ""counter(directproof-29-1-1-2,lower-alpha)""; }
-#directproof-29-1-1-2 > li { counter-increment: directproof-29-1-1-2; }
-#directproof-29-11-1-2 { counter-set: directproof-29-11-1-2 0; }
-#directproof-29-11-1-2 > li::marker { content: ""counter(directproof-29-11-1-2,lower-alpha)""; }
-#directproof-29-11-1-2 > li { counter-increment: directproof-29-11-1-2; }
-#moredirect-7-1-1-2 { counter-set: moredirect-7-1-1-2 0; }
-#moredirect-7-1-1-2 > li::marker { content: ""counter(moredirect-7-1-1-2,lower-alpha)""; }
-#moredirect-7-1-1-2 > li { counter-increment: moredirect-7-1-1-2; }
-#moredirect-7-4-1-2 { counter-set: moredirect-7-4-1-2 0; }
-#moredirect-7-4-1-2 > li::marker { content: "("counter(moredirect-7-4-1-2,lower-alpha)")"; }
-#moredirect-7-4-1-2 > li { counter-increment: moredirect-7-4-1-2; }
-#ER_averagerat-1-2 { counter-set: ER_averagerat-1-2 0; }
-#ER_averagerat-1-2 > li::marker { content: ""counter(ER_averagerat-1-2,lower-alpha)""; }
-#ER_averagerat-1-2 > li { counter-increment: ER_averagerat-1-2; }
-#moredirect-7-7-1-2 { counter-set: moredirect-7-7-1-2 0; }
-#moredirect-7-7-1-2 > li::marker { content: ""counter(moredirect-7-7-1-2,lower-alpha)""; }
-#moredirect-7-7-1-2 > li { counter-increment: moredirect-7-7-1-2; }
-#moredirect-7-9-1-2 { counter-set: moredirect-7-9-1-2 0; }
-#moredirect-7-9-1-2 > li::marker { content: ""counter(moredirect-7-9-1-2,lower-alpha)""; }
-#moredirect-7-9-1-2 > li { counter-increment: moredirect-7-9-1-2; }
-#cases-31-1-1-2 { counter-set: cases-31-1-1-2 0; }
-#cases-31-1-1-2 > li::marker { content: ""counter(cases-31-1-1-2,lower-alpha)""; }
-#cases-31-1-1-2 > li { counter-increment: cases-31-1-1-2; }
-#SS_twoproofs-18-1-1-2 { counter-set: SS_twoproofs-18-1-1-2 0; }
-#SS_twoproofs-18-1-1-2 > li::marker { content: ""counter(SS_twoproofs-18-1-1-2,lower-alpha)""; }
-#SS_twoproofs-18-1-1-2 > li { counter-increment: SS_twoproofs-18-1-1-2; }
-#SS_twoproofs-18-2-1-2 { counter-set: SS_twoproofs-18-2-1-2 0; }
-#SS_twoproofs-18-2-1-2 > li::marker { content: ""counter(SS_twoproofs-18-2-1-2,lower-alpha)""; }
-#SS_twoproofs-18-2-1-2 > li { counter-increment: SS_twoproofs-18-2-1-2; }
-#SS_twoproofs-18-3-1-2 { counter-set: SS_twoproofs-18-3-1-2 0; }
-#SS_twoproofs-18-3-1-2 > li::marker { content: ""counter(SS_twoproofs-18-3-1-2,lower-alpha)""; }
-#SS_twoproofs-18-3-1-2 > li { counter-increment: SS_twoproofs-18-3-1-2; }
-#SS_twoproofs-18-4-1-2 { counter-set: SS_twoproofs-18-4-1-2 0; }
-#SS_twoproofs-18-4-1-2 > li::marker { content: ""counter(SS_twoproofs-18-4-1-2,lower-alpha)""; }
-#SS_twoproofs-18-4-1-2 > li { counter-increment: SS_twoproofs-18-4-1-2; }
-#SS_twoproofs-18-5-1-2 { counter-set: SS_twoproofs-18-5-1-2 0; }
-#SS_twoproofs-18-5-1-2 > li::marker { content: ""counter(SS_twoproofs-18-5-1-2,lower-alpha)""; }
-#SS_twoproofs-18-5-1-2 > li { counter-increment: SS_twoproofs-18-5-1-2; }
-#B_propsums-2-1 { counter-set: B_propsums-2-1 0; }
-#B_propsums-2-1 > li::marker { content: ""counter(B_propsums-2-1,decimal)""; }
-#B_propsums-2-1 > li { counter-increment: B_propsums-2-1; }
-#summation-27-1-1-2 { counter-set: summation-27-1-1-2 0; }
-#summation-27-1-1-2 > li::marker { content: ""counter(summation-27-1-1-2,lower-alpha)""; }
-#summation-27-1-1-2 > li { counter-increment: summation-27-1-1-2; }
-#summation-27-2-1-2 { counter-set: summation-27-2-1-2 0; }
-#summation-27-2-1-2 > li::marker { content: ""counter(summation-27-2-1-2,lower-alpha)""; }
-#summation-27-2-1-2 > li { counter-increment: summation-27-2-1-2; }
-#summation-27-3-1-2 { counter-set: summation-27-3-1-2 0; }
-#summation-27-3-1-2 > li::marker { content: ""counter(summation-27-3-1-2,lower-alpha)""; }
-#summation-27-3-1-2 > li { counter-increment: summation-27-3-1-2; }
-#summation-27-8-1-2 { counter-set: summation-27-8-1-2 0; }
-#summation-27-8-1-2 > li::marker { content: ""counter(summation-27-8-1-2,lower-alpha)""; }
-#summation-27-8-1-2 > li { counter-increment: summation-27-8-1-2; }
-#B_induction-3-4 { counter-set: B_induction-3-4 0; }
-#B_induction-3-4 > li::marker { content: ""counter(B_induction-3-4,decimal)""; }
-#B_induction-3-4 > li { counter-increment: B_induction-3-4; }
-#induction-6-1 { counter-set: induction-6-1 0; }
-#induction-6-1 > li::marker { content: "("counter(induction-6-1,decimal)")"; }
-#induction-6-1 > li { counter-increment: induction-6-1; }
-#ER_indpowersof2-1-2 { counter-set: ER_indpowersof2-1-2 0; }
-#ER_indpowersof2-1-2 > li::marker { content: ""counter(ER_indpowersof2-1-2,lower-alpha)""; }
-#ER_indpowersof2-1-2 > li { counter-increment: ER_indpowersof2-1-2; }
-#B_strongind-4-3 { counter-set: B_strongind-4-3 0; }
-#B_strongind-4-3 > li::marker { content: ""counter(B_strongind-4-3,decimal)""; }
-#B_strongind-4-3 > li { counter-increment: B_strongind-4-3; }
-#E_domainqexist1-3-1 { counter-set: E_domainqexist1-3-1 0; }
-#E_domainqexist1-3-1 > li::marker { content: ""counter(E_domainqexist1-3-1,lower-alpha)""; }
-#E_domainqexist1-3-1 > li { counter-increment: E_domainqexist1-3-1; }
-#B_pfexistential-3-3 { counter-set: B_pfexistential-3-3 0; }
-#B_pfexistential-3-3 > li::marker { content: ""counter(B_pfexistential-3-3,decimal)""; }
-#B_pfexistential-3-3 > li { counter-increment: B_pfexistential-3-3; }
-#B_pfunique-3-3 { counter-set: B_pfunique-3-3 0; }
-#B_pfunique-3-3 > li::marker { content: ""counter(B_pfunique-3-3,decimal)""; }
-#B_pfunique-3-3 > li { counter-increment: B_pfunique-3-3; }
-#existunique-23-1 { counter-set: existunique-23-1 0; }
-#existunique-23-1 > li::marker { content: ""counter(existunique-23-1,decimal)""; }
-#existunique-23-1 > li { counter-increment: existunique-23-1; }
-#E_wop-3-2 { counter-set: E_wop-3-2 0; }
-#E_wop-3-2 > li::marker { content: ""counter(E_wop-3-2,decimal)""; }
-#E_wop-3-2 > li { counter-increment: E_wop-3-2; }
-#E_setnotevarious-2 { counter-set: E_setnotevarious-2 0; }
-#E_setnotevarious-2 > li::marker { content: ""counter(E_setnotevarious-2,lower-alpha)""; }
-#E_setnotevarious-2 > li { counter-increment: E_setnotevarious-2; }
-#E_setops-3-2 { counter-set: E_setops-3-2 0; }
-#E_setops-3-2 > li::marker { content: ""counter(E_setops-3-2,lower-alpha)""; }
-#E_setops-3-2 > li { counter-increment: E_setops-3-2; }
-#SS_setproofs-3-3 { counter-set: SS_setproofs-3-3 0; }
-#SS_setproofs-3-3 > li::marker { content: ""counter(SS_setproofs-3-3,decimal)""; }
-#SS_setproofs-3-3 > li { counter-increment: SS_setproofs-3-3; }
-#L_SetIdent-4-4 { counter-set: L_SetIdent-4-4 0; }
-#L_SetIdent-4-4 > li::marker { content: ""counter(L_SetIdent-4-4,decimal)""; }
-#L_SetIdent-4-4 > li { counter-increment: L_SetIdent-4-4; }
-#SS_setproofs-25-1-1-2 { counter-set: SS_setproofs-25-1-1-2 0; }
-#SS_setproofs-25-1-1-2 > li::marker { content: ""counter(SS_setproofs-25-1-1-2,lower-alpha)""; }
-#SS_setproofs-25-1-1-2 > li { counter-increment: SS_setproofs-25-1-1-2; }
-#SS_setproofs-25-2-1-2 { counter-set: SS_setproofs-25-2-1-2 0; }
-#SS_setproofs-25-2-1-2 > li::marker { content: ""counter(SS_setproofs-25-2-1-2,lower-alpha)""; }
-#SS_setproofs-25-2-1-2 > li { counter-increment: SS_setproofs-25-2-1-2; }
-#SS_setproofs-25-3-1-2 { counter-set: SS_setproofs-25-3-1-2 0; }
-#SS_setproofs-25-3-1-2 > li::marker { content: ""counter(SS_setproofs-25-3-1-2,lower-alpha)""; }
-#SS_setproofs-25-3-1-2 > li { counter-increment: SS_setproofs-25-3-1-2; }
-#SS_setproofs-25-4-1-2 { counter-set: SS_setproofs-25-4-1-2 0; }
-#SS_setproofs-25-4-1-2 > li::marker { content: ""counter(SS_setproofs-25-4-1-2,lower-alpha)""; }
-#SS_setproofs-25-4-1-2 > li { counter-increment: SS_setproofs-25-4-1-2; }
-#SS_setproofs-25-5-1-2 { counter-set: SS_setproofs-25-5-1-2 0; }
-#SS_setproofs-25-5-1-2 > li::marker { content: ""counter(SS_setproofs-25-5-1-2,lower-alpha)""; }
-#SS_setproofs-25-5-1-2 > li { counter-increment: SS_setproofs-25-5-1-2; }
-#SS_setproofs-25-6-1-2 { counter-set: SS_setproofs-25-6-1-2 0; }
-#SS_setproofs-25-6-1-2 > li::marker { content: ""counter(SS_setproofs-25-6-1-2,lower-alpha)""; }
-#SS_setproofs-25-6-1-2 > li { counter-increment: SS_setproofs-25-6-1-2; }
-#SS_setproofs-25-7-1-2 { counter-set: SS_setproofs-25-7-1-2 0; }
-#SS_setproofs-25-7-1-2 > li::marker { content: ""counter(SS_setproofs-25-7-1-2,lower-alpha)""; }
-#SS_setproofs-25-7-1-2 > li { counter-increment: SS_setproofs-25-7-1-2; }
-#SS_setproofs-25-15-1-2 { counter-set: SS_setproofs-25-15-1-2 0; }
-#SS_setproofs-25-15-1-2 > li::marker { content: ""counter(SS_setproofs-25-15-1-2,lower-alpha)""; }
-#SS_setproofs-25-15-1-2 > li { counter-increment: SS_setproofs-25-15-1-2; }
-#E_notfunctionimages-2-1 { counter-set: E_notfunctionimages-2-1 0; }
-#E_notfunctionimages-2-1 > li::marker { content: ""counter(E_notfunctionimages-2-1,lower-alpha)""; }
-#E_notfunctionimages-2-1 > li { counter-increment: E_notfunctionimages-2-1; }
-#E_addasfn-3-1 { counter-set: E_addasfn-3-1 0; }
-#E_addasfn-3-1 > li::marker { content: ""counter(E_addasfn-3-1,lower-alpha)""; }
-#E_addasfn-3-1 > li { counter-increment: E_addasfn-3-1; }
-#functions-45-1-1-2 { counter-set: functions-45-1-1-2 0; }
-#functions-45-1-1-2 > li::marker { content: ""counter(functions-45-1-1-2,lower-alpha)""; }
-#functions-45-1-1-2 > li { counter-increment: functions-45-1-1-2; }
-#functions-45-2-1-2 { counter-set: functions-45-2-1-2 0; }
-#functions-45-2-1-2 > li::marker { content: ""counter(functions-45-2-1-2,lower-alpha)""; }
-#functions-45-2-1-2 > li { counter-increment: functions-45-2-1-2; }
-#functions-45-3-1-2 { counter-set: functions-45-3-1-2 0; }
-#functions-45-3-1-2 > li::marker { content: ""counter(functions-45-3-1-2,lower-alpha)""; }
-#functions-45-3-1-2 > li { counter-increment: functions-45-3-1-2; }
-#functions-45-4-1-2 { counter-set: functions-45-4-1-2 0; }
-#functions-45-4-1-2 > li::marker { content: ""counter(functions-45-4-1-2,lower-alpha)""; }
-#functions-45-4-1-2 > li { counter-increment: functions-45-4-1-2; }
-#functions-45-5-1-2 { counter-set: functions-45-5-1-2 0; }
-#functions-45-5-1-2 > li::marker { content: ""counter(functions-45-5-1-2,lower-alpha)""; }
-#functions-45-5-1-2 > li { counter-increment: functions-45-5-1-2; }
-#functions-45-7-1-3 { counter-set: functions-45-7-1-3 0; }
-#functions-45-7-1-3 > li::marker { content: ""counter(functions-45-7-1-3,lower-alpha)""; }
-#functions-45-7-1-3 > li { counter-increment: functions-45-7-1-3; }
-#functions-45-8-1-2 { counter-set: functions-45-8-1-2 0; }
-#functions-45-8-1-2 > li::marker { content: ""counter(functions-45-8-1-2,lower-alpha)""; }
-#functions-45-8-1-2 > li { counter-increment: functions-45-8-1-2; }
-#functions-45-9-1-2 { counter-set: functions-45-9-1-2 0; }
-#functions-45-9-1-2 > li::marker { content: ""counter(functions-45-9-1-2,lower-alpha)""; }
-#functions-45-9-1-2 > li { counter-increment: functions-45-9-1-2; }
-#functions-45-10-1-3 { counter-set: functions-45-10-1-3 0; }
-#functions-45-10-1-3 > li::marker { content: ""counter(functions-45-10-1-3,lower-alpha)""; }
-#functions-45-10-1-3 > li { counter-increment: functions-45-10-1-3; }
-#functions-45-11-1-3 { counter-set: functions-45-11-1-3 0; }
-#functions-45-11-1-3 > li::marker { content: ""counter(functions-45-11-1-3,lower-alpha)""; }
-#functions-45-11-1-3 > li { counter-increment: functions-45-11-1-3; }
-#functions-45-12-1-2 { counter-set: functions-45-12-1-2 0; }
-#functions-45-12-1-2 > li::marker { content: ""counter(functions-45-12-1-2,lower-alpha)""; }
-#functions-45-12-1-2 > li { counter-increment: functions-45-12-1-2; }
-#E_equivclasses-2-3 { counter-set: E_equivclasses-2-3 0; }
-#E_equivclasses-2-3 > li::marker { content: ""counter(E_equivclasses-2-3,lower-alpha)""; }
-#E_equivclasses-2-3 > li { counter-increment: E_equivclasses-2-3; }
-#D_partition-1-1-6 { counter-set: D_partition-1-1-6 0; }
-#D_partition-1-1-6 > li::marker { content: ""counter(D_partition-1-1-6,decimal)""; }
-#D_partition-1-1-6 > li { counter-increment: D_partition-1-1-6; }
-#E_equivclasses2-4-2 { counter-set: E_equivclasses2-4-2 0; }
-#E_equivclasses2-4-2 > li::marker { content: ""counter(E_equivclasses2-4-2,lower-alpha)""; }
-#E_equivclasses2-4-2 > li { counter-increment: E_equivclasses2-4-2; }
-#SS_equivrelations-47-1-1-3 { counter-set: SS_equivrelations-47-1-1-3 0; }
-#SS_equivrelations-47-1-1-3 > li::marker { content: ""counter(SS_equivrelations-47-1-1-3,lower-alpha)""; }
-#SS_equivrelations-47-1-1-3 > li { counter-increment: SS_equivrelations-47-1-1-3; }
-#SS_equivrelations-47-2-1-3 { counter-set: SS_equivrelations-47-2-1-3 0; }
-#SS_equivrelations-47-2-1-3 > li::marker { content: ""counter(SS_equivrelations-47-2-1-3,lower-alpha)""; }
-#SS_equivrelations-47-2-1-3 > li { counter-increment: SS_equivrelations-47-2-1-3; }
-#SS_equivrelations-47-4-1-2 { counter-set: SS_equivrelations-47-4-1-2 0; }
-#SS_equivrelations-47-4-1-2 > li::marker { content: ""counter(SS_equivrelations-47-4-1-2,lower-alpha)""; }
-#SS_equivrelations-47-4-1-2 > li { counter-increment: SS_equivrelations-47-4-1-2; }
-#SS_equivrelations-47-5-1-2 { counter-set: SS_equivrelations-47-5-1-2 0; }
-#SS_equivrelations-47-5-1-2 > li::marker { content: ""counter(SS_equivrelations-47-5-1-2,lower-alpha)""; }
-#SS_equivrelations-47-5-1-2 > li { counter-increment: SS_equivrelations-47-5-1-2; }
-#SS_equivrelations-47-6-1-2 { counter-set: SS_equivrelations-47-6-1-2 0; }
-#SS_equivrelations-47-6-1-2 > li::marker { content: ""counter(SS_equivrelations-47-6-1-2,lower-alpha)""; }
-#SS_equivrelations-47-6-1-2 > li { counter-increment: SS_equivrelations-47-6-1-2; }
-#SS_equivrelations-47-7-1-2 { counter-set: SS_equivrelations-47-7-1-2 0; }
-#SS_equivrelations-47-7-1-2 > li::marker { content: ""counter(SS_equivrelations-47-7-1-2,lower-alpha)""; }
-#SS_equivrelations-47-7-1-2 > li { counter-increment: SS_equivrelations-47-7-1-2; }
-#SS_equivrelations-47-8-1-2 { counter-set: SS_equivrelations-47-8-1-2 0; }
-#SS_equivrelations-47-8-1-2 > li::marker { content: ""counter(SS_equivrelations-47-8-1-2,lower-alpha)""; }
-#SS_equivrelations-47-8-1-2 > li { counter-increment: SS_equivrelations-47-8-1-2; }
-#SS_equivrelations-47-9-1-2 { counter-set: SS_equivrelations-47-9-1-2 0; }
-#SS_equivrelations-47-9-1-2 > li::marker { content: ""counter(SS_equivrelations-47-9-1-2,lower-alpha)""; }
-#SS_equivrelations-47-9-1-2 > li { counter-increment: SS_equivrelations-47-9-1-2; }
-#D_RSTprop2-1-1-3 { counter-set: D_RSTprop2-1-1-3 0; }
-#D_RSTprop2-1-1-3 > li::marker { content: ""counter(D_RSTprop2-1-1-3,decimal)""; }
-#D_RSTprop2-1-1-3 > li { counter-increment: D_RSTprop2-1-1-3; }
-#T_totalorder-1-1-4 { counter-set: T_totalorder-1-1-4 0; }
-#T_totalorder-1-1-4 > li::marker { content: ""counter(T_totalorder-1-1-4,decimal)""; }
-#T_totalorder-1-1-4 > li { counter-increment: T_totalorder-1-1-4; }
-#orders-33-1-1-2 { counter-set: orders-33-1-1-2 0; }
-#orders-33-1-1-2 > li::marker { content: ""counter(orders-33-1-1-2,lower-alpha)""; }
-#orders-33-1-1-2 > li { counter-increment: orders-33-1-1-2; }
-#orders-33-2-1-2 { counter-set: orders-33-2-1-2 0; }
-#orders-33-2-1-2 > li::marker { content: ""counter(orders-33-2-1-2,lower-alpha)""; }
-#orders-33-2-1-2 > li { counter-increment: orders-33-2-1-2; }
-#orders-33-3-1-2 { counter-set: orders-33-3-1-2 0; }
-#orders-33-3-1-2 > li::marker { content: ""counter(orders-33-3-1-2,lower-alpha)""; }
-#orders-33-3-1-2 > li { counter-increment: orders-33-3-1-2; }
-#orders-33-4-1-2 { counter-set: orders-33-4-1-2 0; }
-#orders-33-4-1-2 > li::marker { content: ""counter(orders-33-4-1-2,lower-alpha)""; }
-#orders-33-4-1-2 > li { counter-increment: orders-33-4-1-2; }
-#binomial9-30-2-1-1-1 { counter-set: binomial9-30-2-1-1-1 0; }
-#binomial9-30-2-1-1-1 > li::marker { content: ""counter(binomial9-30-2-1-1-1,lower-alpha)""; }
-#binomial9-30-2-1-1-1 > li { counter-increment: binomial9-30-2-1-1-1; }
-#cardinality-31-6-1-2 { counter-set: cardinality-31-6-1-2 0; }
-#cardinality-31-6-1-2 > li::marker { content: ""counter(cardinality-31-6-1-2,lower-alpha)""; }
-#cardinality-31-6-1-2 > li { counter-increment: cardinality-31-6-1-2; }
-</style>
+<script src="_static/prefix-runtime.42217a82c75796c8.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.7e141ad8414abf4a.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.f4ab138da65f4203.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
 </head>
 <body class="pretext book ignore-math">
-<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
-<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
-<h1 class="heading"><a href="IntroProofs.html"><span class="title">Introduction to Proofs:</span> <span class="subtitle">An Active Exploration of Mathematical Language</span></a></h1>
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="IntroProofs.html"><span class="title">Introduction to Proofs</span> <span class="subtitle">An Active Exploration of Mathematical Language</span></a></h1>
 <p class="byline">Jennifer Firkins Nordstrom</p>
-</div>
-</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
 <button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-2.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
 <div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
@@ -595,40 +316,70 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="summation"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">4.1</span><span class="space"> </span><span class="title">Summation Notation</span>
 </h2>
-<div class="para" id="summation-3">In this section we look at summation notation, which is used to represent general sums, even infinite sums. Before we add terms together, we need some notation for the terms themselves.</div>
-<div class="para" id="summation-4">A <dfn class="terminology">sequence</dfn> is an ordered list, <span class="process-math">\(a_1, a_2, a_3, \ldots, a_k, \ldots\text{.}\)</span>
+<div class="para" id="summation-3">In this section we look at summation notation, which is used to represent general sums, even infinite sums. Before we add terms together, we need some notation for the terms themselves.<div class="autopermalink" data-description="Paragraph"><a href="#summation-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="summation-5">Each <span class="process-math">\(a_k\)</span> is called a <dfn class="terminology">term</dfn> in the sequence. The subscript <span class="process-math">\(k\)</span> is called the <dfn class="terminology">index</dfn>. The index will be an integer, and almost always a nonnegative integer. The first term <span class="process-math">\(a_1\)</span> (or sometimes <span class="process-math">\(a_0\)</span>) is called the <dfn class="terminology">initial term</dfn>. The term <span class="process-math">\(a_k\)</span> is called the <span class="process-math">\(k^{th}\)</span> term. It is also often called the <dfn class="terminology">general</dfn> term of the sequence.</div>
+<div class="para" id="summation-4">A <dfn class="terminology">sequence</dfn> is an ordered list, <span class="process-math">\(a_1, a_2, a_3, \ldots, a_k, \ldots\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#summation-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="summation-5">Each <span class="process-math">\(a_k\)</span> is called a <dfn class="terminology">term</dfn> in the sequence. The subscript <span class="process-math">\(k\)</span> is called the <dfn class="terminology">index</dfn>. The index will be an integer, and almost always a nonnegative integer. The first term <span class="process-math">\(a_1\)</span> (or sometimes <span class="process-math">\(a_0\)</span>) is called the <dfn class="terminology">initial term</dfn>. The term <span class="process-math">\(a_k\)</span> is called the <span class="process-math">\(k^{th}\)</span> term. It is also often called the <dfn class="terminology">general</dfn> term of the sequence.<div class="autopermalink" data-description="Paragraph"><a href="#summation-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <details id="E_sequences" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Sequences.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_sequences-2">Consider the sequence <span class="process-math">\(2, 4, 6, 8, 10, \ldots\text{.}\)</span> The initial term is <span class="process-math">\(a_1=2\text{.}\)</span> The <span class="process-math">\(k^{th}\)</span> term is <span class="process-math">\(a_k=2k\text{.}\)</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_sequences-2">Consider the sequence <span class="process-math">\(2, 4, 6, 8, 10, \ldots\text{.}\)</span> The initial term is <span class="process-math">\(a_1=2\text{.}\)</span> The <span class="process-math">\(k^{th}\)</span> term is <span class="process-math">\(a_k=2k\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_sequences-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="E_sequences-3">We need to be careful with subscripts. For example, <span class="process-math">\(a_{4+1}=a_{5}=10\text{,}\)</span> but <span class="process-math">\(a_{4}+1=8+1=9\text{.}\)</span> If we add 1 to the index, we get the next term, which is not the same as adding 1 to the term.</div></article></details><details id="E_generalsequences" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<div class="para" id="E_sequences-3">We need to be careful with subscripts. For example, <span class="process-math">\(a_{4+1}=a_{5}=10\text{,}\)</span> but <span class="process-math">\(a_{4}+1=8+1=9\text{.}\)</span> If we add 1 to the index, we get the next term, which is not the same as adding 1 to the term.<div class="autopermalink" data-description="Paragraph"><a href="#E_sequences-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 4.1.1: Sequences"><a href="#E_sequences" title="Copy heading and permalink for Example 4.1.1: Sequences" aria-label="Copy heading and permalink for Example 4.1.1: Sequences">🔗</a></div></article></details><details id="E_generalsequences" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Explicitly Defined Sequences.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_generalsequences-2">We can define a sequence by giving the general term.</div>
-<div class="para" id="E_generalsequences-3">Let <span class="process-math">\(a_k=2^k, k\geq 0\text{.}\)</span> Give the first five terms of the sequence.</div>
-<details id="E_generalsequences-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"></div></details><div class="para" id="E_generalsequences-5">Let <span class="process-math">\(a_k=2^k, k\geq 0\text{.}\)</span> Give the <span class="process-math">\(k+1\)</span> term of the sequence.</div>
-<details id="E_generalsequences-6" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="E_generalsequences-6-1"><span class="process-math">\(a_{k+1}=2^{k+1}\)</span></div></div></details><div class="para" id="E_generalsequences-7">Let <span class="process-math">\(a_k=\frac{1}{k+1}, k\geq 1\text{.}\)</span> Give the first five terms of the sequence.</div>
-<details id="E_generalsequences-8" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="E_generalsequences-8-1">1/2, 1/3, 1/4, 1/5, 1/6</div></div></details><div class="para" id="E_generalsequences-9">Let <span class="process-math">\(a_k=\frac{1}{k+1}, k\geq 1\text{.}\)</span> Give the <span class="process-math">\(k+1\)</span> term of the sequence.</div>
-<details id="E_generalsequences-10" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><span class="process-math">\(a_{k+1}=\frac{1}{k+2}\)</span></div></details></article></details><article class="activity project-like" id="A_sequence1"><h3 class="heading">
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_generalsequences-2">We can define a sequence by giving the general term.<div class="autopermalink" data-description="Paragraph"><a href="#E_generalsequences-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="E_generalsequences-3">Let <span class="process-math">\(a_k=2^k, k\geq 0\text{.}\)</span> Give the first five terms of the sequence.<div class="autopermalink" data-description="Paragraph"><a href="#E_generalsequences-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="E_generalsequences-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="autopermalink" data-description="Answer 4.1.2.1"><a href="#E_generalsequences-4" title="Copy heading and permalink for Answer 4.1.2.1" aria-label="Copy heading and permalink for Answer 4.1.2.1">🔗</a></div></div></details><div class="para" id="E_generalsequences-5">Let <span class="process-math">\(a_k=2^k, k\geq 0\text{.}\)</span> Give the <span class="process-math">\(k+1\)</span> term of the sequence.<div class="autopermalink" data-description="Paragraph"><a href="#E_generalsequences-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="E_generalsequences-6" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="E_generalsequences-6-1">
+<span class="process-math">\(a_{k+1}=2^{k+1}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_generalsequences-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 4.1.2.2"><a href="#E_generalsequences-6" title="Copy heading and permalink for Answer 4.1.2.2" aria-label="Copy heading and permalink for Answer 4.1.2.2">🔗</a></div>
+</div></details><div class="para" id="E_generalsequences-7">Let <span class="process-math">\(a_k=\frac{1}{k+1}, k\geq 1\text{.}\)</span> Give the first five terms of the sequence.<div class="autopermalink" data-description="Paragraph"><a href="#E_generalsequences-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="E_generalsequences-8" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="E_generalsequences-8-1">1/2, 1/3, 1/4, 1/5, 1/6<div class="autopermalink" data-description="Paragraph"><a href="#E_generalsequences-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 4.1.2.3"><a href="#E_generalsequences-8" title="Copy heading and permalink for Answer 4.1.2.3" aria-label="Copy heading and permalink for Answer 4.1.2.3">🔗</a></div>
+</div></details><div class="para" id="E_generalsequences-9">Let <span class="process-math">\(a_k=\frac{1}{k+1}, k\geq 1\text{.}\)</span> Give the <span class="process-math">\(k+1\)</span> term of the sequence.<div class="autopermalink" data-description="Paragraph"><a href="#E_generalsequences-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="E_generalsequences-10" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<span class="process-math">\(a_{k+1}=\frac{1}{k+2}\)</span><div class="autopermalink" data-description="Answer 4.1.2.4"><a href="#E_generalsequences-10" title="Copy heading and permalink for Answer 4.1.2.4" aria-label="Copy heading and permalink for Answer 4.1.2.4">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 4.1.2: Explicitly Defined Sequences"><a href="#E_generalsequences" title="Copy heading and permalink for Example 4.1.2: Explicitly Defined Sequences" aria-label="Copy heading and permalink for Example 4.1.2: Explicitly Defined Sequences">🔗</a></div></article></details><article class="activity project-like" id="A_sequence1"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.1.1</span><span class="period">.</span><span class="space"> </span><span class="title">An Alternating Sequence.</span>
 </h3>
-<div class="introduction" id="A_sequence1-2"><div class="para" id="A_sequence1-2-1">Consider the sequence <span class="process-math">\(a_k=(-1)^k\)</span> for <span class="process-math">\(k\geq 0\text{.}\)</span>
+<div class="introduction" id="A_sequence1-2"><div class="para" id="A_sequence1-2-1">Consider the sequence <span class="process-math">\(a_k=(-1)^k\)</span> for <span class="process-math">\(k\geq 0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_sequence1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></div>
 <article class="task exercise-like" id="A_sequence1-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="A_sequence1-3-1">Write the first 5 terms of the sequence.</div></article><article class="task exercise-like" id="A_sequence1-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="A_sequence1-4-1">What is the initial term?</div></article></article><article class="activity project-like" id="A_sequence2"><h3 class="heading">
+<div class="para" id="A_sequence1-3-1">Write the first 5 terms of the sequence.<div class="autopermalink" data-description="Paragraph"><a href="#A_sequence1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 4.1.1.a"><a href="#A_sequence1-3" title="Copy heading and permalink for Task 4.1.1.a" aria-label="Copy heading and permalink for Task 4.1.1.a">🔗</a></div></article><article class="task exercise-like" id="A_sequence1-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="A_sequence1-4-1">What is the initial term?<div class="autopermalink" data-description="Paragraph"><a href="#A_sequence1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 4.1.1.b"><a href="#A_sequence1-4" title="Copy heading and permalink for Task 4.1.1.b" aria-label="Copy heading and permalink for Task 4.1.1.b">🔗</a></div></article><div class="autopermalink" data-description="Activity 4.1.1: An Alternating Sequence"><a href="#A_sequence1" title="Copy heading and permalink for Activity 4.1.1: An Alternating Sequence" aria-label="Copy heading and permalink for Activity 4.1.1: An Alternating Sequence">🔗</a></div></article><article class="activity project-like" id="A_sequence2"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">A Fractional Sequence.</span>
 </h3>
-<div class="introduction" id="A_sequence2-2"><div class="para" id="A_sequence2-2-1">Consider the sequence <span class="process-math">\(a_k=\frac{1}{k-1}\)</span> for <span class="process-math">\(k\geq 3\text{.}\)</span>
+<div class="introduction" id="A_sequence2-2"><div class="para" id="A_sequence2-2-1">Consider the sequence <span class="process-math">\(a_k=\frac{1}{k-1}\)</span> for <span class="process-math">\(k\geq 3\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_sequence2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></div>
 <article class="task exercise-like" id="A_sequence2-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="A_sequence2-3-1">Write the first 5 terms of the sequence.</div></article><article class="task exercise-like" id="A_sequence2-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="A_sequence2-4-1">What is the initial term?</div></article></article><article class="activity project-like" id="A_sequence3"><h3 class="heading">
+<div class="para" id="A_sequence2-3-1">Write the first 5 terms of the sequence.<div class="autopermalink" data-description="Paragraph"><a href="#A_sequence2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 4.1.2.a"><a href="#A_sequence2-3" title="Copy heading and permalink for Task 4.1.2.a" aria-label="Copy heading and permalink for Task 4.1.2.a">🔗</a></div></article><article class="task exercise-like" id="A_sequence2-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="A_sequence2-4-1">What is the initial term?<div class="autopermalink" data-description="Paragraph"><a href="#A_sequence2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 4.1.2.b"><a href="#A_sequence2-4" title="Copy heading and permalink for Task 4.1.2.b" aria-label="Copy heading and permalink for Task 4.1.2.b">🔗</a></div></article><div class="autopermalink" data-description="Activity 4.1.2: A Fractional Sequence"><a href="#A_sequence2" title="Copy heading and permalink for Activity 4.1.2: A Fractional Sequence" aria-label="Copy heading and permalink for Activity 4.1.2: A Fractional Sequence">🔗</a></div></article><article class="activity project-like" id="A_sequence3"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.1.3</span><span class="period">.</span><span class="space"> </span><span class="title">Another Alternating Sequence.</span>
 </h3>
-<div class="para" id="A_sequence3-2-1">Consider the sequence <span class="process-math">\(0, 1, -2, 3, -4, 5,  \ldots\text{.}\)</span> Find a general formula for the <span class="process-math">\(k\)</span>th term, <span class="process-math">\(a_k\text{.}\)</span>
-</div></article><div class="para" id="summation-11">Now that we have general forms for sequences, we look at many examples where we add terms in a sequence.</div>
+<div class="para" id="A_sequence3-2-1">Consider the sequence <span class="process-math">\(0, 1, -2, 3, -4, 5,  \ldots\text{.}\)</span> Find a general formula for the <span class="process-math">\(k\)</span>th term, <span class="process-math">\(a_k\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_sequence3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Activity 4.1.3: Another Alternating Sequence"><a href="#A_sequence3" title="Copy heading and permalink for Activity 4.1.3: Another Alternating Sequence" aria-label="Copy heading and permalink for Activity 4.1.3: Another Alternating Sequence">🔗</a></div></article><div class="para" id="summation-11">Now that we have general forms for sequences, we look at many examples where we add terms in a sequence.<div class="autopermalink" data-description="Paragraph"><a href="#summation-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="assemblage assemblage-like" id="B_sumnotation"><h3 class="heading"><span class="title">Summation Notation.</span></h3>
 <div class="para logical" id="B_sumnotation-4">
 <div class="displaymath process-math">
@@ -637,56 +388,106 @@ a_1+a_2+\cdots +a_n=\sum_{k=1}^{n}a_k
 \end{equation*}
 </div>
 <div class="para">We read <span class="process-math">\(\sum_{k=1}^{n}a_k\)</span> as “the sum of <span class="process-math">\(a_k\)</span> from <span class="process-math">\(k=1\)</span> to <span class="process-math">\(n\text{.}\)</span>”</div>
-</div></article><details id="E_sumnotation" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<div class="autopermalink" data-description="Paragraph"><a href="#B_sumnotation-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Assemblage: Summation Notation"><a href="#B_sumnotation" title="Copy heading and permalink for Assemblage: Summation Notation" aria-label="Copy heading and permalink for Assemblage: Summation Notation">🔗</a></div></article><details id="E_sumnotation" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.1.3</span><span class="period">.</span><span class="space"> </span><span class="title">Summation Notation.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_sumnotation-2">Find <span class="process-math">\(\sum_{k=1}^4 k\text{.}\)</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_sumnotation-2">Find <span class="process-math">\(\sum_{k=1}^4 k\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_sumnotation-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="E_sumnotation-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="E_sumnotation-3-1"><span class="process-math">\(1+2+3+4=10\)</span></div></div></details><div class="para" id="E_sumnotation-4">Find <span class="process-math">\(\sum_{k=1}^5 k^2\text{.}\)</span>
+<details id="E_sumnotation-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="E_sumnotation-3-1">
+<span class="process-math">\(1+2+3+4=10\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_sumnotation-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="E_sumnotation-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="E_sumnotation-5-1"><span class="process-math">\(1^2+2^2+3^2+4^2+5^2=55\)</span></div></div></details><div class="para" id="E_sumnotation-6">Find <span class="process-math">\(\sum_{k=1}^n k^2\text{.}\)</span>
+<div class="autopermalink" data-description="Answer 4.1.3.1"><a href="#E_sumnotation-3" title="Copy heading and permalink for Answer 4.1.3.1" aria-label="Copy heading and permalink for Answer 4.1.3.1">🔗</a></div>
+</div></details><div class="para" id="E_sumnotation-4">Find <span class="process-math">\(\sum_{k=1}^5 k^2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_sumnotation-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="E_sumnotation-7" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="E_sumnotation-7-1"><span class="process-math">\(1^2+2^2+3^2+\cdots+n^2\)</span></div></div></details><div class="para" id="E_sumnotation-8">Find <span class="process-math">\(\sum_{k=2}^2 k^2\text{.}\)</span>
+<details id="E_sumnotation-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="E_sumnotation-5-1">
+<span class="process-math">\(1^2+2^2+3^2+4^2+5^2=55\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_sumnotation-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="E_sumnotation-9" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="E_sumnotation-9-1"><span class="process-math">\(2^2=4\)</span></div></div></details></article></details><div class="para" id="summation-14">Note, as we can see in <a href="summation.html#E_sumnotation" class="xref" data-knowl="./knowl/xref/E_sumnotation.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 4.1.3: Summation Notation">Example 4.1.3</a>, <span class="process-math">\(\sum_{k=m}^{m}a_k=a_m\text{.}\)</span>
+<div class="autopermalink" data-description="Answer 4.1.3.2"><a href="#E_sumnotation-5" title="Copy heading and permalink for Answer 4.1.3.2" aria-label="Copy heading and permalink for Answer 4.1.3.2">🔗</a></div>
+</div></details><div class="para" id="E_sumnotation-6">Find <span class="process-math">\(\sum_{k=1}^n k^2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_sumnotation-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="E_sumnotation-7" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="E_sumnotation-7-1">
+<span class="process-math">\(1^2+2^2+3^2+\cdots+n^2\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_sumnotation-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 4.1.3.3"><a href="#E_sumnotation-7" title="Copy heading and permalink for Answer 4.1.3.3" aria-label="Copy heading and permalink for Answer 4.1.3.3">🔗</a></div>
+</div></details><div class="para" id="E_sumnotation-8">Find <span class="process-math">\(\sum_{k=2}^2 k^2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_sumnotation-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="E_sumnotation-9" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="E_sumnotation-9-1">
+<span class="process-math">\(2^2=4\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_sumnotation-9-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 4.1.3.4"><a href="#E_sumnotation-9" title="Copy heading and permalink for Answer 4.1.3.4" aria-label="Copy heading and permalink for Answer 4.1.3.4">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 4.1.3: Summation Notation"><a href="#E_sumnotation" title="Copy heading and permalink for Example 4.1.3: Summation Notation" aria-label="Copy heading and permalink for Example 4.1.3: Summation Notation">🔗</a></div></article></details><div class="para" id="summation-14">Note, as we can see in <a href="summation.html#E_sumnotation" class="xref" data-knowl="./knowl/xref/E_sumnotation.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 4.1.3: Summation Notation">Example 4.1.3</a>, <span class="process-math">\(\sum_{k=m}^{m}a_k=a_m\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#summation-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="activity project-like" id="A_summation"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.1.4</span><span class="period">.</span><span class="space"> </span><span class="title">Using Summation Notation.</span>
-</h3>Consider the sum <span class="process-math">\(\sum_{k=1}^{5}(2k-1)\text{.}\)</span> Write out the summation and find the sum.</article><article class="activity project-like" id="A_shiftedsum"><h3 class="heading">
+</h3>Consider the sum <span class="process-math">\(\sum_{k=1}^{5}(2k-1)\text{.}\)</span> Write out the summation and find the sum.<div class="autopermalink" data-description="Activity 4.1.4: Using Summation Notation"><a href="#A_summation" title="Copy heading and permalink for Activity 4.1.4: Using Summation Notation" aria-label="Copy heading and permalink for Activity 4.1.4: Using Summation Notation">🔗</a></div></article><article class="activity project-like" id="A_shiftedsum"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.1.5</span><span class="period">.</span><span class="space"> </span><span class="title">A Shifted Sum.</span>
 </h3>
-<div class="introduction" id="A_shiftedsum-2"><div class="para" id="A_shiftedsum-2-1">Consider the sum <span class="process-math">\(\sum_{k=1}^{n}\frac{1}{k}\text{.}\)</span>
+<div class="introduction" id="A_shiftedsum-2"><div class="para" id="A_shiftedsum-2-1">Consider the sum <span class="process-math">\(\sum_{k=1}^{n}\frac{1}{k}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_shiftedsum-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></div>
 <article class="task exercise-like" id="A_shiftedsum-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="A_shiftedsum-3-1">Write out the summation.</div></article><article class="task exercise-like" id="A_shiftedsum-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="A_shiftedsum-4-1">Now write out the summation for <span class="process-math">\(\sum_{k=1}^{n+1}\frac{1}{k}\text{.}\)</span> How do (a) and (b) differ?</div></article><article class="task exercise-like" id="A_shiftedsum-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="A_shiftedsum-5-1">Now write out the summation for <span class="process-math">\(\sum_{k=0}^{n}\frac{1}{k+1}\text{.}\)</span> Is this the same as either of the previous sums?</div></article></article><article class="activity project-like" id="A_nplus1sum"><h3 class="heading">
+<div class="para" id="A_shiftedsum-3-1">Write out the summation.<div class="autopermalink" data-description="Paragraph"><a href="#A_shiftedsum-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 4.1.5.a"><a href="#A_shiftedsum-3" title="Copy heading and permalink for Task 4.1.5.a" aria-label="Copy heading and permalink for Task 4.1.5.a">🔗</a></div></article><article class="task exercise-like" id="A_shiftedsum-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="A_shiftedsum-4-1">Now write out the summation for <span class="process-math">\(\sum_{k=1}^{n+1}\frac{1}{k}\text{.}\)</span> How do (a) and (b) differ?<div class="autopermalink" data-description="Paragraph"><a href="#A_shiftedsum-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 4.1.5.b"><a href="#A_shiftedsum-4" title="Copy heading and permalink for Task 4.1.5.b" aria-label="Copy heading and permalink for Task 4.1.5.b">🔗</a></div></article><article class="task exercise-like" id="A_shiftedsum-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="A_shiftedsum-5-1">Now write out the summation for <span class="process-math">\(\sum_{k=0}^{n}\frac{1}{k+1}\text{.}\)</span> Is this the same as either of the previous sums?<div class="autopermalink" data-description="Paragraph"><a href="#A_shiftedsum-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 4.1.5.c"><a href="#A_shiftedsum-5" title="Copy heading and permalink for Task 4.1.5.c" aria-label="Copy heading and permalink for Task 4.1.5.c">🔗</a></div></article><div class="autopermalink" data-description="Activity 4.1.5: A Shifted Sum"><a href="#A_shiftedsum" title="Copy heading and permalink for Activity 4.1.5: A Shifted Sum" aria-label="Copy heading and permalink for Activity 4.1.5: A Shifted Sum">🔗</a></div></article><article class="activity project-like" id="A_nplus1sum"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.1.6</span><span class="period">.</span><span class="space"> </span><span class="title">Adding Another Term.</span>
 </h3>
-<div class="introduction" id="A_nplus1sum-2"><div class="para" id="A_nplus1sum-2-1">Consider the sum <span class="process-math">\(\sum_{k=1}^{n}\frac{1}{k(k+1)}\text{.}\)</span>
+<div class="introduction" id="A_nplus1sum-2"><div class="para" id="A_nplus1sum-2-1">Consider the sum <span class="process-math">\(\sum_{k=1}^{n}\frac{1}{k(k+1)}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_nplus1sum-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></div>
 <article class="task exercise-like" id="A_nplus1sum-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="A_nplus1sum-3-1">Write out the summation.</div></article><article class="task exercise-like" id="A_nplus1sum-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="A_nplus1sum-4-1">Now write out the summation for <span class="process-math">\(\sum_{k=1}^{n+1}\frac{1}{k(k+1)}\text{.}\)</span> How do (a) and (b) differ?</div></article></article><div class="para logical" id="summation-18">
+<div class="para" id="A_nplus1sum-3-1">Write out the summation.<div class="autopermalink" data-description="Paragraph"><a href="#A_nplus1sum-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 4.1.6.a"><a href="#A_nplus1sum-3" title="Copy heading and permalink for Task 4.1.6.a" aria-label="Copy heading and permalink for Task 4.1.6.a">🔗</a></div></article><article class="task exercise-like" id="A_nplus1sum-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="A_nplus1sum-4-1">Now write out the summation for <span class="process-math">\(\sum_{k=1}^{n+1}\frac{1}{k(k+1)}\text{.}\)</span> How do (a) and (b) differ?<div class="autopermalink" data-description="Paragraph"><a href="#A_nplus1sum-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 4.1.6.b"><a href="#A_nplus1sum-4" title="Copy heading and permalink for Task 4.1.6.b" aria-label="Copy heading and permalink for Task 4.1.6.b">🔗</a></div></article><div class="autopermalink" data-description="Activity 4.1.6: Adding Another Term"><a href="#A_nplus1sum" title="Copy heading and permalink for Activity 4.1.6: Adding Another Term" aria-label="Copy heading and permalink for Activity 4.1.6: Adding Another Term">🔗</a></div></article><div class="para logical" id="summation-18">
 <div class="para">Just as we can add several terms of a sequence, <dfn class="terminology">product notation</dfn> allows us to multiply several terms of a sequence.</div>
 <div class="displaymath process-math">
 \begin{equation*}
 a_1\cdot a_2\cdot a_3\cdots a_n=\prod_{k=1}^{n}a_k\text{.}
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#summation-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <details id="E_prodnotation" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.1.4</span><span class="period">.</span><span class="space"> </span><span class="title">Product Notation.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_prodnotation-2">Find <span class="process-math">\(\prod_{k=1}^4 k\text{.}\)</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_prodnotation-2">Find <span class="process-math">\(\prod_{k=1}^4 k\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_prodnotation-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="E_prodnotation-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="E_prodnotation-3-1"><span class="process-math">\(1\cdot2\cdot3\cdot 4=24\)</span></div></div></details><div class="para" id="E_prodnotation-4">Find <span class="process-math">\(\prod_{k=1}^3 k^2\text{.}\)</span>
+<details id="E_prodnotation-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="E_prodnotation-3-1">
+<span class="process-math">\(1\cdot2\cdot3\cdot 4=24\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_prodnotation-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="E_prodnotation-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="E_prodnotation-5-1"><span class="process-math">\(1^2\cdot2^2\cdot3^2=36\)</span></div></div></details></article></details><article class="activity project-like" id="A_products"><h3 class="heading">
+<div class="autopermalink" data-description="Answer 4.1.4.1"><a href="#E_prodnotation-3" title="Copy heading and permalink for Answer 4.1.4.1" aria-label="Copy heading and permalink for Answer 4.1.4.1">🔗</a></div>
+</div></details><div class="para" id="E_prodnotation-4">Find <span class="process-math">\(\prod_{k=1}^3 k^2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_prodnotation-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="E_prodnotation-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="E_prodnotation-5-1">
+<span class="process-math">\(1^2\cdot2^2\cdot3^2=36\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_prodnotation-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 4.1.4.2"><a href="#E_prodnotation-5" title="Copy heading and permalink for Answer 4.1.4.2" aria-label="Copy heading and permalink for Answer 4.1.4.2">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 4.1.4: Product Notation"><a href="#E_prodnotation" title="Copy heading and permalink for Example 4.1.4: Product Notation" aria-label="Copy heading and permalink for Example 4.1.4: Product Notation">🔗</a></div></article></details><article class="activity project-like" id="A_products"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.1.7</span><span class="period">.</span><span class="space"> </span><span class="title">Products.</span>
 </h3>
-<div class="introduction" id="A_products-2"><div class="para" id="A_products-2-1">Write out the following products.</div></div>
+<div class="introduction" id="A_products-2"><div class="para" id="A_products-2-1">Write out the following products.<div class="autopermalink" data-description="Paragraph"><a href="#A_products-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
 <article class="task exercise-like" id="A_products-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="A_products-3-1"><span class="process-math">\(\prod_{k=1}^{5}(2k-1)\)</span></div></article><article class="task exercise-like" id="A_products-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="A_products-4-1"><span class="process-math">\(\prod_{k=1}^{n+1}(2k)\)</span></div></article></article><div class="para logical" id="summation-21">
+<div class="para" id="A_products-3-1">
+<span class="process-math">\(\prod_{k=1}^{5}(2k-1)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_products-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 4.1.7.a"><a href="#A_products-3" title="Copy heading and permalink for Task 4.1.7.a" aria-label="Copy heading and permalink for Task 4.1.7.a">🔗</a></div></article><article class="task exercise-like" id="A_products-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="A_products-4-1">
+<span class="process-math">\(\prod_{k=1}^{n+1}(2k)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_products-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 4.1.7.b"><a href="#A_products-4" title="Copy heading and permalink for Task 4.1.7.b" aria-label="Copy heading and permalink for Task 4.1.7.b">🔗</a></div></article><div class="autopermalink" data-description="Activity 4.1.7: Products"><a href="#A_products" title="Copy heading and permalink for Activity 4.1.7: Products" aria-label="Copy heading and permalink for Activity 4.1.7: Products">🔗</a></div></article><div class="para logical" id="summation-21">
 <div class="para">A particularly useful product is <span class="process-math">\(n\)</span> <dfn class="terminology">factorial</dfn>,</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -695,54 +496,117 @@ n!=(n)(n-1)\cdots(2)(1).
 </div>
 <div class="para"> We also need to define <span class="process-math">\(0!=1\text{.}\)</span>
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#summation-21" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="assemblage assemblage-like" id="B_propsums"><h3 class="heading"><span class="title">Properties of Sums and Products.</span></h3>
 <div class="para logical" id="B_propsums-2">
 <div class="para">The following are useful properties when working with summation and product notation.</div>
 <ol class="decimal" id="B_propsums-2-1">
-<li id="B_propsums-2-1-1"><div class="para" id="p-derived-B_propsums-2-1-1"><span class="process-math">\(\displaystyle \sum_{k=m}^{n}a_k+\sum_{k=m}^{n}b_k=\sum_{k=m}^{n}(a_k+b_k)\)</span></div></li>
-<li id="B_propsums-2-1-2"><div class="para" id="p-derived-B_propsums-2-1-2"><span class="process-math">\(\displaystyle c\sum_{k=m}^{n}a_k=\sum_{k=m}^{n}(ca_k)\)</span></div></li>
-<li id="B_propsums-2-1-3"><div class="para" id="p-derived-B_propsums-2-1-3"><span class="process-math">\(\displaystyle \biggl(\prod_{k=m}^{n}a_k\biggr)\biggl(\prod_{k=m}^{n}b_k\biggr)=\prod_{k=m}^{n}(a_k\cdot b_k)\)</span></div></li>
+<li id="B_propsums-2-1-1">
+<div class="para" id="p-derived-B_propsums-2-1-1"><span class="process-math">\(\displaystyle \sum_{k=m}^{n}a_k+\sum_{k=m}^{n}b_k=\sum_{k=m}^{n}(a_k+b_k)\)</span></div>
+<div class="autopermalink" data-description="Item 1"><a href="#B_propsums-2-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="B_propsums-2-1-2">
+<div class="para" id="p-derived-B_propsums-2-1-2"><span class="process-math">\(\displaystyle c\sum_{k=m}^{n}a_k=\sum_{k=m}^{n}(ca_k)\)</span></div>
+<div class="autopermalink" data-description="Item 2"><a href="#B_propsums-2-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="B_propsums-2-1-3">
+<div class="para" id="p-derived-B_propsums-2-1-3"><span class="process-math">\(\displaystyle \biggl(\prod_{k=m}^{n}a_k\biggr)\biggl(\prod_{k=m}^{n}b_k\biggr)=\prod_{k=m}^{n}(a_k\cdot b_k)\)</span></div>
+<div class="autopermalink" data-description="Item 3"><a href="#B_propsums-2-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
 </ol>
-</div></article><article class="activity project-like" id="A_sumofsums"><h3 class="heading">
+<div class="autopermalink" data-description="Paragraph"><a href="#B_propsums-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Assemblage: Properties of Sums and Products"><a href="#B_propsums" title="Copy heading and permalink for Assemblage: Properties of Sums and Products" aria-label="Copy heading and permalink for Assemblage: Properties of Sums and Products">🔗</a></div></article><article class="activity project-like" id="A_sumofsums"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.1.8</span><span class="period">.</span><span class="space"> </span><span class="title">Summing Two Sums.</span>
 </h3>
-<div class="para" id="A_sumofsums-2-1">Prove <span class="process-math">\(\sum_{k=1}^{n}a_k + \sum_{k=1}^{n}b_k=\sum_{1}^{n}(a_k+b_k)\text{.}\)</span>
+<div class="para" id="A_sumofsums-2-1">Prove <span class="process-math">\(\sum_{k=1}^{n}a_k + \sum_{k=1}^{n}b_k=\sum_{1}^{n}(a_k+b_k)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_sumofsums-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="solutions"><details id="A_sumofsums-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content"><div class="para" id="A_sumofsums-3-1">Try writing out the sum rather than using summation notation.</div></div></details></div></article><div class="para logical" id="summation-24">
+<div class="solutions"><details id="A_sumofsums-3" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para" id="A_sumofsums-3-1">Try writing out the sum rather than using summation notation.<div class="autopermalink" data-description="Paragraph"><a href="#A_sumofsums-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Hint 4.1.8.1"><a href="#A_sumofsums-3" title="Copy heading and permalink for Hint 4.1.8.1" aria-label="Copy heading and permalink for Hint 4.1.8.1">🔗</a></div>
+</div></details></div>
+<div class="autopermalink" data-description="Activity 4.1.8: Summing Two Sums"><a href="#A_sumofsums" title="Copy heading and permalink for Activity 4.1.8: Summing Two Sums" aria-label="Copy heading and permalink for Activity 4.1.8: Summing Two Sums">🔗</a></div></article><div class="para logical" id="summation-24">
 <div class="para">When we get to mathematical induction in <a href="induction.html" class="internal" title="Section 4.2: Mathematical Induction">Section 4.2</a>, it will be important that we can work with summations where we want to add “the <span class="process-math">\(n+1\)</span> term” to a summation. In particular, the following observation is useful:</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/induction.html">
 \begin{equation*}
 \biggl(\sum_{k=1}^{n}a_{k}\biggr)+a_{n+1}=\sum_{k=1}^{n+1}a_k.
 \end{equation*}
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#summation-24" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="summation-25">We should also note that there are often multiple ways to write the same sum.</div>
+<div class="para" id="summation-25">We should also note that there are often multiple ways to write the same sum.<div class="autopermalink" data-description="Paragraph"><a href="#summation-25" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <details id="E_changevariables" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.1.5</span><span class="period">.</span><span class="space"> </span><span class="title">Writing a Sum in Two Different Ways.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_changevariables-2">Consider the sum <span class="process-math">\(1^2+2^2+3^2\text{.}\)</span> Depending on how we index the sum, we can write it in different ways.</div>
-<div class="para" id="E_changevariables-3">If we index from <span class="process-math">\(k=1\)</span> to 3, we have <span class="process-math">\(\sum_{k=1}^3k^2=1^2+2^2+3^2\text{.}\)</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_changevariables-2">Consider the sum <span class="process-math">\(1^2+2^2+3^2\text{.}\)</span> Depending on how we index the sum, we can write it in different ways.<div class="autopermalink" data-description="Paragraph"><a href="#E_changevariables-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="E_changevariables-4">If we index from <span class="process-math">\(k=2\)</span> to 4, we have <span class="process-math">\(\sum_{k=2}^4(k-1)^2=1^2+2^2+3^2\text{.}\)</span>
-</div></article></details><section class="exercises" id="summation-27"><h3 class="heading hide-type">
+<div class="para" id="E_changevariables-3">If we index from <span class="process-math">\(k=1\)</span> to 3, we have <span class="process-math">\(\sum_{k=1}^3k^2=1^2+2^2+3^2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_changevariables-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="E_changevariables-4">If we index from <span class="process-math">\(k=2\)</span> to 4, we have <span class="process-math">\(\sum_{k=2}^4(k-1)^2=1^2+2^2+3^2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_changevariables-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 4.1.5: Writing a Sum in Two Different Ways"><a href="#E_changevariables" title="Copy heading and permalink for Example 4.1.5: Writing a Sum in Two Different Ways" aria-label="Copy heading and permalink for Example 4.1.5: Writing a Sum in Two Different Ways">🔗</a></div></article></details><section class="exercises" id="summation-27"><h3 class="heading hide-type">
 <span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Exercises</span>
 </h3>
 <article class="exercise exercise-like" id="summation-27-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="summation-27-1-1-1">Find an explicit formula for the following sequences with the given initial terms.</div> <ol class="lower-alpha" id="summation-27-1-1-2">
-<li id="summation-27-1-1-2-1"><div class="para" id="summation-27-1-1-2-1-1"><span class="process-math">\(\displaystyle \frac{1}{3}, \frac{4}{9},\frac{9}{27}, \frac{16}{81},\frac{25}{243}, \frac{36}{729}\)</span></div></li>
-<li id="summation-27-1-1-2-2"><div class="para" id="summation-27-1-1-2-2-1"><span class="process-math">\(\displaystyle 3, 6, 12, 24, 48, 96\)</span></div></li>
-</ol></article><article class="exercise exercise-like" id="summation-27-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para" id="summation-27-2-1-1">Compute the given product or sum.</div> <ol class="lower-alpha" id="summation-27-2-1-2">
-<li id="summation-27-2-1-2-1"><div class="para" id="summation-27-2-1-2-1-1"><span class="process-math">\(\displaystyle \prod_{k=2}^{4}{k^2}\)</span></div></li>
-<li id="summation-27-2-1-2-2"><div class="para" id="summation-27-2-1-2-2-1"><span class="process-math">\(\displaystyle \prod_{k=2}^{2}{\Bigl(1-\frac{1}{k}\Bigr)}\)</span></div></li>
-<li id="summation-27-2-1-2-3"><div class="para" id="summation-27-2-1-2-3-1"><span class="process-math">\(\displaystyle \sum_{k=-1}^{1}{(k^2+3)}\)</span></div></li>
-</ol></article><article class="exercise exercise-like" id="summation-27-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="para" id="summation-27-3-1-1">Write out the sum in expanded form.</div> <ol class="lower-alpha" id="summation-27-3-1-2">
-<li id="summation-27-3-1-2-1"><div class="para" id="summation-27-3-1-2-1-1"><span class="process-math">\(\displaystyle \sum_{j=1}^{n}{j(j+1)}\)</span></div></li>
-<li id="summation-27-3-1-2-2"><div class="para" id="summation-27-3-1-2-2-1"><span class="process-math">\(\displaystyle \sum_{i=1}^{k+1}{i(i!)}\)</span></div></li>
-</ol></article><article class="exercise exercise-like" id="summation-27-4"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para" id="summation-27-4-1-1">Rewrite by separating off the final term: <span class="process-math">\(\sum_{i=1}^{k+1}{i(i!)}\)</span>
-</div></article><article class="exercise exercise-like" id="summation-27-5"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="para" id="summation-27-1-1-1">Find an explicit formula for the following sequences with the given initial terms.<div class="autopermalink" data-description="Paragraph"><a href="#summation-27-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha lower-alpha-level-1" id="summation-27-1-1-2">
+<li id="summation-27-1-1-2-1">
+<div class="para" id="summation-27-1-1-2-1-1">
+<span class="process-math">\(\displaystyle \frac{1}{3}, \frac{4}{9},\frac{9}{27}, \frac{16}{81},\frac{25}{243}, \frac{36}{729}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#summation-27-1-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.1.1.a"><a href="#summation-27-1-1-2-1" title="Copy heading and permalink for Item 4.1.1.a" aria-label="Copy heading and permalink for Item 4.1.1.a">🔗</a></div>
+</li>
+<li id="summation-27-1-1-2-2">
+<div class="para" id="summation-27-1-1-2-2-1">
+<span class="process-math">\(\displaystyle 3, 6, 12, 24, 48, 96\)</span><div class="autopermalink" data-description="Paragraph"><a href="#summation-27-1-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.1.1.b"><a href="#summation-27-1-1-2-2" title="Copy heading and permalink for Item 4.1.1.b" aria-label="Copy heading and permalink for Item 4.1.1.b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 4.1.1"><a href="#summation-27-1" title="Copy heading and permalink for Exercise 4.1.1" aria-label="Copy heading and permalink for Exercise 4.1.1">🔗</a></div></article><article class="exercise exercise-like" id="summation-27-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="para" id="summation-27-2-1-1">Compute the given product or sum.<div class="autopermalink" data-description="Paragraph"><a href="#summation-27-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha lower-alpha-level-1" id="summation-27-2-1-2">
+<li id="summation-27-2-1-2-1">
+<div class="para" id="summation-27-2-1-2-1-1">
+<span class="process-math">\(\displaystyle \prod_{k=2}^{4}{k^2}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#summation-27-2-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.1.2.a"><a href="#summation-27-2-1-2-1" title="Copy heading and permalink for Item 4.1.2.a" aria-label="Copy heading and permalink for Item 4.1.2.a">🔗</a></div>
+</li>
+<li id="summation-27-2-1-2-2">
+<div class="para" id="summation-27-2-1-2-2-1">
+<span class="process-math">\(\displaystyle \prod_{k=2}^{2}{\Bigl(1-\frac{1}{k}\Bigr)}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#summation-27-2-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.1.2.b"><a href="#summation-27-2-1-2-2" title="Copy heading and permalink for Item 4.1.2.b" aria-label="Copy heading and permalink for Item 4.1.2.b">🔗</a></div>
+</li>
+<li id="summation-27-2-1-2-3">
+<div class="para" id="summation-27-2-1-2-3-1">
+<span class="process-math">\(\displaystyle \sum_{k=-1}^{1}{(k^2+3)}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#summation-27-2-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.1.2.c"><a href="#summation-27-2-1-2-3" title="Copy heading and permalink for Item 4.1.2.c" aria-label="Copy heading and permalink for Item 4.1.2.c">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 4.1.2"><a href="#summation-27-2" title="Copy heading and permalink for Exercise 4.1.2" aria-label="Copy heading and permalink for Exercise 4.1.2">🔗</a></div></article><article class="exercise exercise-like" id="summation-27-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="para" id="summation-27-3-1-1">Write out the sum in expanded form.<div class="autopermalink" data-description="Paragraph"><a href="#summation-27-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha lower-alpha-level-1" id="summation-27-3-1-2">
+<li id="summation-27-3-1-2-1">
+<div class="para" id="summation-27-3-1-2-1-1">
+<span class="process-math">\(\displaystyle \sum_{j=1}^{n}{j(j+1)}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#summation-27-3-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.1.3.a"><a href="#summation-27-3-1-2-1" title="Copy heading and permalink for Item 4.1.3.a" aria-label="Copy heading and permalink for Item 4.1.3.a">🔗</a></div>
+</li>
+<li id="summation-27-3-1-2-2">
+<div class="para" id="summation-27-3-1-2-2-1">
+<span class="process-math">\(\displaystyle \sum_{i=1}^{k+1}{i(i!)}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#summation-27-3-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.1.3.b"><a href="#summation-27-3-1-2-2" title="Copy heading and permalink for Item 4.1.3.b" aria-label="Copy heading and permalink for Item 4.1.3.b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 4.1.3"><a href="#summation-27-3" title="Copy heading and permalink for Exercise 4.1.3" aria-label="Copy heading and permalink for Exercise 4.1.3">🔗</a></div></article><article class="exercise exercise-like" id="summation-27-4"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="para" id="summation-27-4-1-1">Rewrite by separating off the final term: <span class="process-math">\(\sum_{i=1}^{k+1}{i(i!)}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#summation-27-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 4.1.4"><a href="#summation-27-4" title="Copy heading and permalink for Exercise 4.1.4" aria-label="Copy heading and permalink for Exercise 4.1.4">🔗</a></div></article><article class="exercise exercise-like" id="summation-27-5"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
 <div class="para logical" id="summation-27-5-1-1">
 <div class="para">Write using product notation:</div>
 <div class="displaymath process-math">
@@ -750,7 +614,9 @@ n!=(n)(n-1)\cdots(2)(1).
 (2^2-1)\cdot(3^2-1)\cdot(4^2-1).
 \end{equation*}
 </div>
-</div></article><article class="exercise exercise-like" id="summation-27-6"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="autopermalink" data-description="Paragraph"><a href="#summation-27-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 4.1.5"><a href="#summation-27-5" title="Copy heading and permalink for Exercise 4.1.5" aria-label="Copy heading and permalink for Exercise 4.1.5">🔗</a></div></article><article class="exercise exercise-like" id="summation-27-6"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
 <div class="para logical" id="summation-27-6-1-1">
 <div class="para">Write using summation notation:</div>
 <div class="displaymath process-math">
@@ -758,7 +624,9 @@ n!=(n)(n-1)\cdots(2)(1).
 1^3+2^3+3^3+\cdots+n^3.
 \end{equation*}
 </div>
-</div></article><article class="exercise exercise-like" id="summation-27-7"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<div class="autopermalink" data-description="Paragraph"><a href="#summation-27-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 4.1.6"><a href="#summation-27-6" title="Copy heading and permalink for Exercise 4.1.6" aria-label="Copy heading and permalink for Exercise 4.1.6">🔗</a></div></article><article class="exercise exercise-like" id="summation-27-7"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
 <div class="para logical" id="summation-27-7-1-1">
 <div class="para">Transform the sum by making the change of variable <span class="process-math">\(j=i-1\text{:}\)</span>
 </div>
@@ -767,11 +635,21 @@ n!=(n)(n-1)\cdots(2)(1).
 \sum_{i=1}^{n+1}\frac{(i-1)^2}{i\cdot n}.
 \end{equation*}
 </div>
-</div></article><article class="exercise exercise-like" id="summation-27-8"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
-<div class="para" id="summation-27-8-1-1">Simplify.</div> <ol class="lower-alpha" id="summation-27-8-1-2">
-<li id="summation-27-8-1-2-1"><div class="para" id="p-derived-summation-27-8-1-2-1"><span class="process-math">\(\displaystyle \frac{((n+1)!)^2}{(n!)^2}\)</span></div></li>
-<li id="summation-27-8-1-2-2"><div class="para" id="p-derived-summation-27-8-1-2-2"><span class="process-math">\(\displaystyle \frac{n!}{(n-k+1)!}\)</span></div></li>
-</ol></article><article class="exercise exercise-like" id="summation-27-9"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
+<div class="autopermalink" data-description="Paragraph"><a href="#summation-27-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 4.1.7"><a href="#summation-27-7" title="Copy heading and permalink for Exercise 4.1.7" aria-label="Copy heading and permalink for Exercise 4.1.7">🔗</a></div></article><article class="exercise exercise-like" id="summation-27-8"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<div class="para" id="summation-27-8-1-1">Simplify.<div class="autopermalink" data-description="Paragraph"><a href="#summation-27-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha lower-alpha-level-1" id="summation-27-8-1-2">
+<li id="summation-27-8-1-2-1">
+<div class="para" id="p-derived-summation-27-8-1-2-1"><span class="process-math">\(\displaystyle \frac{((n+1)!)^2}{(n!)^2}\)</span></div>
+<div class="autopermalink" data-description="Item 4.1.8.a"><a href="#summation-27-8-1-2-1" title="Copy heading and permalink for Item 4.1.8.a" aria-label="Copy heading and permalink for Item 4.1.8.a">🔗</a></div>
+</li>
+<li id="summation-27-8-1-2-2">
+<div class="para" id="p-derived-summation-27-8-1-2-2"><span class="process-math">\(\displaystyle \frac{n!}{(n-k+1)!}\)</span></div>
+<div class="autopermalink" data-description="Item 4.1.8.b"><a href="#summation-27-8-1-2-2" title="Copy heading and permalink for Item 4.1.8.b" aria-label="Copy heading and permalink for Item 4.1.8.b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 4.1.8"><a href="#summation-27-8" title="Copy heading and permalink for Exercise 4.1.8" aria-label="Copy heading and permalink for Exercise 4.1.8">🔗</a></div></article><article class="exercise exercise-like" id="summation-27-9"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
 <div class="para logical" id="summation-27-9-1-1">
 <div class="para">Observe that</div>
 <div class="displaymath process-math" id="summation-27-9-1-1-1">
@@ -782,16 +660,19 @@ n!=(n)(n-1)\cdots(2)(1).
 \frac{1}{1\cdot 3}+\frac{1}{3\cdot 5}+\frac{1}{5\cdot 7}+\frac{1}{7\cdot 9}\amp =\frac{4}{9}
 \end{align*}
 </div>
-</div> <div class="para" id="summation-27-9-1-2">Find a general formula for <span class="process-math">\(\sum_{i=1}^{n}\frac{1}{(2i-1)(2i+1)}\text{.}\)</span>
-</div></article><article class="exercise exercise-like" id="summation-27-10"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
-<div class="para" id="summation-27-10-1-1">Evaluate the sum <span class="process-math">\(\sum_{i=1}^{n}\frac{i}{(i+1)!}\)</span> for all <span class="process-math">\(n=1, 2, 3, 4, 5\text{.}\)</span> Find a formula for the sum for a general <span class="process-math">\(n\text{.}\)</span>
-</div></article></section></section></div>
-<div class="ptx-content-footer">
+<div class="autopermalink" data-description="Paragraph"><a href="#summation-27-9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="summation-27-9-1-2">Find a general formula for <span class="process-math">\(\sum_{i=1}^{n}\frac{1}{(2i-1)(2i+1)}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#summation-27-9-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 4.1.9"><a href="#summation-27-9" title="Copy heading and permalink for Exercise 4.1.9" aria-label="Copy heading and permalink for Exercise 4.1.9">🔗</a></div></article><article class="exercise exercise-like" id="summation-27-10"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
+<div class="para" id="summation-27-10-1-1">Evaluate the sum <span class="process-math">\(\sum_{i=1}^{n}\frac{i}{(i+1)!}\)</span> for all <span class="process-math">\(n=1, 2, 3, 4, 5\text{.}\)</span> Find a formula for the sum for a general <span class="process-math">\(n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#summation-27-10-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 4.1.10"><a href="#summation-27-10" title="Copy heading and permalink for Exercise 4.1.10" aria-label="Copy heading and permalink for Exercise 4.1.10">🔗</a></div></article><div class="autopermalink" data-description="Exercises 4.1"><a href="#summation-27" title="Copy heading and permalink for Exercises 4.1" aria-label="Copy heading and permalink for Exercises 4.1">🔗</a></div></section><div class="autopermalink" data-description="Section 4.1: Summation Notation"><a href="#summation" title="Copy heading and permalink for Section 4.1: Summation Notation" aria-label="Copy heading and permalink for Section 4.1: Summation Notation">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="chapter4.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="induction.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
-<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
 </div>
 <!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
 var sc_project=12871717;

@@ -6,14 +6,20 @@
 <!--*                                          *-->
 <!--********************************************-->
 <html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Functions</title>
-<meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:type" content="book">
-<meta property="book:title" content="Introduction to Proofs">
-<meta property="book:author" content="Jennifer Firkins Nordstrom">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
 <script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
@@ -69,13 +75,12 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
-<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
-</script><link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
-<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
-<!--** eBookCongig is necessary to configure interactive       **-->
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Introduction to Proofs">
+<meta property="book:author" content="Jennifer Firkins Nordstrom">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -97,307 +102,23 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.5.6';
+eBookConfig.runestone_version = '7.11.5';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.82032a8574f6ce75.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6a985cbf816db5c7.css">
-<style>
-#arguments-20-1-1-4 { counter-set: arguments-20-1-1-4 0; }
-#arguments-20-1-1-4 > li::marker { content: ""counter(arguments-20-1-1-4,lower-alpha)""; }
-#arguments-20-1-1-4 > li { counter-increment: arguments-20-1-1-4; }
-#arguments-20-2-1-3 { counter-set: arguments-20-2-1-3 0; }
-#arguments-20-2-1-3 > li::marker { content: ""counter(arguments-20-2-1-3,lower-alpha)""; }
-#arguments-20-2-1-3 > li { counter-increment: arguments-20-2-1-3; }
-#arguments-20-3-1-2 { counter-set: arguments-20-3-1-2 0; }
-#arguments-20-3-1-2 > li::marker { content: "("counter(arguments-20-3-1-2,lower-alpha)")"; }
-#arguments-20-3-1-2 > li { counter-increment: arguments-20-3-1-2; }
-#B_logicalequivalences-3-5 { counter-set: B_logicalequivalences-3-5 0; }
-#B_logicalequivalences-3-5 > li::marker { content: ""counter(B_logicalequivalences-3-5,decimal)""; }
-#B_logicalequivalences-3-5 > li { counter-increment: B_logicalequivalences-3-5; }
-#connectives-73-1-1-2 { counter-set: connectives-73-1-1-2 0; }
-#connectives-73-1-1-2 > li::marker { content: ""counter(connectives-73-1-1-2,lower-alpha)""; }
-#connectives-73-1-1-2 > li { counter-increment: connectives-73-1-1-2; }
-#connectives-73-2-1-2 { counter-set: connectives-73-2-1-2 0; }
-#connectives-73-2-1-2 > li::marker { content: ""counter(connectives-73-2-1-2,lower-alpha)""; }
-#connectives-73-2-1-2 > li { counter-increment: connectives-73-2-1-2; }
-#connectives-73-3-1-2 { counter-set: connectives-73-3-1-2 0; }
-#connectives-73-3-1-2 > li::marker { content: ""counter(connectives-73-3-1-2,lower-alpha)""; }
-#connectives-73-3-1-2 > li { counter-increment: connectives-73-3-1-2; }
-#ER_onlyandnot-1-2 { counter-set: ER_onlyandnot-1-2 0; }
-#ER_onlyandnot-1-2 > li::marker { content: ""counter(ER_onlyandnot-1-2,lower-alpha)""; }
-#ER_onlyandnot-1-2 > li { counter-increment: ER_onlyandnot-1-2; }
-#connectives-73-5-1-2 { counter-set: connectives-73-5-1-2 0; }
-#connectives-73-5-1-2 > li::marker { content: ""counter(connectives-73-5-1-2,lower-alpha)""; }
-#connectives-73-5-1-2 > li { counter-increment: connectives-73-5-1-2; }
-#setnotation-22-4-1-2 { counter-set: setnotation-22-4-1-2 0; }
-#setnotation-22-4-1-2 > li::marker { content: ""counter(setnotation-22-4-1-2,lower-alpha)""; }
-#setnotation-22-4-1-2 > li { counter-increment: setnotation-22-4-1-2; }
-#setnotation-22-5-1-2 { counter-set: setnotation-22-5-1-2 0; }
-#setnotation-22-5-1-2 > li::marker { content: ""counter(setnotation-22-5-1-2,lower-alpha)""; }
-#setnotation-22-5-1-2 > li { counter-increment: setnotation-22-5-1-2; }
-#E_multquant1-2-2 { counter-set: E_multquant1-2-2 0; }
-#E_multquant1-2-2 > li::marker { content: ""counter(E_multquant1-2-2,lower-alpha)""; }
-#E_multquant1-2-2 > li { counter-increment: E_multquant1-2-2; }
-#quantifiers-6-14-3-1-2 { counter-set: quantifiers-6-14-3-1-2 0; }
-#quantifiers-6-14-3-1-2 > li::marker { content: ""counter(quantifiers-6-14-3-1-2,lower-alpha)""; }
-#quantifiers-6-14-3-1-2 > li { counter-increment: quantifiers-6-14-3-1-2; }
-#quantifiers-6-14-4-1-2 { counter-set: quantifiers-6-14-4-1-2 0; }
-#quantifiers-6-14-4-1-2 > li::marker { content: ""counter(quantifiers-6-14-4-1-2,lower-alpha)""; }
-#quantifiers-6-14-4-1-2 > li { counter-increment: quantifiers-6-14-4-1-2; }
-#quantifiers-6-14-5-1-2 { counter-set: quantifiers-6-14-5-1-2 0; }
-#quantifiers-6-14-5-1-2 > li::marker { content: ""counter(quantifiers-6-14-5-1-2,lower-alpha)""; }
-#quantifiers-6-14-5-1-2 > li { counter-increment: quantifiers-6-14-5-1-2; }
-#quantifiers-6-14-6-1-2 { counter-set: quantifiers-6-14-6-1-2 0; }
-#quantifiers-6-14-6-1-2 > li::marker { content: ""counter(quantifiers-6-14-6-1-2,lower-alpha)""; }
-#quantifiers-6-14-6-1-2 > li { counter-increment: quantifiers-6-14-6-1-2; }
-#quantifiers-6-14-7-1-2 { counter-set: quantifiers-6-14-7-1-2 0; }
-#quantifiers-6-14-7-1-2 > li::marker { content: ""counter(quantifiers-6-14-7-1-2,lower-alpha)""; }
-#quantifiers-6-14-7-1-2 > li { counter-increment: quantifiers-6-14-7-1-2; }
-#quantifiers-6-14-8-1-2 { counter-set: quantifiers-6-14-8-1-2 0; }
-#quantifiers-6-14-8-1-2 > li::marker { content: ""counter(quantifiers-6-14-8-1-2,lower-alpha)""; }
-#quantifiers-6-14-8-1-2 > li { counter-increment: quantifiers-6-14-8-1-2; }
-#conditionals-33-1-1-2 { counter-set: conditionals-33-1-1-2 0; }
-#conditionals-33-1-1-2 > li::marker { content: ""counter(conditionals-33-1-1-2,lower-alpha)""; }
-#conditionals-33-1-1-2 > li { counter-increment: conditionals-33-1-1-2; }
-#conditionals-33-2-1-2 { counter-set: conditionals-33-2-1-2 0; }
-#conditionals-33-2-1-2 > li::marker { content: ""counter(conditionals-33-2-1-2,lower-alpha)""; }
-#conditionals-33-2-1-2 > li { counter-increment: conditionals-33-2-1-2; }
-#conditionals-33-3-1-2 { counter-set: conditionals-33-3-1-2 0; }
-#conditionals-33-3-1-2 > li::marker { content: ""counter(conditionals-33-3-1-2,lower-alpha)""; }
-#conditionals-33-3-1-2 > li { counter-increment: conditionals-33-3-1-2; }
-#conditionals-33-4-1-2 { counter-set: conditionals-33-4-1-2 0; }
-#conditionals-33-4-1-2 > li::marker { content: ""counter(conditionals-33-4-1-2,lower-alpha)""; }
-#conditionals-33-4-1-2 > li { counter-increment: conditionals-33-4-1-2; }
-#conditionals-33-5-1-2 { counter-set: conditionals-33-5-1-2 0; }
-#conditionals-33-5-1-2 > li::marker { content: ""counter(conditionals-33-5-1-2,lower-alpha)""; }
-#conditionals-33-5-1-2 > li { counter-increment: conditionals-33-5-1-2; }
-#directproof-29-1-1-2 { counter-set: directproof-29-1-1-2 0; }
-#directproof-29-1-1-2 > li::marker { content: ""counter(directproof-29-1-1-2,lower-alpha)""; }
-#directproof-29-1-1-2 > li { counter-increment: directproof-29-1-1-2; }
-#directproof-29-11-1-2 { counter-set: directproof-29-11-1-2 0; }
-#directproof-29-11-1-2 > li::marker { content: ""counter(directproof-29-11-1-2,lower-alpha)""; }
-#directproof-29-11-1-2 > li { counter-increment: directproof-29-11-1-2; }
-#moredirect-7-1-1-2 { counter-set: moredirect-7-1-1-2 0; }
-#moredirect-7-1-1-2 > li::marker { content: ""counter(moredirect-7-1-1-2,lower-alpha)""; }
-#moredirect-7-1-1-2 > li { counter-increment: moredirect-7-1-1-2; }
-#moredirect-7-4-1-2 { counter-set: moredirect-7-4-1-2 0; }
-#moredirect-7-4-1-2 > li::marker { content: "("counter(moredirect-7-4-1-2,lower-alpha)")"; }
-#moredirect-7-4-1-2 > li { counter-increment: moredirect-7-4-1-2; }
-#ER_averagerat-1-2 { counter-set: ER_averagerat-1-2 0; }
-#ER_averagerat-1-2 > li::marker { content: ""counter(ER_averagerat-1-2,lower-alpha)""; }
-#ER_averagerat-1-2 > li { counter-increment: ER_averagerat-1-2; }
-#moredirect-7-7-1-2 { counter-set: moredirect-7-7-1-2 0; }
-#moredirect-7-7-1-2 > li::marker { content: ""counter(moredirect-7-7-1-2,lower-alpha)""; }
-#moredirect-7-7-1-2 > li { counter-increment: moredirect-7-7-1-2; }
-#moredirect-7-9-1-2 { counter-set: moredirect-7-9-1-2 0; }
-#moredirect-7-9-1-2 > li::marker { content: ""counter(moredirect-7-9-1-2,lower-alpha)""; }
-#moredirect-7-9-1-2 > li { counter-increment: moredirect-7-9-1-2; }
-#cases-31-1-1-2 { counter-set: cases-31-1-1-2 0; }
-#cases-31-1-1-2 > li::marker { content: ""counter(cases-31-1-1-2,lower-alpha)""; }
-#cases-31-1-1-2 > li { counter-increment: cases-31-1-1-2; }
-#SS_twoproofs-18-1-1-2 { counter-set: SS_twoproofs-18-1-1-2 0; }
-#SS_twoproofs-18-1-1-2 > li::marker { content: ""counter(SS_twoproofs-18-1-1-2,lower-alpha)""; }
-#SS_twoproofs-18-1-1-2 > li { counter-increment: SS_twoproofs-18-1-1-2; }
-#SS_twoproofs-18-2-1-2 { counter-set: SS_twoproofs-18-2-1-2 0; }
-#SS_twoproofs-18-2-1-2 > li::marker { content: ""counter(SS_twoproofs-18-2-1-2,lower-alpha)""; }
-#SS_twoproofs-18-2-1-2 > li { counter-increment: SS_twoproofs-18-2-1-2; }
-#SS_twoproofs-18-3-1-2 { counter-set: SS_twoproofs-18-3-1-2 0; }
-#SS_twoproofs-18-3-1-2 > li::marker { content: ""counter(SS_twoproofs-18-3-1-2,lower-alpha)""; }
-#SS_twoproofs-18-3-1-2 > li { counter-increment: SS_twoproofs-18-3-1-2; }
-#SS_twoproofs-18-4-1-2 { counter-set: SS_twoproofs-18-4-1-2 0; }
-#SS_twoproofs-18-4-1-2 > li::marker { content: ""counter(SS_twoproofs-18-4-1-2,lower-alpha)""; }
-#SS_twoproofs-18-4-1-2 > li { counter-increment: SS_twoproofs-18-4-1-2; }
-#SS_twoproofs-18-5-1-2 { counter-set: SS_twoproofs-18-5-1-2 0; }
-#SS_twoproofs-18-5-1-2 > li::marker { content: ""counter(SS_twoproofs-18-5-1-2,lower-alpha)""; }
-#SS_twoproofs-18-5-1-2 > li { counter-increment: SS_twoproofs-18-5-1-2; }
-#B_propsums-2-1 { counter-set: B_propsums-2-1 0; }
-#B_propsums-2-1 > li::marker { content: ""counter(B_propsums-2-1,decimal)""; }
-#B_propsums-2-1 > li { counter-increment: B_propsums-2-1; }
-#summation-27-1-1-2 { counter-set: summation-27-1-1-2 0; }
-#summation-27-1-1-2 > li::marker { content: ""counter(summation-27-1-1-2,lower-alpha)""; }
-#summation-27-1-1-2 > li { counter-increment: summation-27-1-1-2; }
-#summation-27-2-1-2 { counter-set: summation-27-2-1-2 0; }
-#summation-27-2-1-2 > li::marker { content: ""counter(summation-27-2-1-2,lower-alpha)""; }
-#summation-27-2-1-2 > li { counter-increment: summation-27-2-1-2; }
-#summation-27-3-1-2 { counter-set: summation-27-3-1-2 0; }
-#summation-27-3-1-2 > li::marker { content: ""counter(summation-27-3-1-2,lower-alpha)""; }
-#summation-27-3-1-2 > li { counter-increment: summation-27-3-1-2; }
-#summation-27-8-1-2 { counter-set: summation-27-8-1-2 0; }
-#summation-27-8-1-2 > li::marker { content: ""counter(summation-27-8-1-2,lower-alpha)""; }
-#summation-27-8-1-2 > li { counter-increment: summation-27-8-1-2; }
-#B_induction-3-4 { counter-set: B_induction-3-4 0; }
-#B_induction-3-4 > li::marker { content: ""counter(B_induction-3-4,decimal)""; }
-#B_induction-3-4 > li { counter-increment: B_induction-3-4; }
-#induction-6-1 { counter-set: induction-6-1 0; }
-#induction-6-1 > li::marker { content: "("counter(induction-6-1,decimal)")"; }
-#induction-6-1 > li { counter-increment: induction-6-1; }
-#ER_indpowersof2-1-2 { counter-set: ER_indpowersof2-1-2 0; }
-#ER_indpowersof2-1-2 > li::marker { content: ""counter(ER_indpowersof2-1-2,lower-alpha)""; }
-#ER_indpowersof2-1-2 > li { counter-increment: ER_indpowersof2-1-2; }
-#B_strongind-4-3 { counter-set: B_strongind-4-3 0; }
-#B_strongind-4-3 > li::marker { content: ""counter(B_strongind-4-3,decimal)""; }
-#B_strongind-4-3 > li { counter-increment: B_strongind-4-3; }
-#E_domainqexist1-3-1 { counter-set: E_domainqexist1-3-1 0; }
-#E_domainqexist1-3-1 > li::marker { content: ""counter(E_domainqexist1-3-1,lower-alpha)""; }
-#E_domainqexist1-3-1 > li { counter-increment: E_domainqexist1-3-1; }
-#B_pfexistential-3-3 { counter-set: B_pfexistential-3-3 0; }
-#B_pfexistential-3-3 > li::marker { content: ""counter(B_pfexistential-3-3,decimal)""; }
-#B_pfexistential-3-3 > li { counter-increment: B_pfexistential-3-3; }
-#B_pfunique-3-3 { counter-set: B_pfunique-3-3 0; }
-#B_pfunique-3-3 > li::marker { content: ""counter(B_pfunique-3-3,decimal)""; }
-#B_pfunique-3-3 > li { counter-increment: B_pfunique-3-3; }
-#existunique-23-1 { counter-set: existunique-23-1 0; }
-#existunique-23-1 > li::marker { content: ""counter(existunique-23-1,decimal)""; }
-#existunique-23-1 > li { counter-increment: existunique-23-1; }
-#E_wop-3-2 { counter-set: E_wop-3-2 0; }
-#E_wop-3-2 > li::marker { content: ""counter(E_wop-3-2,decimal)""; }
-#E_wop-3-2 > li { counter-increment: E_wop-3-2; }
-#E_setnotevarious-2 { counter-set: E_setnotevarious-2 0; }
-#E_setnotevarious-2 > li::marker { content: ""counter(E_setnotevarious-2,lower-alpha)""; }
-#E_setnotevarious-2 > li { counter-increment: E_setnotevarious-2; }
-#E_setops-3-2 { counter-set: E_setops-3-2 0; }
-#E_setops-3-2 > li::marker { content: ""counter(E_setops-3-2,lower-alpha)""; }
-#E_setops-3-2 > li { counter-increment: E_setops-3-2; }
-#SS_setproofs-3-3 { counter-set: SS_setproofs-3-3 0; }
-#SS_setproofs-3-3 > li::marker { content: ""counter(SS_setproofs-3-3,decimal)""; }
-#SS_setproofs-3-3 > li { counter-increment: SS_setproofs-3-3; }
-#L_SetIdent-4-4 { counter-set: L_SetIdent-4-4 0; }
-#L_SetIdent-4-4 > li::marker { content: ""counter(L_SetIdent-4-4,decimal)""; }
-#L_SetIdent-4-4 > li { counter-increment: L_SetIdent-4-4; }
-#SS_setproofs-25-1-1-2 { counter-set: SS_setproofs-25-1-1-2 0; }
-#SS_setproofs-25-1-1-2 > li::marker { content: ""counter(SS_setproofs-25-1-1-2,lower-alpha)""; }
-#SS_setproofs-25-1-1-2 > li { counter-increment: SS_setproofs-25-1-1-2; }
-#SS_setproofs-25-2-1-2 { counter-set: SS_setproofs-25-2-1-2 0; }
-#SS_setproofs-25-2-1-2 > li::marker { content: ""counter(SS_setproofs-25-2-1-2,lower-alpha)""; }
-#SS_setproofs-25-2-1-2 > li { counter-increment: SS_setproofs-25-2-1-2; }
-#SS_setproofs-25-3-1-2 { counter-set: SS_setproofs-25-3-1-2 0; }
-#SS_setproofs-25-3-1-2 > li::marker { content: ""counter(SS_setproofs-25-3-1-2,lower-alpha)""; }
-#SS_setproofs-25-3-1-2 > li { counter-increment: SS_setproofs-25-3-1-2; }
-#SS_setproofs-25-4-1-2 { counter-set: SS_setproofs-25-4-1-2 0; }
-#SS_setproofs-25-4-1-2 > li::marker { content: ""counter(SS_setproofs-25-4-1-2,lower-alpha)""; }
-#SS_setproofs-25-4-1-2 > li { counter-increment: SS_setproofs-25-4-1-2; }
-#SS_setproofs-25-5-1-2 { counter-set: SS_setproofs-25-5-1-2 0; }
-#SS_setproofs-25-5-1-2 > li::marker { content: ""counter(SS_setproofs-25-5-1-2,lower-alpha)""; }
-#SS_setproofs-25-5-1-2 > li { counter-increment: SS_setproofs-25-5-1-2; }
-#SS_setproofs-25-6-1-2 { counter-set: SS_setproofs-25-6-1-2 0; }
-#SS_setproofs-25-6-1-2 > li::marker { content: ""counter(SS_setproofs-25-6-1-2,lower-alpha)""; }
-#SS_setproofs-25-6-1-2 > li { counter-increment: SS_setproofs-25-6-1-2; }
-#SS_setproofs-25-7-1-2 { counter-set: SS_setproofs-25-7-1-2 0; }
-#SS_setproofs-25-7-1-2 > li::marker { content: ""counter(SS_setproofs-25-7-1-2,lower-alpha)""; }
-#SS_setproofs-25-7-1-2 > li { counter-increment: SS_setproofs-25-7-1-2; }
-#SS_setproofs-25-15-1-2 { counter-set: SS_setproofs-25-15-1-2 0; }
-#SS_setproofs-25-15-1-2 > li::marker { content: ""counter(SS_setproofs-25-15-1-2,lower-alpha)""; }
-#SS_setproofs-25-15-1-2 > li { counter-increment: SS_setproofs-25-15-1-2; }
-#E_notfunctionimages-2-1 { counter-set: E_notfunctionimages-2-1 0; }
-#E_notfunctionimages-2-1 > li::marker { content: ""counter(E_notfunctionimages-2-1,lower-alpha)""; }
-#E_notfunctionimages-2-1 > li { counter-increment: E_notfunctionimages-2-1; }
-#E_addasfn-3-1 { counter-set: E_addasfn-3-1 0; }
-#E_addasfn-3-1 > li::marker { content: ""counter(E_addasfn-3-1,lower-alpha)""; }
-#E_addasfn-3-1 > li { counter-increment: E_addasfn-3-1; }
-#functions-45-1-1-2 { counter-set: functions-45-1-1-2 0; }
-#functions-45-1-1-2 > li::marker { content: ""counter(functions-45-1-1-2,lower-alpha)""; }
-#functions-45-1-1-2 > li { counter-increment: functions-45-1-1-2; }
-#functions-45-2-1-2 { counter-set: functions-45-2-1-2 0; }
-#functions-45-2-1-2 > li::marker { content: ""counter(functions-45-2-1-2,lower-alpha)""; }
-#functions-45-2-1-2 > li { counter-increment: functions-45-2-1-2; }
-#functions-45-3-1-2 { counter-set: functions-45-3-1-2 0; }
-#functions-45-3-1-2 > li::marker { content: ""counter(functions-45-3-1-2,lower-alpha)""; }
-#functions-45-3-1-2 > li { counter-increment: functions-45-3-1-2; }
-#functions-45-4-1-2 { counter-set: functions-45-4-1-2 0; }
-#functions-45-4-1-2 > li::marker { content: ""counter(functions-45-4-1-2,lower-alpha)""; }
-#functions-45-4-1-2 > li { counter-increment: functions-45-4-1-2; }
-#functions-45-5-1-2 { counter-set: functions-45-5-1-2 0; }
-#functions-45-5-1-2 > li::marker { content: ""counter(functions-45-5-1-2,lower-alpha)""; }
-#functions-45-5-1-2 > li { counter-increment: functions-45-5-1-2; }
-#functions-45-7-1-3 { counter-set: functions-45-7-1-3 0; }
-#functions-45-7-1-3 > li::marker { content: ""counter(functions-45-7-1-3,lower-alpha)""; }
-#functions-45-7-1-3 > li { counter-increment: functions-45-7-1-3; }
-#functions-45-8-1-2 { counter-set: functions-45-8-1-2 0; }
-#functions-45-8-1-2 > li::marker { content: ""counter(functions-45-8-1-2,lower-alpha)""; }
-#functions-45-8-1-2 > li { counter-increment: functions-45-8-1-2; }
-#functions-45-9-1-2 { counter-set: functions-45-9-1-2 0; }
-#functions-45-9-1-2 > li::marker { content: ""counter(functions-45-9-1-2,lower-alpha)""; }
-#functions-45-9-1-2 > li { counter-increment: functions-45-9-1-2; }
-#functions-45-10-1-3 { counter-set: functions-45-10-1-3 0; }
-#functions-45-10-1-3 > li::marker { content: ""counter(functions-45-10-1-3,lower-alpha)""; }
-#functions-45-10-1-3 > li { counter-increment: functions-45-10-1-3; }
-#functions-45-11-1-3 { counter-set: functions-45-11-1-3 0; }
-#functions-45-11-1-3 > li::marker { content: ""counter(functions-45-11-1-3,lower-alpha)""; }
-#functions-45-11-1-3 > li { counter-increment: functions-45-11-1-3; }
-#functions-45-12-1-2 { counter-set: functions-45-12-1-2 0; }
-#functions-45-12-1-2 > li::marker { content: ""counter(functions-45-12-1-2,lower-alpha)""; }
-#functions-45-12-1-2 > li { counter-increment: functions-45-12-1-2; }
-#E_equivclasses-2-3 { counter-set: E_equivclasses-2-3 0; }
-#E_equivclasses-2-3 > li::marker { content: ""counter(E_equivclasses-2-3,lower-alpha)""; }
-#E_equivclasses-2-3 > li { counter-increment: E_equivclasses-2-3; }
-#D_partition-1-1-6 { counter-set: D_partition-1-1-6 0; }
-#D_partition-1-1-6 > li::marker { content: ""counter(D_partition-1-1-6,decimal)""; }
-#D_partition-1-1-6 > li { counter-increment: D_partition-1-1-6; }
-#E_equivclasses2-4-2 { counter-set: E_equivclasses2-4-2 0; }
-#E_equivclasses2-4-2 > li::marker { content: ""counter(E_equivclasses2-4-2,lower-alpha)""; }
-#E_equivclasses2-4-2 > li { counter-increment: E_equivclasses2-4-2; }
-#SS_equivrelations-47-1-1-3 { counter-set: SS_equivrelations-47-1-1-3 0; }
-#SS_equivrelations-47-1-1-3 > li::marker { content: ""counter(SS_equivrelations-47-1-1-3,lower-alpha)""; }
-#SS_equivrelations-47-1-1-3 > li { counter-increment: SS_equivrelations-47-1-1-3; }
-#SS_equivrelations-47-2-1-3 { counter-set: SS_equivrelations-47-2-1-3 0; }
-#SS_equivrelations-47-2-1-3 > li::marker { content: ""counter(SS_equivrelations-47-2-1-3,lower-alpha)""; }
-#SS_equivrelations-47-2-1-3 > li { counter-increment: SS_equivrelations-47-2-1-3; }
-#SS_equivrelations-47-4-1-2 { counter-set: SS_equivrelations-47-4-1-2 0; }
-#SS_equivrelations-47-4-1-2 > li::marker { content: ""counter(SS_equivrelations-47-4-1-2,lower-alpha)""; }
-#SS_equivrelations-47-4-1-2 > li { counter-increment: SS_equivrelations-47-4-1-2; }
-#SS_equivrelations-47-5-1-2 { counter-set: SS_equivrelations-47-5-1-2 0; }
-#SS_equivrelations-47-5-1-2 > li::marker { content: ""counter(SS_equivrelations-47-5-1-2,lower-alpha)""; }
-#SS_equivrelations-47-5-1-2 > li { counter-increment: SS_equivrelations-47-5-1-2; }
-#SS_equivrelations-47-6-1-2 { counter-set: SS_equivrelations-47-6-1-2 0; }
-#SS_equivrelations-47-6-1-2 > li::marker { content: ""counter(SS_equivrelations-47-6-1-2,lower-alpha)""; }
-#SS_equivrelations-47-6-1-2 > li { counter-increment: SS_equivrelations-47-6-1-2; }
-#SS_equivrelations-47-7-1-2 { counter-set: SS_equivrelations-47-7-1-2 0; }
-#SS_equivrelations-47-7-1-2 > li::marker { content: ""counter(SS_equivrelations-47-7-1-2,lower-alpha)""; }
-#SS_equivrelations-47-7-1-2 > li { counter-increment: SS_equivrelations-47-7-1-2; }
-#SS_equivrelations-47-8-1-2 { counter-set: SS_equivrelations-47-8-1-2 0; }
-#SS_equivrelations-47-8-1-2 > li::marker { content: ""counter(SS_equivrelations-47-8-1-2,lower-alpha)""; }
-#SS_equivrelations-47-8-1-2 > li { counter-increment: SS_equivrelations-47-8-1-2; }
-#SS_equivrelations-47-9-1-2 { counter-set: SS_equivrelations-47-9-1-2 0; }
-#SS_equivrelations-47-9-1-2 > li::marker { content: ""counter(SS_equivrelations-47-9-1-2,lower-alpha)""; }
-#SS_equivrelations-47-9-1-2 > li { counter-increment: SS_equivrelations-47-9-1-2; }
-#D_RSTprop2-1-1-3 { counter-set: D_RSTprop2-1-1-3 0; }
-#D_RSTprop2-1-1-3 > li::marker { content: ""counter(D_RSTprop2-1-1-3,decimal)""; }
-#D_RSTprop2-1-1-3 > li { counter-increment: D_RSTprop2-1-1-3; }
-#T_totalorder-1-1-4 { counter-set: T_totalorder-1-1-4 0; }
-#T_totalorder-1-1-4 > li::marker { content: ""counter(T_totalorder-1-1-4,decimal)""; }
-#T_totalorder-1-1-4 > li { counter-increment: T_totalorder-1-1-4; }
-#orders-33-1-1-2 { counter-set: orders-33-1-1-2 0; }
-#orders-33-1-1-2 > li::marker { content: ""counter(orders-33-1-1-2,lower-alpha)""; }
-#orders-33-1-1-2 > li { counter-increment: orders-33-1-1-2; }
-#orders-33-2-1-2 { counter-set: orders-33-2-1-2 0; }
-#orders-33-2-1-2 > li::marker { content: ""counter(orders-33-2-1-2,lower-alpha)""; }
-#orders-33-2-1-2 > li { counter-increment: orders-33-2-1-2; }
-#orders-33-3-1-2 { counter-set: orders-33-3-1-2 0; }
-#orders-33-3-1-2 > li::marker { content: ""counter(orders-33-3-1-2,lower-alpha)""; }
-#orders-33-3-1-2 > li { counter-increment: orders-33-3-1-2; }
-#orders-33-4-1-2 { counter-set: orders-33-4-1-2 0; }
-#orders-33-4-1-2 > li::marker { content: ""counter(orders-33-4-1-2,lower-alpha)""; }
-#orders-33-4-1-2 > li { counter-increment: orders-33-4-1-2; }
-#binomial9-30-2-1-1-1 { counter-set: binomial9-30-2-1-1-1 0; }
-#binomial9-30-2-1-1-1 > li::marker { content: ""counter(binomial9-30-2-1-1-1,lower-alpha)""; }
-#binomial9-30-2-1-1-1 > li { counter-increment: binomial9-30-2-1-1-1; }
-#cardinality-31-6-1-2 { counter-set: cardinality-31-6-1-2 0; }
-#cardinality-31-6-1-2 > li::marker { content: ""counter(cardinality-31-6-1-2,lower-alpha)""; }
-#cardinality-31-6-1-2 > li { counter-increment: cardinality-31-6-1-2; }
-</style>
+<script src="_static/prefix-runtime.42217a82c75796c8.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.7e141ad8414abf4a.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.f4ab138da65f4203.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
 </head>
 <body class="pretext book ignore-math">
-<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
-<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
-<h1 class="heading"><a href="IntroProofs.html"><span class="title">Introduction to Proofs:</span> <span class="subtitle">An Active Exploration of Mathematical Language</span></a></h1>
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="IntroProofs.html"><span class="title">Introduction to Proofs</span> <span class="subtitle">An Active Exploration of Mathematical Language</span></a></h1>
 <p class="byline">Jennifer Firkins Nordstrom</p>
-</div>
-</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
 <button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-2.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
 <div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
@@ -595,43 +316,68 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="functions"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">5.3</span><span class="space"> </span><span class="title">Functions</span>
 </h2>
-<div class="para" id="functions-5">Functions are familar mathematical objects from algebra and calculus.</div>
+<div class="para" id="functions-5">Functions are familar mathematical objects from algebra and calculus.<div class="autopermalink" data-description="Paragraph"><a href="#functions-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="definition definition-like" id="D_function"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.3.1</span><span class="period">.</span>
 </h3>
-<div class="para" id="D_function-1-1">A <dfn class="terminology">function</dfn>, <span class="process-math">\(f:X\rightarrow Y\text{,}\)</span> is a map in which each input is related to one and only one output.</div> <div class="para" id="D_function-1-2">We say <span class="process-math">\(X\)</span> is the <dfn class="terminology">domain</dfn> and <span class="process-math">\(Y\)</span> is the <dfn class="terminology">codomain</dfn> of <span class="process-math">\(f\text{.}\)</span>
-</div></article><details id="E_notfunctionimages" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<div class="para" id="D_function-1-1">A <dfn class="terminology">function</dfn>, <span class="process-math">\(f:X\rightarrow Y\text{,}\)</span> is a map in which each input is related to one and only one output.<div class="autopermalink" data-description="Paragraph"><a href="#D_function-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="D_function-1-2">We say <span class="process-math">\(X\)</span> is the <dfn class="terminology">domain</dfn> and <span class="process-math">\(Y\)</span> is the <dfn class="terminology">codomain</dfn> of <span class="process-math">\(f\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#D_function-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 5.3.1"><a href="#D_function" title="Copy heading and permalink for Definition 5.3.1" aria-label="Copy heading and permalink for Definition 5.3.1">🔗</a></div></article><details id="E_notfunctionimages" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.3.2</span><span class="period">.</span><span class="space"> </span><span class="title">Exploring the Definition of a Function.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para logical" id="E_notfunctionimages-2"><ol class="lower-alpha" id="E_notfunctionimages-2-1">
+</h3></summary><article class="example example-like knowl__content"><div class="para logical" id="E_notfunctionimages-2">
+<ol class="lower-alpha ol-marker-1" id="E_notfunctionimages-2-1">
 <li id="E_notfunctionimages-2-1-1">
-<div class="para" id="E_notfunctionimages-2-1-1-1">Let <span class="process-math">\(f: X\rightarrow Y\)</span> be a map as shown in the figure.</div>
+<div class="para" id="E_notfunctionimages-2-1-1-1">Let <span class="process-math">\(f: X\rightarrow Y\)</span> be a map as shown in the figure.<div class="autopermalink" data-description="Paragraph"><a href="#E_notfunctionimages-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <figure class="figure figure-like" id="F_notfnonetotwo"><div class="image-box" style="width: 10%; margin-left: 45%; margin-right: 45%;"><img src="generated/latex-image/notfn1to2.svg" role="img" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.3.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure><div class="para" id="E_notfunctionimages-2-1-1-3">
-<a href="functions.html#F_notfnonetotwo" class="xref" data-knowl="./knowl/xref/F_notfnonetotwo.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.3.3">Figure 5.3.3</a> shows a map that is not a function since <span class="process-math">\(x_2\)</span> maps to two different outputs.</div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.3.3<span class="period">.</span></span><span class="space"> </span><div class="autopermalink" data-description="Figure 5.3.3"><a href="#F_notfnonetotwo" title="Copy heading and permalink for Figure 5.3.3" aria-label="Copy heading and permalink for Figure 5.3.3">🔗</a></div></figcaption></figure><div class="para" id="E_notfunctionimages-2-1-1-3">
+<a href="functions.html#F_notfnonetotwo" class="xref" data-knowl="./knowl/xref/F_notfnonetotwo.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.3.3">Figure 5.3.3</a> shows a map that is not a function since <span class="process-math">\(x_2\)</span> maps to two different outputs.<div class="autopermalink" data-description="Paragraph"><a href="#E_notfunctionimages-2-1-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item a"><a href="#E_notfunctionimages-2-1-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
 </li>
 <li id="E_notfunctionimages-2-1-2">
-<div class="para" id="E_notfunctionimages-2-1-2-1">Let <span class="process-math">\(g: X\rightarrow Y\)</span> be a map as shown in the figure.</div>
+<div class="para" id="E_notfunctionimages-2-1-2-1">Let <span class="process-math">\(g: X\rightarrow Y\)</span> be a map as shown in the figure.<div class="autopermalink" data-description="Paragraph"><a href="#E_notfunctionimages-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <figure class="figure figure-like" id="F_notfnonetozero"><div class="image-box" style="width: 10%; margin-left: 45%; margin-right: 45%;"><img src="generated/latex-image/notfn1to0.svg" role="img" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.3.4<span class="period">.</span></span><span class="space"> </span></figcaption></figure><div class="para" id="E_notfunctionimages-2-1-2-3">
-<a href="functions.html#F_notfnonetozero" class="xref" data-knowl="./knowl/xref/F_notfnonetozero.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.3.4">Figure 5.3.4</a> shows a map that is not a function since <span class="process-math">\(x_1\)</span> does not map to any output.</div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.3.4<span class="period">.</span></span><span class="space"> </span><div class="autopermalink" data-description="Figure 5.3.4"><a href="#F_notfnonetozero" title="Copy heading and permalink for Figure 5.3.4" aria-label="Copy heading and permalink for Figure 5.3.4">🔗</a></div></figcaption></figure><div class="para" id="E_notfunctionimages-2-1-2-3">
+<a href="functions.html#F_notfnonetozero" class="xref" data-knowl="./knowl/xref/F_notfnonetozero.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.3.4">Figure 5.3.4</a> shows a map that is not a function since <span class="process-math">\(x_1\)</span> does not map to any output.<div class="autopermalink" data-description="Paragraph"><a href="#E_notfunctionimages-2-1-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item b"><a href="#E_notfunctionimages-2-1-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
 </li>
 <li id="E_notfunctionimages-2-1-3">
-<div class="para" id="E_notfunctionimages-2-1-3-1">Let <span class="process-math">\(h: X\rightarrow Y\)</span> be a map as shown in the figure.</div>
-<figure class="figure figure-like" id="F_functionh"><div class="image-box" style="width: 10%; margin-left: 45%; margin-right: 45%;"><img src="generated/latex-image/functionh.svg" role="img" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.3.5<span class="period">.</span></span><span class="space"> </span></figcaption></figure><div class="para" id="E_notfunctionimages-2-1-3-3">
-<a href="functions.html#F_functionh" class="xref" data-knowl="./knowl/xref/F_functionh.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.3.5">Figure 5.3.5</a> shows a map that is a function since each <span class="process-math">\(x_i\)</span> maps to exactly one <span class="process-math">\(y_i\text{.}\)</span>
+<div class="para" id="E_notfunctionimages-2-1-3-1">Let <span class="process-math">\(h: X\rightarrow Y\)</span> be a map as shown in the figure.<div class="autopermalink" data-description="Paragraph"><a href="#E_notfunctionimages-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
+<figure class="figure figure-like" id="F_functionh"><div class="image-box" style="width: 10%; margin-left: 45%; margin-right: 45%;"><img src="generated/latex-image/functionh.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.3.5<span class="period">.</span></span><span class="space"> </span><div class="autopermalink" data-description="Figure 5.3.5"><a href="#F_functionh" title="Copy heading and permalink for Figure 5.3.5" aria-label="Copy heading and permalink for Figure 5.3.5">🔗</a></div></figcaption></figure><div class="para" id="E_notfunctionimages-2-1-3-3">
+<a href="functions.html#F_functionh" class="xref" data-knowl="./knowl/xref/F_functionh.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.3.5">Figure 5.3.5</a> shows a map that is a function since each <span class="process-math">\(x_i\)</span> maps to exactly one <span class="process-math">\(y_i\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_notfunctionimages-2-1-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item c"><a href="#E_notfunctionimages-2-1-3" title="Copy heading and permalink for Item c" aria-label="Copy heading and permalink for Item c">🔗</a></div>
 </li>
-</ol></div></article></details><div class="para logical" id="functions-8">
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#E_notfunctionimages-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 5.3.2: Exploring the Definition of a Function"><a href="#E_notfunctionimages" title="Copy heading and permalink for Example 5.3.2: Exploring the Definition of a Function" aria-label="Copy heading and permalink for Example 5.3.2: Exploring the Definition of a Function">🔗</a></div></article></details><div class="para logical" id="functions-8">
 <div class="para">For a given <span class="process-math">\(x\in X\text{,}\)</span> <span class="process-math">\(f(x)\)</span> is</div>
 <ul class="disc" id="functions-8-3">
-<li id="functions-8-3-1"><div class="para" id="p-derived-functions-8-3-1">the <dfn class="terminology">output</dfn> of <span class="process-math">\(f\text{,}\)</span>
-</div></li>
-<li id="functions-8-3-2"><div class="para" id="p-derived-functions-8-3-2">the <dfn class="terminology">value</dfn> of <span class="process-math">\(f\)</span> at <span class="process-math">\(x\text{,}\)</span>
-</div></li>
-<li id="functions-8-3-3"><div class="para" id="p-derived-functions-8-3-3">the <dfn class="terminology">image</dfn> of <span class="process-math">\(x\)</span> under <span class="process-math">\(f\text{.}\)</span>
-</div></li>
+<li id="functions-8-3-1">
+<div class="para" id="p-derived-functions-8-3-1">the <dfn class="terminology">output</dfn> of <span class="process-math">\(f\text{,}\)</span>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#functions-8-3-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="functions-8-3-2">
+<div class="para" id="p-derived-functions-8-3-2">the <dfn class="terminology">value</dfn> of <span class="process-math">\(f\)</span> at <span class="process-math">\(x\text{,}\)</span>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#functions-8-3-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="functions-8-3-3">
+<div class="para" id="p-derived-functions-8-3-3">the <dfn class="terminology">image</dfn> of <span class="process-math">\(x\)</span> under <span class="process-math">\(f\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#functions-8-3-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
 </ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#functions-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="definition definition-like" id="D_image"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.3.6</span><span class="period">.</span>
@@ -644,80 +390,123 @@ eBookConfig.enable_chatcodes =  false;
 \text{Im}(f)=\{y\in Y : y=f(x) \text{ for some } x\in X\}.
 \end{equation*}
 </div>
-</div></article><div class="para" id="functions-10">In <a href="summation.html" class="internal" title="Section 4.1: Summation Notation">Section 4.1</a> we defined sequences as lists. Now we can define them as functions. A <dfn class="terminology">sequence</dfn> is a function from <span class="process-math">\(\mathbb{Z}^+\)</span> to <span class="process-math">\(\mathbb{R}\text{.}\)</span> For example, <span class="process-math">\(f(n)=\frac{1}{n}\text{.}\)</span>
+<div class="autopermalink" data-description="Paragraph"><a href="#D_image-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 5.3.6"><a href="#D_image" title="Copy heading and permalink for Definition 5.3.6" aria-label="Copy heading and permalink for Definition 5.3.6">🔗</a></div></article><div class="para" id="functions-10">In <a href="summation.html" class="internal" title="Section 4.1: Summation Notation">Section 4.1</a> we defined sequences as lists. Now we can define them as functions. A <dfn class="terminology">sequence</dfn> is a function from <span class="process-math">\(\mathbb{Z}^+\)</span> to <span class="process-math">\(\mathbb{R}\text{.}\)</span> For example, <span class="process-math">\(f(n)=\frac{1}{n}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#functions-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <details id="E_addasfn" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.3.7</span><span class="period">.</span><span class="space"> </span><span class="title">Addition as a Function.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_addasfn-2">We may have functions involving Cartesian products of sets. This is common when we want to define algebraic operations. For example, we can define addition on the integers as the function <span class="process-math">\(f:\mathbb{Z}\times\mathbb{Z}\rightarrow\mathbb{Z}\)</span> given by <span class="process-math">\(f(a, b)=a+b\text{.}\)</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_addasfn-2">We may have functions involving Cartesian products of sets. This is common when we want to define algebraic operations. For example, we can define addition on the integers as the function <span class="process-math">\(f:\mathbb{Z}\times\mathbb{Z}\rightarrow\mathbb{Z}\)</span> given by <span class="process-math">\(f(a, b)=a+b\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_addasfn-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para logical" id="E_addasfn-3"><ol class="lower-alpha" id="E_addasfn-3-1">
+<div class="para logical" id="E_addasfn-3">
+<ol class="lower-alpha ol-marker-1" id="E_addasfn-3-1">
 <li id="E_addasfn-3-1-1">
-<div class="para" id="E_addasfn-3-1-1-1">Find <span class="process-math">\(f(3, 2), f(5, 5), f(2, -4)\text{.}\)</span>
+<div class="para" id="E_addasfn-3-1-1-1">Find <span class="process-math">\(f(3, 2), f(5, 5), f(2, -4)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_addasfn-3-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="E_addasfn-3-1-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><span class="process-math">\(5, 10, -2\)</span></div></details>
+<details id="E_addasfn-3-1-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<span class="process-math">\(5, 10, -2\)</span><div class="autopermalink" data-description="Answer a.1"><a href="#E_addasfn-3-1-1-2" title="Copy heading and permalink for Answer a.1" aria-label="Copy heading and permalink for Answer a.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Item a"><a href="#E_addasfn-3-1-1" title="Copy heading and permalink for Item a" aria-label="Copy heading and permalink for Item a">🔗</a></div>
 </li>
 <li id="E_addasfn-3-1-2">
-<div class="para" id="E_addasfn-3-1-2-1">What is the image of <span class="process-math">\(\mathbb{Z}\times\mathbb{Z}\)</span> under <span class="process-math">\(f\text{?}\)</span>
+<div class="para" id="E_addasfn-3-1-2-1">What is the image of <span class="process-math">\(\mathbb{Z}\times\mathbb{Z}\)</span> under <span class="process-math">\(f\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_addasfn-3-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="E_addasfn-3-1-2-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><span class="process-math">\(\mathbb{Z}\)</span></div></details>
+<details id="E_addasfn-3-1-2-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<span class="process-math">\(\mathbb{Z}\)</span><div class="autopermalink" data-description="Answer b.1"><a href="#E_addasfn-3-1-2-2" title="Copy heading and permalink for Answer b.1" aria-label="Copy heading and permalink for Answer b.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Item b"><a href="#E_addasfn-3-1-2" title="Copy heading and permalink for Item b" aria-label="Copy heading and permalink for Item b">🔗</a></div>
 </li>
 <li id="E_addasfn-3-1-3">
-<div class="para" id="E_addasfn-3-1-3-1">Find all ordered pairs that map to 0.</div>
-<details id="E_addasfn-3-1-3-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><span class="process-math">\(\{(n, -n) : n\in \mathbb{Z}\}\)</span></div></details>
+<div class="para" id="E_addasfn-3-1-3-1">Find all ordered pairs that map to 0.<div class="autopermalink" data-description="Paragraph"><a href="#E_addasfn-3-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="E_addasfn-3-1-3-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<span class="process-math">\(\{(n, -n) : n\in \mathbb{Z}\}\)</span><div class="autopermalink" data-description="Answer c.1"><a href="#E_addasfn-3-1-3-2" title="Copy heading and permalink for Answer c.1" aria-label="Copy heading and permalink for Answer c.1">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Item c"><a href="#E_addasfn-3-1-3" title="Copy heading and permalink for Item c" aria-label="Copy heading and permalink for Item c">🔗</a></div>
 </li>
-</ol></div></article></details><article class="activity project-like" id="A_fnsubtraction"><h3 class="heading">
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#E_addasfn-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 5.3.7: Addition as a Function"><a href="#E_addasfn" title="Copy heading and permalink for Example 5.3.7: Addition as a Function" aria-label="Copy heading and permalink for Example 5.3.7: Addition as a Function">🔗</a></div></article></details><article class="activity project-like" id="A_fnsubtraction"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">5.3.1</span><span class="period">.</span><span class="space"> </span><span class="title">Multiplication as a Function.</span>
 </h3>
-<div class="introduction" id="A_fnsubtraction-2"><div class="para" id="A_fnsubtraction-2-1">Define <span class="process-math">\(f:\mathbb{Z}\times\mathbb{Z}\rightarrow\mathbb{Z}\)</span> by <span class="process-math">\(f(a, b)=ab\text{.}\)</span>
+<div class="introduction" id="A_fnsubtraction-2"><div class="para" id="A_fnsubtraction-2-1">Define <span class="process-math">\(f:\mathbb{Z}\times\mathbb{Z}\rightarrow\mathbb{Z}\)</span> by <span class="process-math">\(f(a, b)=ab\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_fnsubtraction-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></div>
 <article class="task exercise-like" id="A_fnsubtraction-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="A_fnsubtraction-3-1">Find <span class="process-math">\(f(0, 2), f(1, 1), f(2, 0), f(3, 2), f(n, 0)\text{.}\)</span>
-</div></article><article class="task exercise-like" id="A_fnsubtraction-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="A_fnsubtraction-4-1">What is the image of <span class="process-math">\(\mathbb{Z}\times\mathbb{Z}\)</span> under <span class="process-math">\(f\text{?}\)</span>
-</div></article><article class="task exercise-like" id="A_fnsubtraction-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="A_fnsubtraction-5-1">Find all ordered pairs that map to 0.</div></article></article><div class="para" id="functions-13">Since a function needs to satisfy the property that each <span class="process-math">\(x\in X\)</span> can only map to one <span class="process-math">\(y \in Y\text{,}\)</span> we say a function is <dfn class="terminology">well-defined</dfn> if whenever <span class="process-math">\(a=b\text{,}\)</span> we have <span class="process-math">\(f(a)=f(b)\text{.}\)</span> Most of the functions you’ve seen in calculus are clearly well-defined since when <span class="process-math">\(a=b\text{,}\)</span> <span class="process-math">\(f(a)=f(b)\text{.}\)</span> This property is really only interesting when elements of <span class="process-math">\(X\)</span> have multiple representations. In other words, when two equal elements in <span class="process-math">\(X\)</span> have different forms. The most familiar set where this happens is <span class="process-math">\(\mathbb{Q}\text{.}\)</span> For example, <span class="process-math">\(\frac{1}{2}=\frac{2}{4}\text{.}\)</span>
+<div class="para" id="A_fnsubtraction-3-1">Find <span class="process-math">\(f(0, 2), f(1, 1), f(2, 0), f(3, 2), f(n, 0)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_fnsubtraction-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 5.3.1.a"><a href="#A_fnsubtraction-3" title="Copy heading and permalink for Task 5.3.1.a" aria-label="Copy heading and permalink for Task 5.3.1.a">🔗</a></div></article><article class="task exercise-like" id="A_fnsubtraction-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="A_fnsubtraction-4-1">What is the image of <span class="process-math">\(\mathbb{Z}\times\mathbb{Z}\)</span> under <span class="process-math">\(f\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_fnsubtraction-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 5.3.1.b"><a href="#A_fnsubtraction-4" title="Copy heading and permalink for Task 5.3.1.b" aria-label="Copy heading and permalink for Task 5.3.1.b">🔗</a></div></article><article class="task exercise-like" id="A_fnsubtraction-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="A_fnsubtraction-5-1">Find all ordered pairs that map to 0.<div class="autopermalink" data-description="Paragraph"><a href="#A_fnsubtraction-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 5.3.1.c"><a href="#A_fnsubtraction-5" title="Copy heading and permalink for Task 5.3.1.c" aria-label="Copy heading and permalink for Task 5.3.1.c">🔗</a></div></article><div class="autopermalink" data-description="Activity 5.3.1: Multiplication as a Function"><a href="#A_fnsubtraction" title="Copy heading and permalink for Activity 5.3.1: Multiplication as a Function" aria-label="Copy heading and permalink for Activity 5.3.1: Multiplication as a Function">🔗</a></div></article><div class="para" id="functions-13">Since a function needs to satisfy the property that each <span class="process-math">\(x\in X\)</span> can only map to one <span class="process-math">\(y \in Y\text{,}\)</span> we say a function is <dfn class="terminology">well-defined</dfn> if whenever <span class="process-math">\(a=b\text{,}\)</span> we have <span class="process-math">\(f(a)=f(b)\text{.}\)</span> Most of the functions you’ve seen in calculus are clearly well-defined since when <span class="process-math">\(a=b\text{,}\)</span> <span class="process-math">\(f(a)=f(b)\text{.}\)</span> This property is really only interesting when elements of <span class="process-math">\(X\)</span> have multiple representations. In other words, when two equal elements in <span class="process-math">\(X\)</span> have different forms. The most familiar set where this happens is <span class="process-math">\(\mathbb{Q}\text{.}\)</span> For example, <span class="process-math">\(\frac{1}{2}=\frac{2}{4}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#functions-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <details id="E_welldefined" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.3.8</span><span class="period">.</span><span class="space"> </span><span class="title">A Map That is Not Well-Defined.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_welldefined-2">Let <span class="process-math">\(f:\mathbb{Q}\rightarrow \mathbb{Z}\)</span> be given by <span class="process-math">\(f(p/q)=p+q\text{.}\)</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_welldefined-2">Let <span class="process-math">\(f:\mathbb{Q}\rightarrow \mathbb{Z}\)</span> be given by <span class="process-math">\(f(p/q)=p+q\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_welldefined-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="E_welldefined-3">Then <span class="process-math">\(1/2=2/4\)</span> in <span class="process-math">\(\mathbb{Q}\text{,}\)</span> but <span class="process-math">\(f(1/2)=1+2=3\)</span> and <span class="process-math">\(f(2/4)=2+4=6\text{.}\)</span> Thus, <span class="process-math">\(1/2=2/4\)</span> but <span class="process-math">\(f(1/2)\neq f(2/4)\text{.}\)</span>
+<div class="para" id="E_welldefined-3">Then <span class="process-math">\(1/2=2/4\)</span> in <span class="process-math">\(\mathbb{Q}\text{,}\)</span> but <span class="process-math">\(f(1/2)=1+2=3\)</span> and <span class="process-math">\(f(2/4)=2+4=6\text{.}\)</span> Thus, <span class="process-math">\(1/2=2/4\)</span> but <span class="process-math">\(f(1/2)\neq f(2/4)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_welldefined-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="E_welldefined-4">Therefore <span class="process-math">\(f\)</span> is not well-defined, and hence, <span class="process-math">\(f\)</span> is not a function.</div></article></details><article class="activity project-like" id="A_notwelldefined"><h3 class="heading">
+<div class="para" id="E_welldefined-4">Therefore <span class="process-math">\(f\)</span> is not well-defined, and hence, <span class="process-math">\(f\)</span> is not a function.<div class="autopermalink" data-description="Paragraph"><a href="#E_welldefined-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 5.3.8: A Map That is Not Well-Defined"><a href="#E_welldefined" title="Copy heading and permalink for Example 5.3.8: A Map That is Not Well-Defined" aria-label="Copy heading and permalink for Example 5.3.8: A Map That is Not Well-Defined">🔗</a></div></article></details><article class="activity project-like" id="A_notwelldefined"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">5.3.2</span><span class="period">.</span><span class="space"> </span><span class="title">Showing a Map is Not Well-Defined.</span>
 </h3>
-<div class="para" id="A_notwelldefined-2-1">Let <span class="process-math">\(f:\mathbb{Q}\rightarrow\mathbb{Z}\)</span> be given by <span class="process-math">\(f(m/n)=m\text{.}\)</span> Show <span class="process-math">\(f\)</span> is NOT well-defined by finding two equivalent fractions in <span class="process-math">\(\mathbb{Q}\)</span> that map to two different integers.</div></article><div class="para" id="functions-16">Now we will look at specific properties of functions. We will learn how to prove a function is one-to-one and/or onto its codomain. These properies are important as they are the exact properties we need in order for a function to have an inverse function.</div>
+<div class="para" id="A_notwelldefined-2-1">Let <span class="process-math">\(f:\mathbb{Q}\rightarrow\mathbb{Z}\)</span> be given by <span class="process-math">\(f(m/n)=m\text{.}\)</span> Show <span class="process-math">\(f\)</span> is NOT well-defined by finding two equivalent fractions in <span class="process-math">\(\mathbb{Q}\)</span> that map to two different integers.<div class="autopermalink" data-description="Paragraph"><a href="#A_notwelldefined-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Activity 5.3.2: Showing a Map is Not Well-Defined"><a href="#A_notwelldefined" title="Copy heading and permalink for Activity 5.3.2: Showing a Map is Not Well-Defined" aria-label="Copy heading and permalink for Activity 5.3.2: Showing a Map is Not Well-Defined">🔗</a></div></article><div class="para" id="functions-16">Now we will look at specific properties of functions. We will learn how to prove a function is one-to-one and/or onto its codomain. These properies are important as they are the exact properties we need in order for a function to have an inverse function.<div class="autopermalink" data-description="Paragraph"><a href="#functions-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="definition definition-like" id="D_onetoone"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.3.9</span><span class="period">.</span>
 </h3>
-<div class="para" id="D_onetoone-1-1">A function, <span class="process-math">\(f:X\rightarrow Y\text{,}\)</span> is <dfn class="terminology">one-to-one</dfn> or <dfn class="terminology">injective</dfn> if for all <span class="process-math">\(x_1, x_2\in X\text{,}\)</span> if <span class="process-math">\(f(x_1)=f(x_2)\)</span> then <span class="process-math">\(x_1=x_2\text{.}\)</span>
-</div></article><div class="para" id="functions-18">Equivalently, <span class="process-math">\(f\)</span> is one-to-one if <span class="process-math">\(x_1\neq x_2\)</span> implies <span class="process-math">\(f(x_1)\neq f(x_2)\text{.}\)</span> We note, this is just the contrapositive of the definition.</div>
-<div class="para" id="functions-19">Although it is easier to prove a function is one-to-one using the definition, the contrapositive can be helpful for deciding if a function is one-to-one.</div>
+<div class="para" id="D_onetoone-1-1">A function, <span class="process-math">\(f:X\rightarrow Y\text{,}\)</span> is <dfn class="terminology">one-to-one</dfn> or <dfn class="terminology">injective</dfn> if for all <span class="process-math">\(x_1, x_2\in X\text{,}\)</span> if <span class="process-math">\(f(x_1)=f(x_2)\)</span> then <span class="process-math">\(x_1=x_2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#D_onetoone-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 5.3.9"><a href="#D_onetoone" title="Copy heading and permalink for Definition 5.3.9" aria-label="Copy heading and permalink for Definition 5.3.9">🔗</a></div></article><div class="para" id="functions-18">Equivalently, <span class="process-math">\(f\)</span> is one-to-one if <span class="process-math">\(x_1\neq x_2\)</span> implies <span class="process-math">\(f(x_1)\neq f(x_2)\text{.}\)</span> We note, this is just the contrapositive of the definition.<div class="autopermalink" data-description="Paragraph"><a href="#functions-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="functions-19">Although it is easier to prove a function is one-to-one using the definition, the contrapositive can be helpful for deciding if a function is one-to-one.<div class="autopermalink" data-description="Paragraph"><a href="#functions-19" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="assemblage assemblage-like" id="B_pfonetoone"><h3 class="heading"><span class="title">Proving and Disproving One-to-One.</span></h3>
 <div class="para logical" id="B_pfonetoone-3">
 <div class="para">To prove <span class="process-math">\(f:X\rightarrow Y\)</span> is one-to-one:</div>
 <ul class="disc" id="B_pfonetoone-3-2">
-<li id="B_pfonetoone-3-2-1"><div class="para" id="p-derived-B_pfonetoone-3-2-1">Assume <span class="process-math">\(f(x_1)=f(x_2).\)</span>
-</div></li>
-<li id="B_pfonetoone-3-2-2"><div class="para" id="p-derived-B_pfonetoone-3-2-2">Show <span class="process-math">\(x_1=x_2.\)</span>
-</div></li>
+<li id="B_pfonetoone-3-2-1">
+<div class="para" id="p-derived-B_pfonetoone-3-2-1">Assume <span class="process-math">\(f(x_1)=f(x_2).\)</span>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#B_pfonetoone-3-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="B_pfonetoone-3-2-2">
+<div class="para" id="p-derived-B_pfonetoone-3-2-2">Show <span class="process-math">\(x_1=x_2.\)</span>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#B_pfonetoone-3-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
 </ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#B_pfonetoone-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="B_pfonetoone-4">
 <div class="para">To prove <span class="process-math">\(f:X\rightarrow Y\)</span> is NOT one-to-one:</div>
 <ul class="disc" id="B_pfonetoone-4-2">
-<li id="B_pfonetoone-4-2-1"><div class="para" id="p-derived-B_pfonetoone-4-2-1">Find a counterexample.</div></li>
-<li id="B_pfonetoone-4-2-2"><div class="para" id="p-derived-B_pfonetoone-4-2-2">In particular, find <span class="process-math">\(x_1, x_2\in X\)</span> with <span class="process-math">\(x_1\neq x_2\)</span> and <span class="process-math">\(f(x_1)=f(x_2)\text{.}\)</span>
-</div></li>
+<li id="B_pfonetoone-4-2-1">
+<div class="para" id="p-derived-B_pfonetoone-4-2-1">Find a counterexample.</div>
+<div class="autopermalink" data-description="Item"><a href="#B_pfonetoone-4-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="B_pfonetoone-4-2-2">
+<div class="para" id="p-derived-B_pfonetoone-4-2-2">In particular, find <span class="process-math">\(x_1, x_2\in X\)</span> with <span class="process-math">\(x_1\neq x_2\)</span> and <span class="process-math">\(f(x_1)=f(x_2)\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#B_pfonetoone-4-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
 </ul>
-</div></article><div class="para" id="functions-21">Note that a one-to-one proof is really a proof of uniqueness. We are proving there is a unique input <span class="process-math">\(x\)</span> for each output.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#B_pfonetoone-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Assemblage: Proving and Disproving One-to-One"><a href="#B_pfonetoone" title="Copy heading and permalink for Assemblage: Proving and Disproving One-to-One" aria-label="Copy heading and permalink for Assemblage: Proving and Disproving One-to-One">🔗</a></div></article><div class="para" id="functions-21">Note that a one-to-one proof is really a proof of uniqueness. We are proving there is a unique input <span class="process-math">\(x\)</span> for each output.<div class="autopermalink" data-description="Paragraph"><a href="#functions-21" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <details id="E_arrownotonetoone" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.3.10</span><span class="period">.</span><span class="space"> </span><span class="title">Not One-to-One.</span>
 </h3></summary><article class="example example-like knowl__content"><figure class="figure figure-like" id="F_arrowdiagnotonetoone"><div class="image-box" style="width: 15%; margin-left: 42.5%; margin-right: 42.5%;"><img src="generated/latex-image/adnotonetoone.svg" role="img" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.3.11<span class="period">.</span></span><span class="space"> </span>A function which is not one-to-one.</figcaption></figure><div class="para" id="E_arrownotonetoone-3">The function given in <a href="functions.html#F_arrowdiagnotonetoone" class="xref" data-knowl="./knowl/xref/F_arrowdiagnotonetoone.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.3.11">Figure 5.3.11</a> in not one-to-one since <span class="process-math">\(c\)</span> and <span class="process-math">\(d\)</span> both map to the same value in <span class="process-math">\(Y\text{.}\)</span>
-</div></article></details><details id="E_pfonetoone" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.3.11<span class="period">.</span></span><span class="space"> </span>A function which is not one-to-one.<div class="autopermalink" data-description="Figure 5.3.11"><a href="#F_arrowdiagnotonetoone" title="Copy heading and permalink for Figure 5.3.11" aria-label="Copy heading and permalink for Figure 5.3.11">🔗</a></div></figcaption></figure><div class="para" id="E_arrownotonetoone-3">The function given in <a href="functions.html#F_arrowdiagnotonetoone" class="xref" data-knowl="./knowl/xref/F_arrowdiagnotonetoone.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.3.11">Figure 5.3.11</a> in not one-to-one since <span class="process-math">\(c\)</span> and <span class="process-math">\(d\)</span> both map to the same value in <span class="process-math">\(Y\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_arrownotonetoone-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 5.3.10: Not One-to-One"><a href="#E_arrownotonetoone" title="Copy heading and permalink for Example 5.3.10: Not One-to-One" aria-label="Copy heading and permalink for Example 5.3.10: Not One-to-One">🔗</a></div></article></details><details id="E_pfonetoone" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.3.12</span><span class="period">.</span><span class="space"> </span><span class="title">Proving One-to-One.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_pfonetoone-2">Let  <span class="process-math">\(f:\mathbb{R}\rightarrow \mathbb{R}\)</span> be given by <span class="process-math">\(f(x)=3x+2\text{.}\)</span> Prove <span class="process-math">\(f\)</span> is one-to-one.</div>
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_pfonetoone-2">Let  <span class="process-math">\(f:\mathbb{R}\rightarrow \mathbb{R}\)</span> be given by <span class="process-math">\(f(x)=3x+2\text{.}\)</span> Prove <span class="process-math">\(f\)</span> is one-to-one.<div class="autopermalink" data-description="Paragraph"><a href="#E_pfonetoone-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <details id="E_pfonetoone-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para logical" id="E_pfonetoone-3-1">
 <div class="para">Assume <span class="process-math">\(f(x_1)=f(x_2)\text{.}\)</span> Then</div>
 <div class="displaymath process-math" id="E_pfonetoone-3-1-2">
@@ -728,50 +517,75 @@ x_1&amp;=x_2
 \end{align*}
 </div>
 <div class="para">which is what we wanted to show.</div>
-</div></article></details></article></details><details id="E_ceonetoone" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.3.13</span><span class="period">.</span><span class="space"> </span><span class="title">Disproving One-to-One.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_ceonetoone-2">Let  <span class="process-math">\(f:\mathbb{Z}\rightarrow \mathbb{Z}\)</span> be given by <span class="process-math">\(f(x)=x^2-1\text{.}\)</span> Disprove <span class="process-math">\(f\)</span> is one-to-one.</div>
-<div class="para" id="E_ceonetoone-3">We need a counterexample with <span class="process-math">\(x_1\neq x_2\)</span> and <span class="process-math">\(f(x_1)=f(x_2)\text{.}\)</span> Let <span class="process-math">\(x_1=2, x_2=-2\text{.}\)</span>
+<div class="autopermalink" data-description="Paragraph"><a href="#E_pfonetoone-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="E_ceonetoone-4">Then <span class="process-math">\(f(2)=4-1=3\)</span> and <span class="process-math">\(f(-2)=4-1=3\text{.}\)</span> So <span class="process-math">\(f(x_1)=f(x_2)\text{,}\)</span> but <span class="process-math">\(2\neq-2\text{.}\)</span>
-</div></article></details><article class="definition definition-like" id="D_onto"><h3 class="heading">
+<div class="autopermalink" data-description="Proof 5.3.12.1"><a href="#E_pfonetoone-3" title="Copy heading and permalink for Proof 5.3.12.1" aria-label="Copy heading and permalink for Proof 5.3.12.1">🔗</a></div></article></details><div class="autopermalink" data-description="Example 5.3.12: Proving One-to-One"><a href="#E_pfonetoone" title="Copy heading and permalink for Example 5.3.12: Proving One-to-One" aria-label="Copy heading and permalink for Example 5.3.12: Proving One-to-One">🔗</a></div></article></details><details id="E_ceonetoone" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.3.13</span><span class="period">.</span><span class="space"> </span><span class="title">Disproving One-to-One.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_ceonetoone-2">Let  <span class="process-math">\(f:\mathbb{Z}\rightarrow \mathbb{Z}\)</span> be given by <span class="process-math">\(f(x)=x^2-1\text{.}\)</span> Disprove <span class="process-math">\(f\)</span> is one-to-one.<div class="autopermalink" data-description="Paragraph"><a href="#E_ceonetoone-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="E_ceonetoone-3">We need a counterexample with <span class="process-math">\(x_1\neq x_2\)</span> and <span class="process-math">\(f(x_1)=f(x_2)\text{.}\)</span> Let <span class="process-math">\(x_1=2, x_2=-2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_ceonetoone-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="E_ceonetoone-4">Then <span class="process-math">\(f(2)=4-1=3\)</span> and <span class="process-math">\(f(-2)=4-1=3\text{.}\)</span> So <span class="process-math">\(f(x_1)=f(x_2)\text{,}\)</span> but <span class="process-math">\(2\neq-2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_ceonetoone-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 5.3.13: Disproving One-to-One"><a href="#E_ceonetoone" title="Copy heading and permalink for Example 5.3.13: Disproving One-to-One" aria-label="Copy heading and permalink for Example 5.3.13: Disproving One-to-One">🔗</a></div></article></details><article class="definition definition-like" id="D_onto"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.3.14</span><span class="period">.</span>
 </h3>
-<div class="para" id="D_onto-1-1">A function, <span class="process-math">\(f:X\rightarrow Y\text{,}\)</span> is <dfn class="terminology">onto</dfn> <span class="process-math">\(Y\)</span> or <dfn class="terminology">surjective</dfn> if for all <span class="process-math">\(y\in Y\)</span> there exists <span class="process-math">\(x\in X\)</span> such that <span class="process-math">\(f(x)=y\text{.}\)</span>
-</div></article><div class="para" id="functions-26">Although we need the definition for onto to be able to write a proof, the concept of onto is easier to understand without the definition. Basically, we need every <span class="process-math">\(y\in Y\)</span> to get mapped to by some <span class="process-math">\(x\in X\text{.}\)</span> We can also think about onto in terms of sets. A function is onto <span class="process-math">\(Y\)</span> if <span class="process-math">\(Y\)</span> is the range or image of <span class="process-math">\(f\text{.}\)</span>
+<div class="para" id="D_onto-1-1">A function, <span class="process-math">\(f:X\rightarrow Y\text{,}\)</span> is <dfn class="terminology">onto</dfn> <span class="process-math">\(Y\)</span> or <dfn class="terminology">surjective</dfn> if for all <span class="process-math">\(y\in Y\)</span> there exists <span class="process-math">\(x\in X\)</span> such that <span class="process-math">\(f(x)=y\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#D_onto-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 5.3.14"><a href="#D_onto" title="Copy heading and permalink for Definition 5.3.14" aria-label="Copy heading and permalink for Definition 5.3.14">🔗</a></div></article><div class="para" id="functions-26">Although we need the definition for onto to be able to write a proof, the concept of onto is easier to understand without the definition. Basically, we need every <span class="process-math">\(y\in Y\)</span> to get mapped to by some <span class="process-math">\(x\in X\text{.}\)</span> We can also think about onto in terms of sets. A function is onto <span class="process-math">\(Y\)</span> if <span class="process-math">\(Y\)</span> is the range or image of <span class="process-math">\(f\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#functions-26" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="assemblage assemblage-like" id="B_pfonto"><h3 class="heading"><span class="title">Proving and Disproving Onto.</span></h3>
 <div class="para logical" id="B_pfonto-3">
 <div class="para">To prove <span class="process-math">\(f:X\rightarrow Y\)</span> is onto <span class="process-math">\(Y\text{:}\)</span>
 </div>
 <ul class="disc" id="B_pfonto-3-3">
-<li id="B_pfonto-3-3-1"><div class="para" id="p-derived-B_pfonto-3-3-1">Let <span class="process-math">\(y\)</span> be a general element of <span class="process-math">\(Y\text{.}\)</span> You should not be using any information about the function at this point.</div></li>
-<li id="B_pfonto-3-3-2"><div class="para" id="p-derived-B_pfonto-3-3-2">Find <span class="process-math">\(x\in X\)</span> such that <span class="process-math">\(f(x)=y\text{.}\)</span> Finding <span class="process-math">\(x\)</span> may involve scratchwork.</div></li>
-<li id="B_pfonto-3-3-3"><div class="para" id="p-derived-B_pfonto-3-3-3">In your proof, state <span class="process-math">\(x\text{,}\)</span> show <span class="process-math">\(x\in X\text{,}\)</span> and show <span class="process-math">\(f(x)=y\text{.}\)</span>
-</div></li>
+<li id="B_pfonto-3-3-1">
+<div class="para" id="p-derived-B_pfonto-3-3-1">Let <span class="process-math">\(y\)</span> be a general element of <span class="process-math">\(Y\text{.}\)</span> You should not be using any information about the function at this point.</div>
+<div class="autopermalink" data-description="Item"><a href="#B_pfonto-3-3-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="B_pfonto-3-3-2">
+<div class="para" id="p-derived-B_pfonto-3-3-2">Find <span class="process-math">\(x\in X\)</span> such that <span class="process-math">\(f(x)=y\text{.}\)</span> Finding <span class="process-math">\(x\)</span> may involve scratchwork.</div>
+<div class="autopermalink" data-description="Item"><a href="#B_pfonto-3-3-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="B_pfonto-3-3-3">
+<div class="para" id="p-derived-B_pfonto-3-3-3">In your proof, state <span class="process-math">\(x\text{,}\)</span> show <span class="process-math">\(x\in X\text{,}\)</span> and show <span class="process-math">\(f(x)=y\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#B_pfonto-3-3-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
 </ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#B_pfonto-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="B_pfonto-4">
 <div class="para">To prove <span class="process-math">\(f:X\rightarrow Y\)</span> is NOT onto <span class="process-math">\(Y\text{:}\)</span>
 </div>
 <ul class="disc" id="B_pfonto-4-3">
-<li id="B_pfonto-4-3-1"><div class="para" id="p-derived-B_pfonto-4-3-1">Find a counterexample.</div></li>
-<li id="B_pfonto-4-3-2"><div class="para" id="p-derived-B_pfonto-4-3-2">In particular, find <span class="process-math">\(y\in Y\)</span> such that no <span class="process-math">\(x\in X\)</span> will map to <span class="process-math">\(y\text{.}\)</span>
-</div></li>
+<li id="B_pfonto-4-3-1">
+<div class="para" id="p-derived-B_pfonto-4-3-1">Find a counterexample.</div>
+<div class="autopermalink" data-description="Item"><a href="#B_pfonto-4-3-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="B_pfonto-4-3-2">
+<div class="para" id="p-derived-B_pfonto-4-3-2">In particular, find <span class="process-math">\(y\in Y\)</span> such that no <span class="process-math">\(x\in X\)</span> will map to <span class="process-math">\(y\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#B_pfonto-4-3-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
 </ul>
-</div></article><div class="para" id="functions-28">An onto proof is really an existence proof: state your candidate <span class="process-math">\(x\text{,}\)</span> show <span class="process-math">\(x\)</span> satifies the required properties. In particular we show <span class="process-math">\(x\in X\)</span> and <span class="process-math">\(f(x)=y\text{.}\)</span>
+<div class="autopermalink" data-description="Paragraph"><a href="#B_pfonto-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Assemblage: Proving and Disproving Onto"><a href="#B_pfonto" title="Copy heading and permalink for Assemblage: Proving and Disproving Onto" aria-label="Copy heading and permalink for Assemblage: Proving and Disproving Onto">🔗</a></div></article><div class="para" id="functions-28">An onto proof is really an existence proof: state your candidate <span class="process-math">\(x\text{,}\)</span> show <span class="process-math">\(x\)</span> satifies the required properties. In particular we show <span class="process-math">\(x\in X\)</span> and <span class="process-math">\(f(x)=y\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#functions-28" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <details id="E_arrownotonto" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.3.15</span><span class="period">.</span><span class="space"> </span><span class="title">Not Onto.</span>
 </h3></summary><article class="example example-like knowl__content"><figure class="figure figure-like" id="F_arrowdiagnotonto"><div class="image-box" style="width: 15%; margin-left: 42.5%; margin-right: 42.5%;"><img src="generated/latex-image/adnotonto.svg" role="img" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.3.16<span class="period">.</span></span><span class="space"> </span>A function which is not onto <span class="process-math">\(Y\)</span></figcaption></figure><div class="para" id="E_arrownotonto-3">The function given in <a href="functions.html#F_arrowdiagnotonto" class="xref" data-knowl="./knowl/xref/F_arrowdiagnotonto.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.3.16">Figure 5.3.16</a> in not onto <span class="process-math">\(Y\)</span> since 2 is not mapped to by any value in <span class="process-math">\(X\text{.}\)</span>
-</div></article></details><details id="E_pfonto" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.3.16<span class="period">.</span></span><span class="space"> </span>A function which is not onto <span class="process-math">\(Y\)</span><div class="autopermalink" data-description="Figure 5.3.16"><a href="#F_arrowdiagnotonto" title="Copy heading and permalink for Figure 5.3.16" aria-label="Copy heading and permalink for Figure 5.3.16">🔗</a></div></figcaption></figure><div class="para" id="E_arrownotonto-3">The function given in <a href="functions.html#F_arrowdiagnotonto" class="xref" data-knowl="./knowl/xref/F_arrowdiagnotonto.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.3.16">Figure 5.3.16</a> in not onto <span class="process-math">\(Y\)</span> since 2 is not mapped to by any value in <span class="process-math">\(X\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_arrownotonto-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 5.3.15: Not Onto"><a href="#E_arrownotonto" title="Copy heading and permalink for Example 5.3.15: Not Onto" aria-label="Copy heading and permalink for Example 5.3.15: Not Onto">🔗</a></div></article></details><details id="E_pfonto" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.3.17</span><span class="period">.</span><span class="space"> </span><span class="title">Proving Onto.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_pfonto-2">Let  <span class="process-math">\(f:\mathbb{R}\rightarrow \mathbb{R}\)</span> be given by <span class="process-math">\(f(x)=3x+2\text{.}\)</span> Prove <span class="process-math">\(f\)</span> is onto <span class="process-math">\(\mathbb{R}\text{.}\)</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_pfonto-2">Let  <span class="process-math">\(f:\mathbb{R}\rightarrow \mathbb{R}\)</span> be given by <span class="process-math">\(f(x)=3x+2\text{.}\)</span> Prove <span class="process-math">\(f\)</span> is onto <span class="process-math">\(\mathbb{R}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_pfonto-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="E_pfonto-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="E_pfonto-3-1">Let <span class="process-math">\(y\in\mathbb{R}\text{.}\)</span>
+<details id="E_pfonto-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="E_pfonto-3-1">Let <span class="process-math">\(y\in\mathbb{R}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_pfonto-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="E_pfonto-3-2">[Scratchwork: we want to find <span class="process-math">\(x\)</span> so that <span class="process-math">\(f(x)=y\text{.}\)</span> So we want <span class="process-math">\(3x+2=y\text{,}\)</span> or <span class="process-math">\(x=\frac{y-2}{3}\text{.}\)</span>]</div>
+<div class="para" id="E_pfonto-3-2">[Scratchwork: we want to find <span class="process-math">\(x\)</span> so that <span class="process-math">\(f(x)=y\text{.}\)</span> So we want <span class="process-math">\(3x+2=y\text{,}\)</span> or <span class="process-math">\(x=\frac{y-2}{3}\text{.}\)</span>]<div class="autopermalink" data-description="Paragraph"><a href="#E_pfonto-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para logical" id="E_pfonto-3-3">
 <div class="para">Let <span class="process-math">\(x=\frac{y-2}{3}\text{.}\)</span> Then since <span class="process-math">\(y\in \mathbb{R}, x\in\mathbb{R}\text{.}\)</span> Furthermore,</div>
 <div class="displaymath process-math">
@@ -780,58 +594,77 @@ f(x)=f(\frac{y-2}{3})=3(\frac{y-2}{3})+2=y-2+2=y,
 \end{equation*}
 </div>
 <div class="para">which is what we wanted to show.</div>
-</div></article></details></article></details><details id="E_dispfonto" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<div class="autopermalink" data-description="Paragraph"><a href="#E_pfonto-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 5.3.17.1"><a href="#E_pfonto-3" title="Copy heading and permalink for Proof 5.3.17.1" aria-label="Copy heading and permalink for Proof 5.3.17.1">🔗</a></div></article></details><div class="autopermalink" data-description="Example 5.3.17: Proving Onto"><a href="#E_pfonto" title="Copy heading and permalink for Example 5.3.17: Proving Onto" aria-label="Copy heading and permalink for Example 5.3.17: Proving Onto">🔗</a></div></article></details><details id="E_dispfonto" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.3.18</span><span class="period">.</span><span class="space"> </span><span class="title">Disproving Onto.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_dispfonto-2">Let  <span class="process-math">\(f:\mathbb{Z}\rightarrow \mathbb{Z}\)</span> be given by <span class="process-math">\(f(x)=3x+2\text{.}\)</span> Prove <span class="process-math">\(f\)</span> is NOT onto <span class="process-math">\(\mathbb{Z}\text{.}\)</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_dispfonto-2">Let  <span class="process-math">\(f:\mathbb{Z}\rightarrow \mathbb{Z}\)</span> be given by <span class="process-math">\(f(x)=3x+2\text{.}\)</span> Prove <span class="process-math">\(f\)</span> is NOT onto <span class="process-math">\(\mathbb{Z}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_dispfonto-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="E_dispfonto-3">Let <span class="process-math">\(y\in\mathbb{Z}\text{.}\)</span>
+<div class="para" id="E_dispfonto-3">Let <span class="process-math">\(y\in\mathbb{Z}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_dispfonto-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="E_dispfonto-4">We saw in the previous example <span class="process-math">\(x=\frac{y-2}{3}\text{.}\)</span> But <span class="process-math">\(x\)</span> is not necessarily in <span class="process-math">\(\mathbb{Z}\text{.}\)</span> So for our counterexample, let <span class="process-math">\(y=1\text{.}\)</span> Then we would need <span class="process-math">\(x=\frac{-1}{3}\notin \mathbb{Z}\text{.}\)</span>
+<div class="para" id="E_dispfonto-4">We saw in the previous example <span class="process-math">\(x=\frac{y-2}{3}\text{.}\)</span> But <span class="process-math">\(x\)</span> is not necessarily in <span class="process-math">\(\mathbb{Z}\text{.}\)</span> So for our counterexample, let <span class="process-math">\(y=1\text{.}\)</span> Then we would need <span class="process-math">\(x=\frac{-1}{3}\notin \mathbb{Z}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_dispfonto-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="E_dispfonto-5">Hence, no element in <span class="process-math">\(\mathbb{Z}\)</span> will map to <span class="process-math">\(y=1\text{.}\)</span> Therefore, <span class="process-math">\(f\)</span> is not onto <span class="process-math">\(\mathbb{Z}\text{.}\)</span>
-</div></article></details><details id="E_pfprdispfonto" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<div class="para" id="E_dispfonto-5">Hence, no element in <span class="process-math">\(\mathbb{Z}\)</span> will map to <span class="process-math">\(y=1\text{.}\)</span> Therefore, <span class="process-math">\(f\)</span> is not onto <span class="process-math">\(\mathbb{Z}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_dispfonto-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 5.3.18: Disproving Onto"><a href="#E_dispfonto" title="Copy heading and permalink for Example 5.3.18: Disproving Onto" aria-label="Copy heading and permalink for Example 5.3.18: Disproving Onto">🔗</a></div></article></details><details id="E_pfprdispfonto" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.3.19</span><span class="period">.</span><span class="space"> </span><span class="title">Prove or Disprove Onto.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_pfprdispfonto-2">Let  <span class="process-math">\(f:\mathbb{R}\rightarrow \mathbb{R}\)</span> be given by <span class="process-math">\(f(x)=x^2-1\text{.}\)</span> Prove or disprove <span class="process-math">\(f\)</span> is onto <span class="process-math">\(\mathbb{R}\text{.}\)</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_pfprdispfonto-2">Let  <span class="process-math">\(f:\mathbb{R}\rightarrow \mathbb{R}\)</span> be given by <span class="process-math">\(f(x)=x^2-1\text{.}\)</span> Prove or disprove <span class="process-math">\(f\)</span> is onto <span class="process-math">\(\mathbb{R}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_pfprdispfonto-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="E_pfprdispfonto-3">Let <span class="process-math">\(y=-2\text{.}\)</span> Then if <span class="process-math">\(f\)</span> is onto <span class="process-math">\(\mathbb{R}\text{,}\)</span> we could find <span class="process-math">\(x\)</span> with <span class="process-math">\(f(x)=-2\text{.}\)</span>
+<div class="para" id="E_pfprdispfonto-3">Let <span class="process-math">\(y=-2\text{.}\)</span> Then if <span class="process-math">\(f\)</span> is onto <span class="process-math">\(\mathbb{R}\text{,}\)</span> we could find <span class="process-math">\(x\)</span> with <span class="process-math">\(f(x)=-2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_pfprdispfonto-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="E_pfprdispfonto-4">But if  <span class="process-math">\(f(x)=-2\text{,}\)</span> then <span class="process-math">\(x^2-1=-2\text{,}\)</span> or <span class="process-math">\(x^2=-1\text{.}\)</span> We know there are no real solutions to this equation. Hence no element in <span class="process-math">\(\mathbb{R}\)</span> will map to <span class="process-math">\(y=-2\text{.}\)</span> Therefore, <span class="process-math">\(f\)</span> is not onto <span class="process-math">\(\mathbb{R}\text{.}\)</span>
-</div></article></details><article class="activity project-like" id="A_real5x"><h3 class="heading">
+<div class="para" id="E_pfprdispfonto-4">But if  <span class="process-math">\(f(x)=-2\text{,}\)</span> then <span class="process-math">\(x^2-1=-2\text{,}\)</span> or <span class="process-math">\(x^2=-1\text{.}\)</span> We know there are no real solutions to this equation. Hence no element in <span class="process-math">\(\mathbb{R}\)</span> will map to <span class="process-math">\(y=-2\text{.}\)</span> Therefore, <span class="process-math">\(f\)</span> is not onto <span class="process-math">\(\mathbb{R}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_pfprdispfonto-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 5.3.19: Prove or Disprove Onto"><a href="#E_pfprdispfonto" title="Copy heading and permalink for Example 5.3.19: Prove or Disprove Onto" aria-label="Copy heading and permalink for Example 5.3.19: Prove or Disprove Onto">🔗</a></div></article></details><article class="activity project-like" id="A_real5x"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">5.3.3</span><span class="period">.</span><span class="space"> </span><span class="title">Multiplication in the Reals.</span>
 </h3>
-<div class="introduction" id="A_real5x-2"><div class="para" id="A_real5x-2-1">Define <span class="process-math">\(f:\mathbb{R}\rightarrow\mathbb{R}\)</span> by <span class="process-math">\(f(x)=5x\text{.}\)</span>
+<div class="introduction" id="A_real5x-2"><div class="para" id="A_real5x-2-1">Define <span class="process-math">\(f:\mathbb{R}\rightarrow\mathbb{R}\)</span> by <span class="process-math">\(f(x)=5x\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_real5x-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></div>
 <article class="task exercise-like" id="A_real5x-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="A_real5x-3-1">Prove or disprove <span class="process-math">\(f\)</span> is one-to-one.</div></article><article class="task exercise-like" id="A_real5x-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="A_real5x-4-1">Prove or disprove <span class="process-math">\(f\)</span> is onto <span class="process-math">\(\mathbb{R}\text{.}\)</span>
-</div></article></article><article class="activity project-like" id="A_int5n"><h3 class="heading">
+<div class="para" id="A_real5x-3-1">Prove or disprove <span class="process-math">\(f\)</span> is one-to-one.<div class="autopermalink" data-description="Paragraph"><a href="#A_real5x-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 5.3.3.a"><a href="#A_real5x-3" title="Copy heading and permalink for Task 5.3.3.a" aria-label="Copy heading and permalink for Task 5.3.3.a">🔗</a></div></article><article class="task exercise-like" id="A_real5x-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="A_real5x-4-1">Prove or disprove <span class="process-math">\(f\)</span> is onto <span class="process-math">\(\mathbb{R}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_real5x-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 5.3.3.b"><a href="#A_real5x-4" title="Copy heading and permalink for Task 5.3.3.b" aria-label="Copy heading and permalink for Task 5.3.3.b">🔗</a></div></article><div class="autopermalink" data-description="Activity 5.3.3: Multiplication in the Reals"><a href="#A_real5x" title="Copy heading and permalink for Activity 5.3.3: Multiplication in the Reals" aria-label="Copy heading and permalink for Activity 5.3.3: Multiplication in the Reals">🔗</a></div></article><article class="activity project-like" id="A_int5n"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">5.3.4</span><span class="period">.</span><span class="space"> </span><span class="title">Multiplication in the Integers.</span>
 </h3>
-<div class="introduction" id="A_int5n-2"><div class="para" id="A_int5n-2-1">Define <span class="process-math">\(f:\mathbb{Z}\rightarrow\mathbb{Z}\)</span> by <span class="process-math">\(f(n)=5n\text{.}\)</span>
+<div class="introduction" id="A_int5n-2"><div class="para" id="A_int5n-2-1">Define <span class="process-math">\(f:\mathbb{Z}\rightarrow\mathbb{Z}\)</span> by <span class="process-math">\(f(n)=5n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_int5n-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></div>
 <article class="task exercise-like" id="A_int5n-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="A_int5n-3-1">Prove or disprove <span class="process-math">\(f\)</span> is one-to-one.</div></article><article class="task exercise-like" id="A_int5n-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="A_int5n-4-1">Prove or disprove <span class="process-math">\(f\)</span> is onto <span class="process-math">\(\mathbb{Z}\text{.}\)</span>
-</div></article></article><article class="activity project-like" id="A_rmod3"><h3 class="heading">
+<div class="para" id="A_int5n-3-1">Prove or disprove <span class="process-math">\(f\)</span> is one-to-one.<div class="autopermalink" data-description="Paragraph"><a href="#A_int5n-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 5.3.4.a"><a href="#A_int5n-3" title="Copy heading and permalink for Task 5.3.4.a" aria-label="Copy heading and permalink for Task 5.3.4.a">🔗</a></div></article><article class="task exercise-like" id="A_int5n-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="A_int5n-4-1">Prove or disprove <span class="process-math">\(f\)</span> is onto <span class="process-math">\(\mathbb{Z}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_int5n-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 5.3.4.b"><a href="#A_int5n-4" title="Copy heading and permalink for Task 5.3.4.b" aria-label="Copy heading and permalink for Task 5.3.4.b">🔗</a></div></article><div class="autopermalink" data-description="Activity 5.3.4: Multiplication in the Integers"><a href="#A_int5n" title="Copy heading and permalink for Activity 5.3.4: Multiplication in the Integers" aria-label="Copy heading and permalink for Activity 5.3.4: Multiplication in the Integers">🔗</a></div></article><article class="activity project-like" id="A_rmod3"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">5.3.5</span><span class="period">.</span><span class="space"> </span><span class="title">Remainders.</span>
 </h3>
-<div class="introduction" id="A_rmod3-2"><div class="para" id="A_rmod3-2-1">Define <span class="process-math">\(g:\mathbb{Z}\rightarrow\{0, 1, 2\}\)</span>  by <span class="process-math">\(g(n)=r\)</span> where <span class="process-math">\(r\)</span> is the remainder when <span class="process-math">\(n\)</span> is divided by 3.</div></div>
+<div class="introduction" id="A_rmod3-2"><div class="para" id="A_rmod3-2-1">Define <span class="process-math">\(g:\mathbb{Z}\rightarrow\{0, 1, 2\}\)</span>  by <span class="process-math">\(g(n)=r\)</span> where <span class="process-math">\(r\)</span> is the remainder when <span class="process-math">\(n\)</span> is divided by 3.<div class="autopermalink" data-description="Paragraph"><a href="#A_rmod3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
 <article class="task exercise-like" id="A_rmod3-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="A_rmod3-3-1">Prove or disprove <span class="process-math">\(g\)</span> is one-to-one.</div></article><article class="task exercise-like" id="A_rmod3-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="A_rmod3-4-1">Prove or disprove <span class="process-math">\(g\)</span> is onto <span class="process-math">\(\{0, 1, 2\}\text{.}\)</span>
-</div></article></article><article class="activity project-like" id="A_aminusb"><h3 class="heading">
+<div class="para" id="A_rmod3-3-1">Prove or disprove <span class="process-math">\(g\)</span> is one-to-one.<div class="autopermalink" data-description="Paragraph"><a href="#A_rmod3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 5.3.5.a"><a href="#A_rmod3-3" title="Copy heading and permalink for Task 5.3.5.a" aria-label="Copy heading and permalink for Task 5.3.5.a">🔗</a></div></article><article class="task exercise-like" id="A_rmod3-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="A_rmod3-4-1">Prove or disprove <span class="process-math">\(g\)</span> is onto <span class="process-math">\(\{0, 1, 2\}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_rmod3-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 5.3.5.b"><a href="#A_rmod3-4" title="Copy heading and permalink for Task 5.3.5.b" aria-label="Copy heading and permalink for Task 5.3.5.b">🔗</a></div></article><div class="autopermalink" data-description="Activity 5.3.5: Remainders"><a href="#A_rmod3" title="Copy heading and permalink for Activity 5.3.5: Remainders" aria-label="Copy heading and permalink for Activity 5.3.5: Remainders">🔗</a></div></article><article class="activity project-like" id="A_aminusb"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">5.3.6</span><span class="period">.</span><span class="space"> </span><span class="title">Subtraction.</span>
 </h3>
-<div class="introduction" id="A_aminusb-2"><div class="para" id="A_aminusb-2-1">Define <span class="process-math">\(h:\mathbb{Z}\times\mathbb{Z}\rightarrow\mathbb{Z}\)</span> by <span class="process-math">\(h(a, b)=a-b\text{.}\)</span>
+<div class="introduction" id="A_aminusb-2"><div class="para" id="A_aminusb-2-1">Define <span class="process-math">\(h:\mathbb{Z}\times\mathbb{Z}\rightarrow\mathbb{Z}\)</span> by <span class="process-math">\(h(a, b)=a-b\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_aminusb-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></div>
 <article class="task exercise-like" id="A_aminusb-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="A_aminusb-3-1">Prove or disprove <span class="process-math">\(h\)</span> is one-to-one.</div></article><article class="task exercise-like" id="A_aminusb-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="A_aminusb-4-1">Prove or disprove <span class="process-math">\(h\)</span> is onto <span class="process-math">\(\mathbb{Z}\text{.}\)</span>
-</div></article></article><article class="definition definition-like" id="D_ontotoonecorrespondence"><h3 class="heading">
+<div class="para" id="A_aminusb-3-1">Prove or disprove <span class="process-math">\(h\)</span> is one-to-one.<div class="autopermalink" data-description="Paragraph"><a href="#A_aminusb-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 5.3.6.a"><a href="#A_aminusb-3" title="Copy heading and permalink for Task 5.3.6.a" aria-label="Copy heading and permalink for Task 5.3.6.a">🔗</a></div></article><article class="task exercise-like" id="A_aminusb-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="A_aminusb-4-1">Prove or disprove <span class="process-math">\(h\)</span> is onto <span class="process-math">\(\mathbb{Z}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_aminusb-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 5.3.6.b"><a href="#A_aminusb-4" title="Copy heading and permalink for Task 5.3.6.b" aria-label="Copy heading and permalink for Task 5.3.6.b">🔗</a></div></article><div class="autopermalink" data-description="Activity 5.3.6: Subtraction"><a href="#A_aminusb" title="Copy heading and permalink for Activity 5.3.6: Subtraction" aria-label="Copy heading and permalink for Activity 5.3.6: Subtraction">🔗</a></div></article><article class="definition definition-like" id="D_ontotoonecorrespondence"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">5.3.20</span><span class="period">.</span>
 </h3>
-<div class="para" id="D_ontotoonecorrespondence-1-1">A function <span class="process-math">\(f:X\rightarrow Y\)</span> is a <dfn class="terminology">one-to-one correspondence</dfn> or <dfn class="terminology">bijection</dfn> if <span class="process-math">\(f\)</span> is one-to-one and onto <span class="process-math">\(Y\text{.}\)</span>
-</div></article><div class="para" id="functions-38">We showed in the above examples that <span class="process-math">\(f:\mathbb{R}\rightarrow\mathbb{R}\)</span> given by <span class="process-math">\(f(x)=3x+2\)</span> is one-to-one and onto <span class="process-math">\(\mathbb{R}\text{.}\)</span> Thus, it is an example of a bijection.</div>
+<div class="para" id="D_ontotoonecorrespondence-1-1">A function <span class="process-math">\(f:X\rightarrow Y\)</span> is a <dfn class="terminology">one-to-one correspondence</dfn> or <dfn class="terminology">bijection</dfn> if <span class="process-math">\(f\)</span> is one-to-one and onto <span class="process-math">\(Y\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#D_ontotoonecorrespondence-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 5.3.20"><a href="#D_ontotoonecorrespondence" title="Copy heading and permalink for Definition 5.3.20" aria-label="Copy heading and permalink for Definition 5.3.20">🔗</a></div></article><div class="para" id="functions-38">We showed in the above examples that <span class="process-math">\(f:\mathbb{R}\rightarrow\mathbb{R}\)</span> given by <span class="process-math">\(f(x)=3x+2\)</span> is one-to-one and onto <span class="process-math">\(\mathbb{R}\text{.}\)</span> Thus, it is an example of a bijection.<div class="autopermalink" data-description="Paragraph"><a href="#functions-38" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="theorem theorem-like" id="T_inverse"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">5.3.21</span><span class="period">.</span>
 </h3>
@@ -842,65 +675,120 @@ f(x)=f(\frac{y-2}{3})=3(\frac{y-2}{3})+2=y-2+2=y,
 f^{-1}(y)=x\Leftrightarrow f(x)=y.
 \end{equation*}
 </div>
-</div></article><div class="para" id="functions-40">If it exists, we say <span class="process-math">\(f^{-1}\)</span> is the <dfn class="terminology">inverse</dfn> of <span class="process-math">\(f\text{.}\)</span>
+<div class="autopermalink" data-description="Paragraph"><a href="#T_inverse-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 5.3.21"><a href="#T_inverse" title="Copy heading and permalink for Theorem 5.3.21" aria-label="Copy heading and permalink for Theorem 5.3.21">🔗</a></div></article><div class="para" id="functions-40">If it exists, we say <span class="process-math">\(f^{-1}\)</span> is the <dfn class="terminology">inverse</dfn> of <span class="process-math">\(f\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#functions-40" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <details id="E_inverse" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.3.22</span><span class="period">.</span><span class="space"> </span><span class="title">Inverse Function.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_inverse-2">Since <span class="process-math">\(f:\mathbb{R}\rightarrow\mathbb{R}\)</span> given by <span class="process-math">\(f(x)=3x+2\)</span> is one-to-one and onto, it has an inverse. We can find the inverse as we did in calculus.</div>
-<div class="para" id="E_inverse-3">Let <span class="process-math">\(y=3x+2\text{,}\)</span> solve for <span class="process-math">\(x\text{.}\)</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_inverse-2">Since <span class="process-math">\(f:\mathbb{R}\rightarrow\mathbb{R}\)</span> given by <span class="process-math">\(f(x)=3x+2\)</span> is one-to-one and onto, it has an inverse. We can find the inverse as we did in calculus.<div class="autopermalink" data-description="Paragraph"><a href="#E_inverse-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="E_inverse-4">We get <span class="process-math">\(x=\frac{y-2}{3}\text{.}\)</span> Thus <span class="process-math">\(f^{-1}(x)=\frac{x-2}{3}\text{.}\)</span>
-</div></article></details><article class="theorem theorem-like" id="T_inverseonetooneonto"><h3 class="heading">
+<div class="para" id="E_inverse-3">Let <span class="process-math">\(y=3x+2\text{,}\)</span> solve for <span class="process-math">\(x\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_inverse-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="E_inverse-4">We get <span class="process-math">\(x=\frac{y-2}{3}\text{.}\)</span> Thus <span class="process-math">\(f^{-1}(x)=\frac{x-2}{3}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_inverse-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 5.3.22: Inverse Function"><a href="#E_inverse" title="Copy heading and permalink for Example 5.3.22: Inverse Function" aria-label="Copy heading and permalink for Example 5.3.22: Inverse Function">🔗</a></div></article></details><article class="theorem theorem-like" id="T_inverseonetooneonto"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">5.3.23</span><span class="period">.</span>
 </h3>
-<div class="para" id="T_inverseonetooneonto-1-1">If <span class="process-math">\(f:X\rightarrow Y\)</span> is one-to-one and onto <span class="process-math">\(Y\text{,}\)</span> then <span class="process-math">\(f^{-1}:Y\rightarrow X\)</span> is one-to-one and onto <span class="process-math">\(X\text{.}\)</span>
-</div></article><details id="functions-43" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="functions-43-1">Show <span class="process-math">\(f^{-1}\)</span> is one-to-one: assume <span class="process-math">\(f^{-1}(y_1)=f^{-1}(y_2)\text{.}\)</span> Then <span class="process-math">\(f^{-1}(y_1)=f^{-1}(y_2)=x\)</span> for some <span class="process-math">\(x\in X\text{.}\)</span> Thus,  <span class="process-math">\(f(x)=y_1\)</span> and <span class="process-math">\(f(x)=y_2\text{.}\)</span> Since <span class="process-math">\(f\)</span> is a function, <span class="process-math">\(y_1=y_2\text{.}\)</span>
+<div class="para" id="T_inverseonetooneonto-1-1">If <span class="process-math">\(f:X\rightarrow Y\)</span> is one-to-one and onto <span class="process-math">\(Y\text{,}\)</span> then <span class="process-math">\(f^{-1}:Y\rightarrow X\)</span> is one-to-one and onto <span class="process-math">\(X\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#T_inverseonetooneonto-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="functions-43-2">Show <span class="process-math">\(f^{-1}\)</span> is onto <span class="process-math">\(X\text{.}\)</span> Let <span class="process-math">\(x\in X\text{.}\)</span> Then there exists <span class="process-math">\(y\in Y\)</span> such that <span class="process-math">\(f(x)=y\)</span> since <span class="process-math">\(f\)</span> is a function from <span class="process-math">\(X\text{.}\)</span> Now, <span class="process-math">\(f^{-1}(y)=x\text{.}\)</span> Therefore, there exists <span class="process-math">\(y\in Y\)</span> such that <span class="process-math">\(f^{-1}(y)=x\text{.}\)</span>
-</div></article></details><article class="activity project-like" id="A_whichbijection"><h3 class="heading">
+<div class="autopermalink" data-description="Theorem 5.3.23"><a href="#T_inverseonetooneonto" title="Copy heading and permalink for Theorem 5.3.23" aria-label="Copy heading and permalink for Theorem 5.3.23">🔗</a></div></article><details id="functions-43" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="functions-43-1">Show <span class="process-math">\(f^{-1}\)</span> is one-to-one: assume <span class="process-math">\(f^{-1}(y_1)=f^{-1}(y_2)\text{.}\)</span> Then <span class="process-math">\(f^{-1}(y_1)=f^{-1}(y_2)=x\)</span> for some <span class="process-math">\(x\in X\text{.}\)</span> Thus,  <span class="process-math">\(f(x)=y_1\)</span> and <span class="process-math">\(f(x)=y_2\text{.}\)</span> Since <span class="process-math">\(f\)</span> is a function, <span class="process-math">\(y_1=y_2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#functions-43-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="functions-43-2">Show <span class="process-math">\(f^{-1}\)</span> is onto <span class="process-math">\(X\text{.}\)</span> Let <span class="process-math">\(x\in X\text{.}\)</span> Then there exists <span class="process-math">\(y\in Y\)</span> such that <span class="process-math">\(f(x)=y\)</span> since <span class="process-math">\(f\)</span> is a function from <span class="process-math">\(X\text{.}\)</span> Now, <span class="process-math">\(f^{-1}(y)=x\text{.}\)</span> Therefore, there exists <span class="process-math">\(y\in Y\)</span> such that <span class="process-math">\(f^{-1}(y)=x\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#functions-43-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 5.3.1"><a href="#functions-43" title="Copy heading and permalink for Proof 5.3.1" aria-label="Copy heading and permalink for Proof 5.3.1">🔗</a></div></article></details><article class="activity project-like" id="A_whichbijection"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">5.3.7</span><span class="period">.</span><span class="space"> </span><span class="title">Bijections.</span>
 </h3>
-<div class="para" id="A_whichbijection-2-1">Which of the functions from the activities, <a href="functions.html#A_real5x" class="xref" data-knowl="./knowl/xref/A_real5x.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 5.3.3: Multiplication in the Reals">Activity 5.3.3</a>,  <a href="functions.html#A_int5n" class="xref" data-knowl="./knowl/xref/A_int5n.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 5.3.4: Multiplication in the Integers">Activity 5.3.4</a>, <a href="functions.html#A_rmod3" class="xref" data-knowl="./knowl/xref/A_rmod3.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 5.3.5: Remainders">Activity 5.3.5</a> and <a href="functions.html#A_aminusb" class="xref" data-knowl="./knowl/xref/A_aminusb.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 5.3.6: Subtraction">Activity 5.3.6</a> are bijections? If a function is a bijection, find its inverse function. Is the inverse one-to-one and onto?</div></article><section class="exercises" id="functions-45"><h3 class="heading hide-type">
+<div class="para" id="A_whichbijection-2-1">Which of the functions from the activities, <a href="functions.html#A_real5x" class="xref" data-knowl="./knowl/xref/A_real5x.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 5.3.3: Multiplication in the Reals">Activity 5.3.3</a>,  <a href="functions.html#A_int5n" class="xref" data-knowl="./knowl/xref/A_int5n.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 5.3.4: Multiplication in the Integers">Activity 5.3.4</a>, <a href="functions.html#A_rmod3" class="xref" data-knowl="./knowl/xref/A_rmod3.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 5.3.5: Remainders">Activity 5.3.5</a> and <a href="functions.html#A_aminusb" class="xref" data-knowl="./knowl/xref/A_aminusb.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 5.3.6: Subtraction">Activity 5.3.6</a> are bijections? If a function is a bijection, find its inverse function. Is the inverse one-to-one and onto?<div class="autopermalink" data-description="Paragraph"><a href="#A_whichbijection-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Activity 5.3.7: Bijections"><a href="#A_whichbijection" title="Copy heading and permalink for Activity 5.3.7: Bijections" aria-label="Copy heading and permalink for Activity 5.3.7: Bijections">🔗</a></div></article><section class="exercises" id="functions-45"><h3 class="heading hide-type">
 <span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Exercises</span>
 </h3>
 <article class="exercise exercise-like" id="functions-45-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="functions-45-1-1-1">Let <span class="process-math">\(X=\{1, 5, 9\}\)</span> and <span class="process-math">\(Y=\{3, 4, 7\}\text{.}\)</span>
-</div> <ol class="lower-alpha" id="functions-45-1-1-2">
+<div class="para" id="functions-45-1-1-1">Let <span class="process-math">\(X=\{1, 5, 9\}\)</span> and <span class="process-math">\(Y=\{3, 4, 7\}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#functions-45-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha lower-alpha-level-1" id="functions-45-1-1-2">
 <li id="functions-45-1-1-2-1">
-<div class="para" id="functions-45-1-1-2-1-1">Define <span class="process-math">\(f:X\rightarrow Y\)</span> by specifying that <span class="process-math">\(f(1)=4, f(5)=7, f(9)=4\text{.}\)</span>
+<div class="para" id="functions-45-1-1-2-1-1">Define <span class="process-math">\(f:X\rightarrow Y\)</span> by specifying that <span class="process-math">\(f(1)=4, f(5)=7, f(9)=4\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#functions-45-1-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="functions-45-1-1-2-1-2">Is <span class="process-math">\(f\)</span> one-to-one? Is <span class="process-math">\(f\)</span> onto? Explain your answers.</div>
+<div class="para" id="functions-45-1-1-2-1-2">Is <span class="process-math">\(f\)</span> one-to-one? Is <span class="process-math">\(f\)</span> onto? Explain your answers.<div class="autopermalink" data-description="Paragraph"><a href="#functions-45-1-1-2-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 5.3.1.a"><a href="#functions-45-1-1-2-1" title="Copy heading and permalink for Item 5.3.1.a" aria-label="Copy heading and permalink for Item 5.3.1.a">🔗</a></div>
 </li>
 <li id="functions-45-1-1-2-2">
-<div class="para" id="functions-45-1-1-2-2-1">Define <span class="process-math">\(g:X\rightarrow Y\)</span> by specifying that <span class="process-math">\(g(1)=7, g(5)=3, g(9)=4\text{.}\)</span>
+<div class="para" id="functions-45-1-1-2-2-1">Define <span class="process-math">\(g:X\rightarrow Y\)</span> by specifying that <span class="process-math">\(g(1)=7, g(5)=3, g(9)=4\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#functions-45-1-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="functions-45-1-1-2-2-2">Is <span class="process-math">\(g\)</span> one-to-one? Is <span class="process-math">\(g\)</span> onto? Explain your answers.</div>
+<div class="para" id="functions-45-1-1-2-2-2">Is <span class="process-math">\(g\)</span> one-to-one? Is <span class="process-math">\(g\)</span> onto? Explain your answers.<div class="autopermalink" data-description="Paragraph"><a href="#functions-45-1-1-2-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 5.3.1.b"><a href="#functions-45-1-1-2-2" title="Copy heading and permalink for Item 5.3.1.b" aria-label="Copy heading and permalink for Item 5.3.1.b">🔗</a></div>
 </li>
-</ol></article><article class="exercise exercise-like" id="functions-45-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para" id="functions-45-2-1-1">Let <span class="process-math">\(X=\{1, 2, 3\}\text{,}\)</span> <span class="process-math">\(Y=\{1, 2, 3, 4\}\)</span> and <span class="process-math">\(Z=\{1, 2\}\text{.}\)</span>
-</div> <ol class="lower-alpha" id="functions-45-2-1-2">
-<li id="functions-45-2-1-2-1"><div class="para" id="functions-45-2-1-2-1-1">Define a function <span class="process-math">\(f:X\rightarrow Y\)</span> that is one-to-one but not onto.</div></li>
-<li id="functions-45-2-1-2-2"><div class="para" id="functions-45-2-1-2-2-1">Define a function <span class="process-math">\(g:X\rightarrow Z\)</span> that is onto but not one-to-one.</div></li>
-<li id="functions-45-2-1-2-3"><div class="para" id="functions-45-2-1-2-3-1">Define a function <span class="process-math">\(h:X\rightarrow X\)</span> that is neither one-to-one nor onto.</div></li>
-<li id="functions-45-2-1-2-4"><div class="para" id="functions-45-2-1-2-4-1">Define a function <span class="process-math">\(k:X\rightarrow X\)</span> that is one-to-one and onto, but is not the identity function (does not send every element to itself).</div></li>
-</ol></article><article class="exercise exercise-like" id="functions-45-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="para" id="functions-45-3-1-1">Let <span class="process-math">\(f\)</span> be a function from the integers to the even integers given by <span class="process-math">\(f(a)=2a\text{.}\)</span>
-</div> <ol class="lower-alpha" id="functions-45-3-1-2">
-<li id="functions-45-3-1-2-1"><div class="para" id="functions-45-3-1-2-1-1">Prove <span class="process-math">\(f\)</span> is one-to-one.</div></li>
-<li id="functions-45-3-1-2-2"><div class="para" id="functions-45-3-1-2-2-1">Prove <span class="process-math">\(f\)</span> is onto.</div></li>
-</ol></article><article class="exercise exercise-like" id="functions-45-4"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para" id="functions-45-4-1-1">Define <span class="process-math">\(f:\mathbb{Z}\rightarrow\mathbb{Z}\)</span> by <span class="process-math">\(f(n)=4n-5\text{.}\)</span>
-</div> <ol class="lower-alpha" id="functions-45-4-1-2">
-<li id="functions-45-4-1-2-1"><div class="para" id="functions-45-4-1-2-1-1">Prove or disprove <span class="process-math">\(f\)</span> is one-to-one.</div></li>
-<li id="functions-45-4-1-2-2"><div class="para" id="functions-45-4-1-2-2-1">Prove or disprove <span class="process-math">\(f\)</span> is onto <span class="process-math">\(\mathbb{Z}\text{.}\)</span>
-</div></li>
-</ol></article><article class="exercise exercise-like" id="functions-45-5"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<div class="para" id="functions-45-5-1-1">Define <span class="process-math">\(g:\mathbb{R}\rightarrow\mathbb{R}\)</span> by <span class="process-math">\(f(x)=4x-5\text{.}\)</span>
-</div> <ol class="lower-alpha" id="functions-45-5-1-2">
-<li id="functions-45-5-1-2-1"><div class="para" id="functions-45-5-1-2-1-1">Prove or disprove <span class="process-math">\(g\)</span> is one-to-one.</div></li>
-<li id="functions-45-5-1-2-2"><div class="para" id="functions-45-5-1-2-2-1">Prove or disprove <span class="process-math">\(g\)</span> is onto <span class="process-math">\(\mathbb{R}\text{.}\)</span>
-</div></li>
-</ol></article><article class="exercise exercise-like" id="functions-45-6"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+</ol>
+<div class="autopermalink" data-description="Exercise 5.3.1"><a href="#functions-45-1" title="Copy heading and permalink for Exercise 5.3.1" aria-label="Copy heading and permalink for Exercise 5.3.1">🔗</a></div></article><article class="exercise exercise-like" id="functions-45-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="para" id="functions-45-2-1-1">Let <span class="process-math">\(X=\{1, 2, 3\}\text{,}\)</span> <span class="process-math">\(Y=\{1, 2, 3, 4\}\)</span> and <span class="process-math">\(Z=\{1, 2\}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#functions-45-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha lower-alpha-level-1" id="functions-45-2-1-2">
+<li id="functions-45-2-1-2-1">
+<div class="para" id="functions-45-2-1-2-1-1">Define a function <span class="process-math">\(f:X\rightarrow Y\)</span> that is one-to-one but not onto.<div class="autopermalink" data-description="Paragraph"><a href="#functions-45-2-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 5.3.2.a"><a href="#functions-45-2-1-2-1" title="Copy heading and permalink for Item 5.3.2.a" aria-label="Copy heading and permalink for Item 5.3.2.a">🔗</a></div>
+</li>
+<li id="functions-45-2-1-2-2">
+<div class="para" id="functions-45-2-1-2-2-1">Define a function <span class="process-math">\(g:X\rightarrow Z\)</span> that is onto but not one-to-one.<div class="autopermalink" data-description="Paragraph"><a href="#functions-45-2-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 5.3.2.b"><a href="#functions-45-2-1-2-2" title="Copy heading and permalink for Item 5.3.2.b" aria-label="Copy heading and permalink for Item 5.3.2.b">🔗</a></div>
+</li>
+<li id="functions-45-2-1-2-3">
+<div class="para" id="functions-45-2-1-2-3-1">Define a function <span class="process-math">\(h:X\rightarrow X\)</span> that is neither one-to-one nor onto.<div class="autopermalink" data-description="Paragraph"><a href="#functions-45-2-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 5.3.2.c"><a href="#functions-45-2-1-2-3" title="Copy heading and permalink for Item 5.3.2.c" aria-label="Copy heading and permalink for Item 5.3.2.c">🔗</a></div>
+</li>
+<li id="functions-45-2-1-2-4">
+<div class="para" id="functions-45-2-1-2-4-1">Define a function <span class="process-math">\(k:X\rightarrow X\)</span> that is one-to-one and onto, but is not the identity function (does not send every element to itself).<div class="autopermalink" data-description="Paragraph"><a href="#functions-45-2-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 5.3.2.d"><a href="#functions-45-2-1-2-4" title="Copy heading and permalink for Item 5.3.2.d" aria-label="Copy heading and permalink for Item 5.3.2.d">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 5.3.2"><a href="#functions-45-2" title="Copy heading and permalink for Exercise 5.3.2" aria-label="Copy heading and permalink for Exercise 5.3.2">🔗</a></div></article><article class="exercise exercise-like" id="functions-45-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="para" id="functions-45-3-1-1">Let <span class="process-math">\(f\)</span> be a function from the integers to the even integers given by <span class="process-math">\(f(a)=2a\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#functions-45-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha lower-alpha-level-1" id="functions-45-3-1-2">
+<li id="functions-45-3-1-2-1">
+<div class="para" id="functions-45-3-1-2-1-1">Prove <span class="process-math">\(f\)</span> is one-to-one.<div class="autopermalink" data-description="Paragraph"><a href="#functions-45-3-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 5.3.3.a"><a href="#functions-45-3-1-2-1" title="Copy heading and permalink for Item 5.3.3.a" aria-label="Copy heading and permalink for Item 5.3.3.a">🔗</a></div>
+</li>
+<li id="functions-45-3-1-2-2">
+<div class="para" id="functions-45-3-1-2-2-1">Prove <span class="process-math">\(f\)</span> is onto.<div class="autopermalink" data-description="Paragraph"><a href="#functions-45-3-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 5.3.3.b"><a href="#functions-45-3-1-2-2" title="Copy heading and permalink for Item 5.3.3.b" aria-label="Copy heading and permalink for Item 5.3.3.b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 5.3.3"><a href="#functions-45-3" title="Copy heading and permalink for Exercise 5.3.3" aria-label="Copy heading and permalink for Exercise 5.3.3">🔗</a></div></article><article class="exercise exercise-like" id="functions-45-4"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="para" id="functions-45-4-1-1">Define <span class="process-math">\(f:\mathbb{Z}\rightarrow\mathbb{Z}\)</span> by <span class="process-math">\(f(n)=4n-5\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#functions-45-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha lower-alpha-level-1" id="functions-45-4-1-2">
+<li id="functions-45-4-1-2-1">
+<div class="para" id="functions-45-4-1-2-1-1">Prove or disprove <span class="process-math">\(f\)</span> is one-to-one.<div class="autopermalink" data-description="Paragraph"><a href="#functions-45-4-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 5.3.4.a"><a href="#functions-45-4-1-2-1" title="Copy heading and permalink for Item 5.3.4.a" aria-label="Copy heading and permalink for Item 5.3.4.a">🔗</a></div>
+</li>
+<li id="functions-45-4-1-2-2">
+<div class="para" id="functions-45-4-1-2-2-1">Prove or disprove <span class="process-math">\(f\)</span> is onto <span class="process-math">\(\mathbb{Z}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#functions-45-4-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 5.3.4.b"><a href="#functions-45-4-1-2-2" title="Copy heading and permalink for Item 5.3.4.b" aria-label="Copy heading and permalink for Item 5.3.4.b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 5.3.4"><a href="#functions-45-4" title="Copy heading and permalink for Exercise 5.3.4" aria-label="Copy heading and permalink for Exercise 5.3.4">🔗</a></div></article><article class="exercise exercise-like" id="functions-45-5"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="para" id="functions-45-5-1-1">Define <span class="process-math">\(g:\mathbb{R}\rightarrow\mathbb{R}\)</span> by <span class="process-math">\(f(x)=4x-5\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#functions-45-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha lower-alpha-level-1" id="functions-45-5-1-2">
+<li id="functions-45-5-1-2-1">
+<div class="para" id="functions-45-5-1-2-1-1">Prove or disprove <span class="process-math">\(g\)</span> is one-to-one.<div class="autopermalink" data-description="Paragraph"><a href="#functions-45-5-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 5.3.5.a"><a href="#functions-45-5-1-2-1" title="Copy heading and permalink for Item 5.3.5.a" aria-label="Copy heading and permalink for Item 5.3.5.a">🔗</a></div>
+</li>
+<li id="functions-45-5-1-2-2">
+<div class="para" id="functions-45-5-1-2-2-1">Prove or disprove <span class="process-math">\(g\)</span> is onto <span class="process-math">\(\mathbb{R}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#functions-45-5-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 5.3.5.b"><a href="#functions-45-5-1-2-2" title="Copy heading and permalink for Item 5.3.5.b" aria-label="Copy heading and permalink for Item 5.3.5.b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 5.3.5"><a href="#functions-45-5" title="Copy heading and permalink for Exercise 5.3.5" aria-label="Copy heading and permalink for Exercise 5.3.5">🔗</a></div></article><article class="exercise exercise-like" id="functions-45-6"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
 <div class="para logical" id="functions-45-6-1-1">
 <div class="para">Let <span class="process-math">\(A={\mathbb R}-\{-1\}\text{.}\)</span> Define <span class="process-math">\(f:A\rightarrow {\mathbb R}\)</span> by</div>
 <div class="displaymath process-math">
@@ -909,45 +797,107 @@ f(a)={2a\over a+1}.
 \end{equation*}
 </div>
 <div class="para">Prove <span class="process-math">\(f\)</span> is one-to-one but not onto.</div>
-</div></article><article class="exercise exercise-like" id="functions-45-7"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
-<div class="para" id="functions-45-7-1-1">Define <span class="process-math">\(F:{\cal P}(\{a, b, c\})\rightarrow\mathbb{Z}\)</span> by</div> <div class="para" id="functions-45-7-1-2">
-<span class="process-math">\(F(A)=\)</span> the number of elements in <span class="process-math">\(A\text{.}\)</span>
-</div> <ol class="lower-alpha" id="functions-45-7-1-3">
-<li id="functions-45-7-1-3-1"><div class="para" id="functions-45-7-1-3-1-1">Prove or disprove <span class="process-math">\(F\)</span> is one-to-one.</div></li>
-<li id="functions-45-7-1-3-2"><div class="para" id="functions-45-7-1-3-2-1">Prove or disprove <span class="process-math">\(F\)</span> is onto <span class="process-math">\(\mathbb{Z}\text{.}\)</span>
-</div></li>
-</ol></article><article class="exercise exercise-like" id="functions-45-8"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
-<div class="para" id="functions-45-8-1-1">Let <span class="process-math">\(f:{\mathbb Z}\times{\mathbb Z}\rightarrow{\mathbb Z}\)</span> be given by <span class="process-math">\(f(a, b)=a\text{.}\)</span>
-</div> <ol class="lower-alpha" id="functions-45-8-1-2">
-<li id="functions-45-8-1-2-1"><div class="para" id="functions-45-8-1-2-1-1">Prove or disprove <span class="process-math">\(f\)</span> is one-to-one.</div></li>
-<li id="functions-45-8-1-2-2"><div class="para" id="functions-45-8-1-2-2-1">Prove or disprove <span class="process-math">\(f\)</span> is onto.</div></li>
-</ol> <div class="para" id="functions-45-8-1-3">Note: this map is called a <em class="emphasis">projection</em>.</div></article><article class="exercise exercise-like" id="functions-45-9"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
-<div class="para" id="functions-45-9-1-1">Let <span class="process-math">\(f:{\mathbb Z}\rightarrow{\mathbb Z}\times{\mathbb Z}\)</span> be given by <span class="process-math">\(f(a) =(a, a)\text{.}\)</span>
-</div> <ol class="lower-alpha" id="functions-45-9-1-2">
-<li id="functions-45-9-1-2-1"><div class="para" id="functions-45-9-1-2-1-1">Prove or disprove <span class="process-math">\(f\)</span> is one-to-one.</div></li>
-<li id="functions-45-9-1-2-2"><div class="para" id="functions-45-9-1-2-2-1">Prove or disprove <span class="process-math">\(f\)</span> is onto.</div></li>
-</ol> <div class="para" id="functions-45-9-1-3">Note: this map is called an <em class="emphasis">embedding</em>.</div></article><article class="exercise exercise-like" id="functions-45-10"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
-<div class="para" id="functions-45-10-1-1">Define <span class="process-math">\(G:\mathbb{R}\times\mathbb{R}\rightarrow\mathbb{R}\times\mathbb{R}\)</span> by</div> <div class="para" id="functions-45-10-1-2"><span class="process-math">\(G(x, y)=(2y, -x)\text{.}\)</span></div> <ol class="lower-alpha" id="functions-45-10-1-3">
-<li id="functions-45-10-1-3-1"><div class="para" id="functions-45-10-1-3-1-1">Prove or disprove <span class="process-math">\(G\)</span> is one-to-one.</div></li>
-<li id="functions-45-10-1-3-2"><div class="para" id="functions-45-10-1-3-2-1">Prove or disprove <span class="process-math">\(G\)</span> is onto <span class="process-math">\(\mathbb{R}\times\mathbb{R}\text{.}\)</span>
-</div></li>
-</ol></article><article class="exercise exercise-like" id="functions-45-11"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
-<div class="para" id="functions-45-11-1-1">Define <span class="process-math">\(H:\mathbb{R}\times\mathbb{R}\rightarrow\mathbb{R}\times\mathbb{R}\)</span> by</div> <div class="para" id="functions-45-11-1-2"><span class="process-math">\(H(x, y)=(x+1, 2-y)\text{.}\)</span></div> <ol class="lower-alpha" id="functions-45-11-1-3">
-<li id="functions-45-11-1-3-1"><div class="para" id="functions-45-11-1-3-1-1">Prove or disprove <span class="process-math">\(H\)</span> is one-to-one.</div></li>
-<li id="functions-45-11-1-3-2"><div class="para" id="functions-45-11-1-3-2-1">Prove or disprove <span class="process-math">\(H\)</span> is onto <span class="process-math">\(\mathbb{R}\times\mathbb{R}\text{.}\)</span>
-</div></li>
-</ol></article><article class="exercise exercise-like" id="functions-45-12"><h4 class="heading"><span class="codenumber">12<span class="period">.</span></span></h4>
-<div class="para" id="functions-45-12-1-1">Let <span class="process-math">\(f:{\mathbb Q}\times{\mathbb Q}\rightarrow{\mathbb Q}\times{\mathbb Q}\)</span> be given by <span class="process-math">\(f(a, b) =(2a, a+b)\text{.}\)</span>
-</div> <ol class="lower-alpha" id="functions-45-12-1-2">
-<li id="functions-45-12-1-2-1"><div class="para" id="functions-45-12-1-2-1-1">Prove or disprove <span class="process-math">\(f\)</span> is one-to-one.</div></li>
-<li id="functions-45-12-1-2-2"><div class="para" id="functions-45-12-1-2-2-1">Prove or disprove <span class="process-math">\(f\)</span> is onto.</div></li>
-</ol></article></section></section></div>
-<div class="ptx-content-footer">
+<div class="autopermalink" data-description="Paragraph"><a href="#functions-45-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 5.3.6"><a href="#functions-45-6" title="Copy heading and permalink for Exercise 5.3.6" aria-label="Copy heading and permalink for Exercise 5.3.6">🔗</a></div></article><article class="exercise exercise-like" id="functions-45-7"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<div class="para" id="functions-45-7-1-1">Define <span class="process-math">\(F:{\cal P}(\{a, b, c\})\rightarrow\mathbb{Z}\)</span> by<div class="autopermalink" data-description="Paragraph"><a href="#functions-45-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="functions-45-7-1-2">
+<span class="process-math">\(F(A)=\)</span> the number of elements in <span class="process-math">\(A\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#functions-45-7-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha lower-alpha-level-1" id="functions-45-7-1-3">
+<li id="functions-45-7-1-3-1">
+<div class="para" id="functions-45-7-1-3-1-1">Prove or disprove <span class="process-math">\(F\)</span> is one-to-one.<div class="autopermalink" data-description="Paragraph"><a href="#functions-45-7-1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 5.3.7.a"><a href="#functions-45-7-1-3-1" title="Copy heading and permalink for Item 5.3.7.a" aria-label="Copy heading and permalink for Item 5.3.7.a">🔗</a></div>
+</li>
+<li id="functions-45-7-1-3-2">
+<div class="para" id="functions-45-7-1-3-2-1">Prove or disprove <span class="process-math">\(F\)</span> is onto <span class="process-math">\(\mathbb{Z}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#functions-45-7-1-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 5.3.7.b"><a href="#functions-45-7-1-3-2" title="Copy heading and permalink for Item 5.3.7.b" aria-label="Copy heading and permalink for Item 5.3.7.b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 5.3.7"><a href="#functions-45-7" title="Copy heading and permalink for Exercise 5.3.7" aria-label="Copy heading and permalink for Exercise 5.3.7">🔗</a></div></article><article class="exercise exercise-like" id="functions-45-8"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<div class="para" id="functions-45-8-1-1">Let <span class="process-math">\(f:{\mathbb Z}\times{\mathbb Z}\rightarrow{\mathbb Z}\)</span> be given by <span class="process-math">\(f(a, b)=a\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#functions-45-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha lower-alpha-level-1" id="functions-45-8-1-2">
+<li id="functions-45-8-1-2-1">
+<div class="para" id="functions-45-8-1-2-1-1">Prove or disprove <span class="process-math">\(f\)</span> is one-to-one.<div class="autopermalink" data-description="Paragraph"><a href="#functions-45-8-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 5.3.8.a"><a href="#functions-45-8-1-2-1" title="Copy heading and permalink for Item 5.3.8.a" aria-label="Copy heading and permalink for Item 5.3.8.a">🔗</a></div>
+</li>
+<li id="functions-45-8-1-2-2">
+<div class="para" id="functions-45-8-1-2-2-1">Prove or disprove <span class="process-math">\(f\)</span> is onto.<div class="autopermalink" data-description="Paragraph"><a href="#functions-45-8-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 5.3.8.b"><a href="#functions-45-8-1-2-2" title="Copy heading and permalink for Item 5.3.8.b" aria-label="Copy heading and permalink for Item 5.3.8.b">🔗</a></div>
+</li>
+</ol> <div class="para" id="functions-45-8-1-3">Note: this map is called a <em class="emphasis">projection</em>.<div class="autopermalink" data-description="Paragraph"><a href="#functions-45-8-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 5.3.8"><a href="#functions-45-8" title="Copy heading and permalink for Exercise 5.3.8" aria-label="Copy heading and permalink for Exercise 5.3.8">🔗</a></div></article><article class="exercise exercise-like" id="functions-45-9"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
+<div class="para" id="functions-45-9-1-1">Let <span class="process-math">\(f:{\mathbb Z}\rightarrow{\mathbb Z}\times{\mathbb Z}\)</span> be given by <span class="process-math">\(f(a) =(a, a)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#functions-45-9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha lower-alpha-level-1" id="functions-45-9-1-2">
+<li id="functions-45-9-1-2-1">
+<div class="para" id="functions-45-9-1-2-1-1">Prove or disprove <span class="process-math">\(f\)</span> is one-to-one.<div class="autopermalink" data-description="Paragraph"><a href="#functions-45-9-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 5.3.9.a"><a href="#functions-45-9-1-2-1" title="Copy heading and permalink for Item 5.3.9.a" aria-label="Copy heading and permalink for Item 5.3.9.a">🔗</a></div>
+</li>
+<li id="functions-45-9-1-2-2">
+<div class="para" id="functions-45-9-1-2-2-1">Prove or disprove <span class="process-math">\(f\)</span> is onto.<div class="autopermalink" data-description="Paragraph"><a href="#functions-45-9-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 5.3.9.b"><a href="#functions-45-9-1-2-2" title="Copy heading and permalink for Item 5.3.9.b" aria-label="Copy heading and permalink for Item 5.3.9.b">🔗</a></div>
+</li>
+</ol> <div class="para" id="functions-45-9-1-3">Note: this map is called an <em class="emphasis">embedding</em>.<div class="autopermalink" data-description="Paragraph"><a href="#functions-45-9-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 5.3.9"><a href="#functions-45-9" title="Copy heading and permalink for Exercise 5.3.9" aria-label="Copy heading and permalink for Exercise 5.3.9">🔗</a></div></article><article class="exercise exercise-like" id="functions-45-10"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
+<div class="para" id="functions-45-10-1-1">Define <span class="process-math">\(G:\mathbb{R}\times\mathbb{R}\rightarrow\mathbb{R}\times\mathbb{R}\)</span> by<div class="autopermalink" data-description="Paragraph"><a href="#functions-45-10-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="functions-45-10-1-2">
+<span class="process-math">\(G(x, y)=(2y, -x)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#functions-45-10-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha lower-alpha-level-1" id="functions-45-10-1-3">
+<li id="functions-45-10-1-3-1">
+<div class="para" id="functions-45-10-1-3-1-1">Prove or disprove <span class="process-math">\(G\)</span> is one-to-one.<div class="autopermalink" data-description="Paragraph"><a href="#functions-45-10-1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 5.3.10.a"><a href="#functions-45-10-1-3-1" title="Copy heading and permalink for Item 5.3.10.a" aria-label="Copy heading and permalink for Item 5.3.10.a">🔗</a></div>
+</li>
+<li id="functions-45-10-1-3-2">
+<div class="para" id="functions-45-10-1-3-2-1">Prove or disprove <span class="process-math">\(G\)</span> is onto <span class="process-math">\(\mathbb{R}\times\mathbb{R}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#functions-45-10-1-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 5.3.10.b"><a href="#functions-45-10-1-3-2" title="Copy heading and permalink for Item 5.3.10.b" aria-label="Copy heading and permalink for Item 5.3.10.b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 5.3.10"><a href="#functions-45-10" title="Copy heading and permalink for Exercise 5.3.10" aria-label="Copy heading and permalink for Exercise 5.3.10">🔗</a></div></article><article class="exercise exercise-like" id="functions-45-11"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
+<div class="para" id="functions-45-11-1-1">Define <span class="process-math">\(H:\mathbb{R}\times\mathbb{R}\rightarrow\mathbb{R}\times\mathbb{R}\)</span> by<div class="autopermalink" data-description="Paragraph"><a href="#functions-45-11-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="functions-45-11-1-2">
+<span class="process-math">\(H(x, y)=(x+1, 2-y)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#functions-45-11-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha lower-alpha-level-1" id="functions-45-11-1-3">
+<li id="functions-45-11-1-3-1">
+<div class="para" id="functions-45-11-1-3-1-1">Prove or disprove <span class="process-math">\(H\)</span> is one-to-one.<div class="autopermalink" data-description="Paragraph"><a href="#functions-45-11-1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 5.3.11.a"><a href="#functions-45-11-1-3-1" title="Copy heading and permalink for Item 5.3.11.a" aria-label="Copy heading and permalink for Item 5.3.11.a">🔗</a></div>
+</li>
+<li id="functions-45-11-1-3-2">
+<div class="para" id="functions-45-11-1-3-2-1">Prove or disprove <span class="process-math">\(H\)</span> is onto <span class="process-math">\(\mathbb{R}\times\mathbb{R}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#functions-45-11-1-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 5.3.11.b"><a href="#functions-45-11-1-3-2" title="Copy heading and permalink for Item 5.3.11.b" aria-label="Copy heading and permalink for Item 5.3.11.b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 5.3.11"><a href="#functions-45-11" title="Copy heading and permalink for Exercise 5.3.11" aria-label="Copy heading and permalink for Exercise 5.3.11">🔗</a></div></article><article class="exercise exercise-like" id="functions-45-12"><h4 class="heading"><span class="codenumber">12<span class="period">.</span></span></h4>
+<div class="para" id="functions-45-12-1-1">Let <span class="process-math">\(f:{\mathbb Q}\times{\mathbb Q}\rightarrow{\mathbb Q}\times{\mathbb Q}\)</span> be given by <span class="process-math">\(f(a, b) =(2a, a+b)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#functions-45-12-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha lower-alpha-level-1" id="functions-45-12-1-2">
+<li id="functions-45-12-1-2-1">
+<div class="para" id="functions-45-12-1-2-1-1">Prove or disprove <span class="process-math">\(f\)</span> is one-to-one.<div class="autopermalink" data-description="Paragraph"><a href="#functions-45-12-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 5.3.12.a"><a href="#functions-45-12-1-2-1" title="Copy heading and permalink for Item 5.3.12.a" aria-label="Copy heading and permalink for Item 5.3.12.a">🔗</a></div>
+</li>
+<li id="functions-45-12-1-2-2">
+<div class="para" id="functions-45-12-1-2-2-1">Prove or disprove <span class="process-math">\(f\)</span> is onto.<div class="autopermalink" data-description="Paragraph"><a href="#functions-45-12-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 5.3.12.b"><a href="#functions-45-12-1-2-2" title="Copy heading and permalink for Item 5.3.12.b" aria-label="Copy heading and permalink for Item 5.3.12.b">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 5.3.12"><a href="#functions-45-12" title="Copy heading and permalink for Exercise 5.3.12" aria-label="Copy heading and permalink for Exercise 5.3.12">🔗</a></div></article><div class="autopermalink" data-description="Exercises 5.3"><a href="#functions-45" title="Copy heading and permalink for Exercises 5.3" aria-label="Copy heading and permalink for Exercises 5.3">🔗</a></div></section><div class="autopermalink" data-description="Section 5.3: Functions"><a href="#functions" title="Copy heading and permalink for Section 5.3: Functions" aria-label="Copy heading and permalink for Section 5.3: Functions">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="settheory.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="relations.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
-<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
 </div>
 <!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
 var sc_project=12871717;

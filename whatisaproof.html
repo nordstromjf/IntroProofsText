@@ -6,14 +6,20 @@
 <!--*                                          *-->
 <!--********************************************-->
 <html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>What is a Proof?</title>
-<meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:type" content="book">
-<meta property="book:title" content="Introduction to Proofs">
-<meta property="book:author" content="Jennifer Firkins Nordstrom">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
 <script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
@@ -69,13 +75,12 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
-<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
-</script><link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
-<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
-<!--** eBookCongig is necessary to configure interactive       **-->
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Introduction to Proofs">
+<meta property="book:author" content="Jennifer Firkins Nordstrom">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -97,307 +102,23 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.5.6';
+eBookConfig.runestone_version = '7.11.5';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.82032a8574f6ce75.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6a985cbf816db5c7.css">
-<style>
-#arguments-20-1-1-4 { counter-set: arguments-20-1-1-4 0; }
-#arguments-20-1-1-4 > li::marker { content: ""counter(arguments-20-1-1-4,lower-alpha)""; }
-#arguments-20-1-1-4 > li { counter-increment: arguments-20-1-1-4; }
-#arguments-20-2-1-3 { counter-set: arguments-20-2-1-3 0; }
-#arguments-20-2-1-3 > li::marker { content: ""counter(arguments-20-2-1-3,lower-alpha)""; }
-#arguments-20-2-1-3 > li { counter-increment: arguments-20-2-1-3; }
-#arguments-20-3-1-2 { counter-set: arguments-20-3-1-2 0; }
-#arguments-20-3-1-2 > li::marker { content: "("counter(arguments-20-3-1-2,lower-alpha)")"; }
-#arguments-20-3-1-2 > li { counter-increment: arguments-20-3-1-2; }
-#B_logicalequivalences-3-5 { counter-set: B_logicalequivalences-3-5 0; }
-#B_logicalequivalences-3-5 > li::marker { content: ""counter(B_logicalequivalences-3-5,decimal)""; }
-#B_logicalequivalences-3-5 > li { counter-increment: B_logicalequivalences-3-5; }
-#connectives-73-1-1-2 { counter-set: connectives-73-1-1-2 0; }
-#connectives-73-1-1-2 > li::marker { content: ""counter(connectives-73-1-1-2,lower-alpha)""; }
-#connectives-73-1-1-2 > li { counter-increment: connectives-73-1-1-2; }
-#connectives-73-2-1-2 { counter-set: connectives-73-2-1-2 0; }
-#connectives-73-2-1-2 > li::marker { content: ""counter(connectives-73-2-1-2,lower-alpha)""; }
-#connectives-73-2-1-2 > li { counter-increment: connectives-73-2-1-2; }
-#connectives-73-3-1-2 { counter-set: connectives-73-3-1-2 0; }
-#connectives-73-3-1-2 > li::marker { content: ""counter(connectives-73-3-1-2,lower-alpha)""; }
-#connectives-73-3-1-2 > li { counter-increment: connectives-73-3-1-2; }
-#ER_onlyandnot-1-2 { counter-set: ER_onlyandnot-1-2 0; }
-#ER_onlyandnot-1-2 > li::marker { content: ""counter(ER_onlyandnot-1-2,lower-alpha)""; }
-#ER_onlyandnot-1-2 > li { counter-increment: ER_onlyandnot-1-2; }
-#connectives-73-5-1-2 { counter-set: connectives-73-5-1-2 0; }
-#connectives-73-5-1-2 > li::marker { content: ""counter(connectives-73-5-1-2,lower-alpha)""; }
-#connectives-73-5-1-2 > li { counter-increment: connectives-73-5-1-2; }
-#setnotation-22-4-1-2 { counter-set: setnotation-22-4-1-2 0; }
-#setnotation-22-4-1-2 > li::marker { content: ""counter(setnotation-22-4-1-2,lower-alpha)""; }
-#setnotation-22-4-1-2 > li { counter-increment: setnotation-22-4-1-2; }
-#setnotation-22-5-1-2 { counter-set: setnotation-22-5-1-2 0; }
-#setnotation-22-5-1-2 > li::marker { content: ""counter(setnotation-22-5-1-2,lower-alpha)""; }
-#setnotation-22-5-1-2 > li { counter-increment: setnotation-22-5-1-2; }
-#E_multquant1-2-2 { counter-set: E_multquant1-2-2 0; }
-#E_multquant1-2-2 > li::marker { content: ""counter(E_multquant1-2-2,lower-alpha)""; }
-#E_multquant1-2-2 > li { counter-increment: E_multquant1-2-2; }
-#quantifiers-6-14-3-1-2 { counter-set: quantifiers-6-14-3-1-2 0; }
-#quantifiers-6-14-3-1-2 > li::marker { content: ""counter(quantifiers-6-14-3-1-2,lower-alpha)""; }
-#quantifiers-6-14-3-1-2 > li { counter-increment: quantifiers-6-14-3-1-2; }
-#quantifiers-6-14-4-1-2 { counter-set: quantifiers-6-14-4-1-2 0; }
-#quantifiers-6-14-4-1-2 > li::marker { content: ""counter(quantifiers-6-14-4-1-2,lower-alpha)""; }
-#quantifiers-6-14-4-1-2 > li { counter-increment: quantifiers-6-14-4-1-2; }
-#quantifiers-6-14-5-1-2 { counter-set: quantifiers-6-14-5-1-2 0; }
-#quantifiers-6-14-5-1-2 > li::marker { content: ""counter(quantifiers-6-14-5-1-2,lower-alpha)""; }
-#quantifiers-6-14-5-1-2 > li { counter-increment: quantifiers-6-14-5-1-2; }
-#quantifiers-6-14-6-1-2 { counter-set: quantifiers-6-14-6-1-2 0; }
-#quantifiers-6-14-6-1-2 > li::marker { content: ""counter(quantifiers-6-14-6-1-2,lower-alpha)""; }
-#quantifiers-6-14-6-1-2 > li { counter-increment: quantifiers-6-14-6-1-2; }
-#quantifiers-6-14-7-1-2 { counter-set: quantifiers-6-14-7-1-2 0; }
-#quantifiers-6-14-7-1-2 > li::marker { content: ""counter(quantifiers-6-14-7-1-2,lower-alpha)""; }
-#quantifiers-6-14-7-1-2 > li { counter-increment: quantifiers-6-14-7-1-2; }
-#quantifiers-6-14-8-1-2 { counter-set: quantifiers-6-14-8-1-2 0; }
-#quantifiers-6-14-8-1-2 > li::marker { content: ""counter(quantifiers-6-14-8-1-2,lower-alpha)""; }
-#quantifiers-6-14-8-1-2 > li { counter-increment: quantifiers-6-14-8-1-2; }
-#conditionals-33-1-1-2 { counter-set: conditionals-33-1-1-2 0; }
-#conditionals-33-1-1-2 > li::marker { content: ""counter(conditionals-33-1-1-2,lower-alpha)""; }
-#conditionals-33-1-1-2 > li { counter-increment: conditionals-33-1-1-2; }
-#conditionals-33-2-1-2 { counter-set: conditionals-33-2-1-2 0; }
-#conditionals-33-2-1-2 > li::marker { content: ""counter(conditionals-33-2-1-2,lower-alpha)""; }
-#conditionals-33-2-1-2 > li { counter-increment: conditionals-33-2-1-2; }
-#conditionals-33-3-1-2 { counter-set: conditionals-33-3-1-2 0; }
-#conditionals-33-3-1-2 > li::marker { content: ""counter(conditionals-33-3-1-2,lower-alpha)""; }
-#conditionals-33-3-1-2 > li { counter-increment: conditionals-33-3-1-2; }
-#conditionals-33-4-1-2 { counter-set: conditionals-33-4-1-2 0; }
-#conditionals-33-4-1-2 > li::marker { content: ""counter(conditionals-33-4-1-2,lower-alpha)""; }
-#conditionals-33-4-1-2 > li { counter-increment: conditionals-33-4-1-2; }
-#conditionals-33-5-1-2 { counter-set: conditionals-33-5-1-2 0; }
-#conditionals-33-5-1-2 > li::marker { content: ""counter(conditionals-33-5-1-2,lower-alpha)""; }
-#conditionals-33-5-1-2 > li { counter-increment: conditionals-33-5-1-2; }
-#directproof-29-1-1-2 { counter-set: directproof-29-1-1-2 0; }
-#directproof-29-1-1-2 > li::marker { content: ""counter(directproof-29-1-1-2,lower-alpha)""; }
-#directproof-29-1-1-2 > li { counter-increment: directproof-29-1-1-2; }
-#directproof-29-11-1-2 { counter-set: directproof-29-11-1-2 0; }
-#directproof-29-11-1-2 > li::marker { content: ""counter(directproof-29-11-1-2,lower-alpha)""; }
-#directproof-29-11-1-2 > li { counter-increment: directproof-29-11-1-2; }
-#moredirect-7-1-1-2 { counter-set: moredirect-7-1-1-2 0; }
-#moredirect-7-1-1-2 > li::marker { content: ""counter(moredirect-7-1-1-2,lower-alpha)""; }
-#moredirect-7-1-1-2 > li { counter-increment: moredirect-7-1-1-2; }
-#moredirect-7-4-1-2 { counter-set: moredirect-7-4-1-2 0; }
-#moredirect-7-4-1-2 > li::marker { content: "("counter(moredirect-7-4-1-2,lower-alpha)")"; }
-#moredirect-7-4-1-2 > li { counter-increment: moredirect-7-4-1-2; }
-#ER_averagerat-1-2 { counter-set: ER_averagerat-1-2 0; }
-#ER_averagerat-1-2 > li::marker { content: ""counter(ER_averagerat-1-2,lower-alpha)""; }
-#ER_averagerat-1-2 > li { counter-increment: ER_averagerat-1-2; }
-#moredirect-7-7-1-2 { counter-set: moredirect-7-7-1-2 0; }
-#moredirect-7-7-1-2 > li::marker { content: ""counter(moredirect-7-7-1-2,lower-alpha)""; }
-#moredirect-7-7-1-2 > li { counter-increment: moredirect-7-7-1-2; }
-#moredirect-7-9-1-2 { counter-set: moredirect-7-9-1-2 0; }
-#moredirect-7-9-1-2 > li::marker { content: ""counter(moredirect-7-9-1-2,lower-alpha)""; }
-#moredirect-7-9-1-2 > li { counter-increment: moredirect-7-9-1-2; }
-#cases-31-1-1-2 { counter-set: cases-31-1-1-2 0; }
-#cases-31-1-1-2 > li::marker { content: ""counter(cases-31-1-1-2,lower-alpha)""; }
-#cases-31-1-1-2 > li { counter-increment: cases-31-1-1-2; }
-#SS_twoproofs-18-1-1-2 { counter-set: SS_twoproofs-18-1-1-2 0; }
-#SS_twoproofs-18-1-1-2 > li::marker { content: ""counter(SS_twoproofs-18-1-1-2,lower-alpha)""; }
-#SS_twoproofs-18-1-1-2 > li { counter-increment: SS_twoproofs-18-1-1-2; }
-#SS_twoproofs-18-2-1-2 { counter-set: SS_twoproofs-18-2-1-2 0; }
-#SS_twoproofs-18-2-1-2 > li::marker { content: ""counter(SS_twoproofs-18-2-1-2,lower-alpha)""; }
-#SS_twoproofs-18-2-1-2 > li { counter-increment: SS_twoproofs-18-2-1-2; }
-#SS_twoproofs-18-3-1-2 { counter-set: SS_twoproofs-18-3-1-2 0; }
-#SS_twoproofs-18-3-1-2 > li::marker { content: ""counter(SS_twoproofs-18-3-1-2,lower-alpha)""; }
-#SS_twoproofs-18-3-1-2 > li { counter-increment: SS_twoproofs-18-3-1-2; }
-#SS_twoproofs-18-4-1-2 { counter-set: SS_twoproofs-18-4-1-2 0; }
-#SS_twoproofs-18-4-1-2 > li::marker { content: ""counter(SS_twoproofs-18-4-1-2,lower-alpha)""; }
-#SS_twoproofs-18-4-1-2 > li { counter-increment: SS_twoproofs-18-4-1-2; }
-#SS_twoproofs-18-5-1-2 { counter-set: SS_twoproofs-18-5-1-2 0; }
-#SS_twoproofs-18-5-1-2 > li::marker { content: ""counter(SS_twoproofs-18-5-1-2,lower-alpha)""; }
-#SS_twoproofs-18-5-1-2 > li { counter-increment: SS_twoproofs-18-5-1-2; }
-#B_propsums-2-1 { counter-set: B_propsums-2-1 0; }
-#B_propsums-2-1 > li::marker { content: ""counter(B_propsums-2-1,decimal)""; }
-#B_propsums-2-1 > li { counter-increment: B_propsums-2-1; }
-#summation-27-1-1-2 { counter-set: summation-27-1-1-2 0; }
-#summation-27-1-1-2 > li::marker { content: ""counter(summation-27-1-1-2,lower-alpha)""; }
-#summation-27-1-1-2 > li { counter-increment: summation-27-1-1-2; }
-#summation-27-2-1-2 { counter-set: summation-27-2-1-2 0; }
-#summation-27-2-1-2 > li::marker { content: ""counter(summation-27-2-1-2,lower-alpha)""; }
-#summation-27-2-1-2 > li { counter-increment: summation-27-2-1-2; }
-#summation-27-3-1-2 { counter-set: summation-27-3-1-2 0; }
-#summation-27-3-1-2 > li::marker { content: ""counter(summation-27-3-1-2,lower-alpha)""; }
-#summation-27-3-1-2 > li { counter-increment: summation-27-3-1-2; }
-#summation-27-8-1-2 { counter-set: summation-27-8-1-2 0; }
-#summation-27-8-1-2 > li::marker { content: ""counter(summation-27-8-1-2,lower-alpha)""; }
-#summation-27-8-1-2 > li { counter-increment: summation-27-8-1-2; }
-#B_induction-3-4 { counter-set: B_induction-3-4 0; }
-#B_induction-3-4 > li::marker { content: ""counter(B_induction-3-4,decimal)""; }
-#B_induction-3-4 > li { counter-increment: B_induction-3-4; }
-#induction-6-1 { counter-set: induction-6-1 0; }
-#induction-6-1 > li::marker { content: "("counter(induction-6-1,decimal)")"; }
-#induction-6-1 > li { counter-increment: induction-6-1; }
-#ER_indpowersof2-1-2 { counter-set: ER_indpowersof2-1-2 0; }
-#ER_indpowersof2-1-2 > li::marker { content: ""counter(ER_indpowersof2-1-2,lower-alpha)""; }
-#ER_indpowersof2-1-2 > li { counter-increment: ER_indpowersof2-1-2; }
-#B_strongind-4-3 { counter-set: B_strongind-4-3 0; }
-#B_strongind-4-3 > li::marker { content: ""counter(B_strongind-4-3,decimal)""; }
-#B_strongind-4-3 > li { counter-increment: B_strongind-4-3; }
-#E_domainqexist1-3-1 { counter-set: E_domainqexist1-3-1 0; }
-#E_domainqexist1-3-1 > li::marker { content: ""counter(E_domainqexist1-3-1,lower-alpha)""; }
-#E_domainqexist1-3-1 > li { counter-increment: E_domainqexist1-3-1; }
-#B_pfexistential-3-3 { counter-set: B_pfexistential-3-3 0; }
-#B_pfexistential-3-3 > li::marker { content: ""counter(B_pfexistential-3-3,decimal)""; }
-#B_pfexistential-3-3 > li { counter-increment: B_pfexistential-3-3; }
-#B_pfunique-3-3 { counter-set: B_pfunique-3-3 0; }
-#B_pfunique-3-3 > li::marker { content: ""counter(B_pfunique-3-3,decimal)""; }
-#B_pfunique-3-3 > li { counter-increment: B_pfunique-3-3; }
-#existunique-23-1 { counter-set: existunique-23-1 0; }
-#existunique-23-1 > li::marker { content: ""counter(existunique-23-1,decimal)""; }
-#existunique-23-1 > li { counter-increment: existunique-23-1; }
-#E_wop-3-2 { counter-set: E_wop-3-2 0; }
-#E_wop-3-2 > li::marker { content: ""counter(E_wop-3-2,decimal)""; }
-#E_wop-3-2 > li { counter-increment: E_wop-3-2; }
-#E_setnotevarious-2 { counter-set: E_setnotevarious-2 0; }
-#E_setnotevarious-2 > li::marker { content: ""counter(E_setnotevarious-2,lower-alpha)""; }
-#E_setnotevarious-2 > li { counter-increment: E_setnotevarious-2; }
-#E_setops-3-2 { counter-set: E_setops-3-2 0; }
-#E_setops-3-2 > li::marker { content: ""counter(E_setops-3-2,lower-alpha)""; }
-#E_setops-3-2 > li { counter-increment: E_setops-3-2; }
-#SS_setproofs-3-3 { counter-set: SS_setproofs-3-3 0; }
-#SS_setproofs-3-3 > li::marker { content: ""counter(SS_setproofs-3-3,decimal)""; }
-#SS_setproofs-3-3 > li { counter-increment: SS_setproofs-3-3; }
-#L_SetIdent-4-4 { counter-set: L_SetIdent-4-4 0; }
-#L_SetIdent-4-4 > li::marker { content: ""counter(L_SetIdent-4-4,decimal)""; }
-#L_SetIdent-4-4 > li { counter-increment: L_SetIdent-4-4; }
-#SS_setproofs-25-1-1-2 { counter-set: SS_setproofs-25-1-1-2 0; }
-#SS_setproofs-25-1-1-2 > li::marker { content: ""counter(SS_setproofs-25-1-1-2,lower-alpha)""; }
-#SS_setproofs-25-1-1-2 > li { counter-increment: SS_setproofs-25-1-1-2; }
-#SS_setproofs-25-2-1-2 { counter-set: SS_setproofs-25-2-1-2 0; }
-#SS_setproofs-25-2-1-2 > li::marker { content: ""counter(SS_setproofs-25-2-1-2,lower-alpha)""; }
-#SS_setproofs-25-2-1-2 > li { counter-increment: SS_setproofs-25-2-1-2; }
-#SS_setproofs-25-3-1-2 { counter-set: SS_setproofs-25-3-1-2 0; }
-#SS_setproofs-25-3-1-2 > li::marker { content: ""counter(SS_setproofs-25-3-1-2,lower-alpha)""; }
-#SS_setproofs-25-3-1-2 > li { counter-increment: SS_setproofs-25-3-1-2; }
-#SS_setproofs-25-4-1-2 { counter-set: SS_setproofs-25-4-1-2 0; }
-#SS_setproofs-25-4-1-2 > li::marker { content: ""counter(SS_setproofs-25-4-1-2,lower-alpha)""; }
-#SS_setproofs-25-4-1-2 > li { counter-increment: SS_setproofs-25-4-1-2; }
-#SS_setproofs-25-5-1-2 { counter-set: SS_setproofs-25-5-1-2 0; }
-#SS_setproofs-25-5-1-2 > li::marker { content: ""counter(SS_setproofs-25-5-1-2,lower-alpha)""; }
-#SS_setproofs-25-5-1-2 > li { counter-increment: SS_setproofs-25-5-1-2; }
-#SS_setproofs-25-6-1-2 { counter-set: SS_setproofs-25-6-1-2 0; }
-#SS_setproofs-25-6-1-2 > li::marker { content: ""counter(SS_setproofs-25-6-1-2,lower-alpha)""; }
-#SS_setproofs-25-6-1-2 > li { counter-increment: SS_setproofs-25-6-1-2; }
-#SS_setproofs-25-7-1-2 { counter-set: SS_setproofs-25-7-1-2 0; }
-#SS_setproofs-25-7-1-2 > li::marker { content: ""counter(SS_setproofs-25-7-1-2,lower-alpha)""; }
-#SS_setproofs-25-7-1-2 > li { counter-increment: SS_setproofs-25-7-1-2; }
-#SS_setproofs-25-15-1-2 { counter-set: SS_setproofs-25-15-1-2 0; }
-#SS_setproofs-25-15-1-2 > li::marker { content: ""counter(SS_setproofs-25-15-1-2,lower-alpha)""; }
-#SS_setproofs-25-15-1-2 > li { counter-increment: SS_setproofs-25-15-1-2; }
-#E_notfunctionimages-2-1 { counter-set: E_notfunctionimages-2-1 0; }
-#E_notfunctionimages-2-1 > li::marker { content: ""counter(E_notfunctionimages-2-1,lower-alpha)""; }
-#E_notfunctionimages-2-1 > li { counter-increment: E_notfunctionimages-2-1; }
-#E_addasfn-3-1 { counter-set: E_addasfn-3-1 0; }
-#E_addasfn-3-1 > li::marker { content: ""counter(E_addasfn-3-1,lower-alpha)""; }
-#E_addasfn-3-1 > li { counter-increment: E_addasfn-3-1; }
-#functions-45-1-1-2 { counter-set: functions-45-1-1-2 0; }
-#functions-45-1-1-2 > li::marker { content: ""counter(functions-45-1-1-2,lower-alpha)""; }
-#functions-45-1-1-2 > li { counter-increment: functions-45-1-1-2; }
-#functions-45-2-1-2 { counter-set: functions-45-2-1-2 0; }
-#functions-45-2-1-2 > li::marker { content: ""counter(functions-45-2-1-2,lower-alpha)""; }
-#functions-45-2-1-2 > li { counter-increment: functions-45-2-1-2; }
-#functions-45-3-1-2 { counter-set: functions-45-3-1-2 0; }
-#functions-45-3-1-2 > li::marker { content: ""counter(functions-45-3-1-2,lower-alpha)""; }
-#functions-45-3-1-2 > li { counter-increment: functions-45-3-1-2; }
-#functions-45-4-1-2 { counter-set: functions-45-4-1-2 0; }
-#functions-45-4-1-2 > li::marker { content: ""counter(functions-45-4-1-2,lower-alpha)""; }
-#functions-45-4-1-2 > li { counter-increment: functions-45-4-1-2; }
-#functions-45-5-1-2 { counter-set: functions-45-5-1-2 0; }
-#functions-45-5-1-2 > li::marker { content: ""counter(functions-45-5-1-2,lower-alpha)""; }
-#functions-45-5-1-2 > li { counter-increment: functions-45-5-1-2; }
-#functions-45-7-1-3 { counter-set: functions-45-7-1-3 0; }
-#functions-45-7-1-3 > li::marker { content: ""counter(functions-45-7-1-3,lower-alpha)""; }
-#functions-45-7-1-3 > li { counter-increment: functions-45-7-1-3; }
-#functions-45-8-1-2 { counter-set: functions-45-8-1-2 0; }
-#functions-45-8-1-2 > li::marker { content: ""counter(functions-45-8-1-2,lower-alpha)""; }
-#functions-45-8-1-2 > li { counter-increment: functions-45-8-1-2; }
-#functions-45-9-1-2 { counter-set: functions-45-9-1-2 0; }
-#functions-45-9-1-2 > li::marker { content: ""counter(functions-45-9-1-2,lower-alpha)""; }
-#functions-45-9-1-2 > li { counter-increment: functions-45-9-1-2; }
-#functions-45-10-1-3 { counter-set: functions-45-10-1-3 0; }
-#functions-45-10-1-3 > li::marker { content: ""counter(functions-45-10-1-3,lower-alpha)""; }
-#functions-45-10-1-3 > li { counter-increment: functions-45-10-1-3; }
-#functions-45-11-1-3 { counter-set: functions-45-11-1-3 0; }
-#functions-45-11-1-3 > li::marker { content: ""counter(functions-45-11-1-3,lower-alpha)""; }
-#functions-45-11-1-3 > li { counter-increment: functions-45-11-1-3; }
-#functions-45-12-1-2 { counter-set: functions-45-12-1-2 0; }
-#functions-45-12-1-2 > li::marker { content: ""counter(functions-45-12-1-2,lower-alpha)""; }
-#functions-45-12-1-2 > li { counter-increment: functions-45-12-1-2; }
-#E_equivclasses-2-3 { counter-set: E_equivclasses-2-3 0; }
-#E_equivclasses-2-3 > li::marker { content: ""counter(E_equivclasses-2-3,lower-alpha)""; }
-#E_equivclasses-2-3 > li { counter-increment: E_equivclasses-2-3; }
-#D_partition-1-1-6 { counter-set: D_partition-1-1-6 0; }
-#D_partition-1-1-6 > li::marker { content: ""counter(D_partition-1-1-6,decimal)""; }
-#D_partition-1-1-6 > li { counter-increment: D_partition-1-1-6; }
-#E_equivclasses2-4-2 { counter-set: E_equivclasses2-4-2 0; }
-#E_equivclasses2-4-2 > li::marker { content: ""counter(E_equivclasses2-4-2,lower-alpha)""; }
-#E_equivclasses2-4-2 > li { counter-increment: E_equivclasses2-4-2; }
-#SS_equivrelations-47-1-1-3 { counter-set: SS_equivrelations-47-1-1-3 0; }
-#SS_equivrelations-47-1-1-3 > li::marker { content: ""counter(SS_equivrelations-47-1-1-3,lower-alpha)""; }
-#SS_equivrelations-47-1-1-3 > li { counter-increment: SS_equivrelations-47-1-1-3; }
-#SS_equivrelations-47-2-1-3 { counter-set: SS_equivrelations-47-2-1-3 0; }
-#SS_equivrelations-47-2-1-3 > li::marker { content: ""counter(SS_equivrelations-47-2-1-3,lower-alpha)""; }
-#SS_equivrelations-47-2-1-3 > li { counter-increment: SS_equivrelations-47-2-1-3; }
-#SS_equivrelations-47-4-1-2 { counter-set: SS_equivrelations-47-4-1-2 0; }
-#SS_equivrelations-47-4-1-2 > li::marker { content: ""counter(SS_equivrelations-47-4-1-2,lower-alpha)""; }
-#SS_equivrelations-47-4-1-2 > li { counter-increment: SS_equivrelations-47-4-1-2; }
-#SS_equivrelations-47-5-1-2 { counter-set: SS_equivrelations-47-5-1-2 0; }
-#SS_equivrelations-47-5-1-2 > li::marker { content: ""counter(SS_equivrelations-47-5-1-2,lower-alpha)""; }
-#SS_equivrelations-47-5-1-2 > li { counter-increment: SS_equivrelations-47-5-1-2; }
-#SS_equivrelations-47-6-1-2 { counter-set: SS_equivrelations-47-6-1-2 0; }
-#SS_equivrelations-47-6-1-2 > li::marker { content: ""counter(SS_equivrelations-47-6-1-2,lower-alpha)""; }
-#SS_equivrelations-47-6-1-2 > li { counter-increment: SS_equivrelations-47-6-1-2; }
-#SS_equivrelations-47-7-1-2 { counter-set: SS_equivrelations-47-7-1-2 0; }
-#SS_equivrelations-47-7-1-2 > li::marker { content: ""counter(SS_equivrelations-47-7-1-2,lower-alpha)""; }
-#SS_equivrelations-47-7-1-2 > li { counter-increment: SS_equivrelations-47-7-1-2; }
-#SS_equivrelations-47-8-1-2 { counter-set: SS_equivrelations-47-8-1-2 0; }
-#SS_equivrelations-47-8-1-2 > li::marker { content: ""counter(SS_equivrelations-47-8-1-2,lower-alpha)""; }
-#SS_equivrelations-47-8-1-2 > li { counter-increment: SS_equivrelations-47-8-1-2; }
-#SS_equivrelations-47-9-1-2 { counter-set: SS_equivrelations-47-9-1-2 0; }
-#SS_equivrelations-47-9-1-2 > li::marker { content: ""counter(SS_equivrelations-47-9-1-2,lower-alpha)""; }
-#SS_equivrelations-47-9-1-2 > li { counter-increment: SS_equivrelations-47-9-1-2; }
-#D_RSTprop2-1-1-3 { counter-set: D_RSTprop2-1-1-3 0; }
-#D_RSTprop2-1-1-3 > li::marker { content: ""counter(D_RSTprop2-1-1-3,decimal)""; }
-#D_RSTprop2-1-1-3 > li { counter-increment: D_RSTprop2-1-1-3; }
-#T_totalorder-1-1-4 { counter-set: T_totalorder-1-1-4 0; }
-#T_totalorder-1-1-4 > li::marker { content: ""counter(T_totalorder-1-1-4,decimal)""; }
-#T_totalorder-1-1-4 > li { counter-increment: T_totalorder-1-1-4; }
-#orders-33-1-1-2 { counter-set: orders-33-1-1-2 0; }
-#orders-33-1-1-2 > li::marker { content: ""counter(orders-33-1-1-2,lower-alpha)""; }
-#orders-33-1-1-2 > li { counter-increment: orders-33-1-1-2; }
-#orders-33-2-1-2 { counter-set: orders-33-2-1-2 0; }
-#orders-33-2-1-2 > li::marker { content: ""counter(orders-33-2-1-2,lower-alpha)""; }
-#orders-33-2-1-2 > li { counter-increment: orders-33-2-1-2; }
-#orders-33-3-1-2 { counter-set: orders-33-3-1-2 0; }
-#orders-33-3-1-2 > li::marker { content: ""counter(orders-33-3-1-2,lower-alpha)""; }
-#orders-33-3-1-2 > li { counter-increment: orders-33-3-1-2; }
-#orders-33-4-1-2 { counter-set: orders-33-4-1-2 0; }
-#orders-33-4-1-2 > li::marker { content: ""counter(orders-33-4-1-2,lower-alpha)""; }
-#orders-33-4-1-2 > li { counter-increment: orders-33-4-1-2; }
-#binomial9-30-2-1-1-1 { counter-set: binomial9-30-2-1-1-1 0; }
-#binomial9-30-2-1-1-1 > li::marker { content: ""counter(binomial9-30-2-1-1-1,lower-alpha)""; }
-#binomial9-30-2-1-1-1 > li { counter-increment: binomial9-30-2-1-1-1; }
-#cardinality-31-6-1-2 { counter-set: cardinality-31-6-1-2 0; }
-#cardinality-31-6-1-2 > li::marker { content: ""counter(cardinality-31-6-1-2,lower-alpha)""; }
-#cardinality-31-6-1-2 > li { counter-increment: cardinality-31-6-1-2; }
-</style>
+<script src="_static/prefix-runtime.42217a82c75796c8.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.7e141ad8414abf4a.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.f4ab138da65f4203.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
 </head>
 <body class="pretext book ignore-math">
-<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
-<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
-<h1 class="heading"><a href="IntroProofs.html"><span class="title">Introduction to Proofs:</span> <span class="subtitle">An Active Exploration of Mathematical Language</span></a></h1>
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="IntroProofs.html"><span class="title">Introduction to Proofs</span> <span class="subtitle">An Active Exploration of Mathematical Language</span></a></h1>
 <p class="byline">Jennifer Firkins Nordstrom</p>
-</div>
-</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
 <button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-2.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
 <div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
@@ -595,70 +316,120 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="whatisaproof"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">1.1</span><span class="space"> </span><span class="title">What is a Proof?</span>
 </h2>
-<div class="para" id="whatisaproof-2">In this course we want to understand how to read and write mathematics as mathematicians. We would hope to eventually use these skills to generate our own mathematics. Before we can do that, we need to be familiar with how mathematicians convey ideas.</div>
-<div class="para" id="whatisaproof-3">Generally we start with a <dfn class="terminology">definition</dfn> of a mathematical concept.</div>
+<div class="para" id="whatisaproof-2">In this course we want to understand how to read and write mathematics as mathematicians. We would hope to eventually use these skills to generate our own mathematics. Before we can do that, we need to be familiar with how mathematicians convey ideas.<div class="autopermalink" data-description="Paragraph"><a href="#whatisaproof-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="whatisaproof-3">Generally we start with a <dfn class="terminology">definition</dfn> of a mathematical concept.<div class="autopermalink" data-description="Paragraph"><a href="#whatisaproof-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="definition definition-like" id="D_integer"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.1</span><span class="period">.</span>
 </h3>
-<div class="para" id="D_integer-1-1">An <dfn class="terminology">integer</dfn> is a whole number. It can be positive, negative, or zero.</div></article><div class="para" id="whatisaproof-5">Before we can prove statements about integers, we need to have a common understanding of them. Note that this definition relies on us understanding other mathematical terms, such as <dfn class="terminology">positive</dfn> and <dfn class="terminology">negative</dfn>.</div>
-<div class="para" id="whatisaproof-6">It is assumed that you bring some mathematical understanding with you to this course. But it is not assumed that that understanding is necessarly precise. One of the goals throughout this course will be to help make your current understanding more precise (or rigorous).</div>
+<div class="para" id="D_integer-1-1">An <dfn class="terminology">integer</dfn> is a whole number. It can be positive, negative, or zero.<div class="autopermalink" data-description="Paragraph"><a href="#D_integer-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 1.1.1"><a href="#D_integer" title="Copy heading and permalink for Definition 1.1.1" aria-label="Copy heading and permalink for Definition 1.1.1">🔗</a></div></article><div class="para" id="whatisaproof-5">Before we can prove statements about integers, we need to have a common understanding of them. Note that this definition relies on us understanding other mathematical terms, such as <dfn class="terminology">positive</dfn> and <dfn class="terminology">negative</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#whatisaproof-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="whatisaproof-6">It is assumed that you bring some mathematical understanding with you to this course. But it is not assumed that that understanding is necessarly precise. One of the goals throughout this course will be to help make your current understanding more precise (or rigorous).<div class="autopermalink" data-description="Paragraph"><a href="#whatisaproof-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="activity project-like" id="A_typesofint"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Types of Integers.</span>
 </h3>
-<div class="introduction" id="A_typesofint-2"><div class="para" id="A_typesofint-2-1">Without being precise, you can probably determine whether an integer is positive, even, or prime.</div></div>
+<div class="introduction" id="A_typesofint-2"><div class="para" id="A_typesofint-2-1">Without being precise, you can probably determine whether an integer is positive, even, or prime.<div class="autopermalink" data-description="Paragraph"><a href="#A_typesofint-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
 <article class="task exercise-like" id="A_typesofint-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="A_typesofint-3-1">List three positive, even integers.</div></article><article class="task exercise-like" id="A_typesofint-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="A_typesofint-4-1">Is 235823576 even or odd? How do you know? Write down as precise a rule as possible for determining whether an integer is even or odd.</div></article><article class="task exercise-like" id="A_typesofint-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="A_typesofint-5-1">List three prime numbers. How do you know they are prime?</div></article><article class="task exercise-like" id="A_typesofint-6"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="A_typesofint-6-1">Is 235823576 prime? How do you know?</div></article><article class="task exercise-like" id="A_typesofint-7"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<div class="para" id="A_typesofint-7-1">Is 23582357 prime? How do you know? If you are unsure, what would it take to determine the answer?</div></article></article><article class="activity project-like" id="A_genint"><h3 class="heading">
+<div class="para" id="A_typesofint-3-1">List three positive, even integers.<div class="autopermalink" data-description="Paragraph"><a href="#A_typesofint-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 1.1.1.a"><a href="#A_typesofint-3" title="Copy heading and permalink for Task 1.1.1.a" aria-label="Copy heading and permalink for Task 1.1.1.a">🔗</a></div></article><article class="task exercise-like" id="A_typesofint-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="A_typesofint-4-1">Is 235823576 even or odd? How do you know? Write down as precise a rule as possible for determining whether an integer is even or odd.<div class="autopermalink" data-description="Paragraph"><a href="#A_typesofint-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 1.1.1.b"><a href="#A_typesofint-4" title="Copy heading and permalink for Task 1.1.1.b" aria-label="Copy heading and permalink for Task 1.1.1.b">🔗</a></div></article><article class="task exercise-like" id="A_typesofint-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="A_typesofint-5-1">List three prime numbers. How do you know they are prime?<div class="autopermalink" data-description="Paragraph"><a href="#A_typesofint-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 1.1.1.c"><a href="#A_typesofint-5" title="Copy heading and permalink for Task 1.1.1.c" aria-label="Copy heading and permalink for Task 1.1.1.c">🔗</a></div></article><article class="task exercise-like" id="A_typesofint-6"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="A_typesofint-6-1">Is 235823576 prime? How do you know?<div class="autopermalink" data-description="Paragraph"><a href="#A_typesofint-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 1.1.1.d"><a href="#A_typesofint-6" title="Copy heading and permalink for Task 1.1.1.d" aria-label="Copy heading and permalink for Task 1.1.1.d">🔗</a></div></article><article class="task exercise-like" id="A_typesofint-7"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para" id="A_typesofint-7-1">Is 23582357 prime? How do you know? If you are unsure, what would it take to determine the answer?<div class="autopermalink" data-description="Paragraph"><a href="#A_typesofint-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 1.1.1.e"><a href="#A_typesofint-7" title="Copy heading and permalink for Task 1.1.1.e" aria-label="Copy heading and permalink for Task 1.1.1.e">🔗</a></div></article><div class="autopermalink" data-description="Activity 1.1.1: Types of Integers"><a href="#A_typesofint" title="Copy heading and permalink for Activity 1.1.1: Types of Integers" aria-label="Copy heading and permalink for Activity 1.1.1: Types of Integers">🔗</a></div></article><article class="activity project-like" id="A_genint"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">More General Integers.</span>
 </h3>
-<div class="introduction" id="A_genint-2"><div class="para" id="A_genint-2-1">Assume <span class="process-math">\(n\)</span> is an integer.</div></div>
+<div class="introduction" id="A_genint-2"><div class="para" id="A_genint-2-1">Assume <span class="process-math">\(n\)</span> is an integer.<div class="autopermalink" data-description="Paragraph"><a href="#A_genint-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
 <article class="task exercise-like" id="A_genint-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="A_genint-3-1">Is <span class="process-math">\(8n\)</span> even or odd? Does you rule from <a href="whatisaproof.html#A_typesofint" class="xref" data-knowl="./knowl/xref/A_typesofint.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 1.1.1: Types of Integers">Activity 1.1.1</a> still work? If not, can you refine your rule?</div></article><article class="task exercise-like" id="A_genint-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="A_genint-4-1">Is <span class="process-math">\(3n\)</span> even or odd? Can it sometimes be even and sometimes be odd?</div></article><article class="task exercise-like" id="A_genint-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="A_genint-5-1">Can <span class="process-math">\(8n\)</span> ever be prime? What about <span class="process-math">\(3n\text{?}\)</span>
-</div></article></article><div class="para" id="whatisaproof-9">For the time being, we will rely on our general understanding of whether an integer is even or odd, prime or not prime. But we will eventually want more formal definitions for these ideas, which we see in <a href="directproof.html" class="internal" title="Section 3.1: Direct Proof and Counterexample">Section 3.1</a>.</div>
-<div class="para" id="whatisaproof-10">Now let’s look at a more complicated mathematical statement. A <dfn class="terminology">conjecture</dfn> is an uproven mathematical statement. Every mathematical theorem started out as a conjecture. You are encouraged to make your own mathematical conjectures throughout this course.</div>
+<div class="para" id="A_genint-3-1">Is <span class="process-math">\(8n\)</span> even or odd? Does you rule from <a href="whatisaproof.html#A_typesofint" class="xref" data-knowl="./knowl/xref/A_typesofint.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 1.1.1: Types of Integers">Activity 1.1.1</a> still work? If not, can you refine your rule?<div class="autopermalink" data-description="Paragraph"><a href="#A_genint-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 1.1.2.a"><a href="#A_genint-3" title="Copy heading and permalink for Task 1.1.2.a" aria-label="Copy heading and permalink for Task 1.1.2.a">🔗</a></div></article><article class="task exercise-like" id="A_genint-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="A_genint-4-1">Is <span class="process-math">\(3n\)</span> even or odd? Can it sometimes be even and sometimes be odd?<div class="autopermalink" data-description="Paragraph"><a href="#A_genint-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 1.1.2.b"><a href="#A_genint-4" title="Copy heading and permalink for Task 1.1.2.b" aria-label="Copy heading and permalink for Task 1.1.2.b">🔗</a></div></article><article class="task exercise-like" id="A_genint-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="A_genint-5-1">Can <span class="process-math">\(8n\)</span> ever be prime? What about <span class="process-math">\(3n\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_genint-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 1.1.2.c"><a href="#A_genint-5" title="Copy heading and permalink for Task 1.1.2.c" aria-label="Copy heading and permalink for Task 1.1.2.c">🔗</a></div></article><div class="autopermalink" data-description="Activity 1.1.2: More General Integers"><a href="#A_genint" title="Copy heading and permalink for Activity 1.1.2: More General Integers" aria-label="Copy heading and permalink for Activity 1.1.2: More General Integers">🔗</a></div></article><div class="para" id="whatisaproof-9">For the time being, we will rely on our general understanding of whether an integer is even or odd, prime or not prime. But we will eventually want more formal definitions for these ideas, which we see in <a href="directproof.html" class="internal" title="Section 3.1: Direct Proof and Counterexample">Section 3.1</a>.<div class="autopermalink" data-description="Paragraph"><a href="#whatisaproof-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="whatisaproof-10">Now let’s look at a more complicated mathematical statement. A <dfn class="terminology">conjecture</dfn> is an uproven mathematical statement. Every mathematical theorem started out as a conjecture. You are encouraged to make your own mathematical conjectures throughout this course.<div class="autopermalink" data-description="Paragraph"><a href="#whatisaproof-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="claim theorem-like" id="C_Goldbach"><h3 class="heading">
 <span class="type">Claim</span><span class="space"> </span><span class="codenumber">1.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Goldbach’s Conjecture.</span>
 </h3>
-<div class="para" id="C_Goldbach-3-1">Every even positive integer greater than 2 can be written as a sum of two primes.</div></article><details id="E_GBConj" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<div class="para" id="C_Goldbach-3-1">Every even positive integer greater than 2 can be written as a sum of two primes.<div class="autopermalink" data-description="Paragraph"><a href="#C_Goldbach-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Claim 1.1.2: Goldbach’s Conjecture"><a href="#C_Goldbach" title="Copy heading and permalink for Claim 1.1.2: Goldbach’s Conjecture" aria-label="Copy heading and permalink for Claim 1.1.2: Goldbach’s Conjecture">🔗</a></div></article><details id="E_GBConj" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.3</span><span class="period">.</span><span class="space"> </span><span class="title">Exploring Goldbach’s Conjecture.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_GBConj-2">We would like to know if Goldbach’s Conjecture is true. We can start by just trying several examples. We want to see if positive even integers greater than 2 (like 4, 6, 8, 10, 12) can be written as the sum of two prime numbers. For example, <span class="process-math">\(6=3+3\)</span> and <span class="process-math">\(12=5+7\text{.}\)</span> Now try to write 4, 8, and 10 as the sum of two primes. Note,  1 is NOT prime. We will see this later when we formally define primes.</div></article></details><article class="activity project-like" id="A_verifyGBC"><h3 class="heading">
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_GBConj-2">We would like to know if Goldbach’s Conjecture is true. We can start by just trying several examples. We want to see if positive even integers greater than 2 (like 4, 6, 8, 10, 12) can be written as the sum of two prime numbers. For example, <span class="process-math">\(6=3+3\)</span> and <span class="process-math">\(12=5+7\text{.}\)</span> Now try to write 4, 8, and 10 as the sum of two primes. Note,  1 is NOT prime. We will see this later when we formally define primes.<div class="autopermalink" data-description="Paragraph"><a href="#E_GBConj-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 1.1.3: Exploring Goldbach’s Conjecture"><a href="#E_GBConj" title="Copy heading and permalink for Example 1.1.3: Exploring Goldbach’s Conjecture" aria-label="Copy heading and permalink for Example 1.1.3: Exploring Goldbach’s Conjecture">🔗</a></div></article></details><article class="activity project-like" id="A_verifyGBC"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.1.3</span><span class="period">.</span><span class="space"> </span><span class="title">Verify Goldbach’s Conjecture.</span>
 </h3>
-<div class="para" id="A_verifyGBC-2-1">Verify Goldbach’s Conjecture for 14, 16, 18, and 20. This means you want to show the conjecture is true for these even integers.</div></article><div class="para" id="whatisaproof-14">We have now verified Golbach’s Conjecture for several examples. Does that mean it is true in general? How many examples would you need so that you were convinced it is true? How many examples do you think mathematicians would need to be convinced? What would it take to know that it is true for every even integer greater than 2?</div>
-<div class="para" id="whatisaproof-15">In fact, althought it has been verified for integers up to at least <span class="process-math">\(4 \times 10^{18}\text{,}\)</span> it has not been proven. Goldbach first conjectured the statement in a letter to Euler in 1742, and mathematicians have been unable to give a full proof.</div>
+<div class="para" id="A_verifyGBC-2-1">Verify Goldbach’s Conjecture for 14, 16, 18, and 20. This means you want to show the conjecture is true for these even integers.<div class="autopermalink" data-description="Paragraph"><a href="#A_verifyGBC-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Activity 1.1.3: Verify Goldbach’s Conjecture"><a href="#A_verifyGBC" title="Copy heading and permalink for Activity 1.1.3: Verify Goldbach’s Conjecture" aria-label="Copy heading and permalink for Activity 1.1.3: Verify Goldbach’s Conjecture">🔗</a></div></article><div class="para" id="whatisaproof-14">We have now verified Golbach’s Conjecture for several examples. Does that mean it is true in general? How many examples would you need so that you were convinced it is true? How many examples do you think mathematicians would need to be convinced? What would it take to know that it is true for every even integer greater than 2?<div class="autopermalink" data-description="Paragraph"><a href="#whatisaproof-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="whatisaproof-15">In fact, althought it has been verified for integers up to at least <span class="process-math">\(4 \times 10^{18}\text{,}\)</span> it has not been proven. Goldbach first conjectured the statement in a letter to Euler in 1742, and mathematicians have been unable to give a full proof.<div class="autopermalink" data-description="Paragraph"><a href="#whatisaproof-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="activity project-like" id="A_primegen"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.1.4</span><span class="period">.</span><span class="space"> </span><span class="title">Prime Number Generator.</span>
 </h3>
-<div class="introduction" id="A_primegen-2"><div class="para" id="A_primegen-2-1">Let’s switch gears a bit and look for a way to find prime numbers.</div></div>
+<div class="introduction" id="A_primegen-2"><div class="para" id="A_primegen-2-1">Let’s switch gears a bit and look for a way to find prime numbers.<div class="autopermalink" data-description="Paragraph"><a href="#A_primegen-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
 <article class="task exercise-like" id="A_primegen-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="A_primegen-3-1">Play around with different functions whose inputs are positive integers.  See if you can find one whose outputs are an infinite set of prime numbers. For example, <span class="process-math">\(f(n)=n^2+1\)</span> gives us <span class="process-math">\(f(1)=2, f(2)=5, f(3)=10\text{.}\)</span> The first two are prime, but <span class="process-math">\(f(3)=10\)</span> is not prime, so <span class="process-math">\(f(n)=n^2+1\)</span> does not work.</div></article><article class="task exercise-like" id="A_primegen-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="A_primegen-4-1">Now try the function <span class="process-math">\(f(n)=n^2+n+41\text{.}\)</span> Find outputs for <span class="process-math">\(n\)</span> from 1 to 10. Are the outputs all prime?</div></article><article class="task exercise-like" id="A_primegen-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="A_primegen-5-1">Based on (b), have we found a function whose outputs are only prime numbers? What would we have to check to know this is true?</div></article><article class="task exercise-like" id="A_primegen-6"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="A_primegen-6-1">In fact, there are values of <span class="process-math">\(n\)</span> for which <span class="process-math">\(f(n)\)</span> is not prime. See if you can find one. Think carefully about what you would need to not be prime.</div></article></article><div class="para" id="whatisaproof-17">We have seen that in Goldbach’s Conjecture, we will know the statement is true if we can find a proof that works for every even integer. On the other hand, we saw in <a href="whatisaproof.html#A_primegen" class="xref" data-knowl="./knowl/xref/A_primegen.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 1.1.4: Prime Number Generator">Activity 1.1.4</a> that it only takes one example where the statement fails to show it is false. This is an idea we will return to many times in this course.</div>
-<div class="para" id="whatisaproof-18">So what is a proof? How do we decide if a statement has been proven? Let’s start with a definition and an example of a proof.</div>
+<div class="para" id="A_primegen-3-1">Play around with different functions whose inputs are positive integers.  See if you can find one whose outputs are an infinite set of prime numbers. For example, <span class="process-math">\(f(n)=n^2+1\)</span> gives us <span class="process-math">\(f(1)=2, f(2)=5, f(3)=10\text{.}\)</span> The first two are prime, but <span class="process-math">\(f(3)=10\)</span> is not prime, so <span class="process-math">\(f(n)=n^2+1\)</span> does not work.<div class="autopermalink" data-description="Paragraph"><a href="#A_primegen-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 1.1.4.a"><a href="#A_primegen-3" title="Copy heading and permalink for Task 1.1.4.a" aria-label="Copy heading and permalink for Task 1.1.4.a">🔗</a></div></article><article class="task exercise-like" id="A_primegen-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="A_primegen-4-1">Now try the function <span class="process-math">\(f(n)=n^2+n+41\text{.}\)</span> Find outputs for <span class="process-math">\(n\)</span> from 1 to 10. Are the outputs all prime?<div class="autopermalink" data-description="Paragraph"><a href="#A_primegen-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 1.1.4.b"><a href="#A_primegen-4" title="Copy heading and permalink for Task 1.1.4.b" aria-label="Copy heading and permalink for Task 1.1.4.b">🔗</a></div></article><article class="task exercise-like" id="A_primegen-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="A_primegen-5-1">Based on (b), have we found a function whose outputs are only prime numbers? What would we have to check to know this is true?<div class="autopermalink" data-description="Paragraph"><a href="#A_primegen-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 1.1.4.c"><a href="#A_primegen-5" title="Copy heading and permalink for Task 1.1.4.c" aria-label="Copy heading and permalink for Task 1.1.4.c">🔗</a></div></article><article class="task exercise-like" id="A_primegen-6"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="A_primegen-6-1">In fact, there are values of <span class="process-math">\(n\)</span> for which <span class="process-math">\(f(n)\)</span> is not prime. See if you can find one. Think carefully about what you would need to not be prime.<div class="autopermalink" data-description="Paragraph"><a href="#A_primegen-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 1.1.4.d"><a href="#A_primegen-6" title="Copy heading and permalink for Task 1.1.4.d" aria-label="Copy heading and permalink for Task 1.1.4.d">🔗</a></div></article><div class="autopermalink" data-description="Activity 1.1.4: Prime Number Generator"><a href="#A_primegen" title="Copy heading and permalink for Activity 1.1.4: Prime Number Generator" aria-label="Copy heading and permalink for Activity 1.1.4: Prime Number Generator">🔗</a></div></article><div class="para" id="whatisaproof-17">We have seen that in Goldbach’s Conjecture, we will know the statement is true if we can find a proof that works for every even integer. On the other hand, we saw in <a href="whatisaproof.html#A_primegen" class="xref" data-knowl="./knowl/xref/A_primegen.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 1.1.4: Prime Number Generator">Activity 1.1.4</a> that it only takes one example where the statement fails to show it is false. This is an idea we will return to many times in this course.<div class="autopermalink" data-description="Paragraph"><a href="#whatisaproof-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="whatisaproof-18">So what is a proof? How do we decide if a statement has been proven? Let’s start with a definition and an example of a proof.<div class="autopermalink" data-description="Paragraph"><a href="#whatisaproof-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="definition definition-like" id="D_even"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.4</span><span class="period">.</span>
 </h3>
-<div class="para" id="D_even-1-1">Let <span class="process-math">\(n\)</span> be an integer. Then <span class="process-math">\(n\)</span> is <dfn class="terminology">even</dfn> if there exists an integer <span class="process-math">\(k\)</span> such that <span class="process-math">\(n=2k\text{.}\)</span>
-</div></article><div class="para" id="whatisaproof-20">Before moving to the proof, check your rule for determining whether an integer is even from <a href="whatisaproof.html#A_genint" class="xref" data-knowl="./knowl/xref/A_genint.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 1.1.2: More General Integers">Activity 1.1.2</a>. Is your rule similar to the formal definition? If it is different, can you see any advantages to using the more formal definition?</div>
+<div class="para" id="D_even-1-1">Let <span class="process-math">\(n\)</span> be an integer. Then <span class="process-math">\(n\)</span> is <dfn class="terminology">even</dfn> if there exists an integer <span class="process-math">\(k\)</span> such that <span class="process-math">\(n=2k\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#D_even-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 1.1.4"><a href="#D_even" title="Copy heading and permalink for Definition 1.1.4" aria-label="Copy heading and permalink for Definition 1.1.4">🔗</a></div></article><div class="para" id="whatisaproof-20">Before moving to the proof, check your rule for determining whether an integer is even from <a href="whatisaproof.html#A_genint" class="xref" data-knowl="./knowl/xref/A_genint.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 1.1.2: More General Integers">Activity 1.1.2</a>. Is your rule similar to the formal definition? If it is different, can you see any advantages to using the more formal definition?<div class="autopermalink" data-description="Paragraph"><a href="#whatisaproof-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <details id="E_proof8neven" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.5</span><span class="period">.</span><span class="space"> </span><span class="title">A First Proof.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_proof8neven-2">Let <span class="process-math">\(n\)</span> be an integer. Prove <span class="process-math">\(8n\)</span> is even.</div>
-<details id="E_proof8neven-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="E_proof8neven-3-1">We can rewrite <span class="process-math">\(8n\)</span> as <span class="process-math">\(8n=2(4n)\text{.}\)</span> Then let <span class="process-math">\(k=4n\text{.}\)</span> Since <span class="process-math">\(n\)</span> is an integer, <span class="process-math">\(4n\)</span> is an integer. Thus, <span class="process-math">\(8n=2k\)</span> for some integer <span class="process-math">\(k\text{.}\)</span>
-</div></article></details></article></details><div class="para" id="whatisaproof-22">The proof shows that <span class="process-math">\(8n\)</span> is even for any <span class="process-math">\(n\text{,}\)</span> without need to check every possible integer <span class="process-math">\(n\text{.}\)</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_proof8neven-2">Let <span class="process-math">\(n\)</span> be an integer. Prove <span class="process-math">\(8n\)</span> is even.<div class="autopermalink" data-description="Paragraph"><a href="#E_proof8neven-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="whatisaproof-23">In writing a proof we can see that it helps to have precise definitions of the mathematical terms. Then we need to connect our statements in a logical way so that we are convinced that the statement we are proving follows from the steps. The ability to connect our staements in a logical way is the heart of writing a proof. We will start our proof-writing journey by first understanding logical structure.</div></section></div>
-<div class="ptx-content-footer">
+<details id="E_proof8neven-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="E_proof8neven-3-1">We can rewrite <span class="process-math">\(8n\)</span> as <span class="process-math">\(8n=2(4n)\text{.}\)</span> Then let <span class="process-math">\(k=4n\text{.}\)</span> Since <span class="process-math">\(n\)</span> is an integer, <span class="process-math">\(4n\)</span> is an integer. Thus, <span class="process-math">\(8n=2k\)</span> for some integer <span class="process-math">\(k\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_proof8neven-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 1.1.5.1"><a href="#E_proof8neven-3" title="Copy heading and permalink for Proof 1.1.5.1" aria-label="Copy heading and permalink for Proof 1.1.5.1">🔗</a></div></article></details><div class="autopermalink" data-description="Example 1.1.5: A First Proof"><a href="#E_proof8neven" title="Copy heading and permalink for Example 1.1.5: A First Proof" aria-label="Copy heading and permalink for Example 1.1.5: A First Proof">🔗</a></div></article></details><div class="para" id="whatisaproof-22">The proof shows that <span class="process-math">\(8n\)</span> is even for any <span class="process-math">\(n\text{,}\)</span> without need to check every possible integer <span class="process-math">\(n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#whatisaproof-22" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="whatisaproof-23">In writing a proof we can see that it helps to have precise definitions of the mathematical terms. Then we need to connect our statements in a logical way so that we are convinced that the statement we are proving follows from the steps. The ability to connect our staements in a logical way is the heart of writing a proof. We will start our proof-writing journey by first understanding logical structure.<div class="autopermalink" data-description="Paragraph"><a href="#whatisaproof-23" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Section 1.1: What is a Proof?"><a href="#whatisaproof" title="Copy heading and permalink for Section 1.1: What is a Proof?" aria-label="Copy heading and permalink for Section 1.1: What is a Proof?">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="chapter1.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="arguments.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
-<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
 </div>
 <!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
 var sc_project=12871717;

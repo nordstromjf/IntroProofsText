@@ -6,14 +6,20 @@
 <!--*                                          *-->
 <!--********************************************-->
 <html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Direct Proof and Counterexample</title>
-<meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:type" content="book">
-<meta property="book:title" content="Introduction to Proofs">
-<meta property="book:author" content="Jennifer Firkins Nordstrom">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
 <script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
@@ -69,13 +75,12 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
-<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
-</script><link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
-<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
-<!--** eBookCongig is necessary to configure interactive       **-->
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Introduction to Proofs">
+<meta property="book:author" content="Jennifer Firkins Nordstrom">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -97,307 +102,23 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.5.6';
+eBookConfig.runestone_version = '7.11.5';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.82032a8574f6ce75.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6a985cbf816db5c7.css">
-<style>
-#arguments-20-1-1-4 { counter-set: arguments-20-1-1-4 0; }
-#arguments-20-1-1-4 > li::marker { content: ""counter(arguments-20-1-1-4,lower-alpha)""; }
-#arguments-20-1-1-4 > li { counter-increment: arguments-20-1-1-4; }
-#arguments-20-2-1-3 { counter-set: arguments-20-2-1-3 0; }
-#arguments-20-2-1-3 > li::marker { content: ""counter(arguments-20-2-1-3,lower-alpha)""; }
-#arguments-20-2-1-3 > li { counter-increment: arguments-20-2-1-3; }
-#arguments-20-3-1-2 { counter-set: arguments-20-3-1-2 0; }
-#arguments-20-3-1-2 > li::marker { content: "("counter(arguments-20-3-1-2,lower-alpha)")"; }
-#arguments-20-3-1-2 > li { counter-increment: arguments-20-3-1-2; }
-#B_logicalequivalences-3-5 { counter-set: B_logicalequivalences-3-5 0; }
-#B_logicalequivalences-3-5 > li::marker { content: ""counter(B_logicalequivalences-3-5,decimal)""; }
-#B_logicalequivalences-3-5 > li { counter-increment: B_logicalequivalences-3-5; }
-#connectives-73-1-1-2 { counter-set: connectives-73-1-1-2 0; }
-#connectives-73-1-1-2 > li::marker { content: ""counter(connectives-73-1-1-2,lower-alpha)""; }
-#connectives-73-1-1-2 > li { counter-increment: connectives-73-1-1-2; }
-#connectives-73-2-1-2 { counter-set: connectives-73-2-1-2 0; }
-#connectives-73-2-1-2 > li::marker { content: ""counter(connectives-73-2-1-2,lower-alpha)""; }
-#connectives-73-2-1-2 > li { counter-increment: connectives-73-2-1-2; }
-#connectives-73-3-1-2 { counter-set: connectives-73-3-1-2 0; }
-#connectives-73-3-1-2 > li::marker { content: ""counter(connectives-73-3-1-2,lower-alpha)""; }
-#connectives-73-3-1-2 > li { counter-increment: connectives-73-3-1-2; }
-#ER_onlyandnot-1-2 { counter-set: ER_onlyandnot-1-2 0; }
-#ER_onlyandnot-1-2 > li::marker { content: ""counter(ER_onlyandnot-1-2,lower-alpha)""; }
-#ER_onlyandnot-1-2 > li { counter-increment: ER_onlyandnot-1-2; }
-#connectives-73-5-1-2 { counter-set: connectives-73-5-1-2 0; }
-#connectives-73-5-1-2 > li::marker { content: ""counter(connectives-73-5-1-2,lower-alpha)""; }
-#connectives-73-5-1-2 > li { counter-increment: connectives-73-5-1-2; }
-#setnotation-22-4-1-2 { counter-set: setnotation-22-4-1-2 0; }
-#setnotation-22-4-1-2 > li::marker { content: ""counter(setnotation-22-4-1-2,lower-alpha)""; }
-#setnotation-22-4-1-2 > li { counter-increment: setnotation-22-4-1-2; }
-#setnotation-22-5-1-2 { counter-set: setnotation-22-5-1-2 0; }
-#setnotation-22-5-1-2 > li::marker { content: ""counter(setnotation-22-5-1-2,lower-alpha)""; }
-#setnotation-22-5-1-2 > li { counter-increment: setnotation-22-5-1-2; }
-#E_multquant1-2-2 { counter-set: E_multquant1-2-2 0; }
-#E_multquant1-2-2 > li::marker { content: ""counter(E_multquant1-2-2,lower-alpha)""; }
-#E_multquant1-2-2 > li { counter-increment: E_multquant1-2-2; }
-#quantifiers-6-14-3-1-2 { counter-set: quantifiers-6-14-3-1-2 0; }
-#quantifiers-6-14-3-1-2 > li::marker { content: ""counter(quantifiers-6-14-3-1-2,lower-alpha)""; }
-#quantifiers-6-14-3-1-2 > li { counter-increment: quantifiers-6-14-3-1-2; }
-#quantifiers-6-14-4-1-2 { counter-set: quantifiers-6-14-4-1-2 0; }
-#quantifiers-6-14-4-1-2 > li::marker { content: ""counter(quantifiers-6-14-4-1-2,lower-alpha)""; }
-#quantifiers-6-14-4-1-2 > li { counter-increment: quantifiers-6-14-4-1-2; }
-#quantifiers-6-14-5-1-2 { counter-set: quantifiers-6-14-5-1-2 0; }
-#quantifiers-6-14-5-1-2 > li::marker { content: ""counter(quantifiers-6-14-5-1-2,lower-alpha)""; }
-#quantifiers-6-14-5-1-2 > li { counter-increment: quantifiers-6-14-5-1-2; }
-#quantifiers-6-14-6-1-2 { counter-set: quantifiers-6-14-6-1-2 0; }
-#quantifiers-6-14-6-1-2 > li::marker { content: ""counter(quantifiers-6-14-6-1-2,lower-alpha)""; }
-#quantifiers-6-14-6-1-2 > li { counter-increment: quantifiers-6-14-6-1-2; }
-#quantifiers-6-14-7-1-2 { counter-set: quantifiers-6-14-7-1-2 0; }
-#quantifiers-6-14-7-1-2 > li::marker { content: ""counter(quantifiers-6-14-7-1-2,lower-alpha)""; }
-#quantifiers-6-14-7-1-2 > li { counter-increment: quantifiers-6-14-7-1-2; }
-#quantifiers-6-14-8-1-2 { counter-set: quantifiers-6-14-8-1-2 0; }
-#quantifiers-6-14-8-1-2 > li::marker { content: ""counter(quantifiers-6-14-8-1-2,lower-alpha)""; }
-#quantifiers-6-14-8-1-2 > li { counter-increment: quantifiers-6-14-8-1-2; }
-#conditionals-33-1-1-2 { counter-set: conditionals-33-1-1-2 0; }
-#conditionals-33-1-1-2 > li::marker { content: ""counter(conditionals-33-1-1-2,lower-alpha)""; }
-#conditionals-33-1-1-2 > li { counter-increment: conditionals-33-1-1-2; }
-#conditionals-33-2-1-2 { counter-set: conditionals-33-2-1-2 0; }
-#conditionals-33-2-1-2 > li::marker { content: ""counter(conditionals-33-2-1-2,lower-alpha)""; }
-#conditionals-33-2-1-2 > li { counter-increment: conditionals-33-2-1-2; }
-#conditionals-33-3-1-2 { counter-set: conditionals-33-3-1-2 0; }
-#conditionals-33-3-1-2 > li::marker { content: ""counter(conditionals-33-3-1-2,lower-alpha)""; }
-#conditionals-33-3-1-2 > li { counter-increment: conditionals-33-3-1-2; }
-#conditionals-33-4-1-2 { counter-set: conditionals-33-4-1-2 0; }
-#conditionals-33-4-1-2 > li::marker { content: ""counter(conditionals-33-4-1-2,lower-alpha)""; }
-#conditionals-33-4-1-2 > li { counter-increment: conditionals-33-4-1-2; }
-#conditionals-33-5-1-2 { counter-set: conditionals-33-5-1-2 0; }
-#conditionals-33-5-1-2 > li::marker { content: ""counter(conditionals-33-5-1-2,lower-alpha)""; }
-#conditionals-33-5-1-2 > li { counter-increment: conditionals-33-5-1-2; }
-#directproof-29-1-1-2 { counter-set: directproof-29-1-1-2 0; }
-#directproof-29-1-1-2 > li::marker { content: ""counter(directproof-29-1-1-2,lower-alpha)""; }
-#directproof-29-1-1-2 > li { counter-increment: directproof-29-1-1-2; }
-#directproof-29-11-1-2 { counter-set: directproof-29-11-1-2 0; }
-#directproof-29-11-1-2 > li::marker { content: ""counter(directproof-29-11-1-2,lower-alpha)""; }
-#directproof-29-11-1-2 > li { counter-increment: directproof-29-11-1-2; }
-#moredirect-7-1-1-2 { counter-set: moredirect-7-1-1-2 0; }
-#moredirect-7-1-1-2 > li::marker { content: ""counter(moredirect-7-1-1-2,lower-alpha)""; }
-#moredirect-7-1-1-2 > li { counter-increment: moredirect-7-1-1-2; }
-#moredirect-7-4-1-2 { counter-set: moredirect-7-4-1-2 0; }
-#moredirect-7-4-1-2 > li::marker { content: "("counter(moredirect-7-4-1-2,lower-alpha)")"; }
-#moredirect-7-4-1-2 > li { counter-increment: moredirect-7-4-1-2; }
-#ER_averagerat-1-2 { counter-set: ER_averagerat-1-2 0; }
-#ER_averagerat-1-2 > li::marker { content: ""counter(ER_averagerat-1-2,lower-alpha)""; }
-#ER_averagerat-1-2 > li { counter-increment: ER_averagerat-1-2; }
-#moredirect-7-7-1-2 { counter-set: moredirect-7-7-1-2 0; }
-#moredirect-7-7-1-2 > li::marker { content: ""counter(moredirect-7-7-1-2,lower-alpha)""; }
-#moredirect-7-7-1-2 > li { counter-increment: moredirect-7-7-1-2; }
-#moredirect-7-9-1-2 { counter-set: moredirect-7-9-1-2 0; }
-#moredirect-7-9-1-2 > li::marker { content: ""counter(moredirect-7-9-1-2,lower-alpha)""; }
-#moredirect-7-9-1-2 > li { counter-increment: moredirect-7-9-1-2; }
-#cases-31-1-1-2 { counter-set: cases-31-1-1-2 0; }
-#cases-31-1-1-2 > li::marker { content: ""counter(cases-31-1-1-2,lower-alpha)""; }
-#cases-31-1-1-2 > li { counter-increment: cases-31-1-1-2; }
-#SS_twoproofs-18-1-1-2 { counter-set: SS_twoproofs-18-1-1-2 0; }
-#SS_twoproofs-18-1-1-2 > li::marker { content: ""counter(SS_twoproofs-18-1-1-2,lower-alpha)""; }
-#SS_twoproofs-18-1-1-2 > li { counter-increment: SS_twoproofs-18-1-1-2; }
-#SS_twoproofs-18-2-1-2 { counter-set: SS_twoproofs-18-2-1-2 0; }
-#SS_twoproofs-18-2-1-2 > li::marker { content: ""counter(SS_twoproofs-18-2-1-2,lower-alpha)""; }
-#SS_twoproofs-18-2-1-2 > li { counter-increment: SS_twoproofs-18-2-1-2; }
-#SS_twoproofs-18-3-1-2 { counter-set: SS_twoproofs-18-3-1-2 0; }
-#SS_twoproofs-18-3-1-2 > li::marker { content: ""counter(SS_twoproofs-18-3-1-2,lower-alpha)""; }
-#SS_twoproofs-18-3-1-2 > li { counter-increment: SS_twoproofs-18-3-1-2; }
-#SS_twoproofs-18-4-1-2 { counter-set: SS_twoproofs-18-4-1-2 0; }
-#SS_twoproofs-18-4-1-2 > li::marker { content: ""counter(SS_twoproofs-18-4-1-2,lower-alpha)""; }
-#SS_twoproofs-18-4-1-2 > li { counter-increment: SS_twoproofs-18-4-1-2; }
-#SS_twoproofs-18-5-1-2 { counter-set: SS_twoproofs-18-5-1-2 0; }
-#SS_twoproofs-18-5-1-2 > li::marker { content: ""counter(SS_twoproofs-18-5-1-2,lower-alpha)""; }
-#SS_twoproofs-18-5-1-2 > li { counter-increment: SS_twoproofs-18-5-1-2; }
-#B_propsums-2-1 { counter-set: B_propsums-2-1 0; }
-#B_propsums-2-1 > li::marker { content: ""counter(B_propsums-2-1,decimal)""; }
-#B_propsums-2-1 > li { counter-increment: B_propsums-2-1; }
-#summation-27-1-1-2 { counter-set: summation-27-1-1-2 0; }
-#summation-27-1-1-2 > li::marker { content: ""counter(summation-27-1-1-2,lower-alpha)""; }
-#summation-27-1-1-2 > li { counter-increment: summation-27-1-1-2; }
-#summation-27-2-1-2 { counter-set: summation-27-2-1-2 0; }
-#summation-27-2-1-2 > li::marker { content: ""counter(summation-27-2-1-2,lower-alpha)""; }
-#summation-27-2-1-2 > li { counter-increment: summation-27-2-1-2; }
-#summation-27-3-1-2 { counter-set: summation-27-3-1-2 0; }
-#summation-27-3-1-2 > li::marker { content: ""counter(summation-27-3-1-2,lower-alpha)""; }
-#summation-27-3-1-2 > li { counter-increment: summation-27-3-1-2; }
-#summation-27-8-1-2 { counter-set: summation-27-8-1-2 0; }
-#summation-27-8-1-2 > li::marker { content: ""counter(summation-27-8-1-2,lower-alpha)""; }
-#summation-27-8-1-2 > li { counter-increment: summation-27-8-1-2; }
-#B_induction-3-4 { counter-set: B_induction-3-4 0; }
-#B_induction-3-4 > li::marker { content: ""counter(B_induction-3-4,decimal)""; }
-#B_induction-3-4 > li { counter-increment: B_induction-3-4; }
-#induction-6-1 { counter-set: induction-6-1 0; }
-#induction-6-1 > li::marker { content: "("counter(induction-6-1,decimal)")"; }
-#induction-6-1 > li { counter-increment: induction-6-1; }
-#ER_indpowersof2-1-2 { counter-set: ER_indpowersof2-1-2 0; }
-#ER_indpowersof2-1-2 > li::marker { content: ""counter(ER_indpowersof2-1-2,lower-alpha)""; }
-#ER_indpowersof2-1-2 > li { counter-increment: ER_indpowersof2-1-2; }
-#B_strongind-4-3 { counter-set: B_strongind-4-3 0; }
-#B_strongind-4-3 > li::marker { content: ""counter(B_strongind-4-3,decimal)""; }
-#B_strongind-4-3 > li { counter-increment: B_strongind-4-3; }
-#E_domainqexist1-3-1 { counter-set: E_domainqexist1-3-1 0; }
-#E_domainqexist1-3-1 > li::marker { content: ""counter(E_domainqexist1-3-1,lower-alpha)""; }
-#E_domainqexist1-3-1 > li { counter-increment: E_domainqexist1-3-1; }
-#B_pfexistential-3-3 { counter-set: B_pfexistential-3-3 0; }
-#B_pfexistential-3-3 > li::marker { content: ""counter(B_pfexistential-3-3,decimal)""; }
-#B_pfexistential-3-3 > li { counter-increment: B_pfexistential-3-3; }
-#B_pfunique-3-3 { counter-set: B_pfunique-3-3 0; }
-#B_pfunique-3-3 > li::marker { content: ""counter(B_pfunique-3-3,decimal)""; }
-#B_pfunique-3-3 > li { counter-increment: B_pfunique-3-3; }
-#existunique-23-1 { counter-set: existunique-23-1 0; }
-#existunique-23-1 > li::marker { content: ""counter(existunique-23-1,decimal)""; }
-#existunique-23-1 > li { counter-increment: existunique-23-1; }
-#E_wop-3-2 { counter-set: E_wop-3-2 0; }
-#E_wop-3-2 > li::marker { content: ""counter(E_wop-3-2,decimal)""; }
-#E_wop-3-2 > li { counter-increment: E_wop-3-2; }
-#E_setnotevarious-2 { counter-set: E_setnotevarious-2 0; }
-#E_setnotevarious-2 > li::marker { content: ""counter(E_setnotevarious-2,lower-alpha)""; }
-#E_setnotevarious-2 > li { counter-increment: E_setnotevarious-2; }
-#E_setops-3-2 { counter-set: E_setops-3-2 0; }
-#E_setops-3-2 > li::marker { content: ""counter(E_setops-3-2,lower-alpha)""; }
-#E_setops-3-2 > li { counter-increment: E_setops-3-2; }
-#SS_setproofs-3-3 { counter-set: SS_setproofs-3-3 0; }
-#SS_setproofs-3-3 > li::marker { content: ""counter(SS_setproofs-3-3,decimal)""; }
-#SS_setproofs-3-3 > li { counter-increment: SS_setproofs-3-3; }
-#L_SetIdent-4-4 { counter-set: L_SetIdent-4-4 0; }
-#L_SetIdent-4-4 > li::marker { content: ""counter(L_SetIdent-4-4,decimal)""; }
-#L_SetIdent-4-4 > li { counter-increment: L_SetIdent-4-4; }
-#SS_setproofs-25-1-1-2 { counter-set: SS_setproofs-25-1-1-2 0; }
-#SS_setproofs-25-1-1-2 > li::marker { content: ""counter(SS_setproofs-25-1-1-2,lower-alpha)""; }
-#SS_setproofs-25-1-1-2 > li { counter-increment: SS_setproofs-25-1-1-2; }
-#SS_setproofs-25-2-1-2 { counter-set: SS_setproofs-25-2-1-2 0; }
-#SS_setproofs-25-2-1-2 > li::marker { content: ""counter(SS_setproofs-25-2-1-2,lower-alpha)""; }
-#SS_setproofs-25-2-1-2 > li { counter-increment: SS_setproofs-25-2-1-2; }
-#SS_setproofs-25-3-1-2 { counter-set: SS_setproofs-25-3-1-2 0; }
-#SS_setproofs-25-3-1-2 > li::marker { content: ""counter(SS_setproofs-25-3-1-2,lower-alpha)""; }
-#SS_setproofs-25-3-1-2 > li { counter-increment: SS_setproofs-25-3-1-2; }
-#SS_setproofs-25-4-1-2 { counter-set: SS_setproofs-25-4-1-2 0; }
-#SS_setproofs-25-4-1-2 > li::marker { content: ""counter(SS_setproofs-25-4-1-2,lower-alpha)""; }
-#SS_setproofs-25-4-1-2 > li { counter-increment: SS_setproofs-25-4-1-2; }
-#SS_setproofs-25-5-1-2 { counter-set: SS_setproofs-25-5-1-2 0; }
-#SS_setproofs-25-5-1-2 > li::marker { content: ""counter(SS_setproofs-25-5-1-2,lower-alpha)""; }
-#SS_setproofs-25-5-1-2 > li { counter-increment: SS_setproofs-25-5-1-2; }
-#SS_setproofs-25-6-1-2 { counter-set: SS_setproofs-25-6-1-2 0; }
-#SS_setproofs-25-6-1-2 > li::marker { content: ""counter(SS_setproofs-25-6-1-2,lower-alpha)""; }
-#SS_setproofs-25-6-1-2 > li { counter-increment: SS_setproofs-25-6-1-2; }
-#SS_setproofs-25-7-1-2 { counter-set: SS_setproofs-25-7-1-2 0; }
-#SS_setproofs-25-7-1-2 > li::marker { content: ""counter(SS_setproofs-25-7-1-2,lower-alpha)""; }
-#SS_setproofs-25-7-1-2 > li { counter-increment: SS_setproofs-25-7-1-2; }
-#SS_setproofs-25-15-1-2 { counter-set: SS_setproofs-25-15-1-2 0; }
-#SS_setproofs-25-15-1-2 > li::marker { content: ""counter(SS_setproofs-25-15-1-2,lower-alpha)""; }
-#SS_setproofs-25-15-1-2 > li { counter-increment: SS_setproofs-25-15-1-2; }
-#E_notfunctionimages-2-1 { counter-set: E_notfunctionimages-2-1 0; }
-#E_notfunctionimages-2-1 > li::marker { content: ""counter(E_notfunctionimages-2-1,lower-alpha)""; }
-#E_notfunctionimages-2-1 > li { counter-increment: E_notfunctionimages-2-1; }
-#E_addasfn-3-1 { counter-set: E_addasfn-3-1 0; }
-#E_addasfn-3-1 > li::marker { content: ""counter(E_addasfn-3-1,lower-alpha)""; }
-#E_addasfn-3-1 > li { counter-increment: E_addasfn-3-1; }
-#functions-45-1-1-2 { counter-set: functions-45-1-1-2 0; }
-#functions-45-1-1-2 > li::marker { content: ""counter(functions-45-1-1-2,lower-alpha)""; }
-#functions-45-1-1-2 > li { counter-increment: functions-45-1-1-2; }
-#functions-45-2-1-2 { counter-set: functions-45-2-1-2 0; }
-#functions-45-2-1-2 > li::marker { content: ""counter(functions-45-2-1-2,lower-alpha)""; }
-#functions-45-2-1-2 > li { counter-increment: functions-45-2-1-2; }
-#functions-45-3-1-2 { counter-set: functions-45-3-1-2 0; }
-#functions-45-3-1-2 > li::marker { content: ""counter(functions-45-3-1-2,lower-alpha)""; }
-#functions-45-3-1-2 > li { counter-increment: functions-45-3-1-2; }
-#functions-45-4-1-2 { counter-set: functions-45-4-1-2 0; }
-#functions-45-4-1-2 > li::marker { content: ""counter(functions-45-4-1-2,lower-alpha)""; }
-#functions-45-4-1-2 > li { counter-increment: functions-45-4-1-2; }
-#functions-45-5-1-2 { counter-set: functions-45-5-1-2 0; }
-#functions-45-5-1-2 > li::marker { content: ""counter(functions-45-5-1-2,lower-alpha)""; }
-#functions-45-5-1-2 > li { counter-increment: functions-45-5-1-2; }
-#functions-45-7-1-3 { counter-set: functions-45-7-1-3 0; }
-#functions-45-7-1-3 > li::marker { content: ""counter(functions-45-7-1-3,lower-alpha)""; }
-#functions-45-7-1-3 > li { counter-increment: functions-45-7-1-3; }
-#functions-45-8-1-2 { counter-set: functions-45-8-1-2 0; }
-#functions-45-8-1-2 > li::marker { content: ""counter(functions-45-8-1-2,lower-alpha)""; }
-#functions-45-8-1-2 > li { counter-increment: functions-45-8-1-2; }
-#functions-45-9-1-2 { counter-set: functions-45-9-1-2 0; }
-#functions-45-9-1-2 > li::marker { content: ""counter(functions-45-9-1-2,lower-alpha)""; }
-#functions-45-9-1-2 > li { counter-increment: functions-45-9-1-2; }
-#functions-45-10-1-3 { counter-set: functions-45-10-1-3 0; }
-#functions-45-10-1-3 > li::marker { content: ""counter(functions-45-10-1-3,lower-alpha)""; }
-#functions-45-10-1-3 > li { counter-increment: functions-45-10-1-3; }
-#functions-45-11-1-3 { counter-set: functions-45-11-1-3 0; }
-#functions-45-11-1-3 > li::marker { content: ""counter(functions-45-11-1-3,lower-alpha)""; }
-#functions-45-11-1-3 > li { counter-increment: functions-45-11-1-3; }
-#functions-45-12-1-2 { counter-set: functions-45-12-1-2 0; }
-#functions-45-12-1-2 > li::marker { content: ""counter(functions-45-12-1-2,lower-alpha)""; }
-#functions-45-12-1-2 > li { counter-increment: functions-45-12-1-2; }
-#E_equivclasses-2-3 { counter-set: E_equivclasses-2-3 0; }
-#E_equivclasses-2-3 > li::marker { content: ""counter(E_equivclasses-2-3,lower-alpha)""; }
-#E_equivclasses-2-3 > li { counter-increment: E_equivclasses-2-3; }
-#D_partition-1-1-6 { counter-set: D_partition-1-1-6 0; }
-#D_partition-1-1-6 > li::marker { content: ""counter(D_partition-1-1-6,decimal)""; }
-#D_partition-1-1-6 > li { counter-increment: D_partition-1-1-6; }
-#E_equivclasses2-4-2 { counter-set: E_equivclasses2-4-2 0; }
-#E_equivclasses2-4-2 > li::marker { content: ""counter(E_equivclasses2-4-2,lower-alpha)""; }
-#E_equivclasses2-4-2 > li { counter-increment: E_equivclasses2-4-2; }
-#SS_equivrelations-47-1-1-3 { counter-set: SS_equivrelations-47-1-1-3 0; }
-#SS_equivrelations-47-1-1-3 > li::marker { content: ""counter(SS_equivrelations-47-1-1-3,lower-alpha)""; }
-#SS_equivrelations-47-1-1-3 > li { counter-increment: SS_equivrelations-47-1-1-3; }
-#SS_equivrelations-47-2-1-3 { counter-set: SS_equivrelations-47-2-1-3 0; }
-#SS_equivrelations-47-2-1-3 > li::marker { content: ""counter(SS_equivrelations-47-2-1-3,lower-alpha)""; }
-#SS_equivrelations-47-2-1-3 > li { counter-increment: SS_equivrelations-47-2-1-3; }
-#SS_equivrelations-47-4-1-2 { counter-set: SS_equivrelations-47-4-1-2 0; }
-#SS_equivrelations-47-4-1-2 > li::marker { content: ""counter(SS_equivrelations-47-4-1-2,lower-alpha)""; }
-#SS_equivrelations-47-4-1-2 > li { counter-increment: SS_equivrelations-47-4-1-2; }
-#SS_equivrelations-47-5-1-2 { counter-set: SS_equivrelations-47-5-1-2 0; }
-#SS_equivrelations-47-5-1-2 > li::marker { content: ""counter(SS_equivrelations-47-5-1-2,lower-alpha)""; }
-#SS_equivrelations-47-5-1-2 > li { counter-increment: SS_equivrelations-47-5-1-2; }
-#SS_equivrelations-47-6-1-2 { counter-set: SS_equivrelations-47-6-1-2 0; }
-#SS_equivrelations-47-6-1-2 > li::marker { content: ""counter(SS_equivrelations-47-6-1-2,lower-alpha)""; }
-#SS_equivrelations-47-6-1-2 > li { counter-increment: SS_equivrelations-47-6-1-2; }
-#SS_equivrelations-47-7-1-2 { counter-set: SS_equivrelations-47-7-1-2 0; }
-#SS_equivrelations-47-7-1-2 > li::marker { content: ""counter(SS_equivrelations-47-7-1-2,lower-alpha)""; }
-#SS_equivrelations-47-7-1-2 > li { counter-increment: SS_equivrelations-47-7-1-2; }
-#SS_equivrelations-47-8-1-2 { counter-set: SS_equivrelations-47-8-1-2 0; }
-#SS_equivrelations-47-8-1-2 > li::marker { content: ""counter(SS_equivrelations-47-8-1-2,lower-alpha)""; }
-#SS_equivrelations-47-8-1-2 > li { counter-increment: SS_equivrelations-47-8-1-2; }
-#SS_equivrelations-47-9-1-2 { counter-set: SS_equivrelations-47-9-1-2 0; }
-#SS_equivrelations-47-9-1-2 > li::marker { content: ""counter(SS_equivrelations-47-9-1-2,lower-alpha)""; }
-#SS_equivrelations-47-9-1-2 > li { counter-increment: SS_equivrelations-47-9-1-2; }
-#D_RSTprop2-1-1-3 { counter-set: D_RSTprop2-1-1-3 0; }
-#D_RSTprop2-1-1-3 > li::marker { content: ""counter(D_RSTprop2-1-1-3,decimal)""; }
-#D_RSTprop2-1-1-3 > li { counter-increment: D_RSTprop2-1-1-3; }
-#T_totalorder-1-1-4 { counter-set: T_totalorder-1-1-4 0; }
-#T_totalorder-1-1-4 > li::marker { content: ""counter(T_totalorder-1-1-4,decimal)""; }
-#T_totalorder-1-1-4 > li { counter-increment: T_totalorder-1-1-4; }
-#orders-33-1-1-2 { counter-set: orders-33-1-1-2 0; }
-#orders-33-1-1-2 > li::marker { content: ""counter(orders-33-1-1-2,lower-alpha)""; }
-#orders-33-1-1-2 > li { counter-increment: orders-33-1-1-2; }
-#orders-33-2-1-2 { counter-set: orders-33-2-1-2 0; }
-#orders-33-2-1-2 > li::marker { content: ""counter(orders-33-2-1-2,lower-alpha)""; }
-#orders-33-2-1-2 > li { counter-increment: orders-33-2-1-2; }
-#orders-33-3-1-2 { counter-set: orders-33-3-1-2 0; }
-#orders-33-3-1-2 > li::marker { content: ""counter(orders-33-3-1-2,lower-alpha)""; }
-#orders-33-3-1-2 > li { counter-increment: orders-33-3-1-2; }
-#orders-33-4-1-2 { counter-set: orders-33-4-1-2 0; }
-#orders-33-4-1-2 > li::marker { content: ""counter(orders-33-4-1-2,lower-alpha)""; }
-#orders-33-4-1-2 > li { counter-increment: orders-33-4-1-2; }
-#binomial9-30-2-1-1-1 { counter-set: binomial9-30-2-1-1-1 0; }
-#binomial9-30-2-1-1-1 > li::marker { content: ""counter(binomial9-30-2-1-1-1,lower-alpha)""; }
-#binomial9-30-2-1-1-1 > li { counter-increment: binomial9-30-2-1-1-1; }
-#cardinality-31-6-1-2 { counter-set: cardinality-31-6-1-2 0; }
-#cardinality-31-6-1-2 > li::marker { content: ""counter(cardinality-31-6-1-2,lower-alpha)""; }
-#cardinality-31-6-1-2 > li { counter-increment: cardinality-31-6-1-2; }
-</style>
+<script src="_static/prefix-runtime.42217a82c75796c8.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.7e141ad8414abf4a.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.f4ab138da65f4203.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
 </head>
 <body class="pretext book ignore-math">
-<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
-<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
-<h1 class="heading"><a href="IntroProofs.html"><span class="title">Introduction to Proofs:</span> <span class="subtitle">An Active Exploration of Mathematical Language</span></a></h1>
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="IntroProofs.html"><span class="title">Introduction to Proofs</span> <span class="subtitle">An Active Exploration of Mathematical Language</span></a></h1>
 <p class="byline">Jennifer Firkins Nordstrom</p>
-</div>
-</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
 <button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-2.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
 <div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
@@ -595,161 +316,321 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="directproof"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">3.1</span><span class="space"> </span><span class="title">Direct Proof and Counterexample</span>
 </h2>
-<div class="para" id="directproof-2">Before starting proof techniques, we introduce a few mathematical definitons. Keep in mind, mathematical definitions are constructed to provide a common language for proofs. They are intended to provide rigor and precision. They are NOT intended to provide conceptual understanding. You need to develop conceptual understanding of the terms apart from the definition. However, we need to rely on definitions to provide structure for our proofs.</div>
-<div class="para" id="directproof-3">We defined the integers in <a href="whatisaproof.html#D_integer" class="xref" data-knowl="./knowl/xref/D_integer.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.1.1">Definition 1.1.1</a>. Recall from <a href="setnotation.html" class="internal" title="Section 2.1: Introduction to Sets">Section 2.1</a>, we use <span class="process-math">\(\mathbb{Z}\)</span> for the set of integers.</div>
+<div class="para" id="directproof-2">Before starting proof techniques, we introduce a few mathematical definitons. Keep in mind, mathematical definitions are constructed to provide a common language for proofs. They are intended to provide rigor and precision. They are NOT intended to provide conceptual understanding. You need to develop conceptual understanding of the terms apart from the definition. However, we need to rely on definitions to provide structure for our proofs.<div class="autopermalink" data-description="Paragraph"><a href="#directproof-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="directproof-3">We defined the integers in <a href="whatisaproof.html#D_integer" class="xref" data-knowl="./knowl/xref/D_integer.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.1.1">Definition 1.1.1</a>. Recall from <a href="setnotation.html" class="internal" title="Section 2.1: Introduction to Sets">Section 2.1</a>, we use <span class="process-math">\(\mathbb{Z}\)</span> for the set of integers.<div class="autopermalink" data-description="Paragraph"><a href="#directproof-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="definition definition-like" id="directproof-4"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.1.1</span><span class="period">.</span>
 </h3>
-<div class="para" id="directproof-4-1-1">An integer, <span class="process-math">\(n\text{,}\)</span> is <dfn class="terminology">even</dfn> if it has the form <span class="process-math">\(n=2k\)</span> for some <span class="process-math">\(k\in \mathbb{Z}\text{.}\)</span>
-</div></article><article class="definition definition-like" id="directproof-5"><h3 class="heading">
+<div class="para" id="directproof-4-1-1">An integer, <span class="process-math">\(n\text{,}\)</span> is <dfn class="terminology">even</dfn> if it has the form <span class="process-math">\(n=2k\)</span> for some <span class="process-math">\(k\in \mathbb{Z}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#directproof-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 3.1.1"><a href="#directproof-4" title="Copy heading and permalink for Definition 3.1.1" aria-label="Copy heading and permalink for Definition 3.1.1">🔗</a></div></article><article class="definition definition-like" id="directproof-5"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.1.2</span><span class="period">.</span>
 </h3>
-<div class="para" id="directproof-5-1-1">An integer <span class="process-math">\(n\text{,}\)</span> is <dfn class="terminology">odd</dfn> if it has the form <span class="process-math">\(n=2k+1\)</span> for some <span class="process-math">\(k\in \mathbb{Z}\text{.}\)</span>
-</div></article><div class="para" id="directproof-6">You are probably familiar, generally, with even numbers such as 2, 4, 6, 8, and odd numbers such as 3, 5, 7, 9. But the next example uses the definitions to look at more examples.</div>
+<div class="para" id="directproof-5-1-1">An integer <span class="process-math">\(n\text{,}\)</span> is <dfn class="terminology">odd</dfn> if it has the form <span class="process-math">\(n=2k+1\)</span> for some <span class="process-math">\(k\in \mathbb{Z}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#directproof-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 3.1.2"><a href="#directproof-5" title="Copy heading and permalink for Definition 3.1.2" aria-label="Copy heading and permalink for Definition 3.1.2">🔗</a></div></article><div class="para" id="directproof-6">You are probably familiar, generally, with even numbers such as 2, 4, 6, 8, and odd numbers such as 3, 5, 7, 9. But the next example uses the definitions to look at more examples.<div class="autopermalink" data-description="Paragraph"><a href="#directproof-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <details id="E_evenodd" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.1.3</span><span class="period">.</span><span class="space"> </span><span class="title">Even or Odd.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_evenodd-2">Is -5 even or odd?</div>
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_evenodd-2">Is -5 even or odd?<div class="autopermalink" data-description="Paragraph"><a href="#E_evenodd-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <details id="E_evenodd-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
-<span class="process-math">\(-5=2(-3)+1\)</span><span class="process-math">\(-3\in \mathbb{Z}\text{.}\)</span>
-</div></details><div class="para" id="E_evenodd-4">Is 0 even or odd?</div>
+<span class="process-math">\(-5=2(-3)+1\)</span><span class="process-math">\(-3\in \mathbb{Z}\text{.}\)</span><div class="autopermalink" data-description="Answer 3.1.3.1"><a href="#E_evenodd-3" title="Copy heading and permalink for Answer 3.1.3.1" aria-label="Copy heading and permalink for Answer 3.1.3.1">🔗</a></div>
+</div></details><div class="para" id="E_evenodd-4">Is 0 even or odd?<div class="autopermalink" data-description="Paragraph"><a href="#E_evenodd-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <details id="E_evenodd-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
-<span class="process-math">\(0=2(0)\)</span><span class="process-math">\(0\in \mathbb{Z}\text{.}\)</span>
-</div></details><div class="para" id="E_evenodd-6">Let <span class="process-math">\(a, b\in \mathbb{Z}\text{.}\)</span> Is <span class="process-math">\(6a^2b\)</span> even or odd?</div>
+<span class="process-math">\(0=2(0)\)</span><span class="process-math">\(0\in \mathbb{Z}\text{.}\)</span><div class="autopermalink" data-description="Answer 3.1.3.2"><a href="#E_evenodd-5" title="Copy heading and permalink for Answer 3.1.3.2" aria-label="Copy heading and permalink for Answer 3.1.3.2">🔗</a></div>
+</div></details><div class="para" id="E_evenodd-6">Let <span class="process-math">\(a, b\in \mathbb{Z}\text{.}\)</span> Is <span class="process-math">\(6a^2b\)</span> even or odd?<div class="autopermalink" data-description="Paragraph"><a href="#E_evenodd-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <details id="E_evenodd-7" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
-<span class="process-math">\(6a^2b=2(3a^2b)\)</span><span class="process-math">\(3a^2b\in \mathbb{Z}\text{.}\)</span><span class="process-math">\(6a^2b\)</span>
-</div></details><div class="para" id="E_evenodd-8">Let <span class="process-math">\(a, b\in \mathbb{Z}\text{.}\)</span> Is <span class="process-math">\(20a-6b+1\)</span> even or odd?</div>
+<span class="process-math">\(6a^2b=2(3a^2b)\)</span><span class="process-math">\(3a^2b\in \mathbb{Z}\text{.}\)</span><span class="process-math">\(6a^2b\)</span><div class="autopermalink" data-description="Answer 3.1.3.3"><a href="#E_evenodd-7" title="Copy heading and permalink for Answer 3.1.3.3" aria-label="Copy heading and permalink for Answer 3.1.3.3">🔗</a></div>
+</div></details><div class="para" id="E_evenodd-8">Let <span class="process-math">\(a, b\in \mathbb{Z}\text{.}\)</span> Is <span class="process-math">\(20a-6b+1\)</span> even or odd?<div class="autopermalink" data-description="Paragraph"><a href="#E_evenodd-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <details id="E_evenodd-9" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
-<span class="process-math">\(20a-6b+1=2(10a-3b)+1\)</span><span class="process-math">\(10a-3b\in \mathbb{Z}\text{.}\)</span><span class="process-math">\(20a-6b+1\)</span>
-</div></details></article></details><article class="activity project-like" id="A_evenoddneither"><h3 class="heading">
+<span class="process-math">\(20a-6b+1=2(10a-3b)+1\)</span><span class="process-math">\(10a-3b\in \mathbb{Z}\text{.}\)</span><span class="process-math">\(20a-6b+1\)</span><div class="autopermalink" data-description="Answer 3.1.3.4"><a href="#E_evenodd-9" title="Copy heading and permalink for Answer 3.1.3.4" aria-label="Copy heading and permalink for Answer 3.1.3.4">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 3.1.3: Even or Odd"><a href="#E_evenodd" title="Copy heading and permalink for Example 3.1.3: Even or Odd" aria-label="Copy heading and permalink for Example 3.1.3: Even or Odd">🔗</a></div></article></details><article class="activity project-like" id="A_evenoddneither"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Always, Sometimes, or Never Even.</span>
 </h3>
-<div class="introduction" id="A_evenoddneither-2"><div class="para" id="A_evenoddneither-2-1">Let <span class="process-math">\(a, b\)</span> be integers. Determine if each of the following are always even, always odd, or sometimes even/ sometimes odd.</div></div>
+<div class="introduction" id="A_evenoddneither-2"><div class="para" id="A_evenoddneither-2-1">Let <span class="process-math">\(a, b\)</span> be integers. Determine if each of the following are always even, always odd, or sometimes even/ sometimes odd.<div class="autopermalink" data-description="Paragraph"><a href="#A_evenoddneither-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
 <article class="task exercise-like" id="A_evenoddneither-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<span class="process-math">\(12ab^3\)</span></article><article class="task exercise-like" id="A_evenoddneither-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<span class="process-math">\(3ab\)</span></article><article class="task exercise-like" id="A_evenoddneither-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<span class="process-math">\(10b^2-4ab+1\)</span></article><article class="task exercise-like" id="A_evenoddneither-6"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<span class="process-math">\(4b+3\)</span></article><article class="task exercise-like" id="A_evenoddneither-7"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<span class="process-math">\(5a+3b\)</span></article></article><div class="para" id="directproof-9">We’ve now seen several examples of even/ odd integers. Are there integers which are both even and odd? Can an integer be neither even nor odd? The answer to both questions is no. However, proving that every integer is even or odd (and not both), is pretty challenging, and we won’t try to do it, yet. But for the moment we will assume if we know an integer is NOT even, then it must be odd, and vice versa.</div>
-<div class="para" id="directproof-10">We start our proof techniques by looking at how to prove universal conditional statements, which we studied in <a href="conditionals.html" class="internal" title="Section 2.3: Conditional Statements">Section 2.3</a>. Recall, a universal conditional statement has the form “For all <span class="process-math">\(x\in D\text{,}\)</span> if <span class="process-math">\(x\)</span> has property <span class="process-math">\(P\)</span> then <span class="process-math">\(x\)</span> has property <span class="process-math">\(Q\text{.}\)</span>” We can restate this using symbolic notation: For all <span class="process-math">\(x\in D, P(x)\rightarrow Q(x)\text{.}\)</span> Although we saw how to write “for all” using the symbol <span class="process-math">\(\forall\text{,}\)</span> in this book we will generally avoid the quantifier symbols in our proofs. This just helps with clarity for the reader and is fairly standard in mathematical writing. However, the techniques for understanding and negating quantified statements from <a href="quantifiers.html" class="internal" title="Section 2.2: Quantifiers">Section 2.2</a> still apply.</div>
-<div class="para" id="directproof-11">One very limited method for proving universal conditional statements is the <dfn class="terminology">method of exhaustion</dfn>: for each specific <span class="process-math">\(a\in D\)</span> where <span class="process-math">\(P(a)\)</span> is true, show <span class="process-math">\(Q(a)\)</span> is true. In other words, we check if <span class="process-math">\(P(a)\)</span> then <span class="process-math">\(Q(a)\)</span> for each <span class="process-math">\(a\in D\text{.}\)</span>
+<span class="process-math">\(12ab^3\)</span><div class="autopermalink" data-description="Task 3.1.1.a"><a href="#A_evenoddneither-3" title="Copy heading and permalink for Task 3.1.1.a" aria-label="Copy heading and permalink for Task 3.1.1.a">🔗</a></div></article><article class="task exercise-like" id="A_evenoddneither-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<span class="process-math">\(3ab\)</span><div class="autopermalink" data-description="Task 3.1.1.b"><a href="#A_evenoddneither-4" title="Copy heading and permalink for Task 3.1.1.b" aria-label="Copy heading and permalink for Task 3.1.1.b">🔗</a></div></article><article class="task exercise-like" id="A_evenoddneither-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<span class="process-math">\(10b^2-4ab+1\)</span><div class="autopermalink" data-description="Task 3.1.1.c"><a href="#A_evenoddneither-5" title="Copy heading and permalink for Task 3.1.1.c" aria-label="Copy heading and permalink for Task 3.1.1.c">🔗</a></div></article><article class="task exercise-like" id="A_evenoddneither-6"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<span class="process-math">\(4b+3\)</span><div class="autopermalink" data-description="Task 3.1.1.d"><a href="#A_evenoddneither-6" title="Copy heading and permalink for Task 3.1.1.d" aria-label="Copy heading and permalink for Task 3.1.1.d">🔗</a></div></article><article class="task exercise-like" id="A_evenoddneither-7"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<span class="process-math">\(5a+3b\)</span><div class="autopermalink" data-description="Task 3.1.1.e"><a href="#A_evenoddneither-7" title="Copy heading and permalink for Task 3.1.1.e" aria-label="Copy heading and permalink for Task 3.1.1.e">🔗</a></div></article><div class="autopermalink" data-description="Activity 3.1.1: Always, Sometimes, or Never Even"><a href="#A_evenoddneither" title="Copy heading and permalink for Activity 3.1.1: Always, Sometimes, or Never Even" aria-label="Copy heading and permalink for Activity 3.1.1: Always, Sometimes, or Never Even">🔗</a></div></article><div class="para" id="directproof-9">We’ve now seen several examples of even/ odd integers. Are there integers which are both even and odd? Can an integer be neither even nor odd? The answer to both questions is no. However, proving that every integer is even or odd (and not both), is pretty challenging, and we won’t try to do it, yet. But for the moment we will assume if we know an integer is NOT even, then it must be odd, and vice versa.<div class="autopermalink" data-description="Paragraph"><a href="#directproof-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="directproof-10">We start our proof techniques by looking at how to prove universal conditional statements, which we studied in <a href="conditionals.html" class="internal" title="Section 2.3: Conditional Statements">Section 2.3</a>. Recall, a universal conditional statement has the form “For all <span class="process-math">\(x\in D\text{,}\)</span> if <span class="process-math">\(x\)</span> has property <span class="process-math">\(P\)</span> then <span class="process-math">\(x\)</span> has property <span class="process-math">\(Q\text{.}\)</span>” We can restate this using symbolic notation: For all <span class="process-math">\(x\in D, P(x)\rightarrow Q(x)\text{.}\)</span> Although we saw how to write “for all” using the symbol <span class="process-math">\(\forall\text{,}\)</span> in this book we will generally avoid the quantifier symbols in our proofs. This just helps with clarity for the reader and is fairly standard in mathematical writing. However, the techniques for understanding and negating quantified statements from <a href="quantifiers.html" class="internal" title="Section 2.2: Quantifiers">Section 2.2</a> still apply.<div class="autopermalink" data-description="Paragraph"><a href="#directproof-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="directproof-11">One very limited method for proving universal conditional statements is the <dfn class="terminology">method of exhaustion</dfn>: for each specific <span class="process-math">\(a\in D\)</span> where <span class="process-math">\(P(a)\)</span> is true, show <span class="process-math">\(Q(a)\)</span> is true. In other words, we check if <span class="process-math">\(P(a)\)</span> then <span class="process-math">\(Q(a)\)</span> for each <span class="process-math">\(a\in D\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#directproof-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <details id="E_pfbyexhaustion" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.1.4</span><span class="period">.</span><span class="space"> </span><span class="title">Method of Exhaustion.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_pfbyexhaustion-2">Prove for all <span class="process-math">\(n\in \mathbb{Z}\text{,}\)</span> if <span class="process-math">\(n\)</span> is even and <span class="process-math">\(4\leq n\leq 16\text{,}\)</span> then <span class="process-math">\(n\)</span> can be written as the sum of prime numbers.</div>
-<details id="E_pfbyexhaustion-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="E_pfbyexhaustion-3-1">We can find all the integers that are even and <span class="process-math">\(4\leq n\leq 16\text{.}\)</span> This is the set <span class="process-math">\(\{4, 6, 8, 10, 12, 14, 16\}\text{.}\)</span> For each of these numbers we can demonstrate a way to write them as the sum of primes: <span class="process-math">\(4=2+2, 6=3+3, 8=3+5, 10=3+7, 12=5+7, 14=7+7, 16=11+5\text{.}\)</span>
-</div></article></details></article></details><div class="para" id="directproof-13">The method of exhaustion only works if we can show the statement for every <span class="process-math">\(x\in D\text{.}\)</span> But if <span class="process-math">\(D\)</span> is infinite, we need to use a more general method. We saw the limitations of this method in <a href="whatisaproof.html" class="internal" title="Section 1.1: What is a Proof?">Section 1.1</a>. Although this method won’t result in a proof if our set is infinite, it can be a helpful first stab at a proof in that generating examples can lead to more general insight into the problem. Our first more general technique is the method of <dfn class="terminology">direct proof</dfn>.</div>
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_pfbyexhaustion-2">Prove for all <span class="process-math">\(n\in \mathbb{Z}\text{,}\)</span> if <span class="process-math">\(n\)</span> is even and <span class="process-math">\(4\leq n\leq 16\text{,}\)</span> then <span class="process-math">\(n\)</span> can be written as the sum of prime numbers.<div class="autopermalink" data-description="Paragraph"><a href="#E_pfbyexhaustion-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="E_pfbyexhaustion-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="E_pfbyexhaustion-3-1">We can find all the integers that are even and <span class="process-math">\(4\leq n\leq 16\text{.}\)</span> This is the set <span class="process-math">\(\{4, 6, 8, 10, 12, 14, 16\}\text{.}\)</span> For each of these numbers we can demonstrate a way to write them as the sum of primes: <span class="process-math">\(4=2+2, 6=3+3, 8=3+5, 10=3+7, 12=5+7, 14=7+7, 16=11+5\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_pfbyexhaustion-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 3.1.4.1"><a href="#E_pfbyexhaustion-3" title="Copy heading and permalink for Proof 3.1.4.1" aria-label="Copy heading and permalink for Proof 3.1.4.1">🔗</a></div></article></details><div class="autopermalink" data-description="Example 3.1.4: Method of Exhaustion"><a href="#E_pfbyexhaustion" title="Copy heading and permalink for Example 3.1.4: Method of Exhaustion" aria-label="Copy heading and permalink for Example 3.1.4: Method of Exhaustion">🔗</a></div></article></details><div class="para" id="directproof-13">The method of exhaustion only works if we can show the statement for every <span class="process-math">\(x\in D\text{.}\)</span> But if <span class="process-math">\(D\)</span> is infinite, we need to use a more general method. We saw the limitations of this method in <a href="whatisaproof.html" class="internal" title="Section 1.1: What is a Proof?">Section 1.1</a>. Although this method won’t result in a proof if our set is infinite, it can be a helpful first stab at a proof in that generating examples can lead to more general insight into the problem. Our first more general technique is the method of <dfn class="terminology">direct proof</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#directproof-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="assemblage assemblage-like" id="B_directproof"><h3 class="heading"><span class="title">Method of Direct Proof.</span></h3>
 <div class="para logical" id="B_directproof-4">
 <div class="para">To prove statements of the form “for all <span class="process-math">\(x\in D, P(x)\rightarrow Q(x)\)</span>” using the method of direct proof we use the following process.</div>
 <ul class="disc" id="B_directproof-4-2">
-<li id="B_directproof-4-2-1"><div class="para" id="B_directproof-4-2-1-1">Let <span class="process-math">\(x\in D.\)</span> Make sure this is a variable or generic <span class="process-math">\(x\text{,}\)</span> not a specific value.</div></li>
-<li id="B_directproof-4-2-2"><div class="para" id="B_directproof-4-2-2-1">Assume <span class="process-math">\(P(x)\)</span> is true.</div></li>
-<li id="B_directproof-4-2-3"><div class="para" id="B_directproof-4-2-3-1">Show <span class="process-math">\(Q(x)\)</span> is true.</div></li>
+<li id="B_directproof-4-2-1">
+<div class="para" id="B_directproof-4-2-1-1">Let <span class="process-math">\(x\in D.\)</span> Make sure this is a variable or generic <span class="process-math">\(x\text{,}\)</span> not a specific value.<div class="autopermalink" data-description="Paragraph"><a href="#B_directproof-4-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#B_directproof-4-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="B_directproof-4-2-2">
+<div class="para" id="B_directproof-4-2-2-1">Assume <span class="process-math">\(P(x)\)</span> is true.<div class="autopermalink" data-description="Paragraph"><a href="#B_directproof-4-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#B_directproof-4-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="B_directproof-4-2-3">
+<div class="para" id="B_directproof-4-2-3-1">Show <span class="process-math">\(Q(x)\)</span> is true.<div class="autopermalink" data-description="Paragraph"><a href="#B_directproof-4-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#B_directproof-4-2-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
 </ul>
-</div></article><details id="E_dpconsecnumevenodd" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<div class="autopermalink" data-description="Paragraph"><a href="#B_directproof-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Assemblage: Method of Direct Proof"><a href="#B_directproof" title="Copy heading and permalink for Assemblage: Method of Direct Proof" aria-label="Copy heading and permalink for Assemblage: Method of Direct Proof">🔗</a></div></article><details id="E_dpconsecnumevenodd" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.1.5</span><span class="period">.</span><span class="space"> </span><span class="title">Direct Proof.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_dpconsecnumevenodd-2">Prove for all <span class="process-math">\(x \in \mathbb{Z}\text{,}\)</span> if <span class="process-math">\(x\)</span> is even, then <span class="process-math">\(x+1\)</span> is odd.</div>
-<details id="E_dpconsecnumevenodd-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="E_dpconsecnumevenodd-3-1">Let <span class="process-math">\(x\)</span> be even. Then by definition, <span class="process-math">\(x=2k\)</span> for some <span class="process-math">\(k\in \mathbb{Z}\text{.}\)</span> Then <span class="process-math">\(x+1=2k+1\)</span> where <span class="process-math">\(k\in \mathbb{Z}\text{.}\)</span> Which means <span class="process-math">\(x+1\)</span> is odd.</div></article></details></article></details><details id="E_dpsumevens" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_dpconsecnumevenodd-2">Prove for all <span class="process-math">\(x \in \mathbb{Z}\text{,}\)</span> if <span class="process-math">\(x\)</span> is even, then <span class="process-math">\(x+1\)</span> is odd.<div class="autopermalink" data-description="Paragraph"><a href="#E_dpconsecnumevenodd-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="E_dpconsecnumevenodd-3" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="E_dpconsecnumevenodd-3-1">Let <span class="process-math">\(x\)</span> be even. Then by definition, <span class="process-math">\(x=2k\)</span> for some <span class="process-math">\(k\in \mathbb{Z}\text{.}\)</span> Then <span class="process-math">\(x+1=2k+1\)</span> where <span class="process-math">\(k\in \mathbb{Z}\text{.}\)</span> Which means <span class="process-math">\(x+1\)</span> is odd.<div class="autopermalink" data-description="Paragraph"><a href="#E_dpconsecnumevenodd-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 3.1.5.1"><a href="#E_dpconsecnumevenodd-3" title="Copy heading and permalink for Proof 3.1.5.1" aria-label="Copy heading and permalink for Proof 3.1.5.1">🔗</a></div></article></details><div class="autopermalink" data-description="Example 3.1.5: Direct Proof"><a href="#E_dpconsecnumevenodd" title="Copy heading and permalink for Example 3.1.5: Direct Proof" aria-label="Copy heading and permalink for Example 3.1.5: Direct Proof">🔗</a></div></article></details><details id="E_dpsumevens" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.1.6</span><span class="period">.</span><span class="space"> </span><span class="title">Sum of Even Numbers.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_dpsumevens-2">Prove the sum of two even integers is even.</div>
-<div class="para" id="E_dpsumevens-3">Note, this statement is not obviously in the form of an if...then. We often have to translate statements into more formal statements before proving them.</div>
-<div class="para" id="E_dpsumevens-4">More formally, prove for all <span class="process-math">\(a, b\in \mathbb{Z}\)</span> if <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are even, then <span class="process-math">\(a+b\)</span> is even.</div>
-<details id="E_dpsumevens-5" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="E_dpsumevens-5-1">Let <span class="process-math">\(a, b\)</span> be even. Then by definition, <span class="process-math">\(a=2k\)</span> for some <span class="process-math">\(k\in \mathbb{Z}\)</span> and <span class="process-math">\(b=2j\)</span> for some <span class="process-math">\(j\in \mathbb{Z}\text{.}\)</span> (Note, we cannot use <span class="process-math">\(k\)</span> for both <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> as they likely are two different numbers.) Then <span class="process-math">\(a+b=2k+2j=2(k+j)\)</span> where <span class="process-math">\(k+j\in \mathbb{Z}\text{.}\)</span> Which means <span class="process-math">\(a+b\)</span> is even.</div></article></details></article></details><div class="para" id="directproof-17">A <dfn class="terminology">counterexample</dfn> is used to disprove a universal conditional statements. If we have a universal conditional statement of the form “for all <span class="process-math">\(x\in D, P(x)\rightarrow Q(x)\)</span>”, we show it is false with the following process.</div>
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_dpsumevens-2">Prove the sum of two even integers is even.<div class="autopermalink" data-description="Paragraph"><a href="#E_dpsumevens-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="E_dpsumevens-3">Note, this statement is not obviously in the form of an if...then. We often have to translate statements into more formal statements before proving them.<div class="autopermalink" data-description="Paragraph"><a href="#E_dpsumevens-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="E_dpsumevens-4">More formally, prove for all <span class="process-math">\(a, b\in \mathbb{Z}\)</span> if <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are even, then <span class="process-math">\(a+b\)</span> is even.<div class="autopermalink" data-description="Paragraph"><a href="#E_dpsumevens-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="E_dpsumevens-5" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Proof<span class="period">.</span></span></h4></summary><article class="hiddenproof knowl__content"><div class="para" id="E_dpsumevens-5-1">Let <span class="process-math">\(a, b\)</span> be even. Then by definition, <span class="process-math">\(a=2k\)</span> for some <span class="process-math">\(k\in \mathbb{Z}\)</span> and <span class="process-math">\(b=2j\)</span> for some <span class="process-math">\(j\in \mathbb{Z}\text{.}\)</span> (Note, we cannot use <span class="process-math">\(k\)</span> for both <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> as they likely are two different numbers.) Then <span class="process-math">\(a+b=2k+2j=2(k+j)\)</span> where <span class="process-math">\(k+j\in \mathbb{Z}\text{.}\)</span> Which means <span class="process-math">\(a+b\)</span> is even.<div class="autopermalink" data-description="Paragraph"><a href="#E_dpsumevens-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 3.1.6.1"><a href="#E_dpsumevens-5" title="Copy heading and permalink for Proof 3.1.6.1" aria-label="Copy heading and permalink for Proof 3.1.6.1">🔗</a></div></article></details><div class="autopermalink" data-description="Example 3.1.6: Sum of Even Numbers"><a href="#E_dpsumevens" title="Copy heading and permalink for Example 3.1.6: Sum of Even Numbers" aria-label="Copy heading and permalink for Example 3.1.6: Sum of Even Numbers">🔗</a></div></article></details><div class="para" id="directproof-17">A <dfn class="terminology">counterexample</dfn> is used to disprove a universal conditional statements. If we have a universal conditional statement of the form “for all <span class="process-math">\(x\in D, P(x)\rightarrow Q(x)\)</span>”, we show it is false with the following process.<div class="autopermalink" data-description="Paragraph"><a href="#directproof-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="assemblage assemblage-like" id="B_counterexample"><h3 class="heading"><span class="title">Disproving by Counterexample.</span></h3>
 <div class="para logical" id="B_counterexample-4">
 <div class="para">To disprove statements of the form “for all <span class="process-math">\(x\in D, P(x)\rightarrow Q(x)\)</span>” we find a counterexample.</div>
 <ul class="disc" id="B_counterexample-4-2">
-<li id="B_counterexample-4-2-1"><div class="para" id="B_counterexample-4-2-1-1">Find <span class="process-math">\(x\in D\)</span> making, <span class="process-math">\(P(x)\)</span> true and <span class="process-math">\(Q(x)\)</span> false. Note, this step may happen as scratchwork, not part of your counterexample.</div></li>
-<li id="B_counterexample-4-2-2"><div class="para" id="B_counterexample-4-2-2-1">For your counterexample, state <span class="process-math">\(x\text{.}\)</span>
-</div></li>
-<li id="B_counterexample-4-2-3"><div class="para" id="B_counterexample-4-2-3-1">Show <span class="process-math">\(x\in D\text{,}\)</span> <span class="process-math">\(P(x)\)</span> is true and <span class="process-math">\(Q(x)\)</span> is false.</div></li>
+<li id="B_counterexample-4-2-1">
+<div class="para" id="B_counterexample-4-2-1-1">Find <span class="process-math">\(x\in D\)</span> making, <span class="process-math">\(P(x)\)</span> true and <span class="process-math">\(Q(x)\)</span> false. Note, this step may happen as scratchwork, not part of your counterexample.<div class="autopermalink" data-description="Paragraph"><a href="#B_counterexample-4-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#B_counterexample-4-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="B_counterexample-4-2-2">
+<div class="para" id="B_counterexample-4-2-2-1">For your counterexample, state <span class="process-math">\(x\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#B_counterexample-4-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#B_counterexample-4-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="B_counterexample-4-2-3">
+<div class="para" id="B_counterexample-4-2-3-1">Show <span class="process-math">\(x\in D\text{,}\)</span> <span class="process-math">\(P(x)\)</span> is true and <span class="process-math">\(Q(x)\)</span> is false.<div class="autopermalink" data-description="Paragraph"><a href="#B_counterexample-4-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#B_counterexample-4-2-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
 </ul>
-</div></article><details id="E_counterex1" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<div class="autopermalink" data-description="Paragraph"><a href="#B_counterexample-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Assemblage: Disproving by Counterexample"><a href="#B_counterexample" title="Copy heading and permalink for Assemblage: Disproving by Counterexample" aria-label="Copy heading and permalink for Assemblage: Disproving by Counterexample">🔗</a></div></article><details id="E_counterex1" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.1.7</span><span class="period">.</span><span class="space"> </span><span class="title">Counterexample.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_counterex1-2">Disprove the statement every prime number, <span class="process-math">\(p\text{,}\)</span> is odd.</div>
-<div class="para" id="E_counterex1-3">Let <span class="process-math">\(p=2\text{.}\)</span> Then <span class="process-math">\(2\)</span> is prime and <span class="process-math">\(2\)</span> is not odd.</div></article></details><article class="activity project-like" id="A_counterex"><h3 class="heading">
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_counterex1-2">Disprove the statement every prime number, <span class="process-math">\(p\text{,}\)</span> is odd.<div class="autopermalink" data-description="Paragraph"><a href="#E_counterex1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="E_counterex1-3">Let <span class="process-math">\(p=2\text{.}\)</span> Then <span class="process-math">\(2\)</span> is prime and <span class="process-math">\(2\)</span> is not odd.<div class="autopermalink" data-description="Paragraph"><a href="#E_counterex1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 3.1.7: Counterexample"><a href="#E_counterex1" title="Copy heading and permalink for Example 3.1.7: Counterexample" aria-label="Copy heading and permalink for Example 3.1.7: Counterexample">🔗</a></div></article></details><article class="activity project-like" id="A_counterex"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Proving a Statement is False.</span>
 </h3>
-<div class="para" id="A_counterex-2-1">Give a counterexample to show the following statement is false: for all <span class="process-math">\(a, b\in \mathbb{R}\)</span> if <span class="process-math">\(a^2=b^2\)</span> then <span class="process-math">\(a=b\text{.}\)</span>
-</div></article><div class="para logical" id="directproof-21">
+<div class="para" id="A_counterex-2-1">Give a counterexample to show the following statement is false: for all <span class="process-math">\(a, b\in \mathbb{R}\)</span> if <span class="process-math">\(a^2=b^2\)</span> then <span class="process-math">\(a=b\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#A_counterex-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Activity 3.1.2: Proving a Statement is False"><a href="#A_counterex" title="Copy heading and permalink for Activity 3.1.2: Proving a Statement is False" aria-label="Copy heading and permalink for Activity 3.1.2: Proving a Statement is False">🔗</a></div></article><div class="para logical" id="directproof-21">
 <div class="para">Some proof writing advice:</div>
 <ul class="disc" id="directproof-21-1">
-<li id="directproof-21-1-1"><div class="para" id="directproof-21-1-1-1">Make the proof self-contained. Try not to reference many other mathematical facts. Many proofs in this course will rely entirely on definitions.</div></li>
-<li id="directproof-21-1-2"><div class="para" id="directproof-21-1-2-1">Use complete sentences. Even equations have a sentence structure. Your proof should be able to be read in sentences.</div></li>
-<li id="directproof-21-1-3"><div class="para" id="directproof-21-1-3-1">Give reasons. Connect your statements together.</div></li>
-<li id="directproof-21-1-4"><div class="para" id="directproof-21-1-4-1">Include words. Often using a word is better that using a symbol. Many proofs have no symbols in them at all.</div></li>
-<li id="directproof-21-1-5"><div class="para" id="directproof-21-1-5-1">The audience for your proofs is not the instructor. Think of the audience as being your peers in the course or even yourself in a few weeks (or months) when you might have forgotten the specific content. Write so you will know what you meant later.</div></li>
-<li id="directproof-21-1-6"><div class="para" id="directproof-21-1-6-1">The goal of a proof is to write a clear, easy to follow argument--not to just get to the end. The “answer” is the proof itself. Use space, start a new line, set equations on their own line.</div></li>
-<li id="directproof-21-1-7"><div class="para" id="directproof-21-1-7-1">Never feel that you have to be able to know what the end of the proof will look like before you can start. Write proofs  one step at a time. Start with what you know. See if you can do one thing. See if you can do another thing. Look at where you want to go. Do not try to see the whole picture at once. This is also good advice for reading a proof.</div></li>
+<li id="directproof-21-1-1">
+<div class="para" id="directproof-21-1-1-1">Make the proof self-contained. Try not to reference many other mathematical facts. Many proofs in this course will rely entirely on definitions.<div class="autopermalink" data-description="Paragraph"><a href="#directproof-21-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#directproof-21-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="directproof-21-1-2">
+<div class="para" id="directproof-21-1-2-1">Use complete sentences. Even equations have a sentence structure. Your proof should be able to be read in sentences.<div class="autopermalink" data-description="Paragraph"><a href="#directproof-21-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#directproof-21-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="directproof-21-1-3">
+<div class="para" id="directproof-21-1-3-1">Give reasons. Connect your statements together.<div class="autopermalink" data-description="Paragraph"><a href="#directproof-21-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#directproof-21-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="directproof-21-1-4">
+<div class="para" id="directproof-21-1-4-1">Include words. Often using a word is better that using a symbol. Many proofs have no symbols in them at all.<div class="autopermalink" data-description="Paragraph"><a href="#directproof-21-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#directproof-21-1-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="directproof-21-1-5">
+<div class="para" id="directproof-21-1-5-1">The audience for your proofs is not the instructor. Think of the audience as being your peers in the course or even yourself in a few weeks (or months) when you might have forgotten the specific content. Write so you will know what you meant later.<div class="autopermalink" data-description="Paragraph"><a href="#directproof-21-1-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#directproof-21-1-5" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="directproof-21-1-6">
+<div class="para" id="directproof-21-1-6-1">The goal of a proof is to write a clear, easy to follow argument--not to just get to the end. The “answer” is the proof itself. Use space, start a new line, set equations on their own line.<div class="autopermalink" data-description="Paragraph"><a href="#directproof-21-1-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#directproof-21-1-6" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="directproof-21-1-7">
+<div class="para" id="directproof-21-1-7-1">Never feel that you have to be able to know what the end of the proof will look like before you can start. Write proofs  one step at a time. Start with what you know. See if you can do one thing. See if you can do another thing. Look at where you want to go. Do not try to see the whole picture at once. This is also good advice for reading a proof.<div class="autopermalink" data-description="Paragraph"><a href="#directproof-21-1-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#directproof-21-1-7" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
 </ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#directproof-21" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="directproof-22">
 <div class="para">Some common proof-writing errors:</div>
 <ul class="disc" id="directproof-22-1">
-<li id="directproof-22-1-1"><div class="para" id="directproof-22-1-1-1">Using an example for a proof. If you need to prove a statement for all <span class="process-math">\(x\text{,}\)</span> it is not enough to show it for an example.</div></li>
-<li id="directproof-22-1-2"><div class="para" id="directproof-22-1-2-1">Using the same variable to represent two different things.</div></li>
-<li id="directproof-22-1-3"><div class="para" id="directproof-22-1-3-1">Jumping to conclusions. Giving inadequate reasons. This often occurs if you rely on additional mathematical ideas or don’t connect your ideas to each other.</div></li>
-<li id="directproof-22-1-4"><div class="para" id="directproof-22-1-4-1">Assuming what you need to prove. This is a big one. This most often occurs when there is confusion about conditional statements. Be careful about identifying the “if” and the “then” in a statement.</div></li>
-</ul>
+<li id="directproof-22-1-1">
+<div class="para" id="directproof-22-1-1-1">Using an example for a proof. If you need to prove a statement for all <span class="process-math">\(x\text{,}\)</span> it is not enough to show it for an example.<div class="autopermalink" data-description="Paragraph"><a href="#directproof-22-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="directproof-23">Often in math we need to identify whether a statement is true or false, so that we know whether we need to prove the true statement or disprove the false one. In order to practice, we give a few more definitions.</div>
+<div class="autopermalink" data-description="Item"><a href="#directproof-22-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="directproof-22-1-2">
+<div class="para" id="directproof-22-1-2-1">Using the same variable to represent two different things.<div class="autopermalink" data-description="Paragraph"><a href="#directproof-22-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#directproof-22-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="directproof-22-1-3">
+<div class="para" id="directproof-22-1-3-1">Jumping to conclusions. Giving inadequate reasons. This often occurs if you rely on additional mathematical ideas or don’t connect your ideas to each other.<div class="autopermalink" data-description="Paragraph"><a href="#directproof-22-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#directproof-22-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="directproof-22-1-4">
+<div class="para" id="directproof-22-1-4-1">Assuming what you need to prove. This is a big one. This most often occurs when there is confusion about conditional statements. Be careful about identifying the “if” and the “then” in a statement.<div class="autopermalink" data-description="Paragraph"><a href="#directproof-22-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#directproof-22-1-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#directproof-22" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="directproof-23">Often in math we need to identify whether a statement is true or false, so that we know whether we need to prove the true statement or disprove the false one. In order to practice, we give a few more definitions.<div class="autopermalink" data-description="Paragraph"><a href="#directproof-23" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="definition definition-like" id="D_prime"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.1.8</span><span class="period">.</span>
 </h3>
-<div class="para" id="D_prime-1-1">An integer, <span class="process-math">\(n\text{,}\)</span> is <dfn class="terminology">prime</dfn> if <span class="process-math">\(n&gt;1\)</span> and, for all positive integers <span class="process-math">\(r, s\text{,}\)</span> if  <span class="process-math">\(n=rs\)</span> then <span class="process-math">\(r=1\)</span> or <span class="process-math">\(s=1\text{.}\)</span>
-</div></article><article class="definition definition-like" id="D_composite"><h3 class="heading">
+<div class="para" id="D_prime-1-1">An integer, <span class="process-math">\(n\text{,}\)</span> is <dfn class="terminology">prime</dfn> if <span class="process-math">\(n&gt;1\)</span> and, for all positive integers <span class="process-math">\(r, s\text{,}\)</span> if  <span class="process-math">\(n=rs\)</span> then <span class="process-math">\(r=1\)</span> or <span class="process-math">\(s=1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#D_prime-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 3.1.8"><a href="#D_prime" title="Copy heading and permalink for Definition 3.1.8" aria-label="Copy heading and permalink for Definition 3.1.8">🔗</a></div></article><article class="definition definition-like" id="D_composite"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.1.9</span><span class="period">.</span>
 </h3>
-<div class="para" id="D_composite-1-1">An integer, <span class="process-math">\(n\text{,}\)</span> is <dfn class="terminology">composite</dfn> if <span class="process-math">\(n&gt;1\)</span> and <span class="process-math">\(n=rs\)</span> for some positive integers <span class="process-math">\(r, s\)</span> with <span class="process-math">\(r\neq 1\)</span> and <span class="process-math">\(s\neq 1\text{.}\)</span>
-</div></article><details id="E_primecomposite" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<div class="para" id="D_composite-1-1">An integer, <span class="process-math">\(n\text{,}\)</span> is <dfn class="terminology">composite</dfn> if <span class="process-math">\(n&gt;1\)</span> and <span class="process-math">\(n=rs\)</span> for some positive integers <span class="process-math">\(r, s\)</span> with <span class="process-math">\(r\neq 1\)</span> and <span class="process-math">\(s\neq 1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#D_composite-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 3.1.9"><a href="#D_composite" title="Copy heading and permalink for Definition 3.1.9" aria-label="Copy heading and permalink for Definition 3.1.9">🔗</a></div></article><details id="E_primecomposite" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.1.10</span><span class="period">.</span><span class="space"> </span><span class="title">Prime or Composite.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_primecomposite-2">Is 1 prime?</div>
-<details id="E_primecomposite-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><span class="process-math">\(n&gt;1\text{.}\)</span></div></details><div class="para" id="E_primecomposite-4">Is 1 composite?</div>
-<details id="E_primecomposite-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><span class="process-math">\(n&gt;1\text{.}\)</span></div></details><div class="para" id="E_primecomposite-6">Is 121 prime?</div>
-<details id="E_primecomposite-7" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><span class="process-math">\(121=(11)(11)\text{.}\)</span></div></details><div class="para" id="E_primecomposite-8">Let <span class="process-math">\(a\in \mathbb{Z}\text{.}\)</span> Is <span class="process-math">\(3a\)</span> composite?</div>
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="E_primecomposite-2">Is 1 prime?<div class="autopermalink" data-description="Paragraph"><a href="#E_primecomposite-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="E_primecomposite-3" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<span class="process-math">\(n&gt;1\text{.}\)</span><div class="autopermalink" data-description="Answer 3.1.10.1"><a href="#E_primecomposite-3" title="Copy heading and permalink for Answer 3.1.10.1" aria-label="Copy heading and permalink for Answer 3.1.10.1">🔗</a></div>
+</div></details><div class="para" id="E_primecomposite-4">Is 1 composite?<div class="autopermalink" data-description="Paragraph"><a href="#E_primecomposite-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="E_primecomposite-5" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<span class="process-math">\(n&gt;1\text{.}\)</span><div class="autopermalink" data-description="Answer 3.1.10.2"><a href="#E_primecomposite-5" title="Copy heading and permalink for Answer 3.1.10.2" aria-label="Copy heading and permalink for Answer 3.1.10.2">🔗</a></div>
+</div></details><div class="para" id="E_primecomposite-6">Is 121 prime?<div class="autopermalink" data-description="Paragraph"><a href="#E_primecomposite-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="E_primecomposite-7" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<span class="process-math">\(121=(11)(11)\text{.}\)</span><div class="autopermalink" data-description="Answer 3.1.10.3"><a href="#E_primecomposite-7" title="Copy heading and permalink for Answer 3.1.10.3" aria-label="Copy heading and permalink for Answer 3.1.10.3">🔗</a></div>
+</div></details><div class="para" id="E_primecomposite-8">Let <span class="process-math">\(a\in \mathbb{Z}\text{.}\)</span> Is <span class="process-math">\(3a\)</span> composite?<div class="autopermalink" data-description="Paragraph"><a href="#E_primecomposite-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <details id="E_primecomposite-9" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">4</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
-<span class="process-math">\(a=1\)</span><span class="process-math">\(a&gt;1\)</span><span class="process-math">\(3a\)</span>
-</div></details></article></details><details id="provedisproveprime" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="process-math">\(a=1\)</span><span class="process-math">\(a&gt;1\)</span><span class="process-math">\(3a\)</span><div class="autopermalink" data-description="Answer 3.1.10.4"><a href="#E_primecomposite-9" title="Copy heading and permalink for Answer 3.1.10.4" aria-label="Copy heading and permalink for Answer 3.1.10.4">🔗</a></div>
+</div></details><div class="autopermalink" data-description="Example 3.1.10: Prime or Composite"><a href="#E_primecomposite" title="Copy heading and permalink for Example 3.1.10: Prime or Composite" aria-label="Copy heading and permalink for Example 3.1.10: Prime or Composite">🔗</a></div></article></details><details id="provedisproveprime" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">3.1.11</span><span class="period">.</span><span class="space"> </span><span class="title">Prove or Disprove.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para" id="provedisproveprime-2">Prove or disprove there exists a positive integer <span class="process-math">\(n\)</span> such that <span class="process-math">\(n^2+3n+2\)</span> is prime.</div>
-<div class="para" id="provedisproveprime-3">Since we need to try to decide if the statement is true or false, first try some examples.</div>
-<details id="provedisproveprime-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="displaymath process-math">
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="provedisproveprime-2">Prove or disprove there exists a positive integer <span class="process-math">\(n\)</span> such that <span class="process-math">\(n^2+3n+2\)</span> is prime.<div class="autopermalink" data-description="Paragraph"><a href="#provedisproveprime-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="provedisproveprime-3">Since we need to try to decide if the statement is true or false, first try some examples.<div class="autopermalink" data-description="Paragraph"><a href="#provedisproveprime-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="provedisproveprime-4" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="displaymath process-math">
 \begin{equation*}
 n=1; n^2+3n+2=6; \textrm{not prime}\\
 n=5; n^2+3n+2=42; \textrm{not prime}\\
 n=8; n^2+3n+2=90; \textrm{not prime}\\
 \end{equation*}
-</div></div></details><div class="para" id="provedisproveprime-5">After trying several examples, we might guess that it is false. If we want to disprove the statement then we need to prove the negation. Find the negation of the statement.</div>
-<details id="provedisproveprime-6" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="provedisproveprime-6-1">For all positive integers <span class="process-math">\(n, n^2+3n+2\)</span> is not prime (is composite).</div></div></details><div class="para" id="provedisproveprime-7">So we need to show that for a general <span class="process-math">\(n\)</span> we can always write <span class="process-math">\(n^2+3n+2\)</span> as a product of <span class="process-math">\(r, s\)</span> with <span class="process-math">\(r, s\neq 1\text{.}\)</span>
 </div>
-<div class="para" id="provedisproveprime-8">We can try to factor the expression: <span class="process-math">\(n^2+3n+2=(n+2)(n+1)\text{.}\)</span>
+<div class="autopermalink" data-description="Answer 3.1.11.1"><a href="#provedisproveprime-4" title="Copy heading and permalink for Answer 3.1.11.1" aria-label="Copy heading and permalink for Answer 3.1.11.1">🔗</a></div>
+</div></details><div class="para" id="provedisproveprime-5">After trying several examples, we might guess that it is false. If we want to disprove the statement then we need to prove the negation. Find the negation of the statement.<div class="autopermalink" data-description="Paragraph"><a href="#provedisproveprime-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="provedisproveprime-9">Let <span class="process-math">\(r=n+2, s=n+1\text{.}\)</span> We need to show that <span class="process-math">\(r, s\neq 1\text{.}\)</span> Since <span class="process-math">\(n&gt;0, n+2&gt;2\)</span> and <span class="process-math">\(n+1&gt;1\text{.}\)</span> Thus <span class="process-math">\(r, s\neq 1\text{.}\)</span> Therefore, <span class="process-math">\(n^2+3n+2\)</span> is not prime.</div></article></details><article class="activity project-like" id="A_provedisprove"><h3 class="heading">
+<details id="provedisproveprime-6" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span></summary><div class="answer solution-like knowl__content">
+<div class="para" id="provedisproveprime-6-1">For all positive integers <span class="process-math">\(n, n^2+3n+2\)</span> is not prime (is composite).<div class="autopermalink" data-description="Paragraph"><a href="#provedisproveprime-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Answer 3.1.11.2"><a href="#provedisproveprime-6" title="Copy heading and permalink for Answer 3.1.11.2" aria-label="Copy heading and permalink for Answer 3.1.11.2">🔗</a></div>
+</div></details><div class="para" id="provedisproveprime-7">So we need to show that for a general <span class="process-math">\(n\)</span> we can always write <span class="process-math">\(n^2+3n+2\)</span> as a product of <span class="process-math">\(r, s\)</span> with <span class="process-math">\(r, s\neq 1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#provedisproveprime-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="provedisproveprime-8">We can try to factor the expression: <span class="process-math">\(n^2+3n+2=(n+2)(n+1)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#provedisproveprime-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="provedisproveprime-9">Let <span class="process-math">\(r=n+2, s=n+1\text{.}\)</span> We need to show that <span class="process-math">\(r, s\neq 1\text{.}\)</span> Since <span class="process-math">\(n&gt;0, n+2&gt;2\)</span> and <span class="process-math">\(n+1&gt;1\text{.}\)</span> Thus <span class="process-math">\(r, s\neq 1\text{.}\)</span> Therefore, <span class="process-math">\(n^2+3n+2\)</span> is not prime.<div class="autopermalink" data-description="Paragraph"><a href="#provedisproveprime-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 3.1.11: Prove or Disprove"><a href="#provedisproveprime" title="Copy heading and permalink for Example 3.1.11: Prove or Disprove" aria-label="Copy heading and permalink for Example 3.1.11: Prove or Disprove">🔗</a></div></article></details><article class="activity project-like" id="A_provedisprove"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.1.3</span><span class="period">.</span><span class="space"> </span><span class="title">Prove or Disprove.</span>
 </h3>
-<div class="introduction" id="A_provedisprove-2"><div class="para" id="A_provedisprove-2-1">Let <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> be integers. Prove or disprove the following statements.</div></div>
+<div class="introduction" id="A_provedisprove-2"><div class="para" id="A_provedisprove-2-1">Let <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> be integers. Prove or disprove the following statements.<div class="autopermalink" data-description="Paragraph"><a href="#A_provedisprove-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
 <article class="task exercise-like" id="A_provedisprove-3"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="A_provedisprove-3-1">If <span class="process-math">\(n\)</span> is even, then <span class="process-math">\(5n\)</span> is even.</div></article><article class="task exercise-like" id="A_provedisprove-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="A_provedisprove-4-1">If <span class="process-math">\(n\)</span> is odd, then <span class="process-math">\(5n+1\)</span> is odd.</div></article><article class="task exercise-like" id="A_provedisprove-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="A_provedisprove-5-1">If <span class="process-math">\(n, m\)</span> are odd, then their product, <span class="process-math">\(nm\text{,}\)</span>  is odd.</div></article></article><section class="exercises" id="directproof-29"><h3 class="heading hide-type">
+<div class="para" id="A_provedisprove-3-1">If <span class="process-math">\(n\)</span> is even, then <span class="process-math">\(5n\)</span> is even.<div class="autopermalink" data-description="Paragraph"><a href="#A_provedisprove-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 3.1.3.a"><a href="#A_provedisprove-3" title="Copy heading and permalink for Task 3.1.3.a" aria-label="Copy heading and permalink for Task 3.1.3.a">🔗</a></div></article><article class="task exercise-like" id="A_provedisprove-4"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="A_provedisprove-4-1">If <span class="process-math">\(n\)</span> is odd, then <span class="process-math">\(5n+1\)</span> is odd.<div class="autopermalink" data-description="Paragraph"><a href="#A_provedisprove-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 3.1.3.b"><a href="#A_provedisprove-4" title="Copy heading and permalink for Task 3.1.3.b" aria-label="Copy heading and permalink for Task 3.1.3.b">🔗</a></div></article><article class="task exercise-like" id="A_provedisprove-5"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="A_provedisprove-5-1">If <span class="process-math">\(n, m\)</span> are odd, then their product, <span class="process-math">\(nm\text{,}\)</span>  is odd.<div class="autopermalink" data-description="Paragraph"><a href="#A_provedisprove-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Task 3.1.3.c"><a href="#A_provedisprove-5" title="Copy heading and permalink for Task 3.1.3.c" aria-label="Copy heading and permalink for Task 3.1.3.c">🔗</a></div></article><div class="autopermalink" data-description="Activity 3.1.3: Prove or Disprove"><a href="#A_provedisprove" title="Copy heading and permalink for Activity 3.1.3: Prove or Disprove" aria-label="Copy heading and permalink for Activity 3.1.3: Prove or Disprove">🔗</a></div></article><section class="exercises" id="directproof-29"><h3 class="heading hide-type">
 <span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Exercises</span>
 </h3>
 <article class="exercise exercise-like" id="directproof-29-1"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<div class="para" id="directproof-29-1-1-1">Use the definitions of even, odd, prime and composite to justify your answer to each of the following questions. Let <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> be integers.</div> <ol class="lower-alpha" id="directproof-29-1-1-2">
-<li id="directproof-29-1-1-2-1"><div class="para" id="directproof-29-1-1-2-1-1">Is <span class="process-math">\(6m+8n\)</span> even?</div></li>
-<li id="directproof-29-1-1-2-2"><div class="para" id="directproof-29-1-1-2-2-1">Is <span class="process-math">\(10mn +7\)</span> odd?</div></li>
-<li id="directproof-29-1-1-2-3"><div class="para" id="directproof-29-1-1-2-3-1">If <span class="process-math">\(m&gt;n&gt;0\text{,}\)</span> is <span class="process-math">\(m^2-n^2\)</span> composite?</div></li>
-</ol></article><article class="exercise exercise-like" id="directproof-29-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<div class="para" id="directproof-29-2-1-1">Prove there are integers <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> such that <span class="process-math">\(m&gt;1\)</span> and <span class="process-math">\(n&gt;1\)</span> and <span class="process-math">\(\frac{1}{n}+\frac{1}{m}\)</span> is an integer.</div></article><article class="exercise exercise-like" id="directproof-29-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
-<div class="para" id="directproof-29-3-1-1">Prove there is an integer <span class="process-math">\(n\)</span> such that <span class="process-math">\(2n^2-5n+2\)</span> is prime.</div></article><article class="exercise exercise-like" id="directproof-29-4"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
-<div class="para" id="directproof-29-4-1-1">Disprove by giving a counterexample: for all real numbers <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{,}\)</span> if <span class="process-math">\(a&lt;b\)</span> then <span class="process-math">\(a^2&lt;b^2\text{.}\)</span>
-</div></article><article class="exercise exercise-like" id="directproof-29-5"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
-<div class="para" id="directproof-29-5-1-1">Disprove by giving a counterexample: for all integers, <span class="process-math">\(m\)</span> and <span class="process-math">\(n\text{,}\)</span> if <span class="process-math">\(2m+n\)</span> is odd then <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> are both odd.</div></article><article class="exercise exercise-like" id="directproof-29-6"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
-<div class="para" id="directproof-29-6-1-1">Find the mistakes in the following “proof.”</div> <div class="para" id="directproof-29-6-1-2">
-<dfn class="terminology">Theorem:</dfn> For all integers <span class="process-math">\(k\text{,}\)</span> if <span class="process-math">\(k&gt;0\)</span> then <span class="process-math">\(k^2+2k+1\)</span> is composite.</div> <div class="para" id="directproof-29-6-1-3">
-<dfn class="terminology">“Proof”:</dfn> For <span class="process-math">\(k=2\text{,}\)</span> <span class="process-math">\(k^2+2k+1=2^2+2\cdot 2 +1=9\text{.}\)</span> But <span class="process-math">\(9=3\cdot 3\text{,}\)</span> and so 9 is composite. Hence the theorem is true.</div></article><article class="exercise exercise-like" id="directproof-29-7"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
-<div class="para" id="directproof-29-7-1-1">Find the mistakes in the following “proof.”</div> <div class="para" id="directproof-29-7-1-2">
-<dfn class="terminology">Theorem:</dfn> The difference between any odd integer and any even integer is odd.</div> <div class="para logical" id="directproof-29-7-1-3">
+<div class="para" id="directproof-29-1-1-1">Use the definitions of even, odd, prime and composite to justify your answer to each of the following questions. Let <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> be integers.<div class="autopermalink" data-description="Paragraph"><a href="#directproof-29-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha lower-alpha-level-1" id="directproof-29-1-1-2">
+<li id="directproof-29-1-1-2-1">
+<div class="para" id="directproof-29-1-1-2-1-1">Is <span class="process-math">\(6m+8n\)</span> even?<div class="autopermalink" data-description="Paragraph"><a href="#directproof-29-1-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.1.1.a"><a href="#directproof-29-1-1-2-1" title="Copy heading and permalink for Item 3.1.1.a" aria-label="Copy heading and permalink for Item 3.1.1.a">🔗</a></div>
+</li>
+<li id="directproof-29-1-1-2-2">
+<div class="para" id="directproof-29-1-1-2-2-1">Is <span class="process-math">\(10mn +7\)</span> odd?<div class="autopermalink" data-description="Paragraph"><a href="#directproof-29-1-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.1.1.b"><a href="#directproof-29-1-1-2-2" title="Copy heading and permalink for Item 3.1.1.b" aria-label="Copy heading and permalink for Item 3.1.1.b">🔗</a></div>
+</li>
+<li id="directproof-29-1-1-2-3">
+<div class="para" id="directproof-29-1-1-2-3-1">If <span class="process-math">\(m&gt;n&gt;0\text{,}\)</span> is <span class="process-math">\(m^2-n^2\)</span> composite?<div class="autopermalink" data-description="Paragraph"><a href="#directproof-29-1-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.1.1.c"><a href="#directproof-29-1-1-2-3" title="Copy heading and permalink for Item 3.1.1.c" aria-label="Copy heading and permalink for Item 3.1.1.c">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 3.1.1"><a href="#directproof-29-1" title="Copy heading and permalink for Exercise 3.1.1" aria-label="Copy heading and permalink for Exercise 3.1.1">🔗</a></div></article><article class="exercise exercise-like" id="directproof-29-2"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<div class="para" id="directproof-29-2-1-1">Prove there are integers <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> such that <span class="process-math">\(m&gt;1\)</span> and <span class="process-math">\(n&gt;1\)</span> and <span class="process-math">\(\frac{1}{n}+\frac{1}{m}\)</span> is an integer.<div class="autopermalink" data-description="Paragraph"><a href="#directproof-29-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.1.2"><a href="#directproof-29-2" title="Copy heading and permalink for Exercise 3.1.2" aria-label="Copy heading and permalink for Exercise 3.1.2">🔗</a></div></article><article class="exercise exercise-like" id="directproof-29-3"><h4 class="heading"><span class="codenumber">3<span class="period">.</span></span></h4>
+<div class="para" id="directproof-29-3-1-1">Prove there is an integer <span class="process-math">\(n\)</span> such that <span class="process-math">\(2n^2-5n+2\)</span> is prime.<div class="autopermalink" data-description="Paragraph"><a href="#directproof-29-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.1.3"><a href="#directproof-29-3" title="Copy heading and permalink for Exercise 3.1.3" aria-label="Copy heading and permalink for Exercise 3.1.3">🔗</a></div></article><article class="exercise exercise-like" id="directproof-29-4"><h4 class="heading"><span class="codenumber">4<span class="period">.</span></span></h4>
+<div class="para" id="directproof-29-4-1-1">Disprove by giving a counterexample: for all real numbers <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{,}\)</span> if <span class="process-math">\(a&lt;b\)</span> then <span class="process-math">\(a^2&lt;b^2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#directproof-29-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.1.4"><a href="#directproof-29-4" title="Copy heading and permalink for Exercise 3.1.4" aria-label="Copy heading and permalink for Exercise 3.1.4">🔗</a></div></article><article class="exercise exercise-like" id="directproof-29-5"><h4 class="heading"><span class="codenumber">5<span class="period">.</span></span></h4>
+<div class="para" id="directproof-29-5-1-1">Disprove by giving a counterexample: for all integers, <span class="process-math">\(m\)</span> and <span class="process-math">\(n\text{,}\)</span> if <span class="process-math">\(2m+n\)</span> is odd then <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> are both odd.<div class="autopermalink" data-description="Paragraph"><a href="#directproof-29-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.1.5"><a href="#directproof-29-5" title="Copy heading and permalink for Exercise 3.1.5" aria-label="Copy heading and permalink for Exercise 3.1.5">🔗</a></div></article><article class="exercise exercise-like" id="directproof-29-6"><h4 class="heading"><span class="codenumber">6<span class="period">.</span></span></h4>
+<div class="para" id="directproof-29-6-1-1">Find the mistakes in the following “proof.”<div class="autopermalink" data-description="Paragraph"><a href="#directproof-29-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="directproof-29-6-1-2">
+<dfn class="terminology">Theorem:</dfn> For all integers <span class="process-math">\(k\text{,}\)</span> if <span class="process-math">\(k&gt;0\)</span> then <span class="process-math">\(k^2+2k+1\)</span> is composite.<div class="autopermalink" data-description="Paragraph"><a href="#directproof-29-6-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="directproof-29-6-1-3">
+<dfn class="terminology">“Proof”:</dfn> For <span class="process-math">\(k=2\text{,}\)</span> <span class="process-math">\(k^2+2k+1=2^2+2\cdot 2 +1=9\text{.}\)</span> But <span class="process-math">\(9=3\cdot 3\text{,}\)</span> and so 9 is composite. Hence the theorem is true.<div class="autopermalink" data-description="Paragraph"><a href="#directproof-29-6-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.1.6"><a href="#directproof-29-6" title="Copy heading and permalink for Exercise 3.1.6" aria-label="Copy heading and permalink for Exercise 3.1.6">🔗</a></div></article><article class="exercise exercise-like" id="directproof-29-7"><h4 class="heading"><span class="codenumber">7<span class="period">.</span></span></h4>
+<div class="para" id="directproof-29-7-1-1">Find the mistakes in the following “proof.”<div class="autopermalink" data-description="Paragraph"><a href="#directproof-29-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="directproof-29-7-1-2">
+<dfn class="terminology">Theorem:</dfn> The difference between any odd integer and any even integer is odd.<div class="autopermalink" data-description="Paragraph"><a href="#directproof-29-7-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="directproof-29-7-1-3">
 <div class="para">
 <dfn class="terminology">“Proof”:</dfn> Suppose <span class="process-math">\(n\)</span> is an odd integer, and <span class="process-math">\(m\)</span> is an even integer. By definition of odd, <span class="process-math">\(n=2k+1\)</span> where <span class="process-math">\(k\)</span> is an integer, and by definition of even <span class="process-math">\(m=2k\)</span> where <span class="process-math">\(k\)</span> is an integer. Then</div>
 <div class="displaymath process-math">
@@ -758,26 +639,63 @@ n-m=2k+1-2k=1.
 \end{equation*}
 </div>
 <div class="para">Since 1 is odd the difference between an odd integer and and even integer is odd.</div>
-</div></article><article class="exercise exercise-like" id="directproof-29-8"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
-<div class="para" id="directproof-29-8-1-1">Prove the difference of any even integer minus any odd integer is odd.</div></article><article class="exercise exercise-like" id="directproof-29-9"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
-<div class="para" id="directproof-29-9-1-1">Prove the sum of any two odd integers is even.</div></article><article class="exercise exercise-like" id="directproof-29-10"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
-<div class="para" id="directproof-29-10-1-1">Prove the following statement is false: there exists an integer <span class="process-math">\(n\)</span> such that <span class="process-math">\(6n^2+27\)</span> is prime.</div></article><article class="exercise exercise-like" id="directproof-29-11"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
-<div class="para" id="directproof-29-11-1-1">Prove or disprove the following statements using the method of direct proof or counterexample.</div> <ol class="lower-alpha" id="directproof-29-11-1-2">
-<li id="directproof-29-11-1-2-1"><div class="para" id="directproof-29-11-1-2-1-1">The difference of any two odd integers is odd.</div></li>
-<li id="directproof-29-11-1-2-2"><div class="para" id="directproof-29-11-1-2-2-1">The product of any even integer and any integer is even.</div></li>
-<li id="directproof-29-11-1-2-3"><div class="para" id="directproof-29-11-1-2-3-1">The difference of any two even integers is even.</div></li>
-<li id="directproof-29-11-1-2-4"><div class="para" id="directproof-29-11-1-2-4-1">The difference of any two odd integers is even.</div></li>
-<li id="directproof-29-11-1-2-5"><div class="para" id="directproof-29-11-1-2-5-1">For all integers <span class="process-math">\(n\text{,}\)</span> if <span class="process-math">\(n\)</span> is prime then <span class="process-math">\((-1)^n=-1\text{.}\)</span>
-</div></li>
-<li id="directproof-29-11-1-2-6"><div class="para" id="directproof-29-11-1-2-6-1">For all integers <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(n^2-n+11\)</span> is prime.</div></li>
-<li id="directproof-29-11-1-2-7"><div class="para" id="directproof-29-11-1-2-7-1">If <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> are perfect squares, then <span class="process-math">\(m+n+2(mn)^{1/2}\)</span> is a perfect square.</div></li>
-</ol></article></section></section></div>
-<div class="ptx-content-footer">
+<div class="autopermalink" data-description="Paragraph"><a href="#directproof-29-7-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.1.7"><a href="#directproof-29-7" title="Copy heading and permalink for Exercise 3.1.7" aria-label="Copy heading and permalink for Exercise 3.1.7">🔗</a></div></article><article class="exercise exercise-like" id="directproof-29-8"><h4 class="heading"><span class="codenumber">8<span class="period">.</span></span></h4>
+<div class="para" id="directproof-29-8-1-1">Prove the difference of any even integer minus any odd integer is odd.<div class="autopermalink" data-description="Paragraph"><a href="#directproof-29-8-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.1.8"><a href="#directproof-29-8" title="Copy heading and permalink for Exercise 3.1.8" aria-label="Copy heading and permalink for Exercise 3.1.8">🔗</a></div></article><article class="exercise exercise-like" id="directproof-29-9"><h4 class="heading"><span class="codenumber">9<span class="period">.</span></span></h4>
+<div class="para" id="directproof-29-9-1-1">Prove the sum of any two odd integers is even.<div class="autopermalink" data-description="Paragraph"><a href="#directproof-29-9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.1.9"><a href="#directproof-29-9" title="Copy heading and permalink for Exercise 3.1.9" aria-label="Copy heading and permalink for Exercise 3.1.9">🔗</a></div></article><article class="exercise exercise-like" id="directproof-29-10"><h4 class="heading"><span class="codenumber">10<span class="period">.</span></span></h4>
+<div class="para" id="directproof-29-10-1-1">Prove the following statement is false: there exists an integer <span class="process-math">\(n\)</span> such that <span class="process-math">\(6n^2+27\)</span> is prime.<div class="autopermalink" data-description="Paragraph"><a href="#directproof-29-10-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exercise 3.1.10"><a href="#directproof-29-10" title="Copy heading and permalink for Exercise 3.1.10" aria-label="Copy heading and permalink for Exercise 3.1.10">🔗</a></div></article><article class="exercise exercise-like" id="directproof-29-11"><h4 class="heading"><span class="codenumber">11<span class="period">.</span></span></h4>
+<div class="para" id="directproof-29-11-1-1">Prove or disprove the following statements using the method of direct proof or counterexample.<div class="autopermalink" data-description="Paragraph"><a href="#directproof-29-11-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <ol class="lower-alpha lower-alpha-level-1" id="directproof-29-11-1-2">
+<li id="directproof-29-11-1-2-1">
+<div class="para" id="directproof-29-11-1-2-1-1">The difference of any two odd integers is odd.<div class="autopermalink" data-description="Paragraph"><a href="#directproof-29-11-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.1.11.a"><a href="#directproof-29-11-1-2-1" title="Copy heading and permalink for Item 3.1.11.a" aria-label="Copy heading and permalink for Item 3.1.11.a">🔗</a></div>
+</li>
+<li id="directproof-29-11-1-2-2">
+<div class="para" id="directproof-29-11-1-2-2-1">The product of any even integer and any integer is even.<div class="autopermalink" data-description="Paragraph"><a href="#directproof-29-11-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.1.11.b"><a href="#directproof-29-11-1-2-2" title="Copy heading and permalink for Item 3.1.11.b" aria-label="Copy heading and permalink for Item 3.1.11.b">🔗</a></div>
+</li>
+<li id="directproof-29-11-1-2-3">
+<div class="para" id="directproof-29-11-1-2-3-1">The difference of any two even integers is even.<div class="autopermalink" data-description="Paragraph"><a href="#directproof-29-11-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.1.11.c"><a href="#directproof-29-11-1-2-3" title="Copy heading and permalink for Item 3.1.11.c" aria-label="Copy heading and permalink for Item 3.1.11.c">🔗</a></div>
+</li>
+<li id="directproof-29-11-1-2-4">
+<div class="para" id="directproof-29-11-1-2-4-1">The difference of any two odd integers is even.<div class="autopermalink" data-description="Paragraph"><a href="#directproof-29-11-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.1.11.d"><a href="#directproof-29-11-1-2-4" title="Copy heading and permalink for Item 3.1.11.d" aria-label="Copy heading and permalink for Item 3.1.11.d">🔗</a></div>
+</li>
+<li id="directproof-29-11-1-2-5">
+<div class="para" id="directproof-29-11-1-2-5-1">For all integers <span class="process-math">\(n\text{,}\)</span> if <span class="process-math">\(n\)</span> is prime then <span class="process-math">\((-1)^n=-1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#directproof-29-11-1-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.1.11.e"><a href="#directproof-29-11-1-2-5" title="Copy heading and permalink for Item 3.1.11.e" aria-label="Copy heading and permalink for Item 3.1.11.e">🔗</a></div>
+</li>
+<li id="directproof-29-11-1-2-6">
+<div class="para" id="directproof-29-11-1-2-6-1">For all integers <span class="process-math">\(n\text{,}\)</span> <span class="process-math">\(n^2-n+11\)</span> is prime.<div class="autopermalink" data-description="Paragraph"><a href="#directproof-29-11-1-2-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.1.11.f"><a href="#directproof-29-11-1-2-6" title="Copy heading and permalink for Item 3.1.11.f" aria-label="Copy heading and permalink for Item 3.1.11.f">🔗</a></div>
+</li>
+<li id="directproof-29-11-1-2-7">
+<div class="para" id="directproof-29-11-1-2-7-1">If <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> are perfect squares, then <span class="process-math">\(m+n+2(mn)^{1/2}\)</span> is a perfect square.<div class="autopermalink" data-description="Paragraph"><a href="#directproof-29-11-1-2-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3.1.11.g"><a href="#directproof-29-11-1-2-7" title="Copy heading and permalink for Item 3.1.11.g" aria-label="Copy heading and permalink for Item 3.1.11.g">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Exercise 3.1.11"><a href="#directproof-29-11" title="Copy heading and permalink for Exercise 3.1.11" aria-label="Copy heading and permalink for Exercise 3.1.11">🔗</a></div></article><div class="autopermalink" data-description="Exercises 3.1"><a href="#directproof-29" title="Copy heading and permalink for Exercises 3.1" aria-label="Copy heading and permalink for Exercises 3.1">🔗</a></div></section><div class="autopermalink" data-description="Section 3.1: Direct Proof and Counterexample"><a href="#directproof" title="Copy heading and permalink for Section 3.1: Direct Proof and Counterexample" aria-label="Copy heading and permalink for Section 3.1: Direct Proof and Counterexample">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="chapter3.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="moredirect.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
-<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
 </div>
 <!--Start: StatCounter code--><!--*** DO NOT COPY ANOTHER PROJECT'S MAGIC NUMBERS/ID ***--><!--***        GET YOUR OWN FROM STATCOUNTER           ***--><script>
 var sc_project=12871717;

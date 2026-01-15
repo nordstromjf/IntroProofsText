@@ -16,7 +16,7 @@
   <example xml:id="E_generalsequences"><title>Explicitly Defined Sequences</title><p>
     We can define a sequence by giving the general term.</p>
     <p>Let <m>a_k=2^k, k\geq 0</m>. Give the first five terms of the sequence.</p>
-    <answer>1, 2, 4, 8, 16</answer>
+    <answer><p>1, 2, 4, 8, 16</p></answer>
 
     <p>Let <m>a_k=2^k, k\geq 0</m>. Give the <m>k+1</m> term of the sequence.</p>
     <answer><p><m>a_{k+1}=2^{k+1}</m></p></answer>

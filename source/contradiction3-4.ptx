@@ -142,7 +142,7 @@ Since <m>k^2\in\mathbb{Z}</m>, <m>q^2</m> must be even. Then by <xref ref="L_nsq
 <activity xml:id="A_squarediv3"><title>If the Square is Divisible by 3</title><introduction><p>In <xref ref="L_nsquaredeven" /> and <xref ref="A_n2evenneven" />, we proved if <m>n^2</m> is even then <m>n</m> is even. Now suppose you want to prove if <m>n^2</m> is divisible by 3 then <m>n</m> is divisible by 3.</p></introduction>
 <task><p>To prove the statement by contrapositive, what should you assume?</p></task>
 <task><p>To prove the statement by contrapositive, what should you show?</p></task>
-<task><statement><p>The problem with now giving a direct proof of the contrapositive is that we need to know what we mean by <q><m>n</m> is not divisible by 3.</q> Recall the Division Algorithm, <xref ref="T_divisionalgorthm" />. If <m>n</m> is not divisible by 3, what are the possible forms for <m>n</m>? </p></statement><hint>Think of the forms for <m>n=3q+r</m>.</hint></task>
+<task><statement><p>The problem with now giving a direct proof of the contrapositive is that we need to know what we mean by <q><m>n</m> is not divisible by 3.</q> Recall the Division Algorithm, <xref ref="T_divisionalgorthm" />. If <m>n</m> is not divisible by 3, what are the possible forms for <m>n</m>? </p></statement><hint><p>Think of the forms for <m>n=3q+r</m>.</p></hint></task>
 <task><p>Now write a proof by cases using the cases for <m>n</m> from (c) to show if <m>n</m> is not divisible by 3, then <m>n^2</m> is not divisible by 3.</p></task>
 </activity>
 

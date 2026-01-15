@@ -13,16 +13,16 @@
 
 <example xml:id="E_evenodd"><title>Even or Odd</title>
 <p>Is -5 even or odd?</p>
-<answer><m>-5=2(-3)+1</m> where <m>-3\in \mathbb{Z}</m>. Thus, -5 is odd.</answer>
+<answer><p><m>-5=2(-3)+1</m> where <m>-3\in \mathbb{Z}</m>. Thus, <m>-5</m> is odd.</p></answer>
 
 <p>Is 0 even or odd?</p>
-<answer><m>0=2(0)</m> where <m>0\in \mathbb{Z}</m>. Thus, 0 is even.</answer>
+<answer><p><m>0=2(0)</m> where <m>0\in \mathbb{Z}</m>. Thus, <m>0</m> is even.</p></answer>
 
 <p>Let <m>a, b\in \mathbb{Z}</m>. Is <m>6a^2b</m> even or odd?</p>
-<answer><m>6a^2b=2(3a^2b)</m> where <m>3a^2b\in \mathbb{Z}</m>. Thus <m>6a^2b</m> is even.</answer>
+<answer><p><m>6a^2b=2(3a^2b)</m> where <m>3a^2b\in \mathbb{Z}</m>. Thus <m>6a^2b</m> is even.</p></answer>
 
 <p>Let <m>a, b\in \mathbb{Z}</m>. Is <m>20a-6b+1</m> even or odd?</p>
-<answer><m>20a-6b+1=2(10a-3b)+1</m> where <m>10a-3b\in \mathbb{Z}</m>. Thus <m>20a-6b+1</m> is odd.</answer>
+<answer><p><m>20a-6b+1=2(10a-3b)+1</m> where <m>10a-3b\in \mathbb{Z}</m>. Thus <m>20a-6b+1</m> is odd.</p></answer>
 </example>
 
 <activity xml:id="A_evenoddneither"><title>Always, Sometimes, or Never Even </title><introduction><p>Let <m>a, b</m> be integers. Determine if each of the following are always even, always odd, or sometimes even/ sometimes odd. </p></introduction>
@@ -42,7 +42,7 @@
 
 <example xml:id="E_pfbyexhaustion"><title>Method of Exhaustion</title>
     <p>Prove for all <m>n\in \mathbb{Z}</m>, if <m>n</m> is even and <m>4\leq n\leq 16</m>, then <m>n</m> can be written as the sum of prime numbers.</p> 
-    <proof><p> We can find all the integers that are even and <m>4\leq n\leq 16</m>. This is the set <m>\{4, 6, 8, 10, 12, 14, 16\}</m>. For each of these numbers we can demonstrate a way to write them as the sum of primes: <m>4=2+2, 6=3+3, 8=3+5, 10=3+7, 12=5+7, 14=7+7, 16=11+5</m>.</p></proof>
+    <proof><p> We can find all the integers that are even and <m>4\leq n\leq 16</m>. This is the set <m>\{4, 6, 8, 10, 12, 14, 16\}</m>. For each of these numbers we can demonstrate a way to write them as the sum of primes: <m>4=2+2</m>, <m>6=3+3</m>, <m>8=3+5</m>, <m>10=3+7</m>, <m>12=5+7</m>, <m>14=7+7</m>, <m>16=11+5</m>.</p></proof>
   </example>
 
   <p>The method of exhaustion only works if we can show the statement for every <m>x\in D</m>. But if <m>D</m> is infinite, we need to use a more general method. We saw the limitations of this method in <xref ref="whatisaproof"/>. Although this method won't result in a proof if our set is infinite, it can be a helpful first stab at a proof in that generating examples can lead to more general insight into the problem. Our first more general technique is the method of <term>direct proof</term>.</p>
@@ -159,16 +159,16 @@
 
 <example xml:id="E_primecomposite"><title>Prime or Composite</title>
 <p>Is 1 prime?</p>
-<answer>No. The definiton requires <m>n>1</m>.</answer>
+<answer><p>No. The definiton requires <m>n>1</m>.</p></answer>
 
 <p>Is 1 composite?</p>
-<answer>No. Again, the definiton requires <m>n>1</m>.</answer>
+<answer><p>No. Again, the definiton requires <m>n>1</m>.</p></answer>
 
 <p>Is 121 prime?</p>
-<answer>No. <m>121=(11)(11)</m>. Thus, 121 is composite.</answer>
+<answer><p>No. <m>121=(11)(11)</m>. Thus, 121 is composite.</p></answer>
 
 <p>Let <m>a\in \mathbb{Z}</m>. Is <m>3a</m> composite?</p>
-<answer>It depends. If <m>a=1</m> then, no. We would need <m>a>1</m> for <m>3a</m> to be composite.</answer>
+<answer><p>It depends. If <m>a=1</m> then, no. We would need <m>a>1</m> for <m>3a</m> to be composite.</p></answer>
 
 </example>
 
@@ -176,11 +176,11 @@
     <p>Prove or disprove there exists a positive integer <m>n</m> such that <m>n^2+3n+2</m> is prime.</p>
     <p>Since we need to try to decide if the statement is true or false, first try some examples.</p>
     
-    <answer><me>
-      n=1; n^2+3n+2=6; \textrm{not prime}\\
-      n=5; n^2+3n+2=42; \textrm{not prime}\\
-      n=8; n^2+3n+2=90; \textrm{not prime}\\
-    </me></answer>
+    <answer><p>
+      <m>n=1; n^2+3n+2=6,</m> not prime.</p>
+      <p><m>n=5; n^2+3n+2=42;</m> not prime.</p>
+      <p><m>n=8; n^2+3n+2=90;</m> not prime.</p>
+   </answer>
     <p>After trying several examples, we might guess that it is false. If we want to disprove the statement then we need to prove the negation. Find the negation of the statement.</p>
     <answer><p>For all positive integers <m>n, n^2+3n+2</m> is not prime (is composite).</p></answer>
 
@@ -199,28 +199,28 @@
       <title>Check Your Understanding</title>
       
       <exercise><statement><p>True or false: <m>\forall n\in \mathbb{Z}, 5n+3</m> is odd.</p></statement>
-      <answer>False.</answer></exercise>
+      <answer><p>False.</p></answer></exercise>
 
       <exercise><statement><p>True or false: <m>\forall n\in \mathbb{Z}, 5n+3</m> is even.</p></statement>
-      <answer>False.</answer></exercise>
+      <answer><p>False.</p></answer></exercise>
 
       <exercise><statement><p>True or false: <m>\forall n\in \mathbb{Z}, 2n+7</m> is odd.</p></statement>
-      <answer>True.</answer></exercise>
+      <answer><p>True.</p></answer></exercise>
 
       <exercise><statement><p>True or false: <m>\forall n\in \mathbb{Z}, 4n+12</m> is even.</p></statement>
-      <answer>True.</answer></exercise>
+      <answer><p>True.</p></answer></exercise>
 
       <exercise><statement><p>True or false: <m>\forall n\in \mathbb{Z},</m> if <m>n</m> is even, then <m>n^2</m> is even.</p></statement>
-      <answer>True.</answer></exercise>
+      <answer><p>True.</p></answer></exercise>
 
       <exercise><statement><p>True or False: 99 is composite.</p></statement>
-      <answer>True.</answer></exercise>
+      <answer><p>True.</p></answer></exercise>
 
       <exercise><statement><p>True or False: -99 is composite.</p></statement>
-      <answer>False.</answer></exercise>
+      <answer><p>False.</p></answer></exercise>
 
       <exercise><statement><p>True or false: <m>\forall n\in \mathbb{Z}, n^2+1</m> is prime.</p></statement>
-      <answer>False.</answer></exercise>
+      <answer><p>False.</p></answer></exercise>
 
       
 

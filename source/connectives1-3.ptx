@@ -504,7 +504,7 @@ So, a statement such as <m>p</m> is necessary and sufficient for <m>q</m> means 
 
 <example xml:id="E_contrapositive"><title>Contrapositive and Converse</title>
 <p>Consider the statement: If <m>x>2</m> then <m>x^2>4</m>. What is the contrapositive of this statement? What is the converse?</p>
-<p><answer>Contrapositive: If <m>x^2\leq 4</m> then <m>x\leq 2</m>; Converse: If <m>x^2>4</m> then <m>x>2</m>.</answer></p>
+<answer><p>Contrapositive: If <m>x^2\leq 4</m> then <m>x\leq 2</m>; Converse: If <m>x^2>4</m> then <m>x>2</m>.</p></answer>
 </example>
 
 <p>The following is a list of important logical equivalences. All of them can be checked using truth tables. </p>

@@ -155,34 +155,34 @@ for some <m>2k^2+3k+1\in\mathbb{Z}</m>. Let <m>m=2k^2+3k+1</m>. Then <m>n</m> ha
 </example>
 
 
-<activity xml:id="A_casesfor3"><title>Dividing by 3</title><statement><p>Use the Division Algorithm to find the possible forms of an integer when <m>d=3</m>. </p></statement><hint>What are the possible values for <m>r</m>?</hint></activity>
+<activity xml:id="A_casesfor3"><title>Dividing by 3</title><statement><p>Use the Division Algorithm to find the possible forms of an integer when <m>d=3</m>. </p></statement><hint><p>What are the possible values for <m>r</m>?</p></hint></activity>
 
-<activity xml:id="A_consec3"><title>Consecutive Integers</title><statement><p>Prove the product of any two consecutive integers has the form <m>3k</m> or <m>3k+2</m> for some integer <m>k</m>.</p></statement><hint>Use the cases in <xref ref="A_casesfor3" />.</hint></activity>
+<activity xml:id="A_consec3"><title>Consecutive Integers</title><statement><p>Prove the product of any two consecutive integers has the form <m>3k</m> or <m>3k+2</m> for some integer <m>k</m>.</p></statement><hint><p>Use the cases in <xref ref="A_casesfor3" />.</p></hint></activity>
 
 
     <!--<reading-questions>
       <title>Check Your Understanding</title>
       
       <exercise><statement><p>Find the quotient and remainder if <m>n=34, d=6</m>.</p></statement>
-      <answer><m>34=6(5)+4</m>; quotient: 5; remainder: 4</answer></exercise>
+      <answer><p><m>34=6(5)+4</m>; quotient: 5; remainder: 4</p>answer></exercise>
 
       <exercise><statement><p>Find the quotient and remainder if <m>n=34, d=2</m>.</p></statement>
-      <answer><m>34=2(17)+0</m>; quotient: 17; remainder: 0</answer></exercise>
+      <answer><p><m>34=2(17)+0</m>; quotient: 17; remainder: 0</p></answer></exercise>
 
       <exercise><statement><p>Find the quotient and remainder if <m>n=-34, d=6</m>.</p></statement>
-      <answer><m>-34=6(-6)+2</m>; quotient: -6; remainder: 2</answer></exercise>
+      <answer><p><m>-34=6(-6)+2</m>; quotient: -6; remainder: 2</p></answer></exercise>
 
       <exercise><statement><p>Find the quotient and remainder if <m>n=4, d=10</m>.</p></statement>
-      <answer><m>4=10(0)+4</m>; quotient: 0; remainder: 4</answer></exercise>
+      <answer><p><m>4=10(0)+4</m>; quotient: 0; remainder: 4</p></answer></exercise>
 
       <exercise><statement><p>Find the quotient and remainder if <m>n=-40, d=12</m>.</p></statement>
-      <answer><m>-40=12(-4)+8</m>; quotient: -4; remainder: 8</answer></exercise>
+      <answer><p><m>-40=12(-4)+8</m>; quotient: -4; remainder: 8</p></answer></exercise>
 
       <exercise><statement><p>Review: Give the negation of <m>\forall x\in D, P(x)\rightarrow Q(x)</m>.</p></statement>
-      <answer><m>\exists x\in D, P(x)\wedge \sim Q(x)</m></answer></exercise>
+      <answer><p><m>\exists x\in D, P(x)\wedge \sim Q(x)</m></p></answer></exercise>
 
       <exercise><statement><p>Review: Give the contrapositive of <m>\forall x\in D, P(x)\rightarrow Q(x)</m>.</p></statement>
-      <answer><m>\forall x\in D, \sim Q(x)\rightarrow \sim P(x)</m></answer></exercise>
+      <answer><p><m>\forall x\in D, \sim Q(x)\rightarrow \sim P(x)</m></p></answer></exercise>
 
     </reading-questions>-->
     <exercises>

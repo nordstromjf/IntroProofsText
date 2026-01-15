@@ -14,17 +14,17 @@
 <p>To determine if a given number is rational, we need to be able to find a way to write it as a fraction of integers. To prove a number is rational is really a type of existence proof--we need to show <m>a, b\in \mathbb{Z}</m> exist. To prove a number is not rational, we need to show there is no possible way to write it as a fraction of integers. Also, keep in mind that rational and irrational numbers first need to be real numbers. It is possible that a number that is not rational is not a real number, and thus, not irrational either.</p>
 
 <example xml:id="E_rationals"><title>Rational Numbers</title>
-<p>Is <m>O</m> is rational?</p>
-<answer>Yes: <m>0=0/1</m>.</answer>
+<p>Is <m>0</m> rational?</p>
+<answer><p>Yes: <m>0=0/1</m>.</p></answer>
 
 <p>Is <m>2</m> rational?</p>
-<answer>Yes: <m>2=2/1</m>.</answer>
+<answer><p>Yes: <m>2=2/1</m>.</p></answer>
 
 <p>Is <m>9/5</m> rational?</p>
-<answer>Yes: it already has the form of an integer over an integer.</answer>
+<answer><p>Yes: it already has the form of an integer over an integer.</p></answer>
 
 <p>Is <m>2/0</m> rational?</p>
-<answer>No: the demoninator cannot be 0. In fact, <m>2/0</m> is not a number.</answer>
+<answer><p>No: the denominator cannot be <m>0</m>. In fact, <m>2/0</m> is not a number.</p></answer>
 
 </example>
 
@@ -111,13 +111,13 @@ Resulting in <m>123=999x</m>. Now we just solve for <m>x=123/999</m>.</p>
 <example xml:id="E_divides"><title>Finding Divisors</title>
   <p>
   Find the divisors of 6.</p>
-  <answer>1, 2, 3, 6, -1, -2, -3, -6</answer>
+  <answer><m>1, 2, 3, 6, -1, -2, -3, -6</m></answer>
   <p>
   Find the divisors of 5.</p>
-  <answer>1, 5, -1, -5</answer>
+  <answer><m>1, 5, -1, -5</m></answer>
   <p>
   Find the divisors of 1.</p>
-  <answer>1, -1</answer>
+  <answer><m>1, -1</m></answer>
 </example>
 
 <p>If <m>d</m> does not divide <m>n</m>, then for every <m>k\in \mathbb{Z}, n\neq dk</m>. This can be difficult to show in general, but if <m>n</m> and <m>d</m> are specific integers, you could show <m>\frac{n}{d}</m> is not an integer. This is the ONLY time a fraction can show up in proofs about divisibility.</p>
@@ -126,38 +126,38 @@ Resulting in <m>123=999x</m>. Now we just solve for <m>x=123/999</m>.</p>
 <example xml:id="E_TFdivides"><title>Determining Divisibility</title>
   <p>
   True or false: <m>8\mid 24</m>.</p>
-  <answer>True, <m>24=8(3)</m>.</answer>
+  <answer><p>True, <m>24=8(3)</m>.</p></answer>
   <p>
   True or false: <m>8\mid 4</m>.</p>
-  <answer>False, <m>4=8(k)</m> has no integer solutions since <m>k=1/2</m>.</answer>
+  <answer><p>False, <m>4=8(k)</m> has no integer solutions since <m>k=1/2</m>.</p></answer>
 
   <p>
   True or false: <m>8\mid 10</m>.</p>
-  <answer>False, <m>10=8(k)</m> has no integer solutions since <m>k=5/4</m>.</answer>
+  <answer><p>False, <m>10=8(k)</m> has no integer solutions since <m>k=5/4</m>.</p></answer>
 
    <p>
   True or false: <m>8\mid -8</m>.</p>
-  <answer>True, <m>-8=8(-1)</m>.</answer>
+  <answer><p>True, <m>-8=8(-1)</m>.</p></answer>
 
    <p>
   True or false: <m>-2\mid 8</m>.</p>
-  <answer>True, <m>8=-2(-4)</m>.</answer>
+  <answer><p>True, <m>8=-2(-4)</m>.</p></answer>
 
    <p>
   True or false: <m>1\mid 4</m>.</p>
-  <answer>True, <m>4=1(4)</m>.</answer>
+  <answer><p>True, <m>4=1(4)</m>.</p></answer>
 
    <p>
   True or false: <m>8\mid 0</m>.</p>
-  <answer>True, <m>0=8(0)</m>.</answer>
+  <answer><p>True, <m>0=8(0)</m>.</p></answer>
 
   <p>
   True or false: <m>4\mid 1</m>.</p>
-  <answer>False, <m>1=4(k)</m> has no integer solutions since <m>k=1/4</m>.</answer>
+  <answer><p>False, <m>1=4(k)</m> has no integer solutions since <m>k=1/4</m>.</p></answer>
 
   <p>
   True or false: <m>0\mid 8</m>.</p>
-  <answer>False, <m>8=0(k)</m> has no integer solutions.</answer>
+  <answer><p>False, <m>8=0(k)</m> has no integer solutions.</p></answer>
 </example>
 
 <activity xml:id="A_practicedivisible"><title>Divisibility Practice</title><introduction><p>Determine if the following divisibility statements are true or false, and justify your answer.</p></introduction>
@@ -187,34 +187,34 @@ Resulting in <m>123=999x</m>. Now we just solve for <m>x=123/999</m>.</p>
       <title>Check Your Understanding</title>
       
       <exercise><statement><p>True or false: <m>-9</m> is rational.</p></statement>
-      <answer>True.</answer></exercise>
+      <answer><p>True.</p></answer></exercise>
 
       <exercise><statement><p>True or false: <m>-\frac{6}{13}</m> is rational.</p></statement>
-      <answer>True.</answer></exercise>
+      <answer><p>True.</p></answer></exercise>
 
       <exercise><statement><p>True or false: <m>0.\overline{3}</m> is rational.</p></statement>
-      <answer>True.</answer></exercise>
+      <answer><p>True.</p></answer></exercise>
 
       <exercise><statement><p>True or false: <m>\frac{6}{0}</m> is rational.</p></statement>
-      <answer>False.</answer></exercise>
+      <answer><p>False.</p></answer></exercise>
 
       <exercise><statement><p>True or false: <m>\frac{6}{0}</m> is irrational.</p></statement>
-      <answer>False. Not a real number.</answer></exercise>
+      <answer><p>False. Not a real number.</p></answer></exercise>
 
       <exercise><statement><p>True or false: <m>14.5467</m> is rational.</p></statement>
-      <answer>True.</answer></exercise>
+      <answer><p>True.</p></answer></exercise>
 
       <exercise><statement><p>True or false: <m>49.1122\overline{45}</m> is rational.</p></statement>
-      <answer>True.</answer></exercise>
+      <answer><p>True.</p></answer></exercise>
 
       <exercise><statement><p>True or false: <m>0.\overline{9}</m> is rational.</p></statement>
-      <answer>True.</answer></exercise>
+      <answer><p>True.</p></answer></exercise>
 
       <exercise><statement><p>True or false: <m>\sqrt{3}</m> is rational.</p></statement>
-      <answer>False. But hard to prove right now.</answer></exercise>
+      <answer><p>False. But hard to prove right now.</p></answer></exercise>
 
       <exercise><statement><p>True or false: <m>\sqrt{4}</m> is rational.</p></statement>
-      <answer>True. <m>\sqrt{4}=2.</m></answer></exercise>
+      <answer><p>True. <m>\sqrt{4}=2.</m></p></answer></exercise>
 
       
 

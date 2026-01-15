@@ -494,11 +494,11 @@
             </row>
     </tabular>
     <p>The third row is the only one with all true premises. In this case the conclusion is true. Thus it is valid.</p></answer></exercise>
-      <exercise><statement><p>True or False: A valid argument can have false premises and a true conclusion.</p></statement><answer>True</answer></exercise>
-      <exercise><statement><p>True or False: An invalid argument can have true premises and a true conclusion.</p></statement><answer>True</answer></exercise>
-      <exercise><statement><p>True or False: A valid argument can have true premises and a false conclusion.</p></statement><answer>False</answer></exercise>
-      <exercise><statement><p>True or False: A sound argument can have false premises and a true conclusion.</p></statement><answer>False</answer></exercise>
-      <exercise><statement><p>True or False: A sound argument can have true premises and a false conclusion.</p></statement><answer>False</answer></exercise>
+      <exercise><statement><p>True or False: A valid argument can have false premises and a true conclusion.</p></statement><answer><p>True</p></answer></exercise>
+      <exercise><statement><p>True or False: An invalid argument can have true premises and a true conclusion.</p></statement><answer><p>True</p></answer></exercise>
+      <exercise><statement><p>True or False: A valid argument can have true premises and a false conclusion.</p></statement><answer><p>False</p></answer></exercise>
+      <exercise><statement><p>True or False: A sound argument can have false premises and a true conclusion.</p></statement><answer><p>False</p></answer></exercise>
+      <exercise><statement><p>True or False: A sound argument can have true premises and a false conclusion.</p></statement><answer><p>False</p></answer></exercise>
 
     </reading-questions>
 

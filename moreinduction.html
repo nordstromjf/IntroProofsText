@@ -102,15 +102,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.11.5';
+eBookConfig.runestone_version = '7.11.9';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.42217a82c75796c8.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.7e141ad8414abf4a.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.f4ab138da65f4203.css">
+<script src="_static/prefix-runtime.991c135ccf182bf5.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.1c010553c35c544c.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.677a75a9120449ff.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -345,18 +345,19 @@ eBookConfig.enable_chatcodes =  false;
 <div class="displaymath process-math" id="E_divisinduction1-3-6-2">
 \begin{align*}
 (k+1)^3-(k+1)&amp;=k^3+3k^2+3k+1-k-1\\
-&amp;=(k^3-k)+3k^2+3k\ \ \textrm{ rearranged terms and cancelled 1's}
+&amp;=(k^3-k)+3k^2+3k,
 \end{align*}
 </div>
-<div class="para">But by our assumption, <span class="process-math">\(3\mid (k^3-k)\)</span> and since the remaining terms are multiples of 3, <span class="process-math">\(3\mid 3k^2+3k\text{.}\)</span>
-</div>
+<div class="para">where we rearranged terms and cancelled the <span class="process-math">\(1\)</span>’s.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#E_divisinduction1-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="E_divisinduction1-3-7">Now we are ready to use our scratch work to write the proof of the induction step.<div class="autopermalink" data-description="Paragraph"><a href="#E_divisinduction1-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="E_divisinduction1-3-7">But by our assumption, <span class="process-math">\(3\mid (k^3-k)\)</span> and since the remaining terms are multiples of 3, <span class="process-math">\(3\mid 3k^2+3k\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_divisinduction1-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para logical" id="E_divisinduction1-3-8">
+<div class="para" id="E_divisinduction1-3-8">Now we are ready to use our scratch work to write the proof of the induction step.<div class="autopermalink" data-description="Paragraph"><a href="#E_divisinduction1-3-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="E_divisinduction1-3-9">
 <div class="para">Proof of induction step:</div>
-<div class="displaymath process-math" id="E_divisinduction1-3-8-1">
+<div class="displaymath process-math" id="E_divisinduction1-3-9-1">
 \begin{align*}
 3&amp;\mid (k^3-k)\ \  \textrm{ by the induction assumption}\\
 3&amp;\mid (k^3-k)+3k^2+3k\ \  \textrm{ since we just added multiples of 3}\\
@@ -366,9 +367,9 @@ eBookConfig.enable_chatcodes =  false;
 \end{align*}
 </div>
 <div class="para">Which is what we wanted to show.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#E_divisinduction1-3-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#E_divisinduction1-3-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="E_divisinduction1-3-9">Hence, by induction <span class="process-math">\(3\mid (n^3-n)\)</span> for <span class="process-math">\(n\geq 0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_divisinduction1-3-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="E_divisinduction1-3-10">Hence, by induction <span class="process-math">\(3\mid (n^3-n)\)</span> for <span class="process-math">\(n\geq 0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_divisinduction1-3-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Proof 4.3.1.1"><a href="#E_divisinduction1-3" title="Copy heading and permalink for Proof 4.3.1.1" aria-label="Copy heading and permalink for Proof 4.3.1.1">🔗</a></div></article></details><div class="autopermalink" data-description="Example 4.3.1: Proof by Induction: Divisibility"><a href="#E_divisinduction1" title="Copy heading and permalink for Example 4.3.1: Proof by Induction: Divisibility" aria-label="Copy heading and permalink for Example 4.3.1: Proof by Induction: Divisibility">🔗</a></div></article></details><div class="para logical" id="moreinduction-7">
 <div class="para">Some comments about divisibility proofs:</div>
@@ -478,23 +479,26 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para">We know <span class="process-math">\(2k+1&lt; 2^k\)</span> and <span class="process-math">\(2&lt;2^k\text{,}\)</span> so we can put all this together into the proof.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#E_inequlinduction2-3-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para logical" id="E_inequlinduction2-3-7">
-<div class="para">Proof of induction step:</div>
-<div class="displaymath process-math" id="E_inequlinduction2-3-7-1">
+<div class="para" id="E_inequlinduction2-3-7">Proof of induction step:<div class="autopermalink" data-description="Paragraph"><a href="#E_inequlinduction2-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="E_inequlinduction2-3-8">We note <span class="process-math">\(2k+1&lt; 2^k\)</span> by the induction assumption.<div class="autopermalink" data-description="Paragraph"><a href="#E_inequlinduction2-3-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="E_inequlinduction2-3-9">
+<div class="para">Then starting with the LHS of the inequality we want to prove</div>
+<div class="displaymath process-math" id="E_inequlinduction2-3-9-1">
 \begin{align*}
-2k+1&lt; 2^k\ \  \textrm{ by the induction assumption}\\
 2(k+1)+1 &amp;= 2k+2+1\\
 &amp;=2k+1+2\\
 &amp;&lt;2^k+2\ \ \textrm{ by the induction assumption}\\
 &amp;&lt;2^k+2^k\ \ \textrm{ since } 2&lt; 2^k\\
 &amp;=2(2^k)\\
-&amp;=2^{k+1}
+&amp;=2^{k+1}.
 \end{align*}
 </div>
 <div class="para">Thus, <span class="process-math">\(2(k+1)+1&lt; 2^{k+1}\text{,}\)</span> which is what we wanted to show.</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#E_inequlinduction2-3-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#E_inequlinduction2-3-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="E_inequlinduction2-3-8">Hence, by induction <span class="process-math">\(2n+1&lt; 2^n\)</span> for <span class="process-math">\(n\geq 3\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_inequlinduction2-3-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="E_inequlinduction2-3-10">Hence, by induction <span class="process-math">\(2n+1&lt; 2^n\)</span> for <span class="process-math">\(n\geq 3\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#E_inequlinduction2-3-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Proof 4.3.3.1"><a href="#E_inequlinduction2-3" title="Copy heading and permalink for Proof 4.3.3.1" aria-label="Copy heading and permalink for Proof 4.3.3.1">🔗</a></div></article></details><div class="autopermalink" data-description="Example 4.3.3: Proof by Induction: Inequality"><a href="#E_inequlinduction2" title="Copy heading and permalink for Example 4.3.3: Proof by Induction: Inequality" aria-label="Copy heading and permalink for Example 4.3.3: Proof by Induction: Inequality">🔗</a></div></article></details><section class="exercises" id="moreinduction-13"><h3 class="heading hide-type">
 <span class="type">Exercises</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Exercises</span>
